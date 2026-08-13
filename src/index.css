@@ -1,0 +1,32 @@
+/* Tailwind v4 : un seul import suffit (fini le trio @tailwind base/components/utilities
+   de la v3). Le plugin @tailwindcss/vite (voir vite.config.ts) s'occupe du reste. */
+@import 'tailwindcss';
+
+/* En v4, il n'y a plus de tailwind.config.js séparé pour étendre le thème :
+   on déclare les design tokens directement en CSS via @theme. Chaque variable
+   --color-xxx devient automatiquement une classe utilitaire (bg-xxx, text-xxx,
+   border-xxx, etc.), générée à la demande. */
+@theme {
+  /* Fond principal de l'app */
+  --color-creme: #faf3e7;
+  /* Fond des cartes / surfaces élevées */
+  --color-surface: #fffcf5;
+  /* Texte principal et éléments de structure */
+  --color-encre: #0b3c49;
+  /* Boutons et liens principaux */
+  --color-terracotta-profond: #a64b2e;
+  /* Accents (icônes actives, highlights) */
+  --color-terracotta: #c65d3b;
+  /* Éléments décoratifs discrets */
+  --color-terracotta-clair: #e8a583;
+  /* État "compatible" / succès */
+  --color-vert-fonctionnel: #3f5d38;
+  /* État "alerte" / erreur */
+  --color-rouge-fonctionnel: #c0392b;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-creme);
+  color: var(--color-encre);
+}
