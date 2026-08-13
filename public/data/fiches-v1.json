@@ -1,0 +1,232 @@
+[
+  {
+    "id": "adrenaline",
+    "dci": "Adrénaline (Épinéphrine)",
+    "nomsCommerciaux": ["Adrénaline Aguettant", "Adrénaline Renaudin"],
+    "categorie": "cardiovasculaire",
+    "sousFamille": "Cardiotropes",
+    "indications": [
+      "Arrêt cardio-respiratoire",
+      "Choc anaphylactique",
+      "États de choc avec hypotension réfractaire"
+    ],
+    "antidote": null,
+    "contreIndications": [
+      "Aucune contre-indication en situation d'urgence vitale",
+      "Prudence en cas de cardiomyopathie obstructive"
+    ],
+    "injectable": {
+      "solvant": "NaCl 0,9% ou Glucose 5%",
+      "volumeDilution": "Diluer 1 mg dans 9 mL de NaCl 0,9% pour obtenir 0,1 mg/mL en urgence",
+      "debitMlH": "Selon protocole PSE, titration à l'effet (ex : 0,5 à 5 mL/h)",
+      "goutttesMin": null,
+      "voies": ["IVD", "IVL", "IM", "SC"],
+      "dureeAdministration": "Bolus IVD en urgence ou perfusion continue au PSE",
+      "notes": "Bolus IVD réservé à l'arrêt cardiaque ; IM en première intention pour l'anaphylaxie (face antéro-latérale de la cuisse)"
+    },
+    "perOsSonde": null,
+    "surveillanceSpecifique": [
+      {
+        "titre": "Scope / FC / PA",
+        "detail": "Surveillance continue de la fréquence cardiaque et de la pression artérielle pendant l'administration"
+      },
+      {
+        "titre": "Voie d'abord",
+        "detail": "Vérifier la perméabilité de la voie veineuse ; risque de nécrose cutanée en cas d'extravasation"
+      }
+    ],
+    "compatibilitesMajeures": ["NaCl 0,9%", "Glucose 5%"],
+    "incompatibilitesAbsolues": ["Solutions alcalines (bicarbonate de sodium)"],
+    "sourcesRcp": ["MOCK — à remplacer par RCP ANSM validé"],
+    "dateRevision": "2026-08-13"
+  },
+  {
+    "id": "amoxicilline",
+    "dci": "Amoxicilline",
+    "nomsCommerciaux": ["Clamoxyl"],
+    "categorie": "anti-infectieux",
+    "sousFamille": "Antibiotiques",
+    "indications": [
+      "Infections bactériennes à germes sensibles (ORL, respiratoires, urinaires...)"
+    ],
+    "antidote": null,
+    "contreIndications": [
+      "Allergie aux bêta-lactamines",
+      "Mononucléose infectieuse (risque de rash)"
+    ],
+    "injectable": {
+      "solvant": "Eau pour préparation injectable ou NaCl 0,9%",
+      "volumeDilution": "1 g dans 20 mL d'eau PPI pour IVD, ou dans 100 mL de NaCl 0,9% pour IVL",
+      "debitMlH": null,
+      "goutttesMin": null,
+      "voies": ["IVD", "IVL"],
+      "dureeAdministration": "IVD sur 3 à 5 min ou IVL sur 30 min",
+      "notes": "Injecter lentement pour limiter le risque de convulsions liées à la dose"
+    },
+    "perOsSonde": {
+      "ecrasable": true,
+      "divisible": true,
+      "passageEnSonde": true,
+      "modalitesSonde": "Disperser le comprimé dans un peu d'eau avant administration en sonde",
+      "notes": "Forme sirop disponible, préférable en cas de sonde de petit calibre"
+    },
+    "surveillanceSpecifique": [
+      {
+        "titre": "Signes allergiques",
+        "detail": "Surveiller l'apparition d'un rash cutané, d'un œdème ou de signes anaphylactiques"
+      },
+      {
+        "titre": "Fonction rénale",
+        "detail": "Adapter la posologie en cas d'insuffisance rénale"
+      }
+    ],
+    "compatibilitesMajeures": ["NaCl 0,9%"],
+    "incompatibilitesAbsolues": [
+      "Aminosides (ne pas mélanger dans la même seringue/tubulure)",
+      "Glucose 5% (stabilité réduite)"
+    ],
+    "sourcesRcp": ["MOCK — à remplacer par RCP ANSM validé"],
+    "dateRevision": "2026-08-13"
+  },
+  {
+    "id": "diazepam",
+    "dci": "Diazépam",
+    "nomsCommerciaux": ["Valium"],
+    "categorie": "psychotropes",
+    "sousFamille": "Anticonvulsivants",
+    "indications": [
+      "État de mal épileptique",
+      "Sevrage alcoolique",
+      "Anxiété aiguë",
+      "Contractures musculaires"
+    ],
+    "antidote": "Flumazénil (Anexate)",
+    "contreIndications": [
+      "Insuffisance respiratoire sévère",
+      "Myasthénie",
+      "Syndrome d'apnée du sommeil"
+    ],
+    "injectable": {
+      "solvant": "Aucune dilution nécessaire (injection directe) ou NaCl 0,9%",
+      "volumeDilution": "Ne pas diluer dans de grands volumes (risque de précipitation)",
+      "debitMlH": null,
+      "goutttesMin": null,
+      "voies": ["IVD", "IM"],
+      "dureeAdministration": "IVD lente sur 2 à 3 minutes",
+      "notes": "Adsorption possible sur les tubulures en PVC ; injecter au plus près du site d'injection"
+    },
+    "perOsSonde": {
+      "ecrasable": true,
+      "divisible": true,
+      "passageEnSonde": true,
+      "modalitesSonde": "Disperser dans l'eau, rincer la sonde avant et après",
+      "notes": "Forme buvable en gouttes disponible, à privilégier en sonde"
+    },
+    "surveillanceSpecifique": [
+      {
+        "titre": "Fonction respiratoire",
+        "detail": "Surveiller la fréquence respiratoire et la SpO2, risque de dépression respiratoire"
+      },
+      {
+        "titre": "Sédation",
+        "detail": "Surveiller l'état de conscience, risque de somnolence prolongée"
+      }
+    ],
+    "compatibilitesMajeures": ["NaCl 0,9% (usage immédiat)"],
+    "incompatibilitesAbsolues": [
+      "Glucose 5%",
+      "Toute solution en Y avec d'autres médicaments"
+    ],
+    "sourcesRcp": ["MOCK — à remplacer par RCP ANSM validé"],
+    "dateRevision": "2026-08-13"
+  },
+  {
+    "id": "paracetamol",
+    "dci": "Paracétamol",
+    "nomsCommerciaux": ["Perfalgan", "Doliprane", "Efferalgan", "Dafalgan"],
+    "categorie": "antalgiques",
+    "sousFamille": "Antalgiques palier 1",
+    "indications": ["Douleur légère à modérée", "Fièvre"],
+    "antidote": "N-acétylcystéine (en cas de surdosage)",
+    "contreIndications": [
+      "Insuffisance hépatocellulaire sévère",
+      "Allergie au paracétamol"
+    ],
+    "injectable": {
+      "solvant": "Prêt à l'emploi (poche de 100 mL)",
+      "volumeDilution": "1 g / 100 mL, prêt à l'emploi, pas de dilution nécessaire",
+      "debitMlH": "100 mL sur 15 minutes (débit constant)",
+      "goutttesMin": "environ 33 gttes/min sur 15 min (perfuseur standard, 20 gttes/mL)",
+      "voies": ["IVL"],
+      "dureeAdministration": "Perfusion sur 15 minutes minimum",
+      "notes": "Respecter un intervalle minimal de 4h entre deux administrations"
+    },
+    "perOsSonde": {
+      "ecrasable": true,
+      "divisible": true,
+      "passageEnSonde": true,
+      "modalitesSonde": "Utiliser la forme effervescente ou le sirop, dilués dans l'eau",
+      "notes": "Vérifier la dose cumulée toutes voies confondues pour éviter le surdosage"
+    },
+    "surveillanceSpecifique": [
+      {
+        "titre": "Fonction hépatique",
+        "detail": "Surveiller les transaminases en cas de traitement prolongé ou de terrain à risque"
+      },
+      {
+        "titre": "Dose cumulée journalière",
+        "detail": "Ne pas dépasser 4 g/jour chez l'adulte (attention aux associations médicamenteuses)"
+      }
+    ],
+    "compatibilitesMajeures": ["NaCl 0,9%", "Glucose 5%"],
+    "incompatibilitesAbsolues": ["Ne pas mélanger avec d'autres médicaments dans la même poche"],
+    "sourcesRcp": ["MOCK — à remplacer par RCP ANSM validé"],
+    "dateRevision": "2026-08-13"
+  },
+  {
+    "id": "vancomycine",
+    "dci": "Vancomycine",
+    "nomsCommerciaux": ["Vancomycine Viatris", "Vancomycine Mylan"],
+    "categorie": "anti-infectieux",
+    "sousFamille": "Antibiotiques",
+    "indications": [
+      "Infections sévères à germes Gram+ résistants (dont SARM)",
+      "Endocardites bactériennes"
+    ],
+    "antidote": null,
+    "contreIndications": [
+      "Allergie aux glycopeptides",
+      "Insuffisance rénale sévère non adaptée (nécessite une adaptation posologique)"
+    ],
+    "injectable": {
+      "solvant": "Glucose 5% ou NaCl 0,9%",
+      "volumeDilution": "500 mg dans au moins 100 mL (concentration maximale 5 mg/mL)",
+      "debitMlH": "Perfusion sur au moins 60 minutes, débit max 10 mg/min",
+      "goutttesMin": null,
+      "voies": ["IVL", "PSE"],
+      "dureeAdministration": "Minimum 60 minutes, à adapter selon la dose",
+      "notes": "Ne jamais administrer en IVD : risque majeur de syndrome de l'homme rouge et d'hypotension"
+    },
+    "perOsSonde": null,
+    "surveillanceSpecifique": [
+      {
+        "titre": "Fonction rénale",
+        "detail": "Surveiller la créatininémie, néphrotoxicité dose-dépendante"
+      },
+      {
+        "titre": "Vancocinémie",
+        "detail": "Dosages sanguins réguliers pour adapter la posologie (résiduelle avant la dose suivante)"
+      },
+      {
+        "titre": "Tolérance à la perfusion",
+        "detail": "Surveiller l'apparition d'un érythème du visage et du tronc (syndrome de l'homme rouge) en cas d'injection trop rapide"
+      }
+    ],
+    "compatibilitesMajeures": ["NaCl 0,9%", "Glucose 5%"],
+    "incompatibilitesAbsolues": [
+      "Solutions alcalines (bêta-lactamines, héparine à forte concentration)"
+    ],
+    "sourcesRcp": ["MOCK — à remplacer par RCP ANSM validé"],
+    "dateRevision": "2026-08-13"
+  }
+]

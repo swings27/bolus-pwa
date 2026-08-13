@@ -23,6 +23,13 @@
   --color-vert-fonctionnel: #3f5d38;
   /* État "alerte" / erreur */
   --color-rouge-fonctionnel: #c0392b;
+
+  /* Police du logo "bolus" : Fraunces (serif éditoriale) si le fichier de
+     police est un jour ajouté au projet (@font-face / Google Fonts), sinon
+     repli propre sur Helvetica/Arial. Namespace --font-* : Tailwind v4
+     génère automatiquement l'utilitaire "font-logo" à partir de cette
+     variable. */
+  --font-logo: 'Fraunces', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 body {
