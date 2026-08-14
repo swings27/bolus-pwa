@@ -45,7 +45,8 @@ export default function Parametres() {
 
   return (
     <div className="flex flex-col gap-8 px-6 pb-8">
-      <Header variant="retour" titre="Paramètres" />
+      <Header variant="retour" />
+      <h1 className="font-display text-2xl font-semibold text-texte">Paramètres</h1>
 
       <section className="flex flex-col gap-3">
         <h2 className="font-display text-lg font-semibold text-texte">Apparence</h2>

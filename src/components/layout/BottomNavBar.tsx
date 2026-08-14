@@ -1,5 +1,5 @@
 import { Link, useLocation } from 'react-router-dom'
-import { Home, Search, Calculator, Grid3x3, Menu as MenuIcon } from 'lucide-react'
+import { Home, Search, Calculator, LayoutGrid, Menu as MenuIcon } from 'lucide-react'
 import type { LucideIcon } from 'lucide-react'
 
 interface IOnglet {
@@ -14,37 +14,89 @@ const onglets: IOnglet[] = [
   { to: '/', label: 'Accueil', icon: Home },
   { to: '/recherche', label: 'Recherche', icon: Search },
   { to: '/calculateurs', label: 'Calculateur', icon: Calculator },
-  { to: '/categories', label: 'Catégories', icon: Grid3x3 },
+  { to: '/categories', label: 'Catégories', icon: LayoutGrid },
   { to: '/menu', label: 'Menu', icon: MenuIcon },
 ]
 
+// Détermine quel onglet correspond au chemin courant. Une route de détail
+// garde son onglet parent actif (ex. /categories/antalgiques → Catégories),
+// mais /fiche/:id n'active délibérément aucun onglet : on y arrive depuis
+// plusieurs endroits différents (recherche, catégorie...), aucun ne serait
+// plus légitime qu'un autre à s'allumer.
+function ongletActifPour(pathname: string): string | null {
+  if (pathname === '/') return '/'
+  if (pathname === '/recherche') return '/recherche'
+  if (pathname === '/calculateurs') return '/calculateurs'
+  if (pathname === '/categories' || pathname.startsWith('/categories/')) return '/categories'
+  if (pathname === '/menu' || pathname.startsWith('/menu/')) return '/menu'
+  return null
+}
+
 export default function BottomNavBar() {
-  // useLocation() de React Router expose l'URL courante — on s'en sert
-  // pour déterminer quel onglet est "actif" et le colorer en conséquence.
   const { pathname } = useLocation()
+  const ongletActif = ongletActifPour(pathname)
 
   return (
     <nav
-      className="fixed bottom-0 left-0 right-0 z-40 flex items-end justify-around
-                 border-t border-texte/10 bg-surface px-2 pb-[calc(0.5rem+env(safe-area-inset-bottom))] pt-2"
+      className="fixed bottom-0 left-0 right-0 flex"
+      style={{
+        // overflow visible : le cercle du Calculateur dépasse au-dessus du
+        // bord supérieur de la barre, il ne doit pas être rogné.
+        overflow: 'visible',
+        zIndex: 50,
+        height: 'var(--hauteur-nav)',
+        // padding-bottom (pas margin) : avec box-sizing: border-box, la
+        // safe area vient grignoter le bas de la boîte plutôt que
+        // s'ajouter par-dessus — les 5 onglets restent alignés sur les
+        // 68px "visuels" de la barre, la safe area n'est que de l'espace
+        // vide sous eux (indispensable sur iPhone à encoche).
+        paddingBottom: 'env(safe-area-inset-bottom)',
+        backgroundColor: 'var(--nav-fond)',
+        borderTop: '1px solid var(--nav-bordure)',
+      }}
     >
       {onglets.map(({ to, label, icon: Icon }) => {
-        const actif = to === '/' ? pathname === '/' : pathname.startsWith(to)
+        const actif = ongletActif === to
+        const couleur = actif ? 'var(--nav-actif)' : 'var(--nav-inactif)'
         const central = to === '/calculateurs'
 
         if (central) {
-          // Onglet Calculateur : surélevé, cerclé plein, comme un bouton
-          // d'action mis en avant plutôt qu'un simple lien.
           return (
             <Link
               key={to}
               to={to}
-              className="flex flex-col items-center gap-1 -translate-y-3"
+              // position: relative → le cercle absolu ci-dessous se
+              // positionne par rapport au coin haut-gauche de CETTE
+              // colonne, qui occupe toute la hauteur de la barre (stretch,
+              // comportement flex par défaut) — donc par rapport au bord
+              // supérieur de la barre elle-même.
+              className="relative flex flex-1 flex-col items-center justify-center gap-1"
+              aria-label={label}
             >
-              <span className="flex h-14 w-14 items-center justify-center rounded-full bg-interactif shadow-md">
-                <Icon className="h-6 w-6 text-surface" strokeWidth={2} />
+              {/* Espace réservé invisible, de la même hauteur que les
+                  icônes des autres onglets (22px) : ça garde le label
+                  "Calculateur" exactement sur la même ligne de base que les
+                  4 autres labels, sans calcul de marge à la main — le
+                  cercle visible, lui, est positionné en absolute par
+                  dessus, indépendant du flux. */}
+              <span className="block h-[22px] w-[22px]" aria-hidden="true" />
+              <span
+                className="absolute flex items-center justify-center rounded-full"
+                style={{
+                  top: '-22px',
+                  height: '56px',
+                  width: '56px',
+                  backgroundColor: 'var(--calc-fond)',
+                  border: '3px solid var(--calc-contour)',
+                  boxShadow: '0 3px 8px var(--calc-ombre)',
+                }}
+              >
+                <Calculator size={24} color="var(--calc-icone)" aria-hidden="true" />
               </span>
-              <span className="text-xs font-medium text-interactif">
+              <span
+                className={`text-[13px] ${actif ? 'font-semibold' : 'font-medium'}`}
+                style={{ color: couleur }}
+              >
                 {label}
               </span>
             </Link>
@@ -55,18 +107,12 @@ export default function BottomNavBar() {
           <Link
             key={to}
             to={to}
-            className="flex flex-col items-center gap-1 px-2 py-1"
+            className="flex flex-1 flex-col items-center justify-center gap-1"
           >
-            <Icon
-              className={actif ? 'h-6 w-6 text-interactif' : 'h-6 w-6 text-texte/50'}
-              strokeWidth={2}
-            />
+            <Icon size={22} color={couleur} strokeWidth={actif ? 2.5 : 2} aria-hidden="true" />
             <span
-              className={
-                actif
-                  ? 'text-xs font-medium text-interactif'
-                  : 'text-xs font-medium text-texte/50'
-              }
+              className={`text-[12px] ${actif ? 'font-semibold' : 'font-medium'}`}
+              style={{ color: couleur }}
             >
               {label}
             </span>

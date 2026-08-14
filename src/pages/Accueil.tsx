@@ -22,8 +22,8 @@ export default function Accueil() {
 
       {/* Bloc d'intro */}
       <div className="flex flex-col items-center gap-2 px-6 pb-8 pt-4 text-center">
-        <Wordmark className="h-16" />
-        <p className="max-w-xs text-base text-interactif">
+        <Wordmark taille="3.5rem" />
+        <p className="max-w-xs text-base font-semibold text-accent">
           L'information médicamenteuse, fiable et à portée de main.
         </p>
       </div>
@@ -31,7 +31,7 @@ export default function Accueil() {
       {/* Recherche */}
       <div className="flex flex-col gap-3 px-6 pb-8">
         <div>
-          <h2 className="font-display text-xl font-semibold text-texte">
+          <h2 className="font-display text-2xl font-semibold text-texte">
             Rechercher un médicament
           </h2>
           <p className="text-sm text-texte/60">Par nom, DCI ou nom commercial</p>
@@ -42,7 +42,7 @@ export default function Accueil() {
       {/* Catégories */}
       <div className="flex flex-col gap-3 px-6 pb-8">
         <p className="text-xs font-semibold uppercase tracking-widest text-texte/60">
-          Ou par catégorie
+          Parcourir par catégorie
         </p>
         <div className="grid grid-cols-2 gap-3">
           {categoriesAffichees.map((categorie) => (
