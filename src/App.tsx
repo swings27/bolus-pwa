@@ -9,6 +9,7 @@ import Categories from './pages/Categories'
 import ListeCategorie from './pages/ListeCategorie'
 import Calculateurs from './pages/Calculateurs'
 import Menu from './pages/Menu'
+import Parametres from './pages/Parametres'
 import APropos from './pages/APropos'
 import Contact from './pages/Contact'
 import MentionsLegales from './pages/MentionsLegales'
@@ -20,12 +21,12 @@ import CGU from './pages/CGU'
 // ou tant que la version locale n'est pas à jour (voir useFichesLoader).
 function EcranChargement() {
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center gap-4 bg-creme">
-      <span className="font-logo text-4xl font-bold lowercase text-encre">
+    <div className="flex min-h-screen flex-col items-center justify-center gap-4 bg-fond">
+      <span className="font-display text-4xl font-semibold lowercase text-texte">
         bolus
       </span>
       <span
-        className="h-8 w-8 animate-spin rounded-full border-4 border-terracotta-clair border-t-terracotta-profond"
+        className="h-8 w-8 animate-spin rounded-full border-4 border-accent-clair border-t-interactif"
         role="status"
         aria-label="Chargement"
       />
@@ -41,19 +42,19 @@ function EcranErreur({
   onReessayer: () => void
 }) {
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center gap-4 bg-creme px-6 text-center">
-      <span className="font-logo text-3xl font-bold lowercase text-encre">
+    <div className="flex min-h-screen flex-col items-center justify-center gap-4 bg-fond px-6 text-center">
+      <span className="font-display text-3xl font-semibold lowercase text-texte">
         bolus
       </span>
-      <p className="max-w-xs text-sm text-encre/70">
+      <p className="max-w-xs text-sm text-texte/70">
         Impossible de charger les fiches médicaments. Vérifiez votre connexion
         puis réessayez.
       </p>
-      <p className="max-w-xs text-xs text-encre/40">{message}</p>
+      <p className="max-w-xs text-xs text-texte/40">{message}</p>
       <button
         type="button"
         onClick={onReessayer}
-        className="rounded-lg bg-terracotta-profond px-5 py-2.5 text-sm font-medium text-surface"
+        className="rounded-lg bg-interactif px-5 py-2.5 text-sm font-medium text-surface"
       >
         Réessayer
       </button>
@@ -90,6 +91,7 @@ export default function App() {
             <Route path="/categories/:slug" element={<ListeCategorie />} />
             <Route path="/calculateurs" element={<Calculateurs />} />
             <Route path="/menu" element={<Menu />} />
+            <Route path="/menu/parametres" element={<Parametres />} />
             <Route path="/menu/a-propos" element={<APropos />} />
             <Route path="/menu/contact" element={<Contact />} />
             <Route path="/menu/mentions-legales" element={<MentionsLegales />} />
