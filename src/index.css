@@ -2,38 +2,110 @@
    de la v3). Le plugin @tailwindcss/vite (voir vite.config.ts) s'occupe du reste. */
 @import 'tailwindcss';
 
+/* --------------------------------------------------------------------
+   Tokens de thème (clair / sombre)
+   --------------------------------------------------------------------
+   Ces variables sont de simples custom properties CSS, PAS des tokens
+   Tailwind. On les déclare en dehors de @theme, dans :root (clair, valeurs
+   par défaut) et .dark (sombre, appliqué en ajoutant la classe "dark" sur
+   <html> — voir ThemeContext.tsx). C'est ce qui permet à une même variable
+   (ex. --texte) de changer de valeur selon le thème actif SANS toucher au
+   moindre composant : les composants ne lisent jamais de hex, seulement
+   var(--texte), et c'est le CSS qui décide quelle valeur ça pointe. */
+:root {
+  --fond: #faf3e7;
+  --surface: #fffefd;
+  --texte: #0b3c49;
+  --texte-doux: rgba(11, 60, 73, 0.6);
+  --interactif: #a64b2e;
+  --accent: #c65d3b;
+  --accent-clair: #e8a583;
+  --validation: #3f5d38;
+  --validation-pastille: #3f5d38;
+  --alerte: #c0392b;
+  --indication: #0b3c49;
+  --bloc-antidote: #d9dfc6;
+  --bloc-alerte: #f0d1c5;
+  --bloc-indication: #d4d6ce;
+  --zone-surveillance: #f7e6db;
+  --onglet-inactif: #e6eaeb;
+  --onglet-actif: #f8eae5;
+  --opacite-tint: 18%;
+  /* Ombre neutre (noir à faible opacité) : un drop-shadow reste un
+     indicateur de profondeur, pas une couleur de marque — même valeur dans
+     les deux thèmes, mais quand même exposée en variable pour qu'aucun
+     composant n'ait à coder une couleur en dur. */
+  --ombre-header: rgba(0, 0, 0, 0.18);
+}
+
+/* Thème sombre : la carte "fond" et la "zone-surveillance" ne restent PAS
+   en teinte crème — elles basculent vers des équivalents nuit (bleu-vert
+   très sombre). Un fond crème resté clair sous du texte clair éblouirait
+   à l'usage pendant les gardes de nuit, ce qui va à l'encontre même de la
+   raison d'être du mode sombre. */
+.dark {
+  --fond: #0f272e;
+  --surface: #17343c;
+  --texte: #f2e9da;
+  --texte-doux: rgba(242, 233, 218, 0.6);
+  --interactif: #e8946e;
+  --accent: #e8946e;
+  --accent-clair: #f5c9af;
+  --validation: #a9c79a;
+  --validation-pastille: #b9cca6;
+  --alerte: #e07a6b;
+  --indication: #f2e9da;
+  --bloc-antidote: #344b48;
+  --bloc-alerte: #362b2d;
+  --bloc-indication: #34464a;
+  --zone-surveillance: color-mix(in srgb, #e8946e 15%, #0f272e);
+  --onglet-inactif: color-mix(in srgb, #f2e9da 12%, #17343c);
+  --onglet-actif: color-mix(in srgb, #e8946e 18%, #17343c);
+  --opacite-tint: 22%;
+  --ombre-header: rgba(0, 0, 0, 0.4);
+}
+
 /* En v4, il n'y a plus de tailwind.config.js séparé pour étendre le thème :
    on déclare les design tokens directement en CSS via @theme. Chaque variable
    --color-xxx devient automatiquement une classe utilitaire (bg-xxx, text-xxx,
-   border-xxx, etc.), générée à la demande. */
+   border-xxx, etc.), générée à la demande.
+   Ici, chaque --color-* pointe vers la variable de thème correspondante
+   (var(--texte), pas #0b3c49 en dur) : Tailwind génère bien la classe
+   "text-texte", mais sa valeur réelle reste dynamique — elle suit :root ou
+   .dark au moment où le navigateur calcule le style, pas au moment où
+   Tailwind génère le CSS. Résultat : bg-fond, text-texte, etc. s'adaptent
+   automatiquement au thème actif, y compris les variantes d'opacité
+   Tailwind (text-texte/50 fonctionne normalement, color-mix() s'applique
+   sur la valeur résolue). */
 @theme {
-  /* Fond principal de l'app */
-  --color-creme: #faf3e7;
-  /* Fond des cartes / surfaces élevées */
-  --color-surface: #fffcf5;
-  /* Texte principal et éléments de structure */
-  --color-encre: #0b3c49;
-  /* Boutons et liens principaux */
-  --color-terracotta-profond: #a64b2e;
-  /* Accents (icônes actives, highlights) */
-  --color-terracotta: #c65d3b;
-  /* Éléments décoratifs discrets */
-  --color-terracotta-clair: #e8a583;
-  /* État "compatible" / succès */
-  --color-vert-fonctionnel: #3f5d38;
-  /* État "alerte" / erreur */
-  --color-rouge-fonctionnel: #c0392b;
+  --color-fond: var(--fond);
+  --color-surface: var(--surface);
+  --color-texte: var(--texte);
+  --color-texte-doux: var(--texte-doux);
+  --color-interactif: var(--interactif);
+  --color-accent: var(--accent);
+  --color-accent-clair: var(--accent-clair);
+  --color-validation: var(--validation);
+  --color-validation-pastille: var(--validation-pastille);
+  --color-alerte: var(--alerte);
+  --color-indication: var(--indication);
+  --color-bloc-antidote: var(--bloc-antidote);
+  --color-bloc-alerte: var(--bloc-alerte);
+  --color-bloc-indication: var(--bloc-indication);
+  --color-zone-surveillance: var(--zone-surveillance);
+  --color-onglet-inactif: var(--onglet-inactif);
+  --color-onglet-actif: var(--onglet-actif);
 
-  /* Police du logo "bolus" : Fraunces (serif éditoriale) si le fichier de
-     police est un jour ajouté au projet (@font-face / Google Fonts), sinon
-     repli propre sur Helvetica/Arial. Namespace --font-* : Tailwind v4
-     génère automatiquement l'utilitaire "font-logo" à partir de cette
-     variable. */
-  --font-logo: 'Fraunces', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  /* Polices chargées via Google Fonts (voir index.html). Namespace
+     --font-* : Tailwind v4 génère automatiquement les utilitaires
+     "font-display" et "font-body" à partir de ces variables. */
+  --font-display: 'Fraunces', serif;
+  --font-body: 'Nunito Sans', sans-serif;
 }
 
 body {
   margin: 0;
-  background-color: var(--color-creme);
-  color: var(--color-encre);
+  background-color: var(--fond);
+  color: var(--texte);
+  font-family: var(--font-body);
 }

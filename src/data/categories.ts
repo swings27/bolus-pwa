@@ -6,12 +6,27 @@ import type { ICategorie } from '../types'
 // rarement, et embarquent de la config visuelle (couleur). Les garder en
 // TS permet le typage strict (ICategorie[]) et l'autocomplétion, sans
 // bénéfice à les charger dynamiquement.
+//
+// "couleur" est une teinte saturée (identité de la catégorie), mais les
+// composants ne l'appliquent JAMAIS en fond plein — un fond entièrement
+// saturé sur toute une carte serait trop agressif visuellement, surtout
+// répété plusieurs fois dans une grille. Voir CategorieCard.tsx : le fond
+// réel est obtenu avec color-mix(in srgb, {couleur} var(--opacite-tint),
+// var(--fond)), c'est-à-dire un mélange de la couleur de la catégorie et du
+// fond du thème actif, dosé par --opacite-tint (18% en clair, 22% en
+// sombre — un peu plus dosé en sombre car les teintes y paraissent plus
+// discrètes sur un fond sombre). Comme le mélange se fait avec var(--fond),
+// la même couleur de catégorie donne automatiquement un résultat cohérent
+// avec le thème actif, sans qu'on ait à coder 16 valeurs en dur (8
+// catégories × 2 thèmes) : une seule couleur de base suffit, color-mix()
+// fait le reste au moment du rendu.
 export const CATEGORIES: ICategorie[] = [
   {
     slug: 'anti-infectieux',
     label: 'Anti-infectieux',
     sousFamilles: ['Antibiotiques', 'Antifongiques', 'Antiparasitaires', 'Antiviraux'],
-    couleur: '#1A5276',
+    couleur: '#0B3C49',
+    code: 'AI',
   },
   {
     slug: 'antalgiques',
@@ -22,7 +37,8 @@ export const CATEGORIES: ICategorie[] = [
       'Antalgiques palier 2',
       'Opiacés',
     ],
-    couleur: '#0B3C49',
+    couleur: '#C65D3B',
+    code: 'AN',
   },
   {
     slug: 'cardiovasculaire',
@@ -34,19 +50,22 @@ export const CATEGORIES: ICategorie[] = [
       'Diurétiques',
       'Hypolipémiants',
     ],
-    couleur: '#922B21',
+    couleur: '#8C2F39',
+    code: 'CV',
   },
   {
     slug: 'electrolytes',
     label: 'Électrolytes',
     sousFamilles: [],
-    couleur: '#1F618D',
+    couleur: '#3E7C8A',
+    code: 'EL',
   },
   {
     slug: 'endocrinologie',
     label: 'Endocrinologie',
     sousFamilles: ['Antidiabétiques', 'Corticoïdes', 'Hormones', 'Thyroïdiens'],
-    couleur: '#6C3483',
+    couleur: '#7A4F63',
+    code: 'EN',
   },
   {
     slug: 'gastrologie',
@@ -57,7 +76,8 @@ export const CATEGORIES: ICategorie[] = [
       'Laxatifs',
       'Protecteurs gastriques',
     ],
-    couleur: '#7D6608',
+    couleur: '#D4B106',
+    code: 'GA',
   },
   {
     slug: 'psychotropes',
@@ -69,13 +89,15 @@ export const CATEGORIES: ICategorie[] = [
       'Anxiolytiques',
       'Hypnotiques',
     ],
-    couleur: '#154360',
+    couleur: '#3F5D38',
+    code: 'PS',
   },
   {
     slug: 'autres',
     label: 'Autres',
     sousFamilles: [],
-    couleur: '#616A6B',
+    couleur: '#5C6B70',
+    code: 'AU',
   },
 ]
 

@@ -10,6 +10,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#C65D3B" />
     <title>Bolus</title>
+
+    <!-- Anti-flash de thème : s'exécute AVANT que React (et Dexie) ne
+         démarre, pour poser la classe "dark" sur <html> dès le tout premier
+         paint. Sans ça, la page s'afficherait toujours en clair une
+         fraction de seconde avant que React ne monte et ne corrige — un
+         flash désagréable et carrément gênant en pleine garde de nuit.
+         Problème : la préférence de thème vit dans Dexie (IndexedDB), qui
+         est asynchrone — impossible à lire depuis un script inline
+         synchrone comme celui-ci sans bloquer le rendu en attendant une
+         Promise. Solution : ThemeContext.tsx duplique la préférence dans
+         localStorage (lui est synchrone) à chaque changement de thème.
+         Dexie reste la source de vérité pour le reste de l'app ;
+         localStorage n'est qu'un cache de démarrage lu une seule fois, ici. -->
+    <script>
+      (function () {
+        var theme = localStorage.getItem('theme')
+        var sombre =
+          theme === 'sombre' ||
+          ((theme === 'auto' || !theme) &&
+            window.matchMedia('(prefers-color-scheme: dark)').matches)
+        if (sombre) document.documentElement.classList.add('dark')
+      })()
+    </script>
+
+    <!-- preconnect accélère la négociation TLS avec les domaines Google
+         Fonts avant même que le CSS des polices ne soit demandé. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Fraunces (variable, on ne garde que le poids 600 utile aux titres)
+         et Nunito Sans (400 texte courant, 600 emphase) pour l'interface. -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600&family=Nunito+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div id="root"></div>

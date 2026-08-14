@@ -3,8 +3,8 @@
 export default function MentionsLegales() {
   return (
     <div className="p-4">
-      <h1 className="text-xl font-semibold text-encre">MentionsLegales</h1>
-      <p className="text-encre/60">Route : /menu/mentions-legales</p>
+      <h1 className="text-xl font-semibold text-texte">MentionsLegales</h1>
+      <p className="text-texte/60">Route : /menu/mentions-legales</p>
     </div>
   )
 }

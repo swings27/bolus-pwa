@@ -1,3 +1,4 @@
+import { readFileSync } from 'node:fs'
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
@@ -8,7 +9,16 @@ import { VitePWA } from 'vite-plugin-pwa'
 // quasi instantané, pas de bundle complet recalculé à chaque sauvegarde),
 // puis bundle tout avec Rollup pour la prod. Sa config se fait ici, par plugins.
 // https://vite.dev/config/
+const { version: appVersion } = JSON.parse(readFileSync('./package.json', 'utf-8'))
+
 export default defineConfig({
+  // "define" remplace __APP_VERSION__ par la vraie version, en dur, dans le
+  // bundle final au moment du build — pas d'appel réseau ni de lecture de
+  // fichier à l'exécution. Le type de cette constante globale est déclaré
+  // dans src/vite-env.d.ts pour que TypeScript l'accepte.
+  define: {
+    __APP_VERSION__: JSON.stringify(appVersion),
+  },
   plugins: [
     react(),
     // Plugin officiel Tailwind v4 : remplace l'ancien pipeline PostCSS,
@@ -24,7 +34,12 @@ export default defineConfig({
       // includeAssets : fichiers statiques de /public à précacher au même
       // titre que les icônes du manifest, pour qu'ils restent disponibles
       // hors-ligne dès l'installation du Service Worker.
-      includeAssets: ['bolus-icone-192.png', 'bolus-icone-512.png'],
+      includeAssets: [
+        'bolus-icone-192.png',
+        'bolus-icone-512.png',
+        'bolus-wordmark-clair.svg',
+        'bolus-wordmark-sombre.svg',
+      ],
       manifest: {
         name: 'Bolus',
         short_name: 'Bolus',

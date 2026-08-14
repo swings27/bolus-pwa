@@ -56,5 +56,11 @@ export interface ICategorie {
   slug: string
   label: string
   sousFamilles: string[]
+  /** Couleur de base saturée (voir CategorieCard pour son usage réel : les
+   * cartes ne l'appliquent jamais en fond plein, seulement via color-mix()
+   * pour un fond pâle teinté, ou pour le code deux lettres). */
   couleur: string
+  /** Code deux lettres affiché sur les cartes (ex. "AI"), dans la couleur
+   * saturée de la catégorie. */
+  code: string
 }
