@@ -36,7 +36,10 @@ export default function DisclaimerModal() {
   if (accepte !== false) return null
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-texte/60 p-4">
+    // z-[60] : au-dessus de la BottomNavBar (z-50, dont le bouton
+    // Calculateur dépasse volontairement de la barre) — une modale reste
+    // toujours au-dessus de la navigation.
+    <div className="fixed inset-0 z-[60] flex items-center justify-center bg-texte/60 p-4">
       <div className="w-full max-w-md rounded-2xl bg-surface p-6 shadow-xl">
         <h2 className="text-lg font-semibold text-texte">Avertissement</h2>
         <p className="mt-3 text-sm leading-relaxed text-texte/80">

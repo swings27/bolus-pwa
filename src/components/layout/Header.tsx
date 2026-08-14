@@ -4,47 +4,44 @@ import Wordmark from './Wordmark'
 
 interface IHeaderProps {
   variant?: 'logo' | 'retour'
-  titre?: string
 }
 
-// Header commun aux pages : soit le wordmark centré (accueil, pages
-// principales), soit un header de navigation avec retour (fiche
-// médicament, sous-pages). sticky top-0 : reste visible en haut de l'écran
-// pendant le scroll du contenu.
-export default function Header({ variant = 'logo', titre }: IHeaderProps) {
+// Header sticky commun à toutes les pages. Les deux variants affichent le
+// même wordmark centré ; seule la présence de la flèche retour change. Les
+// pages qui ont besoin d'un titre visible (Paramètres, À propos...) le
+// portent elles-mêmes dans leur contenu, sous le header.
+export default function Header({ variant = 'logo' }: IHeaderProps) {
   const navigate = useNavigate()
 
   return (
-    <header className="sticky top-0 z-30 bg-fond px-4 py-4 shadow-[0_4px_10px_-6px_var(--ombre-header)]">
-      {variant === 'logo' ? (
-        <div className="flex justify-center">
-          <Wordmark />
-        </div>
-      ) : (
-        <div className="grid grid-cols-[2.5rem_1fr_2.5rem] items-center">
-          <button
-            type="button"
-            onClick={() => navigate(-1)}
-            aria-label="Retour"
-            className="flex h-10 w-10 items-center justify-center text-texte"
-          >
-            <ChevronLeft className="h-6 w-6" />
-          </button>
-          {titre ? (
-            <h1 className="truncate text-center font-display text-lg font-semibold text-texte">
-              {titre}
-            </h1>
-          ) : (
-            // Pas de titre fourni (ex. fiche médicament) : le wordmark tient
-            // lieu de titre, centré entre la flèche retour et son espace
-            // réservé symétrique.
-            <div className="flex justify-center">
-              <Wordmark className="h-6" />
-            </div>
-          )}
-          <span />
-        </div>
+    <header
+      className="sticky top-0 z-40 flex h-14 items-center px-2"
+      style={{
+        backgroundColor: 'var(--header-fond)',
+        boxShadow: '0 4px 10px -6px var(--ombre-header)',
+      }}
+    >
+      {variant === 'retour' && (
+        <button
+          type="button"
+          onClick={() => navigate(-1)}
+          aria-label="Retour"
+          // 44x44px : zone tactile minimale (WCAG 2.5.5 / Apple HIG),
+          // même si l'icône visible (24px) est plus petite.
+          className="flex h-11 w-11 shrink-0 items-center justify-center text-texte"
+        >
+          <ChevronLeft className="h-6 w-6" aria-hidden="true" />
+        </button>
       )}
+      <div
+        className="flex flex-1 justify-center"
+        // Compense la largeur de la flèche retour pour que le wordmark
+        // reste visuellement centré sur toute la largeur du header, pas
+        // seulement dans l'espace restant à droite du bouton.
+        style={variant === 'retour' ? { marginRight: '2.75rem' } : undefined}
+      >
+        <Wordmark taille="1.5rem" />
+      </div>
     </header>
   )
 }

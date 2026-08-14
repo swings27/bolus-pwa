@@ -54,7 +54,7 @@ export default function SearchDropdown() {
 
   return (
     <div ref={conteneurRef} className="relative">
-      <div className="flex items-center gap-2 rounded-full border border-texte/30 bg-surface px-4 py-3">
+      <div className="flex items-center gap-2 rounded-full border-2 border-texte/70 bg-surface px-4 py-3">
         <Search className="h-5 w-5 shrink-0 text-texte/50" aria-hidden="true" />
         <input
           type="text"

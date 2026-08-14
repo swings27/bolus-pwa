@@ -7,7 +7,10 @@
          faut ce lien explicite pour afficher l'icône Bolus (et non une
          capture de la page) lors de l'ajout à l'écran d'accueil. -->
     <link rel="apple-touch-icon" href="/bolus-icone-192.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- viewport-fit=cover : sans ça, env(safe-area-inset-*) reste figé à 0
+         sur iOS même sur un iPhone à encoche/île dynamique — la barre de
+         navigation passerait sous l'indicateur de geste. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <meta name="theme-color" content="#C65D3B" />
     <title>Bolus</title>
 

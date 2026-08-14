@@ -31,11 +31,29 @@
   --onglet-inactif: #e6eaeb;
   --onglet-actif: #f8eae5;
   --opacite-tint: 18%;
+
+  /* Header et BottomNavBar : tokens dédiés (distincts de --fond/--surface)
+     car la maquette leur donne des teintes propres, notamment en sombre où
+     --nav-fond doit rester plus clair que --fond (voir plus bas). */
+  --nav-fond: #fffcf5;
+  --nav-bordure: rgba(11, 60, 73, 0.08);
+  --nav-actif: #c65d3b;
+  --nav-inactif: #0b3c49;
+  --calc-fond: #c65d3b;
+  --calc-contour: #fffcf5;
+  --calc-icone: #fffcf5;
+  --calc-ombre: rgba(11, 60, 73, 0.18);
+  --header-fond: #faf3e7;
   /* Ombre neutre (noir à faible opacité) : un drop-shadow reste un
      indicateur de profondeur, pas une couleur de marque — même valeur dans
      les deux thèmes, mais quand même exposée en variable pour qu'aucun
      composant n'ait à coder une couleur en dur. */
   --ombre-header: rgba(0, 0, 0, 0.18);
+
+  /* Hauteur réservée par la BottomNavBar (barre + zone de geste iOS), pour
+     que le Layout puisse réserver le même espace en padding-bottom sans
+     dupliquer "68px" à deux endroits différents. */
+  --hauteur-nav: calc(68px + env(safe-area-inset-bottom));
 }
 
 /* Thème sombre : la carte "fond" et la "zone-surveillance" ne restent PAS
@@ -62,6 +80,19 @@
   --onglet-inactif: color-mix(in srgb, #f2e9da 12%, #17343c);
   --onglet-actif: color-mix(in srgb, #e8946e 18%, #17343c);
   --opacite-tint: 22%;
+
+  /* --nav-fond (#0B3C49) est volontairement PLUS CLAIR que --fond
+     (#0F272E) : effet d'élévation, la barre paraît posée au-dessus de la
+     page plutôt que peinte dedans. Ne pas aligner sur --fond. */
+  --nav-fond: #0b3c49;
+  --nav-bordure: rgba(242, 233, 218, 0.1);
+  --nav-actif: #e8946e;
+  --nav-inactif: #f2e9da;
+  --calc-fond: #e8946e;
+  --calc-contour: #0b3c49;
+  --calc-icone: #fffcf5;
+  --calc-ombre: rgba(0, 0, 0, 0.35);
+  --header-fond: #0b3c49;
   --ombre-header: rgba(0, 0, 0, 0.4);
 }
 
