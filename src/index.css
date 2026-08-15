@@ -49,6 +49,14 @@
      les deux thèmes, mais quand même exposée en variable pour qu'aucun
      composant n'ait à coder une couleur en dur. */
   --ombre-header: rgba(0, 0, 0, 0.18);
+  /* Ombre légère des tuiles de catégories : juste assez pour suggérer une
+     surface surélevée, sans lourdeur (une carte répétée 4-8 fois dans une
+     grille ne doit pas cumuler visuellement). */
+  --ombre-carte: rgba(0, 0, 0, 0.1);
+  /* Dosage du mélange dans texteCategorie() (src/data/categories.ts) : en
+     clair, les couleurs de catégorie contrastent déjà bien sur un fond pâle
+     (c'est pour ça qu'elles ont été choisies) — 0%, couleur inchangée. */
+  --poids-texte-categorie: 0%;
 
   /* Hauteur réservée par la BottomNavBar (barre + zone de geste iOS), pour
      que le Layout puisse réserver le même espace en padding-bottom sans
@@ -80,6 +88,13 @@
   --onglet-inactif: color-mix(in srgb, #f2e9da 12%, #17343c);
   --onglet-actif: color-mix(in srgb, #e8946e 18%, #17343c);
   --opacite-tint: 22%;
+  /* En sombre, certaines couleurs de catégorie (ex. anti-infectieux
+     #0B3C49) sont elles-mêmes sombres : utilisées comme texte sur un fond
+     tout aussi sombre, elles deviennent illisibles. 60% tire fortement la
+     teinte vers var(--texte) (clair en sombre), qui lui reste toujours
+     lisible sur var(--fond) — testé pour repasser la barre des 4.5:1 de
+     contraste (WCAG AA) même sur la couleur la plus sombre de la palette. */
+  --poids-texte-categorie: 60%;
 
   /* --nav-fond (#0B3C49) est volontairement PLUS CLAIR que --fond
      (#0F272E) : effet d'élévation, la barre paraît posée au-dessus de la
@@ -94,6 +109,9 @@
   --calc-ombre: rgba(0, 0, 0, 0.35);
   --header-fond: #0b3c49;
   --ombre-header: rgba(0, 0, 0, 0.4);
+  /* Plus opaque qu'en clair : sur un fond déjà sombre, une ombre à faible
+     opacité devient quasi invisible. */
+  --ombre-carte: rgba(0, 0, 0, 0.3);
 }
 
 /* En v4, il n'y a plus de tailwind.config.js séparé pour étendre le thème :

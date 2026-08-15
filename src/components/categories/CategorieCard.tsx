@@ -27,6 +27,9 @@ export default function CategorieCard({
       // catégories × 2 thèmes), color-mix() s'en charge à chaque rendu.
       style={{
         backgroundColor: `color-mix(in srgb, ${categorie.couleur} var(--opacite-tint), var(--fond))`,
+        // Ombre légère : détache la carte du fond pour casser l'effet
+        // "aplat 2D", sans aller jusqu'à un relief marqué.
+        boxShadow: '0 4px 12px var(--ombre-carte)',
       }}
       // active:scale-95 : légère réduction d'échelle au tap, avec une
       // transition douce, pour donner un retour tactile immédiat sur mobile.

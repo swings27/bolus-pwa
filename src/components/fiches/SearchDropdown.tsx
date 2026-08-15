@@ -4,7 +4,9 @@ import { useNavigate } from 'react-router-dom'
 import { Search } from 'lucide-react'
 import { useSearch } from '../../hooks/useSearch'
 import { useClickOutside } from '../../hooks/useClickOutside'
-import { getCategorieBySlug } from '../../data/categories'
+import ResultatFiche from './ResultatFiche'
+
+const MAX_RESULTATS_DROPDOWN = 6
 
 // Barre de recherche de l'Accueil avec dropdown inline de résultats
 // (autocomplete-like). useSearch se charge de la requête Dexie ; ce
@@ -17,7 +19,7 @@ export default function SearchDropdown() {
   const conteneurRef = useRef<HTMLDivElement>(null)
   const navigate = useNavigate()
 
-  const { resultats } = useSearch(query)
+  const { resultats } = useSearch(query, MAX_RESULTATS_DROPDOWN)
   const afficherDropdown = ouvert && query.trim().length >= 2
 
   useClickOutside(conteneurRef, () => setOuvert(false))
@@ -83,41 +85,21 @@ export default function SearchDropdown() {
           {resultats.length === 0 ? (
             <p className="px-4 py-3 text-sm text-texte/60">Aucun médicament trouvé</p>
           ) : (
-            resultats.map((fiche, index) => {
-              const categorie = getCategorieBySlug(fiche.categorie)
-              return (
-                <button
-                  key={fiche.id}
-                  type="button"
-                  role="option"
-                  aria-selected={index === indexSurligne}
-                  onClick={() => selectionner(fiche.id)}
-                  onMouseEnter={() => setIndexSurligne(index)}
-                  className={`flex w-full items-center justify-between gap-3 px-4 py-3 text-left ${
-                    index === indexSurligne ? 'bg-fond' : ''
-                  }`}
-                >
-                  <span className="min-w-0">
-                    <span className="block truncate text-sm font-semibold text-texte">
-                      {fiche.dci}
-                    </span>
-                    {fiche.nomsCommerciaux.length > 0 && (
-                      <span className="block truncate text-xs text-texte/60">
-                        {fiche.nomsCommerciaux.join(' · ')}
-                      </span>
-                    )}
-                  </span>
-                  {categorie && (
-                    <span
-                      className="shrink-0 rounded-full px-2 py-0.5 text-[10px] font-semibold text-white"
-                      style={{ backgroundColor: categorie.couleur }}
-                    >
-                      {categorie.label}
-                    </span>
-                  )}
-                </button>
-              )
-            })
+            resultats.map((fiche, index) => (
+              // La sémantique combobox (role="option", surlignage clavier)
+              // est spécifique à ce dropdown : elle vit dans ce wrapper
+              // plutôt que dans ResultatFiche, qui reste un composant de
+              // liste générique réutilisable ailleurs sans ces attributs.
+              <div
+                key={fiche.id}
+                role="option"
+                aria-selected={index === indexSurligne}
+                onMouseEnter={() => setIndexSurligne(index)}
+                style={index === indexSurligne ? { backgroundColor: 'var(--fond)' } : undefined}
+              >
+                <ResultatFiche fiche={fiche} onClick={() => selectionner(fiche.id)} />
+              </div>
+            ))
           )}
         </div>
       )}

@@ -2,8 +2,6 @@ import { useLiveQuery } from 'dexie-react-hooks'
 import { db } from '../db'
 import type { IFiche } from '../types'
 
-const MAX_RESULTATS = 6
-
 interface IResultatRecherche {
   resultats: IFiche[]
   loading: boolean
@@ -17,12 +15,15 @@ interface IResultatRecherche {
 // n'est pas remonté. useLiveQuery s'abonne aux tables IndexedDB qu'elle lit
 // et ré-exécute automatiquement la requête (et re-render le composant) dès
 // que ces tables sont modifiées, sans code de synchronisation manuel.
-export function useSearch(query: string): IResultatRecherche {
+//
+// `limite` est optionnel : le dropdown de l'Accueil tronque à 6 résultats
+// (limite=6), la page Recherche plein écran veut tout (limite omise).
+export function useSearch(query: string, limite?: number): IResultatRecherche {
   const terme = query.trim()
 
-  // Le tableau de dépendances ([terme]) dit à useLiveQuery de ré-exécuter
-  // la requête quand le texte recherché change (comme le tableau de deps
-  // d'un useEffect).
+  // Le tableau de dépendances ([terme, limite]) dit à useLiveQuery de
+  // ré-exécuter la requête quand le texte recherché OU la limite change
+  // (comme le tableau de deps d'un useEffect).
   const resultats = useLiveQuery(
     async () => {
       if (terme.length < 2) return []
@@ -45,9 +46,9 @@ export function useSearch(query: string): IResultatRecherche {
         .distinct()
         .toArray()
 
-      return correspondances.slice(0, MAX_RESULTATS)
+      return limite === undefined ? correspondances : correspondances.slice(0, limite)
     },
-    [terme],
+    [terme, limite],
   )
 
   // Pendant le tout premier calcul, useLiveQuery renvoie `undefined` (pas

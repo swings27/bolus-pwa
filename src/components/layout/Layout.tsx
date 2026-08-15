@@ -18,7 +18,14 @@ export default function Layout() {
           safe area, via --hauteur-nav défini dans index.css) + 8px de
           marge, pour que le contenu ne soit jamais masqué derrière la
           barre fixe en bas d'écran. */}
-      <main className="flex-1" style={{ paddingBottom: 'calc(var(--hauteur-nav) + 8px)' }}>
+      {/* flex flex-col (pas juste flex-1) : donne à <main> lui-même un
+          contexte flex, pour que la page rendue par <Outlet/> puisse
+          s'étirer sur toute la hauteur restante via flex-1 (utile pour
+          centrer un état vide dans l'espace disponible, ex. Recherche). */}
+      <main
+        className="flex flex-1 flex-col"
+        style={{ paddingBottom: 'calc(var(--hauteur-nav) + 8px)' }}
+      >
         <Outlet />
       </main>
       <BottomNavBar />
