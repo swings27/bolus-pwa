@@ -40,7 +40,7 @@ export default function Accueil() {
       </div>
 
       {/* Catégories */}
-      <div className="flex flex-col gap-3 px-6 pb-8">
+      <div className="flex flex-col gap-3 px-6 pb-24">
         <p className="text-xs font-semibold uppercase tracking-widest text-texte/60">
           Parcourir par catégorie
         </p>
@@ -63,7 +63,12 @@ export default function Accueil() {
         </button>
       </div>
 
-      <div className="mt-auto">
+      {/* Collé au-dessus de la BottomNavBar (fixed, pas mt-auto) : visible en
+          permanence sans avoir à faire défiler jusqu'en bas de la page,
+          uniquement sur l'Accueil — les autres pages n'importent pas ce
+          composant. pb-24 ci-dessus réserve la place pour qu'il ne masque
+          jamais le dernier contenu défilé. */}
+      <div className="fixed inset-x-0 z-30" style={{ bottom: 'var(--hauteur-nav)' }}>
         <DisclaimerBanner />
       </div>
     </div>

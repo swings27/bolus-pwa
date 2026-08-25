@@ -104,3 +104,24 @@ export const CATEGORIES: ICategorie[] = [
 export function getCategorieBySlug(slug: string): ICategorie | undefined {
   return CATEGORIES.find((categorie) => categorie.slug === slug)
 }
+
+// Certaines couleurs de catégorie (ex. anti-infectieux #0B3C49, psychotropes
+// #3F5D38) sont elles-mêmes des teintes sombres, choisies pour contraster
+// sur un fond clair. Utilisées telles quelles comme COULEUR DE TEXTE en
+// thème sombre (sur un fond tout aussi sombre), elles deviennent quasi
+// illisibles. On les mélange avec var(--texte) — qui, lui, est TOUJOURS
+// lisible sur var(--fond) puisque c'est sa seule raison d'être.
+//
+// Le dosage (--poids-texte-categorie) vit dans index.css et diffère par
+// thème : 0% en clair (les couleurs de catégorie contrastent déjà bien sur
+// un fond pâle, aucune correction nécessaire), 60% en sombre (correction
+// forte, nécessaire pour les couleurs les plus sombres de la palette). Un
+// ratio fixe identique dans les deux thèmes aurait soit sous-corrigé le
+// sombre, soit délavé inutilement les couleurs en clair.
+//
+// À utiliser pour tout texte affiché en couleur de catégorie sur un fond
+// pâle/teinté (jamais nécessaire sur un badge plein type CategorieCard, où
+// le texte est blanc quelle que soit la couleur).
+export function texteCategorie(couleur: string): string {
+  return `color-mix(in srgb, var(--texte) var(--poids-texte-categorie), ${couleur})`
+}

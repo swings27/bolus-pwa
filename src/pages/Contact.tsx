@@ -1,10 +1,75 @@
-// Page placeholder — route : /menu/contact
-// À remplacer par le vrai contenu dans une prochaine étape.
+import { Mail, Globe, Link2, ChevronRight, AlertTriangle } from 'lucide-react'
+import type { LucideIcon } from 'lucide-react'
+import PageDocument from '../components/layout/PageDocument'
+import { APP } from '../data/editeur'
+
+interface ILienContact {
+  icon: LucideIcon
+  label: string
+  href: string
+  externe?: boolean
+}
+
+const LIENS_CONTACT: ILienContact[] = [
+  { icon: Mail, label: APP.contact, href: `mailto:${APP.contact}` },
+  { icon: Globe, label: 'bolus-app.fr', href: APP.siteWeb, externe: true },
+  {
+    // Link2 (icône générique de lien) : cette version de lucide-react
+    // n'inclut aucune icône de marque (ni LinkedIn, ni X/Twitter).
+    icon: Link2,
+    label: 'LinkedIn',
+    href: 'https://www.linkedin.com/company/bolus-app-infirmiers/',
+    externe: true,
+  },
+  // X/Twitter : à ajouter ici une fois le compte de l'application prêt
+  // (compte actuel, lié au site : https://x.com/Swings27x), même forme que
+  // les lignes ci-dessus.
+]
+
 export default function Contact() {
   return (
-    <div className="p-4">
-      <h1 className="text-xl font-semibold text-texte">Contact</h1>
-      <p className="text-texte/60">Route : /menu/contact</p>
-    </div>
+    <PageDocument titre="Contact">
+      <p className="text-base leading-relaxed text-texte">
+        Une question, une erreur repérée dans une fiche, une molécule qui vous manque ? Écrivez-moi
+        directement, je lis tout.
+      </p>
+
+      <nav className="overflow-hidden rounded-2xl divide-y divide-texte/10 bg-surface">
+        {LIENS_CONTACT.map(({ icon: Icon, label, href, externe }) => (
+          <a
+            key={href}
+            href={href}
+            {...(externe ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+            // min-h-14 (56px) : hauteur tactile confortable pour une ligne de
+            // contact, plus généreuse que le min-h-12 des liens du Menu.
+            className="flex min-h-14 items-center gap-3 px-4 py-3 text-texte"
+          >
+            <Icon className="h-5 w-5 shrink-0 text-texte/70" aria-hidden="true" />
+            <span className="flex-1 text-base font-medium">{label}</span>
+            <ChevronRight className="h-4 w-4 shrink-0 text-texte/40" aria-hidden="true" />
+          </a>
+        ))}
+      </nav>
+
+      <div
+        className="flex items-start gap-2 rounded-lg px-4 py-3"
+        style={{
+          backgroundColor: 'color-mix(in srgb, var(--alerte) 10%, var(--fond))',
+          borderLeft: '3px solid var(--alerte)',
+        }}
+      >
+        <AlertTriangle
+          className="mt-0.5 h-4 w-4 shrink-0"
+          style={{ color: 'var(--alerte)' }}
+          aria-hidden="true"
+        />
+        <p className="text-sm leading-relaxed text-texte">
+          <span className="font-semibold">Signaler une erreur dans une fiche</span>
+          <br />
+          Précisez le nom de la molécule et la version de l'application (visible dans Paramètres).
+          Toute erreur signalée est vérifiée contre le RCP source avant correction.
+        </p>
+      </div>
+    </PageDocument>
   )
 }

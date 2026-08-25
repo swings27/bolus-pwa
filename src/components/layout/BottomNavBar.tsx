@@ -1,6 +1,7 @@
 import { Link, useLocation } from 'react-router-dom'
 import { Home, Search, Calculator, LayoutGrid, Menu as MenuIcon } from 'lucide-react'
 import type { LucideIcon } from 'lucide-react'
+import { useCalculateurModal } from '../../contexts/CalculateurModalContext'
 
 interface IOnglet {
   to: string
@@ -22,11 +23,12 @@ const onglets: IOnglet[] = [
 // garde son onglet parent actif (ex. /categories/antalgiques → Catégories),
 // mais /fiche/:id n'active délibérément aucun onglet : on y arrive depuis
 // plusieurs endroits différents (recherche, catégorie...), aucun ne serait
-// plus légitime qu'un autre à s'allumer.
+// plus légitime qu'un autre à s'allumer. Le Calculateur n'a pas de route (il
+// s'ouvre en modale par-dessus la page courante) : son état actif dépend de
+// l'ouverture de la modale, pas du chemin — voir le rendu ci-dessous.
 function ongletActifPour(pathname: string): string | null {
   if (pathname === '/') return '/'
   if (pathname === '/recherche') return '/recherche'
-  if (pathname === '/calculateurs') return '/calculateurs'
   if (pathname === '/categories' || pathname.startsWith('/categories/')) return '/categories'
   if (pathname === '/menu' || pathname.startsWith('/menu/')) return '/menu'
   return null
@@ -35,6 +37,7 @@ function ongletActifPour(pathname: string): string | null {
 export default function BottomNavBar() {
   const { pathname } = useLocation()
   const ongletActif = ongletActifPour(pathname)
+  const { estOuvert: calculateurOuvert, ouvrir: ouvrirCalculateur } = useCalculateurModal()
 
   return (
     <nav
@@ -56,15 +59,16 @@ export default function BottomNavBar() {
       }}
     >
       {onglets.map(({ to, label, icon: Icon }) => {
-        const actif = ongletActif === to
-        const couleur = actif ? 'var(--nav-actif)' : 'var(--nav-inactif)'
         const central = to === '/calculateurs'
+        const actif = central ? calculateurOuvert : ongletActif === to
+        const couleur = actif ? 'var(--nav-actif)' : 'var(--nav-inactif)'
 
         if (central) {
           return (
-            <Link
+            <button
               key={to}
-              to={to}
+              type="button"
+              onClick={ouvrirCalculateur}
               // position: relative → le cercle absolu ci-dessous se
               // positionne par rapport au coin haut-gauche de CETTE
               // colonne, qui occupe toute la hauteur de la barre (stretch,
@@ -99,7 +103,7 @@ export default function BottomNavBar() {
               >
                 {label}
               </span>
-            </Link>
+            </button>
           )
         }
 

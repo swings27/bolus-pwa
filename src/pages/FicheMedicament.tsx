@@ -1,7 +1,6 @@
 import { useEffect, useMemo, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import Header from '../components/layout/Header'
-import DisclaimerBanner from '../components/layout/DisclaimerBanner'
 import BlocInfo from '../components/fiches/BlocInfo'
 import ListeSeparee from '../components/fiches/ListeSeparee'
 import SelecteurForme from '../components/fiches/SelecteurForme'
@@ -173,10 +172,6 @@ export default function FicheMedicament() {
 
       <div className="mt-6 px-6">
         <SourcesFiche sources={fiche.sourcesRcp} dateRevision={fiche.dateRevision} />
-      </div>
-
-      <div className="mt-6">
-        <DisclaimerBanner />
       </div>
     </div>
   )

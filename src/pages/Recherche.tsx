@@ -1,10 +1,76 @@
-// Page placeholder — route : /recherche
-// À remplacer par le vrai contenu dans une prochaine étape.
+import { useRef, useState } from 'react'
+import { Search, SearchX, X } from 'lucide-react'
+import Header from '../components/layout/Header'
+import EtatVide from '../components/layout/EtatVide'
+import ResultatFiche from '../components/fiches/ResultatFiche'
+import { useSearch } from '../hooks/useSearch'
+
 export default function Recherche() {
+  const [query, setQuery] = useState('')
+  const inputRef = useRef<HTMLInputElement>(null)
+
+  // Pas de limite ici (contrairement au dropdown de l'Accueil) : la page
+  // plein écran a la place d'afficher tous les résultats.
+  const { resultats } = useSearch(query)
+  const termeValide = query.trim().length >= 2
+
+  function viderChamp() {
+    setQuery('')
+    inputRef.current?.focus()
+  }
+
   return (
-    <div className="p-4">
-      <h1 className="text-xl font-semibold text-texte">Recherche</h1>
-      <p className="text-texte/60">Route : /recherche</p>
+    <div className="flex flex-1 flex-col">
+      <Header variant="logo" />
+
+      {/* top-14 : colle sous le Header (h-14 = 56px), reste visible au
+          scroll de la liste de résultats en dessous. */}
+      <div className="sticky top-14 z-10 bg-fond px-6 py-3">
+        <div className="flex items-center gap-2 rounded-full border-2 border-texte/50 bg-surface px-4 py-3">
+          <Search className="h-5 w-5 shrink-0 text-texte/50" aria-hidden="true" />
+          <input
+            ref={inputRef}
+            type="text"
+            value={query}
+            onChange={(event) => setQuery(event.target.value)}
+            // autoFocus : la page Recherche existe pour qu'on tape
+            // immédiatement, pas pour qu'on retouche l'écran d'abord.
+            autoFocus
+            placeholder="Nom, DCI ou nom commercial…"
+            className="w-full bg-transparent text-sm text-texte placeholder:text-texte/40 focus:outline-none"
+          />
+          {query.length > 0 && (
+            <button type="button" onClick={viderChamp} aria-label="Effacer la recherche">
+              <X className="h-4 w-4 text-texte/50" aria-hidden="true" />
+            </button>
+          )}
+        </div>
+      </div>
+
+      {!termeValide ? (
+        <EtatVide
+          icone={Search}
+          titre="Rechercher un médicament"
+          description="Tapez au moins 2 lettres pour lancer la recherche."
+        />
+      ) : resultats.length === 0 ? (
+        <EtatVide
+          icone={SearchX}
+          titre="Aucun résultat"
+          description={`Aucun médicament ne correspond à « ${query.trim()} ».`}
+        />
+      ) : (
+        <div className="flex flex-1 flex-col">
+          <p className="px-6 pb-2 pt-3 text-xs text-texte-doux">
+            {resultats.length} résultat{resultats.length > 1 ? 's' : ''}
+          </p>
+          <div>
+            {resultats.map((fiche) => (
+              <ResultatFiche key={fiche.id} fiche={fiche} />
+            ))}
+          </div>
+        </div>
+      )}
     </div>
   )
 }
