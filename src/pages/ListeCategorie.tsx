@@ -54,12 +54,13 @@ export default function ListeCategorie() {
     return (
       <div className="flex flex-1 flex-col">
         <Header variant="retour" />
+        <h1 className="sr-only">Catégorie introuvable</h1>
         <EtatVide icone={FolderX} titre="Catégorie introuvable" />
         <div className="px-6 pb-6 text-center">
           <button
             type="button"
             onClick={() => navigate('/categories')}
-            className="rounded-lg bg-interactif px-5 py-2.5 text-sm font-medium text-surface"
+            className="rounded-lg bg-interactif px-5 py-3 text-sm font-medium text-surface"
           >
             Retour aux catégories
           </button>

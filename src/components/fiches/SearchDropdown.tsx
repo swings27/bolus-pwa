@@ -8,6 +8,10 @@ import ResultatFiche from './ResultatFiche'
 
 const MAX_RESULTATS_DROPDOWN = 6
 
+function idOption(prefixe: string, index: number): string {
+  return `${prefixe}-option-${index}`
+}
+
 // Barre de recherche de l'Accueil avec dropdown inline de résultats
 // (autocomplete-like). useSearch se charge de la requête Dexie ; ce
 // composant ne gère que l'UI et l'interaction (ouverture/fermeture,
@@ -56,9 +60,13 @@ export default function SearchDropdown() {
 
   return (
     <div ref={conteneurRef} className="relative">
+      <label htmlFor="recherche-accueil" className="sr-only">
+        Rechercher un médicament
+      </label>
       <div className="flex items-center gap-2 rounded-full border-2 border-texte/70 bg-surface px-4 py-3">
         <Search className="h-5 w-5 shrink-0 text-texte/50" aria-hidden="true" />
         <input
+          id="recherche-accueil"
           type="text"
           value={query}
           onChange={(event) => {
@@ -73,6 +81,10 @@ export default function SearchDropdown() {
           aria-expanded={afficherDropdown}
           aria-autocomplete="list"
           aria-controls="search-dropdown-liste"
+          // Annonce le résultat surligné par les flèches du clavier sans
+          // déplacer le focus DOM (celui-ci reste sur l'input) : c'est le
+          // pattern standard du rôle combobox.
+          aria-activedescendant={indexSurligne >= 0 ? idOption('search-dropdown', indexSurligne) : undefined}
         />
       </div>
 
@@ -92,6 +104,7 @@ export default function SearchDropdown() {
               // liste générique réutilisable ailleurs sans ces attributs.
               <div
                 key={fiche.id}
+                id={idOption('search-dropdown', index)}
                 role="option"
                 aria-selected={index === indexSurligne}
                 onMouseEnter={() => setIndexSurligne(index)}

@@ -30,6 +30,7 @@ function nettoyerSaisie(brut: string): string {
 
 export default function ChampNumerique({ label, valeur, onChange, unite, placeholder }: IChampNumeriqueProps) {
   const id = useId()
+  const idUnite = `${id}-unite`
 
   return (
     <div className="flex flex-1 flex-col gap-1">
@@ -44,6 +45,12 @@ export default function ChampNumerique({ label, valeur, onChange, unite, placeho
           value={valeur}
           onChange={(e) => onChange(nettoyerSaisie(e.target.value))}
           placeholder={placeholder}
+          // aria-describedby vers l'unité : un lecteur d'écran annonce le
+          // label PUIS l'unité à chaque focus sur le champ ("Volume à
+          // perfuser, mL"), indispensable ici puisque l'unité n'est jamais
+          // dans le label lui-même (elle est affichée séparément, en
+          // superposition dans le champ).
+          aria-describedby={unite ? idUnite : undefined}
           // text-lg = 18px : en dessous, iOS zoome automatiquement au focus
           // et casse la mise en page.
           className="h-12 w-full min-w-0 rounded-lg border px-3 text-lg text-texte"
@@ -55,6 +62,7 @@ export default function ChampNumerique({ label, valeur, onChange, unite, placeho
         />
         {unite && (
           <span
+            id={idUnite}
             className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-sm"
             style={{ color: 'var(--texte-doux)' }}
           >

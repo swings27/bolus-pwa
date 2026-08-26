@@ -3,10 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/png" href="/bolus-icone-192.png" />
-    <!-- iOS ignore le manifest PWA pour l'icône d'écran d'accueil : il lui
-         faut ce lien explicite pour afficher l'icône Bolus (et non une
-         capture de la page) lors de l'ajout à l'écran d'accueil. -->
-    <link rel="apple-touch-icon" href="/bolus-icone-192.png" />
+    <!-- Favicon vectoriel : les navigateurs qui savent l'afficher (la
+         quasi-totalité aujourd'hui) le préfèrent au PNG ci-dessus, qui reste
+         le repli pour les autres — les deux liens peuvent coexister. -->
+    <link rel="icon" type="image/svg+xml" href="/bolus-favicon.svg" />
+    <!-- iOS ignore totalement le manifest PWA pour l'icône d'écran
+         d'accueil : il lui faut ce lien explicite, vers une image carrée de
+         180x180 exactement (voir scripts/generer-apple-icon.mjs), pour
+         afficher l'icône Bolus au lieu d'une capture de la page. -->
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <!-- Ouvre l'application en plein écran sur iOS (sans la barre d'adresse
+         Safari) une fois ajoutée à l'écran d'accueil — sans cette balise,
+         l'installation ouvrirait un simple onglet Safari et l'intérêt de la
+         PWA disparaîtrait. -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Bolus" />
     <!-- viewport-fit=cover : sans ça, env(safe-area-inset-*) reste figé à 0
          sur iOS même sur un iPhone à encoche/île dynamique — la barre de
          navigation passerait sous l'indicateur de geste. -->

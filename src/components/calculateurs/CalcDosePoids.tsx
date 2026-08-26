@@ -49,7 +49,9 @@ export default function CalcDosePoids() {
                 key={valeurUnite}
                 type="button"
                 onClick={() => setUnite(valeurUnite)}
-                className="flex-1 rounded-lg px-3 py-2.5 text-sm transition-colors duration-150"
+                // py-3 (pas py-2.5) : zone tactile 44px minimum sur un
+                // texte tenant sur une seule ligne (text-sm = 20px).
+                className="flex-1 rounded-lg px-3 py-3 text-sm transition-colors duration-150"
                 style={
                   actif
                     ? { backgroundColor: 'var(--onglet-actif)', color: 'var(--interactif)', fontWeight: 600 }
@@ -78,7 +80,9 @@ export default function CalcDosePoids() {
         <button
           type="button"
           onClick={reinitialiser}
-          className="self-start text-sm"
+          // -my-3 compense le py-3 : zone tactile de 44px sans repousser le
+          // reste de la mise en page (le lien n'avait aucun padding avant).
+          className="-my-3 self-start py-3 text-sm"
           style={{ color: 'var(--interactif)' }}
         >
           Réinitialiser

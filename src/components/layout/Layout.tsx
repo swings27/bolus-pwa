@@ -1,5 +1,8 @@
+import { useEffect, useRef, useState } from 'react'
 import { Outlet } from 'react-router-dom'
 import BottomNavBar from './BottomNavBar'
+import InstallBanner from './InstallBanner'
+import UpdateBanner from './UpdateBanner'
 
 // Layout principal : wrapper commun à toute l'app (fond du thème actif,
 // hauteur pleine du viewport). <Outlet /> est l'emplacement où React Router
@@ -12,22 +15,53 @@ import BottomNavBar from './BottomNavBar'
 // "/menu et /menu/*" dans BottomNavBar.tsx, qui n'aurait pas de sens si la
 // barre disparaissait justement sur ces routes-là.
 export default function Layout() {
+  const bandeauxRef = useRef<HTMLDivElement>(null)
+  // Hauteur réellement occupée par InstallBanner/UpdateBanner (0 quand ni
+  // l'un ni l'autre ne s'affiche). Mesurée plutôt que devinée : leur
+  // contenu varie (iOS a deux lignes d'instructions, Android une seule),
+  // et les deux peuvent apparaître en même temps. Sans cette réserve
+  // dynamique, un bouton en bas de page (ex. Introuvable.tsx) se
+  // retrouverait caché derrière un bandeau flottant qui, lui, ne participe
+  // pas au flux normal du document.
+  const [hauteurBandeaux, setHauteurBandeaux] = useState(0)
+
+  useEffect(() => {
+    const element = bandeauxRef.current
+    if (!element) return
+    const observateur = new ResizeObserver(([entree]) => {
+      setHauteurBandeaux(entree.contentRect.height)
+    })
+    observateur.observe(element)
+    return () => observateur.disconnect()
+  }, [])
+
   return (
     <div className="min-h-screen bg-fond text-texte flex flex-col">
       {/* padding-bottom réservé à la BottomNavBar (hauteur de la barre +
           safe area, via --hauteur-nav défini dans index.css) + 8px de
-          marge, pour que le contenu ne soit jamais masqué derrière la
-          barre fixe en bas d'écran. */}
+          marge + la hauteur courante des bandeaux flottants ci-dessous,
+          pour que le contenu ne soit jamais masqué derrière l'un ou
+          l'autre. */}
       {/* flex flex-col (pas juste flex-1) : donne à <main> lui-même un
           contexte flex, pour que la page rendue par <Outlet/> puisse
           s'étirer sur toute la hauteur restante via flex-1 (utile pour
           centrer un état vide dans l'espace disponible, ex. Recherche). */}
       <main
         className="flex flex-1 flex-col"
-        style={{ paddingBottom: 'calc(var(--hauteur-nav) + 8px)' }}
+        style={{ paddingBottom: `calc(var(--hauteur-nav) + 8px + ${hauteurBandeaux}px)` }}
       >
         <Outlet />
       </main>
+      {/* Empilés dans un unique conteneur fixe, en flux normal l'un par
+          rapport à l'autre (pas deux positions "fixed" indépendantes qui se
+          superposeraient) : UpdateBanner (une version obsolète peut fausser
+          les données affichées) prime visuellement sur InstallBanner en
+          s'empilant au-dessus, plus loin de la nav — l'ordre du DOM suffit,
+          plus besoin de jongler avec le z-index entre les deux. */}
+      <div ref={bandeauxRef} className="fixed inset-x-0 z-30" style={{ bottom: 'var(--hauteur-nav)' }}>
+        <UpdateBanner />
+        <InstallBanner />
+      </div>
       <BottomNavBar />
     </div>
   )

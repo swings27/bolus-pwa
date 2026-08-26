@@ -14,6 +14,7 @@ import { useFiche } from '../hooks/useFiche'
 function EcranChargementFiche() {
   return (
     <div className="flex flex-col items-center justify-center gap-3 py-24">
+      <h1 className="sr-only">Chargement de la fiche</h1>
       <span
         className="h-8 w-8 animate-spin rounded-full border-4 border-accent-clair border-t-interactif"
         role="status"
@@ -27,13 +28,14 @@ function FicheIntrouvable() {
   const navigate = useNavigate()
   return (
     <div className="flex flex-col items-center justify-center gap-4 px-6 py-24 text-center">
+      <h1 className="sr-only">Fiche introuvable</h1>
       <p className="text-sm text-texte/70">
         Cette fiche médicament est introuvable ou n'est plus disponible.
       </p>
       <button
         type="button"
         onClick={() => navigate(-1)}
-        className="rounded-lg bg-interactif px-5 py-2.5 text-sm font-medium text-surface"
+        className="rounded-lg bg-interactif px-5 py-3 text-sm font-medium text-surface"
       >
         Retour
       </button>

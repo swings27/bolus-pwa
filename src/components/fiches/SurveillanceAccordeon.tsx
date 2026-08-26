@@ -32,12 +32,14 @@ export default function SurveillanceAccordeon({ items }: ISurveillanceAccordeonP
         <div className="mt-1 flex flex-col">
           {items.map((item, index) => {
             const ouvert = indexOuvert === index
+            const idPanneau = `surveillance-panneau-${index}`
             return (
               <div key={item.titre} className="border-b border-texte/10 last:border-b-0">
                 <button
                   type="button"
                   onClick={() => setIndexOuvert(ouvert ? null : index)}
                   aria-expanded={ouvert}
+                  aria-controls={idPanneau}
                   className="flex w-full items-center justify-between gap-3 py-3 text-left"
                 >
                   <span className="text-sm font-semibold text-texte">{item.titre}</span>
@@ -48,7 +50,11 @@ export default function SurveillanceAccordeon({ items }: ISurveillanceAccordeonP
                     aria-hidden="true"
                   />
                 </button>
-                {ouvert && <p className="pb-3 text-sm text-texte-doux">{item.detail}</p>}
+                {ouvert && (
+                  <p id={idPanneau} className="pb-3 text-sm text-texte-doux">
+                    {item.detail}
+                  </p>
+                )}
               </div>
             )
           })}

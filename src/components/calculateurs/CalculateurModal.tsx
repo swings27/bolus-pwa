@@ -6,9 +6,10 @@
 // Voir scripts/verif-isolation-calculateurs.mjs, qui fait échouer le build
 // en cas de couplage.
 
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Info, X } from 'lucide-react'
 import { useCalculateurModal } from '../../contexts/CalculateurModalContext'
+import { useFocusTrap } from '../../hooks/useFocusTrap'
 import CalcDebit from './CalcDebit'
 import CalcDosePoids from './CalcDosePoids'
 
@@ -25,6 +26,21 @@ const ONGLETS: { valeur: Onglet; label: string }[] = [
 export default function CalculateurModal() {
   const { estOuvert, fermer } = useCalculateurModal()
   const [onglet, setOnglet] = useState<Onglet>('debit')
+  const conteneurRef = useRef<HTMLDivElement>(null)
+
+  useFocusTrap(estOuvert, conteneurRef)
+
+  // Échap referme la modale : le piège de focus (useFocusTrap) empêche déjà
+  // Tab de s'échapper vers la page en dessous, mais un utilisateur clavier
+  // doit pouvoir sortir sans avoir à atteindre le bouton Fermer à la main.
+  useEffect(() => {
+    if (!estOuvert) return
+    function gererEchap(event: KeyboardEvent) {
+      if (event.key === 'Escape') fermer()
+    }
+    document.addEventListener('keydown', gererEchap)
+    return () => document.removeEventListener('keydown', gererEchap)
+  }, [estOuvert, fermer])
 
   if (!estOuvert) return null
 
@@ -34,16 +50,22 @@ export default function CalculateurModal() {
       onClick={fermer}
     >
       <div
+        ref={conteneurRef}
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="calculateur-titre"
         className="flex max-h-[85vh] w-full flex-col overflow-y-auto rounded-t-2xl bg-fond p-6 shadow-xl sm:max-w-md sm:rounded-2xl"
         onClick={(evenement) => evenement.stopPropagation()}
       >
         <div className="flex items-center justify-between">
-          <h2 className="font-display text-xl font-semibold text-texte">Calculateurs</h2>
+          <h2 id="calculateur-titre" className="font-display text-xl font-semibold text-texte">
+            Calculateurs
+          </h2>
           <button
             type="button"
             onClick={fermer}
             aria-label="Fermer"
-            className="flex h-9 w-9 items-center justify-center rounded-full"
+            className="-m-1.5 flex h-11 w-11 items-center justify-center rounded-full"
             style={{ color: 'var(--texte-doux)' }}
           >
             <X className="h-5 w-5" aria-hidden="true" />
@@ -58,7 +80,9 @@ export default function CalculateurModal() {
                 key={valeur}
                 type="button"
                 onClick={() => setOnglet(valeur)}
-                className="flex-1 rounded-lg px-4 py-2.5 text-sm transition-colors duration-150"
+                // py-3 (pas py-2.5) : zone tactile 44px minimum sur un
+                // texte tenant sur une seule ligne (text-sm = 20px).
+                className="flex-1 rounded-lg px-4 py-3 text-sm transition-colors duration-150"
                 style={
                   actif
                     ? { backgroundColor: 'var(--onglet-actif)', color: 'var(--interactif)', fontWeight: 600 }

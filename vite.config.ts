@@ -30,7 +30,20 @@ export default defineConfig({
       // intercepte les requêtes réseau pour servir du cache hors-ligne).
       // Alternative "injectManifest" = on écrit le SW à la main ; ici on
       // laisse Workbox faire le travail, ce qui suffit pour nos besoins.
-      registerType: 'autoUpdate',
+      //
+      // registerType "prompt" (pas "autoUpdate") : un nouveau déploiement ne
+      // doit jamais recharger l'application dans le dos de l'utilisatrice —
+      // inacceptable si elle consulte une fiche en pleine préparation de
+      // médicament. Le Service Worker télécharge la nouvelle version en
+      // arrière-plan et attend une action explicite (voir UpdateBanner.tsx,
+      // qui appelle updateServiceWorker()).
+      registerType: 'prompt',
+      // injectRegister à false : UpdateBanner.tsx enregistre lui-même le
+      // Service Worker via le hook useRegisterSW() (virtual:pwa-register/
+      // react). Laisser le plugin injecter EN PLUS son propre script
+      // d'enregistrement dans index.html ferait doublon (deux enregistrements
+      // concurrents du même Service Worker).
+      injectRegister: false,
       // includeAssets : fichiers statiques de /public à précacher au même
       // titre que les icônes du manifest, pour qu'ils restent disponibles
       // hors-ligne dès l'installation du Service Worker.
@@ -39,6 +52,8 @@ export default defineConfig({
         'bolus-icone-512.png',
         'bolus-wordmark-clair.svg',
         'bolus-wordmark-sombre.svg',
+        'apple-touch-icon.png',
+        'bolus-favicon.svg',
       ],
       manifest: {
         name: 'Bolus',

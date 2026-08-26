@@ -1,5 +1,6 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { db } from '../../db'
+import { useFocusTrap } from '../../hooks/useFocusTrap'
 
 const CLE_DISCLAIMER = 'disclaimer_accepte'
 
@@ -17,12 +18,15 @@ export default function DisclaimerModal() {
   // du modal le temps de lire la base au montage.
   const [accepte, setAccepte] = useState<boolean | null>(null)
   const [caseCochee, setCaseCochee] = useState(false)
+  const conteneurRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     db.parametres.get(CLE_DISCLAIMER).then((param) => {
       setAccepte(param !== undefined)
     })
   }, [])
+
+  useFocusTrap(accepte === false, conteneurRef)
 
   async function accepter() {
     await db.parametres.put({
@@ -40,8 +44,16 @@ export default function DisclaimerModal() {
     // Calculateur dépasse volontairement de la barre) — une modale reste
     // toujours au-dessus de la navigation.
     <div className="fixed inset-0 z-[60] flex items-center justify-center bg-texte/60 p-4">
-      <div className="w-full max-w-md rounded-2xl bg-surface p-6 shadow-xl">
-        <h2 className="text-lg font-semibold text-texte">Avertissement</h2>
+      <div
+        ref={conteneurRef}
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="disclaimer-titre"
+        className="w-full max-w-md rounded-2xl bg-surface p-6 shadow-xl"
+      >
+        <h2 id="disclaimer-titre" className="text-lg font-semibold text-texte">
+          Avertissement
+        </h2>
         <p className="mt-3 text-sm leading-relaxed text-texte/80">
           Bolus est un outil d'aide destiné aux professionnels de santé. Il
           ne remplace ni le jugement clinique de l'infirmier ou de

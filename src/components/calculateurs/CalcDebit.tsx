@@ -120,7 +120,9 @@ export default function CalcDebit() {
         <button
           type="button"
           onClick={reinitialiser}
-          className="self-start text-sm"
+          // -my-3 compense le py-3 : zone tactile de 44px sans repousser le
+          // reste de la mise en page (le lien n'avait aucun padding avant).
+          className="-my-3 self-start py-3 text-sm"
           style={{ color: 'var(--interactif)' }}
         >
           Réinitialiser

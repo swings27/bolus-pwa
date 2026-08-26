@@ -27,7 +27,10 @@ export default function SelecteurForme({ formes, forme, onChange }: ISelecteurFo
             key={valeur}
             type="button"
             onClick={() => onChange(valeur)}
-            className="flex-1 rounded-lg px-4 py-2.5 text-sm transition-colors duration-150"
+            // py-3 (pas py-2.5) : avec du texte sur une seule ligne
+            // (text-sm, 20px de hauteur de ligne), py-2.5 ne totalise que
+            // 40px — sous le minimum tactile de 44px.
+            className="flex-1 rounded-lg px-4 py-3 text-sm transition-colors duration-150"
             style={
               actif
                 ? { backgroundColor: 'var(--onglet-actif)', color: 'var(--interactif)', fontWeight: 600 }

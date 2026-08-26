@@ -22,14 +22,19 @@ export default function Recherche() {
   return (
     <div className="flex flex-1 flex-col">
       <Header variant="logo" />
+      <h1 className="sr-only">Recherche</h1>
 
       {/* top-14 : colle sous le Header (h-14 = 56px), reste visible au
           scroll de la liste de résultats en dessous. */}
       <div className="sticky top-14 z-10 bg-fond px-6 py-3">
         <div className="flex items-center gap-2 rounded-full border-2 border-texte/50 bg-surface px-4 py-3">
           <Search className="h-5 w-5 shrink-0 text-texte/50" aria-hidden="true" />
+          <label htmlFor="recherche-page" className="sr-only">
+            Rechercher un médicament
+          </label>
           <input
             ref={inputRef}
+            id="recherche-page"
             type="text"
             value={query}
             onChange={(event) => setQuery(event.target.value)}
@@ -40,7 +45,16 @@ export default function Recherche() {
             className="w-full bg-transparent text-sm text-texte placeholder:text-texte/40 focus:outline-none"
           />
           {query.length > 0 && (
-            <button type="button" onClick={viderChamp} aria-label="Effacer la recherche">
+            <button
+              type="button"
+              onClick={viderChamp}
+              aria-label="Effacer la recherche"
+              // -m-2 sur une boîte de 44px (h-11 w-11) : agrandit la zone
+              // tactile au minimum WCAG sans agrandir visuellement le bouton
+              // (l'icône reste 16px) — la marge négative absorbe la
+              // différence, la pilule ne bouge pas.
+              className="-m-2 flex h-11 w-11 shrink-0 items-center justify-center"
+            >
               <X className="h-4 w-4 text-texte/50" aria-hidden="true" />
             </button>
           )}

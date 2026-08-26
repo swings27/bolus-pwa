@@ -44,49 +44,55 @@ export default function Parametres() {
   }, [])
 
   return (
-    <div className="flex flex-col gap-8 px-6 pb-8">
+    // Header hors du conteneur à padding horizontal : sticky en haut, il
+    // doit courir sur toute la largeur de l'écran, pas seulement dans
+    // l'espace restant entre les marges px-6 du contenu.
+    <div className="flex flex-col pb-8">
       <Header variant="retour" />
-      <h1 className="font-display text-2xl font-semibold text-texte">Paramètres</h1>
 
-      <section className="flex flex-col gap-3">
-        <h2 className="font-display text-lg font-semibold text-texte">Apparence</h2>
+      <div className="flex flex-col gap-8 px-6 pt-6">
+        <h1 className="font-display text-2xl font-semibold text-texte">Paramètres</h1>
 
-        <div className="grid grid-cols-3 gap-2">
-          {OPTIONS_THEME.map(({ valeur, label, icon: Icon }) => {
-            const actif = theme === valeur
-            return (
-              <button
-                key={valeur}
-                type="button"
-                onClick={() => setTheme(valeur)}
-                aria-pressed={actif}
-                className="flex flex-col items-center gap-1.5 rounded-xl border py-3 text-xs font-medium transition-colors"
-                style={
-                  actif
-                    ? { backgroundColor: 'var(--interactif)', color: 'var(--fond)', borderColor: 'var(--interactif)' }
-                    : { backgroundColor: 'var(--surface)', color: 'var(--texte)', borderColor: 'color-mix(in srgb, var(--texte) 20%, transparent)' }
-                }
-              >
-                <Icon className="h-5 w-5" aria-hidden="true" />
-                {label}
-              </button>
-            )
-          })}
-        </div>
+        <section className="flex flex-col gap-3">
+          <h2 className="font-display text-lg font-semibold text-texte">Apparence</h2>
 
-        <p className="text-xs text-texte-doux">
-          Automatique suit le réglage de votre téléphone.
-        </p>
-      </section>
+          <div className="grid grid-cols-3 gap-2">
+            {OPTIONS_THEME.map(({ valeur, label, icon: Icon }) => {
+              const actif = theme === valeur
+              return (
+                <button
+                  key={valeur}
+                  type="button"
+                  onClick={() => setTheme(valeur)}
+                  aria-pressed={actif}
+                  className="flex flex-col items-center gap-1.5 rounded-xl border py-3 text-xs font-medium transition-colors"
+                  style={
+                    actif
+                      ? { backgroundColor: 'var(--interactif)', color: 'var(--fond)', borderColor: 'var(--interactif)' }
+                      : { backgroundColor: 'var(--surface)', color: 'var(--texte)', borderColor: 'color-mix(in srgb, var(--texte) 20%, transparent)' }
+                  }
+                >
+                  <Icon className="h-5 w-5" aria-hidden="true" />
+                  {label}
+                </button>
+              )
+            })}
+          </div>
 
-      <section className="flex flex-col gap-1">
-        <h2 className="font-display text-lg font-semibold text-texte">Informations</h2>
-        <div className="flex flex-col divide-y divide-texte/10">
-          <LigneInfo label="Version de l'application" valeur={__APP_VERSION__} />
-          <LigneInfo label="Version des fiches" valeur={versionFiches} />
-          <LigneInfo label="Catalogue mis à jour le" valeur={dateCatalogue} />
-        </div>
-      </section>
+          <p className="text-xs text-texte-doux">
+            Automatique suit le réglage de votre téléphone.
+          </p>
+        </section>
+
+        <section className="flex flex-col gap-1">
+          <h2 className="font-display text-lg font-semibold text-texte">Informations</h2>
+          <div className="flex flex-col divide-y divide-texte/10">
+            <LigneInfo label="Version de l'application" valeur={__APP_VERSION__} />
+            <LigneInfo label="Version des fiches" valeur={versionFiches} />
+            <LigneInfo label="Catalogue mis à jour le" valeur={dateCatalogue} />
+          </div>
+        </section>
+      </div>
     </div>
   )
 }

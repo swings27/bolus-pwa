@@ -9,7 +9,8 @@
     "build:prod": "npm run verif:isolation && cross-env VERIF_LEGAL=1 node scripts/verif-editeur.mjs && tsc -b && vite build",
     "lint": "oxlint",
     "preview": "vite preview",
-    "verif:isolation": "node scripts/verif-isolation-calculateurs.mjs"
+    "verif:isolation": "node scripts/verif-isolation-calculateurs.mjs",
+    "icones": "node scripts/generer-apple-icon.mjs"
   },
   "dependencies": {
     "dexie": "^4.4.4",
@@ -27,6 +28,7 @@
     "@vitejs/plugin-react": "^6.0.4",
     "cross-env": "^10.1.0",
     "oxlint": "^1.75.0",
+    "sharp": "^0.35.3",
     "tailwindcss": "^4.3.3",
     "typescript": "~6.0.2",
     "vite": "^8.2.0",
