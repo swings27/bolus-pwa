@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Layout from './components/layout/Layout'
 import DisclaimerModal from './components/layout/DisclaimerModal'
@@ -5,6 +6,8 @@ import ErrorBoundary from './components/layout/ErrorBoundary'
 import CalculateurModal from './components/calculateurs/CalculateurModal'
 import { CalculateurModalProvider } from './contexts/CalculateurModalContext'
 import { useFichesLoader } from './hooks/useFichesLoader'
+import { demanderPersistance } from './utils/persistance'
+import { db } from './db'
 import Accueil from './pages/Accueil'
 import Recherche from './pages/Recherche'
 import FicheMedicament from './pages/FicheMedicament'
@@ -18,6 +21,7 @@ import MentionsLegales from './pages/MentionsLegales'
 import Confidentialite from './pages/Confidentialite'
 import CGU from './pages/CGU'
 import Introuvable from './pages/Introuvable'
+import { Analytics } from '@vercel/analytics/react'
 
 // Écran plein écran affiché pendant la toute première synchronisation des
 // fiches (CDN → Dexie). Ne s'affiche qu'au premier lancement de l'app,
@@ -74,8 +78,21 @@ export default function App() {
   // ici, à la racine, plutôt que dans chaque page qui en a besoin).
   const { loading, error, reessayer } = useFichesLoader()
 
+  // Demande la persistance du stockage une seule fois, une fois les fiches
+  // chargées avec succès (pas avant : pas la peine d'ajouter de latence
+  // perçue au tout premier écran pour une requête qui peut attendre).
+  // L'effet ne se redéclenche que si loading/error changent, ce qui ne se
+  // reproduit pas une fois le chargement terminé — voir persistance.ts.
+  useEffect(() => {
+    if (loading || error) return
+    demanderPersistance().then((accorde) => {
+      db.parametres.put({ cle: 'stockage_persistant', valeur: accorde ? 'true' : 'false' })
+    })
+  }, [loading, error])
+
   return (
     <ErrorBoundary>
+      <Analytics />
       <BrowserRouter>
         <CalculateurModalProvider>
           {/* Modal bloquante affichée par-dessus tout le reste tant que

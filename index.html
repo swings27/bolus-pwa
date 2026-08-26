@@ -9,8 +9,8 @@
     <link rel="icon" type="image/svg+xml" href="/bolus-favicon.svg" />
     <!-- iOS ignore totalement le manifest PWA pour l'icône d'écran
          d'accueil : il lui faut ce lien explicite, vers une image carrée de
-         180x180 exactement (voir scripts/generer-apple-icon.mjs), pour
-         afficher l'icône Bolus au lieu d'une capture de la page. -->
+         180x180 exactement, pour afficher l'icône Bolus au lieu d'une
+         capture de la page. -->
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <!-- Ouvre l'application en plein écran sur iOS (sans la barre d'adresse
          Safari) une fois ajoutée à l'écran d'accueil — sans cette balise,
@@ -22,9 +22,31 @@
     <!-- viewport-fit=cover : sans ça, env(safe-area-inset-*) reste figé à 0
          sur iOS même sur un iPhone à encoche/île dynamique — la barre de
          navigation passerait sous l'indicateur de geste. -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <meta name="theme-color" content="#C65D3B" />
-    <title>Bolus</title>
+    <title>Bolus — Fiches médicaments et calculateurs pour infirmiers</title>
+    <meta
+      name="description"
+      content="L'information médicamenteuse fiable et à portée de main. Fiches sourcées RCP ANSM, calculateurs de débit et de dose. Gratuit, sans compte."
+    />
+
+    <!-- Open Graph / Twitter Card : sans ces balises, un lien Bolus partagé
+         par message ou dans un groupe professionnel s'affiche nu — pour une
+         application médicale envoyée à des inconnus, ça ressemble à du spam
+         et personne ne clique. -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Bolus" />
+    <meta property="og:title" content="Bolus — Fiches médicaments pour infirmiers" />
+    <meta
+      property="og:description"
+      content="Fiches sourcées RCP ANSM, calculateurs de débit et de dose. Gratuit, sans compte."
+    />
+    <!-- TODO : remplacer par le domaine réel une fois l'URL Vercel de la
+         bêta connue. -->
+    <meta property="og:image" content="https://[domaine-beta]/og-image.png" />
+    <meta property="og:locale" content="fr_FR" />
+
+    <meta name="twitter:card" content="summary_large_image" />
 
     <!-- Anti-flash de thème : s'exécute AVANT que React (et Dexie) ne
          démarre, pour poser la classe "dark" sur <html> dès le tout premier

@@ -1,3 +1,26 @@
+/*
+ * RÈGLE DE MIGRATION — à respecter sans exception
+ *
+ * Ne JAMAIS modifier un bloc this.version(n).stores({...})
+ * déjà publié. Pour tout changement de schéma :
+ *   1. ajouter un NOUVEAU bloc this.version(n+1)
+ *   2. y déclarer le schéma complet mis à jour
+ *   3. ajouter .upgrade(tx => {...}) si les données
+ *      existantes doivent être transformées
+ *
+ * Dexie applique automatiquement les versions
+ * manquantes dans l'ordre au prochain lancement.
+ *
+ * Exemple pour un futur ajout de données pédiatriques :
+ *   this.version(2).stores({
+ *     fiches: "id, dci, *nomsCommerciaux, categorie, sousFamille",
+ *     parametres: "cle",
+ *   }).upgrade(async tx => {
+ *     await tx.table("fiches").toCollection()
+ *       .modify(f => { f.pediatrie = null })
+ *   })
+ */
+
 import Dexie, { type EntityTable } from 'dexie'
 import type { IFiche } from '../types'
 

@@ -3,6 +3,7 @@ import { Outlet } from 'react-router-dom'
 import BottomNavBar from './BottomNavBar'
 import InstallBanner from './InstallBanner'
 import UpdateBanner from './UpdateBanner'
+import { useScrollRestoration } from '../../hooks/useScrollRestoration'
 
 // Layout principal : wrapper commun à toute l'app (fond du thème actif,
 // hauteur pleine du viewport). <Outlet /> est l'emplacement où React Router
@@ -15,6 +16,8 @@ import UpdateBanner from './UpdateBanner'
 // "/menu et /menu/*" dans BottomNavBar.tsx, qui n'aurait pas de sens si la
 // barre disparaissait justement sur ces routes-là.
 export default function Layout() {
+  useScrollRestoration()
+
   const bandeauxRef = useRef<HTMLDivElement>(null)
   // Hauteur réellement occupée par InstallBanner/UpdateBanner (0 quand ni
   // l'un ni l'autre ne s'affiche). Mesurée plutôt que devinée : leur

@@ -31,6 +31,7 @@ export default function Parametres() {
   const { theme, setTheme } = useTheme()
   const [versionFiches, setVersionFiches] = useState('—')
   const [dateCatalogue, setDateCatalogue] = useState('—')
+  const [stockagePersistant, setStockagePersistant] = useState('—')
 
   useEffect(() => {
     db.parametres.get('fiches_version').then((param) => {
@@ -41,6 +42,13 @@ export default function Parametres() {
       .then((reponse) => reponse.json())
       .then((data: { datefiches: string }) => setDateCatalogue(data.datefiches))
       .catch(() => setDateCatalogue('indisponible'))
+
+    // Résultat déjà mémorisé par la demande faite au démarrage de l'app
+    // (voir App.tsx / src/utils/persistance.ts) — on le relit ici plutôt
+    // que de rappeler navigator.storage.persist() une deuxième fois.
+    db.parametres.get('stockage_persistant').then((param) => {
+      if (param) setStockagePersistant(param.valeur === 'true' ? 'accordé' : 'non accordé')
+    })
   }, [])
 
   return (
@@ -90,6 +98,7 @@ export default function Parametres() {
             <LigneInfo label="Version de l'application" valeur={__APP_VERSION__} />
             <LigneInfo label="Version des fiches" valeur={versionFiches} />
             <LigneInfo label="Catalogue mis à jour le" valeur={dateCatalogue} />
+            <LigneInfo label="Stockage persistant" valeur={stockagePersistant} />
           </div>
         </section>
       </div>
