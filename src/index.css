@@ -29,8 +29,18 @@
   --bloc-indication: #d4d6ce;
   --zone-surveillance: #f7e6db;
   --onglet-inactif: #e6eaeb;
-  --onglet-actif: #f8eae5;
   --opacite-tint: 18%;
+
+  /* SegmentedControl (voir ce composant) : en clair, l'actif est le bleu
+     pétrole plein (pas une variante teintée) et l'inactif un terracotta
+     dilué — inversé par rapport au sombre ci-dessous, où l'actif reste la
+     couleur terracotta pleine. Dédiées à ce composant plutôt qu'un
+     réemploi de --texte/--interactif directement dans le JSX, pour que
+     toute la logique "qui change entre les thèmes" reste ici, en CSS. */
+  --segment-actif-fond: var(--texte);
+  --segment-actif-texte: var(--fond);
+  --segment-inactif-fond: color-mix(in srgb, var(--interactif) 15%, var(--fond));
+  --segment-inactif-texte: var(--interactif);
 
   /* Header et BottomNavBar : tokens dédiés (distincts de --fond/--surface)
      car la maquette leur donne des teintes propres, notamment en sombre où
@@ -91,8 +101,15 @@
   --bloc-indication: #34464a;
   --zone-surveillance: color-mix(in srgb, #e8946e 15%, #0f272e);
   --onglet-inactif: color-mix(in srgb, #f2e9da 12%, #17343c);
-  --onglet-actif: color-mix(in srgb, #e8946e 18%, #17343c);
   --opacite-tint: 22%;
+
+  /* Rendu du sombre inchangé : l'actif reste la couleur terracotta pleine
+     sur fond clair (déjà le meilleur contraste dans ce thème), seul le
+     clair ci-dessus bascule sur le bleu pétrole. */
+  --segment-actif-fond: var(--interactif);
+  --segment-actif-texte: var(--fond);
+  --segment-inactif-fond: var(--onglet-inactif);
+  --segment-inactif-texte: var(--texte);
   /* En sombre, certaines couleurs de catégorie (ex. anti-infectieux
      #0B3C49) sont elles-mêmes sombres : utilisées comme texte sur un fond
      tout aussi sombre, elles deviennent illisibles. 60% tire fortement la
@@ -148,7 +165,6 @@
   --color-bloc-indication: var(--bloc-indication);
   --color-zone-surveillance: var(--zone-surveillance);
   --color-onglet-inactif: var(--onglet-inactif);
-  --color-onglet-actif: var(--onglet-actif);
 
   /* Polices chargées via Google Fonts (voir index.html). Namespace
      --font-* : Tailwind v4 génère automatiquement les utilitaires

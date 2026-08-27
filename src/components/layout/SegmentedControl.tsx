@@ -16,11 +16,16 @@ interface ISegmentedControlProps<T extends string> {
 }
 
 // Rangée de boutons à bascule (un seul actif à la fois) : forme/onglet/
-// unité/calibre... Le même motif visuel (fond var(--onglet-actif) /
-// var(--onglet-inactif), texte var(--interactif) quand actif) était
-// recopié dans 4 composants différents avant cette extraction, avec déjà
-// un début de dérive entre les copies (couleur du texte inactif tantôt
-// fixée, tantôt laissée par défaut).
+// unité/calibre... Le même motif visuel était recopié dans 4 composants
+// différents avant cette extraction, avec déjà un début de dérive entre
+// les copies (couleur du texte inactif tantôt fixée, tantôt laissée par
+// défaut).
+//
+// Couleurs pilotées par --segment-actif-*/--segment-inactif-* (index.css),
+// pas des couleurs directes ici : en clair l'actif est le bleu pétrole
+// plein et l'inactif un terracotta dilué, tandis qu'en sombre c'est
+// l'inverse (actif = terracotta plein) — toute la logique "qui change
+// entre les thèmes" reste en CSS, jamais une condition de thème en JS ici.
 export default function SegmentedControl<T extends string>({
   options,
   valeur,
@@ -39,8 +44,8 @@ export default function SegmentedControl<T extends string>({
             className={`flex flex-1 flex-col items-center justify-center rounded-lg text-sm transition-colors duration-150 ${classeBouton}`}
             style={
               actif
-                ? { backgroundColor: 'var(--onglet-actif)', color: 'var(--interactif)', fontWeight: 600 }
-                : { backgroundColor: 'var(--onglet-inactif)', color: 'var(--texte)' }
+                ? { backgroundColor: 'var(--segment-actif-fond)', color: 'var(--segment-actif-texte)', fontWeight: 600 }
+                : { backgroundColor: 'var(--segment-inactif-fond)', color: 'var(--segment-inactif-texte)' }
             }
           >
             {option.label}

@@ -14,12 +14,14 @@ import SegmentedControl from '../layout/SegmentedControl'
 import BlocAvertissement from '../layout/BlocAvertissement'
 import CalcDebit from './CalcDebit'
 import CalcDosePoids from './CalcDosePoids'
+import CalcIMC from './CalcIMC'
 
-type Onglet = 'debit' | 'dosePoids'
+type Onglet = 'debit' | 'dosePoids' | 'imc'
 
 const ONGLETS: { valeur: Onglet; label: string }[] = [
   { valeur: 'debit', label: 'Débit' },
   { valeur: 'dosePoids', label: 'Dose / poids' },
+  { valeur: 'imc', label: 'IMC' },
 ]
 
 // Affiché en modale (par-dessus la page courante) plutôt que sur sa propre
@@ -79,7 +81,9 @@ export default function CalculateurModal() {
         </div>
 
         <div className="mt-4 rounded-xl p-4" style={{ backgroundColor: 'var(--surface)' }}>
-          {onglet === 'debit' ? <CalcDebit /> : <CalcDosePoids />}
+          {onglet === 'debit' && <CalcDebit />}
+          {onglet === 'dosePoids' && <CalcDosePoids />}
+          {onglet === 'imc' && <CalcIMC />}
         </div>
 
         <div className="mt-4">
