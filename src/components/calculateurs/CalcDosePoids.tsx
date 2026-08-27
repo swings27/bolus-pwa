@@ -9,7 +9,9 @@
 import { useState } from 'react'
 import ChampNumerique from './ChampNumerique'
 import ResultatCalcul from './ResultatCalcul'
-import { parseNombre, formaterFR } from './nombreUtils'
+import BoutonReinitialiser from './BoutonReinitialiser'
+import SegmentedControl from '../layout/SegmentedControl'
+import { parseNombre, formaterFR, nombrePositif } from './nombreUtils'
 
 type UniteDose = 'mg/kg' | 'µg/kg' | 'UI/kg'
 
@@ -24,9 +26,9 @@ export default function CalcDosePoids() {
   const [dosePoids, setDosePoids] = useState('')
   const [unite, setUnite] = useState<UniteDose>('mg/kg')
 
-  const poidsN = parseNombre(poids)
-  const doseN = parseNombre(dosePoids)
-  const doseTotale = poidsN !== null && doseN !== null ? poidsN * doseN : null
+  const poidsN = nombrePositif(parseNombre(poids))
+  const doseN = nombrePositif(parseNombre(dosePoids))
+  const doseTotale = poidsN !== null && doseN !== null ? nombrePositif(poidsN * doseN) : null
 
   function reinitialiser() {
     setPoids('')
@@ -41,26 +43,11 @@ export default function CalcDosePoids() {
 
       <div className="flex flex-col gap-2">
         <span className="text-xs text-texte-doux">Unité de la dose</span>
-        <div className="flex gap-2">
-          {UNITES.map((valeurUnite) => {
-            const actif = unite === valeurUnite
-            return (
-              <button
-                key={valeurUnite}
-                type="button"
-                onClick={() => setUnite(valeurUnite)}
-                className="flex-1 rounded-lg px-3 py-2.5 text-sm transition-colors duration-150"
-                style={
-                  actif
-                    ? { backgroundColor: 'var(--onglet-actif)', color: 'var(--interactif)', fontWeight: 600 }
-                    : { backgroundColor: 'var(--onglet-inactif)', color: 'var(--texte)' }
-                }
-              >
-                {valeurUnite}
-              </button>
-            )
-          })}
-        </div>
+        <SegmentedControl
+          options={UNITES.map((valeurUnite) => ({ valeur: valeurUnite, label: valeurUnite }))}
+          valeur={unite}
+          onChange={setUnite}
+        />
       </div>
 
       <div className="pt-2">
@@ -74,16 +61,7 @@ export default function CalcDosePoids() {
         </p>
       </div>
 
-      {doseTotale !== null && (
-        <button
-          type="button"
-          onClick={reinitialiser}
-          className="self-start text-sm"
-          style={{ color: 'var(--interactif)' }}
-        >
-          Réinitialiser
-        </button>
-      )}
+      {doseTotale !== null && <BoutonReinitialiser onClick={reinitialiser} />}
     </div>
   )
 }

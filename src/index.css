@@ -62,6 +62,11 @@
      que le Layout puisse réserver le même espace en padding-bottom sans
      dupliquer "68px" à deux endroits différents. */
   --hauteur-nav: calc(68px + env(safe-area-inset-bottom));
+
+  /* Même principe en haut d'écran pour le Header (sticky) : 56px (h-14) de
+     contenu visuel + l'encoche/Dynamic Island en mode standalone iOS, sans
+     quoi le wordmark passerait sous cette zone. */
+  --hauteur-header: calc(56px + env(safe-area-inset-top));
 }
 
 /* Thème sombre : la carte "fond" et la "zone-surveillance" ne restent PAS
@@ -152,9 +157,19 @@
   --font-body: 'Nunito Sans', sans-serif;
 }
 
+/* Sur iOS, tirer vers le bas au-delà du contenu fait apparaître une bande de
+   rebond derrière la page — très visible en thème sombre si elle reste
+   blanche par défaut. Le fond doit être posé sur html ET body : html est ce
+   qui remplit réellement cette zone de rebond, body seul ne suffit pas. */
+html {
+  background-color: var(--fond);
+  overscroll-behavior-y: none;
+}
+
 body {
   margin: 0;
   background-color: var(--fond);
   color: var(--texte);
   font-family: var(--font-body);
+  overscroll-behavior-y: none;
 }

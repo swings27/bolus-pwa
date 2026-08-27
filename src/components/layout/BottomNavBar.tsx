@@ -41,6 +41,7 @@ export default function BottomNavBar() {
 
   return (
     <nav
+      aria-label="Navigation principale"
       className="fixed bottom-0 left-0 right-0 flex"
       style={{
         // overflow visible : le cercle du Calculateur dépasse au-dessus du
@@ -76,6 +77,10 @@ export default function BottomNavBar() {
               // supérieur de la barre elle-même.
               className="relative flex flex-1 flex-col items-center justify-center gap-1"
               aria-label={label}
+              // aria-pressed (pas aria-current) : ce bouton ouvre une
+              // modale, il ne navigue pas vers une page — c'est un bouton
+              // à bascule, pas un lien de navigation "page courante".
+              aria-pressed={calculateurOuvert}
             >
               {/* Espace réservé invisible, de la même hauteur que les
                   icônes des autres onglets (22px) : ça garde le label
@@ -111,6 +116,7 @@ export default function BottomNavBar() {
           <Link
             key={to}
             to={to}
+            aria-current={actif ? 'page' : undefined}
             className="flex flex-1 flex-col items-center justify-center gap-1"
           >
             <Icon size={22} color={couleur} strokeWidth={actif ? 2.5 : 2} aria-hidden="true" />

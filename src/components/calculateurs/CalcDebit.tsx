@@ -9,7 +9,9 @@
 import { useState } from 'react'
 import ChampNumerique from './ChampNumerique'
 import ResultatCalcul from './ResultatCalcul'
-import { parseNombre, formaterFR } from './nombreUtils'
+import BoutonReinitialiser from './BoutonReinitialiser'
+import SegmentedControl from '../layout/SegmentedControl'
+import { parseNombre, formaterFR, nombrePositif } from './nombreUtils'
 
 // Calibres courants d'une tubulure de perfusion (gouttes/mL), avec leur
 // usage type — plus parlant que le seul chiffre pour choisir vite.
@@ -17,6 +19,24 @@ const CALIBRES_USUELS: { valeur: number; usage: string }[] = [
   { valeur: 15, usage: 'Sang' },
   { valeur: 20, usage: 'Standard' },
   { valeur: 60, usage: 'Pédiatrie' },
+]
+
+// SegmentedControl attribue une valeur `string` à chaque option (partagée
+// avec les autres sélecteurs de l'app) : les calibres numériques sont donc
+// convertis en chaîne pour cet usage, et reconvertis dans onChange.
+const OPTIONS_CALIBRE = [
+  ...CALIBRES_USUELS.map(({ valeur, usage }) => ({
+    valeur: String(valeur),
+    label: (
+      <span className="flex flex-col items-center gap-0.5">
+        <span className="text-sm font-semibold">{valeur}</span>
+        <span className="text-[11px]" style={{ opacity: 0.75 }}>
+          {usage}
+        </span>
+      </span>
+    ),
+  })),
+  { valeur: 'autre', label: <span className="text-sm font-semibold">Autre</span> },
 ]
 
 type SelectionCalibre = number | 'autre'
@@ -28,13 +48,18 @@ export default function CalcDebit() {
   const [calibreSelectionne, setCalibreSelectionne] = useState<SelectionCalibre>(20)
   const [calibreAutre, setCalibreAutre] = useState('')
 
-  const volumeN = parseNombre(volume)
-  const dureeMinutes = (parseNombre(heures) ?? 0) * 60 + (parseNombre(minutes) ?? 0)
-  const calibreN = calibreSelectionne === 'autre' ? parseNombre(calibreAutre) : calibreSelectionne
+  const volumeN = nombrePositif(parseNombre(volume))
+  const dureeMinutes = nombrePositif(
+    (parseNombre(heures) ?? 0) * 60 + (parseNombre(minutes) ?? 0),
+  )
+  const calibreN = calibreSelectionne === 'autre' ? nombrePositif(parseNombre(calibreAutre)) : calibreSelectionne
 
-  const debitMlH = volumeN !== null && dureeMinutes > 0 ? volumeN / (dureeMinutes / 60) : null
+  const debitMlH =
+    volumeN !== null && dureeMinutes !== null ? nombrePositif(volumeN / (dureeMinutes / 60)) : null
   const debitGouttesMin =
-    volumeN !== null && calibreN !== null && dureeMinutes > 0 ? (volumeN * calibreN) / dureeMinutes : null
+    volumeN !== null && calibreN !== null && dureeMinutes !== null
+      ? nombrePositif((volumeN * calibreN) / dureeMinutes)
+      : null
 
   const afficheReinitialiser = debitMlH !== null || debitGouttesMin !== null
 
@@ -60,41 +85,12 @@ export default function CalcDebit() {
 
       <div className="flex flex-col gap-1.5">
         <span className="text-xs text-texte-doux">Calibre de la tubulure (gouttes/mL)</span>
-        <div className="flex gap-2">
-          {CALIBRES_USUELS.map(({ valeur, usage }) => {
-            const actif = calibreSelectionne === valeur
-            return (
-              <button
-                key={valeur}
-                type="button"
-                onClick={() => setCalibreSelectionne(valeur)}
-                className="flex flex-1 flex-col items-center gap-0.5 rounded-lg px-2 py-2 transition-colors duration-150"
-                style={
-                  actif
-                    ? { backgroundColor: 'var(--onglet-actif)', color: 'var(--interactif)' }
-                    : { backgroundColor: 'var(--onglet-inactif)', color: 'var(--texte)' }
-                }
-              >
-                <span className="text-sm font-semibold">{valeur}</span>
-                <span className="text-[11px]" style={{ opacity: 0.75 }}>
-                  {usage}
-                </span>
-              </button>
-            )
-          })}
-          <button
-            type="button"
-            onClick={() => setCalibreSelectionne('autre')}
-            className="flex flex-1 flex-col items-center justify-center gap-0.5 rounded-lg px-2 py-2 transition-colors duration-150"
-            style={
-              calibreSelectionne === 'autre'
-                ? { backgroundColor: 'var(--onglet-actif)', color: 'var(--interactif)' }
-                : { backgroundColor: 'var(--onglet-inactif)', color: 'var(--texte)' }
-            }
-          >
-            <span className="text-sm font-semibold">Autre</span>
-          </button>
-        </div>
+        <SegmentedControl
+          options={OPTIONS_CALIBRE}
+          valeur={String(calibreSelectionne)}
+          onChange={(v) => setCalibreSelectionne(v === 'autre' ? 'autre' : Number(v))}
+          classeBouton="px-2 py-2"
+        />
 
         {calibreSelectionne === 'autre' && (
           <ChampNumerique
@@ -116,16 +112,7 @@ export default function CalcDebit() {
         />
       </div>
 
-      {afficheReinitialiser && (
-        <button
-          type="button"
-          onClick={reinitialiser}
-          className="self-start text-sm"
-          style={{ color: 'var(--interactif)' }}
-        >
-          Réinitialiser
-        </button>
-      )}
+      {afficheReinitialiser && <BoutonReinitialiser onClick={reinitialiser} />}
     </div>
   )
 }

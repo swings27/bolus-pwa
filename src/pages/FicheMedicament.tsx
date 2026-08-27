@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react'
+import { useMemo, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import Header from '../components/layout/Header'
 import BlocInfo from '../components/fiches/BlocInfo'
@@ -14,6 +14,7 @@ import { useFiche } from '../hooks/useFiche'
 function EcranChargementFiche() {
   return (
     <div className="flex flex-col items-center justify-center gap-3 py-24">
+      <h1 className="sr-only">Chargement de la fiche</h1>
       <span
         className="h-8 w-8 animate-spin rounded-full border-4 border-accent-clair border-t-interactif"
         role="status"
@@ -27,13 +28,14 @@ function FicheIntrouvable() {
   const navigate = useNavigate()
   return (
     <div className="flex flex-col items-center justify-center gap-4 px-6 py-24 text-center">
+      <h1 className="sr-only">Fiche introuvable</h1>
       <p className="text-sm text-texte/70">
         Cette fiche médicament est introuvable ou n'est plus disponible.
       </p>
       <button
         type="button"
         onClick={() => navigate(-1)}
-        className="rounded-lg bg-interactif px-5 py-2.5 text-sm font-medium text-surface"
+        className="rounded-lg bg-interactif px-5 py-3 text-sm font-medium text-surface"
       >
         Retour
       </button>
@@ -45,11 +47,9 @@ export default function FicheMedicament() {
   const { id = '' } = useParams()
   const { fiche, loading } = useFiche(id)
 
-  // formeActive ne peut être calculé qu'une fois la fiche chargée, mais les
-  // hooks doivent rester inconditionnels : on le déclare ici avec un état
-  // initial `null`, et un effet le renseigne dès que la fiche (et donc
-  // formesDisponibles) devient disponible.
-  const [formeActive, setFormeActive] = useState<Forme | null>(null)
+  // Seul le CHOIX explicite de l'utilisateur est un état ; la forme
+  // réellement affichée est dérivée, pas synchronisée via un effet.
+  const [formeChoisie, setFormeChoisie] = useState<Forme | null>(null)
 
   const formesDisponibles = useMemo<Forme[]>(() => {
     if (!fiche) return []
@@ -59,11 +59,13 @@ export default function FicheMedicament() {
     return formes
   }, [fiche])
 
-  useEffect(() => {
-    if (formeActive === null && formesDisponibles.length > 0) {
-      setFormeActive(formesDisponibles[0])
-    }
-  }, [formesDisponibles, formeActive])
+  // Si le choix précédent ne correspond plus aux formes disponibles (ex.
+  // React Router réutilise cette même instance en passant d'une fiche
+  // injectable-only à une fiche per-os-only sans démonter le composant),
+  // on retombe automatiquement sur la première forme disponible plutôt que
+  // de figer sur un onglet qui n'existe plus — jamais de carte vide.
+  const formeActive =
+    formeChoisie && formesDisponibles.includes(formeChoisie) ? formeChoisie : (formesDisponibles[0] ?? null)
 
   if (loading) {
     return (
@@ -133,12 +135,12 @@ export default function FicheMedicament() {
       )}
 
       {/* Carte des formes d'administration */}
-      {formesDisponibles.length > 0 && (
+      {formesDisponibles.length > 0 && formeActive !== null && (
         <div className="mt-6 w-full rounded-t-2xl bg-surface p-6">
           <SelecteurForme
             formes={formesDisponibles}
             forme={formeActive}
-            onChange={setFormeActive}
+            onChange={setFormeChoisie}
           />
           <div className={formesDisponibles.length > 1 ? 'mt-4' : ''}>
             {formeActive === 'injectable' && fiche.injectable && (

@@ -2,7 +2,7 @@ import { useNavigate } from 'react-router-dom'
 import Header from '../components/layout/Header'
 import ListeSeparee from '../components/fiches/ListeSeparee'
 import { useCategoriesAvecFiches } from '../hooks/useCategoriesAvecFiches'
-import { texteCategorie } from '../data/categories'
+import { texteCategorie, fondCategorie } from '../data/categories'
 
 export default function Categories() {
   const navigate = useNavigate()
@@ -24,11 +24,8 @@ export default function Categories() {
               key={categorie.slug}
               type="button"
               onClick={() => navigate(`/categories/${categorie.slug}`)}
-              // Même logique color-mix() que CategorieCard (Accueil) : fond
-              // pâle dérivé de la couleur de catégorie + var(--fond), donc
-              // cohérent avec le thème actif sans teinte codée en dur.
               style={{
-                backgroundColor: `color-mix(in srgb, ${categorie.couleur} var(--opacite-tint), var(--fond))`,
+                backgroundColor: fondCategorie(categorie.couleur),
                 borderColor: categorie.couleur,
               }}
               className="flex flex-col gap-1 rounded-2xl border-2 p-4 text-left"

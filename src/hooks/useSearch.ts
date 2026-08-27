@@ -2,11 +2,6 @@ import { useLiveQuery } from 'dexie-react-hooks'
 import { db } from '../db'
 import type { IFiche } from '../types'
 
-interface IResultatRecherche {
-  resultats: IFiche[]
-  loading: boolean
-}
-
 // useLiveQuery (dexie-react-hooks) vs useEffect + await db.fiches...() :
 // avec un useEffect classique, la requête ne s'exécute qu'au montage ou
 // quand ses dépendances changent — si les données de Dexie changent
@@ -18,7 +13,7 @@ interface IResultatRecherche {
 //
 // `limite` est optionnel : le dropdown de l'Accueil tronque à 6 résultats
 // (limite=6), la page Recherche plein écran veut tout (limite omise).
-export function useSearch(query: string, limite?: number): IResultatRecherche {
+export function useSearch(query: string, limite?: number): IFiche[] {
   const terme = query.trim()
 
   // Le tableau de dépendances ([terme, limite]) dit à useLiveQuery de
@@ -51,10 +46,8 @@ export function useSearch(query: string, limite?: number): IResultatRecherche {
     [terme, limite],
   )
 
-  // Pendant le tout premier calcul, useLiveQuery renvoie `undefined` (pas
-  // encore de résultat disponible) — c'est notre signal de chargement.
-  return {
-    resultats: resultats ?? [],
-    loading: resultats === undefined,
-  }
+  // undefined pendant le tout premier calcul (useLiveQuery n'a pas encore
+  // de résultat) : personne ne consommait de distinction "chargement" côté
+  // appelants, donc on retombe simplement sur un tableau vide.
+  return resultats ?? []
 }

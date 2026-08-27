@@ -19,6 +19,10 @@ export default function Accueil() {
   return (
     <div className="flex flex-col">
       <Header variant="logo" />
+      {/* sr-only : le Wordmark ci-dessous joue déjà le rôle de titre visuel
+          de la page (une image, pas une balise de titre) — ce h1 caché lui
+          donne un équivalent textuel dans la hiérarchie de la page. */}
+      <h1 className="sr-only">Bolus</h1>
 
       {/* Bloc d'intro */}
       <div className="flex flex-col items-center gap-2 px-6 pb-8 pt-4 text-center">
@@ -56,7 +60,10 @@ export default function Accueil() {
         <button
           type="button"
           onClick={() => navigate('/categories')}
-          className="mx-auto flex items-center gap-1 pt-2 text-sm font-medium text-interactif"
+          // py-3 (pas seulement pt-2) : ce lien n'avait aucun padding
+          // vertical en bas, sa zone tactile ne faisait qu'une vingtaine de
+          // pixels de haut — sous le minimum de 44px.
+          className="mx-auto flex items-center gap-1 py-3 text-sm font-medium text-interactif"
         >
           Voir plus de catégories
           <ChevronDown className="h-4 w-4" aria-hidden="true" />

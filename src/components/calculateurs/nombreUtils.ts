@@ -19,3 +19,12 @@ export function parseNombre(valeur: string): number | null {
 export function formaterFR(valeur: number, decimales: number): string {
   return valeur.toLocaleString('fr-FR', { maximumFractionDigits: decimales })
 }
+
+// Un poids, une dose, un volume ou un débit à 0, négatif, ou infini (une
+// saisie démesurément longue peut faire déborder un produit/quotient vers
+// Infinity même si chaque facteur pris isolément était fini) n'a pas de
+// sens pour une grandeur physique — on le traite comme une saisie
+// incomplète plutôt que d'afficher un résultat trompeur ("0", "∞").
+export function nombrePositif(valeur: number | null): number | null {
+  return valeur !== null && Number.isFinite(valeur) && valeur > 0 ? valeur : null
+}

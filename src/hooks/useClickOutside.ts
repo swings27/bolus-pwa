@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, useRef } from 'react'
 import type { RefObject } from 'react'
 
 // Pattern React classique pour fermer un menu/dropdown au clic extérieur :
@@ -16,14 +16,22 @@ export function useClickOutside<T extends HTMLElement>(
   ref: RefObject<T | null>,
   onClickOutside: () => void,
 ) {
+  // Ref plutôt que dépendance directe de l'effet ci-dessous : la plupart
+  // des appelants passent une arrow function inline (nouvelle identité à
+  // chaque render, ex. SearchDropdown à chaque frappe au clavier) — sans ce
+  // détour, l'effet retirerait et rajouterait l'écouteur document à chaque
+  // render au lieu de le poser une seule fois.
+  const callbackRef = useRef(onClickOutside)
+  callbackRef.current = onClickOutside
+
   useEffect(() => {
     function gererClic(event: MouseEvent) {
       if (ref.current && !ref.current.contains(event.target as Node)) {
-        onClickOutside()
+        callbackRef.current()
       }
     }
 
     document.addEventListener('mousedown', gererClic)
     return () => document.removeEventListener('mousedown', gererClic)
-  }, [ref, onClickOutside])
+  }, [ref])
 }

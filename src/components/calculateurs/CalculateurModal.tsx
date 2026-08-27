@@ -6,9 +6,12 @@
 // Voir scripts/verif-isolation-calculateurs.mjs, qui fait échouer le build
 // en cas de couplage.
 
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Info, X } from 'lucide-react'
 import { useCalculateurModal } from '../../contexts/CalculateurModalContext'
+import { useFocusTrap } from '../../hooks/useFocusTrap'
+import SegmentedControl from '../layout/SegmentedControl'
+import BlocAvertissement from '../layout/BlocAvertissement'
 import CalcDebit from './CalcDebit'
 import CalcDosePoids from './CalcDosePoids'
 
@@ -25,6 +28,21 @@ const ONGLETS: { valeur: Onglet; label: string }[] = [
 export default function CalculateurModal() {
   const { estOuvert, fermer } = useCalculateurModal()
   const [onglet, setOnglet] = useState<Onglet>('debit')
+  const conteneurRef = useRef<HTMLDivElement>(null)
+
+  useFocusTrap(estOuvert, conteneurRef)
+
+  // Échap referme la modale : le piège de focus (useFocusTrap) empêche déjà
+  // Tab de s'échapper vers la page en dessous, mais un utilisateur clavier
+  // doit pouvoir sortir sans avoir à atteindre le bouton Fermer à la main.
+  useEffect(() => {
+    if (!estOuvert) return
+    function gererEchap(event: KeyboardEvent) {
+      if (event.key === 'Escape') fermer()
+    }
+    document.addEventListener('keydown', gererEchap)
+    return () => document.removeEventListener('keydown', gererEchap)
+  }, [estOuvert, fermer])
 
   if (!estOuvert) return null
 
@@ -34,60 +52,44 @@ export default function CalculateurModal() {
       onClick={fermer}
     >
       <div
+        ref={conteneurRef}
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="calculateur-titre"
         className="flex max-h-[85vh] w-full flex-col overflow-y-auto rounded-t-2xl bg-fond p-6 shadow-xl sm:max-w-md sm:rounded-2xl"
         onClick={(evenement) => evenement.stopPropagation()}
       >
         <div className="flex items-center justify-between">
-          <h2 className="font-display text-xl font-semibold text-texte">Calculateurs</h2>
+          <h2 id="calculateur-titre" className="font-display text-xl font-semibold text-texte">
+            Calculateurs
+          </h2>
           <button
             type="button"
             onClick={fermer}
             aria-label="Fermer"
-            className="flex h-9 w-9 items-center justify-center rounded-full"
+            className="-m-1.5 flex h-11 w-11 items-center justify-center rounded-full"
             style={{ color: 'var(--texte-doux)' }}
           >
             <X className="h-5 w-5" aria-hidden="true" />
           </button>
         </div>
 
-        <div className="mt-4 flex gap-2">
-          {ONGLETS.map(({ valeur, label }) => {
-            const actif = onglet === valeur
-            return (
-              <button
-                key={valeur}
-                type="button"
-                onClick={() => setOnglet(valeur)}
-                className="flex-1 rounded-lg px-4 py-2.5 text-sm transition-colors duration-150"
-                style={
-                  actif
-                    ? { backgroundColor: 'var(--onglet-actif)', color: 'var(--interactif)', fontWeight: 600 }
-                    : { backgroundColor: 'var(--onglet-inactif)' }
-                }
-              >
-                <span className={actif ? '' : 'text-texte/70'}>{label}</span>
-              </button>
-            )
-          })}
+        <div className="mt-4">
+          <SegmentedControl options={ONGLETS} valeur={onglet} onChange={setOnglet} />
         </div>
 
         <div className="mt-4 rounded-xl p-4" style={{ backgroundColor: 'var(--surface)' }}>
           {onglet === 'debit' ? <CalcDebit /> : <CalcDosePoids />}
         </div>
 
-        <div
-          className="mt-4 flex items-start gap-2 rounded-lg px-4 py-3"
-          style={{
-            backgroundColor: 'color-mix(in srgb, var(--accent) 10%, var(--fond))',
-            borderLeft: '3px solid var(--accent)',
-          }}
-        >
-          <Info className="mt-0.5 h-4 w-4 shrink-0" style={{ color: 'var(--accent)' }} aria-hidden="true" />
-          <p className="text-xs leading-relaxed text-texte/80">
-            Ces calculateurs effectuent une opération arithmétique à partir des valeurs que vous saisissez. Ils ne
-            sont liés à aucune base de médicaments. La vérification du calcul et de la prescription reste sous votre
-            responsabilité.
-          </p>
+        <div className="mt-4">
+          <BlocAvertissement icone={Info} couleur="var(--accent)">
+            <p className="text-xs leading-relaxed text-texte/80">
+              Ces calculateurs effectuent une opération arithmétique à partir des valeurs que vous saisissez. Ils ne
+              sont liés à aucune base de médicaments. La vérification du calcul et de la prescription reste sous
+              votre responsabilité.
+            </p>
+          </BlocAvertissement>
         </div>
       </div>
     </div>

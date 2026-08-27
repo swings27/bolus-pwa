@@ -7,17 +7,18 @@
 import PageDocument from '../components/layout/PageDocument'
 import SectionDocument from '../components/layout/SectionDocument'
 
-export default function CGU() {
-  const dateEffet = new Date().toLocaleDateString('fr-FR', {
-    day: 'numeric',
-    month: 'long',
-    year: 'numeric',
-  })
+// Date de dernière modification du texte des CGU — à mettre à jour
+// manuellement si leur contenu change. Ne doit JAMAIS être recalculée à
+// partir de la date du jour : "en vigueur aujourd'hui" est vrai tous les
+// jours et n'informe de rien sur quand ces conditions ont réellement été
+// fixées.
+const DATE_MISE_A_JOUR_CGU = '26 août 2026'
 
+export default function CGU() {
   return (
     <PageDocument titre="Conditions générales d'utilisation">
       <p className="text-sm" style={{ color: 'var(--texte-doux)' }}>
-        Version en vigueur au {dateEffet}.
+        Version en vigueur au {DATE_MISE_A_JOUR_CGU}.
       </p>
 
       <SectionDocument titre="Objet">

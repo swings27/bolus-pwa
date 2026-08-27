@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom'
 import type { ICategorie } from '../../types'
+import { fondCategorie } from '../../data/categories'
 
 interface ICategorieCardProps {
   categorie: ICategorie
@@ -18,15 +19,8 @@ export default function CategorieCard({
     <button
       type="button"
       onClick={() => navigate(`/categories/${categorie.slug}`)}
-      // color-mix() calcule un mélange entre deux couleurs directement en
-      // CSS, sans JS ni valeur pré-calculée : ici, {couleur} de la
-      // catégorie et var(--fond) du thème actif, dosé par
-      // var(--opacite-tint). Comme --fond change entre clair et sombre,
-      // le même appel produit automatiquement un fond pâle cohérent dans
-      // les deux thèmes — pas besoin de coder 16 teintes en dur (8
-      // catégories × 2 thèmes), color-mix() s'en charge à chaque rendu.
       style={{
-        backgroundColor: `color-mix(in srgb, ${categorie.couleur} var(--opacite-tint), var(--fond))`,
+        backgroundColor: fondCategorie(categorie.couleur),
         // Ombre légère : détache la carte du fond pour casser l'effet
         // "aplat 2D", sans aller jusqu'à un relief marqué.
         boxShadow: '0 4px 12px var(--ombre-carte)',

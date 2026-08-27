@@ -1,7 +1,7 @@
 import { ChevronRight } from 'lucide-react'
 import { useNavigate } from 'react-router-dom'
 import type { IFiche } from '../../types'
-import { getCategorieBySlug, texteCategorie } from '../../data/categories'
+import { getCategorieBySlug, texteCategorie, fondCategorie } from '../../data/categories'
 import ListeSeparee from './ListeSeparee'
 
 interface IResultatFicheProps {
@@ -45,14 +45,10 @@ export default function ResultatFiche({
         )}
       </span>
       {showCategorie && categorie && (
-        // Même logique de teinte pâle que CategorieCard : fond = mélange
-        // de la couleur de catégorie dans var(--fond), texte = couleur
-        // saturée — cohérent avec le reste de l'app plutôt qu'un badge
-        // plein comme avant.
         <span
           className="shrink-0 rounded-full px-2 py-0.5 text-[10px] font-semibold"
           style={{
-            backgroundColor: `color-mix(in srgb, ${categorie.couleur} var(--opacite-tint), var(--fond))`,
+            backgroundColor: fondCategorie(categorie.couleur),
             color: texteCategorie(categorie.couleur),
           }}
         >

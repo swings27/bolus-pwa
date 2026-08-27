@@ -15,8 +15,13 @@ export default function Header({ variant = 'logo' }: IHeaderProps) {
 
   return (
     <header
-      className="sticky top-0 z-40 flex h-14 items-center px-2"
+      className="sticky top-0 z-40 flex items-center px-2"
       style={{
+        // height (pas h-14) : la hauteur totale doit inclure la zone sûre
+        // en plus des 56px de contenu, sans quoi padding-top grignoterait
+        // les 56px existants et écraserait le wordmark contre le bas.
+        height: 'var(--hauteur-header)',
+        paddingTop: 'env(safe-area-inset-top)',
         backgroundColor: 'var(--header-fond)',
         boxShadow: '0 4px 10px -6px var(--ombre-header)',
       }}

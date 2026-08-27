@@ -105,6 +105,14 @@ export function getCategorieBySlug(slug: string): ICategorie | undefined {
   return CATEGORIES.find((categorie) => categorie.slug === slug)
 }
 
+// Fond pâle dérivé de la couleur de catégorie (voir le commentaire en tête
+// de fichier pour le détail de color-mix()/--opacite-tint) — centralisé ici
+// plutôt que recopié dans CategorieCard, Categories.tsx et ResultatFiche,
+// qui l'utilisaient chacun avec leur propre chaîne littérale identique.
+export function fondCategorie(couleur: string): string {
+  return `color-mix(in srgb, ${couleur} var(--opacite-tint), var(--fond))`
+}
+
 // Certaines couleurs de catégorie (ex. anti-infectieux #0B3C49, psychotropes
 // #3F5D38) sont elles-mêmes des teintes sombres, choisies pour contraster
 // sur un fond clair. Utilisées telles quelles comme COULEUR DE TEXTE en
