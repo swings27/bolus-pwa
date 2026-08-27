@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import Header from '../components/layout/Header'
 import BlocInfo from '../components/fiches/BlocInfo'
@@ -10,6 +10,7 @@ import DetailPerOs from '../components/fiches/DetailPerOs'
 import SurveillanceAccordeon from '../components/fiches/SurveillanceAccordeon'
 import SourcesFiche from '../components/fiches/SourcesFiche'
 import { useFiche } from '../hooks/useFiche'
+import { enregistrerConsultation } from '../utils/historique'
 
 function EcranChargementFiche() {
   return (
@@ -66,6 +67,15 @@ export default function FicheMedicament() {
   // de figer sur un onglet qui n'existe plus — jamais de carte vide.
   const formeActive =
     formeChoisie && formesDisponibles.includes(formeChoisie) ? formeChoisie : (formesDisponibles[0] ?? null)
+
+  // Alimente l'historique affiché sur la page Recherche. useFiche()
+  // s'appuie sur useLiveQuery, qui ne relit vraiment la table "fiches" que
+  // si elle est réécrite (resynchronisation CDN) — pas à chaque render :
+  // dépendre de l'objet fiche entier ne réenregistre donc pas la
+  // consultation en boucle.
+  useEffect(() => {
+    if (fiche) enregistrerConsultation(fiche.id)
+  }, [fiche])
 
   if (loading) {
     return (

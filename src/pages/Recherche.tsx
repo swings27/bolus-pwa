@@ -1,18 +1,39 @@
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Search, SearchX, X } from 'lucide-react'
 import Header from '../components/layout/Header'
 import EtatVide from '../components/layout/EtatVide'
 import ResultatFiche from '../components/fiches/ResultatFiche'
 import { useSearch } from '../hooks/useSearch'
+import { lireHistorique } from '../utils/historique'
+import { db } from '../db'
+import type { IFiche } from '../types'
 
 export default function Recherche() {
   const [query, setQuery] = useState('')
+  const [historique, setHistorique] = useState<IFiche[]>([])
   const inputRef = useRef<HTMLInputElement>(null)
 
   // Pas de limite ici (contrairement au dropdown de l'Accueil) : la page
   // plein écran a la place d'afficher tous les résultats.
   const resultats = useSearch(query)
   const termeValide = query.trim().length >= 2
+
+  // Chargé une fois au montage : revenir sur cette page (changer d'onglet
+  // puis revenir) démonte/remonte Recherche, donc relit naturellement la
+  // dernière version de l'historique — pas besoin de useLiveQuery ici.
+  useEffect(() => {
+    let annule = false
+    lireHistorique().then(async (ids) => {
+      const fiches = await Promise.all(ids.map((id) => db.fiches.get(id)))
+      // Une fiche de l'historique a pu disparaître du catalogue depuis
+      // (voir la réconciliation dans useFichesLoader) : on l'omet plutôt
+      // que d'afficher un trou.
+      if (!annule) setHistorique(fiches.filter((fiche): fiche is IFiche => fiche !== undefined))
+    })
+    return () => {
+      annule = true
+    }
+  }, [])
 
   function viderChamp() {
     setQuery('')
@@ -62,11 +83,24 @@ export default function Recherche() {
       </div>
 
       {!termeValide ? (
-        <EtatVide
-          icone={Search}
-          titre="Rechercher un médicament"
-          description="Tapez au moins 2 lettres pour lancer la recherche."
-        />
+        historique.length > 0 ? (
+          <div className="flex flex-col">
+            <p className="px-6 pb-2 pt-3 text-xs font-semibold uppercase tracking-widest text-texte-doux">
+              Consultées récemment
+            </p>
+            <div>
+              {historique.map((fiche) => (
+                <ResultatFiche key={fiche.id} fiche={fiche} />
+              ))}
+            </div>
+          </div>
+        ) : (
+          <EtatVide
+            icone={Search}
+            titre="Rechercher un médicament"
+            description="Tapez au moins 2 lettres pour lancer la recherche."
+          />
+        )
       ) : resultats.length === 0 ? (
         <EtatVide
           icone={SearchX}
