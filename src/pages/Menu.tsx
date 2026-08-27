@@ -1,7 +1,7 @@
 import { Settings, Info, Mail, FileText, Shield, ScrollText, ChevronRight } from 'lucide-react'
 import type { LucideIcon } from 'lucide-react'
-import { Link } from 'react-router-dom'
 import Header from '../components/layout/Header'
+import { useNavigationSure } from '../hooks/useNavigationSure'
 
 interface ILienMenu {
   to: string
@@ -19,6 +19,8 @@ const LIENS: ILienMenu[] = [
 ]
 
 export default function Menu() {
+  const naviguer = useNavigationSure()
+
   return (
     // Header hors du conteneur à padding horizontal : sticky en haut, il
     // doit courir sur toute la largeur de l'écran, pas seulement dans
@@ -33,16 +35,17 @@ export default function Menu() {
             par ligne. */}
         <nav className="overflow-hidden rounded-2xl divide-y divide-texte/10 bg-surface">
           {LIENS.map(({ to, label, icon: Icon }) => (
-            <Link
+            <button
               key={to}
-              to={to}
+              type="button"
+              onClick={() => naviguer(to)}
               // min-h-12 (48px) : hauteur tactile minimale recommandée.
-              className="flex min-h-12 items-center gap-3 px-4 py-3 text-texte"
+              className="tactile flex min-h-12 w-full items-center gap-3 px-4 py-3 text-left text-texte"
             >
               <Icon className="h-5 w-5 shrink-0 text-texte/70" aria-hidden="true" />
               <span className="flex-1 text-sm font-medium">{label}</span>
               <ChevronRight className="h-4 w-4 shrink-0 text-texte/40" aria-hidden="true" />
-            </Link>
+            </button>
           ))}
         </nav>
 

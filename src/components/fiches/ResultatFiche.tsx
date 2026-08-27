@@ -1,7 +1,7 @@
 import { ChevronRight, Heart } from 'lucide-react'
-import { useNavigate } from 'react-router-dom'
 import type { IFiche } from '../../types'
 import { getCategorieBySlug, texteCategorie, fondCategorie } from '../../data/categories'
+import { useNavigationSure } from '../../hooks/useNavigationSure'
 import ListeSeparee from './ListeSeparee'
 
 interface IResultatFicheProps {
@@ -25,12 +25,12 @@ export default function ResultatFiche({
   showCategorie = true,
   estFavori = false,
 }: IResultatFicheProps) {
-  const navigate = useNavigate()
+  const naviguer = useNavigationSure()
   const categorie = getCategorieBySlug(fiche.categorie)
 
   function gererClic() {
     if (onClick) onClick()
-    else navigate(`/fiche/${fiche.id}`)
+    else naviguer(`/fiche/${fiche.id}`)
   }
 
   return (
@@ -38,8 +38,8 @@ export default function ResultatFiche({
       type="button"
       onClick={gererClic}
       // min-h-14 (56px) : zone tactile confortable pour une liste dense de
-      // résultats. active:bg-surface : léger retour visuel au tap.
-      className="flex min-h-14 w-full items-center gap-3 border-b border-texte/10 px-4 py-3 text-left transition-colors active:bg-surface"
+      // résultats.
+      className="tactile flex min-h-14 w-full items-center gap-3 border-b border-texte/10 px-4 py-3 text-left"
     >
       <span className="min-w-0 flex-1">
         <span className="flex items-center gap-1">

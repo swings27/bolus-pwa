@@ -30,3 +30,8 @@ export const APP = {
   contact: 'contact@bolus-app.fr',
   siteWeb: 'https://bolus-app.fr',
 }
+
+// Bascule unique pour toute la période de bêta-test : pilote l'affichage du
+// bouton flottant de retour (voir BoutonRetourBeta.tsx). À repasser à false
+// une fois la bêta terminée, sans avoir à retoucher le composant lui-même.
+export const MODE_BETA = true

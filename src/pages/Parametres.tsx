@@ -4,6 +4,7 @@ import Header from '../components/layout/Header'
 import { useTheme } from '../contexts/ThemeContext'
 import type { Theme } from '../contexts/ThemeContext'
 import { db } from '../db'
+import { CLE_FICHES_VERSION, CLE_FICHES_DATE_CATALOGUE, CLE_STOCKAGE_PERSISTANT } from '../db/cles'
 
 interface IOptionTheme {
   valeur: Theme
@@ -34,22 +35,23 @@ export default function Parametres() {
   const [stockagePersistant, setStockagePersistant] = useState('—')
 
   useEffect(() => {
-    db.parametres.get('fiches_version').then((param) => {
-      if (param) setVersionFiches(param.valeur)
-    })
-
-    // Déjà récupérée et mémorisée par useFichesLoader au démarrage de
-    // l'app : on la relit dans Dexie plutôt que de re-télécharger
-    // /data/version.json, déjà fetché quelques instants plus tôt.
-    db.parametres.get('fiches_date_catalogue').then((param) => {
-      setDateCatalogue(param?.valeur ?? 'indisponible')
-    })
-
-    // Résultat déjà mémorisé par la demande faite au démarrage de l'app
-    // (voir App.tsx / src/utils/persistance.ts) — on le relit ici plutôt
-    // que de rappeler navigator.storage.persist() une deuxième fois.
-    db.parametres.get('stockage_persistant').then((param) => {
-      if (param) setStockagePersistant(param.valeur === 'true' ? 'accordé' : 'non accordé')
+    // Trois lectures indépendantes de la même table : lancées en parallèle
+    // plutôt qu'attendues l'une après l'autre (même principe que dans
+    // useFichesLoader/InstallBanner).
+    Promise.all([
+      db.parametres.get(CLE_FICHES_VERSION),
+      // Déjà récupérée et mémorisée par useFichesLoader au démarrage de
+      // l'app : on la relit dans Dexie plutôt que de re-télécharger
+      // /data/version.json, déjà fetché quelques instants plus tôt.
+      db.parametres.get(CLE_FICHES_DATE_CATALOGUE),
+      // Résultat déjà mémorisé par la demande faite au démarrage de l'app
+      // (voir App.tsx / src/utils/persistance.ts) — on le relit ici plutôt
+      // que de rappeler navigator.storage.persist() une deuxième fois.
+      db.parametres.get(CLE_STOCKAGE_PERSISTANT),
+    ]).then(([paramVersion, paramDateCatalogue, paramStockage]) => {
+      if (paramVersion) setVersionFiches(paramVersion.valeur)
+      setDateCatalogue(paramDateCatalogue?.valeur ?? 'indisponible')
+      if (paramStockage) setStockagePersistant(paramStockage.valeur === 'true' ? 'accordé' : 'non accordé')
     })
   }, [])
 

@@ -40,7 +40,7 @@ export default function SurveillanceAccordeon({ items }: ISurveillanceAccordeonP
                   onClick={() => setIndexOuvert(ouvert ? null : index)}
                   aria-expanded={ouvert}
                   aria-controls={idPanneau}
-                  className="flex w-full items-center justify-between gap-3 py-3 text-left"
+                  className="tactile flex w-full items-center justify-between gap-3 py-3 text-left"
                 >
                   <span className="text-sm font-semibold text-texte">{item.titre}</span>
                   <ChevronRight

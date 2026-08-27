@@ -2,7 +2,6 @@ import { ChevronDown } from 'lucide-react'
 import { useNavigate } from 'react-router-dom'
 import Header from '../components/layout/Header'
 import Wordmark from '../components/layout/Wordmark'
-import DisclaimerBanner from '../components/layout/DisclaimerBanner'
 import SearchDropdown from '../components/fiches/SearchDropdown'
 import CategorieCard from '../components/categories/CategorieCard'
 import { useCategoriesAvecFiches } from '../hooks/useCategoriesAvecFiches'
@@ -44,7 +43,7 @@ export default function Accueil() {
       </div>
 
       {/* Catégories */}
-      <div className="flex flex-col gap-3 px-6 pb-24">
+      <div className="flex flex-col gap-3 px-6 pb-6">
         <p className="text-xs font-semibold uppercase tracking-widest text-texte/60">
           Parcourir par catégorie
         </p>
@@ -68,15 +67,6 @@ export default function Accueil() {
           Voir plus de catégories
           <ChevronDown className="h-4 w-4" aria-hidden="true" />
         </button>
-      </div>
-
-      {/* Collé au-dessus de la BottomNavBar (fixed, pas mt-auto) : visible en
-          permanence sans avoir à faire défiler jusqu'en bas de la page,
-          uniquement sur l'Accueil — les autres pages n'importent pas ce
-          composant. pb-24 ci-dessus réserve la place pour qu'il ne masque
-          jamais le dernier contenu défilé. */}
-      <div className="fixed inset-x-0 z-30" style={{ bottom: 'var(--hauteur-nav)' }}>
-        <DisclaimerBanner />
       </div>
     </div>
   )

@@ -1,8 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { db } from '../../db'
 import { useFocusTrap } from '../../hooks/useFocusTrap'
-
-const CLE_DISCLAIMER = 'disclaimer_accepte'
+import { CLE_DISCLAIMER_ACCEPTE } from '../../db/cles'
 
 // On persiste l'acceptation dans Dexie (IndexedDB) plutôt que dans
 // localStorage pour deux raisons :
@@ -21,7 +20,7 @@ export default function DisclaimerModal() {
   const conteneurRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    db.parametres.get(CLE_DISCLAIMER).then((param) => {
+    db.parametres.get(CLE_DISCLAIMER_ACCEPTE).then((param) => {
       setAccepte(param !== undefined)
     })
   }, [])
@@ -30,7 +29,7 @@ export default function DisclaimerModal() {
 
   async function accepter() {
     await db.parametres.put({
-      cle: CLE_DISCLAIMER,
+      cle: CLE_DISCLAIMER_ACCEPTE,
       valeur: new Date().toISOString(),
     })
     setAccepte(true)

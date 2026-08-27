@@ -10,20 +10,32 @@ import DetailPerOs from '../components/fiches/DetailPerOs'
 import SurveillanceAccordeon from '../components/fiches/SurveillanceAccordeon'
 import SourcesFiche from '../components/fiches/SourcesFiche'
 import BoutonFavori from '../components/fiches/BoutonFavori'
+import BoutonPrimaire from '../components/layout/BoutonPrimaire'
 import { useFiche } from '../hooks/useFiche'
 import { useFavoris } from '../hooks/useFavoris'
 import { enregistrerConsultation } from '../utils/historique'
 import { TAILLE_MAX_FAVORIS } from '../utils/favoris'
 
+// Squelette plutôt qu'un spinner : des blocs approximant la mise en page
+// réelle (titre, cartes, bloc de forme) donnent une impression de chargement
+// plus rapide qu'une simple roue qui tourne, en laissant deviner la
+// structure à venir. Le pouls (voir .squelette dans index.css) respecte
+// prefers-reduced-motion.
 function EcranChargementFiche() {
   return (
-    <div className="flex flex-col items-center justify-center gap-3 py-24">
+    <div className="flex flex-col gap-6 px-6 pt-2" role="status" aria-label="Chargement de la fiche">
       <h1 className="sr-only">Chargement de la fiche</h1>
-      <span
-        className="h-8 w-8 animate-spin rounded-full border-4 border-accent-clair border-t-interactif"
-        role="status"
-        aria-label="Chargement"
-      />
+      <div className="flex flex-col gap-2">
+        <div className="squelette h-3 w-24 rounded-full" />
+        <div className="squelette h-10 w-3/4 rounded-lg" />
+        <div className="squelette h-4 w-1/2 rounded-full" />
+      </div>
+      <div className="grid grid-cols-2 gap-3">
+        <div className="squelette h-20 rounded-xl" />
+        <div className="squelette h-20 rounded-xl" />
+      </div>
+      <div className="squelette h-16 rounded-xl" />
+      <div className="squelette h-48 rounded-2xl" />
     </div>
   )
 }
@@ -36,13 +48,7 @@ function FicheIntrouvable() {
       <p className="text-sm text-texte/70">
         Cette fiche médicament est introuvable ou n'est plus disponible.
       </p>
-      <button
-        type="button"
-        onClick={() => navigate(-1)}
-        className="rounded-lg bg-interactif px-5 py-3 text-sm font-medium text-surface"
-      >
-        Retour
-      </button>
+      <BoutonPrimaire onClick={() => navigate(-1)}>Retour</BoutonPrimaire>
     </div>
   )
 }

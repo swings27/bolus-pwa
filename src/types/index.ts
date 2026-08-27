@@ -6,11 +6,11 @@
 export type IVoieAdministration = 'IVD' | 'IVL' | 'PSE' | 'IM' | 'SC'
 
 /** Détails d'administration par voie injectable (IV, IM, SC...). */
-export interface IFormeInjectble {
+export interface IFormeInjectable {
   solvant: string
   volumeDilution: string
   debitMlH: string | null
-  goutttesMin: string | null
+  gouttesMin: string | null
   voies: IVoieAdministration[]
   dureeAdministration: string | null
   notes: string | null
@@ -42,7 +42,7 @@ export interface IFiche {
   indications: string[]
   antidote: string | null
   contreIndications: string[]
-  injectable: IFormeInjectble | null
+  injectable: IFormeInjectable | null
   perOsSonde: IFormePerOs | null
   surveillanceSpecifique: ISurveillance[]
   compatibilitesMajeures: string[]

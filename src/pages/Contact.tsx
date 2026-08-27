@@ -1,8 +1,11 @@
+import { useEffect, useState } from 'react'
+import { useLocation } from 'react-router-dom'
 import { Mail, Globe, Link2, ChevronRight, AlertTriangle } from 'lucide-react'
 import type { LucideIcon } from 'lucide-react'
 import PageDocument from '../components/layout/PageDocument'
 import BlocAvertissement from '../components/layout/BlocAvertissement'
 import { APP } from '../data/editeur'
+import { construireMailtoRetour } from '../utils/retourBeta'
 
 interface ILienContact {
   icon: LucideIcon
@@ -28,6 +31,27 @@ const LIENS_CONTACT: ILienContact[] = [
 ]
 
 export default function Contact() {
+  const location = useLocation()
+  const [hrefErreur, setHrefErreur] = useState<string | null>(null)
+
+  // Même gabarit contextualisé (version app/fiches, écran, appareil) que le
+  // bouton flottant de retour bêta, mais avec un sujet dédié et un champ
+  // "Molécule concernée" en tête de corps — ce lien vit en dehors du mode
+  // bêta, il reste donc utile après la fin de celle-ci.
+  useEffect(() => {
+    let annule = false
+    construireMailtoRetour({
+      sujet: 'Bolus — Erreur de fiche',
+      route: location.pathname,
+      enTete: 'Molécule concernée :',
+    }).then((url) => {
+      if (!annule) setHrefErreur(url)
+    })
+    return () => {
+      annule = true
+    }
+  }, [location.pathname])
+
   return (
     <PageDocument titre="Contact">
       <p className="text-base leading-relaxed text-texte">
@@ -43,7 +67,7 @@ export default function Contact() {
             {...(externe ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
             // min-h-14 (56px) : hauteur tactile confortable pour une ligne de
             // contact, plus généreuse que le min-h-12 des liens du Menu.
-            className="flex min-h-14 items-center gap-3 px-4 py-3 text-texte"
+            className="tactile flex min-h-14 items-center gap-3 px-4 py-3 text-texte"
           >
             <Icon className="h-5 w-5 shrink-0 text-texte/70" aria-hidden="true" />
             <span className="flex-1 text-base font-medium">{label}</span>
@@ -53,12 +77,22 @@ export default function Contact() {
       </nav>
 
       <BlocAvertissement icone={AlertTriangle} couleur="var(--alerte)">
-        <p className="text-sm leading-relaxed text-texte">
-          <span className="font-semibold">Signaler une erreur dans une fiche</span>
-          <br />
-          Précisez le nom de la molécule et la version de l'application (visible dans Paramètres).
-          Toute erreur signalée est vérifiée contre le RCP source avant correction.
-        </p>
+        <div className="flex flex-col gap-2">
+          <p className="text-sm leading-relaxed text-texte">
+            <span className="font-semibold">Signaler une erreur dans une fiche</span>
+            <br />
+            Toute erreur signalée est vérifiée contre le RCP source avant correction.
+          </p>
+          {hrefErreur && (
+            <a
+              href={hrefErreur}
+              className="tactile self-start rounded-lg px-3 py-2 text-sm font-semibold"
+              style={{ backgroundColor: 'var(--alerte)', color: 'var(--fond)' }}
+            >
+              Signaler une erreur
+            </a>
+          )}
+        </div>
       </BlocAvertissement>
     </PageDocument>
   )

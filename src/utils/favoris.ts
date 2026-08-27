@@ -1,6 +1,6 @@
 import { db } from '../db'
+import { CLE_FAVORIS } from '../db/cles'
 
-const CLE_FAVORIS = 'favoris'
 export const TAILLE_MAX_FAVORIS = 3
 
 export async function lireFavoris(): Promise<string[]> {

@@ -1,4 +1,5 @@
 import { useRef, useState } from 'react'
+import type { FocusEvent } from 'react'
 import { Search, SearchX, X } from 'lucide-react'
 import Header from '../components/layout/Header'
 import EtatVide from '../components/layout/EtatVide'
@@ -23,6 +24,13 @@ export default function Recherche() {
     inputRef.current?.focus()
   }
 
+  // 300ms : laisse le temps à l'animation d'apparition du clavier mobile de
+  // se terminer avant de recentrer le champ.
+  function gererFocusChamp(evenement: FocusEvent<HTMLInputElement>) {
+    const champ = evenement.currentTarget
+    setTimeout(() => champ.scrollIntoView({ behavior: 'smooth', block: 'center' }), 300)
+  }
+
   return (
     <div className="flex flex-1 flex-col">
       <Header variant="logo" />
@@ -42,6 +50,7 @@ export default function Recherche() {
             type="text"
             value={query}
             onChange={(event) => setQuery(event.target.value)}
+            onFocus={gererFocusChamp}
             // autoFocus : la page Recherche existe pour qu'on tape
             // immédiatement, pas pour qu'on retouche l'écran d'abord.
             autoFocus

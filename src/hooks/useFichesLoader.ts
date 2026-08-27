@@ -1,9 +1,7 @@
 import { useEffect, useState } from 'react'
 import { db } from '../db'
+import { CLE_FICHES_VERSION, CLE_FICHES_DATE_CATALOGUE } from '../db/cles'
 import type { IFiche } from '../types'
-
-const CLE_VERSION_FICHES = 'fiches_version'
-const CLE_DATE_CATALOGUE = 'fiches_date_catalogue'
 
 interface IVersionFichier {
   version: string
@@ -52,7 +50,7 @@ export function useFichesLoader(): IEtatChargement {
         // l'une après l'autre.
         const [versionDistante, parametreLocal] = await Promise.all([
           recupererJson<IVersionFichier>('/data/version.json'),
-          db.parametres.get(CLE_VERSION_FICHES),
+          db.parametres.get(CLE_FICHES_VERSION),
         ])
 
         // Un champ "version" manquant (déploiement raté, proxy renvoyant un
@@ -67,7 +65,7 @@ export function useFichesLoader(): IEtatChargement {
         if (parametreLocal?.valeur === versionDistante.version) {
           // Fiches déjà à jour : on garde quand même la date du catalogue
           // synchronisée, affichée dans Paramètres sans nouvel appel réseau.
-          await db.parametres.put({ cle: CLE_DATE_CATALOGUE, valeur: versionDistante.datefiches })
+          await db.parametres.put({ cle: CLE_FICHES_DATE_CATALOGUE, valeur: versionDistante.datefiches })
           if (!annule) setEtat({ loading: false, error: null })
           return
         }
@@ -90,8 +88,8 @@ export function useFichesLoader(): IEtatChargement {
             await db.fiches.bulkDelete(idsObsoletes)
           }
 
-          await db.parametres.put({ cle: CLE_VERSION_FICHES, valeur: versionDistante.version })
-          await db.parametres.put({ cle: CLE_DATE_CATALOGUE, valeur: versionDistante.datefiches })
+          await db.parametres.put({ cle: CLE_FICHES_VERSION, valeur: versionDistante.version })
+          await db.parametres.put({ cle: CLE_FICHES_DATE_CATALOGUE, valeur: versionDistante.datefiches })
         })
 
         if (!annule) setEtat({ loading: false, error: null })

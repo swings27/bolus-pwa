@@ -1,11 +1,11 @@
 import { useEffect, useRef, useState } from 'react'
-import type { KeyboardEvent } from 'react'
-import { useNavigate } from 'react-router-dom'
+import type { FocusEvent, KeyboardEvent } from 'react'
 import { Search, X } from 'lucide-react'
 import { useSearch } from '../../hooks/useSearch'
 import { useHistorique } from '../../hooks/useHistorique'
 import { useFavoris } from '../../hooks/useFavoris'
 import { useClickOutside } from '../../hooks/useClickOutside'
+import { useNavigationSure } from '../../hooks/useNavigationSure'
 import ResultatFiche from './ResultatFiche'
 
 const MAX_RESULTATS_DROPDOWN = 6
@@ -30,7 +30,7 @@ export default function SearchDropdown() {
   const [indexSurligne, setIndexSurligne] = useState(-1)
   const conteneurRef = useRef<HTMLDivElement>(null)
   const inputRef = useRef<HTMLInputElement>(null)
-  const navigate = useNavigate()
+  const naviguer = useNavigationSure()
 
   const resultats = useSearch(query, MAX_RESULTATS_DROPDOWN)
   const historique = useHistorique()
@@ -51,12 +51,20 @@ export default function SearchDropdown() {
 
   function selectionner(id: string) {
     setOuvert(false)
-    navigate(`/fiche/${id}`)
+    naviguer(`/fiche/${id}`)
   }
 
   function viderChamp() {
     setQuery('')
     inputRef.current?.focus()
+  }
+
+  // 300ms : laisse le temps à l'animation d'apparition du clavier mobile de
+  // se terminer avant de recentrer le champ.
+  function gererFocusChamp(evenement: FocusEvent<HTMLInputElement>) {
+    setOuvert(true)
+    const champ = evenement.currentTarget
+    setTimeout(() => champ.scrollIntoView({ behavior: 'smooth', block: 'center' }), 300)
   }
 
   function gererClavier(event: KeyboardEvent<HTMLInputElement>) {
@@ -94,7 +102,7 @@ export default function SearchDropdown() {
             setQuery(event.target.value)
             setOuvert(true)
           }}
-          onFocus={() => setOuvert(true)}
+          onFocus={gererFocusChamp}
           onKeyDown={gererClavier}
           placeholder="Ex. Paracétamol…"
           className="w-full bg-transparent text-sm text-texte placeholder:text-texte/40 focus:outline-none"

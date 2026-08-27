@@ -41,7 +41,7 @@ export default function SegmentedControl<T extends string>({
             key={option.valeur}
             type="button"
             onClick={() => onChange(option.valeur)}
-            className={`flex flex-1 flex-col items-center justify-center rounded-lg text-sm transition-colors duration-150 ${classeBouton}`}
+            className={`tactile flex flex-1 flex-col items-center justify-center rounded-lg text-sm transition-colors duration-150 ${classeBouton}`}
             style={
               actif
                 ? { backgroundColor: 'var(--segment-actif-fond)', color: 'var(--segment-actif-texte)', fontWeight: 600 }

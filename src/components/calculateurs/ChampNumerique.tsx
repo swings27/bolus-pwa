@@ -7,6 +7,7 @@
 // en cas de couplage.
 
 import { useId } from 'react'
+import type { FocusEvent } from 'react'
 
 interface IChampNumeriqueProps {
   label: string
@@ -28,6 +29,14 @@ function nettoyerSaisie(brut: string): string {
   return valeur
 }
 
+// 300ms : laisse le temps à l'animation d'apparition du clavier mobile de
+// se terminer avant de recentrer le champ — le faire immédiatement au focus
+// viserait une position que le clavier va ensuite recouvrir.
+function gererFocus(evenement: FocusEvent<HTMLInputElement>) {
+  const champ = evenement.currentTarget
+  setTimeout(() => champ.scrollIntoView({ behavior: 'smooth', block: 'center' }), 300)
+}
+
 export default function ChampNumerique({ label, valeur, onChange, unite, placeholder }: IChampNumeriqueProps) {
   const id = useId()
   const idUnite = `${id}-unite`
@@ -44,6 +53,7 @@ export default function ChampNumerique({ label, valeur, onChange, unite, placeho
           inputMode="decimal"
           value={valeur}
           onChange={(e) => onChange(nettoyerSaisie(e.target.value))}
+          onFocus={gererFocus}
           placeholder={placeholder}
           // aria-describedby vers l'unité : un lecteur d'écran annonce le
           // label PUIS l'unité à chaque focus sur le champ ("Volume à

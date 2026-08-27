@@ -189,3 +189,80 @@ body {
   font-family: var(--font-body);
   overscroll-behavior-y: none;
 }
+
+/* --------------------------------------------------------------------
+   Retour tactile (finitions bêta)
+   -------------------------------------------------------------------- */
+
+/* Retour visuel générique au tap : léger fondu de fond + réduction
+   d'échelle, appliqué aux lignes/cartes cliquables (résultats de fiche,
+   catégories, menu, contact, accordéon...). */
+.tactile {
+  transition: background-color 120ms ease,
+              transform 120ms ease;
+  -webkit-tap-highlight-color: transparent;
+}
+.tactile:active {
+  background-color: color-mix(in srgb,
+    var(--texte) 6%, transparent);
+  transform: scale(0.985);
+}
+
+/* Variante pour la BottomNavBar : un décalage d'échelle sur un onglet de
+   navigation serait perturbant (la barre entière semble "trembler" pendant
+   un tap) — seule l'opacité varie ici. */
+.tactile-nav {
+  transition: opacity 120ms ease;
+  -webkit-tap-highlight-color: transparent;
+}
+.tactile-nav:active {
+  opacity: 0.6;
+}
+
+/* --------------------------------------------------------------------
+   Transition de page (voir TransitionPage.tsx)
+   -------------------------------------------------------------------- */
+
+/* L'animation n'existe QUE sous no-preference : sur un système où les
+   animations sont désactivées, .transition-page ne reçoit aucune règle
+   d'animation du tout (pas seulement une durée réduite à 0). */
+@media (prefers-reduced-motion: no-preference) {
+  .transition-page {
+    animation: entree-page 180ms ease-out;
+  }
+}
+
+@keyframes entree-page {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --------------------------------------------------------------------
+   Squelette de chargement (voir FicheMedicament.tsx)
+   -------------------------------------------------------------------- */
+
+.squelette {
+  background-color: color-mix(in srgb, var(--texte) 8%, var(--fond));
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .squelette {
+    animation: pulse-squelette 1.6s ease-in-out infinite;
+  }
+}
+
+@keyframes pulse-squelette {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}

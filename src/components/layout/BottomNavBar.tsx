@@ -77,7 +77,7 @@ export default function BottomNavBar() {
               // colonne, qui occupe toute la hauteur de la barre (stretch,
               // comportement flex par défaut) — donc par rapport au bord
               // supérieur de la barre elle-même.
-              className="relative flex flex-1 flex-col items-center justify-center gap-1"
+              className="tactile-nav relative flex flex-1 flex-col items-center justify-center gap-1"
               aria-label={label}
               // aria-pressed (pas aria-current) : ce bouton ouvre une
               // modale, il ne navigue pas vers une page — c'est un bouton
@@ -119,7 +119,7 @@ export default function BottomNavBar() {
             key={to}
             to={to}
             aria-current={actif ? 'page' : undefined}
-            className="flex flex-1 flex-col items-center justify-center gap-1"
+            className="tactile-nav flex flex-1 flex-col items-center justify-center gap-1"
           >
             <Icon size={22} color={couleur} strokeWidth={actif ? 2.5 : 2} aria-hidden="true" />
             <span
