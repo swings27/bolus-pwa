@@ -5,6 +5,7 @@ import EtatVide from '../components/layout/EtatVide'
 import ResultatFiche from '../components/fiches/ResultatFiche'
 import { useSearch } from '../hooks/useSearch'
 import { useHistorique } from '../hooks/useHistorique'
+import { useFavoris } from '../hooks/useFavoris'
 
 export default function Recherche() {
   const [query, setQuery] = useState('')
@@ -14,6 +15,7 @@ export default function Recherche() {
   // plein écran a la place d'afficher tous les résultats.
   const resultats = useSearch(query)
   const historique = useHistorique()
+  const { favoris } = useFavoris()
   const termeValide = query.trim().length >= 2
 
   function viderChamp() {
@@ -71,7 +73,7 @@ export default function Recherche() {
             </p>
             <div>
               {historique.map((fiche) => (
-                <ResultatFiche key={fiche.id} fiche={fiche} />
+                <ResultatFiche key={fiche.id} fiche={fiche} estFavori={favoris.includes(fiche.id)} />
               ))}
             </div>
           </div>
@@ -95,7 +97,7 @@ export default function Recherche() {
           </p>
           <div>
             {resultats.map((fiche) => (
-              <ResultatFiche key={fiche.id} fiche={fiche} />
+              <ResultatFiche key={fiche.id} fiche={fiche} estFavori={favoris.includes(fiche.id)} />
             ))}
           </div>
         </div>

@@ -1,4 +1,4 @@
-import { ChevronRight } from 'lucide-react'
+import { ChevronRight, Heart } from 'lucide-react'
 import { useNavigate } from 'react-router-dom'
 import type { IFiche } from '../../types'
 import { getCategorieBySlug, texteCategorie, fondCategorie } from '../../data/categories'
@@ -10,6 +10,10 @@ interface IResultatFicheProps {
   /** false dans les listes déjà filtrées par catégorie (ListeCategorie) :
    * la pastille redirait vers une information déjà connue du contexte. */
   showCategorie?: boolean
+  /** Affiche un petit cœur plein à côté du nom si la fiche est favorite —
+   * purement indicatif ici, pas un bouton (voir BoutonFavori sur la fiche
+   * elle-même pour basculer le statut). */
+  estFavori?: boolean
 }
 
 // Ligne de résultat réutilisée par le dropdown de l'Accueil, la page
@@ -19,6 +23,7 @@ export default function ResultatFiche({
   fiche,
   onClick,
   showCategorie = true,
+  estFavori = false,
 }: IResultatFicheProps) {
   const navigate = useNavigate()
   const categorie = getCategorieBySlug(fiche.categorie)
@@ -37,7 +42,17 @@ export default function ResultatFiche({
       className="flex min-h-14 w-full items-center gap-3 border-b border-texte/10 px-4 py-3 text-left transition-colors active:bg-surface"
     >
       <span className="min-w-0 flex-1">
-        <span className="block truncate text-sm font-semibold text-texte">{fiche.dci}</span>
+        <span className="flex items-center gap-1">
+          <span className="truncate text-sm font-semibold text-texte">{fiche.dci}</span>
+          {estFavori && (
+            <Heart
+              className="h-3.5 w-3.5 shrink-0"
+              style={{ color: 'var(--interactif)' }}
+              fill="currentColor"
+              aria-hidden="true"
+            />
+          )}
+        </span>
         {fiche.nomsCommerciaux.length > 0 && (
           <span className="block truncate text-xs text-texte-doux">
             <ListeSeparee items={fiche.nomsCommerciaux} />

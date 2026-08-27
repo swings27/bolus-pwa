@@ -13,6 +13,7 @@ import Recherche from './pages/Recherche'
 import FicheMedicament from './pages/FicheMedicament'
 import Categories from './pages/Categories'
 import ListeCategorie from './pages/ListeCategorie'
+import Favoris from './pages/Favoris'
 import Menu from './pages/Menu'
 import Parametres from './pages/Parametres'
 import APropos from './pages/APropos'
@@ -115,6 +116,7 @@ export default function App() {
                 <Route path="/fiche/:id" element={<FicheMedicament />} />
                 <Route path="/categories" element={<Categories />} />
                 <Route path="/categories/:slug" element={<ListeCategorie />} />
+                <Route path="/favoris" element={<Favoris />} />
                 <Route path="/menu" element={<Menu />} />
                 <Route path="/menu/parametres" element={<Parametres />} />
                 <Route path="/menu/a-propos" element={<APropos />} />

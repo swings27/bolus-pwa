@@ -24,7 +24,7 @@ export default function Menu() {
     // doit courir sur toute la largeur de l'écran, pas seulement dans
     // l'espace restant entre les marges px-6 du contenu.
     <div className="flex flex-col pb-8">
-      <Header variant="logo" />
+      <Header variant="retour" />
       <h1 className="sr-only">Menu</h1>
 
       <div className="flex flex-col gap-8 px-6 pt-6">

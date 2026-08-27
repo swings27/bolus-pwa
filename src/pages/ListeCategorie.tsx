@@ -7,6 +7,7 @@ import EtatVide from '../components/layout/EtatVide'
 import ResultatFiche from '../components/fiches/ResultatFiche'
 import { db } from '../db'
 import { getCategorieBySlug, texteCategorie } from '../data/categories'
+import { useFavoris } from '../hooks/useFavoris'
 import type { IFiche } from '../types'
 
 interface IGroupe {
@@ -25,6 +26,7 @@ export default function ListeCategorie() {
   const { slug = '' } = useParams()
   const navigate = useNavigate()
   const categorie = getCategorieBySlug(slug)
+  const { favoris } = useFavoris()
 
   const fiches = useLiveQuery(
     () => db.fiches.where('categorie').equals(slug).toArray(),
@@ -116,7 +118,12 @@ export default function ListeCategorie() {
               </div>
             )}
             {groupe.fiches.map((fiche) => (
-              <ResultatFiche key={fiche.id} fiche={fiche} showCategorie={false} />
+              <ResultatFiche
+                key={fiche.id}
+                fiche={fiche}
+                showCategorie={false}
+                estFavori={favoris.includes(fiche.id)}
+              />
             ))}
           </div>
         ))}

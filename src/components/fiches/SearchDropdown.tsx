@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom'
 import { Search, X } from 'lucide-react'
 import { useSearch } from '../../hooks/useSearch'
 import { useHistorique } from '../../hooks/useHistorique'
+import { useFavoris } from '../../hooks/useFavoris'
 import { useClickOutside } from '../../hooks/useClickOutside'
 import ResultatFiche from './ResultatFiche'
 
@@ -33,6 +34,7 @@ export default function SearchDropdown() {
 
   const resultats = useSearch(query, MAX_RESULTATS_DROPDOWN)
   const historique = useHistorique()
+  const { favoris } = useFavoris()
   const afficherHistorique = ouvert && query.length === 0 && historique.length > 0
   const afficherResultats = ouvert && query.trim().length >= 2
   // Liste actuellement affichée, pour que la navigation clavier (flèches,
@@ -148,7 +150,11 @@ export default function SearchDropdown() {
                 onMouseEnter={() => setIndexSurligne(index)}
                 style={index === indexSurligne ? { backgroundColor: 'var(--fond)' } : undefined}
               >
-                <ResultatFiche fiche={fiche} onClick={() => selectionner(fiche.id)} />
+                <ResultatFiche
+                  fiche={fiche}
+                  onClick={() => selectionner(fiche.id)}
+                  estFavori={favoris.includes(fiche.id)}
+                />
               </div>
             ))
           )}

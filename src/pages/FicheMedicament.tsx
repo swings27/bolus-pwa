@@ -9,8 +9,11 @@ import DetailInjectable from '../components/fiches/DetailInjectable'
 import DetailPerOs from '../components/fiches/DetailPerOs'
 import SurveillanceAccordeon from '../components/fiches/SurveillanceAccordeon'
 import SourcesFiche from '../components/fiches/SourcesFiche'
+import BoutonFavori from '../components/fiches/BoutonFavori'
 import { useFiche } from '../hooks/useFiche'
+import { useFavoris } from '../hooks/useFavoris'
 import { enregistrerConsultation } from '../utils/historique'
+import { TAILLE_MAX_FAVORIS } from '../utils/favoris'
 
 function EcranChargementFiche() {
   return (
@@ -68,6 +71,17 @@ export default function FicheMedicament() {
   const formeActive =
     formeChoisie && formesDisponibles.includes(formeChoisie) ? formeChoisie : (formesDisponibles[0] ?? null)
 
+  const { favoris, basculer } = useFavoris()
+  const [favoriBloque, setFavoriBloque] = useState(false)
+
+  // Le message d'avertissement (limite de 3 atteinte) se referme tout seul
+  // plutôt que d'exiger un geste supplémentaire pour le fermer.
+  useEffect(() => {
+    if (!favoriBloque) return
+    const minuteur = setTimeout(() => setFavoriBloque(false), 4000)
+    return () => clearTimeout(minuteur)
+  }, [favoriBloque])
+
   // Alimente l'historique affiché sur la page Recherche. useFiche()
   // s'appuie sur useLiveQuery, qui ne relit vraiment la table "fiches" que
   // si elle est réécrite (resynchronisation CDN) — pas à chaque render :
@@ -104,14 +118,25 @@ export default function FicheMedicament() {
 
       {/* Identité */}
       <div className="flex flex-col gap-1 px-6 pt-2">
-        <p className="text-xs font-semibold uppercase tracking-widest text-accent">
-          {fiche.sousFamille}
-        </p>
+        <div className="-mr-2.5 flex items-center justify-between gap-2">
+          <p className="text-xs font-semibold uppercase tracking-widest text-accent">
+            {fiche.sousFamille}
+          </p>
+          <BoutonFavori
+            actif={favoris.includes(fiche.id)}
+            onClick={async () => setFavoriBloque(await basculer(fiche.id))}
+          />
+        </div>
         <h1 className="font-display text-[2.5rem] leading-tight text-texte">{fiche.dci}</h1>
         {fiche.nomsCommerciaux.length > 0 && (
           <div className="text-sm text-texte-doux">
             <ListeSeparee items={fiche.nomsCommerciaux} />
           </div>
+        )}
+        {favoriBloque && (
+          <p className="text-xs" style={{ color: 'var(--alerte)' }}>
+            Déjà {TAILLE_MAX_FAVORIS} favoris — retirez-en un avant d'en ajouter un nouveau.
+          </p>
         )}
       </div>
 
