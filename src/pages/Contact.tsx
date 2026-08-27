@@ -1,6 +1,7 @@
 import { Mail, Globe, Link2, ChevronRight, AlertTriangle } from 'lucide-react'
 import type { LucideIcon } from 'lucide-react'
 import PageDocument from '../components/layout/PageDocument'
+import BlocAvertissement from '../components/layout/BlocAvertissement'
 import { APP } from '../data/editeur'
 
 interface ILienContact {
@@ -51,25 +52,14 @@ export default function Contact() {
         ))}
       </nav>
 
-      <div
-        className="flex items-start gap-2 rounded-lg px-4 py-3"
-        style={{
-          backgroundColor: 'color-mix(in srgb, var(--alerte) 10%, var(--fond))',
-          borderLeft: '3px solid var(--alerte)',
-        }}
-      >
-        <AlertTriangle
-          className="mt-0.5 h-4 w-4 shrink-0"
-          style={{ color: 'var(--alerte)' }}
-          aria-hidden="true"
-        />
+      <BlocAvertissement icone={AlertTriangle} couleur="var(--alerte)">
         <p className="text-sm leading-relaxed text-texte">
           <span className="font-semibold">Signaler une erreur dans une fiche</span>
           <br />
           Précisez le nom de la molécule et la version de l'application (visible dans Paramètres).
           Toute erreur signalée est vérifiée contre le RCP source avant correction.
         </p>
-      </div>
+      </BlocAvertissement>
     </PageDocument>
   )
 }

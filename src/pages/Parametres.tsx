@@ -38,10 +38,12 @@ export default function Parametres() {
       if (param) setVersionFiches(param.valeur)
     })
 
-    fetch('/data/version.json')
-      .then((reponse) => reponse.json())
-      .then((data: { datefiches: string }) => setDateCatalogue(data.datefiches))
-      .catch(() => setDateCatalogue('indisponible'))
+    // Déjà récupérée et mémorisée par useFichesLoader au démarrage de
+    // l'app : on la relit dans Dexie plutôt que de re-télécharger
+    // /data/version.json, déjà fetché quelques instants plus tôt.
+    db.parametres.get('fiches_date_catalogue').then((param) => {
+      setDateCatalogue(param?.valeur ?? 'indisponible')
+    })
 
     // Résultat déjà mémorisé par la demande faite au démarrage de l'app
     // (voir App.tsx / src/utils/persistance.ts) — on le relit ici plutôt

@@ -23,7 +23,7 @@ export default function SearchDropdown() {
   const conteneurRef = useRef<HTMLDivElement>(null)
   const navigate = useNavigate()
 
-  const { resultats } = useSearch(query, MAX_RESULTATS_DROPDOWN)
+  const resultats = useSearch(query, MAX_RESULTATS_DROPDOWN)
   const afficherDropdown = ouvert && query.trim().length >= 2
 
   useClickOutside(conteneurRef, () => setOuvert(false))

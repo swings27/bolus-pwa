@@ -11,7 +11,7 @@ export default function Recherche() {
 
   // Pas de limite ici (contrairement au dropdown de l'Accueil) : la page
   // plein écran a la place d'afficher tous les résultats.
-  const { resultats } = useSearch(query)
+  const resultats = useSearch(query)
   const termeValide = query.trim().length >= 2
 
   function viderChamp() {

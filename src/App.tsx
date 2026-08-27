@@ -85,9 +85,13 @@ export default function App() {
   // reproduit pas une fois le chargement terminé — voir persistance.ts.
   useEffect(() => {
     if (loading || error) return
-    demanderPersistance().then((accorde) => {
-      db.parametres.put({ cle: 'stockage_persistant', valeur: accorde ? 'true' : 'false' })
-    })
+    demanderPersistance()
+      .then((accorde) => db.parametres.put({ cle: 'stockage_persistant', valeur: accorde ? 'true' : 'false' }))
+      .catch(() => {
+        // Échec silencieux (quota de stockage, navigation privée...) : ce
+        // n'est qu'une préférence de confort, pas une fonctionnalité
+        // bloquante — inutile d'alerter l'utilisatrice pour ça.
+      })
   }, [loading, error])
 
   return (

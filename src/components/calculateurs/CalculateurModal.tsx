@@ -10,6 +10,8 @@ import { useEffect, useRef, useState } from 'react'
 import { Info, X } from 'lucide-react'
 import { useCalculateurModal } from '../../contexts/CalculateurModalContext'
 import { useFocusTrap } from '../../hooks/useFocusTrap'
+import SegmentedControl from '../layout/SegmentedControl'
+import BlocAvertissement from '../layout/BlocAvertissement'
 import CalcDebit from './CalcDebit'
 import CalcDosePoids from './CalcDosePoids'
 
@@ -72,46 +74,22 @@ export default function CalculateurModal() {
           </button>
         </div>
 
-        <div className="mt-4 flex gap-2">
-          {ONGLETS.map(({ valeur, label }) => {
-            const actif = onglet === valeur
-            return (
-              <button
-                key={valeur}
-                type="button"
-                onClick={() => setOnglet(valeur)}
-                // py-3 (pas py-2.5) : zone tactile 44px minimum sur un
-                // texte tenant sur une seule ligne (text-sm = 20px).
-                className="flex-1 rounded-lg px-4 py-3 text-sm transition-colors duration-150"
-                style={
-                  actif
-                    ? { backgroundColor: 'var(--onglet-actif)', color: 'var(--interactif)', fontWeight: 600 }
-                    : { backgroundColor: 'var(--onglet-inactif)' }
-                }
-              >
-                <span className={actif ? '' : 'text-texte/70'}>{label}</span>
-              </button>
-            )
-          })}
+        <div className="mt-4">
+          <SegmentedControl options={ONGLETS} valeur={onglet} onChange={setOnglet} />
         </div>
 
         <div className="mt-4 rounded-xl p-4" style={{ backgroundColor: 'var(--surface)' }}>
           {onglet === 'debit' ? <CalcDebit /> : <CalcDosePoids />}
         </div>
 
-        <div
-          className="mt-4 flex items-start gap-2 rounded-lg px-4 py-3"
-          style={{
-            backgroundColor: 'color-mix(in srgb, var(--accent) 10%, var(--fond))',
-            borderLeft: '3px solid var(--accent)',
-          }}
-        >
-          <Info className="mt-0.5 h-4 w-4 shrink-0" style={{ color: 'var(--accent)' }} aria-hidden="true" />
-          <p className="text-xs leading-relaxed text-texte/80">
-            Ces calculateurs effectuent une opération arithmétique à partir des valeurs que vous saisissez. Ils ne
-            sont liés à aucune base de médicaments. La vérification du calcul et de la prescription reste sous votre
-            responsabilité.
-          </p>
+        <div className="mt-4">
+          <BlocAvertissement icone={Info} couleur="var(--accent)">
+            <p className="text-xs leading-relaxed text-texte/80">
+              Ces calculateurs effectuent une opération arithmétique à partir des valeurs que vous saisissez. Ils ne
+              sont liés à aucune base de médicaments. La vérification du calcul et de la prescription reste sous
+              votre responsabilité.
+            </p>
+          </BlocAvertissement>
         </div>
       </div>
     </div>

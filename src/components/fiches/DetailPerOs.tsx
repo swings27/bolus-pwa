@@ -1,17 +1,8 @@
-import type { ReactNode } from 'react'
 import type { IFormePerOs } from '../../types'
+import Ligne from './LigneDetail'
 
 interface IDetailPerOsProps {
   donnees: IFormePerOs
-}
-
-function Ligne({ label, children }: { label: string; children: ReactNode }) {
-  return (
-    <div className="flex items-center justify-between gap-3 border-b border-texte/10 py-3 last:border-b-0">
-      <span className="text-xs text-texte-doux">{label}</span>
-      {children}
-    </div>
-  )
 }
 
 function BadgeOuiNon({ valeur }: { valeur: boolean }) {
@@ -33,29 +24,29 @@ export default function DetailPerOs({ donnees }: IDetailPerOsProps) {
   return (
     <div className="flex flex-col">
       {donnees.ecrasable !== null && (
-        <Ligne label="Écrasable">
+        <Ligne label="Écrasable" disposition="ligne">
           <BadgeOuiNon valeur={donnees.ecrasable} />
         </Ligne>
       )}
       {donnees.divisible !== null && (
-        <Ligne label="Divisible">
+        <Ligne label="Divisible" disposition="ligne">
           <BadgeOuiNon valeur={donnees.divisible} />
         </Ligne>
       )}
       {donnees.passageEnSonde !== null && (
-        <Ligne label="Passage en sonde">
+        <Ligne label="Passage en sonde" disposition="ligne">
           <BadgeOuiNon valeur={donnees.passageEnSonde} />
         </Ligne>
       )}
       {donnees.modalitesSonde && (
-        <Ligne label="Modalités sonde">
+        <Ligne label="Modalités sonde" disposition="ligne">
           <span className="text-right text-sm font-semibold text-texte">
             {donnees.modalitesSonde}
           </span>
         </Ligne>
       )}
       {donnees.notes && (
-        <Ligne label="Notes">
+        <Ligne label="Notes" disposition="ligne">
           <span className="text-right text-sm font-normal italic text-texte-doux">
             {donnees.notes}
           </span>

@@ -42,12 +42,26 @@ export default function ListeCategorie() {
 
     // Ordre des groupes = ordre de categories.ts (intentionnel, pas
     // alphabétique) ; à l'intérieur, tri alphabétique par DCI.
-    return categorie.sousFamilles
+    const groupesConnus = categorie.sousFamilles
       .map((sousFamille) => ({
         titre: sousFamille,
         fiches: trierParDci(fiches.filter((fiche) => fiche.sousFamille === sousFamille)),
       }))
       .filter((groupe) => groupe.fiches.length > 0)
+
+    // Filet de sécurité : une fiche dont la sous-famille distante ne
+    // correspond à aucune entrée connue de categories.ts (faute de frappe,
+    // accent, nouvelle sous-famille ajoutée côté données mais pas encore
+    // répercutée ici) ne doit jamais disparaître silencieusement de la
+    // liste alors qu'elle reste comptée dans le total affiché plus haut.
+    const sousFamillesConnues = new Set(categorie.sousFamilles)
+    const fichesOrphelines = trierParDci(
+      fiches.filter((fiche) => !sousFamillesConnues.has(fiche.sousFamille)),
+    )
+
+    return fichesOrphelines.length > 0
+      ? [...groupesConnus, { titre: 'Autres', fiches: fichesOrphelines }]
+      : groupesConnus
   }, [fiches, categorie])
 
   if (!categorie) {

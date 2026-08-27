@@ -1,21 +1,8 @@
-import type { ReactNode } from 'react'
 import type { IFormeInjectble } from '../../types'
+import Ligne from './LigneDetail'
 
 interface IDetailInjectableProps {
   donnees: IFormeInjectble
-}
-
-// Paire libellé / valeur avec séparateur fin. last:border-b-0 retire le
-// séparateur de la dernière ligne réellement affichée — les champs
-// optionnels (debitMlH, notes...) sont rendus conditionnellement, donc
-// "la dernière ligne" varie d'une fiche à l'autre.
-function Ligne({ label, children }: { label: string; children: ReactNode }) {
-  return (
-    <div className="flex flex-col gap-1 border-b border-texte/10 py-3 last:border-b-0">
-      <span className="text-xs text-texte-doux">{label}</span>
-      <span className="text-sm font-semibold text-texte">{children}</span>
-    </div>
-  )
 }
 
 // Les champs null n'existent tout simplement pas pour cette fiche (ex. pas

@@ -3,6 +3,7 @@ import { db } from '../db'
 import type { IFiche } from '../types'
 
 const CLE_VERSION_FICHES = 'fiches_version'
+const CLE_DATE_CATALOGUE = 'fiches_date_catalogue'
 
 interface IVersionFichier {
   version: string
@@ -13,6 +14,18 @@ interface IEtatChargement {
   loading: boolean
   error: string | null
   reessayer: () => void
+}
+
+// Centralise la vérification de statut HTTP : un fetch() qui "réussit" mais
+// renvoie une page d'erreur (404/500) plante sinon plus loin au parsing
+// JSON avec un message technique ("Unexpected token < in JSON..."), affiché
+// tel quel à l'utilisatrice.
+async function recupererJson<T>(url: string): Promise<T> {
+  const reponse = await fetch(url)
+  if (!reponse.ok) {
+    throw new Error(`Le serveur est indisponible pour le moment (${reponse.status}).`)
+  }
+  return reponse.json()
 }
 
 // Ce hook synchronise les fiches médicaments du CDN (fichiers JSON
@@ -34,41 +47,51 @@ export function useFichesLoader(): IEtatChargement {
 
     async function synchroniser() {
       try {
-        // 1. On récupère la version courante publiée sur le CDN. C'est un
-        // petit fichier léger : on peut le fetcher à chaque démarrage sans
-        // coût réseau significatif, contrairement au fichier de fiches.
-        const reponseVersion = await fetch('/data/version.json')
-        const versionDistante: IVersionFichier = await reponseVersion.json()
+        // 1. Version distante (réseau) et version locale (Dexie) sont deux
+        // lectures indépendantes : lancées en parallèle plutôt qu'attendues
+        // l'une après l'autre.
+        const [versionDistante, parametreLocal] = await Promise.all([
+          recupererJson<IVersionFichier>('/data/version.json'),
+          db.parametres.get(CLE_VERSION_FICHES),
+        ])
 
-        // 2. On compare à la version déjà stockée localement dans Dexie.
-        const parametreLocal = await db.parametres.get(CLE_VERSION_FICHES)
+        // Un champ "version" manquant (déploiement raté, proxy renvoyant un
+        // JSON vide) ne doit jamais être comparé tel quel : au tout premier
+        // lancement, la valeur locale est elle aussi absente (undefined),
+        // et "undefined === undefined" concluerait à tort "déjà à jour" —
+        // sautant silencieusement le tout premier téléchargement des fiches.
+        if (!versionDistante.version) {
+          throw new Error('Fichier de version invalide.')
+        }
 
-        // 3. Versions identiques → les fiches en base sont déjà à jour,
-        // aucun re-téléchargement ni ré-écriture nécessaire.
         if (parametreLocal?.valeur === versionDistante.version) {
+          // Fiches déjà à jour : on garde quand même la date du catalogue
+          // synchronisée, affichée dans Paramètres sans nouvel appel réseau.
+          await db.parametres.put({ cle: CLE_DATE_CATALOGUE, valeur: versionDistante.datefiches })
           if (!annule) setEtat({ loading: false, error: null })
           return
         }
 
-        // 4a. Version absente ou différente → on télécharge le fichier de
-        // fiches complet et on le stocke dans Dexie.
-        const reponseFiches = await fetch('/data/fiches-v1.json')
-        const fiches: IFiche[] = await reponseFiches.json()
+        const fiches = await recupererJson<IFiche[]>('/data/fiches-v1.json')
 
-        // 4b. bulkPut plutôt que bulkAdd : bulkAdd échoue si une clé
-        // primaire (id) existe déjà, alors que bulkPut fait un "upsert"
-        // (insert si absent, update si présent). Comme l'id de la fiche
-        // est stable d'une version à l'autre, bulkPut rend l'opération
-        // idempotente : rappeler ce hook plusieurs fois (ex. remount en
-        // dev, ou re-sync manuelle) ne crée jamais de doublons, ça se
-        // contente de réécrire les mêmes lignes.
-        await db.fiches.bulkPut(fiches)
+        // Le fichier distant est un instantané complet du catalogue (pas un
+        // delta) : bulkPut seul insère/met à jour, mais ne retire jamais
+        // une fiche disparue du CDN (rappel, doublon corrigé...). On
+        // réconcilie donc explicitement, dans la même transaction que
+        // l'écriture de la nouvelle version pour ne jamais laisser Dexie
+        // dans un état à moitié synchronisé.
+        await db.transaction('rw', db.fiches, db.parametres, async () => {
+          await db.fiches.bulkPut(fiches)
 
-        // 4c. On mémorise la nouvelle version pour éviter de re-télécharger
-        // au prochain démarrage tant qu'elle n'a pas changé côté CDN.
-        await db.parametres.put({
-          cle: CLE_VERSION_FICHES,
-          valeur: versionDistante.version,
+          const idsDistants = new Set(fiches.map((fiche) => fiche.id))
+          const idsLocaux = await db.fiches.toCollection().primaryKeys()
+          const idsObsoletes = idsLocaux.filter((id) => !idsDistants.has(id))
+          if (idsObsoletes.length > 0) {
+            await db.fiches.bulkDelete(idsObsoletes)
+          }
+
+          await db.parametres.put({ cle: CLE_VERSION_FICHES, valeur: versionDistante.version })
+          await db.parametres.put({ cle: CLE_DATE_CATALOGUE, valeur: versionDistante.datefiches })
         })
 
         if (!annule) setEtat({ loading: false, error: null })
