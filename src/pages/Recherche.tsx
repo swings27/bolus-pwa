@@ -1,39 +1,20 @@
-import { useEffect, useRef, useState } from 'react'
+import { useRef, useState } from 'react'
 import { Search, SearchX, X } from 'lucide-react'
 import Header from '../components/layout/Header'
 import EtatVide from '../components/layout/EtatVide'
 import ResultatFiche from '../components/fiches/ResultatFiche'
 import { useSearch } from '../hooks/useSearch'
-import { lireHistorique } from '../utils/historique'
-import { db } from '../db'
-import type { IFiche } from '../types'
+import { useHistorique } from '../hooks/useHistorique'
 
 export default function Recherche() {
   const [query, setQuery] = useState('')
-  const [historique, setHistorique] = useState<IFiche[]>([])
   const inputRef = useRef<HTMLInputElement>(null)
 
   // Pas de limite ici (contrairement au dropdown de l'Accueil) : la page
   // plein écran a la place d'afficher tous les résultats.
   const resultats = useSearch(query)
+  const historique = useHistorique()
   const termeValide = query.trim().length >= 2
-
-  // Chargé une fois au montage : revenir sur cette page (changer d'onglet
-  // puis revenir) démonte/remonte Recherche, donc relit naturellement la
-  // dernière version de l'historique — pas besoin de useLiveQuery ici.
-  useEffect(() => {
-    let annule = false
-    lireHistorique().then(async (ids) => {
-      const fiches = await Promise.all(ids.map((id) => db.fiches.get(id)))
-      // Une fiche de l'historique a pu disparaître du catalogue depuis
-      // (voir la réconciliation dans useFichesLoader) : on l'omet plutôt
-      // que d'afficher un trou.
-      if (!annule) setHistorique(fiches.filter((fiche): fiche is IFiche => fiche !== undefined))
-    })
-    return () => {
-      annule = true
-    }
-  }, [])
 
   function viderChamp() {
     setQuery('')
