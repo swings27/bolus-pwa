@@ -1,11 +1,11 @@
-import { useNavigate } from 'react-router-dom'
 import Header from '../components/layout/Header'
 import ListeSeparee from '../components/fiches/ListeSeparee'
 import { useCategoriesAvecFiches } from '../hooks/useCategoriesAvecFiches'
+import { useNavigationSure } from '../hooks/useNavigationSure'
 import { texteCategorie, fondCategorie } from '../data/categories'
 
 export default function Categories() {
-  const navigate = useNavigate()
+  const naviguer = useNavigationSure()
   const categories = useCategoriesAvecFiches()
 
   return (
@@ -23,7 +23,7 @@ export default function Categories() {
             <button
               key={categorie.slug}
               type="button"
-              onClick={() => navigate(`/categories/${categorie.slug}`)}
+              onClick={() => naviguer(`/categories/${categorie.slug}`)}
               style={{
                 backgroundColor: fondCategorie(categorie.couleur),
                 borderColor: categorie.couleur,

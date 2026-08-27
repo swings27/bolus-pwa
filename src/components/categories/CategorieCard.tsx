@@ -1,6 +1,6 @@
-import { useNavigate } from 'react-router-dom'
 import type { ICategorie } from '../../types'
 import { fondCategorie } from '../../data/categories'
+import { useNavigationSure } from '../../hooks/useNavigationSure'
 
 interface ICategorieCardProps {
   categorie: ICategorie
@@ -13,21 +13,19 @@ export default function CategorieCard({
   nombreFiches,
   showSousFamilles = false,
 }: ICategorieCardProps) {
-  const navigate = useNavigate()
+  const naviguer = useNavigationSure()
 
   return (
     <button
       type="button"
-      onClick={() => navigate(`/categories/${categorie.slug}`)}
+      onClick={() => naviguer(`/categories/${categorie.slug}`)}
       style={{
         backgroundColor: fondCategorie(categorie.couleur),
         // Ombre légère : détache la carte du fond pour casser l'effet
         // "aplat 2D", sans aller jusqu'à un relief marqué.
         boxShadow: '0 4px 12px var(--ombre-carte)',
       }}
-      // active:scale-95 : légère réduction d'échelle au tap, avec une
-      // transition douce, pour donner un retour tactile immédiat sur mobile.
-      className="flex flex-col items-start gap-2 rounded-2xl p-4 text-left transition-transform duration-150 active:scale-95"
+      className="tactile flex flex-col items-start gap-2 rounded-2xl p-4 text-left"
     >
       <span
         className="flex h-9 w-9 items-center justify-center rounded-full text-sm font-semibold text-white"

@@ -19,7 +19,7 @@
       "solvant": "NaCl 0,9% ou Glucose 5%",
       "volumeDilution": "Diluer 1 mg dans 9 mL de NaCl 0,9% pour obtenir 0,1 mg/mL en urgence",
       "debitMlH": "Selon protocole PSE, titration à l'effet (ex : 0,5 à 5 mL/h)",
-      "goutttesMin": null,
+      "gouttesMin": null,
       "voies": ["IVD", "IVL", "IM", "SC"],
       "dureeAdministration": "Bolus IVD en urgence ou perfusion continue au PSE",
       "notes": "Bolus IVD réservé à l'arrêt cardiaque ; IM en première intention pour l'anaphylaxie (face antéro-latérale de la cuisse)"
@@ -58,7 +58,7 @@
       "solvant": "Eau pour préparation injectable ou NaCl 0,9%",
       "volumeDilution": "1 g dans 20 mL d'eau PPI pour IVD, ou dans 100 mL de NaCl 0,9% pour IVL",
       "debitMlH": null,
-      "goutttesMin": null,
+      "gouttesMin": null,
       "voies": ["IVD", "IVL"],
       "dureeAdministration": "IVD sur 3 à 5 min ou IVL sur 30 min",
       "notes": "Injecter lentement pour limiter le risque de convulsions liées à la dose"
@@ -110,7 +110,7 @@
       "solvant": "Aucune dilution nécessaire (injection directe) ou NaCl 0,9%",
       "volumeDilution": "Ne pas diluer dans de grands volumes (risque de précipitation)",
       "debitMlH": null,
-      "goutttesMin": null,
+      "gouttesMin": null,
       "voies": ["IVD", "IM"],
       "dureeAdministration": "IVD lente sur 2 à 3 minutes",
       "notes": "Adsorption possible sur les tubulures en PVC ; injecter au plus près du site d'injection"
@@ -156,7 +156,7 @@
       "solvant": "Prêt à l'emploi (poche de 100 mL)",
       "volumeDilution": "1 g / 100 mL, prêt à l'emploi, pas de dilution nécessaire",
       "debitMlH": "100 mL sur 15 minutes (débit constant)",
-      "goutttesMin": "environ 33 gttes/min sur 15 min (perfuseur standard, 20 gttes/mL)",
+      "gouttesMin": "environ 33 gttes/min sur 15 min (perfuseur standard, 20 gttes/mL)",
       "voies": ["IVL"],
       "dureeAdministration": "Perfusion sur 15 minutes minimum",
       "notes": "Respecter un intervalle minimal de 4h entre deux administrations"
@@ -202,7 +202,7 @@
       "solvant": "Glucose 5% ou NaCl 0,9%",
       "volumeDilution": "500 mg dans au moins 100 mL (concentration maximale 5 mg/mL)",
       "debitMlH": "Perfusion sur au moins 60 minutes, débit max 10 mg/min",
-      "goutttesMin": null,
+      "gouttesMin": null,
       "voies": ["IVL", "PSE"],
       "dureeAdministration": "Minimum 60 minutes, à adapter selon la dose",
       "notes": "Ne jamais administrer en IVD : risque majeur de syndrome de l'homme rouge et d'hypotension"

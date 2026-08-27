@@ -2,9 +2,7 @@ import { useEffect, useState } from 'react'
 import { Share, PlusSquare, X } from 'lucide-react'
 import { db } from '../../db'
 import { estIOS, estSafari, estInstallee } from '../../utils/plateforme'
-
-const CLE_SESSIONS = 'nombre_sessions'
-const CLE_MASQUE = 'install_banner_masque'
+import { CLE_NOMBRE_SESSIONS, CLE_INSTALL_BANNER_MASQUE } from '../../db/cles'
 
 // "beforeinstallprompt" n'est pas encore dans le lib DOM standard de
 // TypeScript (API non normalisée, seulement supportée par les navigateurs
@@ -34,12 +32,12 @@ export default function InstallBanner() {
   useEffect(() => {
     async function initialiser() {
       const [paramSessions, paramMasque] = await Promise.all([
-        db.parametres.get(CLE_SESSIONS),
-        db.parametres.get(CLE_MASQUE),
+        db.parametres.get(CLE_NOMBRE_SESSIONS),
+        db.parametres.get(CLE_INSTALL_BANNER_MASQUE),
       ])
       const compteurPrecedent = paramSessions ? Number(paramSessions.valeur) : 0
       const nouveauCompteur = compteurPrecedent + 1
-      await db.parametres.put({ cle: CLE_SESSIONS, valeur: String(nouveauCompteur) })
+      await db.parametres.put({ cle: CLE_NOMBRE_SESSIONS, valeur: String(nouveauCompteur) })
       setNombreSessions(nouveauCompteur)
       setMasque(paramMasque?.valeur === '1')
       setPret(true)
@@ -68,7 +66,7 @@ export default function InstallBanner() {
   }, [])
 
   async function masquer() {
-    await db.parametres.put({ cle: CLE_MASQUE, valeur: '1' })
+    await db.parametres.put({ cle: CLE_INSTALL_BANNER_MASQUE, valeur: '1' })
     setMasque(true)
   }
 

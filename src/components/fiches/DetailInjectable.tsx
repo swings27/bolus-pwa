@@ -1,8 +1,8 @@
-import type { IFormeInjectble } from '../../types'
+import type { IFormeInjectable } from '../../types'
 import Ligne from './LigneDetail'
 
 interface IDetailInjectableProps {
-  donnees: IFormeInjectble
+  donnees: IFormeInjectable
 }
 
 // Les champs null n'existent tout simplement pas pour cette fiche (ex. pas
@@ -28,7 +28,7 @@ export default function DetailInjectable({ donnees }: IDetailInjectableProps) {
         </span>
       </Ligne>
       {donnees.debitMlH && <Ligne label="Débit (ml/h)">{donnees.debitMlH}</Ligne>}
-      {donnees.goutttesMin && <Ligne label="Débit (gouttes/min)">{donnees.goutttesMin}</Ligne>}
+      {donnees.gouttesMin && <Ligne label="Débit (gouttes/min)">{donnees.gouttesMin}</Ligne>}
       {donnees.dureeAdministration && (
         <Ligne label="Durée d'administration">{donnees.dureeAdministration}</Ligne>
       )}

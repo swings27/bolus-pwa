@@ -7,6 +7,7 @@
 // en cas de couplage.
 
 import { useEffect, useRef, useState } from 'react'
+import type { FocusEvent } from 'react'
 import { Info, X } from 'lucide-react'
 import { useCalculateurModal } from '../../contexts/CalculateurModalContext'
 import { useFocusTrap } from '../../hooks/useFocusTrap'
@@ -14,12 +15,14 @@ import SegmentedControl from '../layout/SegmentedControl'
 import BlocAvertissement from '../layout/BlocAvertissement'
 import CalcDebit from './CalcDebit'
 import CalcDosePoids from './CalcDosePoids'
+import CalcIMC from './CalcIMC'
 
-type Onglet = 'debit' | 'dosePoids'
+type Onglet = 'debit' | 'dosePoids' | 'imc'
 
 const ONGLETS: { valeur: Onglet; label: string }[] = [
   { valeur: 'debit', label: 'Débit' },
   { valeur: 'dosePoids', label: 'Dose / poids' },
+  { valeur: 'imc', label: 'IMC' },
 ]
 
 // Affiché en modale (par-dessus la page courante) plutôt que sur sa propre
@@ -28,9 +31,29 @@ const ONGLETS: { valeur: Onglet; label: string }[] = [
 export default function CalculateurModal() {
   const { estOuvert, fermer } = useCalculateurModal()
   const [onglet, setOnglet] = useState<Onglet>('debit')
+  const [champFocus, setChampFocus] = useState(false)
   const conteneurRef = useRef<HTMLDivElement>(null)
 
   useFocusTrap(estOuvert, conteneurRef)
+
+  // iOS n'offre aucun bouton "terminé" natif sur un clavier décimal — sans
+  // ce bouton, la seule façon de refermer le clavier serait de fermer toute
+  // la modale. On détecte le focus par capture plutôt qu'un onFocus/onBlur
+  // par champ : un seul point de suivi pour les 3 calculateurs, qui n'ont
+  // pas à s'en soucier individuellement.
+  function gererFocusCapture(evenement: FocusEvent<HTMLDivElement>) {
+    if (evenement.target instanceof HTMLInputElement) setChampFocus(true)
+  }
+  function gererBlurCapture(evenement: FocusEvent<HTMLDivElement>) {
+    const suivant = evenement.relatedTarget
+    if (!(suivant instanceof Node) || !evenement.currentTarget.contains(suivant)) {
+      setChampFocus(false)
+    }
+  }
+  function terminerSaisie() {
+    if (document.activeElement instanceof HTMLElement) document.activeElement.blur()
+    setChampFocus(false)
+  }
 
   // Échap referme la modale : le piège de focus (useFocusTrap) empêche déjà
   // Tab de s'échapper vers la page en dessous, mais un utilisateur clavier
@@ -56,7 +79,7 @@ export default function CalculateurModal() {
         role="dialog"
         aria-modal="true"
         aria-labelledby="calculateur-titre"
-        className="flex max-h-[85vh] w-full flex-col overflow-y-auto rounded-t-2xl bg-fond p-6 shadow-xl sm:max-w-md sm:rounded-2xl"
+        className="flex max-h-[85dvh] w-full flex-col overflow-y-auto rounded-t-2xl bg-fond p-6 shadow-xl sm:max-w-md sm:rounded-2xl"
         onClick={(evenement) => evenement.stopPropagation()}
       >
         <div className="flex items-center justify-between">
@@ -78,8 +101,27 @@ export default function CalculateurModal() {
           <SegmentedControl options={ONGLETS} valeur={onglet} onChange={setOnglet} />
         </div>
 
-        <div className="mt-4 rounded-xl p-4" style={{ backgroundColor: 'var(--surface)' }}>
-          {onglet === 'debit' ? <CalcDebit /> : <CalcDosePoids />}
+        <div
+          className="mt-4 rounded-xl p-4"
+          style={{ backgroundColor: 'var(--surface)' }}
+          onFocusCapture={gererFocusCapture}
+          onBlurCapture={gererBlurCapture}
+        >
+          {champFocus && (
+            <div className="mb-3 flex justify-end">
+              <button
+                type="button"
+                onClick={terminerSaisie}
+                className="rounded-full px-3 py-1.5 text-xs font-semibold"
+                style={{ backgroundColor: 'var(--interactif)', color: 'var(--surface)' }}
+              >
+                Terminé
+              </button>
+            </div>
+          )}
+          {onglet === 'debit' && <CalcDebit />}
+          {onglet === 'dosePoids' && <CalcDosePoids />}
+          {onglet === 'imc' && <CalcIMC />}
         </div>
 
         <div className="mt-4">

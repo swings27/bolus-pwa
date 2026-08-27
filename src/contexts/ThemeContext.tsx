@@ -1,6 +1,7 @@
 import { createContext, useContext, useEffect, useState } from 'react'
 import type { ReactNode } from 'react'
 import { db } from '../db'
+import { CLE_THEME } from '../db/cles'
 
 // "theme" = préférence utilisateur, telle que choisie dans Paramètres (3
 // valeurs possibles, "auto" y compris). "themeEffectif" (dans le contexte
@@ -12,8 +13,6 @@ import { db } from '../db'
 // simplement identique.
 export type Theme = 'auto' | 'clair' | 'sombre'
 type ThemeEffectif = 'clair' | 'sombre'
-
-const CLE_THEME = 'theme'
 
 interface IThemeContext {
   theme: Theme

@@ -2,6 +2,7 @@ import { FileQuestion } from 'lucide-react'
 import { useNavigate } from 'react-router-dom'
 import Header from '../components/layout/Header'
 import EtatVide from '../components/layout/EtatVide'
+import BoutonPrimaire from '../components/layout/BoutonPrimaire'
 
 export default function Introuvable() {
   const navigate = useNavigate()
@@ -20,14 +21,7 @@ export default function Introuvable() {
         description="Cette page n'existe pas ou a été déplacée."
       />
       <div className="flex justify-center pb-8">
-        <button
-          type="button"
-          onClick={() => navigate('/')}
-          className="rounded-lg px-5 py-3 text-sm font-medium"
-          style={{ backgroundColor: 'var(--interactif)', color: 'var(--fond)' }}
-        >
-          Retour à l'accueil
-        </button>
+        <BoutonPrimaire onClick={() => navigate('/')}>Retour à l'accueil</BoutonPrimaire>
       </div>
     </div>
   )

@@ -1,12 +1,15 @@
 import { useMemo } from 'react'
-import { useNavigate, useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import { useLiveQuery } from 'dexie-react-hooks'
 import { FolderX } from 'lucide-react'
 import Header from '../components/layout/Header'
 import EtatVide from '../components/layout/EtatVide'
+import BoutonPrimaire from '../components/layout/BoutonPrimaire'
 import ResultatFiche from '../components/fiches/ResultatFiche'
 import { db } from '../db'
 import { getCategorieBySlug, texteCategorie } from '../data/categories'
+import { useFavoris } from '../hooks/useFavoris'
+import { useNavigationSure } from '../hooks/useNavigationSure'
 import type { IFiche } from '../types'
 
 interface IGroupe {
@@ -23,8 +26,9 @@ function trierParDci(fiches: IFiche[]): IFiche[] {
 
 export default function ListeCategorie() {
   const { slug = '' } = useParams()
-  const navigate = useNavigate()
+  const naviguer = useNavigationSure()
   const categorie = getCategorieBySlug(slug)
+  const { favoris } = useFavoris()
 
   const fiches = useLiveQuery(
     () => db.fiches.where('categorie').equals(slug).toArray(),
@@ -71,13 +75,7 @@ export default function ListeCategorie() {
         <h1 className="sr-only">Catégorie introuvable</h1>
         <EtatVide icone={FolderX} titre="Catégorie introuvable" />
         <div className="px-6 pb-6 text-center">
-          <button
-            type="button"
-            onClick={() => navigate('/categories')}
-            className="rounded-lg bg-interactif px-5 py-3 text-sm font-medium text-surface"
-          >
-            Retour aux catégories
-          </button>
+          <BoutonPrimaire onClick={() => naviguer('/categories')}>Retour aux catégories</BoutonPrimaire>
         </div>
       </div>
     )
@@ -116,7 +114,12 @@ export default function ListeCategorie() {
               </div>
             )}
             {groupe.fiches.map((fiche) => (
-              <ResultatFiche key={fiche.id} fiche={fiche} showCategorie={false} />
+              <ResultatFiche
+                key={fiche.id}
+                fiche={fiche}
+                showCategorie={false}
+                estFavori={favoris.includes(fiche.id)}
+              />
             ))}
           </div>
         ))}

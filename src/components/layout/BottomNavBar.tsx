@@ -1,5 +1,5 @@
 import { Link, useLocation } from 'react-router-dom'
-import { Home, Search, Calculator, LayoutGrid, Menu as MenuIcon } from 'lucide-react'
+import { Home, Search, Calculator, LayoutGrid, Heart } from 'lucide-react'
 import type { LucideIcon } from 'lucide-react'
 import { useCalculateurModal } from '../../contexts/CalculateurModalContext'
 
@@ -10,13 +10,15 @@ interface IOnglet {
 }
 
 // Ordre d'affichage des 5 onglets. Le Calculateur (3ème position) est
-// l'onglet central mis en avant visuellement dans le rendu ci-dessous.
+// l'onglet central mis en avant visuellement dans le rendu ci-dessous. Le
+// Menu, lui, vit désormais dans le Header (accessible depuis n'importe
+// quelle page) plutôt qu'ici — Favoris prend sa place.
 const onglets: IOnglet[] = [
   { to: '/', label: 'Accueil', icon: Home },
   { to: '/recherche', label: 'Recherche', icon: Search },
   { to: '/calculateurs', label: 'Calculateur', icon: Calculator },
   { to: '/categories', label: 'Catégories', icon: LayoutGrid },
-  { to: '/menu', label: 'Menu', icon: MenuIcon },
+  { to: '/favoris', label: 'Favoris', icon: Heart },
 ]
 
 // Détermine quel onglet correspond au chemin courant. Une route de détail
@@ -30,7 +32,7 @@ function ongletActifPour(pathname: string): string | null {
   if (pathname === '/') return '/'
   if (pathname === '/recherche') return '/recherche'
   if (pathname === '/categories' || pathname.startsWith('/categories/')) return '/categories'
-  if (pathname === '/menu' || pathname.startsWith('/menu/')) return '/menu'
+  if (pathname === '/favoris') return '/favoris'
   return null
 }
 
@@ -75,7 +77,7 @@ export default function BottomNavBar() {
               // colonne, qui occupe toute la hauteur de la barre (stretch,
               // comportement flex par défaut) — donc par rapport au bord
               // supérieur de la barre elle-même.
-              className="relative flex flex-1 flex-col items-center justify-center gap-1"
+              className="tactile-nav relative flex flex-1 flex-col items-center justify-center gap-1"
               aria-label={label}
               // aria-pressed (pas aria-current) : ce bouton ouvre une
               // modale, il ne navigue pas vers une page — c'est un bouton
@@ -117,7 +119,7 @@ export default function BottomNavBar() {
             key={to}
             to={to}
             aria-current={actif ? 'page' : undefined}
-            className="flex flex-1 flex-col items-center justify-center gap-1"
+            className="tactile-nav flex flex-1 flex-col items-center justify-center gap-1"
           >
             <Icon size={22} color={couleur} strokeWidth={actif ? 2.5 : 2} aria-hidden="true" />
             <span

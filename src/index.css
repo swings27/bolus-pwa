@@ -29,8 +29,18 @@
   --bloc-indication: #d4d6ce;
   --zone-surveillance: #f7e6db;
   --onglet-inactif: #e6eaeb;
-  --onglet-actif: #f8eae5;
   --opacite-tint: 18%;
+
+  /* SegmentedControl (voir ce composant) : en clair, l'actif est le bleu
+     pétrole plein (pas une variante teintée) et l'inactif un terracotta
+     dilué — inversé par rapport au sombre ci-dessous, où l'actif reste la
+     couleur terracotta pleine. Dédiées à ce composant plutôt qu'un
+     réemploi de --texte/--interactif directement dans le JSX, pour que
+     toute la logique "qui change entre les thèmes" reste ici, en CSS. */
+  --segment-actif-fond: var(--texte);
+  --segment-actif-texte: var(--fond);
+  --segment-inactif-fond: color-mix(in srgb, var(--interactif) 15%, var(--fond));
+  --segment-inactif-texte: var(--interactif);
 
   /* Header et BottomNavBar : tokens dédiés (distincts de --fond/--surface)
      car la maquette leur donne des teintes propres, notamment en sombre où
@@ -91,8 +101,15 @@
   --bloc-indication: #34464a;
   --zone-surveillance: color-mix(in srgb, #e8946e 15%, #0f272e);
   --onglet-inactif: color-mix(in srgb, #f2e9da 12%, #17343c);
-  --onglet-actif: color-mix(in srgb, #e8946e 18%, #17343c);
   --opacite-tint: 22%;
+
+  /* Rendu du sombre inchangé : l'actif reste la couleur terracotta pleine
+     sur fond clair (déjà le meilleur contraste dans ce thème), seul le
+     clair ci-dessus bascule sur le bleu pétrole. */
+  --segment-actif-fond: var(--interactif);
+  --segment-actif-texte: var(--fond);
+  --segment-inactif-fond: var(--onglet-inactif);
+  --segment-inactif-texte: var(--texte);
   /* En sombre, certaines couleurs de catégorie (ex. anti-infectieux
      #0B3C49) sont elles-mêmes sombres : utilisées comme texte sur un fond
      tout aussi sombre, elles deviennent illisibles. 60% tire fortement la
@@ -148,7 +165,6 @@
   --color-bloc-indication: var(--bloc-indication);
   --color-zone-surveillance: var(--zone-surveillance);
   --color-onglet-inactif: var(--onglet-inactif);
-  --color-onglet-actif: var(--onglet-actif);
 
   /* Polices chargées via Google Fonts (voir index.html). Namespace
      --font-* : Tailwind v4 génère automatiquement les utilitaires
@@ -172,4 +188,81 @@ body {
   color: var(--texte);
   font-family: var(--font-body);
   overscroll-behavior-y: none;
+}
+
+/* --------------------------------------------------------------------
+   Retour tactile (finitions bêta)
+   -------------------------------------------------------------------- */
+
+/* Retour visuel générique au tap : léger fondu de fond + réduction
+   d'échelle, appliqué aux lignes/cartes cliquables (résultats de fiche,
+   catégories, menu, contact, accordéon...). */
+.tactile {
+  transition: background-color 120ms ease,
+              transform 120ms ease;
+  -webkit-tap-highlight-color: transparent;
+}
+.tactile:active {
+  background-color: color-mix(in srgb,
+    var(--texte) 6%, transparent);
+  transform: scale(0.985);
+}
+
+/* Variante pour la BottomNavBar : un décalage d'échelle sur un onglet de
+   navigation serait perturbant (la barre entière semble "trembler" pendant
+   un tap) — seule l'opacité varie ici. */
+.tactile-nav {
+  transition: opacity 120ms ease;
+  -webkit-tap-highlight-color: transparent;
+}
+.tactile-nav:active {
+  opacity: 0.6;
+}
+
+/* --------------------------------------------------------------------
+   Transition de page (voir TransitionPage.tsx)
+   -------------------------------------------------------------------- */
+
+/* L'animation n'existe QUE sous no-preference : sur un système où les
+   animations sont désactivées, .transition-page ne reçoit aucune règle
+   d'animation du tout (pas seulement une durée réduite à 0). */
+@media (prefers-reduced-motion: no-preference) {
+  .transition-page {
+    animation: entree-page 180ms ease-out;
+  }
+}
+
+@keyframes entree-page {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --------------------------------------------------------------------
+   Squelette de chargement (voir FicheMedicament.tsx)
+   -------------------------------------------------------------------- */
+
+.squelette {
+  background-color: color-mix(in srgb, var(--texte) 8%, var(--fond));
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .squelette {
+    animation: pulse-squelette 1.6s ease-in-out infinite;
+  }
+}
+
+@keyframes pulse-squelette {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
 }

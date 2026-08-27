@@ -1,8 +1,10 @@
 import { Info } from 'lucide-react'
 
 // Rappel discret mais permanent (pas de bouton de fermeture) que l'app est
-// un outil d'aide et non une source prescriptive. Réutilisé sur plusieurs
-// pages (Accueil, fiche médicament...).
+// un outil d'aide et non une source prescriptive. Affiché uniquement sur
+// l'Accueil (voir Layout.tsx, qui le monte dans son conteneur de bandeaux
+// bas d'écran quand pathname === '/') — ailleurs, le disclaimer accepté une
+// fois via DisclaimerModal suffit.
 export default function DisclaimerBanner() {
   return (
     <div

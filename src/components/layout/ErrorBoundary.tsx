@@ -1,6 +1,7 @@
 import { Component } from 'react'
 import type { ErrorInfo, ReactNode } from 'react'
 import { AlertTriangle } from 'lucide-react'
+import BoutonPrimaire from './BoutonPrimaire'
 
 interface IErrorBoundaryProps {
   children: ReactNode
@@ -33,20 +34,13 @@ export default class ErrorBoundary extends Component<IErrorBoundaryProps, IError
     if (!this.state.erreur) return this.props.children
 
     return (
-      <div className="flex min-h-screen flex-col items-center justify-center gap-4 bg-fond px-6 text-center">
+      <div className="flex min-h-dvh flex-col items-center justify-center gap-4 bg-fond px-6 text-center">
         <AlertTriangle className="h-10 w-10 text-alerte" aria-hidden="true" />
         <h1 className="font-display text-xl font-semibold text-texte">Une erreur est survenue</h1>
         <p className="max-w-xs text-sm text-texte-doux">
           L'application a rencontré un problème inattendu.
         </p>
-        <button
-          type="button"
-          onClick={() => window.location.reload()}
-          className="rounded-lg px-5 py-3 text-sm font-medium"
-          style={{ backgroundColor: 'var(--interactif)', color: 'var(--fond)' }}
-        >
-          Recharger l'application
-        </button>
+        <BoutonPrimaire onClick={() => window.location.reload()}>Recharger l'application</BoutonPrimaire>
         {/* Uniquement en développement : jamais la stack technique devant
             une utilisatrice en production. */}
         {import.meta.env.DEV && (

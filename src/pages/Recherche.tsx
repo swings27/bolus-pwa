@@ -1,9 +1,12 @@
 import { useRef, useState } from 'react'
+import type { FocusEvent } from 'react'
 import { Search, SearchX, X } from 'lucide-react'
 import Header from '../components/layout/Header'
 import EtatVide from '../components/layout/EtatVide'
 import ResultatFiche from '../components/fiches/ResultatFiche'
 import { useSearch } from '../hooks/useSearch'
+import { useHistorique } from '../hooks/useHistorique'
+import { useFavoris } from '../hooks/useFavoris'
 
 export default function Recherche() {
   const [query, setQuery] = useState('')
@@ -12,11 +15,20 @@ export default function Recherche() {
   // Pas de limite ici (contrairement au dropdown de l'Accueil) : la page
   // plein écran a la place d'afficher tous les résultats.
   const resultats = useSearch(query)
+  const historique = useHistorique()
+  const { favoris } = useFavoris()
   const termeValide = query.trim().length >= 2
 
   function viderChamp() {
     setQuery('')
     inputRef.current?.focus()
+  }
+
+  // 300ms : laisse le temps à l'animation d'apparition du clavier mobile de
+  // se terminer avant de recentrer le champ.
+  function gererFocusChamp(evenement: FocusEvent<HTMLInputElement>) {
+    const champ = evenement.currentTarget
+    setTimeout(() => champ.scrollIntoView({ behavior: 'smooth', block: 'center' }), 300)
   }
 
   return (
@@ -38,6 +50,7 @@ export default function Recherche() {
             type="text"
             value={query}
             onChange={(event) => setQuery(event.target.value)}
+            onFocus={gererFocusChamp}
             // autoFocus : la page Recherche existe pour qu'on tape
             // immédiatement, pas pour qu'on retouche l'écran d'abord.
             autoFocus
@@ -62,11 +75,24 @@ export default function Recherche() {
       </div>
 
       {!termeValide ? (
-        <EtatVide
-          icone={Search}
-          titre="Rechercher un médicament"
-          description="Tapez au moins 2 lettres pour lancer la recherche."
-        />
+        historique.length > 0 ? (
+          <div className="flex flex-col">
+            <p className="px-6 pb-2 pt-3 text-xs font-semibold uppercase tracking-widest text-texte-doux">
+              Consultées récemment
+            </p>
+            <div>
+              {historique.map((fiche) => (
+                <ResultatFiche key={fiche.id} fiche={fiche} estFavori={favoris.includes(fiche.id)} />
+              ))}
+            </div>
+          </div>
+        ) : (
+          <EtatVide
+            icone={Search}
+            titre="Rechercher un médicament"
+            description="Tapez au moins 2 lettres pour lancer la recherche."
+          />
+        )
       ) : resultats.length === 0 ? (
         <EtatVide
           icone={SearchX}
@@ -80,7 +106,7 @@ export default function Recherche() {
           </p>
           <div>
             {resultats.map((fiche) => (
-              <ResultatFiche key={fiche.id} fiche={fiche} />
+              <ResultatFiche key={fiche.id} fiche={fiche} estFavori={favoris.includes(fiche.id)} />
             ))}
           </div>
         </div>

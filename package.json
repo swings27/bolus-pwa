@@ -9,6 +9,8 @@
     "build:prod": "npm run verif:isolation && cross-env VERIF_LEGAL=1 node scripts/verif-editeur.mjs && tsc -b && vite build",
     "lint": "oxlint",
     "preview": "vite preview",
+    "test": "vitest run",
+    "test:watch": "vitest",
     "verif:isolation": "node scripts/verif-isolation-calculateurs.mjs"
   },
   "dependencies": {
@@ -32,6 +34,7 @@
     "typescript": "~6.0.2",
     "vite": "^8.2.0",
     "vite-plugin-pwa": "^1.3.0",
+    "vitest": "^4.1.11",
     "workbox-window": "^7.4.1"
   }
 }

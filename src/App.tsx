@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Layout from './components/layout/Layout'
 import DisclaimerModal from './components/layout/DisclaimerModal'
@@ -8,11 +8,14 @@ import { CalculateurModalProvider } from './contexts/CalculateurModalContext'
 import { useFichesLoader } from './hooks/useFichesLoader'
 import { demanderPersistance } from './utils/persistance'
 import { db } from './db'
+import { CLE_STOCKAGE_PERSISTANT } from './db/cles'
+import BoutonPrimaire from './components/layout/BoutonPrimaire'
 import Accueil from './pages/Accueil'
 import Recherche from './pages/Recherche'
 import FicheMedicament from './pages/FicheMedicament'
 import Categories from './pages/Categories'
 import ListeCategorie from './pages/ListeCategorie'
+import Favoris from './pages/Favoris'
 import Menu from './pages/Menu'
 import Parametres from './pages/Parametres'
 import APropos from './pages/APropos'
@@ -28,7 +31,7 @@ import { Analytics } from '@vercel/analytics/react'
 // ou tant que la version locale n'est pas à jour (voir useFichesLoader).
 function EcranChargement() {
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center gap-4 bg-fond">
+    <div className="flex min-h-dvh flex-col items-center justify-center gap-4 bg-fond">
       <span className="font-display text-4xl font-semibold lowercase text-texte">
         bolus
       </span>
@@ -49,7 +52,7 @@ function EcranErreur({
   onReessayer: () => void
 }) {
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center gap-4 bg-fond px-6 text-center">
+    <div className="flex min-h-dvh flex-col items-center justify-center gap-4 bg-fond px-6 text-center">
       <span className="font-display text-3xl font-semibold lowercase text-texte">
         bolus
       </span>
@@ -58,13 +61,7 @@ function EcranErreur({
         puis réessayez.
       </p>
       <p className="max-w-xs text-xs text-texte/40">{message}</p>
-      <button
-        type="button"
-        onClick={onReessayer}
-        className="rounded-lg bg-interactif px-5 py-3 text-sm font-medium text-surface"
-      >
-        Réessayer
-      </button>
+      <BoutonPrimaire onClick={onReessayer}>Réessayer</BoutonPrimaire>
     </div>
   )
 }
@@ -78,6 +75,21 @@ export default function App() {
   // ici, à la racine, plutôt que dans chaque page qui en a besoin).
   const { loading, error, reessayer } = useFichesLoader()
 
+  // Un chargement de moins de 200ms ne doit jamais afficher l'écran de
+  // chargement : le flash qui en résulterait (visible une fraction de
+  // seconde puis remplacé par le contenu) est plus perturbant qu'une
+  // absence totale d'indicateur. On ne bascule afficherChargement à true
+  // que si "loading" est encore vrai 200ms après son passage à true.
+  const [afficherChargement, setAfficherChargement] = useState(false)
+  useEffect(() => {
+    if (!loading) {
+      setAfficherChargement(false)
+      return
+    }
+    const minuteur = setTimeout(() => setAfficherChargement(true), 200)
+    return () => clearTimeout(minuteur)
+  }, [loading])
+
   // Demande la persistance du stockage une seule fois, une fois les fiches
   // chargées avec succès (pas avant : pas la peine d'ajouter de latence
   // perçue au tout premier écran pour une requête qui peut attendre).
@@ -86,7 +98,7 @@ export default function App() {
   useEffect(() => {
     if (loading || error) return
     demanderPersistance()
-      .then((accorde) => db.parametres.put({ cle: 'stockage_persistant', valeur: accorde ? 'true' : 'false' }))
+      .then((accorde) => db.parametres.put({ cle: CLE_STOCKAGE_PERSISTANT, valeur: accorde ? 'true' : 'false' }))
       .catch(() => {
         // Échec silencieux (quota de stockage, navigation privée...) : ce
         // n'est qu'une préférence de confort, pas une fonctionnalité
@@ -104,7 +116,7 @@ export default function App() {
           <DisclaimerModal />
 
           {loading ? (
-            <EcranChargement />
+            afficherChargement ? <EcranChargement /> : null
           ) : error ? (
             <EcranErreur message={error} onReessayer={reessayer} />
           ) : (
@@ -115,6 +127,7 @@ export default function App() {
                 <Route path="/fiche/:id" element={<FicheMedicament />} />
                 <Route path="/categories" element={<Categories />} />
                 <Route path="/categories/:slug" element={<ListeCategorie />} />
+                <Route path="/favoris" element={<Favoris />} />
                 <Route path="/menu" element={<Menu />} />
                 <Route path="/menu/parametres" element={<Parametres />} />
                 <Route path="/menu/a-propos" element={<APropos />} />
