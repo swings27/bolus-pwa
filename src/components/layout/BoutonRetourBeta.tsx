@@ -46,7 +46,12 @@ export default function BoutonRetourBeta({ decalageBas = 0 }: IBoutonRetourBetaP
       className="fixed z-40 flex h-10 items-center gap-1.5 rounded-full border px-3.5 opacity-90 shadow-md transition-opacity duration-150 hover:opacity-100 active:opacity-100"
       style={{
         right: '16px',
-        bottom: `calc(var(--hauteur-nav) + ${decalageBas}px + 16px)`,
+        // 8px (pas 16px) : sur l'Accueil, DisclaimerBanner réserve désormais
+        // une marge basse généreuse (voir DisclaimerBanner.tsx) pour le
+        // bouton du Calculateur, ce qui pousse d'autant ce bouton-ci vers le
+        // haut — un écart plus petit ici compense pour qu'il reste proche du
+        // bandeau plutôt que de sembler flotter loin au-dessus.
+        bottom: `calc(var(--hauteur-nav) + ${decalageBas}px + 8px)`,
         backgroundColor: 'var(--surface)',
         borderColor: 'var(--nav-bordure)',
         color: 'var(--texte)',

@@ -50,7 +50,10 @@
   --nav-actif: #c65d3b;
   --nav-inactif: #0b3c49;
   --calc-fond: #c65d3b;
-  --calc-contour: #fffcf5;
+  /* Même couleur que --nav-fond (le footer) : le cercle du Calculateur
+     paraît ainsi "posé" dans le prolongement de la barre plutôt que
+     découpé dessus. */
+  --calc-contour: var(--nav-fond);
   --calc-icone: #fffcf5;
   --calc-ombre: rgba(11, 60, 73, 0.18);
   /* Même couleur que --fond (pas une teinte propre) : le Header ne se
@@ -148,9 +151,13 @@
   --nav-actif: #e8946e;
   --nav-inactif: #f2e9da;
   --calc-fond: #e8946e;
-  --calc-contour: #0b3c49;
+  /* Même couleur que --nav-fond (le footer), comme en clair. */
+  --calc-contour: var(--nav-fond);
   --calc-icone: #fffcf5;
-  --calc-ombre: rgba(0, 0, 0, 0.35);
+  /* Même teinte que --ombre-header (le halo clair entre le Header et le
+     contenu) plutôt qu'une ombre noire propre : cohérence des ombres
+     portées entre les deux éléments qui se détachent du fond en sombre. */
+  --calc-ombre: var(--ombre-header);
   /* Même principe qu'en clair : identique à --fond, la séparation avec le
      contenu vient uniquement de l'ombre portée ci-dessous. */
   --header-fond: var(--fond);

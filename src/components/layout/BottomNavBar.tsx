@@ -98,8 +98,14 @@ export default function BottomNavBar() {
                   height: '56px',
                   width: '56px',
                   backgroundColor: 'var(--calc-fond)',
-                  border: '3px solid var(--calc-contour)',
-                  boxShadow: '0 3px 8px var(--calc-ombre)',
+                  // 0 0 (pas de décalage) : un box-shadow décalé
+                  // (ex. "0 3px 8px") ne se voit quasiment qu'en dessous,
+                  // le flou remontant à peine plus haut que le bord du
+                  // cercle côté haut — sans bordure physique pour marquer
+                  // le contour, le haut du cercle paraissait alors soudé
+                  // au fond plutôt que détaché. Un halo symétrique entoure
+                  // tout le pourtour, y compris au-dessus.
+                  boxShadow: '0 0 10px 1px var(--calc-ombre)',
                 }}
               >
                 <Calculator size={24} color="var(--calc-icone)" aria-hidden="true" />
