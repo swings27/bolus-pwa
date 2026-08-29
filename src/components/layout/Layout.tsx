@@ -55,7 +55,16 @@ export default function Layout() {
           centrer un état vide dans l'espace disponible, ex. Recherche). */}
       <main
         className="flex flex-1 flex-col"
-        style={{ paddingBottom: `calc(var(--hauteur-nav) + 8px + ${hauteurBandeaux}px)` }}
+        style={{
+          paddingBottom: `calc(var(--hauteur-nav) + 8px + ${hauteurBandeaux}px)`,
+          // Exposée en variable CSS (pas seulement consommée dans le calc
+          // ci-dessus) : une page dont le dernier bloc doit visuellement
+          // "percer" ce padding réservé (ex. le fond teinté de
+          // PrecautionsFiche sur la fiche médicament, qui doit rejoindre le
+          // bas de l'écran sans laisser voir --fond en dessous) peut s'en
+          // resservir via une marge négative égale, sans dupliquer le calcul.
+          ['--hauteur-bandeaux' as string]: `${hauteurBandeaux}px`,
+        }}
       >
         <TransitionPage>
           <Outlet />
