@@ -1,0 +1,4 @@
+# TEMPORAIRE — phase de bêta-test
+# À SUPPRIMER avant le lancement public
+User-agent: *
+Disallow: /

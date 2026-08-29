@@ -35,3 +35,12 @@ export const APP = {
 // bouton flottant de retour (voir BoutonRetourBeta.tsx). À repasser à false
 // une fois la bêta terminée, sans avoir à retoucher le composant lui-même.
 export const MODE_BETA = true
+
+// Distincte de MODE_BETA : celle-ci reflète l'état du CONTENU (le catalogue
+// de fiches contient encore des données de développement fictives), pas
+// l'état de la période de test elle-même. Pilote le bandeau d'avertissement
+// permanent (voir BandeauBeta.tsx) — le jour où les fiches réelles validées
+// remplacent les mocks dans le catalogue, ce seul booléen fait disparaître
+// le bandeau (et rend au Header sa gestion normale de la zone sûre iOS,
+// voir Header.tsx), même si la bêta elle-même continue.
+export const DONNEES_MOCK = true
