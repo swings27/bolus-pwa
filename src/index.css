@@ -50,14 +50,22 @@
   --nav-actif: #c65d3b;
   --nav-inactif: #0b3c49;
   --calc-fond: #c65d3b;
-  --calc-contour: #fffcf5;
+  /* Même couleur que --nav-fond (le footer) : le cercle du Calculateur
+     paraît ainsi "posé" dans le prolongement de la barre plutôt que
+     découpé dessus. */
+  --calc-contour: var(--nav-fond);
   --calc-icone: #fffcf5;
   --calc-ombre: rgba(11, 60, 73, 0.18);
-  --header-fond: #faf3e7;
-  /* Ombre neutre (noir à faible opacité) : un drop-shadow reste un
-     indicateur de profondeur, pas une couleur de marque — même valeur dans
-     les deux thèmes, mais quand même exposée en variable pour qu'aucun
-     composant n'ait à coder une couleur en dur. */
+  /* Même couleur que --fond (pas une teinte propre) : le Header ne se
+     distingue de la page que par son ombre portée (--ombre-header
+     ci-dessous), pas par une différence de couleur. */
+  --header-fond: var(--fond);
+  /* Ombre neutre (noir à faible opacité) : un assombrissement se voit
+     naturellement sur un fond clair. Couleur ET opacité diffèrent par
+     thème (voir .dark, qui inverse en éclaircissement) : avec
+     --header-fond identique à --fond dans les deux thèmes, cette ombre
+     est l'unique signal de séparation entre le Header et le contenu, elle
+     doit donc rester bien visible dans les deux cas. */
   --ombre-header: rgba(0, 0, 0, 0.18);
   /* Ombre légère des tuiles de catégories : juste assez pour suggérer une
      surface surélevée, sans lourdeur (une carte répétée 4-8 fois dans une
@@ -77,6 +85,19 @@
      contenu visuel + l'encoche/Dynamic Island en mode standalone iOS, sans
      quoi le wordmark passerait sous cette zone. */
   --hauteur-header: calc(56px + env(safe-area-inset-top));
+
+  /* Jaune dédié au bloc "Ajustement posologique" (fiche médicament) : seule
+     teinte de la palette qui n'a pas déjà un rôle sémantique existant
+     (validation=vert, alerte=rouge, accent/interactif=terracotta). */
+  --ajustement: #c8921d;
+
+  /* Fond de la carte "forme d'administration" (fiche médicament, voir
+     FicheMedicament.tsx), en clair : même couleur que --nav-fond (le
+     footer/BottomNavBar), pas une teinte recalculée — les deux doivent
+     rester visuellement identiques. Valeur propre au thème clair : voir
+     .dark plus bas pour le sombre, une couleur volontairement distincte
+     (pas --nav-fond, qui n'y jouerait pas le même rôle). */
+  --fiche-forme-fond: var(--nav-fond);
 }
 
 /* Thème sombre : la carte "fond" et la "zone-surveillance" ne restent PAS
@@ -118,22 +139,50 @@
      contraste (WCAG AA) même sur la couleur la plus sombre de la palette. */
   --poids-texte-categorie: 60%;
 
-  /* --nav-fond (#0B3C49) est volontairement PLUS CLAIR que --fond
-     (#0F272E) : effet d'élévation, la barre paraît posée au-dessus de la
-     page plutôt que peinte dedans. Ne pas aligner sur --fond. */
-  --nav-fond: #0b3c49;
+  /* Volontairement PLUS CLAIR que --fond : effet d'élévation, la barre
+     paraît posée au-dessus de la page plutôt que peinte dedans — ne pas
+     aligner sur --fond. #0B3C49 (valeur précédente) était en réalité la
+     couleur --texte du thème CLAIR reprise telle quelle en sombre, pas une
+     teinte propre au thème sombre — d'où le passage à --onglet-inactif
+     (même raisonnement que --fiche-forme-fond ci-dessous, réutilisé pour
+     la même cohérence entre les deux). */
+  --nav-fond: var(--onglet-inactif);
   --nav-bordure: rgba(242, 233, 218, 0.1);
   --nav-actif: #e8946e;
   --nav-inactif: #f2e9da;
   --calc-fond: #e8946e;
-  --calc-contour: #0b3c49;
+  /* Même couleur que --nav-fond (le footer), comme en clair. */
+  --calc-contour: var(--nav-fond);
   --calc-icone: #fffcf5;
-  --calc-ombre: rgba(0, 0, 0, 0.35);
-  --header-fond: #0b3c49;
-  --ombre-header: rgba(0, 0, 0, 0.4);
+  /* Même teinte que --ombre-header (le halo clair entre le Header et le
+     contenu) plutôt qu'une ombre noire propre : cohérence des ombres
+     portées entre les deux éléments qui se détachent du fond en sombre. */
+  --calc-ombre: var(--ombre-header);
+  /* Même principe qu'en clair : identique à --fond, la séparation avec le
+     contenu vient uniquement de l'ombre portée ci-dessous. */
+  --header-fond: var(--fond);
+  /* Une ombre noire n'a presque aucune marge pour se voir sur un fond déjà
+     sombre — inverse en clair, où l'assombrissement contraste naturellement.
+     Une teinte claire (même famille que --nav-bordure, la séparation de la
+     BottomNavBar) crée au contraire un vrai contraste par éclaircissement :
+     c'est elle, pas une ombre plus opaque, qui rend cette séparation visible
+     ici, seul indice puisque --header-fond est identique à --fond. */
+  --ombre-header: rgba(242, 233, 218, 0.35);
+  /* Éclairci comme --accent/--alerte le sont déjà en sombre, même teinte. */
+  --ajustement: #d9a53a;
   /* Plus opaque qu'en clair : sur un fond déjà sombre, une ombre à faible
      opacité devient quasi invisible. */
   --ombre-carte: rgba(0, 0, 0, 0.3);
+
+  /* #314A4F — même valeur déjà calculée par --onglet-inactif ci-dessus
+     (color-mix(#f2e9da 12%, #17343c)), déjà présente à l'écran dans les
+     calculateurs (fond des segments inactifs). Réutilisée telle quelle
+     plutôt que dupliquée en dur : un seul token à faire évoluer si cette
+     teinte change un jour. Ici la carte reste un fond sombre "normal" —
+     contrairement à l'essai précédent (un fond volontairement pâle), le
+     texte clair habituel du thème sombre (--texte et dérivés) y reste
+     lisible sans traitement particulier. */
+  --fiche-forme-fond: var(--onglet-inactif);
 }
 
 /* En v4, il n'y a plus de tailwind.config.js séparé pour étendre le thème :

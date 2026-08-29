@@ -2,7 +2,10 @@
   {
     "id": "adrenaline",
     "dci": "Adrénaline (Épinéphrine)",
-    "nomsCommerciaux": ["Adrénaline Aguettant", "Adrénaline Renaudin"],
+    "nomsCommerciaux": [
+      "Adrénaline Aguettant",
+      "Adrénaline Renaudin"
+    ],
     "categorie": "cardiovasculaire",
     "sousFamille": "Cardiotropes",
     "indications": [
@@ -20,9 +23,18 @@
       "volumeDilution": "Diluer 1 mg dans 9 mL de NaCl 0,9% pour obtenir 0,1 mg/mL en urgence",
       "debitMlH": "Selon protocole PSE, titration à l'effet (ex : 0,5 à 5 mL/h)",
       "gouttesMin": null,
-      "voies": ["IVD", "IVL", "IM", "SC"],
+      "voies": [
+        "IVD",
+        "IVL",
+        "IM",
+        "SC"
+      ],
       "dureeAdministration": "Bolus IVD en urgence ou perfusion continue au PSE",
-      "notes": "Bolus IVD réservé à l'arrêt cardiaque ; IM en première intention pour l'anaphylaxie (face antéro-latérale de la cuisse)"
+      "notes": "Bolus IVD réservé à l'arrêt cardiaque ; IM en première intention pour l'anaphylaxie (face antéro-latérale de la cuisse)",
+      "preparation": null,
+      "incompatibiliteY": null,
+      "posologies": null,
+      "ajustementPosologique": null
     },
     "perOsSonde": null,
     "surveillanceSpecifique": [
@@ -35,15 +47,26 @@
         "detail": "Vérifier la perméabilité de la voie veineuse ; risque de nécrose cutanée en cas d'extravasation"
       }
     ],
-    "compatibilitesMajeures": ["NaCl 0,9%", "Glucose 5%"],
-    "incompatibilitesAbsolues": ["Solutions alcalines (bicarbonate de sodium)"],
-    "sourcesRcp": ["MOCK — à remplacer par RCP ANSM validé"],
-    "dateRevision": "2026-08-13"
+    "compatibilitesMajeures": [
+      "NaCl 0,9%",
+      "Glucose 5%"
+    ],
+    "incompatibilitesAbsolues": [
+      "Solutions alcalines (bicarbonate de sodium)"
+    ],
+    "sourcesRcp": [
+      "MOCK — à remplacer par RCP ANSM validé"
+    ],
+    "dateRevision": "2026-08-13",
+    "interactionsMedicamenteuses": null,
+    "grossesseAllaitement": null
   },
   {
     "id": "amoxicilline",
     "dci": "Amoxicilline",
-    "nomsCommerciaux": ["Clamoxyl"],
+    "nomsCommerciaux": [
+      "Clamoxyl"
+    ],
     "categorie": "anti-infectieux",
     "sousFamille": "Antibiotiques",
     "indications": [
@@ -59,16 +82,27 @@
       "volumeDilution": "1 g dans 20 mL d'eau PPI pour IVD, ou dans 100 mL de NaCl 0,9% pour IVL",
       "debitMlH": null,
       "gouttesMin": null,
-      "voies": ["IVD", "IVL"],
+      "voies": [
+        "IVD",
+        "IVL"
+      ],
       "dureeAdministration": "IVD sur 3 à 5 min ou IVL sur 30 min",
-      "notes": "Injecter lentement pour limiter le risque de convulsions liées à la dose"
+      "notes": "Injecter lentement pour limiter le risque de convulsions liées à la dose",
+      "preparation": null,
+      "incompatibiliteY": null,
+      "posologies": null,
+      "ajustementPosologique": null
     },
     "perOsSonde": {
       "ecrasable": true,
       "divisible": true,
       "passageEnSonde": true,
       "modalitesSonde": "Disperser le comprimé dans un peu d'eau avant administration en sonde",
-      "notes": "Forme sirop disponible, préférable en cas de sonde de petit calibre"
+      "notes": "Forme sirop disponible, préférable en cas de sonde de petit calibre",
+      "formeAPrivilegier": null,
+      "formesDisponibles": null,
+      "posologies": null,
+      "ajustementPosologique": null
     },
     "surveillanceSpecifique": [
       {
@@ -80,18 +114,26 @@
         "detail": "Adapter la posologie en cas d'insuffisance rénale"
       }
     ],
-    "compatibilitesMajeures": ["NaCl 0,9%"],
+    "compatibilitesMajeures": [
+      "NaCl 0,9%"
+    ],
     "incompatibilitesAbsolues": [
       "Aminosides (ne pas mélanger dans la même seringue/tubulure)",
       "Glucose 5% (stabilité réduite)"
     ],
-    "sourcesRcp": ["MOCK — à remplacer par RCP ANSM validé"],
-    "dateRevision": "2026-08-13"
+    "sourcesRcp": [
+      "MOCK — à remplacer par RCP ANSM validé"
+    ],
+    "dateRevision": "2026-08-13",
+    "interactionsMedicamenteuses": null,
+    "grossesseAllaitement": null
   },
   {
     "id": "diazepam",
     "dci": "Diazépam",
-    "nomsCommerciaux": ["Valium"],
+    "nomsCommerciaux": [
+      "Valium"
+    ],
     "categorie": "psychotropes",
     "sousFamille": "Anticonvulsivants",
     "indications": [
@@ -111,16 +153,27 @@
       "volumeDilution": "Ne pas diluer dans de grands volumes (risque de précipitation)",
       "debitMlH": null,
       "gouttesMin": null,
-      "voies": ["IVD", "IM"],
+      "voies": [
+        "IVD",
+        "IM"
+      ],
       "dureeAdministration": "IVD lente sur 2 à 3 minutes",
-      "notes": "Adsorption possible sur les tubulures en PVC ; injecter au plus près du site d'injection"
+      "notes": "Adsorption possible sur les tubulures en PVC ; injecter au plus près du site d'injection",
+      "preparation": null,
+      "incompatibiliteY": null,
+      "posologies": null,
+      "ajustementPosologique": null
     },
     "perOsSonde": {
       "ecrasable": true,
       "divisible": true,
       "passageEnSonde": true,
       "modalitesSonde": "Disperser dans l'eau, rincer la sonde avant et après",
-      "notes": "Forme buvable en gouttes disponible, à privilégier en sonde"
+      "notes": "Forme buvable en gouttes disponible, à privilégier en sonde",
+      "formeAPrivilegier": null,
+      "formesDisponibles": null,
+      "posologies": null,
+      "ajustementPosologique": null
     },
     "surveillanceSpecifique": [
       {
@@ -132,61 +185,186 @@
         "detail": "Surveiller l'état de conscience, risque de somnolence prolongée"
       }
     ],
-    "compatibilitesMajeures": ["NaCl 0,9% (usage immédiat)"],
+    "compatibilitesMajeures": [
+      "NaCl 0,9% (usage immédiat)"
+    ],
     "incompatibilitesAbsolues": [
       "Glucose 5%",
       "Toute solution en Y avec d'autres médicaments"
     ],
-    "sourcesRcp": ["MOCK — à remplacer par RCP ANSM validé"],
-    "dateRevision": "2026-08-13"
+    "sourcesRcp": [
+      "MOCK — à remplacer par RCP ANSM validé"
+    ],
+    "dateRevision": "2026-08-13",
+    "interactionsMedicamenteuses": null,
+    "grossesseAllaitement": null
   },
   {
     "id": "paracetamol",
     "dci": "Paracétamol",
-    "nomsCommerciaux": ["Perfalgan", "Doliprane", "Efferalgan", "Dafalgan"],
+    "nomsCommerciaux": [
+      "Perfalgan",
+      "Doliprane",
+      "Efferalgan",
+      "Dafalgan"
+    ],
     "categorie": "antalgiques",
     "sousFamille": "Antalgiques palier 1",
-    "indications": ["Douleur légère à modérée", "Fièvre"],
-    "antidote": "N-acétylcystéine (en cas de surdosage)",
+    "indications": [
+      "Douleur légère à modérée",
+      "Douleur post-opératoire (voie IV)",
+      "Fièvre"
+    ],
+    "antidote": "N-acétylcystéine",
     "contreIndications": [
-      "Insuffisance hépatocellulaire sévère",
-      "Allergie au paracétamol"
+      "Hypersensibilité",
+      "Insuf. hépato-cellulaire sévère"
     ],
     "injectable": {
       "solvant": "Prêt à l'emploi (poche de 100 mL)",
       "volumeDilution": "1 g / 100 mL, prêt à l'emploi, pas de dilution nécessaire",
       "debitMlH": "100 mL sur 15 minutes (débit constant)",
       "gouttesMin": "environ 33 gttes/min sur 15 min (perfuseur standard, 20 gttes/mL)",
-      "voies": ["IVL"],
+      "voies": [
+        "IVL"
+      ],
       "dureeAdministration": "Perfusion sur 15 minutes minimum",
-      "notes": "Respecter un intervalle minimal de 4h entre deux administrations"
+      "notes": "Respecter un intervalle minimal de 4h entre deux administrations",
+      "preparation": {
+        "badge": "PERF",
+        "duree": "15 minutes",
+        "description": "Solution prête à l'emploi — 100 mL / 1 g, sans dilution",
+        "stabilite": "À usage unique — utiliser immédiatement après ouverture"
+      },
+      "incompatibiliteY": [
+        "Aciclovir"
+      ],
+      "posologies": [
+        {
+          "population": "Adulte ≥ 50 kg",
+          "dose": "1000 mg",
+          "intervalle": "4-6 h",
+          "maxParJour": "4 g",
+          "maxParJourDetail": "4 doses"
+        },
+        {
+          "population": "Adulte de 33 à 50 kg",
+          "dose": "15 mg/kg",
+          "intervalle": "4-6 h",
+          "maxParJour": "3 g",
+          "maxParJourDetail": null
+        }
+      ],
+      "ajustementPosologique": "Max 3 g/24h et intervalle jusqu'à 8 h si insuffisance hépatique, insuffisance rénale sévère, alcoolisme chronique, malnutrition, déshydratation ou poids < 50 kg."
     },
     "perOsSonde": {
       "ecrasable": true,
       "divisible": true,
       "passageEnSonde": true,
       "modalitesSonde": "Utiliser la forme effervescente ou le sirop, dilués dans l'eau",
-      "notes": "Vérifier la dose cumulée toutes voies confondues pour éviter le surdosage"
+      "notes": "Vérifier la dose cumulée toutes voies confondues pour éviter le surdosage",
+      "formeAPrivilegier": {
+        "nom": "Poudre pour solution buvable en sachet-dose",
+        "marque": "Doliprane",
+        "note": null,
+        "alternative": "Comprimé effervescent (Dafalgan)"
+      },
+      "formesDisponibles": [
+        {
+          "nom": "Comprimé (non enrobé ou pelliculé)",
+          "secable": "non",
+          "ecrasable": "a-verifier"
+        },
+        {
+          "nom": "Gélule",
+          "secable": "non",
+          "ecrasable": "non-ouvrable"
+        },
+        {
+          "nom": "Comprimé effervescent",
+          "secable": "non",
+          "ecrasable": "non"
+        },
+        {
+          "nom": "Poudre pour solution buvable en sachet-dose",
+          "secable": "non",
+          "ecrasable": "deja-liquide"
+        },
+        {
+          "nom": "Suspension buvable",
+          "secable": "non",
+          "ecrasable": "non"
+        },
+        {
+          "nom": "Suppositoire",
+          "secable": "non",
+          "ecrasable": "non"
+        }
+      ],
+      "posologies": [
+        {
+          "population": "Douleur légère à modérée / fièvre",
+          "dose": "500-1000 mg",
+          "intervalle": "4-6 h",
+          "maxParJour": "4 g",
+          "maxParJourDetail": null
+        }
+      ],
+      "ajustementPosologique": null
     },
     "surveillanceSpecifique": [
       {
-        "titre": "Fonction hépatique",
-        "detail": "Surveiller les transaminases en cas de traitement prolongé ou de terrain à risque"
+        "titre": "Surdosage (>7,5g)",
+        "detail": "Cytolyse hépatique, risque mortel."
       },
       {
-        "titre": "Dose cumulée journalière",
-        "detail": "Ne pas dépasser 4 g/jour chez l'adulte (attention aux associations médicamenteuses)"
+        "titre": "Acidose pyroglutamique",
+        "detail": "Surtout avec flucloxacilline."
+      },
+      {
+        "titre": "Confusion mg/mL (MARR ANSM)",
+        "detail": "Toujours vérifier dose et volume."
       }
     ],
-    "compatibilitesMajeures": ["NaCl 0,9%", "Glucose 5%"],
-    "incompatibilitesAbsolues": ["Ne pas mélanger avec d'autres médicaments dans la même poche"],
-    "sourcesRcp": ["MOCK — à remplacer par RCP ANSM validé"],
-    "dateRevision": "2026-08-13"
+    "compatibilitesMajeures": [
+      "NaCl 0,9%",
+      "Glucose 5%"
+    ],
+    "incompatibilitesAbsolues": [
+      "Ne pas mélanger avec d'autres médicaments dans la même poche"
+    ],
+    "sourcesRcp": [
+      "Paracétamol (Doliprane) — ANSM, MAJ 03/2025",
+      "Paracétamol (Perfalgan) — ANSM, MAJ 11/2024",
+      "N-acétylcystéine — ANSM, MAJ 06/2024"
+    ],
+    "dateRevision": "2026-07-28",
+    "interactionsMedicamenteuses": [
+      {
+        "titre": "AVK (warfarine)",
+        "detail": "Potentialisation de l'INR si ≥ 2 g/j pendant plus de 4 jours."
+      },
+      {
+        "titre": "Flucloxacilline",
+        "detail": "Risque d'acidose métabolique à trou anionique élevé."
+      },
+      {
+        "titre": "Inducteurs enzymatiques",
+        "detail": "Hépatotoxicité majorée (carbamazépine, rifampicine, phénytoïne)."
+      }
+    ],
+    "grossesseAllaitement": {
+      "grossesse": "Possible aux 3 trimestres — dose minimale efficace.",
+      "allaitement": "Compatible — 1re intention."
+    }
   },
   {
     "id": "vancomycine",
     "dci": "Vancomycine",
-    "nomsCommerciaux": ["Vancomycine Viatris", "Vancomycine Mylan"],
+    "nomsCommerciaux": [
+      "Vancomycine Viatris",
+      "Vancomycine Mylan"
+    ],
     "categorie": "anti-infectieux",
     "sousFamille": "Antibiotiques",
     "indications": [
@@ -203,9 +381,16 @@
       "volumeDilution": "500 mg dans au moins 100 mL (concentration maximale 5 mg/mL)",
       "debitMlH": "Perfusion sur au moins 60 minutes, débit max 10 mg/min",
       "gouttesMin": null,
-      "voies": ["IVL", "PSE"],
+      "voies": [
+        "IVL",
+        "PSE"
+      ],
       "dureeAdministration": "Minimum 60 minutes, à adapter selon la dose",
-      "notes": "Ne jamais administrer en IVD : risque majeur de syndrome de l'homme rouge et d'hypotension"
+      "notes": "Ne jamais administrer en IVD : risque majeur de syndrome de l'homme rouge et d'hypotension",
+      "preparation": null,
+      "incompatibiliteY": null,
+      "posologies": null,
+      "ajustementPosologique": null
     },
     "perOsSonde": null,
     "surveillanceSpecifique": [
@@ -222,11 +407,18 @@
         "detail": "Surveiller l'apparition d'un érythème du visage et du tronc (syndrome de l'homme rouge) en cas d'injection trop rapide"
       }
     ],
-    "compatibilitesMajeures": ["NaCl 0,9%", "Glucose 5%"],
+    "compatibilitesMajeures": [
+      "NaCl 0,9%",
+      "Glucose 5%"
+    ],
     "incompatibilitesAbsolues": [
       "Solutions alcalines (bêta-lactamines, héparine à forte concentration)"
     ],
-    "sourcesRcp": ["MOCK — à remplacer par RCP ANSM validé"],
-    "dateRevision": "2026-08-13"
+    "sourcesRcp": [
+      "MOCK — à remplacer par RCP ANSM validé"
+    ],
+    "dateRevision": "2026-08-13",
+    "interactionsMedicamenteuses": null,
+    "grossesseAllaitement": null
   }
 ]

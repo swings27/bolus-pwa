@@ -7,8 +7,7 @@ import SelecteurForme from '../components/fiches/SelecteurForme'
 import type { Forme } from '../components/fiches/SelecteurForme'
 import DetailInjectable from '../components/fiches/DetailInjectable'
 import DetailPerOs from '../components/fiches/DetailPerOs'
-import SurveillanceAccordeon from '../components/fiches/SurveillanceAccordeon'
-import SourcesFiche from '../components/fiches/SourcesFiche'
+import PrecautionsFiche from '../components/fiches/PrecautionsFiche'
 import BoutonFavori from '../components/fiches/BoutonFavori'
 import BoutonPrimaire from '../components/layout/BoutonPrimaire'
 import { useFiche } from '../hooks/useFiche'
@@ -69,13 +68,22 @@ export default function FicheMedicament() {
     return formes
   }, [fiche])
 
-  // Si le choix précédent ne correspond plus aux formes disponibles (ex.
-  // React Router réutilise cette même instance en passant d'une fiche
-  // injectable-only à une fiche per-os-only sans démonter le composant),
-  // on retombe automatiquement sur la première forme disponible plutôt que
-  // de figer sur un onglet qui n'existe plus — jamais de carte vide.
+  // Une seule forme possible : rien à choisir, on l'affiche directement
+  // (SelecteurForme ne se montre d'ailleurs pas dans ce cas). Deux formes ou
+  // plus : on laisse volontairement le sélecteur sans forme active tant que
+  // l'utilisateur n'a pas cliqué — présélectionner "Injectable" par défaut
+  // suggérerait à tort que c'est la voie recommandée, alors que le choix
+  // dépend du contexte clinique. Si le choix précédent ne correspond plus
+  // aux formes disponibles (ex. React Router réutilise cette même instance
+  // en passant d'une fiche injectable-only à une fiche per-os-only sans
+  // démonter le composant), on retombe sur "aucune forme" plutôt que de
+  // figer sur un onglet qui n'existe plus.
   const formeActive =
-    formeChoisie && formesDisponibles.includes(formeChoisie) ? formeChoisie : (formesDisponibles[0] ?? null)
+    formesDisponibles.length <= 1
+      ? (formesDisponibles[0] ?? null)
+      : formeChoisie && formesDisponibles.includes(formeChoisie)
+        ? formeChoisie
+        : null
 
   const { favoris, basculer } = useFavoris()
   const [favoriBloque, setFavoriBloque] = useState(false)
@@ -119,7 +127,11 @@ export default function FicheMedicament() {
   const contreIndicationsPresentes = fiche.contreIndications.length > 0
 
   return (
-    <div className="flex flex-col pb-6">
+    // flex-1 (pas juste flex-col) : PrecautionsFiche, dernier bloc de la
+    // page, s'étire lui aussi en flex-1 pour que son fond teinté rejoigne
+    // toujours le bas de l'écran, même sur une fiche courte — plutôt qu'un
+    // padding-bottom fixe qui laisserait un bandeau de fond nu en dessous.
+    <div className="flex flex-1 flex-col">
       <Header variant="retour" />
 
       {/* Identité */}
@@ -146,18 +158,21 @@ export default function FicheMedicament() {
         )}
       </div>
 
-      {/* Grille antidote / contre-indications */}
+      {/* Grille antidote / contre-indications : l'antidote s'ajuste à son
+          contenu (souvent un seul nom court) plutôt que de forcer un
+          partage strict 50/50, qui l'étirerait inutilement sur toute la
+          moitié de l'écran. */}
       {(antidotePresent || contreIndicationsPresentes) && (
-        <div className="mt-6 grid grid-cols-2 gap-3 px-6">
+        <div className="mt-6 flex items-stretch gap-3 px-6">
           {antidotePresent && (
-            <div className={contreIndicationsPresentes ? '' : 'col-span-2'}>
+            <div className="shrink-0 whitespace-nowrap">
               <BlocInfo variant="validation" label="Antidote">
                 {fiche.antidote}
               </BlocInfo>
             </div>
           )}
           {contreIndicationsPresentes && (
-            <div className={antidotePresent ? '' : 'col-span-2'}>
+            <div className="min-w-0 flex-1">
               <BlocInfo variant="alerte" label="Contre-indications">
                 <ListeSeparee items={fiche.contreIndications} />
               </BlocInfo>
@@ -175,15 +190,29 @@ export default function FicheMedicament() {
         </div>
       )}
 
-      {/* Carte des formes d'administration */}
-      {formesDisponibles.length > 0 && formeActive !== null && (
-        <div className="mt-6 w-full rounded-t-2xl bg-surface p-6">
-          <SelecteurForme
-            formes={formesDisponibles}
-            forme={formeActive}
-            onChange={setFormeChoisie}
-          />
+      {/* Carte des formes d'administration : fond dédié (--fiche-forme-fond,
+          voir index.css), pas bg-surface — pour rester nettement distincte
+          du reste de la page plutôt que de s'y fondre. */}
+      {formesDisponibles.length > 0 && (
+        <div
+          className="mt-6 w-full rounded-t-2xl p-6"
+          style={{ backgroundColor: 'var(--fiche-forme-fond)' }}
+        >
+          {formesDisponibles.length > 1 && (
+            <SelecteurForme
+              formes={formesDisponibles}
+              forme={formeActive}
+              // Recliquer la forme déjà active la désélectionne (retour au
+              // placeholder) plutôt que de rester figée dessus sans échappatoire.
+              onChange={(forme) => setFormeChoisie(forme === formeActive ? null : forme)}
+            />
+          )}
           <div className={formesDisponibles.length > 1 ? 'mt-4' : ''}>
+            {formeActive === null && (
+              <p className="px-2.5 py-4 text-center text-[13px] italic text-texte-doux/70">
+                Sélectionnez une forme d'administration ci-dessus
+              </p>
+            )}
             {formeActive === 'injectable' && fiche.injectable && (
               <DetailInjectable donnees={fiche.injectable} />
             )}
@@ -194,28 +223,13 @@ export default function FicheMedicament() {
         </div>
       )}
 
-      <SurveillanceAccordeon items={fiche.surveillanceSpecifique} />
-
-      {/* Compatibilités */}
-      {(fiche.compatibilitesMajeures.length > 0 ||
-        fiche.incompatibilitesAbsolues.length > 0) && (
-        <div className="mt-6 flex flex-col gap-3 px-6">
-          {fiche.compatibilitesMajeures.length > 0 && (
-            <BlocInfo variant="validation" label="Compatibilités">
-              <ListeSeparee items={fiche.compatibilitesMajeures} />
-            </BlocInfo>
-          )}
-          {fiche.incompatibilitesAbsolues.length > 0 && (
-            <BlocInfo variant="alerte" label="Incompatibilités absolues">
-              <ListeSeparee items={fiche.incompatibilitesAbsolues} />
-            </BlocInfo>
-          )}
-        </div>
-      )}
-
-      <div className="mt-6 px-6">
-        <SourcesFiche sources={fiche.sourcesRcp} dateRevision={fiche.dateRevision} />
-      </div>
+      <PrecautionsFiche
+        surveillanceSpecifique={fiche.surveillanceSpecifique}
+        interactionsMedicamenteuses={fiche.interactionsMedicamenteuses}
+        grossesseAllaitement={fiche.grossesseAllaitement}
+        sourcesRcp={fiche.sourcesRcp}
+        dateRevision={fiche.dateRevision}
+      />
     </div>
   )
 }

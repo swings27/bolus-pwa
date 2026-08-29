@@ -8,7 +8,15 @@ import { Info } from 'lucide-react'
 export default function DisclaimerBanner() {
   return (
     <div
-      className="flex items-start gap-2 px-4 py-3"
+      // pb-8 (pas py-3 uniforme) : le bouton rond du Calculateur dépasse de
+      // 22px au-dessus de la BottomNavBar (voir BottomNavBar.tsx), soit
+      // directement dans le bas de ce bandeau puisqu'il est le dernier
+      // empilé juste au-dessus de la barre (voir Layout.tsx) — sans cette
+      // marge basse généreuse, il recouvrirait la fin du texte. Cette
+      // hauteur supplémentaire, mesurée dynamiquement (voir hauteurBandeaux
+      // dans Layout.tsx), repousse aussi d'autant le bouton flottant "Un
+      // retour ?", qui reste ainsi toujours au-dessus, jamais sur le texte.
+      className="flex items-start gap-2 px-4 pt-3 pb-8"
       // Fond "légèrement plus foncé que le fond principal" dans les deux
       // thèmes : on mélange un peu de --texte dans --fond plutôt que de
       // coder une teinte fixe, qui ne conviendrait qu'au thème clair.

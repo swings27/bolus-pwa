@@ -5,6 +5,45 @@
 /** Une voie d'administration possible pour la forme injectable. */
 export type IVoieAdministration = 'IVD' | 'IVL' | 'PSE' | 'IM' | 'SC'
 
+/** Une ligne de posologie structurée pour une population donnée. */
+export interface IPosologie {
+  population: string
+  dose: string
+  intervalle: string
+  maxParJour: string
+  /** Précision optionnelle affichée à côté du maximum (ex. "4 doses"). */
+  maxParJourDetail: string | null
+}
+
+/** Bloc de préparation avant administration (perfusion courte, reconstitution...). */
+export interface IPreparationInjectable {
+  /** Étiquette courte affichée en badge (ex. "PERF"). */
+  badge: string
+  duree: string
+  description: string
+  stabilite: string | null
+}
+
+/** État d'une contrainte d'administration pour une forme galénique donnée. */
+export type IEtatFormeGalenique = 'oui' | 'non' | 'a-verifier' | 'deja-liquide' | 'non-ouvrable'
+
+/** Une forme galénique disponible pour la voie orale/sonde, avec ses contraintes. */
+export interface IFormeGalenique {
+  nom: string
+  secable: IEtatFormeGalenique
+  ecrasable: IEtatFormeGalenique
+}
+
+/** Forme à privilégier en cas de passage en sonde (voir IFormePerOs.formeAPrivilegier). */
+export interface IFormeAPrivilegier {
+  nom: string
+  /** Nom commercial associé à cette forme précise, distinct des noms
+   * commerciaux génériques de la fiche (IFiche.nomsCommerciaux). */
+  marque: string | null
+  note: string | null
+  alternative: string | null
+}
+
 /** Détails d'administration par voie injectable (IV, IM, SC...). */
 export interface IFormeInjectable {
   solvant: string
@@ -14,6 +53,11 @@ export interface IFormeInjectable {
   voies: IVoieAdministration[]
   dureeAdministration: string | null
   notes: string | null
+  /** Remplace l'affichage générique (solvant/débit/voies) quand présent. */
+  preparation: IPreparationInjectable | null
+  incompatibiliteY: string[] | null
+  posologies: IPosologie[] | null
+  ajustementPosologique: string | null
 }
 
 /** Détails d'administration par voie orale ou sonde d'alimentation. */
@@ -23,12 +67,23 @@ export interface IFormePerOs {
   passageEnSonde: boolean | null
   modalitesSonde: string | null
   notes: string | null
+  formeAPrivilegier: IFormeAPrivilegier | null
+  formesDisponibles: IFormeGalenique[] | null
+  posologies: IPosologie[] | null
+  ajustementPosologique: string | null
 }
 
 /** Un point de surveillance clinique spécifique à surveiller par l'infirmier. */
 export interface ISurveillance {
   titre: string
   detail: string
+}
+
+/** Grossesse et allaitement, contenu fixe (pas une liste dépliable comme
+ * surveillanceSpecifique/interactionsMedicamenteuses). */
+export interface IGrossesseAllaitement {
+  grossesse: string
+  allaitement: string
 }
 
 /** Fiche médicament complète, unité de données centrale de l'app. */
@@ -45,6 +100,8 @@ export interface IFiche {
   injectable: IFormeInjectable | null
   perOsSonde: IFormePerOs | null
   surveillanceSpecifique: ISurveillance[]
+  interactionsMedicamenteuses: ISurveillance[] | null
+  grossesseAllaitement: IGrossesseAllaitement | null
   compatibilitesMajeures: string[]
   incompatibilitesAbsolues: string[]
   sourcesRcp: string[]
