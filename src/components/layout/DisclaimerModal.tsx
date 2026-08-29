@@ -55,10 +55,9 @@ export default function DisclaimerModal() {
         </h2>
         <p className="mt-3 text-sm leading-relaxed text-texte/80">
           Bolus est un outil d'aide destiné aux professionnels de santé. Il
-          ne remplace ni le jugement clinique de l'infirmier ou de
-          l'infirmière, ni la prescription médicale. L'administration d'un
-          médicament reste sous la responsabilité du professionnel de
-          santé.
+          ne remplace ni votre jugement clinique, ni la prescription médicale. 
+          L'administration d'un médicament reste sous la responsabilité du 
+          professionnel de santé.
         </p>
 
         <label className="mt-4 flex cursor-pointer items-start gap-2 text-sm text-texte">
