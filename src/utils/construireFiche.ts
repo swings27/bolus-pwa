@@ -25,7 +25,6 @@ function construireIv(brut: IFicheSourceIv | undefined): IFormeIv | null {
       posologie: brut.administration.posologie,
     },
     incompatibilites: brut.incompatibilites,
-    pictogrammes: brut.pictogrammes,
   }
 }
 
@@ -66,24 +65,26 @@ export function construireFiche(id: string, brut: IFicheSource, meta: IFicheMeta
     nomsCommerciaux: brut.commun.noms_commerciaux,
     antidote: videEnNull(brut.commun.antidote),
     indications: brut.commun.indications,
-    contreIndications: brut.iv?.contre_indications ?? [],
+    // Schéma v2 : contre_indications/interactions_pertinentes/
+    // surveillance_specifique/pictogrammes vivent dans `commun`, pas `iv` —
+    // toujours lus, jamais conditionnés à la présence d'une forme
+    // injectable, pour qu'une molécule sans iv (ex. orale seule) ne perde
+    // jamais silencieusement ses précautions.
+    contreIndications: brut.commun.contre_indications,
     grossesseAllaitement: brut.commun.grossesse_allaitement,
-    surveillanceSpecifique: brut.iv
-      ? versAccordeon(
-          brut.iv.surveillance_specifique,
-          (item) => item.evenement,
-          (item) => item.explication,
-          (item) => item.action,
-        )
-      : [],
-    interactionsMedicamenteuses: brut.iv
-      ? versAccordeon(
-          brut.iv.interactions_pertinentes,
-          (item) => item.substance,
-          (item) => item.effet,
-          (item) => item.action_infirmier,
-        )
-      : null,
+    surveillanceSpecifique: versAccordeon(
+      brut.commun.surveillance_specifique,
+      (item) => item.evenement,
+      (item) => item.explication,
+      (item) => item.action,
+    ),
+    interactionsMedicamenteuses: versAccordeon(
+      brut.commun.interactions_pertinentes,
+      (item) => item.substance,
+      (item) => item.effet,
+      (item) => item.action_infirmier,
+    ),
+    pictogrammes: brut.commun.pictogrammes,
     iv: construireIv(brut.iv),
     oral: construireOral(brut.oral),
     rcpSource: brut.tracabilite.rcp_source,

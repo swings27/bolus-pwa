@@ -22,7 +22,76 @@
       "url_crat_grossesse": "https://www.lecrat.fr/13364/",
       "url_crat_allaitement": "https://www.lecrat.fr/13363/",
       "source": "RCP Vancomycine 500 mg (Viatris, Sandoz)"
-    }
+    },
+    "contre_indications": [
+      "Hypersensibilité à la substance active ou à l'un des excipients",
+      "Voie intramusculaire (risque de nécrose au site d'administration), la vancomycine ne doit pas être administrée par cette voie"
+    ],
+    "interactions_pertinentes": [
+      {
+        "substance": "Aminosides",
+        "effet": "L'administration concomitante ou séquentielle de vancomycine et d'autres médicaments potentiellement ototoxiques ou néphrotoxiques peut accroître l'ototoxicité ou la néphrotoxicité. Le RCP limite alors la dose maximale de vancomycine à 500 mg toutes les 8 heures en cas d'association aux aminosides.",
+        "action_infirmier": "Signaler au prescripteur toute co-prescription avec un aminoside. Surveillance étroite du patient, de la fonction rénale et de l'audition.",
+        "source_rcp": "RCP Vancomycine Viatris 500 mg, section 4.5"
+      },
+      {
+        "substance": "Autres médicaments néphrotoxiques",
+        "effet": "Risque accru de néphrotoxicité en cas d'administration concomitante ou séquentielle.",
+        "action_infirmier": "Signaler au prescripteur toute co-prescription. Renforcer la surveillance de la fonction rénale.",
+        "source_rcp": "RCP Vancomycine Viatris 500 mg, section 4.5"
+      },
+      {
+        "substance": "Anesthésiques",
+        "effet": "L'incidence des effets indésirables (hypotension, érubéscence de la peau, érythème, urticaire, dépression myocardique, prurit) augmente lorsque la vancomycine est administrée trop près de l'induction anesthésique.",
+        "action_infirmier": "Signaler au prescripteur/anesthésiste toute administration péri-opératoire de vancomycine ; le délai avant l'induction relève de la prescription médicale.",
+        "source_rcp": "RCP Vancomycine Viatris 500 mg, sections 4.4 et 4.5"
+      },
+      {
+        "substance": "Relaxants musculaires",
+        "effet": "Si la vancomycine est administrée pendant ou immédiatement après l'intervention chirurgicale, les effets des relaxants musculaires conjointement administrés (blocage neuromusculaire) peuvent être renforcés ou prolongés.",
+        "action_infirmier": "Signaler au prescripteur/anesthésiste toute administration péri-opératoire de vancomycine chez un patient recevant un relaxant musculaire.",
+        "source_rcp": "RCP Vancomycine Viatris 500 mg, section 4.5"
+      },
+      {
+        "substance": "Anticoagulants oraux",
+        "effet": "L'administration concomitante de vancomycine et de warfarine peut augmenter les effets de ces anticoagulants ; de nombreux cas d'augmentation de l'activité des anticoagulants oraux ont été rapportés chez des patients recevant des antibiotiques.",
+        "action_infirmier": "Surveiller l'INR fréquemment pendant et rapidement après l'administration concomitante de vancomycine avec un anticoagulant oral.",
+        "source_rcp": "RCP Vancomycine Viatris 500 mg, section 4.5"
+      }
+    ],
+    "surveillance_specifique": [
+      {
+        "evenement": "Syndrome de l'homme rouge / hypotension (perfusion rapide)",
+        "explication": "L'administration rapide en bolus (par exemple en quelques minutes) est directement associée à une hypotension importante (pouvant aller jusqu'au choc ou à l'arrêt cardiaque), des réactions de type histaminique et une éruption maculo-papuleuse ou érythémateuse de la partie supérieure du corps. C'est un effet documenté comme spécifiquement lié à la vitesse de perfusion de la vancomycine, pas une réaction perfusionnelle générique.",
+        "action": "Respecter la dilution et la vitesse de perfusion indiquées en Préparation. En cas de survenue, arrêter la perfusion : les réactions disparaissent généralement rapidement à l'arrêt.",
+        "source_rcp": "RCP Vancomycine Viatris 500 mg, section 4.4 : 'L'administration rapide en bolus [...] peut être associée à une hypotension importante (y compris avec un choc et rarement un arrêt cardiaque), des réactions de type histaminique et une éruption maculo-papuleuse ou érythémateuse (syndrome de l'homme rouge ou syndrome du cou rouge). La vancomycine doit être perfusée lentement sous forme d'une solution diluée (2,5 à 5,0 mg/mL), à une vitesse ne dépassant pas 10 mg/min et sur une période d'au moins 60 minutes.'"
+      },
+      {
+        "evenement": "Néphrotoxicité, notamment en cas de concentrations sanguines élevées ou de traitement prolongé",
+        "explication": "Le risque de toxicité rénale est accru chez les patients insuffisants rénaux ou anuriques et augmente avec des concentrations sanguines élevées ou prolongées.",
+        "action": "Surveillance régulière de la fonction rénale et du taux sanguin résiduel de vancomycine, en particulier en cas de traitement à doses élevées, prolongé, ou d'association à un autre médicament néphrotoxique.",
+        "source_rcp": "RCP Vancomycine Viatris 500 mg, section 4.4 : 'La vancomycine doit être utilisée avec précaution chez les patients insuffisants rénaux, incluant les patients anuriques, car le risque de développer des effets toxiques est beaucoup plus élevé en présence de concentrations sanguines élevées et prolongées.'"
+      },
+      {
+        "evenement": "Ototoxicité",
+        "explication": "Rapportée chez des patients avec antécédents de surdité, recevant des doses intraveineuses excessives, ou en association avec un autre agent ototoxique (aminoside). La surdité peut évoluer malgré l'arrêt du traitement.",
+        "action": "Contrôle régulier du taux sanguin résiduel de vancomycine et surveillance de la fonction auditive, en particulier chez les personnes âgées et en cas d'association à un aminoside. Signaler tout acouphène ou trouble auditif au prescripteur.",
+        "source_rcp": "RCP Vancomycine Viatris 500 mg, section 4.4 : 'L'ototoxicité, qui peut être transitoire ou permanente [...] a été rapportée chez des patients avec antécédents de surdité, qui ont reçu des doses intraveineuses excessives, ou qui reçoivent un traitement concomitant avec une autre substance active ototoxique comme un aminoglycoside. [...] La surdité peut être précédée par des acouphènes.'"
+      },
+      {
+        "evenement": "Réactions cutanées sévères (SCAR)",
+        "explication": "Peuvent engager le pronostic vital ou être mortelles. Surviennent en général dans les quelques jours à huit semaines suivant le début du traitement.",
+        "action": "Informer le patient des signes/symptômes à surveiller au début du traitement. En cas de signes évocateurs, arrêter immédiatement la vancomycine et envisager un traitement alternatif ; ne jamais réadministrer la vancomycine si un SCAR est survenu.",
+        "source_rcp": "RCP Vancomycine Viatris 500 mg, section 4.4 : 'Des réactions indésirables cutanées sévères (SCAR), y compris syndrome de Stevens-Johnson (SJS), nécrolyse épidermique toxique (NET), réaction médicamenteuse avec éosinophilie et symptômes systémiques (DRESS) et pustulose exanthématique aiguë généralisée (PEAG), qui peuvent engager le pronostic vital ou être mortelles, ont été rapportées.'"
+      },
+      {
+        "evenement": "Douleur et thrombophlébite au site de perfusion IV",
+        "explication": "Fréquentes chez les patients recevant de la vancomycine IV, parfois sévères ; leur fréquence et sévérité diminuent avec une administration lente en solution diluée.",
+        "action": "Administrer lentement en solution suffisamment diluée et varier régulièrement les sites de perfusion.",
+        "source_rcp": "RCP Vancomycine Viatris 500 mg, section 4.4 : 'Une douleur et une thrombophlébite peuvent survenir chez de nombreux patients recevant de la vancomycine administrée par voie intraveineuse et elles sont parfois sévères. La fréquence et la sévérité de la thrombophlébite peuvent être réduites en administrant lentement le médicament sous forme de solution diluée et en variant régulièrement les sites de perfusion.'"
+      }
+    ],
+    "pictogrammes": []
   },
   "iv": {
     "reconstitution": {
@@ -150,75 +219,6 @@
         "niveau": "absolu"
       }
     ],
-    "interactions_pertinentes": [
-      {
-        "substance": "Aminosides",
-        "effet": "L'administration concomitante ou séquentielle de vancomycine et d'autres médicaments potentiellement ototoxiques ou néphrotoxiques peut accroître l'ototoxicité ou la néphrotoxicité. Le RCP limite alors la dose maximale de vancomycine à 500 mg toutes les 8 heures en cas d'association aux aminosides.",
-        "action_infirmier": "Signaler au prescripteur toute co-prescription avec un aminoside. Surveillance étroite du patient, de la fonction rénale et de l'audition.",
-        "source_rcp": "RCP Vancomycine Viatris 500 mg, section 4.5"
-      },
-      {
-        "substance": "Autres médicaments néphrotoxiques",
-        "effet": "Risque accru de néphrotoxicité en cas d'administration concomitante ou séquentielle.",
-        "action_infirmier": "Signaler au prescripteur toute co-prescription. Renforcer la surveillance de la fonction rénale.",
-        "source_rcp": "RCP Vancomycine Viatris 500 mg, section 4.5"
-      },
-      {
-        "substance": "Anesthésiques",
-        "effet": "L'incidence des effets indésirables (hypotension, érubéscence de la peau, érythème, urticaire, dépression myocardique, prurit) augmente lorsque la vancomycine est administrée trop près de l'induction anesthésique.",
-        "action_infirmier": "Signaler au prescripteur/anesthésiste toute administration péri-opératoire de vancomycine ; le délai avant l'induction relève de la prescription médicale.",
-        "source_rcp": "RCP Vancomycine Viatris 500 mg, sections 4.4 et 4.5"
-      },
-      {
-        "substance": "Relaxants musculaires",
-        "effet": "Si la vancomycine est administrée pendant ou immédiatement après l'intervention chirurgicale, les effets des relaxants musculaires conjointement administrés (blocage neuromusculaire) peuvent être renforcés ou prolongés.",
-        "action_infirmier": "Signaler au prescripteur/anesthésiste toute administration péri-opératoire de vancomycine chez un patient recevant un relaxant musculaire.",
-        "source_rcp": "RCP Vancomycine Viatris 500 mg, section 4.5"
-      },
-      {
-        "substance": "Anticoagulants oraux",
-        "effet": "L'administration concomitante de vancomycine et de warfarine peut augmenter les effets de ces anticoagulants ; de nombreux cas d'augmentation de l'activité des anticoagulants oraux ont été rapportés chez des patients recevant des antibiotiques.",
-        "action_infirmier": "Surveiller l'INR fréquemment pendant et rapidement après l'administration concomitante de vancomycine avec un anticoagulant oral.",
-        "source_rcp": "RCP Vancomycine Viatris 500 mg, section 4.5"
-      }
-    ],
-    "contre_indications": [
-      "Hypersensibilité à la substance active ou à l'un des excipients",
-      "Voie intramusculaire (risque de nécrose au site d'administration), la vancomycine ne doit pas être administrée par cette voie"
-    ],
-    "surveillance_specifique": [
-      {
-        "evenement": "Syndrome de l'homme rouge / hypotension (perfusion rapide)",
-        "explication": "L'administration rapide en bolus (par exemple en quelques minutes) est directement associée à une hypotension importante (pouvant aller jusqu'au choc ou à l'arrêt cardiaque), des réactions de type histaminique et une éruption maculo-papuleuse ou érythémateuse de la partie supérieure du corps. C'est un effet documenté comme spécifiquement lié à la vitesse de perfusion de la vancomycine, pas une réaction perfusionnelle générique.",
-        "action": "Respecter la dilution et la vitesse de perfusion indiquées en Préparation. En cas de survenue, arrêter la perfusion : les réactions disparaissent généralement rapidement à l'arrêt.",
-        "source_rcp": "RCP Vancomycine Viatris 500 mg, section 4.4 : 'L'administration rapide en bolus [...] peut être associée à une hypotension importante (y compris avec un choc et rarement un arrêt cardiaque), des réactions de type histaminique et une éruption maculo-papuleuse ou érythémateuse (syndrome de l'homme rouge ou syndrome du cou rouge). La vancomycine doit être perfusée lentement sous forme d'une solution diluée (2,5 à 5,0 mg/mL), à une vitesse ne dépassant pas 10 mg/min et sur une période d'au moins 60 minutes.'"
-      },
-      {
-        "evenement": "Néphrotoxicité, notamment en cas de concentrations sanguines élevées ou de traitement prolongé",
-        "explication": "Le risque de toxicité rénale est accru chez les patients insuffisants rénaux ou anuriques et augmente avec des concentrations sanguines élevées ou prolongées.",
-        "action": "Surveillance régulière de la fonction rénale et du taux sanguin résiduel de vancomycine, en particulier en cas de traitement à doses élevées, prolongé, ou d'association à un autre médicament néphrotoxique.",
-        "source_rcp": "RCP Vancomycine Viatris 500 mg, section 4.4 : 'La vancomycine doit être utilisée avec précaution chez les patients insuffisants rénaux, incluant les patients anuriques, car le risque de développer des effets toxiques est beaucoup plus élevé en présence de concentrations sanguines élevées et prolongées.'"
-      },
-      {
-        "evenement": "Ototoxicité",
-        "explication": "Rapportée chez des patients avec antécédents de surdité, recevant des doses intraveineuses excessives, ou en association avec un autre agent ototoxique (aminoside). La surdité peut évoluer malgré l'arrêt du traitement.",
-        "action": "Contrôle régulier du taux sanguin résiduel de vancomycine et surveillance de la fonction auditive, en particulier chez les personnes âgées et en cas d'association à un aminoside. Signaler tout acouphène ou trouble auditif au prescripteur.",
-        "source_rcp": "RCP Vancomycine Viatris 500 mg, section 4.4 : 'L'ototoxicité, qui peut être transitoire ou permanente [...] a été rapportée chez des patients avec antécédents de surdité, qui ont reçu des doses intraveineuses excessives, ou qui reçoivent un traitement concomitant avec une autre substance active ototoxique comme un aminoglycoside. [...] La surdité peut être précédée par des acouphènes.'"
-      },
-      {
-        "evenement": "Réactions cutanées sévères (SCAR)",
-        "explication": "Peuvent engager le pronostic vital ou être mortelles. Surviennent en général dans les quelques jours à huit semaines suivant le début du traitement.",
-        "action": "Informer le patient des signes/symptômes à surveiller au début du traitement. En cas de signes évocateurs, arrêter immédiatement la vancomycine et envisager un traitement alternatif ; ne jamais réadministrer la vancomycine si un SCAR est survenu.",
-        "source_rcp": "RCP Vancomycine Viatris 500 mg, section 4.4 : 'Des réactions indésirables cutanées sévères (SCAR), y compris syndrome de Stevens-Johnson (SJS), nécrolyse épidermique toxique (NET), réaction médicamenteuse avec éosinophilie et symptômes systémiques (DRESS) et pustulose exanthématique aiguë généralisée (PEAG), qui peuvent engager le pronostic vital ou être mortelles, ont été rapportées.'"
-      },
-      {
-        "evenement": "Douleur et thrombophlébite au site de perfusion IV",
-        "explication": "Fréquentes chez les patients recevant de la vancomycine IV, parfois sévères ; leur fréquence et sévérité diminuent avec une administration lente en solution diluée.",
-        "action": "Administrer lentement en solution suffisamment diluée et varier régulièrement les sites de perfusion.",
-        "source_rcp": "RCP Vancomycine Viatris 500 mg, section 4.4 : 'Une douleur et une thrombophlébite peuvent survenir chez de nombreux patients recevant de la vancomycine administrée par voie intraveineuse et elles sont parfois sévères. La fréquence et la sévérité de la thrombophlébite peuvent être réduites en administrant lentement le médicament sous forme de solution diluée et en variant régulièrement les sites de perfusion.'"
-      }
-    ],
-    "pictogrammes": [],
     "preparation": [
       {
         "voie": "PERF",

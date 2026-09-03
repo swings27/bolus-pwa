@@ -60,7 +60,13 @@ function EcranErreur({
         Impossible de charger les fiches médicaments. Vérifiez votre connexion
         puis réessayez.
       </p>
-      <p className="max-w-xs text-xs text-texte/40">{message}</p>
+      {/* whitespace-pre-line + text-left : un message de validation de fiche
+          (voir validerFicheSource) liste un problème par ligne, sur
+          plusieurs fichiers — un bloc de texte centré sur une seule ligne
+          serait illisible dans ce cas. max-w-sm (pas -xs) : un peu plus de
+          largeur pour ces messages plus longs, tout en restant confortable
+          à lire sur un écran de téléphone. */}
+      <p className="max-w-sm whitespace-pre-line text-left text-xs text-texte/40">{message}</p>
       <BoutonPrimaire onClick={onReessayer}>Réessayer</BoutonPrimaire>
     </div>
   )

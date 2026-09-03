@@ -1,7 +1,7 @@
 import { useState } from 'react'
-import { ChevronRight } from 'lucide-react'
 import type { LucideIcon } from 'lucide-react'
 import type { ReactNode } from 'react'
+import ChevronBascule from './ChevronBascule'
 
 interface IGroupePrecautionProps {
   icone: LucideIcon
@@ -37,10 +37,7 @@ export default function GroupePrecaution({ icone: Icone, titre, children }: IGro
           </span>
           {titre}
         </span>
-        <ChevronRight
-          className={`h-4 w-4 shrink-0 text-accent transition-transform duration-200 ${ouvert ? 'rotate-90' : ''}`}
-          aria-hidden="true"
-        />
+        <ChevronBascule ouvert={ouvert} className="h-4 w-4 text-accent" />
       </button>
       {ouvert && (
         <div id={idPanneau} className="pb-1.5 pl-[39px]">

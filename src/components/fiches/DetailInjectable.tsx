@@ -103,20 +103,6 @@ export default function DetailInjectable({ donnees }: IDetailInjectableProps) {
         </div>
       )}
 
-      {donnees.pictogrammes.length > 0 && (
-        <div className="mt-3 flex flex-wrap gap-1.5">
-          {donnees.pictogrammes.map((pictogramme) => (
-            <span
-              key={pictogramme}
-              className="rounded-full px-2.5 py-1 text-[10px] font-semibold text-texte"
-              style={{ backgroundColor: 'var(--fiche-forme-fond)' }}
-            >
-              {pictogramme}
-            </span>
-          ))}
-        </div>
-      )}
-
       <SectionPosologies
         titre="Posologies"
         posologies={donnees.administration.posologie}

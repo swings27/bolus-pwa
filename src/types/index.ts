@@ -175,7 +175,6 @@ export interface IFormeIv {
     posologie: IPosologieRcp[]
   }
   incompatibilites: IIncompatibilite[]
-  pictogrammes: string[]
 }
 
 /** Détails d'administration par voie orale — une ou plusieurs formes
@@ -218,18 +217,20 @@ export interface IFiche {
   nomsCommerciaux: string[]
   antidote: string | null
   indications: string[]
-  /** Contre-indications de la molécule — proviennent de iv.contre_indications
-   * dans le JSON source (seul endroit où le schéma les documente) mais
-   * s'appliquent à la fiche entière, affichées indépendamment de la forme
-   * choisie. */
+  /** Contre-indications de la molécule — proviennent de
+   * commun.contre_indications, indépendamment de la forme choisie. */
   contreIndications: string[]
   grossesseAllaitement: IGrossesseAllaitementRcp | null
-  /** Provient de iv.surveillance_specifique — s'applique à la fiche entière,
-   * affiché indépendamment de la forme choisie. */
+  /** Provient de commun.surveillance_specifique — s'applique à la fiche
+   * entière, affiché indépendamment de la forme choisie (voir la voie
+   * choisie iv/oral, qui ne concerne que ce qui EST spécifique à une voie). */
   surveillanceSpecifique: ISurveillance[]
-  /** Provient de iv.interactions_pertinentes — null si la fiche n'a pas de
-   * forme injectable. */
-  interactionsMedicamenteuses: ISurveillance[] | null
+  /** Provient de commun.interactions_pertinentes, indépendamment de la forme
+   * choisie. */
+  interactionsMedicamenteuses: ISurveillance[]
+  /** Provient de commun.pictogrammes — toujours vide dans les fiches
+   * publiées à ce jour, pas encore d'emplacement d'affichage dédié. */
+  pictogrammes: string[]
   iv: IFormeIv | null
   oral: IFormeOraleBloc | null
   rcpSource: IRcpSource[]
@@ -252,6 +253,17 @@ export interface IFicheSourceCommun {
   antidote: string
   indications: string[]
   grossesse_allaitement: IGrossesseAllaitementRcp | null
+  // Les quatre champs suivants décrivent la molécule, pas une voie
+  // d'administration — schéma v2 : ils vivent exclusivement dans `commun`,
+  // jamais sous `iv`/`oral`/`aerosol` (seule exception : iv.incompatibilites,
+  // qui ne fait sens que pour la voie injectable). Dans l'ancien schéma, ils
+  // vivaient sous `iv` et disparaissaient silencieusement pour une molécule
+  // sans forme injectable — voir CLAUDE.md du dossier de génération des
+  // fiches pour le détail de cette règle.
+  contre_indications: string[]
+  interactions_pertinentes: IInteractionRcp[]
+  surveillance_specifique: ISurveillanceRcp[]
+  pictogrammes: string[]
 }
 
 export interface IFicheSourceIv {
@@ -261,11 +273,10 @@ export interface IFicheSourceIv {
     note_ajustement?: string
     posologie: IPosologieRcp[]
   }
+  /** Seul bloc de précaution qui reste sous `iv` : une incompatibilité en Y
+   * porte sur le mélange de deux solutions dans une tubulure, ce qui n'a pas
+   * de sens hors de la voie injectable. */
   incompatibilites: IIncompatibilite[]
-  interactions_pertinentes: IInteractionRcp[]
-  contre_indications: string[]
-  surveillance_specifique: ISurveillanceRcp[]
-  pictogrammes: string[]
 }
 
 export interface IFicheSourceOral {

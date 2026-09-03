@@ -6,7 +6,7 @@ import SourcesRcp from './SourcesRcp'
 
 interface IPrecautionsFicheProps {
   surveillanceSpecifique: ISurveillance[]
-  interactionsMedicamenteuses: ISurveillance[] | null
+  interactionsMedicamenteuses: ISurveillance[]
   grossesseAllaitement: IGrossesseAllaitementRcp | null
   rcpSource: IRcpSource[]
   statut: string
@@ -30,7 +30,7 @@ export default function PrecautionsFiche({
   prochaineRevision,
 }: IPrecautionsFicheProps) {
   const aSurveillance = surveillanceSpecifique.length > 0
-  const aInteractions = (interactionsMedicamenteuses?.length ?? 0) > 0
+  const aInteractions = interactionsMedicamenteuses.length > 0
 
   // Rien à montrer dans cette zone : ni précaution, ni sources — n'arrive
   // pas en pratique (rcpSource existe toujours), mais reste correct si un
@@ -78,7 +78,7 @@ export default function PrecautionsFiche({
 
         {aInteractions && (
           <GroupePrecaution icone={Blend} titre="Interactions médicamenteuses">
-            <AccordeonImbrique items={interactionsMedicamenteuses!} />
+            <AccordeonImbrique items={interactionsMedicamenteuses} />
           </GroupePrecaution>
         )}
 

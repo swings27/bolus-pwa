@@ -20,7 +20,61 @@
       "url_crat_grossesse": "https://www.lecrat.fr/3869/",
       "url_crat_allaitement": "https://www.lecrat.fr/3871/",
       "source": "RCP solution injectable 10 mg/2 mL, section 4.6"
-    }
+    },
+    "contre_indications": [
+      "Hypersensibilité",
+      "Insuffisance respiratoire sévère",
+      "Syndrome d'apnée du sommeil",
+      "Insuffisance hépatique sévère",
+      "Myasthénie"
+    ],
+    "interactions_pertinentes": [
+      {
+        "substance": "Alcool",
+        "effet": "Majoration par l'alcool de l'effet sédatif des benzodiazépines. L'altération de la vigilance peut rendre dangereuses la conduite de véhicules et l'utilisation de machines.",
+        "action_infirmier": "Éviter la prise de boissons alcoolisées ou de médicaments contenant de l'alcool ; avertir le patient.",
+        "source_rcp": "RCP VALIUM 10 mg/2 mL, 4.5"
+      },
+      {
+        "substance": "Opioïdes",
+        "effet": "L'utilisation concomitante d'opioïdes avec le diazépam augmente le risque de sédation, de dépression respiratoire, de coma et de décès en raison d'un effet dépresseur cumulatif sur le système nerveux central.",
+        "action_infirmier": "Surveiller étroitement la fonction respiratoire et l'état de conscience ; limiter la dose et la durée de l'association.",
+        "source_rcp": "RCP VALIUM 10 mg/2 mL, 4.5"
+      },
+      {
+        "substance": "Clozapine",
+        "effet": "Risque accru de collapsus avec arrêt respiratoire et/ou cardiaque.",
+        "action_infirmier": "Surveillance cardio-respiratoire renforcée en cas d'association.",
+        "source_rcp": "RCP VALIUM 10 mg/2 mL, 4.5"
+      },
+      {
+        "substance": "Autres dépresseurs du système nerveux central",
+        "effet": "Majoration de la dépression centrale. Pour les dérivés morphiniques et les barbituriques : risque majoré de dépression respiratoire, pouvant être fatale en cas de surdosage.",
+        "action_infirmier": "Surveillance renforcée de la vigilance et de la fonction respiratoire ; éviter les associations non justifiées.",
+        "source_rcp": "RCP VALIUM 10 mg/2 mL, 4.5"
+      }
+    ],
+    "surveillance_specifique": [
+      {
+        "evenement": "Apnée en cas d'injection IV trop rapide",
+        "explication": "Le RCP impose une injection lente en raison d'un risque d'apnée documenté en cas d'injection IV rapide (RCP 4.2 et 4.8).",
+        "action": "Respecter la vitesse d'injection indiquée en Préparation ; disposer de matériel de réanimation respiratoire à proximité.",
+        "source_rcp": "RCP VALIUM 10 mg/2 mL, 4.2 et 4.8 ; guide HUG des médicaments injectables"
+      },
+      {
+        "evenement": "Dépression respiratoire",
+        "explication": "Effet indésirable documenté (RCP 4.8, Affections respiratoires), dose-dépendant.",
+        "action": "Surveiller la fréquence respiratoire et la saturation, en particulier chez les patients atteints d'une pathologie respiratoire.",
+        "source_rcp": "RCP VALIUM 10 mg/2 mL, 4.8"
+      },
+      {
+        "evenement": "Agressivité veineuse de la solution",
+        "explication": "Solution très hyperosmolaire (7775 mOsm/kg à 5 mg/mL) contenant du propylène glycol et de l'éthanol comme co-solvants (source HUG).",
+        "action": "Injecter dans une grosse veine, préférer une voie veineuse centrale si disponible, éviter toute extravasation, utiliser du matériel sans PVC.",
+        "source_rcp": "Guide HUG des médicaments injectables"
+      }
+    ],
+    "pictogrammes": []
   },
   "iv": {
     "reconstitution": null,
@@ -86,60 +140,6 @@
         "niveau": "absolu"
       }
     ],
-    "interactions_pertinentes": [
-      {
-        "substance": "Alcool",
-        "effet": "Majoration par l'alcool de l'effet sédatif des benzodiazépines. L'altération de la vigilance peut rendre dangereuses la conduite de véhicules et l'utilisation de machines.",
-        "action_infirmier": "Éviter la prise de boissons alcoolisées ou de médicaments contenant de l'alcool ; avertir le patient.",
-        "source_rcp": "RCP VALIUM 10 mg/2 mL, 4.5"
-      },
-      {
-        "substance": "Opioïdes",
-        "effet": "L'utilisation concomitante d'opioïdes avec le diazépam augmente le risque de sédation, de dépression respiratoire, de coma et de décès en raison d'un effet dépresseur cumulatif sur le système nerveux central.",
-        "action_infirmier": "Surveiller étroitement la fonction respiratoire et l'état de conscience ; limiter la dose et la durée de l'association.",
-        "source_rcp": "RCP VALIUM 10 mg/2 mL, 4.5"
-      },
-      {
-        "substance": "Clozapine",
-        "effet": "Risque accru de collapsus avec arrêt respiratoire et/ou cardiaque.",
-        "action_infirmier": "Surveillance cardio-respiratoire renforcée en cas d'association.",
-        "source_rcp": "RCP VALIUM 10 mg/2 mL, 4.5"
-      },
-      {
-        "substance": "Autres dépresseurs du système nerveux central",
-        "effet": "Majoration de la dépression centrale. Pour les dérivés morphiniques et les barbituriques : risque majoré de dépression respiratoire, pouvant être fatale en cas de surdosage.",
-        "action_infirmier": "Surveillance renforcée de la vigilance et de la fonction respiratoire ; éviter les associations non justifiées.",
-        "source_rcp": "RCP VALIUM 10 mg/2 mL, 4.5"
-      }
-    ],
-    "contre_indications": [
-      "Hypersensibilité",
-      "Insuffisance respiratoire sévère",
-      "Syndrome d'apnée du sommeil",
-      "Insuffisance hépatique sévère",
-      "Myasthénie"
-    ],
-    "surveillance_specifique": [
-      {
-        "evenement": "Apnée en cas d'injection IV trop rapide",
-        "explication": "Le RCP impose une injection lente en raison d'un risque d'apnée documenté en cas d'injection IV rapide (RCP 4.2 et 4.8).",
-        "action": "Respecter la vitesse d'injection indiquée en Préparation ; disposer de matériel de réanimation respiratoire à proximité.",
-        "source_rcp": "RCP VALIUM 10 mg/2 mL, 4.2 et 4.8 ; guide HUG des médicaments injectables"
-      },
-      {
-        "evenement": "Dépression respiratoire",
-        "explication": "Effet indésirable documenté (RCP 4.8, Affections respiratoires), dose-dépendant.",
-        "action": "Surveiller la fréquence respiratoire et la saturation, en particulier chez les patients atteints d'une pathologie respiratoire.",
-        "source_rcp": "RCP VALIUM 10 mg/2 mL, 4.8"
-      },
-      {
-        "evenement": "Agressivité veineuse de la solution",
-        "explication": "Solution très hyperosmolaire (7775 mOsm/kg à 5 mg/mL) contenant du propylène glycol et de l'éthanol comme co-solvants (source HUG).",
-        "action": "Injecter dans une grosse veine, préférer une voie veineuse centrale si disponible, éviter toute extravasation, utiliser du matériel sans PVC.",
-        "source_rcp": "Guide HUG des médicaments injectables"
-      }
-    ],
-    "pictogrammes": [],
     "preparation": [
       {
         "voie": "IM",

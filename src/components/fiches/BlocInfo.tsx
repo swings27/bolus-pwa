@@ -40,16 +40,20 @@ export default function BlocInfo({ label, variant, children, repliable = false }
   const [tronque, setTronque] = useState(false)
   const corpsRef = useRef<HTMLDivElement>(null)
 
-  // Mesuré une seule fois par contenu, à l'état replié (voir dépendances) :
-  // scrollHeight > clientHeight ne veut dire quelque chose que tant que le
-  // line-clamp est actif — une fois déplié, les deux valeurs s'égalisent et
-  // ne renseigneraient plus sur le débordement réel du contenu.
+  // Ne mesure qu'à l'état replié (voir "ouvert" dans la garde et les
+  // dépendances) : scrollHeight > clientHeight ne veut dire quelque chose que
+  // tant que le line-clamp est actif — une fois déplié, les deux valeurs
+  // s'égalisent, ce qui remettrait `tronque` à faux et ferait disparaître le
+  // bouton "Réduire" au moindre re-render pendant que le bloc est ouvert
+  // (ex. un état sans rapport qui change ailleurs sur la page). `ouvert`
+  // dans les dépendances re-mesure au moment précis où l'utilisateur replie
+  // à nouveau, pour rester exact si le contenu a changé entre-temps.
   useLayoutEffect(() => {
-    if (!repliable) return
+    if (!repliable || ouvert) return
     const el = corpsRef.current
     if (!el) return
     setTronque(el.scrollHeight > el.clientHeight + 1)
-  }, [repliable, children])
+  }, [repliable, ouvert, children])
 
   return (
     <div

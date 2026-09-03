@@ -18,7 +18,84 @@
       "url_crat_grossesse": null,
       "url_crat_allaitement": null,
       "source": "RCP solution injectable 1 mg/mL en ampoule, section 4.6"
-    }
+    },
+    "interactions_pertinentes": [
+      {
+        "substance": "Anesthésiques volatils halogénés",
+        "effet": "Risque de troubles du rythme ventriculaire graves par augmentation de l'excitabilité cardiaque (RCP).",
+        "action_infirmier": "Signaler au prescripteur/anesthésiste toute administration d'adrénaline chez un patient sous anesthésique volatil halogéné. Association déconseillée par voie IV/IM ; par voie SC, limiter l'apport (ex. moins de 0,1 mg en 10 minutes).",
+        "source_rcp": "RCP Adrénaline Aguettant 1 mg/mL ampoule, section 4.5"
+      },
+      {
+        "substance": "Antidépresseurs imipraminiques",
+        "effet": "Hypertension paroxystique avec possibilité de troubles du rythme, par inhibition de l'entrée de l'adrénaline dans la fibre sympathique (RCP).",
+        "action_infirmier": "Signaler au prescripteur toute prise concomitante d'un antidépresseur imipraminique. Association déconseillée par voie IV/IM.",
+        "source_rcp": "RCP Adrénaline Aguettant 1 mg/mL ampoule / Renaudin, section 4.5"
+      },
+      {
+        "substance": "Médicaments mixtes adrénergiques-sérotoninergiques",
+        "effet": "Hypertension paroxystique avec possibilité de troubles du rythme, par le même mécanisme que les imipraminiques (RCP).",
+        "action_infirmier": "Signaler au prescripteur toute prise concomitante. Association déconseillée par voie IV/IM.",
+        "source_rcp": "RCP Adrénaline Aguettant 1 mg/mL ampoule, section 4.5"
+      },
+      {
+        "substance": "IMAO non sélectifs, IMAO-A sélectifs, linézolide",
+        "effet": "Augmentation de l'action vasopressive de l'adrénaline, habituellement modérée mais parfois marquée (RCP).",
+        "action_infirmier": "Signaler au prescripteur toute prise concomitante d'un IMAO ou de linézolide. À n'utiliser que sous contrôle médical strict.",
+        "source_rcp": "RCP Adrénaline Aguettant 1 mg/mL ampoule / Renaudin, section 4.5"
+      },
+      {
+        "substance": "Bêta-bloquants adrénergiques non cardiosélectifs",
+        "effet": "Une hypertension artérielle sévère et une bradycardie réflexe peuvent survenir. Les bêta-bloquants antagonisent également les effets cardiaques et bronchodilatateurs de l'adrénaline (RCP).",
+        "action_infirmier": "Signaler au prescripteur toute prise de bêta-bloquant, surtout non cardiosélectif. Surveillance renforcée de la tension artérielle et de la fréquence cardiaque.",
+        "source_rcp": "RCP Adrénaline Aguettant 0,1 mg/mL sans sulfite, section 4.5"
+      },
+      {
+        "substance": "Insuline ou hypoglycémiants oraux",
+        "effet": "L'hyperglycémie provoquée par l'adrénaline peut conduire à une perte de la maîtrise de la glycémie chez les patients diabétiques traités par insuline ou hypoglycémiants oraux (RCP).",
+        "action_infirmier": "Surveillance renforcée de la glycémie chez les patients diabétiques recevant de l'adrénaline.",
+        "source_rcp": "RCP Adrénaline Aguettant 0,1 mg/mL sans sulfite, section 4.5"
+      }
+    ],
+    "contre_indications": [
+      "Troubles du rythme, surtout ventriculaires",
+      "Myocardiopathie obstructive sévère",
+      "Insuffisance coronarienne",
+      "Hypersensibilité connue à l'adrénaline, aux sulfites ou à l'un des excipients, contre-indication relative compte tenu du caractère vital de l'indication d'urgence (RCP : 'ce médicament étant indiqué en situation d'urgence, ces contre-indications sont relatives')"
+    ],
+    "surveillance_specifique": [
+      {
+        "evenement": "Troubles du rythme ventriculaire graves, avec risque de fibrillation ventriculaire parfois létale",
+        "explication": "Toute administration intraveineuse d'adrénaline peut entraîner ce type de trouble du rythme, risque explicitement mis en avant dans les mises en garde spéciales du RCP, propre à l'action directe de l'adrénaline sur les récepteurs bêta-adrénergiques cardiaques.",
+        "action": "Surveillance cardiovasculaire étroite, monitorage électrocardiographique continu si possible pendant et après l'administration IV.",
+        "source_rcp": "RCP Adrénaline Aguettant 1 mg/mL ampoule, section 4.4 : 'Toute administration par voie intraveineuse d'adrénaline peut entraîner des troubles du rythme ventriculaire avec risque de fibrillation ventriculaire parfois létale, ainsi que des élévations tensionnelles.'"
+      },
+      {
+        "evenement": "Nécrose au site d'injection en cas d'injections locales répétées ou d'extravasation",
+        "explication": "Résulte de la vasoconstriction locale puissante induite par l'adrénaline, mécanisme propre à cette molécule, pas une irritation générique liée au contenant.",
+        "action": "Varier les sites d'injection en cas d'administrations répétées ; surveiller l'apparition de signes de nécrose ou de pâleur cutanée locale ; éviter toute extravasation, notamment en perfusion continue.",
+        "source_rcp": "RCP Adrénaline Aguettant 1 mg/mL ampoule / Renaudin, section 4.4/4.8 : 'Des injections locales répétées peuvent provoquer une nécrose au niveau des points d'injection par vasoconstriction.'"
+      },
+      {
+        "evenement": "Hyperglycémie",
+        "explication": "L'adrénaline peut causer ou aggraver une hyperglycémie, notamment chez les patients diabétiques.",
+        "action": "Surveiller la glycémie, en particulier chez les patients diabétiques.",
+        "source_rcp": "RCP Adrénaline Aguettant 0,1 mg/mL sans sulfite, section 4.4 : 'L'adrénaline pouvant causer ou aggraver l'hyperglycémie, la glycémie doit être surveillée, en particulier chez les patients diabétiques.'"
+      },
+      {
+        "evenement": "Cardiomyopathie de stress",
+        "explication": "Effet indésirable cardiaque spécifiquement documenté avec l'adrénaline dans plusieurs RCP de la molécule.",
+        "action": "Surveillance clinique et ECG en cas de douleur thoracique ou de signes évocateurs après administration d'adrénaline.",
+        "source_rcp": "RCP Adrénaline Aguettant 1 mg/mL ampoule, section 4.8 : 'Des cas de syndrome de takotsubo (cardiomyopathie de stress) ont également été rapportés.'"
+      },
+      {
+        "evenement": "Hypertension artérielle sévère à haute dose ou chez les patients sensibles, avec risque d'hémorragie cérébrale",
+        "explication": "Aux doses élevées, la stimulation des récepteurs alpha périphériques par l'adrénaline conduit à une augmentation marquée des résistances périphériques et de la pression artérielle.",
+        "action": "Mesures fréquentes de la tension artérielle pendant et après l'administration, en particulier lors de bolus répétés ou à doses élevées.",
+        "source_rcp": "RCP Adrénaline Aguettant 1 mg/mL ampoule, section 4.8 : 'À forte dose ou chez les patients sensibles à l'adrénaline [...] accès d'hypertension artérielle (provoquant parfois une hémorragie cérébrale).'"
+      }
+    ],
+    "pictogrammes": []
   },
   "iv": {
     "reconstitution": null,
@@ -166,83 +243,6 @@
         "niveau": "absolu"
       }
     ],
-    "interactions_pertinentes": [
-      {
-        "substance": "Anesthésiques volatils halogénés",
-        "effet": "Risque de troubles du rythme ventriculaire graves par augmentation de l'excitabilité cardiaque (RCP).",
-        "action_infirmier": "Signaler au prescripteur/anesthésiste toute administration d'adrénaline chez un patient sous anesthésique volatil halogéné. Association déconseillée par voie IV/IM ; par voie SC, limiter l'apport (ex. moins de 0,1 mg en 10 minutes).",
-        "source_rcp": "RCP Adrénaline Aguettant 1 mg/mL ampoule, section 4.5"
-      },
-      {
-        "substance": "Antidépresseurs imipraminiques",
-        "effet": "Hypertension paroxystique avec possibilité de troubles du rythme, par inhibition de l'entrée de l'adrénaline dans la fibre sympathique (RCP).",
-        "action_infirmier": "Signaler au prescripteur toute prise concomitante d'un antidépresseur imipraminique. Association déconseillée par voie IV/IM.",
-        "source_rcp": "RCP Adrénaline Aguettant 1 mg/mL ampoule / Renaudin, section 4.5"
-      },
-      {
-        "substance": "Médicaments mixtes adrénergiques-sérotoninergiques",
-        "effet": "Hypertension paroxystique avec possibilité de troubles du rythme, par le même mécanisme que les imipraminiques (RCP).",
-        "action_infirmier": "Signaler au prescripteur toute prise concomitante. Association déconseillée par voie IV/IM.",
-        "source_rcp": "RCP Adrénaline Aguettant 1 mg/mL ampoule, section 4.5"
-      },
-      {
-        "substance": "IMAO non sélectifs, IMAO-A sélectifs, linézolide",
-        "effet": "Augmentation de l'action vasopressive de l'adrénaline, habituellement modérée mais parfois marquée (RCP).",
-        "action_infirmier": "Signaler au prescripteur toute prise concomitante d'un IMAO ou de linézolide. À n'utiliser que sous contrôle médical strict.",
-        "source_rcp": "RCP Adrénaline Aguettant 1 mg/mL ampoule / Renaudin, section 4.5"
-      },
-      {
-        "substance": "Bêta-bloquants adrénergiques non cardiosélectifs",
-        "effet": "Une hypertension artérielle sévère et une bradycardie réflexe peuvent survenir. Les bêta-bloquants antagonisent également les effets cardiaques et bronchodilatateurs de l'adrénaline (RCP).",
-        "action_infirmier": "Signaler au prescripteur toute prise de bêta-bloquant, surtout non cardiosélectif. Surveillance renforcée de la tension artérielle et de la fréquence cardiaque.",
-        "source_rcp": "RCP Adrénaline Aguettant 0,1 mg/mL sans sulfite, section 4.5"
-      },
-      {
-        "substance": "Insuline ou hypoglycémiants oraux",
-        "effet": "L'hyperglycémie provoquée par l'adrénaline peut conduire à une perte de la maîtrise de la glycémie chez les patients diabétiques traités par insuline ou hypoglycémiants oraux (RCP).",
-        "action_infirmier": "Surveillance renforcée de la glycémie chez les patients diabétiques recevant de l'adrénaline.",
-        "source_rcp": "RCP Adrénaline Aguettant 0,1 mg/mL sans sulfite, section 4.5"
-      }
-    ],
-    "contre_indications": [
-      "Troubles du rythme, surtout ventriculaires",
-      "Myocardiopathie obstructive sévère",
-      "Insuffisance coronarienne",
-      "Hypersensibilité connue à l'adrénaline, aux sulfites ou à l'un des excipients, contre-indication relative compte tenu du caractère vital de l'indication d'urgence (RCP : 'ce médicament étant indiqué en situation d'urgence, ces contre-indications sont relatives')"
-    ],
-    "surveillance_specifique": [
-      {
-        "evenement": "Troubles du rythme ventriculaire graves, avec risque de fibrillation ventriculaire parfois létale",
-        "explication": "Toute administration intraveineuse d'adrénaline peut entraîner ce type de trouble du rythme, risque explicitement mis en avant dans les mises en garde spéciales du RCP, propre à l'action directe de l'adrénaline sur les récepteurs bêta-adrénergiques cardiaques.",
-        "action": "Surveillance cardiovasculaire étroite, monitorage électrocardiographique continu si possible pendant et après l'administration IV.",
-        "source_rcp": "RCP Adrénaline Aguettant 1 mg/mL ampoule, section 4.4 : 'Toute administration par voie intraveineuse d'adrénaline peut entraîner des troubles du rythme ventriculaire avec risque de fibrillation ventriculaire parfois létale, ainsi que des élévations tensionnelles.'"
-      },
-      {
-        "evenement": "Nécrose au site d'injection en cas d'injections locales répétées ou d'extravasation",
-        "explication": "Résulte de la vasoconstriction locale puissante induite par l'adrénaline, mécanisme propre à cette molécule, pas une irritation générique liée au contenant.",
-        "action": "Varier les sites d'injection en cas d'administrations répétées ; surveiller l'apparition de signes de nécrose ou de pâleur cutanée locale ; éviter toute extravasation, notamment en perfusion continue.",
-        "source_rcp": "RCP Adrénaline Aguettant 1 mg/mL ampoule / Renaudin, section 4.4/4.8 : 'Des injections locales répétées peuvent provoquer une nécrose au niveau des points d'injection par vasoconstriction.'"
-      },
-      {
-        "evenement": "Hyperglycémie",
-        "explication": "L'adrénaline peut causer ou aggraver une hyperglycémie, notamment chez les patients diabétiques.",
-        "action": "Surveiller la glycémie, en particulier chez les patients diabétiques.",
-        "source_rcp": "RCP Adrénaline Aguettant 0,1 mg/mL sans sulfite, section 4.4 : 'L'adrénaline pouvant causer ou aggraver l'hyperglycémie, la glycémie doit être surveillée, en particulier chez les patients diabétiques.'"
-      },
-      {
-        "evenement": "Cardiomyopathie de stress",
-        "explication": "Effet indésirable cardiaque spécifiquement documenté avec l'adrénaline dans plusieurs RCP de la molécule.",
-        "action": "Surveillance clinique et ECG en cas de douleur thoracique ou de signes évocateurs après administration d'adrénaline.",
-        "source_rcp": "RCP Adrénaline Aguettant 1 mg/mL ampoule, section 4.8 : 'Des cas de syndrome de takotsubo (cardiomyopathie de stress) ont également été rapportés.'"
-      },
-      {
-        "evenement": "Hypertension artérielle sévère à haute dose ou chez les patients sensibles, avec risque d'hémorragie cérébrale",
-        "explication": "Aux doses élevées, la stimulation des récepteurs alpha périphériques par l'adrénaline conduit à une augmentation marquée des résistances périphériques et de la pression artérielle.",
-        "action": "Mesures fréquentes de la tension artérielle pendant et après l'administration, en particulier lors de bolus répétés ou à doses élevées.",
-        "source_rcp": "RCP Adrénaline Aguettant 1 mg/mL ampoule, section 4.8 : 'À forte dose ou chez les patients sensibles à l'adrénaline [...] accès d'hypertension artérielle (provoquant parfois une hémorragie cérébrale).'"
-      }
-    ],
-    "pictogrammes": [],
     "preparation": [
       {
         "voie": "IVD",

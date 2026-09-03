@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import type { ReactNode } from 'react'
-import { ChevronRight } from 'lucide-react'
 import BlocAvertissement from '../layout/BlocAvertissement'
 import TitreSectionFiche from './TitreSectionFiche'
+import ChevronBascule from './ChevronBascule'
 import {
   dedupliquerPosologies,
   formaterDose,
@@ -104,10 +104,7 @@ function BlocGroupe({ titre, repliable, children }: { titre: string | null; repl
         className="tactile mb-1.5 flex items-center gap-1 text-left"
       >
         <span className="text-[10.5px] font-semibold uppercase tracking-wide text-texte-doux">{titre}</span>
-        <ChevronRight
-          className={`h-3 w-3 shrink-0 text-texte-doux transition-transform duration-200 ${ouvert ? 'rotate-90' : ''}`}
-          aria-hidden="true"
-        />
+        <ChevronBascule ouvert={ouvert} className="h-3 w-3 text-texte-doux" />
       </button>
       {ouvert && children}
     </div>
@@ -142,7 +139,14 @@ export default function SectionPosologies({ titre, posologies, contexte, ajustem
 
       {[...groupes.entries()].map(([cle, items]) => (
         <div key={cle} className="mb-3.5 last:mb-0">
-          <BlocGroupe titre={groupes.size > 1 ? libelleCategoriePosologie(cle, contexte) : null} repliable={cle === 'speciale'}>
+          {/* Le libellé de groupe s'affiche aussi quand c'est le seul groupe,
+              dès lors qu'il s'agit d'un protocole "speciale" : le signaler
+              reste utile même seul, et c'est ce même libellé qui porte le
+              bouton de repli (BlocGroupe ignore `repliable` sans titre). */}
+          <BlocGroupe
+            titre={groupes.size > 1 || cle === 'speciale' ? libelleCategoriePosologie(cle, contexte) : null}
+            repliable={cle === 'speciale'}
+          >
             <div className="flex flex-col gap-2.5">
               {items.map((p, index) => (
                 <CartePosologie key={`${cle}-${index}`} p={p} />

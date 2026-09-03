@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import { ChevronRight } from 'lucide-react'
 import type { ISurveillance } from '../../types'
+import ChevronBascule from './ChevronBascule'
 
 interface IAccordeonImbriqueProps {
   items: ISurveillance[]
@@ -35,12 +35,7 @@ export default function AccordeonImbrique({ items }: IAccordeonImbriqueProps) {
                   de déplier — la hiérarchie ne doit pas reposer sur le seul
                   gras. */}
               <span className="text-[13px] font-semibold text-texte">{item.titre}</span>
-              <ChevronRight
-                className={`h-3.5 w-3.5 shrink-0 text-accent transition-transform duration-200 ${
-                  ouvert ? 'rotate-90' : ''
-                }`}
-                aria-hidden="true"
-              />
+              <ChevronBascule ouvert={ouvert} className="h-3.5 w-3.5 text-accent" />
             </button>
             {ouvert && (
               // pl-0.5 : léger alinéa qui rattache visuellement le corps au

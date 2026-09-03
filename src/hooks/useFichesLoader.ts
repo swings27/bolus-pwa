@@ -3,6 +3,7 @@ import { db } from '../db'
 import { CLE_FICHES_VERSION, CLE_FICHES_DATE_CATALOGUE } from '../db/cles'
 import { CATALOGUE_FICHES } from '../data/categoriesFiches'
 import { construireFiche } from '../utils/construireFiche'
+import { validerFicheSource } from '../utils/validerFicheSource'
 import type { IFiche, IFicheSource } from '../types'
 
 interface IVersionFichier {
@@ -80,6 +81,19 @@ export function useFichesLoader(): IEtatChargement {
         // le JSON clinique lui-même).
         const ids = Object.keys(CATALOGUE_FICHES)
         const brutes = await Promise.all(ids.map((id) => recupererJson<IFicheSource>(`/data/${id}.json`)))
+
+        // Valide la forme de CHAQUE fichier avant de les assembler en
+        // fiches : sans ça, un champ mal nommé ou du mauvais type ne casse
+        // rien (construireFiche() est tolérante — un "—" apparaît juste à
+        // l'affichage) ou, pire, fait planter le chargement avec un message
+        // technique qui ne dit ni quel fichier ni quel champ est en cause.
+        // Les erreurs de tous les fichiers sont accumulées avant d'échouer,
+        // pour ne pas devoir corriger puis recharger un par un.
+        const erreursValidation = brutes.flatMap((brut, index) => validerFicheSource(ids[index], brut))
+        if (erreursValidation.length > 0) {
+          throw new Error(erreursValidation.join('\n'))
+        }
+
         const fiches: IFiche[] = brutes.map((brut, index) => construireFiche(ids[index], brut, CATALOGUE_FICHES[ids[index]]))
 
         // Le fichier distant est un instantané complet du catalogue (pas un

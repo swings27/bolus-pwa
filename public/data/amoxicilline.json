@@ -23,7 +23,76 @@
       "url_crat_grossesse": "https://www.lecrat.fr/6654/",
       "url_crat_allaitement": "https://www.lecrat.fr/6655/",
       "source": "RCP poudre pour solution injectable/pour perfusion 500 mg, section 4.6"
-    }
+    },
+    "contre_indications": [
+      "Hypersensibilité à la substance active, aux pénicillines ou à l'un des excipients",
+      "Antécédents de réaction d'hypersensibilité immédiate sévère (par ex. anaphylaxie) à une autre bêta-lactamine (céphalosporine, carbapénème ou monobactame)"
+    ],
+    "interactions_pertinentes": [
+      {
+        "substance": "Probénécide",
+        "effet": "Le probénécide diminue la sécrétion tubulaire rénale de l'amoxicilline, ce qui peut conduire à une augmentation prolongée de la concentration sanguine d'amoxicilline.",
+        "action_infirmier": "Association non recommandée par le RCP. Signaler au prescripteur toute co-prescription de probénécide et surveiller les signes de surdosage.",
+        "source_rcp": "RCP Xyllomac 500 mg, section 4.5"
+      },
+      {
+        "substance": "Allopurinol",
+        "effet": "L'administration concomitante d'allopurinol peut augmenter la probabilité de réactions cutanées allergiques.",
+        "action_infirmier": "Surveiller l'apparition de toute éruption cutanée chez les patients sous allopurinol.",
+        "source_rcp": "RCP Xyllomac 500 mg, section 4.5"
+      },
+      {
+        "substance": "Tétracyclines",
+        "effet": "Les tétracyclines et d'autres médicaments bactériostatiques peuvent interférer avec les effets bactéricides de l'amoxicilline.",
+        "action_infirmier": "Signaler au prescripteur toute co-prescription avec une tétracycline ou un autre antibiotique bactériostatique.",
+        "source_rcp": "RCP Xyllomac 500 mg, section 4.5"
+      },
+      {
+        "substance": "Anticoagulants oraux",
+        "effet": "De rares cas de prolongation du temps de Quick ont été signalés chez des patients recevant de l'amoxicilline.",
+        "action_infirmier": "Surveiller l'INR pendant le traitement et lors de l'ajout ou du retrait de l'amoxicilline chez tout patient sous AVK (acénocoumarol, warfarine).",
+        "source_rcp": "RCP Xyllomac 500 mg, section 4.4 et 4.5"
+      },
+      {
+        "substance": "Méthotrexate",
+        "effet": "Les pénicillines peuvent réduire l'excrétion du méthotrexate et augmenter ainsi sa toxicité.",
+        "action_infirmier": "Signaler immédiatement au prescripteur toute co-prescription avec le méthotrexate.",
+        "source_rcp": "RCP Xyllomac 500 mg, section 4.5"
+      }
+    ],
+    "surveillance_specifique": [
+      {
+        "evenement": "Cristallurie, y compris lésions rénales aiguës, chez un patient à faible débit urinaire ou porteur d'une sonde vésicale",
+        "explication": "Survient principalement lors d'une administration parentérale à forte dose ; l'amoxicilline peut précipiter dans les sondes vésicales.",
+        "action": "Assurer un apport hydrique suffisant lors des perfusions de fortes doses. Surveiller la diurèse. Chez un patient sondé, contrôler régulièrement la perméabilité de la sonde.",
+        "source_rcp": "RCP Xyllomac 500 mg, section 4.4 : 'De très rares cas de cristallurie (incluant des lésions rénales aiguës) ont été observés chez des patients ayant un faible débit urinaire, principalement lors d'une administration parentérale. [...] Chez des patients porteurs de sondes vésicales, il convient de contrôler régulièrement la perméabilité de la sonde.'"
+      },
+      {
+        "evenement": "Pustulose exanthématique aiguë généralisée (PEAG) en début de traitement",
+        "explication": "Se manifeste par un érythème généralisé fébrile associé à des pustules, en tout début de traitement.",
+        "action": "Arrêter immédiatement le traitement en cas d'érythème fébrile avec pustules. Contre-indication définitive à toute nouvelle administration d'amoxicilline.",
+        "source_rcp": "RCP Xyllomac 500 mg, section 4.4 : 'L'apparition en début de traitement d'un érythème généralisé fébrile, associé à des pustules, peut être le symptôme d'une pustulose exanthématique aiguë généralisée (PEAG). Cette réaction impose l'arrêt de l'amoxicilline et contre-indique toute administration ultérieure de ce médicament.'"
+      },
+      {
+        "evenement": "Éruption cutanée morbilliforme chez un patient avec mononucléose infectieuse suspectée",
+        "explication": "L'amoxicilline doit être évitée en cas de suspicion de mononucléose infectieuse.",
+        "action": "Vérifier l'absence de suspicion de mononucléose infectieuse avant l'administration. En cas d'éruption, informer le médecin et ne pas réadministrer sans avis.",
+        "source_rcp": "RCP Xyllomac 500 mg, section 4.4 : 'L'amoxicilline doit être évitée en cas de suspicion de mononucléose infectieuse car la survenue d'une éruption morbilliforme a été associée à cette pathologie après l'utilisation d'amoxicilline.'"
+      },
+      {
+        "evenement": "Convulsions à fortes doses IV chez l'insuffisant rénal ou en cas d'antécédents de convulsions/épilepsie/atteinte méningée",
+        "explication": "Risque documenté avec les fortes doses de bêta-lactamines chez les patients prédisposés.",
+        "action": "Surveiller les signes neurologiques lors de perfusions de fortes doses. Adapter la dose à la fonction rénale avant chaque administration.",
+        "source_rcp": "RCP Xyllomac 500 mg, section 4.4 : 'Des convulsions peuvent apparaître chez les patients insuffisants rénaux ou recevant des doses élevées ou chez les patients présentant des facteurs de prédisposition (antécédents de convulsions, épilepsie traitée, troubles méningés).'"
+      },
+      {
+        "evenement": "Réaction de Jarisch-Herxheimer lors du traitement de la maladie de Lyme",
+        "explication": "Conséquence directe de l'activité bactéricide de l'amoxicilline sur Borrelia burgdorferi, en général spontanément résolutive.",
+        "action": "Rassurer le patient traité pour une maladie de Lyme sur le caractère fréquent et généralement spontanément résolutif de cette réaction fébrile en début de traitement.",
+        "source_rcp": "RCP Xyllomac 500 mg, section 4.4 : 'Des réactions de Jarisch-Herxheimer ont été observées après traitement de la maladie de Lyme par amoxicilline. [...] conséquence fréquente et en général spontanément résolutive du traitement antibiotique de la maladie de Lyme.'"
+      }
+    ],
+    "pictogrammes": []
   },
   "iv": {
     "reconstitution": {
@@ -212,75 +281,6 @@
         "niveau": "absolu"
       }
     ],
-    "interactions_pertinentes": [
-      {
-        "substance": "Probénécide",
-        "effet": "Le probénécide diminue la sécrétion tubulaire rénale de l'amoxicilline, ce qui peut conduire à une augmentation prolongée de la concentration sanguine d'amoxicilline.",
-        "action_infirmier": "Association non recommandée par le RCP. Signaler au prescripteur toute co-prescription de probénécide et surveiller les signes de surdosage.",
-        "source_rcp": "RCP Xyllomac 500 mg, section 4.5"
-      },
-      {
-        "substance": "Allopurinol",
-        "effet": "L'administration concomitante d'allopurinol peut augmenter la probabilité de réactions cutanées allergiques.",
-        "action_infirmier": "Surveiller l'apparition de toute éruption cutanée chez les patients sous allopurinol.",
-        "source_rcp": "RCP Xyllomac 500 mg, section 4.5"
-      },
-      {
-        "substance": "Tétracyclines",
-        "effet": "Les tétracyclines et d'autres médicaments bactériostatiques peuvent interférer avec les effets bactéricides de l'amoxicilline.",
-        "action_infirmier": "Signaler au prescripteur toute co-prescription avec une tétracycline ou un autre antibiotique bactériostatique.",
-        "source_rcp": "RCP Xyllomac 500 mg, section 4.5"
-      },
-      {
-        "substance": "Anticoagulants oraux",
-        "effet": "De rares cas de prolongation du temps de Quick ont été signalés chez des patients recevant de l'amoxicilline.",
-        "action_infirmier": "Surveiller l'INR pendant le traitement et lors de l'ajout ou du retrait de l'amoxicilline chez tout patient sous AVK (acénocoumarol, warfarine).",
-        "source_rcp": "RCP Xyllomac 500 mg, section 4.4 et 4.5"
-      },
-      {
-        "substance": "Méthotrexate",
-        "effet": "Les pénicillines peuvent réduire l'excrétion du méthotrexate et augmenter ainsi sa toxicité.",
-        "action_infirmier": "Signaler immédiatement au prescripteur toute co-prescription avec le méthotrexate.",
-        "source_rcp": "RCP Xyllomac 500 mg, section 4.5"
-      }
-    ],
-    "contre_indications": [
-      "Hypersensibilité à la substance active, aux pénicillines ou à l'un des excipients",
-      "Antécédents de réaction d'hypersensibilité immédiate sévère (par ex. anaphylaxie) à une autre bêta-lactamine (céphalosporine, carbapénème ou monobactame)"
-    ],
-    "surveillance_specifique": [
-      {
-        "evenement": "Cristallurie, y compris lésions rénales aiguës, chez un patient à faible débit urinaire ou porteur d'une sonde vésicale",
-        "explication": "Survient principalement lors d'une administration parentérale à forte dose ; l'amoxicilline peut précipiter dans les sondes vésicales.",
-        "action": "Assurer un apport hydrique suffisant lors des perfusions de fortes doses. Surveiller la diurèse. Chez un patient sondé, contrôler régulièrement la perméabilité de la sonde.",
-        "source_rcp": "RCP Xyllomac 500 mg, section 4.4 : 'De très rares cas de cristallurie (incluant des lésions rénales aiguës) ont été observés chez des patients ayant un faible débit urinaire, principalement lors d'une administration parentérale. [...] Chez des patients porteurs de sondes vésicales, il convient de contrôler régulièrement la perméabilité de la sonde.'"
-      },
-      {
-        "evenement": "Pustulose exanthématique aiguë généralisée (PEAG) en début de traitement",
-        "explication": "Se manifeste par un érythème généralisé fébrile associé à des pustules, en tout début de traitement.",
-        "action": "Arrêter immédiatement le traitement en cas d'érythème fébrile avec pustules. Contre-indication définitive à toute nouvelle administration d'amoxicilline.",
-        "source_rcp": "RCP Xyllomac 500 mg, section 4.4 : 'L'apparition en début de traitement d'un érythème généralisé fébrile, associé à des pustules, peut être le symptôme d'une pustulose exanthématique aiguë généralisée (PEAG). Cette réaction impose l'arrêt de l'amoxicilline et contre-indique toute administration ultérieure de ce médicament.'"
-      },
-      {
-        "evenement": "Éruption cutanée morbilliforme chez un patient avec mononucléose infectieuse suspectée",
-        "explication": "L'amoxicilline doit être évitée en cas de suspicion de mononucléose infectieuse.",
-        "action": "Vérifier l'absence de suspicion de mononucléose infectieuse avant l'administration. En cas d'éruption, informer le médecin et ne pas réadministrer sans avis.",
-        "source_rcp": "RCP Xyllomac 500 mg, section 4.4 : 'L'amoxicilline doit être évitée en cas de suspicion de mononucléose infectieuse car la survenue d'une éruption morbilliforme a été associée à cette pathologie après l'utilisation d'amoxicilline.'"
-      },
-      {
-        "evenement": "Convulsions à fortes doses IV chez l'insuffisant rénal ou en cas d'antécédents de convulsions/épilepsie/atteinte méningée",
-        "explication": "Risque documenté avec les fortes doses de bêta-lactamines chez les patients prédisposés.",
-        "action": "Surveiller les signes neurologiques lors de perfusions de fortes doses. Adapter la dose à la fonction rénale avant chaque administration.",
-        "source_rcp": "RCP Xyllomac 500 mg, section 4.4 : 'Des convulsions peuvent apparaître chez les patients insuffisants rénaux ou recevant des doses élevées ou chez les patients présentant des facteurs de prédisposition (antécédents de convulsions, épilepsie traitée, troubles méningés).'"
-      },
-      {
-        "evenement": "Réaction de Jarisch-Herxheimer lors du traitement de la maladie de Lyme",
-        "explication": "Conséquence directe de l'activité bactéricide de l'amoxicilline sur Borrelia burgdorferi, en général spontanément résolutive.",
-        "action": "Rassurer le patient traité pour une maladie de Lyme sur le caractère fréquent et généralement spontanément résolutif de cette réaction fébrile en début de traitement.",
-        "source_rcp": "RCP Xyllomac 500 mg, section 4.4 : 'Des réactions de Jarisch-Herxheimer ont été observées après traitement de la maladie de Lyme par amoxicilline. [...] conséquence fréquente et en général spontanément résolutive du traitement antibiotique de la maladie de Lyme.'"
-      }
-    ],
-    "pictogrammes": [],
     "preparation": [
       {
         "voie": "IVL",
@@ -308,7 +308,7 @@
         "type": "Gélule",
         "dosage": "500 mg",
         "secable": false,
-        "ouverture_gelule": null,
+        "ouverture_gelule": false,
         "posologie_adulte": [
           {
             "population": "Infections standard (fonction rénale normale)",

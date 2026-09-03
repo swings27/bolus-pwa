@@ -29,7 +29,128 @@
       "url_crat_grossesse": "https://www.lecrat.fr/15292/",
       "url_crat_allaitement": "https://www.lecrat.fr/15339/",
       "source": "RCP IBUPROFENE B. BRAUN 400 mg/100 mL, solution pour perfusion, section 4.6"
-    }
+    },
+    "contre_indications": [
+      "Hypersensibilité à l'ibuprofène, à un autre AINS ou à un excipient",
+      "Antécédent de bronchospasme, asthme, rhinite, angio-œdème ou urticaire sous aspirine ou AINS",
+      "Grossesse au-delà de 24 semaines d'aménorrhée",
+      "Ulcère gastroduodénal ou hémorragie digestive évolutifs ou récurrents",
+      "Antécédent d'hémorragie ou de perforation digestive sous AINS",
+      "Hémorragie cérébro-vasculaire ou autre hémorragie active",
+      "Tendance hémorragique, dont thrombopénie",
+      "Insuffisance rénale sévère",
+      "Insuffisance hépatique sévère",
+      "Insuffisance cardiaque sévère (NYHA IV)",
+      "Déshydratation sévère",
+      "Lupus érythémateux disséminé"
+    ],
+    "interactions_pertinentes": [
+      {
+        "substance": "Méthotrexate",
+        "effet": "L'administration d'ibuprofène dans les 24 heures précédant ou suivant l'administration de méthotrexate peut entraîner une élévation des concentrations de méthotrexate et une augmentation de son effet toxique.",
+        "action_infirmier": "Signaler au prescripteur toute administration d'ibuprofène dans les 24 heures encadrant une cure de méthotrexate ; surveillance de la fonction rénale en cas de traitement combiné.",
+        "source_rcp": "RCP IBUPROFENE B. BRAUN 400 mg/100 mL, 4.5"
+      },
+      {
+        "substance": "Anticoagulants oraux",
+        "effet": "Les AINS peuvent augmenter l'effet des anticoagulants tels que la warfarine.",
+        "action_infirmier": "Renforcer la surveillance de la coagulation pendant l'association.",
+        "source_rcp": "RCP IBUPROFENE B. BRAUN 400 mg/100 mL, 4.5"
+      },
+      {
+        "substance": "Acide acétylsalicylique à faible dose",
+        "effet": "L'ibuprofène inhibe de façon compétitive l'effet antiagrégant de l'acide acétylsalicylique à faible dose ; une utilisation régulière et prolongée peut réduire son effet cardioprotecteur.",
+        "action_infirmier": "Signaler au prescripteur l'association avec de l'aspirine à visée cardiovasculaire et respecter l'ordre et les horaires d'administration prescrits.",
+        "source_rcp": "RCP IBUPROFENE B. BRAUN 400 mg/100 mL, 4.5 et 5.1"
+      },
+      {
+        "substance": "Lithium",
+        "effet": "La co-administration d'ibuprofène avec des médicaments contenant du lithium peut augmenter le taux sérique du lithium.",
+        "action_infirmier": "Contrôler la lithémie pendant l'association.",
+        "source_rcp": "RCP IBUPROFENE B. BRAUN 400 mg/100 mL, 4.5"
+      },
+      {
+        "substance": "Diurétiques, inhibiteurs de l'enzyme de conversion et antagonistes des récepteurs de l'angiotensine II",
+        "effet": "L'association peut entraîner une détérioration de la fonction rénale allant jusqu'à l'insuffisance rénale aiguë, en particulier chez le patient déshydraté ou âgé, et une hyperkaliémie avec les inhibiteurs de l'enzyme de conversion.",
+        "action_infirmier": "Veiller à un apport hydrique suffisant et surveiller la diurèse, la fonction rénale et la kaliémie au début de l'association.",
+        "source_rcp": "RCP IBUPROFENE B. BRAUN 400 mg/100 mL, 4.5"
+      },
+      {
+        "substance": "Corticoïdes",
+        "effet": "Risque accru d'ulcération ou d'hémorragie gastro-intestinale.",
+        "action_infirmier": "Surveiller l'apparition de signes digestifs (douleur abdominale, méléna, hématémèse) pendant l'association.",
+        "source_rcp": "RCP IBUPROFENE B. BRAUN 400 mg/100 mL, 4.4 et 4.5"
+      },
+      {
+        "substance": "Antiagrégants plaquettaires (clopidogrel, ticlopidine) et inhibiteurs sélectifs de la recapture de la sérotonine",
+        "effet": "Risque accru d'hémorragie gastro-intestinale ; les AINS ne doivent pas être associés à la ticlopidine en raison du risque d'effet additif sur l'inhibition de la fonction plaquettaire.",
+        "action_infirmier": "Surveiller les signes de saignement digestif et cutané pendant l'association.",
+        "source_rcp": "RCP IBUPROFENE B. BRAUN 400 mg/100 mL, 4.5"
+      },
+      {
+        "substance": "Ciclosporine et tacrolimus",
+        "effet": "Le risque d'atteinte rénale augmente en cas d'administration concomitante ; risque accru de néphrotoxicité avec le tacrolimus.",
+        "action_infirmier": "Surveiller la fonction rénale et la diurèse pendant l'association.",
+        "source_rcp": "RCP IBUPROFENE B. BRAUN 400 mg/100 mL, 4.5"
+      },
+      {
+        "substance": "Quinolones",
+        "effet": "Les patients recevant un AINS et une quinolone peuvent présenter un risque accru de convulsions.",
+        "action_infirmier": "Surveiller l'apparition de signes neurologiques pendant l'association.",
+        "source_rcp": "RCP IBUPROFENE B. BRAUN 400 mg/100 mL, 4.5"
+      },
+      {
+        "substance": "Sulfamides hypoglycémiants",
+        "effet": "Les AINS peuvent augmenter l'effet hypoglycémiant des sulfamides hypoglycémiants.",
+        "action_infirmier": "Surveiller la glycémie pendant l'association.",
+        "source_rcp": "RCP IBUPROFENE B. BRAUN 400 mg/100 mL, 4.5"
+      }
+    ],
+    "surveillance_specifique": [
+      {
+        "evenement": "Hémorragie, ulcération ou perforation gastro-intestinale",
+        "explication": "Des hémorragies, ulcérations ou perforations digestives parfois fatales ont été rapportées avec tous les AINS, sans signe d'alerte préalable ; le risque augmente avec la dose et la durée du traitement et chez le sujet âgé.",
+        "action": "Surveiller douleur abdominale, méléna et hématémèse, en particulier chez le sujet âgé ; arrêter le traitement et prévenir le prescripteur dès l'apparition d'un saignement ou d'une ulcération digestive.",
+        "source_rcp": "RCP IBUPROFENE B. BRAUN 400 mg/100 mL, 4.4 et 4.8"
+      },
+      {
+        "evenement": "Altération de la fonction rénale et rétention hydrosodée",
+        "explication": "L'inhibition des prostaglandines réduit le débit sanguin rénal : elle peut entraîner une rétention hydrique, des œdèmes et une insuffisance rénale, surtout en cas de déshydratation, de traitement diurétique ou d'insuffisance cardiaque.",
+        "action": "Maintenir une bonne hydratation du patient pendant tout le traitement ; surveiller la diurèse, le poids, l'apparition d'œdèmes et la fonction rénale.",
+        "source_rcp": "RCP IBUPROFENE B. BRAUN 400 mg/100 mL, 4.2 et 4.4"
+      },
+      {
+        "evenement": "Allongement du temps de saignement",
+        "explication": "L'ibuprofène inhibe temporairement l'agrégation plaquettaire ; l'effet peut persister jusqu'à un jour après l'arrêt du traitement et majorer le risque hémorragique en péri-opératoire.",
+        "action": "Surveiller les points de ponction, les pansements et les drains chez le patient opéré ou porteur d'un trouble de la coagulation ; signaler tout saignement anormal.",
+        "source_rcp": "RCP IBUPROFENE B. BRAUN 400 mg/100 mL, 4.4"
+      },
+      {
+        "evenement": "Réaction cutanée grave",
+        "explication": "Des réactions bulleuses parfois fatales ont été rapportées avec les AINS, le plus souvent au cours du premier mois de traitement.",
+        "action": "Arrêter le traitement et prévenir le prescripteur dès l'apparition d'une éruption cutanée, de lésions des muqueuses ou de tout autre signe d'hypersensibilité.",
+        "source_rcp": "RCP IBUPROFENE B. BRAUN 400 mg/100 mL, 4.4 et 4.8"
+      },
+      {
+        "evenement": "Masquage des signes d'une infection",
+        "explication": "L'ibuprofène peut masquer fièvre et douleur et retarder la prise en charge d'une infection ; le RCP cite la pneumonie communautaire bactérienne et les complications bactériennes de la varicelle.",
+        "action": "Ne pas se fier à la seule apyrexie pour juger de l'évolution : surveiller les autres signes d'infection et signaler toute aggravation ; éviter l'ibuprofène en cas de varicelle.",
+        "source_rcp": "RCP IBUPROFENE B. BRAUN 400 mg/100 mL, 4.4"
+      },
+      {
+        "evenement": "Méningite aseptique",
+        "explication": "Quelques cas de méningite aseptique ont été rapportés sous ibuprofène, surtout chez les patients atteints de lupus érythémateux disséminé ou d'une connectivite associée.",
+        "action": "Surveiller l'apparition d'une raideur de nuque, de céphalées, de vomissements ou d'une confusion fébrile et prévenir le prescripteur.",
+        "source_rcp": "RCP IBUPROFENE B. BRAUN 400 mg/100 mL, 4.4 et 4.8"
+      },
+      {
+        "evenement": "Événement thrombotique artériel aux posologies élevées",
+        "explication": "Les études cliniques suggèrent qu'une dose élevée d'ibuprofène (2 400 mg/jour) peut être associée à un risque légèrement accru d'infarctus du myocarde ou d'accident vasculaire cérébral ; ce risque n'est pas retrouvé à 1 200 mg/jour ou moins. Risque documenté par le RCP à partir de 2 400 mg/jour.",
+        "action": "Signaler au prescripteur toute posologie élevée chez un patient hypertendu, coronarien, artéritique ou avec antécédent vasculaire cérébral.",
+        "source_rcp": "RCP IBUPROFENE B. BRAUN 400 mg/100 mL, 4.4 et 4.8"
+      }
+    ],
+    "pictogrammes": []
   },
   "iv": {
     "reconstitution": null,
@@ -126,128 +247,7 @@
         }
       ]
     },
-    "incompatibilites": [],
-    "interactions_pertinentes": [
-      {
-        "substance": "Méthotrexate",
-        "effet": "L'administration d'ibuprofène dans les 24 heures précédant ou suivant l'administration de méthotrexate peut entraîner une élévation des concentrations de méthotrexate et une augmentation de son effet toxique.",
-        "action_infirmier": "Signaler au prescripteur toute administration d'ibuprofène dans les 24 heures encadrant une cure de méthotrexate ; surveillance de la fonction rénale en cas de traitement combiné.",
-        "source_rcp": "RCP IBUPROFENE B. BRAUN 400 mg/100 mL, 4.5"
-      },
-      {
-        "substance": "Anticoagulants oraux",
-        "effet": "Les AINS peuvent augmenter l'effet des anticoagulants tels que la warfarine.",
-        "action_infirmier": "Renforcer la surveillance de la coagulation pendant l'association.",
-        "source_rcp": "RCP IBUPROFENE B. BRAUN 400 mg/100 mL, 4.5"
-      },
-      {
-        "substance": "Acide acétylsalicylique à faible dose",
-        "effet": "L'ibuprofène inhibe de façon compétitive l'effet antiagrégant de l'acide acétylsalicylique à faible dose ; une utilisation régulière et prolongée peut réduire son effet cardioprotecteur.",
-        "action_infirmier": "Signaler au prescripteur l'association avec de l'aspirine à visée cardiovasculaire et respecter l'ordre et les horaires d'administration prescrits.",
-        "source_rcp": "RCP IBUPROFENE B. BRAUN 400 mg/100 mL, 4.5 et 5.1"
-      },
-      {
-        "substance": "Lithium",
-        "effet": "La co-administration d'ibuprofène avec des médicaments contenant du lithium peut augmenter le taux sérique du lithium.",
-        "action_infirmier": "Contrôler la lithémie pendant l'association.",
-        "source_rcp": "RCP IBUPROFENE B. BRAUN 400 mg/100 mL, 4.5"
-      },
-      {
-        "substance": "Diurétiques, inhibiteurs de l'enzyme de conversion et antagonistes des récepteurs de l'angiotensine II",
-        "effet": "L'association peut entraîner une détérioration de la fonction rénale allant jusqu'à l'insuffisance rénale aiguë, en particulier chez le patient déshydraté ou âgé, et une hyperkaliémie avec les inhibiteurs de l'enzyme de conversion.",
-        "action_infirmier": "Veiller à un apport hydrique suffisant et surveiller la diurèse, la fonction rénale et la kaliémie au début de l'association.",
-        "source_rcp": "RCP IBUPROFENE B. BRAUN 400 mg/100 mL, 4.5"
-      },
-      {
-        "substance": "Corticoïdes",
-        "effet": "Risque accru d'ulcération ou d'hémorragie gastro-intestinale.",
-        "action_infirmier": "Surveiller l'apparition de signes digestifs (douleur abdominale, méléna, hématémèse) pendant l'association.",
-        "source_rcp": "RCP IBUPROFENE B. BRAUN 400 mg/100 mL, 4.4 et 4.5"
-      },
-      {
-        "substance": "Antiagrégants plaquettaires (clopidogrel, ticlopidine) et inhibiteurs sélectifs de la recapture de la sérotonine",
-        "effet": "Risque accru d'hémorragie gastro-intestinale ; les AINS ne doivent pas être associés à la ticlopidine en raison du risque d'effet additif sur l'inhibition de la fonction plaquettaire.",
-        "action_infirmier": "Surveiller les signes de saignement digestif et cutané pendant l'association.",
-        "source_rcp": "RCP IBUPROFENE B. BRAUN 400 mg/100 mL, 4.5"
-      },
-      {
-        "substance": "Ciclosporine et tacrolimus",
-        "effet": "Le risque d'atteinte rénale augmente en cas d'administration concomitante ; risque accru de néphrotoxicité avec le tacrolimus.",
-        "action_infirmier": "Surveiller la fonction rénale et la diurèse pendant l'association.",
-        "source_rcp": "RCP IBUPROFENE B. BRAUN 400 mg/100 mL, 4.5"
-      },
-      {
-        "substance": "Quinolones",
-        "effet": "Les patients recevant un AINS et une quinolone peuvent présenter un risque accru de convulsions.",
-        "action_infirmier": "Surveiller l'apparition de signes neurologiques pendant l'association.",
-        "source_rcp": "RCP IBUPROFENE B. BRAUN 400 mg/100 mL, 4.5"
-      },
-      {
-        "substance": "Sulfamides hypoglycémiants",
-        "effet": "Les AINS peuvent augmenter l'effet hypoglycémiant des sulfamides hypoglycémiants.",
-        "action_infirmier": "Surveiller la glycémie pendant l'association.",
-        "source_rcp": "RCP IBUPROFENE B. BRAUN 400 mg/100 mL, 4.5"
-      }
-    ],
-    "contre_indications": [
-      "Hypersensibilité à l'ibuprofène, à un autre AINS ou à un excipient",
-      "Antécédent de bronchospasme, asthme, rhinite, angio-œdème ou urticaire sous aspirine ou AINS",
-      "Grossesse au-delà de 24 semaines d'aménorrhée",
-      "Ulcère gastroduodénal ou hémorragie digestive évolutifs ou récurrents",
-      "Antécédent d'hémorragie ou de perforation digestive sous AINS",
-      "Hémorragie cérébro-vasculaire ou autre hémorragie active",
-      "Tendance hémorragique, dont thrombopénie",
-      "Insuffisance rénale sévère",
-      "Insuffisance hépatique sévère",
-      "Insuffisance cardiaque sévère (NYHA IV)",
-      "Déshydratation sévère",
-      "Lupus érythémateux disséminé"
-    ],
-    "surveillance_specifique": [
-      {
-        "evenement": "Hémorragie, ulcération ou perforation gastro-intestinale",
-        "explication": "Des hémorragies, ulcérations ou perforations digestives parfois fatales ont été rapportées avec tous les AINS, sans signe d'alerte préalable ; le risque augmente avec la dose et la durée du traitement et chez le sujet âgé.",
-        "action": "Surveiller douleur abdominale, méléna et hématémèse, en particulier chez le sujet âgé ; arrêter le traitement et prévenir le prescripteur dès l'apparition d'un saignement ou d'une ulcération digestive.",
-        "source_rcp": "RCP IBUPROFENE B. BRAUN 400 mg/100 mL, 4.4 et 4.8"
-      },
-      {
-        "evenement": "Altération de la fonction rénale et rétention hydrosodée",
-        "explication": "L'inhibition des prostaglandines réduit le débit sanguin rénal : elle peut entraîner une rétention hydrique, des œdèmes et une insuffisance rénale, surtout en cas de déshydratation, de traitement diurétique ou d'insuffisance cardiaque.",
-        "action": "Maintenir une bonne hydratation du patient pendant tout le traitement ; surveiller la diurèse, le poids, l'apparition d'œdèmes et la fonction rénale.",
-        "source_rcp": "RCP IBUPROFENE B. BRAUN 400 mg/100 mL, 4.2 et 4.4"
-      },
-      {
-        "evenement": "Allongement du temps de saignement",
-        "explication": "L'ibuprofène inhibe temporairement l'agrégation plaquettaire ; l'effet peut persister jusqu'à un jour après l'arrêt du traitement et majorer le risque hémorragique en péri-opératoire.",
-        "action": "Surveiller les points de ponction, les pansements et les drains chez le patient opéré ou porteur d'un trouble de la coagulation ; signaler tout saignement anormal.",
-        "source_rcp": "RCP IBUPROFENE B. BRAUN 400 mg/100 mL, 4.4"
-      },
-      {
-        "evenement": "Réaction cutanée grave",
-        "explication": "Des réactions bulleuses parfois fatales ont été rapportées avec les AINS, le plus souvent au cours du premier mois de traitement.",
-        "action": "Arrêter le traitement et prévenir le prescripteur dès l'apparition d'une éruption cutanée, de lésions des muqueuses ou de tout autre signe d'hypersensibilité.",
-        "source_rcp": "RCP IBUPROFENE B. BRAUN 400 mg/100 mL, 4.4 et 4.8"
-      },
-      {
-        "evenement": "Masquage des signes d'une infection",
-        "explication": "L'ibuprofène peut masquer fièvre et douleur et retarder la prise en charge d'une infection ; le RCP cite la pneumonie communautaire bactérienne et les complications bactériennes de la varicelle.",
-        "action": "Ne pas se fier à la seule apyrexie pour juger de l'évolution : surveiller les autres signes d'infection et signaler toute aggravation ; éviter l'ibuprofène en cas de varicelle.",
-        "source_rcp": "RCP IBUPROFENE B. BRAUN 400 mg/100 mL, 4.4"
-      },
-      {
-        "evenement": "Méningite aseptique",
-        "explication": "Quelques cas de méningite aseptique ont été rapportés sous ibuprofène, surtout chez les patients atteints de lupus érythémateux disséminé ou d'une connectivite associée.",
-        "action": "Surveiller l'apparition d'une raideur de nuque, de céphalées, de vomissements ou d'une confusion fébrile et prévenir le prescripteur.",
-        "source_rcp": "RCP IBUPROFENE B. BRAUN 400 mg/100 mL, 4.4 et 4.8"
-      },
-      {
-        "evenement": "Événement thrombotique artériel aux posologies élevées",
-        "explication": "Les études cliniques suggèrent qu'une dose élevée d'ibuprofène (2 400 mg/jour) peut être associée à un risque légèrement accru d'infarctus du myocarde ou d'accident vasculaire cérébral ; ce risque n'est pas retrouvé à 1 200 mg/jour ou moins. Risque documenté par le RCP à partir de 2 400 mg/jour.",
-        "action": "Signaler au prescripteur toute posologie élevée chez un patient hypertendu, coronarien, artéritique ou avec antécédent vasculaire cérébral.",
-        "source_rcp": "RCP IBUPROFENE B. BRAUN 400 mg/100 mL, 4.4 et 4.8"
-      }
-    ],
-    "pictogrammes": []
+    "incompatibilites": []
   },
   "oral": {
     "formes": [

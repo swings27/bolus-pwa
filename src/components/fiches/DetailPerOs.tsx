@@ -39,7 +39,8 @@ function Badge({ tonalite, children }: { tonalite: Tonalite; children: ReactNode
 // "Non ouvrable" y suggéraient à tort une contrainte, alors que la question
 // ne se pose simplement pas pour ce type de forme.
 function estDejaLiquide(type: string): boolean {
-  return type.toLowerCase().includes('buvable')
+  const typeMinuscule = type.toLowerCase()
+  return typeMinuscule.includes('buvable') || typeMinuscule.includes('sirop')
 }
 
 // Les formes orales (comprimé, gélule, suspension...) sont affichées en deux

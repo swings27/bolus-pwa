@@ -18,7 +18,64 @@
       "url_crat_grossesse": "https://www.lecrat.fr/4165/",
       "url_crat_allaitement": "https://www.lecrat.fr/4167/",
       "source": "RCP Paracétamol 10 mg/mL solution pour perfusion, section 4.6"
-    }
+    },
+    "contre_indications": [
+      "Hypersensibilité",
+      "Insuffisance hépato-cellulaire sévère"
+    ],
+    "interactions_pertinentes": [
+      {
+        "substance": "Probénécide",
+        "effet": "Le probénécide entraîne une diminution de près de la moitié de la clairance du paracétamol en inhibant sa conjugaison à l'acide glucuronique.",
+        "action_infirmier": "Une diminution de la dose de paracétamol est à envisager en cas d'association au probénécide.",
+        "source_rcp": "RCP Paracétamol Kabi 10 mg/mL, 4.5"
+      },
+      {
+        "substance": "Salicylamide",
+        "effet": "Le salicylamide peut allonger la demi-vie d'élimination du paracétamol.",
+        "action_infirmier": "Surveiller les signes de surdosage en cas d'association prolongée.",
+        "source_rcp": "RCP Paracétamol Kabi 10 mg/mL, 4.5"
+      },
+      {
+        "substance": "Inducteurs enzymatiques",
+        "effet": "Une attention particulière doit être exercée en cas de prise concomitante d'inducteurs enzymatiques, qui augmentent la production de métabolite hépatotoxique du paracétamol.",
+        "action_infirmier": "Renforcer la surveillance hépatique en cas d'association, notamment en contexte de surdosage.",
+        "source_rcp": "RCP Paracétamol Kabi 10 mg/mL, 4.5"
+      },
+      {
+        "substance": "Anticoagulants oraux",
+        "effet": "L'utilisation concomitante de paracétamol (4 g/jour pendant au moins 4 jours) et d'anticoagulants oraux peut conduire à de légères variations de l'INR.",
+        "action_infirmier": "Renforcer la surveillance de l'INR pendant l'association et 1 semaine après l'arrêt du paracétamol.",
+        "source_rcp": "RCP Paracétamol Kabi 10 mg/mL, 4.5"
+      },
+      {
+        "substance": "Flucloxacilline",
+        "effet": "L'association a été rapportée comme cause d'acidose métabolique à trou anionique élevé (acidose pyroglutamique), en particulier chez les patients présentant des facteurs de risque.",
+        "action_infirmier": "Surveillance renforcée en cas d'association, en particulier chez les patients à risque (insuffisance rénale sévère, sepsis, dénutrition, alcoolisme chronique).",
+        "source_rcp": "RCP Paracétamol Kabi 10 mg/mL, 4.4 et 4.5"
+      }
+    ],
+    "surveillance_specifique": [
+      {
+        "evenement": "Hépatotoxicité en cas de surdosage",
+        "explication": "Le paracétamol provoque, en cas de surdosage (à partir de 7,5 g en une prise chez l'adulte), une cytolyse hépatique pouvant aboutir à une insuffisance hépatique sévère, parfois mortelle.",
+        "action": "Vérifier systématiquement l'absence de paracétamol dans les autres médicaments administrés au patient ; en cas de suspicion de surdosage, dosage plasmatique du paracétamol et administration de N-acétylcystéine (antidote).",
+        "source_rcp": "RCP Paracétamol Kabi 10 mg/mL, 4.4 et 4.9"
+      },
+      {
+        "evenement": "Acidose métabolique à trou anionique élevé",
+        "explication": "Risque lié à une déplétion en glutathion hépatique chez les patients à risque (insuffisance rénale sévère, sepsis, malnutrition, alcoolisme chronique) recevant du paracétamol à dose thérapeutique de façon prolongée, notamment en association avec la flucloxacilline.",
+        "action": "Surveiller l'apparition d'une acidose métabolique inexpliquée chez les patients à risque ; arrêter le paracétamol en cas de suspicion.",
+        "source_rcp": "RCP Paracétamol Kabi 10 mg/mL, 4.4 et 4.8"
+      },
+      {
+        "evenement": "Confusion mg/mL",
+        "explication": "Le RCP signale un risque de confusion mg/mL pouvant conduire à un surdosage accidentel et un décès, objet d'une Mesure Additionnelle de Réduction du Risque (MARR) ANSM pour cette spécialité.",
+        "action": "Toujours indiquer et vérifier la dose en mg ET le volume correspondant en mL avant toute administration.",
+        "source_rcp": "RCP Paracétamol Kabi 10 mg/mL, 4.2 et 4.4 ; MARR ANSM Paracétamol Kabi, version 2, juin 2024 (ansm.sante.fr)"
+      }
+    ],
+    "pictogrammes": []
   },
   "iv": {
     "reconstitution": null,
@@ -81,64 +138,7 @@
         "substance": "Aciclovir",
         "niveau": "absolu"
       }
-    ],
-    "interactions_pertinentes": [
-      {
-        "substance": "Probénécide",
-        "effet": "Le probénécide entraîne une diminution de près de la moitié de la clairance du paracétamol en inhibant sa conjugaison à l'acide glucuronique.",
-        "action_infirmier": "Une diminution de la dose de paracétamol est à envisager en cas d'association au probénécide.",
-        "source_rcp": "RCP Paracétamol Kabi 10 mg/mL, 4.5"
-      },
-      {
-        "substance": "Salicylamide",
-        "effet": "Le salicylamide peut allonger la demi-vie d'élimination du paracétamol.",
-        "action_infirmier": "Surveiller les signes de surdosage en cas d'association prolongée.",
-        "source_rcp": "RCP Paracétamol Kabi 10 mg/mL, 4.5"
-      },
-      {
-        "substance": "Inducteurs enzymatiques",
-        "effet": "Une attention particulière doit être exercée en cas de prise concomitante d'inducteurs enzymatiques, qui augmentent la production de métabolite hépatotoxique du paracétamol.",
-        "action_infirmier": "Renforcer la surveillance hépatique en cas d'association, notamment en contexte de surdosage.",
-        "source_rcp": "RCP Paracétamol Kabi 10 mg/mL, 4.5"
-      },
-      {
-        "substance": "Anticoagulants oraux",
-        "effet": "L'utilisation concomitante de paracétamol (4 g/jour pendant au moins 4 jours) et d'anticoagulants oraux peut conduire à de légères variations de l'INR.",
-        "action_infirmier": "Renforcer la surveillance de l'INR pendant l'association et 1 semaine après l'arrêt du paracétamol.",
-        "source_rcp": "RCP Paracétamol Kabi 10 mg/mL, 4.5"
-      },
-      {
-        "substance": "Flucloxacilline",
-        "effet": "L'association a été rapportée comme cause d'acidose métabolique à trou anionique élevé (acidose pyroglutamique), en particulier chez les patients présentant des facteurs de risque.",
-        "action_infirmier": "Surveillance renforcée en cas d'association, en particulier chez les patients à risque (insuffisance rénale sévère, sepsis, dénutrition, alcoolisme chronique).",
-        "source_rcp": "RCP Paracétamol Kabi 10 mg/mL, 4.4 et 4.5"
-      }
-    ],
-    "contre_indications": [
-      "Hypersensibilité",
-      "Insuffisance hépato-cellulaire sévère"
-    ],
-    "surveillance_specifique": [
-      {
-        "evenement": "Hépatotoxicité en cas de surdosage",
-        "explication": "Le paracétamol provoque, en cas de surdosage (à partir de 7,5 g en une prise chez l'adulte), une cytolyse hépatique pouvant aboutir à une insuffisance hépatique sévère, parfois mortelle.",
-        "action": "Vérifier systématiquement l'absence de paracétamol dans les autres médicaments administrés au patient ; en cas de suspicion de surdosage, dosage plasmatique du paracétamol et administration de N-acétylcystéine (antidote).",
-        "source_rcp": "RCP Paracétamol Kabi 10 mg/mL, 4.4 et 4.9"
-      },
-      {
-        "evenement": "Acidose métabolique à trou anionique élevé",
-        "explication": "Risque lié à une déplétion en glutathion hépatique chez les patients à risque (insuffisance rénale sévère, sepsis, malnutrition, alcoolisme chronique) recevant du paracétamol à dose thérapeutique de façon prolongée, notamment en association avec la flucloxacilline.",
-        "action": "Surveiller l'apparition d'une acidose métabolique inexpliquée chez les patients à risque ; arrêter le paracétamol en cas de suspicion.",
-        "source_rcp": "RCP Paracétamol Kabi 10 mg/mL, 4.4 et 4.8"
-      },
-      {
-        "evenement": "Confusion mg/mL",
-        "explication": "Le RCP signale un risque de confusion mg/mL pouvant conduire à un surdosage accidentel et un décès, objet d'une Mesure Additionnelle de Réduction du Risque (MARR) ANSM pour cette spécialité.",
-        "action": "Toujours indiquer et vérifier la dose en mg ET le volume correspondant en mL avant toute administration.",
-        "source_rcp": "RCP Paracétamol Kabi 10 mg/mL, 4.2 et 4.4 ; MARR ANSM Paracétamol Kabi, version 2, juin 2024 (ansm.sante.fr)"
-      }
-    ],
-    "pictogrammes": []
+    ]
   },
   "oral": {
     "formes": [
