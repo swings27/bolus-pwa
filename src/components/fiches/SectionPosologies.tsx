@@ -1,4 +1,6 @@
+import { useState } from 'react'
 import type { ReactNode } from 'react'
+import { ChevronRight } from 'lucide-react'
 import BlocAvertissement from '../layout/BlocAvertissement'
 import TitreSectionFiche from './TitreSectionFiche'
 import {
@@ -48,7 +50,12 @@ function CartePosologie({ p }: { p: IPosologieRcp }) {
           </div>
         )}
       </div>
-      <div className="flex flex-wrap justify-between gap-3.5 pr-1">
+      {/* grid (pas flex + justify-between) : chaque colonne occupe toujours
+          le même tiers de largeur, donc démarre au même x quelle que soit la
+          longueur du texte de la carte précédente ou suivante — avec
+          justify-between, la position de "Intervalle" dépendait de la
+          largeur du texte de "Dose" et sautait d'une carte à l'autre. */}
+      <div className="grid grid-cols-3 gap-3.5 pr-1">
         <div>
           <div className="text-[9px] font-semibold uppercase tracking-wide text-texte-doux/70">Dose</div>
           <div className="text-sm font-semibold text-texte">{formaterDose(p)}</div>
@@ -66,6 +73,43 @@ function CartePosologie({ p }: { p: IPosologieRcp }) {
           </div>
         )}
       </div>
+    </div>
+  )
+}
+
+// Groupe "Protocole particulier" / "Indication particulière" (categorie
+// "speciale") : replié par défaut pour gagner de la place, ces protocoles
+// étant consultés moins souvent que la posologie standard — les autres
+// groupes (voie IV, IM, SC...) restent toujours visibles.
+function BlocGroupe({ titre, repliable, children }: { titre: string | null; repliable: boolean; children: ReactNode }) {
+  const [ouvert, setOuvert] = useState(!repliable)
+
+  if (!titre) return <>{children}</>
+
+  if (!repliable) {
+    return (
+      <>
+        <div className="mb-1.5 text-[10.5px] font-semibold uppercase tracking-wide text-texte-doux">{titre}</div>
+        {children}
+      </>
+    )
+  }
+
+  return (
+    <div>
+      <button
+        type="button"
+        onClick={() => setOuvert((v) => !v)}
+        aria-expanded={ouvert}
+        className="tactile mb-1.5 flex items-center gap-1 text-left"
+      >
+        <span className="text-[10.5px] font-semibold uppercase tracking-wide text-texte-doux">{titre}</span>
+        <ChevronRight
+          className={`h-3 w-3 shrink-0 text-texte-doux transition-transform duration-200 ${ouvert ? 'rotate-90' : ''}`}
+          aria-hidden="true"
+        />
+      </button>
+      {ouvert && children}
     </div>
   )
 }
@@ -98,16 +142,13 @@ export default function SectionPosologies({ titre, posologies, contexte, ajustem
 
       {[...groupes.entries()].map(([cle, items]) => (
         <div key={cle} className="mb-3.5 last:mb-0">
-          {groupes.size > 1 && (
-            <div className="mb-1.5 text-[10.5px] font-semibold uppercase tracking-wide text-texte-doux">
-              {libelleCategoriePosologie(cle, contexte)}
+          <BlocGroupe titre={groupes.size > 1 ? libelleCategoriePosologie(cle, contexte) : null} repliable={cle === 'speciale'}>
+            <div className="flex flex-col gap-2.5">
+              {items.map((p, index) => (
+                <CartePosologie key={`${cle}-${index}`} p={p} />
+              ))}
             </div>
-          )}
-          <div className="flex flex-col gap-2.5">
-            {items.map((p, index) => (
-              <CartePosologie key={`${cle}-${index}`} p={p} />
-            ))}
-          </div>
+          </BlocGroupe>
         </div>
       ))}
 

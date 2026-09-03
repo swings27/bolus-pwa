@@ -14,6 +14,7 @@ import { useFiche } from '../hooks/useFiche'
 import { useFavoris } from '../hooks/useFavoris'
 import { enregistrerConsultation } from '../utils/historique'
 import { TAILLE_MAX_FAVORIS } from '../utils/favoris'
+import { avecMarqueDeposee } from '../utils/marques'
 
 // Squelette plutôt qu'un spinner : des blocs approximant la mise en page
 // réelle (titre, cartes, bloc de forme) donnent une impression de chargement
@@ -148,7 +149,7 @@ export default function FicheMedicament() {
         <h1 className="font-display text-[2.5rem] leading-tight text-texte">{fiche.dci}</h1>
         {fiche.nomsCommerciaux.length > 0 && (
           <div className="text-sm text-texte-doux">
-            <ListeSeparee items={fiche.nomsCommerciaux} />
+            <ListeSeparee items={avecMarqueDeposee(fiche.nomsCommerciaux)} />
           </div>
         )}
         {favoriBloque && (
@@ -173,7 +174,7 @@ export default function FicheMedicament() {
           )}
           {contreIndicationsPresentes && (
             <div className="min-w-0 flex-1">
-              <BlocInfo variant="alerte" label="Contre-indications">
+              <BlocInfo variant="alerte" label="Contre-indications" repliable>
                 <ListeSeparee items={fiche.contreIndications} />
               </BlocInfo>
             </div>
@@ -184,7 +185,7 @@ export default function FicheMedicament() {
       {/* Indications */}
       {fiche.indications.length > 0 && (
         <div className="mt-3 px-6">
-          <BlocInfo variant="indication" label="Indications">
+          <BlocInfo variant="indication" label="Indications" repliable>
             <ListeSeparee items={fiche.indications} />
           </BlocInfo>
         </div>

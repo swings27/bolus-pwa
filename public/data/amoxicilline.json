@@ -36,7 +36,7 @@
     "administration": {
       "posologie": [
         {
-          "population": "Adulte et enfant ≥ 40 kg, infections O.R.L sévères, exacerbations aiguës de bronchite chronique, pneumonie communautaire, cystite aiguë, pyélonéphrite aiguë, abcès dentaire sévère avec cellulite, infections articulaires sur prothèses",
+          "population": "Adulte et enfant ≥ 40 kg, infections standards",
           "categorie": "generale",
           "dose_par_prise_mg_min": 750,
           "dose_par_prise_mg_max": 2000,
@@ -75,6 +75,8 @@
           "population": "Voie intramusculaire",
           "categorie": "im",
           "dose_par_prise_mg_max": 1000,
+          "intervalle_min_h": 6,
+          "intervalle_max_h": 6,
           "dose_journaliere_max_g": 4,
           "population_type": "adulte"
         },

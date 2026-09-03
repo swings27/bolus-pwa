@@ -38,15 +38,14 @@ function construireOral(brut: IFicheSourceOral | undefined): IFormeOraleBloc | n
 }
 
 // Convertit une liste RCP (interactions, surveillance) en items
-// titre/détail génériques, réutilisables tels quels par AccordeonImbrique —
-// évite de faire porter à ce composant partagé la connaissance des champs
-// spécifiques (effet/action_infirmier vs evenement/explication/action).
-function versAccordeon<T>(items: T[], titre: (item: T) => string, detail: (item: T) => string): ISurveillance[] {
-  return items.map((item) => ({ titre: titre(item), detail: detail(item) }))
-}
-
-function joindreParagraphes(...parties: Array<string | undefined | null>): string {
-  return parties.filter((partie): partie is string => Boolean(partie)).join('\n\n')
+// titre/détail/conduite génériques, réutilisables tels quels par
+// AccordeonImbrique — évite de faire porter à ce composant partagé la
+// connaissance des champs spécifiques (effet/action_infirmier vs
+// evenement/explication/action). `conduite` reste distincte de `detail`
+// (plutôt que concaténée) pour être mise en évidence dans son propre encadré
+// à l'affichage.
+function versAccordeon<T>(items: T[], titre: (item: T) => string, detail: (item: T) => string, conduite: (item: T) => string): ISurveillance[] {
+  return items.map((item) => ({ titre: titre(item), detail: detail(item), conduite: conduite(item) }))
 }
 
 // `source_rcp` existe sur chaque entrée de interactions_pertinentes et
@@ -73,14 +72,16 @@ export function construireFiche(id: string, brut: IFicheSource, meta: IFicheMeta
       ? versAccordeon(
           brut.iv.surveillance_specifique,
           (item) => item.evenement,
-          (item) => joindreParagraphes(item.explication, `Conduite à tenir : ${item.action}`),
+          (item) => item.explication,
+          (item) => item.action,
         )
       : [],
     interactionsMedicamenteuses: brut.iv
       ? versAccordeon(
           brut.iv.interactions_pertinentes,
           (item) => item.substance,
-          (item) => joindreParagraphes(item.effet, `Conduite à tenir : ${item.action_infirmier}`),
+          (item) => item.effet,
+          (item) => item.action_infirmier,
         )
       : null,
     iv: construireIv(brut.iv),

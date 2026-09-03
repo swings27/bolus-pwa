@@ -2,6 +2,7 @@ import { ChevronRight, Heart } from 'lucide-react'
 import type { IFiche } from '../../types'
 import { getCategorieBySlug, texteCategorie, fondCategorie } from '../../data/categories'
 import { useNavigationSure } from '../../hooks/useNavigationSure'
+import { avecMarqueDeposee } from '../../utils/marques'
 import ListeSeparee from './ListeSeparee'
 
 interface IResultatFicheProps {
@@ -55,7 +56,7 @@ export default function ResultatFiche({
         </span>
         {fiche.nomsCommerciaux.length > 0 && (
           <span className="block truncate text-xs text-texte-doux">
-            <ListeSeparee items={fiche.nomsCommerciaux} />
+            <ListeSeparee items={avecMarqueDeposee(fiche.nomsCommerciaux)} />
           </span>
         )}
       </span>

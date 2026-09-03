@@ -7,23 +7,39 @@ interface IDetailPerOsProps {
   donnees: IFormeOraleBloc
 }
 
-type Tonalite = 'oui' | 'non'
+type Tonalite = 'oui' | 'non' | 'neutre'
 
 // Dosé depuis --fiche-forme-fond (le fond réel de cette carte) plutôt qu'un
 // token indépendant : voir la même remarque historique dans
 // SelecteurForme/DetailInjectable, un token isolé s'est déjà retrouvé
 // confondu avec le fond de carte en thème sombre.
+//
+// Largeur fixe (pas shrink-to-content) : sans elle, chaque jeton prend juste
+// la largeur de son propre texte ("Sécable" vs "Non sécable"), et comme les
+// deux jetons restent plaqués à droite de la ligne, leur bord gauche saute
+// d'une forme à l'autre selon la longueur du texte — un alignement en
+// colonnes qui n'en est pas un.
 function Badge({ tonalite, children }: { tonalite: Tonalite; children: ReactNode }) {
   const style =
     tonalite === 'oui'
       ? { backgroundColor: 'color-mix(in srgb, var(--validation-pastille) 28%, var(--fiche-forme-fond))', color: 'var(--validation)' }
-      : { backgroundColor: 'color-mix(in srgb, var(--alerte) 20%, var(--fiche-forme-fond))', color: 'var(--alerte)' }
+      : tonalite === 'non'
+        ? { backgroundColor: 'color-mix(in srgb, var(--alerte) 20%, var(--fiche-forme-fond))', color: 'var(--alerte)' }
+        : { backgroundColor: 'color-mix(in srgb, var(--texte) 15%, var(--fiche-forme-fond))', color: 'var(--texte-doux)' }
 
   return (
-    <span className="shrink-0 rounded-full px-2.5 py-1 text-[10.5px] font-semibold" style={style}>
+    <span className="box-border w-[92px] shrink-0 rounded-full px-1.5 py-1 text-center text-[10.5px] font-semibold" style={style}>
       {children}
     </span>
   )
+}
+
+// Une forme déjà sous forme liquide (sirop, solution, suspension...) n'a ni
+// sécabilité ni ouverture de gélule à proprement parler — "Non sécable" /
+// "Non ouvrable" y suggéraient à tort une contrainte, alors que la question
+// ne se pose simplement pas pour ce type de forme.
+function estDejaLiquide(type: string): boolean {
+  return type.toLowerCase().includes('buvable')
 }
 
 // Les formes orales (comprimé, gélule, suspension...) sont affichées en deux
@@ -65,14 +81,20 @@ export default function DetailPerOs({ donnees }: IDetailPerOsProps) {
               {forme.dosage && <div className="text-[10.5px] text-texte-doux">{forme.dosage}</div>}
             </div>
             <div className="flex shrink-0 flex-wrap justify-end gap-1.5">
-              <Badge tonalite={forme.secable ? 'oui' : 'non'}>{forme.secable ? 'Sécable' : 'Non sécable'}</Badge>
-              {/* ouverture_gelule à null (forme qui n'est pas une gélule) est
-                  traité comme "non ouvrable", conformément à la consigne
-                  d'afficher systématiquement les deux jetons sur chaque
-                  forme, sans état neutre. */}
-              <Badge tonalite={forme.ouverture_gelule ? 'oui' : 'non'}>
-                {forme.ouverture_gelule ? 'Ouvrable' : 'Non ouvrable'}
-              </Badge>
+              {estDejaLiquide(forme.type) ? (
+                <Badge tonalite="neutre">Déjà liquide</Badge>
+              ) : (
+                <>
+                  <Badge tonalite={forme.secable ? 'oui' : 'non'}>{forme.secable ? 'Écrasable' : 'Non écrasable'}</Badge>
+                  {/* ouverture_gelule à null (forme qui n'est pas une gélule)
+                      est traité comme "non ouvrable", conformément à la
+                      consigne d'afficher systématiquement les deux jetons sur
+                      chaque forme, sans état neutre. */}
+                  <Badge tonalite={forme.ouverture_gelule ? 'oui' : 'non'}>
+                    {forme.ouverture_gelule ? 'Ouvrable' : 'Non ouvrable'}
+                  </Badge>
+                </>
+              )}
             </div>
           </div>
         ))}

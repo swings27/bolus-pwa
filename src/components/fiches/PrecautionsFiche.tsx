@@ -84,54 +84,37 @@ export default function PrecautionsFiche({
 
         {grossesseAllaitement && (
           <GroupePrecaution icone={Baby} titre="Grossesse / Allaitement">
-            <div className="flex flex-col gap-2 pb-1.5">
-              <div className="flex items-baseline gap-2.5">
-                <span className="w-[72px] shrink-0 text-[11px] font-semibold uppercase text-texte-doux">
-                  Grossesse
-                </span>
-                <span className="text-xs leading-relaxed text-texte">
-                  {grossesseAllaitement.grossesse}
-                  {grossesseAllaitement.url_crat_grossesse && (
-                    <>
-                      {' · '}
-                      <a
-                        href={grossesseAllaitement.url_crat_grossesse}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="underline"
-                        style={{ color: 'var(--interactif)' }}
-                      >
-                        CRAT ↗
-                      </a>
-                    </>
-                  )}
-                </span>
+            <div className="flex flex-col gap-3 pb-1.5">
+              <div>
+                <span className="text-[11px] font-semibold uppercase text-texte-doux">Grossesse</span>
+                <p className="mt-0.5 text-xs leading-relaxed text-texte">{grossesseAllaitement.grossesse}</p>
+                {grossesseAllaitement.url_crat_grossesse && (
+                  <a
+                    href={grossesseAllaitement.url_crat_grossesse}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="mt-1 inline-block text-[11px] underline"
+                    style={{ color: 'var(--interactif)' }}
+                  >
+                    Voir sur le CRAT ↗
+                  </a>
+                )}
               </div>
-              <div className="flex items-baseline gap-2.5">
-                <span className="w-[72px] shrink-0 text-[11px] font-semibold uppercase text-texte-doux">
-                  Allaitement
-                </span>
-                <span className="text-xs leading-relaxed text-texte">
-                  {grossesseAllaitement.allaitement}
-                  {grossesseAllaitement.url_crat_allaitement && (
-                    <>
-                      {' · '}
-                      <a
-                        href={grossesseAllaitement.url_crat_allaitement}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="underline"
-                        style={{ color: 'var(--interactif)' }}
-                      >
-                        CRAT ↗
-                      </a>
-                    </>
-                  )}
-                </span>
+              <div>
+                <span className="text-[11px] font-semibold uppercase text-texte-doux">Allaitement</span>
+                <p className="mt-0.5 text-xs leading-relaxed text-texte">{grossesseAllaitement.allaitement}</p>
+                {grossesseAllaitement.url_crat_allaitement && (
+                  <a
+                    href={grossesseAllaitement.url_crat_allaitement}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="mt-1 inline-block text-[11px] underline"
+                    style={{ color: 'var(--interactif)' }}
+                  >
+                    Voir sur le CRAT ↗
+                  </a>
+                )}
               </div>
-              {grossesseAllaitement.source && (
-                <p className="text-[10px] text-texte-doux/70">Source : {grossesseAllaitement.source}</p>
-              )}
             </div>
           </GroupePrecaution>
         )}

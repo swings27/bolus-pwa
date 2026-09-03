@@ -1,4 +1,6 @@
+import { useLayoutEffect, useRef, useState } from 'react'
 import type { ReactNode } from 'react'
+import { ChevronDown } from 'lucide-react'
 
 type Variant = 'validation' | 'alerte' | 'indication'
 
@@ -6,6 +8,10 @@ interface IBlocInfoProps {
   label: string
   variant: Variant
   children: ReactNode
+  /** Replie le contenu à 3 lignes avec un bouton "Voir tout" quand il
+   * déborde (ex. contre-indications/indications à rallonge comme celles de
+   * l'ibuprofène) — omis par défaut (ex. Antidote, toujours court). */
+  repliable?: boolean
 }
 
 // Couleur saturée (pastille + bordure), par variant. Le fond se calcule à
@@ -28,8 +34,22 @@ const CONFIG: Record<Variant, { saturee: string }> = {
 // ça, seul le conteneur invisible qui l'enveloppe est étiré, pas la boîte
 // bordée elle-même. Sans effet ailleurs (un parent à hauteur automatique
 // ignore un h-full sur son enfant).
-export default function BlocInfo({ label, variant, children }: IBlocInfoProps) {
+export default function BlocInfo({ label, variant, children, repliable = false }: IBlocInfoProps) {
   const { saturee } = CONFIG[variant]
+  const [ouvert, setOuvert] = useState(false)
+  const [tronque, setTronque] = useState(false)
+  const corpsRef = useRef<HTMLDivElement>(null)
+
+  // Mesuré une seule fois par contenu, à l'état replié (voir dépendances) :
+  // scrollHeight > clientHeight ne veut dire quelque chose que tant que le
+  // line-clamp est actif — une fois déplié, les deux valeurs s'égalisent et
+  // ne renseigneraient plus sur le débordement réel du contenu.
+  useLayoutEffect(() => {
+    if (!repliable) return
+    const el = corpsRef.current
+    if (!el) return
+    setTronque(el.scrollHeight > el.clientHeight + 1)
+  }, [repliable, children])
 
   return (
     <div
@@ -45,7 +65,27 @@ export default function BlocInfo({ label, variant, children }: IBlocInfoProps) {
       >
         {label}
       </span>
-      <div className="text-sm text-texte">{children}</div>
+      {/* line-clamp-3 en dur (pas une valeur interpolée) : Tailwind ne
+          génère le CSS que pour les noms de classe qu'il trouve tels quels
+          dans le code source. */}
+      <div ref={repliable ? corpsRef : undefined} className={`text-sm text-texte ${repliable && !ouvert ? 'line-clamp-3' : ''}`}>
+        {children}
+      </div>
+      {repliable && tronque && (
+        <button
+          type="button"
+          onClick={() => setOuvert((v) => !v)}
+          aria-expanded={ouvert}
+          className="tactile mt-1.5 flex items-center gap-1 self-start text-[11px] font-semibold"
+          style={{ color: saturee }}
+        >
+          {ouvert ? 'Réduire' : 'Voir tout'}
+          <ChevronDown
+            className={`h-3 w-3 shrink-0 transition-transform duration-200 ${ouvert ? 'rotate-180' : ''}`}
+            aria-hidden="true"
+          />
+        </button>
+      )}
     </div>
   )
 }

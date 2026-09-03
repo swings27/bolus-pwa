@@ -41,12 +41,27 @@ export function formaterIntervalle(p: IPosologieRcp): string {
   return '—'
 }
 
+// Convention clinique française : un dosage ne se dit en grammes que pour un
+// nombre de grammes entier ("4 g/j", "12 g/j") ; dès qu'il faudrait une
+// décimale, on l'exprime en mg à la place ("1200 mg/j", pas "1,2 g/j" — que
+// personne ne dit à l'oral), y compris sous 1 g ("40 mg/j", pas "0,04 g/j").
+function formaterGrammesOuMg(grammes: number, parUnite: string): string {
+  if (Number.isInteger(grammes)) {
+    return `${formaterNombre(grammes)} g/${parUnite}`
+  }
+  // *1000 en virgule flottante peut produire un résidu (0.04*1000 =
+  // 40.00000000000001) — arrondi à 2 décimales pour l'effacer, largement
+  // suffisant pour des doses exprimées en mg.
+  const mg = Math.round(grammes * 1000 * 100) / 100
+  return `${formaterNombre(mg)} mg/${parUnite}`
+}
+
 // Distinct de formaterIntervalle : ne reprend jamais nb_prises_max_24h (déjà
 // utilisé comme repli d'intervalle ci-dessus) pour ne pas afficher deux fois
 // la même information sous deux libellés différents.
 export function formaterMax(p: IPosologieRcp): string | null {
-  if (p.dose_journaliere_max_g !== undefined) return `${formaterNombre(p.dose_journaliere_max_g)} g/j`
-  if (p.dose_max_par_prise_g !== undefined) return `${formaterNombre(p.dose_max_par_prise_g)} g/prise`
+  if (p.dose_journaliere_max_g !== undefined) return formaterGrammesOuMg(p.dose_journaliere_max_g, 'j')
+  if (p.dose_max_par_prise_g !== undefined) return formaterGrammesOuMg(p.dose_max_par_prise_g, 'prise')
   return null
 }
 

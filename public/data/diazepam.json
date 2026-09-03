@@ -211,7 +211,7 @@
       {
         "type": "Comprimé",
         "dosage": "2 mg et 5 mg",
-        "secable": false,
+        "secable": true,
         "ouverture_gelule": null,
         "posologie_adulte": []
       },

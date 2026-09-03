@@ -121,6 +121,7 @@ export interface IGrossesseAllaitementRcp {
   allaitement: string
   url_crat_grossesse?: string | null
   url_crat_allaitement?: string | null
+  /** Pas affiché — voir note_statut/source_rcp pour la même convention. */
   source?: string
 }
 
@@ -184,12 +185,16 @@ export interface IFormeOraleBloc {
   recommandation_sonde: IRecommandationSonde | null
 }
 
-/** Item générique titre/détail pour les listes dépliables de la zone
- * Précautions (surveillance spécifique, interactions médicamenteuses) —
- * voir AccordeonImbrique. */
+/** Item générique pour les listes dépliables de la zone Précautions
+ * (surveillance spécifique, interactions médicamenteuses) — voir
+ * AccordeonImbrique. `conduite` est gardée distincte de `detail` (plutôt que
+ * concaténée dedans) pour pouvoir la mettre en évidence visuellement dans un
+ * encadré séparé, l'information la plus actionnable pour le geste
+ * infirmier. */
 export interface ISurveillance {
   titre: string
   detail: string
+  conduite?: string
 }
 
 /** Fiche médicament complète, unité de données centrale de l'app — assemblée
