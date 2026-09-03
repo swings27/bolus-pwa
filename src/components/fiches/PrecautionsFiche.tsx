@@ -1,5 +1,5 @@
 import { Activity, Blend, Baby } from 'lucide-react'
-import type { ISurveillance, IGrossesseAllaitement } from '../../types'
+import type { ISurveillance, IGrossesseAllaitementRcp, IRcpSource } from '../../types'
 import GroupePrecaution from './GroupePrecaution'
 import AccordeonImbrique from './AccordeonImbrique'
 import SourcesRcp from './SourcesRcp'
@@ -7,30 +7,35 @@ import SourcesRcp from './SourcesRcp'
 interface IPrecautionsFicheProps {
   surveillanceSpecifique: ISurveillance[]
   interactionsMedicamenteuses: ISurveillance[] | null
-  grossesseAllaitement: IGrossesseAllaitement | null
-  sourcesRcp: string[]
+  grossesseAllaitement: IGrossesseAllaitementRcp | null
+  rcpSource: IRcpSource[]
+  statut: string
   dateRevision: string
+  perimetreValidation: string[]
+  prochaineRevision: string | null
 }
 
 // Zone "Précautions" en bas de fiche : regroupe surveillance spécifique,
 // interactions médicamenteuses et grossesse/allaitement, chacun dans son
 // propre groupe dépliable (voir GroupePrecaution), plus l'accès aux
-// sources RCP. Remplace l'ancien SurveillanceAccordeon, qui n'affichait que
-// la surveillance seule sans les deux autres catégories.
+// sources RCP.
 export default function PrecautionsFiche({
   surveillanceSpecifique,
   interactionsMedicamenteuses,
   grossesseAllaitement,
-  sourcesRcp,
+  rcpSource,
+  statut,
   dateRevision,
+  perimetreValidation,
+  prochaineRevision,
 }: IPrecautionsFicheProps) {
   const aSurveillance = surveillanceSpecifique.length > 0
   const aInteractions = (interactionsMedicamenteuses?.length ?? 0) > 0
 
   // Rien à montrer dans cette zone : ni précaution, ni sources — n'arrive
-  // pas en pratique (sourcesRcp existe toujours), mais reste correct si un
+  // pas en pratique (rcpSource existe toujours), mais reste correct si un
   // jour une fiche minimale en est dépourvue.
-  if (!aSurveillance && !aInteractions && !grossesseAllaitement && sourcesRcp.length === 0) return null
+  if (!aSurveillance && !aInteractions && !grossesseAllaitement && rcpSource.length === 0) return null
 
   // Espace réservé par <main> pour la BottomNavBar/les bandeaux flottants
   // (voir Layout.tsx) : flex-1 suffit à remplir la hauteur DISPONIBLE de
@@ -84,20 +89,63 @@ export default function PrecautionsFiche({
                 <span className="w-[72px] shrink-0 text-[11px] font-semibold uppercase text-texte-doux">
                   Grossesse
                 </span>
-                <span className="text-xs leading-relaxed text-texte">{grossesseAllaitement.grossesse}</span>
+                <span className="text-xs leading-relaxed text-texte">
+                  {grossesseAllaitement.grossesse}
+                  {grossesseAllaitement.url_crat_grossesse && (
+                    <>
+                      {' · '}
+                      <a
+                        href={grossesseAllaitement.url_crat_grossesse}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="underline"
+                        style={{ color: 'var(--interactif)' }}
+                      >
+                        CRAT ↗
+                      </a>
+                    </>
+                  )}
+                </span>
               </div>
               <div className="flex items-baseline gap-2.5">
                 <span className="w-[72px] shrink-0 text-[11px] font-semibold uppercase text-texte-doux">
                   Allaitement
                 </span>
-                <span className="text-xs leading-relaxed text-texte">{grossesseAllaitement.allaitement}</span>
+                <span className="text-xs leading-relaxed text-texte">
+                  {grossesseAllaitement.allaitement}
+                  {grossesseAllaitement.url_crat_allaitement && (
+                    <>
+                      {' · '}
+                      <a
+                        href={grossesseAllaitement.url_crat_allaitement}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="underline"
+                        style={{ color: 'var(--interactif)' }}
+                      >
+                        CRAT ↗
+                      </a>
+                    </>
+                  )}
+                </span>
               </div>
+              {grossesseAllaitement.source && (
+                <p className="text-[10px] text-texte-doux/70">Source : {grossesseAllaitement.source}</p>
+              )}
             </div>
           </GroupePrecaution>
         )}
       </div>
 
-      {sourcesRcp.length > 0 && <SourcesRcp sources={sourcesRcp} dateRevision={dateRevision} />}
+      {rcpSource.length > 0 && (
+        <SourcesRcp
+          sources={rcpSource}
+          statut={statut}
+          dateRevision={dateRevision}
+          perimetreValidation={perimetreValidation}
+          prochaineRevision={prochaineRevision}
+        />
+      )}
     </div>
   )
 }

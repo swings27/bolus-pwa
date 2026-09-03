@@ -1,0 +1,317 @@
+{
+  "dci": "adrénaline",
+  "commun": {
+    "noms_commerciaux": [
+      "EpiPen",
+      "Jext"
+    ],
+    "famille": "Catécholamine agent sympathomimétique à action directe",
+    "antidote": "",
+    "indications": [
+      "Arrêt cardio-vasculaire",
+      "Choc anaphylactique",
+      "États de choc"
+    ],
+    "grossesse_allaitement": {
+      "grossesse": "Compte tenu des indications en situation d'urgence, l'adrénaline peut être utilisée, si besoin, au cours de la grossesse.",
+      "allaitement": "Le passage de l'adrénaline dans le lait maternel n'est pas connu. Compte tenu des effets indésirables potentiels pour le nouveau-né allaité, l'allaitement est déconseillé au cours d'un traitement par l'adrénaline.",
+      "url_crat_grossesse": null,
+      "url_crat_allaitement": null,
+      "source": "RCP solution injectable 1 mg/mL en ampoule, section 4.6"
+    }
+  },
+  "iv": {
+    "reconstitution": null,
+    "administration": {
+      "note_ajustement": "",
+      "posologie": [
+        {
+          "population": "Arrêt cardiaque (réanimation cardio-pulmonaire)",
+          "population_type": "adulte",
+          "categorie": "generale",
+          "dose_par_prise_mg_min": 1,
+          "dose_par_prise_mg_max": 1,
+          "intervalle_min_min": 3,
+          "intervalle_max_min": 5
+        },
+        {
+          "population": "Choc anaphylactique établi (après dilution)",
+          "population_type": "adulte",
+          "categorie": "generale",
+          "dose_par_prise_mg": 0.1
+        },
+        {
+          "population": "Choc anaphylactique établi",
+          "population_type": "adulte",
+          "categorie": "im",
+          "dose_par_prise_mg_min": 0.5,
+          "dose_par_prise_mg_max": 1,
+          "intervalle_max_min": 5
+        },
+        {
+          "population": "Choc anaphylactique établi",
+          "population_type": "adulte",
+          "categorie": "sc",
+          "dose_par_prise_mg": 0.3,
+          "intervalle_min_min": 10,
+          "intervalle_max_min": 15
+        },
+        {
+          "population": "Détresses cardio-circulatoires (états de choc), PSE continu",
+          "population_type": "adulte",
+          "categorie": "pse",
+          "dose_ugkgmin_min": 0.01,
+          "dose_ugkgmin_max": 1.0
+        },
+        {
+          "population": "Arrêt cardiaque (réanimation cardio-pulmonaire), nourrisson et enfant",
+          "population_type": "pediatrie",
+          "categorie": "generale",
+          "dose_mg_kg_min": 0.01,
+          "dose_mg_kg_max": 0.01,
+          "dose_par_prise_mg_max": 1,
+          "intervalle_min_min": 3,
+          "intervalle_max_min": 5
+        },
+        {
+          "population": "Choc anaphylactique établi, enfant et adolescent au-dessus de 12 ans",
+          "population_type": "pediatrie",
+          "categorie": "im",
+          "age_min_mois": 144,
+          "age_max_mois": null,
+          "dose_par_prise_mg_min": 0.5,
+          "dose_par_prise_mg_max": 0.5,
+          "intervalle_min_min": 5,
+          "intervalle_max_min": 15
+        },
+        {
+          "population": "Choc anaphylactique établi, enfant de 6 à 12 ans",
+          "population_type": "pediatrie",
+          "categorie": "im",
+          "age_min_mois": 72,
+          "age_max_mois": 144,
+          "dose_par_prise_mg_min": 0.3,
+          "dose_par_prise_mg_max": 0.3,
+          "intervalle_min_min": 5,
+          "intervalle_max_min": 15
+        },
+        {
+          "population": "Choc anaphylactique établi, nourrisson et enfant de 6 mois à 6 ans",
+          "population_type": "pediatrie",
+          "categorie": "im",
+          "age_min_mois": 6,
+          "age_max_mois": 72,
+          "dose_par_prise_mg_min": 0.15,
+          "dose_par_prise_mg_max": 0.15,
+          "intervalle_min_min": 5,
+          "intervalle_max_min": 15
+        },
+        {
+          "population": "Choc anaphylactique établi, nourrisson en-dessous de 6 mois",
+          "population_type": "pediatrie",
+          "categorie": "im",
+          "age_min_mois": null,
+          "age_max_mois": 6,
+          "dose_mg_kg_min": 0.01,
+          "dose_mg_kg_max": 0.01,
+          "intervalle_min_min": 5,
+          "intervalle_max_min": 15
+        },
+        {
+          "population": "Choc anaphylactique établi, enfant de moins de 2 ans (jusqu'à 12 kg)",
+          "population_type": "pediatrie",
+          "categorie": "sc",
+          "age_min_mois": null,
+          "age_max_mois": 24,
+          "poids_min_kg": null,
+          "poids_max_kg": 12,
+          "dose_par_prise_mg_min": 0.05,
+          "dose_par_prise_mg_max": 0.1
+        },
+        {
+          "population": "Choc anaphylactique établi, enfant de 2 à 6 ans (12 à 18 kg)",
+          "population_type": "pediatrie",
+          "categorie": "sc",
+          "age_min_mois": 24,
+          "age_max_mois": 72,
+          "poids_min_kg": 12,
+          "poids_max_kg": 18,
+          "dose_par_prise_mg_min": 0.15,
+          "dose_par_prise_mg_max": 0.15
+        },
+        {
+          "population": "Choc anaphylactique établi, enfant de 6 à 12 ans (18 à 33 kg)",
+          "population_type": "pediatrie",
+          "categorie": "sc",
+          "age_min_mois": 72,
+          "age_max_mois": 144,
+          "poids_min_kg": 18,
+          "poids_max_kg": 33,
+          "dose_par_prise_mg_min": 0.2,
+          "dose_par_prise_mg_max": 0.2
+        }
+      ]
+    },
+    "incompatibilites": [
+      {
+        "substance": "Furosémide",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Insuline ultrarapide (ex. Novorapid)",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Bicarbonate de sodium",
+        "niveau": "absolu"
+      }
+    ],
+    "interactions_pertinentes": [
+      {
+        "substance": "Anesthésiques volatils halogénés",
+        "effet": "Risque de troubles du rythme ventriculaire graves par augmentation de l'excitabilité cardiaque (RCP).",
+        "action_infirmier": "Signaler au prescripteur/anesthésiste toute administration d'adrénaline chez un patient sous anesthésique volatil halogéné. Association déconseillée par voie IV/IM ; par voie SC, limiter l'apport (ex. moins de 0,1 mg en 10 minutes).",
+        "source_rcp": "RCP Adrénaline Aguettant 1 mg/mL ampoule, section 4.5"
+      },
+      {
+        "substance": "Antidépresseurs imipraminiques",
+        "effet": "Hypertension paroxystique avec possibilité de troubles du rythme, par inhibition de l'entrée de l'adrénaline dans la fibre sympathique (RCP).",
+        "action_infirmier": "Signaler au prescripteur toute prise concomitante d'un antidépresseur imipraminique. Association déconseillée par voie IV/IM.",
+        "source_rcp": "RCP Adrénaline Aguettant 1 mg/mL ampoule / Renaudin, section 4.5"
+      },
+      {
+        "substance": "Médicaments mixtes adrénergiques-sérotoninergiques",
+        "effet": "Hypertension paroxystique avec possibilité de troubles du rythme, par le même mécanisme que les imipraminiques (RCP).",
+        "action_infirmier": "Signaler au prescripteur toute prise concomitante. Association déconseillée par voie IV/IM.",
+        "source_rcp": "RCP Adrénaline Aguettant 1 mg/mL ampoule, section 4.5"
+      },
+      {
+        "substance": "IMAO non sélectifs, IMAO-A sélectifs, linézolide",
+        "effet": "Augmentation de l'action vasopressive de l'adrénaline, habituellement modérée mais parfois marquée (RCP).",
+        "action_infirmier": "Signaler au prescripteur toute prise concomitante d'un IMAO ou de linézolide. À n'utiliser que sous contrôle médical strict.",
+        "source_rcp": "RCP Adrénaline Aguettant 1 mg/mL ampoule / Renaudin, section 4.5"
+      },
+      {
+        "substance": "Bêta-bloquants adrénergiques non cardiosélectifs",
+        "effet": "Une hypertension artérielle sévère et une bradycardie réflexe peuvent survenir. Les bêta-bloquants antagonisent également les effets cardiaques et bronchodilatateurs de l'adrénaline (RCP).",
+        "action_infirmier": "Signaler au prescripteur toute prise de bêta-bloquant, surtout non cardiosélectif. Surveillance renforcée de la tension artérielle et de la fréquence cardiaque.",
+        "source_rcp": "RCP Adrénaline Aguettant 0,1 mg/mL sans sulfite, section 4.5"
+      },
+      {
+        "substance": "Insuline ou hypoglycémiants oraux",
+        "effet": "L'hyperglycémie provoquée par l'adrénaline peut conduire à une perte de la maîtrise de la glycémie chez les patients diabétiques traités par insuline ou hypoglycémiants oraux (RCP).",
+        "action_infirmier": "Surveillance renforcée de la glycémie chez les patients diabétiques recevant de l'adrénaline.",
+        "source_rcp": "RCP Adrénaline Aguettant 0,1 mg/mL sans sulfite, section 4.5"
+      }
+    ],
+    "contre_indications": [
+      "Troubles du rythme, surtout ventriculaires",
+      "Myocardiopathie obstructive sévère",
+      "Insuffisance coronarienne",
+      "Hypersensibilité connue à l'adrénaline, aux sulfites ou à l'un des excipients, contre-indication relative compte tenu du caractère vital de l'indication d'urgence (RCP : 'ce médicament étant indiqué en situation d'urgence, ces contre-indications sont relatives')"
+    ],
+    "surveillance_specifique": [
+      {
+        "evenement": "Troubles du rythme ventriculaire graves, avec risque de fibrillation ventriculaire parfois létale",
+        "explication": "Toute administration intraveineuse d'adrénaline peut entraîner ce type de trouble du rythme, risque explicitement mis en avant dans les mises en garde spéciales du RCP, propre à l'action directe de l'adrénaline sur les récepteurs bêta-adrénergiques cardiaques.",
+        "action": "Surveillance cardiovasculaire étroite, monitorage électrocardiographique continu si possible pendant et après l'administration IV.",
+        "source_rcp": "RCP Adrénaline Aguettant 1 mg/mL ampoule, section 4.4 : 'Toute administration par voie intraveineuse d'adrénaline peut entraîner des troubles du rythme ventriculaire avec risque de fibrillation ventriculaire parfois létale, ainsi que des élévations tensionnelles.'"
+      },
+      {
+        "evenement": "Nécrose au site d'injection en cas d'injections locales répétées ou d'extravasation",
+        "explication": "Résulte de la vasoconstriction locale puissante induite par l'adrénaline, mécanisme propre à cette molécule, pas une irritation générique liée au contenant.",
+        "action": "Varier les sites d'injection en cas d'administrations répétées ; surveiller l'apparition de signes de nécrose ou de pâleur cutanée locale ; éviter toute extravasation, notamment en perfusion continue.",
+        "source_rcp": "RCP Adrénaline Aguettant 1 mg/mL ampoule / Renaudin, section 4.4/4.8 : 'Des injections locales répétées peuvent provoquer une nécrose au niveau des points d'injection par vasoconstriction.'"
+      },
+      {
+        "evenement": "Hyperglycémie",
+        "explication": "L'adrénaline peut causer ou aggraver une hyperglycémie, notamment chez les patients diabétiques.",
+        "action": "Surveiller la glycémie, en particulier chez les patients diabétiques.",
+        "source_rcp": "RCP Adrénaline Aguettant 0,1 mg/mL sans sulfite, section 4.4 : 'L'adrénaline pouvant causer ou aggraver l'hyperglycémie, la glycémie doit être surveillée, en particulier chez les patients diabétiques.'"
+      },
+      {
+        "evenement": "Cardiomyopathie de stress",
+        "explication": "Effet indésirable cardiaque spécifiquement documenté avec l'adrénaline dans plusieurs RCP de la molécule.",
+        "action": "Surveillance clinique et ECG en cas de douleur thoracique ou de signes évocateurs après administration d'adrénaline.",
+        "source_rcp": "RCP Adrénaline Aguettant 1 mg/mL ampoule, section 4.8 : 'Des cas de syndrome de takotsubo (cardiomyopathie de stress) ont également été rapportés.'"
+      },
+      {
+        "evenement": "Hypertension artérielle sévère à haute dose ou chez les patients sensibles, avec risque d'hémorragie cérébrale",
+        "explication": "Aux doses élevées, la stimulation des récepteurs alpha périphériques par l'adrénaline conduit à une augmentation marquée des résistances périphériques et de la pression artérielle.",
+        "action": "Mesures fréquentes de la tension artérielle pendant et après l'administration, en particulier lors de bolus répétés ou à doses élevées.",
+        "source_rcp": "RCP Adrénaline Aguettant 1 mg/mL ampoule, section 4.8 : 'À forte dose ou chez les patients sensibles à l'adrénaline [...] accès d'hypertension artérielle (provoquant parfois une hémorragie cérébrale).'"
+      }
+    ],
+    "pictogrammes": [],
+    "preparation": [
+      {
+        "voie": "IVD",
+        "detail": "Pur (1 mg/mL) ou dilué à 0,1 mg/mL (1 mg dans 9 mL NaCl 0,9%)",
+        "duree": "Bolus",
+        "stabilite": "À utiliser immédiatement après dilution"
+      },
+      {
+        "voie": "IM",
+        "detail": "Utiliser pur",
+        "duree": "<1 min",
+        "stabilite": null
+      },
+      {
+        "voie": "SC",
+        "detail": "Utiliser pur",
+        "duree": "<1 min",
+        "stabilite": null
+      },
+      {
+        "voie": "PSE",
+        "contexte": "VVC recommandée",
+        "detail": "NaCl 0,9%, ≤ 50 mL, titration 0,01 à 1 µg/kg/min",
+        "duree": "Continu",
+        "stabilite": null
+      }
+    ]
+  },
+  "tracabilite": {
+    "rcp_source": [
+      {
+        "specialite": "Adrénaline Aguettant 1 mg/mL, solution injectable en ampoule",
+        "titulaire": "Laboratoire Aguettant",
+        "date_maj": "2022-10-18",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/61072758/extrait"
+      },
+      {
+        "specialite": "Adrénaline Renaudin 1 mg/mL, solution injectable en ampoule",
+        "titulaire": "Laboratoire Renaudin",
+        "date_maj": "2024-02-29",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/69553494/extrait"
+      },
+      {
+        "specialite": "Adrénaline Aguettant 1 mg/mL sans sulfite, solution injectable en seringue préremplie",
+        "titulaire": "Laboratoire Aguettant",
+        "date_maj": "2020-05-14",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/61912155/extrait",
+        "note_statut": "Le CIP consulté (10 seringues préremplies de 5 mL) présentait une date de commercialisation confirmée dans la fiche BDPM."
+      },
+      {
+        "specialite": "Adrénaline Aguettant 0,1 mg/mL sans sulfite, solution injectable en seringue préremplie",
+        "titulaire": "Laboratoire Aguettant",
+        "date_maj": "2024-08-30",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/62024136/extrait"
+      },
+      {
+        "specialite": "SFAR, Arrêt cardiaque en service de réanimation (algorithme, 2022)",
+        "titulaire": "Société Française d'Anesthésie et de Réanimation, CAMR et comité Réanimation"
+      }
+    ],
+    "statut": "valide",
+    "validation": {
+      "date": "2026-08-31",
+      "validateur": "Anna Trabaud-Lopez (IDE, porteuse du projet), vérification des données extraites contre les RCP ; équipe pharmacie, validation de la méthodologie et arbitrage des points litigieux",
+      "perimetre": [
+        "adulte",
+        "pediatrie"
+      ],
+      "prochaine_revision": "2026-11-30"
+    }
+  }
+}

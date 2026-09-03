@@ -20,9 +20,9 @@ export default function AccordeonImbrique({ items }: IAccordeonImbriqueProps) {
     <div className="flex flex-col">
       {items.map((item, index) => {
         const ouvert = indexOuvert === index
-        const idPanneau = `accordeon-imbrique-panneau-${item.titre}`
+        const idPanneau = `accordeon-imbrique-panneau-${index}`
         return (
-          <div key={item.titre} className="border-b border-accent/25 last:border-b-0">
+          <div key={`${item.titre}-${index}`} className="border-b border-accent/25 last:border-b-0">
             <button
               type="button"
               onClick={() => setIndexOuvert(ouvert ? null : index)}
@@ -39,7 +39,11 @@ export default function AccordeonImbrique({ items }: IAccordeonImbriqueProps) {
               />
             </button>
             {ouvert && (
-              <p id={idPanneau} className="pb-2 text-xs leading-relaxed text-texte">
+              // whitespace-pre-line : plusieurs items combinent plusieurs
+              // paragraphes (explication + conduite à tenir + source) séparés
+              // par des retours à la ligne dans la chaîne — sans cette classe,
+              // ils s'afficheraient collés en un seul bloc de texte.
+              <p id={idPanneau} className="whitespace-pre-line pb-2 text-xs leading-relaxed text-texte">
                 {item.detail}
               </p>
             )}

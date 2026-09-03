@@ -1,0 +1,401 @@
+{
+  "dci": "paracétamol",
+  "commun": {
+    "noms_commerciaux": [
+      "Dafalgan",
+      "Doliprane"
+    ],
+    "famille": "Antalgique non opioïde et antipyrétique",
+    "antidote": "N-acétylcystéine",
+    "indications": [
+      "Douleur légère à modérée",
+      "Douleur post-opératoire",
+      "Fièvre"
+    ],
+    "grossesse_allaitement": {
+      "grossesse": "Le paracétamol ne doit être utilisé pendant la grossesse qu'après une évaluation soigneuse du rapport bénéfice/risque.",
+      "allaitement": "Le paracétamol peut être utilisé pendant l'allaitement.",
+      "url_crat_grossesse": "https://www.lecrat.fr/4165/",
+      "url_crat_allaitement": "https://www.lecrat.fr/4167/",
+      "source": "RCP Paracétamol 10 mg/mL solution pour perfusion, section 4.6"
+    }
+  },
+  "iv": {
+    "reconstitution": null,
+    "preparation": [
+      {
+        "voie": "PERF",
+        "detail": "Solution prête à l'emploi, 1 g / 100 mL, sans dilution",
+        "duree": "15 minutes",
+        "stabilite": "À usage unique, utiliser immédiatement après ouverture"
+      }
+    ],
+    "administration": {
+      "note_ajustement": "Dose maximale journalière réduite à 3 g et intervalle allongé (jusqu'à 8 h) en cas d'insuffisance hépatique, d'insuffisance rénale sévère, d'alcoolisme chronique, de malnutrition, de déshydratation ou de poids inférieur à 50 kg, se référer au protocole du service.",
+      "posologie": [
+        {
+          "population": "≥ 50 kg",
+          "population_type": "adulte",
+          "categorie": "generale",
+          "dose_par_prise_mg": 1000,
+          "intervalle_min_h": 4,
+          "nb_prises_max_24h": 4,
+          "dose_journaliere_max_g": 4,
+          "intervalle_max_h": 6
+        },
+        {
+          "population": "De 33 à 50 kg",
+          "population_type": "adulte",
+          "categorie": "generale",
+          "dose_mg_kg_min": 15,
+          "dose_mg_kg_max": 15,
+          "intervalle_min_h": 4,
+          "dose_journaliere_max_g": 3,
+          "intervalle_max_h": 6
+        },
+        {
+          "population": "≤ 10 kg (nouveau-nés à terme et nourrissons)",
+          "population_type": "pediatrie",
+          "categorie": "generale",
+          "dose_mg_kg_min": 7.5,
+          "dose_mg_kg_max": 7.5,
+          "poids_max_kg": 10,
+          "age_min_mois": 0,
+          "intervalle_min_h": 4
+        },
+        {
+          "population": "> 10 kg et ≤ 33 kg (enfant)",
+          "population_type": "pediatrie",
+          "categorie": "generale",
+          "dose_mg_kg_min": 15,
+          "dose_mg_kg_max": 15,
+          "poids_min_kg": 10,
+          "poids_max_kg": 33,
+          "intervalle_min_h": 4,
+          "dose_journaliere_max_g": 2
+        }
+      ]
+    },
+    "incompatibilites": [
+      {
+        "substance": "Aciclovir",
+        "niveau": "absolu"
+      }
+    ],
+    "interactions_pertinentes": [
+      {
+        "substance": "Probénécide",
+        "effet": "Le probénécide entraîne une diminution de près de la moitié de la clairance du paracétamol en inhibant sa conjugaison à l'acide glucuronique.",
+        "action_infirmier": "Une diminution de la dose de paracétamol est à envisager en cas d'association au probénécide.",
+        "source_rcp": "RCP Paracétamol Kabi 10 mg/mL, 4.5"
+      },
+      {
+        "substance": "Salicylamide",
+        "effet": "Le salicylamide peut allonger la demi-vie d'élimination du paracétamol.",
+        "action_infirmier": "Surveiller les signes de surdosage en cas d'association prolongée.",
+        "source_rcp": "RCP Paracétamol Kabi 10 mg/mL, 4.5"
+      },
+      {
+        "substance": "Inducteurs enzymatiques",
+        "effet": "Une attention particulière doit être exercée en cas de prise concomitante d'inducteurs enzymatiques, qui augmentent la production de métabolite hépatotoxique du paracétamol.",
+        "action_infirmier": "Renforcer la surveillance hépatique en cas d'association, notamment en contexte de surdosage.",
+        "source_rcp": "RCP Paracétamol Kabi 10 mg/mL, 4.5"
+      },
+      {
+        "substance": "Anticoagulants oraux",
+        "effet": "L'utilisation concomitante de paracétamol (4 g/jour pendant au moins 4 jours) et d'anticoagulants oraux peut conduire à de légères variations de l'INR.",
+        "action_infirmier": "Renforcer la surveillance de l'INR pendant l'association et 1 semaine après l'arrêt du paracétamol.",
+        "source_rcp": "RCP Paracétamol Kabi 10 mg/mL, 4.5"
+      },
+      {
+        "substance": "Flucloxacilline",
+        "effet": "L'association a été rapportée comme cause d'acidose métabolique à trou anionique élevé (acidose pyroglutamique), en particulier chez les patients présentant des facteurs de risque.",
+        "action_infirmier": "Surveillance renforcée en cas d'association, en particulier chez les patients à risque (insuffisance rénale sévère, sepsis, dénutrition, alcoolisme chronique).",
+        "source_rcp": "RCP Paracétamol Kabi 10 mg/mL, 4.4 et 4.5"
+      }
+    ],
+    "contre_indications": [
+      "Hypersensibilité",
+      "Insuffisance hépato-cellulaire sévère"
+    ],
+    "surveillance_specifique": [
+      {
+        "evenement": "Hépatotoxicité en cas de surdosage",
+        "explication": "Le paracétamol provoque, en cas de surdosage (à partir de 7,5 g en une prise chez l'adulte), une cytolyse hépatique pouvant aboutir à une insuffisance hépatique sévère, parfois mortelle.",
+        "action": "Vérifier systématiquement l'absence de paracétamol dans les autres médicaments administrés au patient ; en cas de suspicion de surdosage, dosage plasmatique du paracétamol et administration de N-acétylcystéine (antidote).",
+        "source_rcp": "RCP Paracétamol Kabi 10 mg/mL, 4.4 et 4.9"
+      },
+      {
+        "evenement": "Acidose métabolique à trou anionique élevé",
+        "explication": "Risque lié à une déplétion en glutathion hépatique chez les patients à risque (insuffisance rénale sévère, sepsis, malnutrition, alcoolisme chronique) recevant du paracétamol à dose thérapeutique de façon prolongée, notamment en association avec la flucloxacilline.",
+        "action": "Surveiller l'apparition d'une acidose métabolique inexpliquée chez les patients à risque ; arrêter le paracétamol en cas de suspicion.",
+        "source_rcp": "RCP Paracétamol Kabi 10 mg/mL, 4.4 et 4.8"
+      },
+      {
+        "evenement": "Confusion mg/mL",
+        "explication": "Le RCP signale un risque de confusion mg/mL pouvant conduire à un surdosage accidentel et un décès, objet d'une Mesure Additionnelle de Réduction du Risque (MARR) ANSM pour cette spécialité.",
+        "action": "Toujours indiquer et vérifier la dose en mg ET le volume correspondant en mL avant toute administration.",
+        "source_rcp": "RCP Paracétamol Kabi 10 mg/mL, 4.2 et 4.4 ; MARR ANSM Paracétamol Kabi, version 2, juin 2024 (ansm.sante.fr)"
+      }
+    ],
+    "pictogrammes": []
+  },
+  "oral": {
+    "formes": [
+      {
+        "type": "Comprimé (non enrobé ou pelliculé)",
+        "dosage": "500 mg et 1000 mg",
+        "secable": false,
+        "ouverture_gelule": null,
+        "posologie_adulte": [
+          {
+            "population": "Douleur légère à modérée / fièvre",
+            "population_type": "adulte",
+            "categorie": "generale",
+            "dose_par_prise_mg_min": 500,
+            "dose_par_prise_mg_max": 1000,
+            "intervalle_min_h": 4,
+            "intervalle_max_h": 6,
+            "dose_journaliere_max_g": 4
+          },
+          {
+            "population": "Enfant de 27 kg à 40 kg (environ 8 à 12 ans), dosage 500 mg",
+            "population_type": "pediatrie",
+            "categorie": "generale",
+            "dose_par_prise_mg_min": 500,
+            "dose_par_prise_mg_max": 500,
+            "poids_min_kg": 27,
+            "poids_max_kg": 40,
+            "age_min_mois": 96,
+            "age_max_mois": 144,
+            "intervalle_min_h": 6,
+            "dose_journaliere_max_g": 2
+          },
+          {
+            "population": "Enfant de 41 kg à 49 kg (environ 13 à 15 ans), dosage 500 mg",
+            "population_type": "pediatrie",
+            "categorie": "generale",
+            "dose_par_prise_mg_min": 500,
+            "dose_par_prise_mg_max": 500,
+            "poids_min_kg": 41,
+            "poids_max_kg": 49,
+            "age_min_mois": 156,
+            "age_max_mois": 180,
+            "intervalle_min_h": 4,
+            "dose_journaliere_max_g": 3
+          }
+        ]
+      },
+      {
+        "type": "Gélule",
+        "dosage": "500 mg et 1000 mg",
+        "secable": false,
+        "ouverture_gelule": false,
+        "posologie_adulte": [
+          {
+            "population": "Douleur légère à modérée / fièvre",
+            "population_type": "adulte",
+            "categorie": "generale",
+            "dose_par_prise_mg_min": 500,
+            "dose_par_prise_mg_max": 1000,
+            "intervalle_min_h": 4,
+            "intervalle_max_h": 6,
+            "dose_journaliere_max_g": 4
+          },
+          {
+            "population": "Enfant de 27 kg à 40 kg (environ 8 à 12 ans), dosage 500 mg",
+            "population_type": "pediatrie",
+            "categorie": "generale",
+            "dose_par_prise_mg_min": 500,
+            "dose_par_prise_mg_max": 500,
+            "poids_min_kg": 27,
+            "poids_max_kg": 40,
+            "age_min_mois": 96,
+            "age_max_mois": 144,
+            "intervalle_min_h": 6,
+            "dose_journaliere_max_g": 2
+          },
+          {
+            "population": "Enfant de 41 kg à 49 kg (environ 13 à 15 ans), dosage 500 mg",
+            "population_type": "pediatrie",
+            "categorie": "generale",
+            "dose_par_prise_mg_min": 500,
+            "dose_par_prise_mg_max": 500,
+            "poids_min_kg": 41,
+            "poids_max_kg": 49,
+            "age_min_mois": 156,
+            "age_max_mois": 180,
+            "intervalle_min_h": 4,
+            "dose_journaliere_max_g": 3
+          }
+        ]
+      },
+      {
+        "type": "Comprimé effervescent",
+        "dosage": "1000 mg",
+        "secable": false,
+        "ouverture_gelule": null,
+        "posologie_adulte": [
+          {
+            "population": "Douleur légère à modérée / fièvre",
+            "population_type": "adulte",
+            "categorie": "generale",
+            "dose_par_prise_mg_min": 1000,
+            "dose_par_prise_mg_max": 1000,
+            "intervalle_min_h": 4,
+            "dose_journaliere_max_g": 4,
+            "intervalle_max_h": 6
+          }
+        ]
+      },
+      {
+        "type": "Poudre pour solution buvable en sachet-dose",
+        "dosage": "1000 mg",
+        "secable": false,
+        "ouverture_gelule": null,
+        "posologie_adulte": [
+          {
+            "population": "Douleur légère à modérée / fièvre",
+            "population_type": "adulte",
+            "categorie": "generale",
+            "dose_par_prise_mg_min": 1000,
+            "dose_par_prise_mg_max": 1000,
+            "intervalle_min_h": 4,
+            "dose_journaliere_max_g": 4,
+            "intervalle_max_h": 6
+          }
+        ]
+      },
+      {
+        "type": "Suspension buvable",
+        "dosage": "2,4 % (24 mg/mL), flacon avec pipette graduée en kg",
+        "secable": false,
+        "ouverture_gelule": null,
+        "posologie_adulte": [
+          {
+            "population": "Nourrisson et enfant de 4 à 16 kg",
+            "categorie": "generale",
+            "population_type": "pediatrie",
+            "dose_mg_kg_min": 15,
+            "dose_mg_kg_max": 15,
+            "intervalle_min_h": 6,
+            "intervalle_max_h": 6,
+            "poids_min_kg": 4,
+            "poids_max_kg": 16
+          },
+          {
+            "population": "Enfant de 17 à 26 kg",
+            "categorie": "generale",
+            "population_type": "pediatrie",
+            "dose_mg_kg_min": 15,
+            "dose_mg_kg_max": 15,
+            "intervalle_min_h": 6,
+            "intervalle_max_h": 6,
+            "poids_min_kg": 17,
+            "poids_max_kg": 26
+          }
+        ]
+      },
+      {
+        "type": "Suppositoire",
+        "dosage": "1000 mg",
+        "secable": false,
+        "ouverture_gelule": null,
+        "posologie_adulte": [
+          {
+            "population": "Douleur légère à modérée / fièvre",
+            "population_type": "adulte",
+            "categorie": "generale",
+            "dose_par_prise_mg_min": 1000,
+            "dose_par_prise_mg_max": 1000,
+            "intervalle_min_h": 4,
+            "dose_journaliere_max_g": 4,
+            "intervalle_max_h": 6
+          }
+        ]
+      }
+    ],
+    "recommandation_sonde": {
+      "forme_preferee": "Poudre pour solution buvable en sachet-dose",
+      "alternative": "Comprimé effervescent"
+    }
+  },
+  "tracabilite": {
+    "rcp_source": [
+      {
+        "specialite": "PARACETAMOL KABI 10 mg/mL, solution pour perfusion",
+        "titulaire": "FRESENIUS KABI FRANCE SA",
+        "date_maj": "24/01/2025",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/64454154/extrait"
+      },
+      {
+        "specialite": "DOLIPRANE 1000 mg, comprimé",
+        "titulaire": "OPELLA HEALTHCARE FRANCE SAS",
+        "date_maj": "29/06/2026",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/60234100/extrait"
+      },
+      {
+        "specialite": "DOLIPRANE 500 mg, comprimé",
+        "titulaire": "OPELLA HEALTHCARE FRANCE SAS",
+        "date_maj": "28/04/2026",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/63368332/extrait"
+      },
+      {
+        "specialite": "DAFALGAN 500 mg, comprimé",
+        "titulaire": "Non relevé lors de cette session",
+        "date_maj": "28/04/2026",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/67721153/extrait"
+      },
+      {
+        "specialite": "DOLIPRANE 500 mg, gélule",
+        "titulaire": "OPELLA HEALTHCARE FRANCE SAS",
+        "date_maj": "28/04/2026",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/67119691/extrait"
+      },
+      {
+        "specialite": "DOLIPRANE 1000 mg, gélule",
+        "titulaire": "OPELLA HEALTHCARE FRANCE SAS",
+        "date_maj": "28/04/2026",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/69309629/extrait"
+      },
+      {
+        "specialite": "DAFALGAN 1000 mg, gélule",
+        "titulaire": "Non relevé lors de cette session",
+        "date_maj": "28/04/2026",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/67154532/extrait"
+      },
+      {
+        "specialite": "DAFALGAN 1000 mg, comprimé effervescent",
+        "titulaire": "UPSA SAS",
+        "date_maj": "28/04/2026",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/63264636/extrait"
+      },
+      {
+        "specialite": "DOLIPRANE 1000 mg, poudre pour solution buvable en sachet-dose",
+        "titulaire": "OPELLA HEALTHCARE FRANCE SAS",
+        "date_maj": "01/06/2026",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/61681702/extrait"
+      },
+      {
+        "specialite": "DOLIPRANE ADULTES 1000 mg, suppositoire",
+        "titulaire": "OPELLA HEALTHCARE FRANCE SAS",
+        "date_maj": "29/06/2026",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/67488731/extrait"
+      },
+      {
+        "specialite": "DOLIPRANE 2,4 POUR CENT, suspension buvable",
+        "titulaire": "Opella Healthcare France"
+      }
+    ],
+    "statut": "valide",
+    "validation": {
+      "date": "2026-08-31",
+      "validateur": "Anna Trabaud-Lopez (IDE, porteuse du projet), vérification des données extraites contre les RCP ; équipe pharmacie, validation de la méthodologie et arbitrage des points litigieux",
+      "perimetre": [
+        "adulte",
+        "pediatrie"
+      ],
+      "prochaine_revision": "2026-11-30"
+    }
+  }
+}

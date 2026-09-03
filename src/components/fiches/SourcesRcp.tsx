@@ -1,10 +1,14 @@
 import { useEffect, useRef, useState } from 'react'
 import { X } from 'lucide-react'
 import { useFocusTrap } from '../../hooks/useFocusTrap'
+import type { IRcpSource } from '../../types'
 
 interface ISourcesRcpProps {
-  sources: string[]
+  sources: IRcpSource[]
+  statut: string
   dateRevision: string
+  perimetreValidation: string[]
+  prochaineRevision: string | null
 }
 
 // Reformate une date ISO ("2026-08-13") en JJ/MM/AAAA par découpage de
@@ -20,10 +24,16 @@ function formatDateFr(iso: string): string {
 }
 
 // Trigger discret ("Sources RCP (3) · JJ/MM/AAAA") + feuille de fond
-// listant chaque source, à la place de l'ancien bloc de texte toujours
-// visible : ce détail n'a pas besoin d'occuper de la place en permanence,
-// seulement d'être consultable à la demande.
-export default function SourcesRcp({ sources, dateRevision }: ISourcesRcpProps) {
+// listant chaque source, à la place d'un bloc de texte toujours visible :
+// ce détail n'a pas besoin d'occuper de la place en permanence, seulement
+// d'être consultable à la demande.
+export default function SourcesRcp({
+  sources,
+  statut,
+  dateRevision,
+  perimetreValidation,
+  prochaineRevision,
+}: ISourcesRcpProps) {
   const [ouvert, setOuvert] = useState(false)
   const conteneurRef = useRef<HTMLDivElement>(null)
 
@@ -38,10 +48,12 @@ export default function SourcesRcp({ sources, dateRevision }: ISourcesRcpProps) 
     return () => document.removeEventListener('keydown', gererEchap)
   }, [ouvert])
 
-  // Garde-fou : une fiche encore marquée MOCK dans ses sources ne doit
-  // jamais pouvoir être confondue avec une fiche validée, y compris si
-  // elle finit par atterrir en production par erreur.
-  const estMock = sources.some((source) => source.includes('MOCK'))
+  // Garde-fou : une fiche dont le statut de validation n'est pas "valide"
+  // ne doit jamais pouvoir être confondue avec une fiche validée, y compris
+  // si elle finit par atterrir en production par erreur.
+  const aVerifier = statut !== 'valide'
+
+  const aPiedDePage = perimetreValidation.length > 0 || prochaineRevision !== null
 
   return (
     <>
@@ -63,7 +75,7 @@ export default function SourcesRcp({ sources, dateRevision }: ISourcesRcpProps) 
             role="dialog"
             aria-modal="true"
             aria-labelledby="sources-rcp-titre"
-            className="w-full rounded-t-2xl px-5 pb-6 pt-5 shadow-xl"
+            className="max-h-[85vh] w-full overflow-y-auto rounded-t-2xl px-5 pb-6 pt-5 shadow-xl"
             style={{ backgroundColor: 'var(--surface)' }}
             onClick={(evenement) => evenement.stopPropagation()}
           >
@@ -84,24 +96,47 @@ export default function SourcesRcp({ sources, dateRevision }: ISourcesRcpProps) 
               Dernière veille : {formatDateFr(dateRevision)}
             </p>
 
-            {estMock && (
+            {aVerifier && (
               <div className="mb-3 rounded-lg border border-alerte bg-alerte/[0.18] px-3 py-2 text-xs font-medium text-texte">
-                ⚠ Données de développement — non validées cliniquement
+                ⚠ Statut « {statut} » — à vérifier avant utilisation clinique
               </div>
             )}
 
             <ul className="flex flex-col">
               {sources.map((source, index) => (
                 <li
-                  key={source}
+                  key={`${source.specialite}-${index}`}
                   className={`py-2.5 text-[13px] text-texte ${
                     index < sources.length - 1 ? 'border-b border-texte/10' : ''
                   }`}
                 >
-                  {source}
+                  <div className="font-semibold">{source.specialite}</div>
+                  {(source.titulaire || source.date_maj) && (
+                    <div className="mt-0.5 text-[11px] text-texte-doux">
+                      {[source.titulaire, source.date_maj && `MAJ ${source.date_maj}`].filter(Boolean).join(' · ')}
+                    </div>
+                  )}
+                  {source.url_ansm && (
+                    <a
+                      href={source.url_ansm}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="mt-1 inline-block text-[11px] underline"
+                      style={{ color: 'var(--interactif)' }}
+                    >
+                      Voir sur la BDPM ↗
+                    </a>
+                  )}
                 </li>
               ))}
             </ul>
+
+            {aPiedDePage && (
+              <div className="mt-3 border-t border-texte/10 pt-3 text-[11px] text-texte-doux">
+                {perimetreValidation.length > 0 && <p>Périmètre validé : {perimetreValidation.join(', ')}</p>}
+                {prochaineRevision && <p>Prochaine révision : {formatDateFr(prochaineRevision)}</p>}
+              </div>
+            )}
           </div>
         </div>
       )}

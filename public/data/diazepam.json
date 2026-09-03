@@ -1,0 +1,292 @@
+{
+  "dci": "diazépam",
+  "commun": {
+    "noms_commerciaux": [
+      "Valium"
+    ],
+    "famille": "Benzodiazépine",
+    "antidote": "Flumazénil",
+    "indications": [
+      "Anxiété sévère",
+      "Sevrage alcoolique (delirium tremens)",
+      "Contractures musculaires douloureuses",
+      "Convulsions / état de mal épileptique",
+      "Prémédication anesthésique",
+      "Anxiolyse avant soins médicaux"
+    ],
+    "grossesse_allaitement": {
+      "grossesse": "Par mesure de prudence, l'utilisation du diazépam est déconseillée au cours de la grossesse quel qu'en soit le terme.",
+      "allaitement": "L'utilisation du diazépam pendant l'allaitement est déconseillée.",
+      "url_crat_grossesse": "https://www.lecrat.fr/3869/",
+      "url_crat_allaitement": "https://www.lecrat.fr/3871/",
+      "source": "RCP solution injectable 10 mg/2 mL, section 4.6"
+    }
+  },
+  "iv": {
+    "reconstitution": null,
+    "administration": {
+      "note_ajustement": "Dose adaptée selon la fonction rénale, la fonction hépatique et l'âge, se référer au protocole du service.",
+      "posologie": [
+        {
+          "population": "Urgences neuropsychiatriques",
+          "categorie": "generale",
+          "dose_mg_kg_min": 0.1,
+          "dose_mg_kg_max": 0.2,
+          "dose_par_prise_mg_min": 10,
+          "dose_par_prise_mg_max": 20,
+          "nb_prises_max_24h": 4,
+          "intervalle_min_h": 6,
+          "population_type": "adulte"
+        },
+        {
+          "population": "État de mal convulsif",
+          "categorie": "generale",
+          "dose_par_prise_mg_max": 20,
+          "dose_par_prise_mg_min": 10,
+          "intervalle_min_min": 5,
+          "dose_journaliere_max_g": 0.04,
+          "nb_prises_max_24h": 2,
+          "population_type": "adulte"
+        },
+        {
+          "population": "État de mal épileptique du nourrisson",
+          "population_type": "pediatrie",
+          "categorie": "generale",
+          "dose_mg_kg_min": 0.5,
+          "dose_mg_kg_max": 0.5,
+          "intervalle_min_min": 10,
+          "intervalle_max_min": 20
+        },
+        {
+          "population": "État de mal épileptique de l'enfant",
+          "population_type": "pediatrie",
+          "categorie": "generale",
+          "dose_mg_kg_min": 0.2,
+          "dose_mg_kg_max": 0.3,
+          "intervalle_min_min": 10,
+          "intervalle_max_min": 20
+        }
+      ]
+    },
+    "incompatibilites": [
+      {
+        "substance": "Tirofiban (Aggrastat)",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Tramadol",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Tigécycline",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Glycopyrronium",
+        "niveau": "absolu"
+      }
+    ],
+    "interactions_pertinentes": [
+      {
+        "substance": "Alcool",
+        "effet": "Majoration par l'alcool de l'effet sédatif des benzodiazépines. L'altération de la vigilance peut rendre dangereuses la conduite de véhicules et l'utilisation de machines.",
+        "action_infirmier": "Éviter la prise de boissons alcoolisées ou de médicaments contenant de l'alcool ; avertir le patient.",
+        "source_rcp": "RCP VALIUM 10 mg/2 mL, 4.5"
+      },
+      {
+        "substance": "Opioïdes",
+        "effet": "L'utilisation concomitante d'opioïdes avec le diazépam augmente le risque de sédation, de dépression respiratoire, de coma et de décès en raison d'un effet dépresseur cumulatif sur le système nerveux central.",
+        "action_infirmier": "Surveiller étroitement la fonction respiratoire et l'état de conscience ; limiter la dose et la durée de l'association.",
+        "source_rcp": "RCP VALIUM 10 mg/2 mL, 4.5"
+      },
+      {
+        "substance": "Clozapine",
+        "effet": "Risque accru de collapsus avec arrêt respiratoire et/ou cardiaque.",
+        "action_infirmier": "Surveillance cardio-respiratoire renforcée en cas d'association.",
+        "source_rcp": "RCP VALIUM 10 mg/2 mL, 4.5"
+      },
+      {
+        "substance": "Autres dépresseurs du système nerveux central",
+        "effet": "Majoration de la dépression centrale. Pour les dérivés morphiniques et les barbituriques : risque majoré de dépression respiratoire, pouvant être fatale en cas de surdosage.",
+        "action_infirmier": "Surveillance renforcée de la vigilance et de la fonction respiratoire ; éviter les associations non justifiées.",
+        "source_rcp": "RCP VALIUM 10 mg/2 mL, 4.5"
+      }
+    ],
+    "contre_indications": [
+      "Hypersensibilité",
+      "Insuffisance respiratoire sévère",
+      "Syndrome d'apnée du sommeil",
+      "Insuffisance hépatique sévère",
+      "Myasthénie"
+    ],
+    "surveillance_specifique": [
+      {
+        "evenement": "Apnée en cas d'injection IV trop rapide",
+        "explication": "Le RCP impose une injection lente en raison d'un risque d'apnée documenté en cas d'injection IV rapide (RCP 4.2 et 4.8).",
+        "action": "Respecter la vitesse d'injection indiquée en Préparation ; disposer de matériel de réanimation respiratoire à proximité.",
+        "source_rcp": "RCP VALIUM 10 mg/2 mL, 4.2 et 4.8 ; guide HUG des médicaments injectables"
+      },
+      {
+        "evenement": "Dépression respiratoire",
+        "explication": "Effet indésirable documenté (RCP 4.8, Affections respiratoires), dose-dépendant.",
+        "action": "Surveiller la fréquence respiratoire et la saturation, en particulier chez les patients atteints d'une pathologie respiratoire.",
+        "source_rcp": "RCP VALIUM 10 mg/2 mL, 4.8"
+      },
+      {
+        "evenement": "Agressivité veineuse de la solution",
+        "explication": "Solution très hyperosmolaire (7775 mOsm/kg à 5 mg/mL) contenant du propylène glycol et de l'éthanol comme co-solvants (source HUG).",
+        "action": "Injecter dans une grosse veine, préférer une voie veineuse centrale si disponible, éviter toute extravasation, utiliser du matériel sans PVC.",
+        "source_rcp": "Guide HUG des médicaments injectables"
+      }
+    ],
+    "pictogrammes": [],
+    "preparation": [
+      {
+        "voie": "IM",
+        "detail": "Utiliser pur",
+        "duree": "<1 min",
+        "stabilite": null
+      },
+      {
+        "voie": "IVL",
+        "detail": "Utiliser pur",
+        "duree": "3 à 5 min, débit max 5 mg/min",
+        "stabilite": null
+      },
+      {
+        "voie": "PERF",
+        "detail": "NaCl 0,9%, ≥ 100 mL",
+        "duree": "≥ 15 min",
+        "stabilite": null
+      },
+      {
+        "voie": "PERF",
+        "contexte": "état de mal épileptique",
+        "detail": "Glucose 5%, 100 mg/500 mL",
+        "duree": "12h30 (40 mL/h)",
+        "stabilite": null
+      }
+    ]
+  },
+  "oral": {
+    "formes": [
+      {
+        "type": "Comprimé sécable",
+        "dosage": "10 mg",
+        "secable": true,
+        "ouverture_gelule": null,
+        "posologie_adulte": [
+          {
+            "population": "Anxiété",
+            "categorie": "generale",
+            "dose_par_prise_mg_min": 2,
+            "dose_par_prise_mg_max": 5,
+            "intervalle_min_h": 8,
+            "intervalle_max_h": 12,
+            "dose_journaliere_max_g": 0.015,
+            "population_type": "adulte"
+          },
+          {
+            "population": "Anxiété sévère",
+            "categorie": "generale",
+            "dose_par_prise_mg_min": 5,
+            "dose_par_prise_mg_max": 15,
+            "intervalle_min_h": 6,
+            "intervalle_max_h": 12,
+            "dose_journaliere_max_g": 0.03,
+            "population_type": "adulte"
+          },
+          {
+            "population": "Sevrage alcoolique",
+            "categorie": "generale",
+            "dose_par_prise_mg_min": 5,
+            "dose_par_prise_mg_max": 20,
+            "intervalle_min_h": 2,
+            "intervalle_max_h": 4,
+            "dose_journaliere_max_g": 0.04,
+            "population_type": "adulte"
+          }
+        ]
+      },
+      {
+        "type": "Comprimé",
+        "dosage": "2 mg et 5 mg",
+        "secable": false,
+        "ouverture_gelule": null,
+        "posologie_adulte": []
+      },
+      {
+        "type": "Solution buvable en gouttes",
+        "dosage": "1 % (10 mg/mL, soit 30 gouttes = 10 mg)",
+        "secable": false,
+        "ouverture_gelule": null,
+        "posologie_adulte": [
+          {
+            "population": "Enfant, utilisation exceptionnelle",
+            "population_type": "pediatrie",
+            "categorie": "generale",
+            "dose_journaliere_mg_kg_min": 0.5,
+            "dose_journaliere_mg_kg_max": 0.5
+          },
+          {
+            "population": "Prévention des convulsions fébriles",
+            "population_type": "pediatrie",
+            "categorie": "speciale",
+            "dose_mg_kg_min": 0.15,
+            "dose_mg_kg_max": 0.33,
+            "intervalle_min_h": 8,
+            "intervalle_max_h": 8
+          }
+        ]
+      }
+    ],
+    "recommandation_sonde": {
+      "forme_preferee": "Solution buvable en gouttes",
+      "alternative": "Comprimé écrasé"
+    }
+  },
+  "tracabilite": {
+    "rcp_source": [
+      {
+        "specialite": "VALIUM 10 mg/2 ml, solution injectable",
+        "titulaire": "ATNAHS PHARMA NETHERLANDS B.V.",
+        "date_maj": "Non précisée sur la page RCP consultée (rubrique 10 « à compléter ultérieurement par le titulaire »)",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/67959261/extrait"
+      },
+      {
+        "specialite": "VALIUM 10 mg, comprimé sécable",
+        "titulaire": "Non relevé lors de cette session",
+        "date_maj": "Dernière mise à jour BDPM le 28/04/2026 (page produit)",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/60290800/extrait"
+      },
+      {
+        "specialite": "VALIUM 1 pour cent, solution buvable en gouttes",
+        "titulaire": "Non relevé lors de cette session",
+        "date_maj": "Dernière mise à jour BDPM le 29/06/2026 (page produit)",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/63196256/extrait"
+      },
+      {
+        "specialite": "DIAZEPAM TEVA 5 mg, comprimé",
+        "titulaire": "Non relevé lors de cette session",
+        "date_maj": "Non relevée lors de cette session",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/66023836/extrait"
+      },
+      {
+        "specialite": "DIAZEPAM TEVA 2 mg, comprimé",
+        "titulaire": "Non relevé lors de cette session",
+        "date_maj": "Non relevée lors de cette session",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/66106869/extrait"
+      }
+    ],
+    "statut": "valide",
+    "validation": {
+      "date": "2026-08-31",
+      "validateur": "Anna Trabaud-Lopez (IDE, porteuse du projet), vérification des données extraites contre les RCP ; équipe pharmacie, validation de la méthodologie et arbitrage des points litigieux",
+      "perimetre": [
+        "adulte",
+        "pediatrie"
+      ],
+      "prochaine_revision": "2026-11-30"
+    }
+  }
+}

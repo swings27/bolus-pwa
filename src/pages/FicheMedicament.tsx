@@ -63,8 +63,8 @@ export default function FicheMedicament() {
   const formesDisponibles = useMemo<Forme[]>(() => {
     if (!fiche) return []
     const formes: Forme[] = []
-    if (fiche.injectable) formes.push('injectable')
-    if (fiche.perOsSonde) formes.push('perOs')
+    if (fiche.iv) formes.push('injectable')
+    if (fiche.oral) formes.push('perOs')
     return formes
   }, [fiche])
 
@@ -138,7 +138,7 @@ export default function FicheMedicament() {
       <div className="flex flex-col gap-1 px-6 pt-2">
         <div className="-mr-2.5 flex items-center justify-between gap-2">
           <p className="text-xs font-semibold uppercase tracking-widest text-accent">
-            {fiche.sousFamille}
+            {fiche.famille}
           </p>
           <BoutonFavori
             actif={favoris.includes(fiche.id)}
@@ -213,11 +213,11 @@ export default function FicheMedicament() {
                 Sélectionnez une forme d'administration ci-dessus
               </p>
             )}
-            {formeActive === 'injectable' && fiche.injectable && (
-              <DetailInjectable donnees={fiche.injectable} />
+            {formeActive === 'injectable' && fiche.iv && (
+              <DetailInjectable donnees={fiche.iv} />
             )}
-            {formeActive === 'perOs' && fiche.perOsSonde && (
-              <DetailPerOs donnees={fiche.perOsSonde} />
+            {formeActive === 'perOs' && fiche.oral && (
+              <DetailPerOs donnees={fiche.oral} />
             )}
           </div>
         </div>
@@ -227,8 +227,11 @@ export default function FicheMedicament() {
         surveillanceSpecifique={fiche.surveillanceSpecifique}
         interactionsMedicamenteuses={fiche.interactionsMedicamenteuses}
         grossesseAllaitement={fiche.grossesseAllaitement}
-        sourcesRcp={fiche.sourcesRcp}
+        rcpSource={fiche.rcpSource}
+        statut={fiche.statut}
         dateRevision={fiche.dateRevision}
+        perimetreValidation={fiche.perimetreValidation}
+        prochaineRevision={fiche.prochaineRevision}
       />
     </div>
   )
