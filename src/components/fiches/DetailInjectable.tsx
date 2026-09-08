@@ -1,10 +1,26 @@
-import type { IFormeIv } from '../../types'
+import type { IFormeIv, IReconstitution } from '../../types'
 import BlocAvertissement from '../layout/BlocAvertissement'
 import SectionPosologies from './SectionPosologies'
 import TitreSectionFiche from './TitreSectionFiche'
 
 interface IDetailInjectableProps {
   donnees: IFormeIv
+}
+
+const MOTIF_VOLUME_RECONSTITUTION = /^volume_par_(\d+)mg_mL$/
+
+/** Extrait et trie les paliers `volume_par_<dose>mg_mL` présents dans la
+ * reconstitution — la liste des paliers varie d'une molécule à l'autre
+ * (voir le commentaire sur IReconstitution), donc on les découvre plutôt que
+ * d'en supposer un jeu fixe. */
+function volumesReconstitution(reconstitution: IReconstitution): { doseMg: number; volumeMl: number }[] {
+  return Object.entries(reconstitution)
+    .map(([cle, valeur]) => {
+      const correspondance = MOTIF_VOLUME_RECONSTITUTION.exec(cle)
+      return correspondance && typeof valeur === 'number' ? { doseMg: Number(correspondance[1]), volumeMl: valeur } : null
+    })
+    .filter((v): v is { doseMg: number; volumeMl: number } => v !== null)
+    .sort((a, b) => a.doseMg - b.doseMg)
 }
 
 const LABELS_VOIE: Record<string, string> = {
@@ -27,6 +43,7 @@ export default function DetailInjectable({ donnees }: IDetailInjectableProps) {
   // est adulte uniquement, une préparation marquée `population_type:
   // "pediatrie"` (ex. dilution néonatologie) ne doit donc pas apparaître ici.
   const preparationsAdultes = donnees.preparation.filter((prep) => prep.population_type !== 'pediatrie')
+  const volumes = donnees.reconstitution ? volumesReconstitution(donnees.reconstitution) : []
 
   return (
     <div className="flex flex-col">
@@ -35,19 +52,13 @@ export default function DetailInjectable({ donnees }: IDetailInjectableProps) {
           <TitreSectionFiche>Reconstitution</TitreSectionFiche>
           <div className="rounded-xl p-3.5" style={CARTE_STYLE}>
             {donnees.reconstitution.solvant && <p className="text-xs text-texte">{donnees.reconstitution.solvant}</p>}
-            {(donnees.reconstitution.volume_par_500mg_mL !== undefined ||
-              donnees.reconstitution.volume_par_1000mg_mL !== undefined ||
-              donnees.reconstitution.volume_par_2000mg_mL !== undefined) && (
+            {volumes.length > 0 && (
               <ul className="mt-1.5 flex flex-col gap-0.5 text-[11.5px] text-texte-doux">
-                {donnees.reconstitution.volume_par_500mg_mL !== undefined && (
-                  <li>500 mg → {donnees.reconstitution.volume_par_500mg_mL} mL</li>
-                )}
-                {donnees.reconstitution.volume_par_1000mg_mL !== undefined && (
-                  <li>1000 mg → {donnees.reconstitution.volume_par_1000mg_mL} mL</li>
-                )}
-                {donnees.reconstitution.volume_par_2000mg_mL !== undefined && (
-                  <li>2000 mg → {donnees.reconstitution.volume_par_2000mg_mL} mL</li>
-                )}
+                {volumes.map(({ doseMg, volumeMl }) => (
+                  <li key={doseMg}>
+                    {doseMg} mg → {volumeMl} mL
+                  </li>
+                ))}
               </ul>
             )}
             {donnees.reconstitution.stabilite_avant_dilution && (

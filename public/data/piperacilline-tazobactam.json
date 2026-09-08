@@ -129,7 +129,7 @@
   },
   "iv": {
     "reconstitution": {
-      "solvant": "NaCl 0,9 %, eau pour préparations injectables (EPPI) ou glucose 5 %",
+      "solvant": "NaCl 0,9 %, eau pour préparations injectables (EPPI) ou G5 %",
       "volume_par_2000mg_mL": 10,
       "volume_par_4000mg_mL": 20,
       "stabilite_avant_dilution": "12 h entre 2 °C et 8 °C après reconstitution avec un solvant compatible."
@@ -137,13 +137,13 @@
     "preparation": [
       {
         "voie": "PERF",
-        "detail": "NaCl 0,9 % ou Glucose 5 %, flacon reconstitué dilué dans 50 à 150 mL",
+        "detail": "NaCl 0,9 % ou G5 %, flacon reconstitué dilué dans 50 à 150 mL",
         "duree": "30 min",
         "stabilite": "12 h entre 2 °C et 8 °C après reconstitution et dilution"
       },
       {
         "voie": "PSE",
-        "detail": "NaCl 0,9 % ou Glucose 5 %, 4 g/0,5 g dans 50 mL (90 mg/mL)",
+        "detail": "NaCl 0,9 % ou G5 %",
         "duree": "Continu",
         "stabilite": "12 h entre 2 °C et 8 °C après reconstitution et dilution",
         "contexte": "Perfusion continue"
@@ -153,7 +153,7 @@
       "note_ajustement": "Dose adaptée selon la fonction rénale et les séances de dialyse, se référer au protocole du service.",
       "posologie": [
         {
-          "population": "Et adolescent, infections urinaires, intra-abdominales, peau et tissus mous",
+          "population": "Infections urinaires, intra-abdominales, peau et tissus mous",
           "categorie": "generale",
           "population_type": "adulte",
           "dose_par_prise_mg_min": 4000,
@@ -163,7 +163,7 @@
           "intervalle_max_h": 8
         },
         {
-          "population": "Et adolescent, pneumonies nosocomiales et neutropénie fébrile",
+          "population": "Pneumonies nosocomiales et neutropénie fébrile",
           "categorie": "generale",
           "population_type": "adulte",
           "dose_par_prise_mg_min": 4000,
@@ -241,7 +241,6 @@
       }
     ]
   },
-  "oral": null,
   "tracabilite": {
     "rcp_source": [
       {

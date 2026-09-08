@@ -23,17 +23,16 @@
       "source": "RCP KETOPROFENE MEDISOL 100 mg/4 ml, solution à diluer pour perfusion, section 4.6"
     },
     "contre_indications": [
-      "Hypersensibilité au kétoprofène, à un autre AINS, à l'acide acétylsalicylique ou à un excipient, des réactions anaphylactiques sévères, rarement fatales, ont été rapportées",
-      "Antécédents de réactions d'hypersensibilité (bronchospasme, asthme, rhinite, urticaire) au kétoprofène, à l'acide acétylsalicylique ou à d'autres AINS",
+      "Hypersensibilité au kétoprofène, à un autre AINS, à l'acide acétylsalicylique ou à un excipient",
       "Ulcère peptique évolutif ou antécédent d'hémorragie, d'ulcération ou de perforation gastro-intestinale",
       "Hémorragie gastro-intestinale, hémorragie cérébro-vasculaire ou autre hémorragie évolutive",
       "Insuffisance hépatique sévère",
       "Insuffisance rénale sévère",
       "Insuffisance cardiaque sévère",
       "Grossesse à partir du début du 6ème mois (24 semaines d'aménorrhée)",
-      "Troubles de l'hémostase ou traitement anticoagulant en cours (contre-indication formelle par voie intramusculaire)",
-      "Allergie au blé, autre que la maladie cœliaque (comprimé sécable à libération prolongée de 100 mg, à base d'amidon de blé)",
-      "Antécédents récents de rectite ou de rectorragies (voie rectale)"
+      "Troubles de l'hémostase ou traitement anticoagulant en cours",
+      "Allergie au blé, autre que la maladie cœliaque",
+      "Antécédents récents de rectite ou de rectorragies"
     ],
     "interactions_pertinentes": [
       {
@@ -112,49 +111,51 @@
     "preparation": [
       {
         "voie": "PERF",
-        "detail": "Diluer extemporanément le contenu d'une ampoule à 100 mg dans 100 à 150 mL de solution isotonique de chlorure de sodium ou de glucose à 5 %",
+        "detail": "Diluer dans 100 à 150 mL de NaCl 0,9% ou G5 %",
         "duree": "Environ 20 minutes",
-        "stabilite": "Après dilution dans NaCl 0,9 % ou glucose 5 % : stabilité physico-chimique démontrée 48 heures à 28 °C ; d'un point de vue microbiologique, le produit doit être utilisé immédiatement"
+        "stabilite": "48 heures à 28 °C"
       },
       {
         "voie": "IM",
-        "detail": "Utiliser pur, injection profonde et lente, dans la partie externe du quadrant supéro-externe de la fesse, dans des conditions d'asepsie rigoureuse",
-        "duree": "Non chiffrée par le RCP, l'injection doit être profonde et lente",
-        "stabilite": "À usage unique, utiliser immédiatement après ouverture"
+        "detail": "Utiliser pur",
+        "stabilite": "À usage unique, utiliser immédiatement"
       }
     ],
     "administration": {
       "note_ajustement": "Dose adaptée selon la fonction rénale et l'âge (réduire la posologie initiale, adapter selon la tolérance rénale), se référer au protocole du service.",
       "posologie": [
         {
-          "population": "Douleur post-opératoire (perfusion IV)",
+          "population": "Douleur post-opératoire",
           "population_type": "adulte",
           "dose_par_prise_mg_max": 100,
           "dose_par_prise_mg_min": 100,
           "categorie": "generale",
-          "dose_par_prise_mg": 100,
+          "intervalle_min_h": 12,
+          "intervalle_max_h": 24,
           "nb_prises_min_24h": 1,
           "nb_prises_max_24h": 2,
           "dose_journaliere_max_g": 0.2
         },
         {
-          "population": "Crise de colique néphrétique (perfusion IV)",
+          "population": "Crise de colique néphrétique",
           "population_type": "adulte",
           "dose_par_prise_mg_max": 100,
           "dose_par_prise_mg_min": 100,
           "categorie": "generale",
-          "dose_par_prise_mg": 100,
+          "intervalle_min_h": 8,
+          "intervalle_max_h": 24,
           "nb_prises_min_24h": 1,
           "nb_prises_max_24h": 3,
           "dose_journaliere_max_g": 0.3
         },
         {
-          "population": "Rhumatismes en poussée, lombalgies, radiculalgies, algies néoplasiques (IM)",
+          "population": "Rhumatismes en poussée, lombalgies, radiculalgies, algies néoplasiques",
           "population_type": "adulte",
           "dose_par_prise_mg_max": 100,
           "dose_par_prise_mg_min": 100,
           "categorie": "im",
-          "dose_par_prise_mg": 100,
+          "intervalle_min_h": 12,
+          "intervalle_max_h": 24,
           "nb_prises_min_24h": 1,
           "nb_prises_max_24h": 2,
           "dose_journaliere_max_g": 0.2
@@ -165,7 +166,8 @@
           "dose_par_prise_mg_max": 100,
           "dose_par_prise_mg_min": 100,
           "categorie": "im",
-          "dose_par_prise_mg": 100,
+          "intervalle_min_h": 8,
+          "intervalle_max_h": 24,
           "nb_prises_min_24h": 1,
           "nb_prises_max_24h": 3,
           "dose_journaliere_max_g": 0.3
@@ -179,7 +181,7 @@
       {
         "type": "Gélule",
         "dosage": "50 mg",
-        "secable": false,
+        "ecrasable": false,
         "ouverture_gelule": false,
         "posologie_adulte": [
           {
@@ -188,8 +190,8 @@
             "categorie": "generale",
             "dose_par_prise_mg_min": 50,
             "dose_par_prise_mg_max": 50,
-            "nb_prises_min_24h": 2,
-            "nb_prises_max_24h": 3,
+            "intervalle_min_h": 8,
+            "intervalle_max_h": 12,
             "dose_journaliere_max_g": 0.15
           },
           {
@@ -198,8 +200,8 @@
             "categorie": "generale",
             "dose_par_prise_mg_min": 50,
             "dose_par_prise_mg_max": 50,
-            "nb_prises_min_24h": 2,
-            "nb_prises_max_24h": 4,
+            "intervalle_min_h": 6,
+            "intervalle_max_h": 12,
             "dose_journaliere_max_g": 0.2
           }
         ]
@@ -207,7 +209,7 @@
       {
         "type": "Comprimé pelliculé",
         "dosage": "100 mg",
-        "secable": false,
+        "ecrasable": false,
         "ouverture_gelule": null,
         "posologie_adulte": [
           {
@@ -235,7 +237,7 @@
       {
         "type": "Comprimé sécable à libération prolongée",
         "dosage": "100 mg",
-        "secable": true,
+        "ecrasable": true,
         "ouverture_gelule": null,
         "posologie_adulte": [
           {
@@ -263,7 +265,7 @@
       {
         "type": "Comprimé enrobé à libération prolongée",
         "dosage": "200 mg",
-        "secable": false,
+        "ecrasable": false,
         "ouverture_gelule": null,
         "posologie_adulte": [
           {
@@ -281,7 +283,7 @@
       {
         "type": "Suppositoire",
         "dosage": "100 mg",
-        "secable": false,
+        "ecrasable": false,
         "ouverture_gelule": null,
         "posologie_adulte": [
           {

@@ -129,13 +129,18 @@ export interface IPreparationVoie {
 }
 
 /** Reconstitution d'une poudre avant dilution/injection (ex. amoxicilline,
- * vancomycine). Absente (null) pour les solutions déjà prêtes à l'emploi. */
+ * vancomycine). Absente (null) pour les solutions déjà prêtes à l'emploi.
+ *
+ * `volume_par_<dose>mg_mL` : signature indexée plutôt qu'une liste de champs
+ * fixes (500/1000/2000...) — les paliers de dose varient d'une molécule à
+ * l'autre (ex. 4000 mg pour la pipéracilline/tazobactam), et une liste figée
+ * fait silencieusement disparaître tout palier non prévu à l'avance (voir
+ * DetailInjectable.tsx, qui les découvre dynamiquement plutôt que de les
+ * énumérer un par un). */
 export interface IReconstitution {
   solvant?: string
-  volume_par_500mg_mL?: number
-  volume_par_1000mg_mL?: number
-  volume_par_2000mg_mL?: number
   stabilite_avant_dilution?: string
+  [cle: `volume_par_${number}mg_mL`]: number | undefined
 }
 
 /** Grossesse et allaitement — contenu fixe (pas une liste dépliable comme

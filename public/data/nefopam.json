@@ -64,14 +64,13 @@
     "preparation": [
       {
         "voie": "PERF",
-        "detail": "Perfusion intraveineuse lente sur plus de 15 minutes, patient en décubitus, pour prévenir la survenue de nausées, vertiges et sueurs. Peut être administré dans les solutions usuelles pour perfusion (chlorure de sodium isotonique ou glucosé 5 %) ; volume et concentration de dilution non précisés par le RCP. Il est recommandé d'éviter de mélanger Acupan et d'autres spécialités injectables dans la même seringue.",
+        "detail": "Dilution dans NaCl 0,9% ou G5%. Attention à la survenue de nausées, vertiges et sueurs.",
         "duree": "> 15 minutes",
         "stabilite": "À usage unique, à utiliser immédiatement après ouverture de l'ampoule"
       },
       {
         "voie": "IM",
-        "detail": "Utiliser pur, en injection intramusculaire profonde.",
-        "duree": "< 1 minute (durée non précisée par le RCP, valeur par défaut du projet)",
+        "detail": "Utiliser pur",
         "stabilite": "À usage unique, à utiliser immédiatement après ouverture de l'ampoule"
       }
     ],
@@ -107,7 +106,7 @@
       {
         "type": "Comprimé pelliculé",
         "dosage": "30 mg",
-        "secable": false,
+        "ecrasable": false,
         "ouverture_gelule": null,
         "posologie_adulte": [
           {
@@ -116,13 +115,15 @@
             "categorie": "generale",
             "dose_par_prise_mg_min": 30,
             "dose_par_prise_mg_max": 60,
+            "intervalle_min_h": 4,
+            "intervalle_max_h": 8,
             "dose_journaliere_max_g": 0.18
           }
         ]
       }
     ],
     "recommandation_sonde": {
-      "forme_preferee": "Aucune, comprimé non écrasable et aucune forme orale alternative disponible en France",
+      "forme_preferee": "",
       "alternative": "Voie injectable (IV/IM) de la même molécule, à discuter avec le prescripteur"
     }
   },

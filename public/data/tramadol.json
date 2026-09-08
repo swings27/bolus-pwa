@@ -22,13 +22,12 @@
     },
     "contre_indications": [
       "Hypersensibilité à la substance active ou à l'un des excipients",
-      "Intoxication aiguë par l'alcool, les hypnotiques, les analgésiques, les opioïdes ou d'autres psychotropes",
-      "Traitement concomitant ou dans les 14 jours précédents par un inhibiteur de la MAO, notamment le linézolide et le bleu de méthylène",
+      "Intoxication aiguë par alcool, hypnotiques, analgésiques, opioïdes ou autres psychotropes",
+      "Traitement concomitant ou dans les 14 jours précédents par un inhibiteur de la MAO",
       "Insuffisance respiratoire sévère",
-      "Enfant de moins de 15 ans pour les formes injectable, gélule et comprimé effervescent (moins de 12 ans pour le comprimé orodispersible et les formes à libération prolongée, voir posologie)",
       "Épilepsie non contrôlée par un traitement",
       "Traitement de substitution aux opioïdes (sevrage des toxicomanes)",
-      "Grossesse (le tramadol ne doit généralement pas être utilisé)"
+      "Grossesse"
     ],
     "interactions_pertinentes": [
       {
@@ -131,15 +130,16 @@
     "preparation": [
       {
         "voie": "IVL",
-        "detail": "Injection intraveineuse lente sur 2 à 3 minutes, ampoule pure (non diluée)",
+        "detail": "Utiliser pur",
         "duree": "2 à 3 minutes",
-        "stabilite": "Pendant 24h entre 15-25°C avec une solution de bicarbonate de sodium 4,2% ou Ringer, et 5 jours pour les autres diluants."
+        "stabilite": "24h entre 15-25°C avec une solution de bicarbonate de sodium 4,2% ou Ringer, et 5 jours pour les autres diluants."
       },
       {
         "voie": "PERF",
-        "detail": "Mise en solution pour perfusion dans le chlorure de sodium 0,9 % ou le glucose 5 %, concentration 1 à 5 mg/mL. Peut également être administré via un dispositif d'analgésie contrôlée par le patient (PCA), se référer au protocole du service.",
-        "duree": "≥ 15 minutes (durée non précisée par le RCP français, valeur par défaut LPPR/HAS)",
-        "stabilite": "24 heures après dilution dans NaCl 0,9 % ou glucose 5 %"
+        "detail": "Dilution dans NaCl 0,9 % ou G5 %, concentration 1 à 5 mg/mL.",
+        "duree": "≥ 15 minutes",
+        "stabilite": "24 heures après dilution dans NaCl 0,9 % ou G5 %",
+        "contexte": "Peut aussi être administré via PCA, se référer au protocole de service."
       }
     ],
     "administration": {
@@ -193,43 +193,21 @@
       {
         "type": "Gélule",
         "dosage": "50 mg",
-        "secable": false,
+        "ecrasable": false,
         "ouverture_gelule": false,
-        "posologie_adulte": [
-          {
-            "population": "Douleur aiguë",
-            "population_type": "adulte",
-            "categorie": "generale",
-            "palier": "Adulte et adolescent ≥ 15 ans",
-            "dose_par_prise_mg_min": 50,
-            "dose_par_prise_mg_max": 100,
-            "intervalle_min_h": 4,
-            "intervalle_max_h": 6,
-            "dose_journaliere_max_g": 0.4
-          },
-          {
-            "population": "Douleur chronique",
-            "population_type": "adulte",
-            "categorie": "generale",
-            "palier": "Adulte et adolescent ≥ 15 ans",
-            "dose_par_prise_mg_min": 50,
-            "dose_par_prise_mg_max": 100,
-            "intervalle_min_h": 4,
-            "intervalle_max_h": 6,
-            "dose_journaliere_max_g": 0.4
-          }
-        ]
+        "posologie_adulte": []
       },
       {
         "type": "Comprimé effervescent",
         "dosage": "50 mg",
-        "secable": false,
+        "ecrasable": false,
         "ouverture_gelule": null,
         "posologie_adulte": [
           {
             "population": "Douleur aiguë ou chronique",
             "population_type": "adulte",
             "categorie": "generale",
+            "palier": "Adulte et adolescent ≥ 15 ans",
             "dose_par_prise_mg_min": 50,
             "dose_par_prise_mg_max": 100,
             "intervalle_min_h": 4,
@@ -241,7 +219,7 @@
       {
         "type": "Comprimé orodispersible",
         "dosage": "50 mg",
-        "secable": false,
+        "ecrasable": false,
         "ouverture_gelule": null,
         "posologie_adulte": [
           {
@@ -259,7 +237,7 @@
       {
         "type": "Solution buvable en gouttes",
         "dosage": "100 mg/mL",
-        "secable": false,
+        "ecrasable": false,
         "ouverture_gelule": null,
         "posologie_adulte": [
           {
@@ -289,15 +267,17 @@
       {
         "type": "Gélule à libération prolongée (LP)",
         "dosage": "50 mg, 100 mg, 150 mg et 200 mg",
-        "secable": false,
+        "ecrasable": false,
         "ouverture_gelule": true,
         "posologie_adulte": [
           {
-            "population": "Traitement standard",
+            "population": "Traitement standard LP",
             "population_type": "adulte",
             "categorie": "generale",
             "dose_par_prise_mg_min": 50,
             "dose_par_prise_mg_max": 200,
+            "intervalle_min_h": 12,
+            "intervalle_max_h": 12,
             "nb_prises_min_24h": 2,
             "nb_prises_max_24h": 2,
             "dose_journaliere_max_g": 0.4
@@ -307,11 +287,11 @@
       {
         "type": "Comprimé à libération prolongée (LP)",
         "dosage": "50 mg, 100 mg, 150 mg, 200 mg et 300 mg",
-        "secable": false,
+        "ecrasable": false,
         "ouverture_gelule": null,
         "posologie_adulte": [
           {
-            "population": "Traitement standard",
+            "population": "Traitement standard LP",
             "population_type": "adulte",
             "categorie": "generale",
             "dose_par_prise_mg_min": 50,

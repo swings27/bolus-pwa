@@ -146,7 +146,14 @@ export default function FicheMedicament() {
             onClick={async () => setFavoriBloque(await basculer(fiche.id))}
           />
         </div>
-        <h1 className="font-display text-[2.5rem] leading-tight text-texte">{fiche.dci}</h1>
+        {/* break-words (pas juste la largeur du conteneur) : un dci comme
+            "piperacilline/tazobactam" n'a aucun espace, seulement un "/" —
+            le navigateur ne le traite pas de façon fiable comme un point de
+            coupure et le texte peut déborder au lieu de passer à la ligne,
+            contrairement à "amoxicilline/acide clavulanique" qui a un
+            espace. break-words force la coupure dès que la ligne déborde,
+            avec ou sans espace/tiret dans le texte. */}
+        <h1 className="break-words font-display text-[2.5rem] leading-tight text-texte">{fiche.dci}</h1>
         {fiche.nomsCommerciaux.length > 0 && (
           <div className="text-sm text-texte-doux">
             <ListeSeparee items={avecMarqueDeposee(fiche.nomsCommerciaux)} />

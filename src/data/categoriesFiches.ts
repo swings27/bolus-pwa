@@ -24,8 +24,13 @@ export const CATALOGUE_FICHES: Record<string, IFicheMeta> = {
   'amoxicilline-acide-clavulanique': { categorie: 'anti-infectieux', sousFamille: 'Antibiotiques' },
   atropine: { categorie: 'cardiovasculaire', sousFamille: 'Cardiotropes' },
   diazepam: { categorie: 'psychotropes', sousFamille: 'Anticonvulsivants' },
+  gentamicine: { categorie: 'anti-infectieux', sousFamille: 'Antibiotiques' },
   ibuprofene: { categorie: 'antalgiques', sousFamille: 'AINS' },
+  ketoprofene: { categorie: 'antalgiques', sousFamille: 'AINS' },
   metronidazole: { categorie: 'anti-infectieux', sousFamille: 'Antibiotiques' },
+  nefopam: { categorie: 'antalgiques', sousFamille: 'Antalgiques palier 1'},
   paracetamol: { categorie: 'antalgiques', sousFamille: 'Antalgiques palier 1' },
+  'piperacilline-tazobactam': { categorie: 'anti-infectieux', sousFamille: 'Antibiotiques' },
   spiramycine: { categorie: 'anti-infectieux', sousFamille: 'Antibiotiques' },
+  tramadol: { categorie: 'antalgiques', sousFamille: 'Antalgiques palier 2'},
 }

@@ -22,11 +22,11 @@
       "source": "RCP GENTAMICINE PANPHARMA 160 mg, section 4.6"
     },
     "contre_indications": [
-      "Hypersensibilité à la substance active ou à l'un des excipients.",
-      "Cirrhose de grades B et C selon la classification de Child-Pugh.",
-      "Myasthénie.",
-      "Administration par voie sous-cutanée (absence d'efficacité et survenue de nécrose).",
-      "Administration simultanée d'un autre aminoside."
+      "Hypersensibilité à la substance active ou à l'un des excipients",
+      "Cirrhose de grades B et C selon la classification de Child-Pugh",
+      "Myasthénie",
+      "Administration par voie sous-cutanée (absence d'efficacité et survenue de nécrose)",
+      "Administration simultanée d'un autre aminoside"
     ],
     "interactions_pertinentes": [
       {
@@ -123,19 +123,19 @@
     "preparation": [
       {
         "voie": "PERF",
-        "detail": "Diluer la dose à administrer dans 50 à 200 mL environ de glucose 5 % ou de NaCl 0,9 %, en respectant une concentration maximale de 10 mg/mL.",
+        "detail": "Diluer dans 50 à 200 mL environ de G5 % ou NaCl 0,9 %, concentration maximale de 10 mg/mL.",
         "duree": "30 minutes",
-        "stabilite": "Non précisé par le RCP."
+        "stabilite": null
       },
       {
         "voie": "IM",
-        "detail": "Utiliser pur, schéma posologique identique à la voie intraveineuse.",
+        "detail": "Utiliser pur",
         "duree": "< 1 min",
         "stabilite": null
       }
     ],
     "administration": {
-      "note_ajustement": "Dose adaptée selon la fonction rénale (la posologie de la première injection reste identique à celle du sujet à fonction rénale normale, quel que soit le degré d'insuffisance rénale ; les réinjections suivantes sont ensuite espacées ou conditionnées au dosage du taux résiduel selon le degré d'insuffisance) et selon le poids chez le patient obèse (poids corrigé), se référer au protocole du service et à la surveillance des taux résiduels. Chez le patient dialysé, programmer les injections 2 à 4 heures avant la séance de dialyse. Chez le nouveau-né, la posologie est adaptée selon l'âge post-conceptionnel, se référer au protocole du service ; une erreur même faible retentit fortement sur les concentrations sériques obtenues.",
+      "note_ajustement": "Dose adaptée selon la fonction rénale et les séances de dialyse, le poids chez le patient obèse (poids corrigé), se référer au protocole du service et à la surveillance des taux résiduels. Chez le nouveau-né, la posologie est adaptée selon l'âge post-conceptionnel.",
       "posologie": [
         {
           "population": "Traitement standard",
@@ -143,6 +143,8 @@
           "population_type": "adulte",
           "dose_journaliere_mg_kg_min": 3,
           "dose_journaliere_mg_kg_max": 8,
+          "intervalle_min_h": 8,
+          "intervalle_max_h": 24,
           "nb_prises_min_24h": 1,
           "nb_prises_max_24h": 3,
           "tdm_requis": true
@@ -230,7 +232,6 @@
       }
     ]
   },
-  "oral": null,
   "aerosol": null,
   "tracabilite": {
     "rcp_source": [
