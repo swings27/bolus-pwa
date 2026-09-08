@@ -1,0 +1,263 @@
+{
+  "dci": "atropine",
+  "commun": {
+    "noms_commerciaux": [],
+    "famille": "Alcaloïde de la belladone, amine tertiaire anticholinergique",
+    "antidote": "",
+    "indications": [
+      "Prémédication anesthésique",
+      "Effets muscariniques de la néostigmine",
+      "Bradycardie et bloc auriculo-ventriculaire",
+      "Réanimation cardio-pulmonaire",
+      "Intoxication par anticholinestérasiques",
+      "Spasmes digestifs et biliaires",
+      "Spasmes des voies urinaires"
+    ],
+    "grossesse_allaitement": {
+      "grossesse": "L'atropine ne doit pas être utilisée pendant la grossesse à moins que cela ne soit absolument nécessaire.",
+      "allaitement": "Il doit être décidé d'arrêter ou non l'allaitement ou d'arrêter/de s'abstenir de suivre le traitement en prenant en compte le bénéfice de l'allaitement pour l'enfant et le bénéfice du traitement pour la femme. S'il est décidé durant le traitement de poursuivre l'allaitement, l'enfant doit être surveillé pour déceler la survenue d'effets anticholinergiques.",
+      "url_crat_grossesse": null,
+      "url_crat_allaitement": null,
+      "source": "RCP ATROPINE (SULFATE) AGUETTANT 0,25 mg/mL, solution injectable, section 4.6"
+    },
+    "contre_indications": [
+      "Hypersensibilité au principe actif ou à l'un des excipients",
+      "Glaucome à angle fermé",
+      "Risque de rétention urinaire lié à des troubles urétro-prostatiques",
+      "Achalasie de l'œsophage, iléus paralytique et mégacôlon toxique",
+      "Myasthénie, sauf en association à un traitement anticholinestérasique"
+    ],
+    "interactions_pertinentes": [
+      {
+        "substance": "Autres médicaments à activité anticholinergique",
+        "effet": "L'association potentialise les effets indésirables atropiniques : rétention urinaire, constipation, sécheresse buccale (RCP).",
+        "action_infirmier": "Repérer les traitements anticholinergiques en cours et surveiller l'apparition d'une rétention urinaire, d'une constipation ou d'une sécheresse buccale marquée après administration d'atropine.",
+        "source_rcp": "RCP ATROPINE (SULFATE) AGUETTANT 0,25 mg/mL / ATROPINE SULFATE AGUETTANT 0,1 mg/mL, section 4.5"
+      }
+    ],
+    "surveillance_specifique": [
+      {
+        "evenement": "Bradycardie transitoire en début d'administration, suivie d'une tachycardie avec palpitations et arythmies",
+        "explication": "L'atropine peut d'abord aggraver transitoirement la bradycardie avant d'exercer son effet vagolytique, puis provoquer une accélération marquée de la fréquence cardiaque.",
+        "action": "Monitorage de la fréquence cardiaque et du rythme pendant et après l'injection ; ne pas conclure à un échec sur la seule phase initiale.",
+        "source_rcp": "RCP ATROPINE (SULFATE) AGUETTANT 0,25 mg/mL, sections 4.4/4.8 : « Une bradycardie transitoire peut apparaître, suivie d'une tachycardie accompagnée de palpitations et d'arythmies » ; « exacerbation transitoire de la bradycardie »"
+      },
+      {
+        "evenement": "Retard à la mise en place d'une stimulation cardiaque externe chez le patient instable",
+        "explication": "Dans les blocs de haut grade (second degré Mobitz II, troisième degré), l'atropine est souvent inefficace : l'attendre retarde le seul traitement efficace.",
+        "action": "Ne pas différer la stimulation externe pour attendre l'effet de l'atropine chez un patient instable ; alerter immédiatement le médecin.",
+        "source_rcp": "RCP ATROPINE (SULFATE) AGUETTANT 0,25 mg/mL, section 4.4 : « L'administration d'atropine ne doit pas retarder la mise en place d'une stimulation externe pour les patients instables, en particulier ceux présentant un bloc de haut grade (second degré de type Mobitz II ou troisième degré). »"
+      },
+      {
+        "evenement": "Hyperthermie, en particulier en cas de fièvre ou de température ambiante élevée",
+        "explication": "L'atropine bloque la sudation ; la thermorégulation est compromise, avec risque d'hyperpyrexie surtout chez l'enfant et la personne âgée.",
+        "action": "Surveiller la température ; découvrir le patient et refroidir l'environnement en cas d'ascension thermique après administration.",
+        "source_rcp": "RCP ATROPINE (SULFATE) AGUETTANT 0,25 mg/mL, sections 4.4 (« Fièvre, ou lorsque la température ambiante est élevée ») et 4.8 (« Hyperpyrexie », « température du corps élevée »)"
+      },
+      {
+        "evenement": "Rétention urinaire",
+        "explication": "L'atropine inhibe le contrôle parasympathique de la vessie ; le risque est majoré en cas de troubles urétro-prostatiques.",
+        "action": "Surveiller la reprise des mictions et rechercher un globe vésical, en particulier chez l'homme âgé.",
+        "source_rcp": "RCP ATROPINE (SULFATE) AGUETTANT 0,25 mg/mL, section 4.8 : « Inhibition du contrôle parasympathique de la vessie, rétention urinaire »"
+      },
+      {
+        "evenement": "Troubles visuels : mydriase, inhibition de l'accommodation, vision trouble, photophobie",
+        "explication": "Effet antimuscarinique oculaire de l'atropine, qui peut aussi déclencher une crise de glaucome par fermeture de l'angle chez le sujet prédisposé.",
+        "action": "Prévenir le patient du flou visuel et de la photophobie ; signaler immédiatement toute douleur oculaire ou baisse d'acuité visuelle brutale.",
+        "source_rcp": "RCP ATROPINE (SULFATE) AGUETTANT 0,25 mg/mL, section 4.8 : « Troubles visuels (mydriase, inhibition de l'accommodation, vision trouble, photophobie) » ; contre-indication 4.3 « Glaucome à angle fermé »"
+      }
+    ],
+    "pictogrammes": []
+  },
+  "iv": {
+    "reconstitution": null,
+    "preparation": [
+      {
+        "voie": "IVD",
+        "detail": "Utiliser pur, dilution possible dans NaCl 0,9%",
+        "duree": "Bolus",
+        "stabilite": "Après dilution, utiliser de suite"
+      },
+      {
+        "voie": "IM",
+        "detail": "Utiliser pur",
+        "duree": "<1 min",
+        "stabilite": null
+      },
+      {
+        "voie": "SC",
+        "detail": "Utiliser pur",
+        "duree": "<1 min",
+        "stabilite": null
+      }
+    ],
+    "administration": {
+      "note_ajustement": "Dose adaptée selon la fonction rénale, la fonction hépatique et l'âge, se référer au protocole du service.",
+      "posologie": [
+        {
+          "population": "Prémédication anesthésique",
+          "population_type": "adulte",
+          "categorie": "generale",
+          "dose_par_prise_mg_min": 0.3,
+          "dose_par_prise_mg_max": 0.6
+        },
+        {
+          "population": "Association à la néostigmine pour limiter ses effets muscariniques",
+          "population_type": "adulte",
+          "categorie": "generale",
+          "dose_par_prise_mg_min": 0.6,
+          "dose_par_prise_mg_max": 1.2
+        },
+        {
+          "population": "Bradycardie sinusale",
+          "population_type": "adulte",
+          "categorie": "generale",
+          "dose_par_prise_mg_min": 0.5,
+          "dose_par_prise_mg_max": 0.5,
+          "intervalle_min_min": 2,
+          "intervalle_max_min": 5
+        },
+        {
+          "population": "Bloc auriculo-ventriculaire",
+          "population_type": "adulte",
+          "categorie": "generale",
+          "dose_par_prise_mg_min": 0.5,
+          "dose_par_prise_mg_max": 0.5,
+          "intervalle_min_min": 3,
+          "intervalle_max_min": 5,
+          "dose_journaliere_max_g": 0.003
+        },
+        {
+          "population": "Antidote des anticholinestérasiques, organophosphorés, carbamates et champignons muscariniques",
+          "population_type": "adulte",
+          "categorie": "generale",
+          "dose_par_prise_mg_min": 0.5,
+          "dose_par_prise_mg_max": 2,
+          "intervalle_min_min": 5,
+          "intervalle_max_min": 15
+        },
+        {
+          "population": "Prémédication anesthésique",
+          "population_type": "adulte",
+          "categorie": "sc",
+          "dose_par_prise_mg_min": 1,
+          "dose_par_prise_mg_max": 1
+        },
+        {
+          "population": "Manifestations spasmodiques et douloureuses digestives, biliaires et urinaires",
+          "population_type": "adulte",
+          "categorie": "sc",
+          "dose_par_prise_mg_min": 0.25,
+          "dose_par_prise_mg_max": 1,
+          "intervalle_min_h": 6,
+          "intervalle_max_h": 6,
+          "dose_journaliere_max_g": 0.002
+        },
+        {
+          "population": "Prémédication anesthésique, enfant",
+          "population_type": "pediatrie",
+          "categorie": "generale",
+          "dose_mg_kg_min": 0.01,
+          "dose_mg_kg_max": 0.02,
+          "dose_par_prise_mg_max": 0.6
+        },
+        {
+          "population": "Association à la néostigmine pour limiter ses effets muscariniques, enfant",
+          "population_type": "pediatrie",
+          "categorie": "generale",
+          "dose_mg_kg_min": 0.02,
+          "dose_mg_kg_max": 0.02
+        },
+        {
+          "population": "Bradycardie / bloc auriculo-ventriculaire / réanimation cardio-pulmonaire",
+          "population_type": "pediatrie",
+          "categorie": "generale",
+          "dose_mg_kg_min": 0.02,
+          "dose_mg_kg_max": 0.02,
+          "dose_par_prise_mg_max": 0.6
+        },
+        {
+          "population": "Antidote des anticholinestérasiques et organophosphorés, enfant",
+          "population_type": "pediatrie",
+          "categorie": "generale",
+          "dose_mg_kg_min": 0.02,
+          "dose_mg_kg_max": 0.02
+        },
+        {
+          "population": "Prémédication anesthésique, enfant de 1 mois à 30 mois",
+          "population_type": "pediatrie",
+          "categorie": "sc",
+          "age_min_mois": 1,
+          "age_max_mois": 30,
+          "dose_par_prise_mg_min": 0.1,
+          "dose_par_prise_mg_max": 0.3
+        },
+        {
+          "population": "Prémédication anesthésique, enfant de 30 mois à 15 ans",
+          "population_type": "pediatrie",
+          "categorie": "sc",
+          "age_min_mois": 30,
+          "age_max_mois": 180,
+          "dose_par_prise_mg_min": 0.1,
+          "dose_par_prise_mg_max": 0.5
+        },
+        {
+          "population": "Manifestations spasmodiques, enfant de 2 à 6 ans",
+          "population_type": "pediatrie",
+          "categorie": "sc",
+          "age_min_mois": 24,
+          "age_max_mois": 72,
+          "dose_par_prise_mg_min": 0.25,
+          "dose_par_prise_mg_max": 0.25
+        },
+        {
+          "population": "Manifestations spasmodiques, enfant de plus de 6 ans",
+          "population_type": "pediatrie",
+          "categorie": "sc",
+          "age_min_mois": 72,
+          "age_max_mois": null,
+          "dose_par_prise_mg_min": 0.5,
+          "dose_par_prise_mg_max": 0.5
+        }
+      ]
+    },
+    "incompatibilites": [
+      {
+        "substance": "Néostigmine",
+        "niveau": "absolu"
+      }
+    ]
+  },
+  "tracabilite": {
+    "rcp_source": [
+      {
+        "specialite": "ATROPINE (SULFATE) AGUETTANT 0,25 mg/mL, solution injectable",
+        "titulaire": "Laboratoire Aguettant",
+        "date_maj": "2022-09-19",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/69697199/extrait"
+      },
+      {
+        "specialite": "ATROPINE SULFATE AGUETTANT 0,1 mg/mL, solution injectable en seringue préremplie",
+        "titulaire": "Laboratoire Aguettant",
+        "date_maj": "2022-03-22",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/63358772/extrait"
+      },
+      {
+        "specialite": "ATROPINE SULFATE RENAUDIN 1 mg/mL, solution injectable en ampoule",
+        "titulaire": "Laboratoire Renaudin",
+        "date_maj": "2025-10-15",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/65395919/extrait"
+      }
+    ],
+    "statut": "valide",
+    "validation": {
+      "date": "2026-08-31",
+      "validateur": "Anna Trabaud-Lopez (IDE, porteuse du projet), vérification des données extraites contre les RCP ; équipe pharmacie, validation de la méthodologie et arbitrage des points litigieux",
+      "perimetre": [
+        "adulte",
+        "pediatrie"
+      ],
+      "prochaine_revision": "2026-11-30"
+    }
+  }
+}

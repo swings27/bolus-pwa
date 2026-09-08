@@ -161,9 +161,9 @@
       },
       {
         "voie": "PERF",
-        "contexte": "état de mal épileptique",
-        "detail": "Glucose 5%, 100 mg/500 mL",
-        "duree": "12h30 (40 mL/h)",
+        "contexte": "Etat de mal épileptique",
+        "detail": "Glucose 5%, 100mg dans 500 mL",
+        "duree": "Continue à 40 mL/h",
         "stabilite": null
       }
     ]

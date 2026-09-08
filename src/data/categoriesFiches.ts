@@ -19,9 +19,13 @@ export interface IFicheMeta {
 // ajouté dans public/data/ doit être déclaré ici pour apparaître dans l'app.
 export const CATALOGUE_FICHES: Record<string, IFicheMeta> = {
   adrenaline: { categorie: 'cardiovasculaire', sousFamille: 'Cardiotropes' },
+  amiodarone: { categorie: 'cardiovasculaire', sousFamille: 'Cardiotropes' },
   amoxicilline: { categorie: 'anti-infectieux', sousFamille: 'Antibiotiques' },
+  'amoxicilline-acide-clavulanique': { categorie: 'anti-infectieux', sousFamille: 'Antibiotiques' },
+  atropine: { categorie: 'cardiovasculaire', sousFamille: 'Cardiotropes' },
   diazepam: { categorie: 'psychotropes', sousFamille: 'Anticonvulsivants' },
   ibuprofene: { categorie: 'antalgiques', sousFamille: 'AINS' },
+  metronidazole: { categorie: 'anti-infectieux', sousFamille: 'Antibiotiques' },
   paracetamol: { categorie: 'antalgiques', sousFamille: 'Antalgiques palier 1' },
-  vancomycine: { categorie: 'anti-infectieux', sousFamille: 'Antibiotiques' },
+  spiramycine: { categorie: 'anti-infectieux', sousFamille: 'Antibiotiques' },
 }

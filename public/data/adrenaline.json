@@ -61,7 +61,7 @@
       "Troubles du rythme, surtout ventriculaires",
       "Myocardiopathie obstructive sévère",
       "Insuffisance coronarienne",
-      "Hypersensibilité connue à l'adrénaline, aux sulfites ou à l'un des excipients, contre-indication relative compte tenu du caractère vital de l'indication d'urgence (RCP : 'ce médicament étant indiqué en situation d'urgence, ces contre-indications sont relatives')"
+      "Hypersensibilité connue à l'adrénaline, aux sulfites ou à l'un des excipients, contre-indication relative compte tenu du caractère vital de l'indication d'urgence"
     ],
     "surveillance_specifique": [
       {
@@ -112,7 +112,7 @@
           "intervalle_max_min": 5
         },
         {
-          "population": "Choc anaphylactique établi (après dilution)",
+          "population": "Choc anaphylactique établi (après dilution 1mg dans 9ml de NaCl 0,9%)",
           "population_type": "adulte",
           "categorie": "generale",
           "dose_par_prise_mg": 0.1
@@ -134,7 +134,7 @@
           "intervalle_max_min": 15
         },
         {
-          "population": "Détresses cardio-circulatoires (états de choc), PSE continu",
+          "population": "Détresses cardio-circulatoires (états de choc)",
           "population_type": "adulte",
           "categorie": "pse",
           "dose_ugkgmin_min": 0.01,

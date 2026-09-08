@@ -23,6 +23,11 @@ const CARTE_STYLE = { backgroundColor: 'color-mix(in srgb, var(--texte) 5%, var(
 // les affiche pas du tout, plutôt qu'un "Non renseigné" qui suggérerait une
 // donnée manquante à compléter.
 export default function DetailInjectable({ donnees }: IDetailInjectableProps) {
+  // Même filtre que SectionPosologies pour les posologies : le périmètre V1
+  // est adulte uniquement, une préparation marquée `population_type:
+  // "pediatrie"` (ex. dilution néonatologie) ne doit donc pas apparaître ici.
+  const preparationsAdultes = donnees.preparation.filter((prep) => prep.population_type !== 'pediatrie')
+
   return (
     <div className="flex flex-col">
       {donnees.reconstitution && (
@@ -54,11 +59,11 @@ export default function DetailInjectable({ donnees }: IDetailInjectableProps) {
         </div>
       )}
 
-      {donnees.preparation.length > 0 && (
+      {preparationsAdultes.length > 0 && (
         <div className={donnees.reconstitution ? 'mt-5' : ''}>
           <TitreSectionFiche>Préparation</TitreSectionFiche>
           <div className="flex flex-col gap-2.5">
-            {donnees.preparation.map((prep, index) => (
+            {preparationsAdultes.map((prep, index) => (
               <div key={index} className="rounded-xl p-3.5" style={CARTE_STYLE}>
                 <div className="mb-2 flex flex-wrap items-center gap-2">
                   <span

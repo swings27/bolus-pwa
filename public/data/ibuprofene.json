@@ -166,14 +166,16 @@
         "detail": "Solution prête à l'emploi, poche de 50 mL contenant 200 mg, sans dilution",
         "duree": "30 minutes",
         "stabilite": "À usage unique, utiliser immédiatement après ouverture",
-        "contexte": "enfant et adolescent"
+        "contexte": "enfant et adolescent",
+        "population_type": "pediatrie"
       },
       {
         "voie": "PSE",
         "detail": "Ampoule de 2 mL à 5 mg/mL, administrer de préférence non dilué",
         "duree": "15 minutes",
         "stabilite": null,
-        "contexte": "néonatologie"
+        "contexte": "néonatologie",
+        "population_type": "pediatrie"
       }
     ],
     "administration": {

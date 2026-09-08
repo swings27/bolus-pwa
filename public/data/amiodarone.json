@@ -1,0 +1,321 @@
+{
+  "dci": "amiodarone",
+  "commun": {
+    "noms_commerciaux": [
+      "Cordarone"
+    ],
+    "famille": "Antiarythmique de classe III",
+    "antidote": "",
+    "indications": [
+      "Troubles du rythme auriculaire rapide",
+      "Tachycardies du syndrome de Wolff-Parkinson-White",
+      "Troubles du rythme ventriculaire documentés",
+      "Arrêt cardiaque par fibrillation ventriculaire",
+      "Prévention des récidives de tachycardie ventriculaire",
+      "Tachycardies supraventriculaires documentées",
+      "Fibrillation ou flutter auriculaire"
+    ],
+    "grossesse_allaitement": {
+      "grossesse": "L'utilisation de l'amiodarone est contre-indiquée à partir du 2ème trimestre.",
+      "allaitement": "En raison du risque d'hypothyroïdie chez le nourrisson, l'allaitement est contre-indiqué en cas de traitement par l'amiodarone.",
+      "url_crat_grossesse": null,
+      "url_crat_allaitement": null,
+      "source": "RCP CORDARONE 150 mg/3 ml, solution injectable en ampoule (IV), section 4.6"
+    },
+    "contre_indications": [
+      "Bradycardie sinusale et blocs sino-auriculaires non appareillés",
+      "Maladie du sinus non appareillée (risque d'arrêt sinusal)",
+      "Troubles conductifs auriculo-ventriculaires de haut degré non appareillés",
+      "Hyperthyroïdie",
+      "Hypersensibilité connue à l'iode, à l'amiodarone ou à l'un des excipients",
+      "Collapsus cardiovasculaire",
+      "Hypotension artérielle sévère",
+      "Association aux médicaments torsadogènes, aux antiarythmiques de classe Ia et III, au télaprévir et au cobicistat"
+    ],
+    "interactions_pertinentes": [
+      {
+        "substance": "Sofosbuvir",
+        "effet": "Des bradycardies symptomatiques graves, survenant de quelques heures à quelques jours après le début de l'association, ont été rapportées chez des patients recevant de l'amiodarone.",
+        "action_infirmier": "Signaler au prescripteur tout traitement en cours contenant du sofosbuvir. Surveillance de la fréquence cardiaque et surveillance cardiaque renforcée à l'instauration.",
+        "source_rcp": "RCP CORDARONE 150 mg/3 ml, sections 4.4 et 4.5 (association déconseillée)"
+      },
+      {
+        "substance": "Antiarythmiques de classe Ia (quinidine, hydroquinidine, disopyramide) et de classe III (sotalol, dofétilide, ibutilide)",
+        "effet": "Risque majoré de troubles du rythme ventriculaire, notamment de torsades de pointes.",
+        "action_infirmier": "Association contre-indiquée : vérifier auprès du prescripteur avant administration si un de ces antiarythmiques figure au traitement.",
+        "source_rcp": "RCP CORDARONE 150 mg/3 ml, sections 4.3 et 4.5"
+      },
+      {
+        "substance": "Autres médicaments torsadogènes",
+        "effet": "Risque majoré de troubles du rythme ventriculaire, notamment de torsades de pointes.",
+        "action_infirmier": "Association contre-indiquée : signaler au prescripteur toute administration concomitante, en particulier des antibiotiques IV torsadogènes.",
+        "source_rcp": "RCP CORDARONE 150 mg/3 ml, sections 4.3 et 4.5"
+      },
+      {
+        "substance": "Diltiazem injectable et vérapamil injectable",
+        "effet": "Risque de bradycardie et de bloc auriculo-ventriculaire.",
+        "action_infirmier": "Association déconseillée : signaler au prescripteur avant administration ; surveillance de la fréquence cardiaque et de l'ECG.",
+        "source_rcp": "RCP CORDARONE 150 mg/3 ml, section 4.5"
+      },
+      {
+        "substance": "Bêta-bloquants",
+        "effet": "Troubles de l'automatisme et de la conduction par suppression des mécanismes sympathiques compensateurs.",
+        "action_infirmier": "Signaler au prescripteur toute prise concomitante ; surveillance clinique et ECG.",
+        "source_rcp": "RCP CORDARONE 150 mg/3 ml, section 4.5"
+      },
+      {
+        "substance": "Digoxine",
+        "effet": "Dépression de l'automatisme (bradycardie excessive) et troubles de la conduction auriculo-ventriculaire, avec augmentation de la digoxinémie par diminution de la clairance de la digoxine.",
+        "action_infirmier": "Signaler au prescripteur toute association ; surveillance de la fréquence cardiaque, de l'ECG et de la digoxinémie.",
+        "source_rcp": "RCP CORDARONE 150 mg/3 ml, section 4.5"
+      },
+      {
+        "substance": "Anticoagulants oraux antivitamine K",
+        "effet": "Augmentation de l'effet de l'antivitamine K et du risque hémorragique.",
+        "action_infirmier": "Contrôle plus fréquent de l'INR pendant le traitement par amiodarone et durant les 8 jours suivant son arrêt.",
+        "source_rcp": "RCP CORDARONE 150 mg/3 ml, section 4.5"
+      },
+      {
+        "substance": "Ciclosporine",
+        "effet": "Augmentation des concentrations sanguines de ciclosporine par diminution de son métabolisme hépatique.",
+        "action_infirmier": "Signaler l'association au prescripteur ; dosage des concentrations sanguines de ciclosporine et contrôle de la fonction rénale.",
+        "source_rcp": "RCP CORDARONE 150 mg/3 ml, section 4.5"
+      }
+    ],
+    "surveillance_specifique": [
+      {
+        "evenement": "Hypotension sévère ou collapsus en cas d'administration trop rapide",
+        "explication": "Le RCP relie directement la baisse tensionnelle sévère à un surdosage ou à une administration trop rapide de l'amiodarone ; l'injection intraveineuse directe, même très lente, peut aggraver une hypotension ou une insuffisance cardiaque.",
+        "action": "Respecter la durée de perfusion prescrite, ne jamais accélérer le débit ; surveillance continue de la pression artérielle et de l'ECG en unité de soins intensifs.",
+        "source_rcp": "RCP CORDARONE 150 mg/3 ml, sections 4.4 et 4.8 : « Des cas d'hypotension sévère ou de collapsus ont été rapportés en particulier après surdosage ou administration trop rapide. »"
+      },
+      {
+        "evenement": "Bradycardie marquée, plus exceptionnellement arrêt sinusal",
+        "explication": "Effet bradycardisant propre à l'amiodarone, majoré en cas d'association aux bêta-bloquants, aux inhibiteurs calciques bradycardisants, à la digoxine ou au sofosbuvir.",
+        "action": "Monitorage ECG continu pendant l'administration ; alerter le médecin en cas de ralentissement marqué de la fréquence cardiaque.",
+        "source_rcp": "RCP CORDARONE 150 mg/3 ml, section 4.8 : « Bradycardie marquée, plus exceptionnellement arrêt sinusal, rapportés dans certains cas. »"
+      },
+      {
+        "evenement": "Veinite et réactions locales au site de perfusion",
+        "explication": "L'amiodarone est très phlébogène : l'administration par voie veineuse périphérique peut provoquer douleur, érythème, œdème, phlébite, infiltration voire nécrose en cas d'extravasation.",
+        "action": "Privilégier la voie veineuse centrale ; si voie périphérique inévitable, utiliser une veine aussi grosse et à flux aussi important que possible, surveiller le point de ponction et prévenir toute extravasation.",
+        "source_rcp": "RCP CORDARONE 150 mg/3 ml, sections 4.4 et 4.8 : « l'administration par la voie veineuse périphérique peut être responsable d'effets locaux à type de veinite » ; fiche HUG médicaments injectables : « Très phlébogène, VVC si conc > 2.4 mg/mL. Eviter extravasation car très agressif. »"
+      },
+      {
+        "evenement": "Insuffisance hépatocellulaire sévère dans les 24 heures suivant le début du traitement injectable",
+        "explication": "Atteinte hépatique aiguë décrite spécifiquement avec la forme injectable de l'amiodarone, d'évolution parfois fatale.",
+        "action": "Surveillance de la fonction hépatique en début de traitement ; signaler tout ictère, nausées ou altération de l'état général.",
+        "source_rcp": "RCP CORDARONE 150 mg/3 ml, section 4.4 : « Une insuffisance hépatocellulaire sévère, d'évolution parfois fatale, peut survenir dans les 24 heures suivant le début du traitement par amiodarone injectable. »"
+      },
+      {
+        "evenement": "Toxicité pulmonaire",
+        "explication": "Toxicité pulmonaire classique de l'amiodarone, révélée par une dyspnée ou une toux sèche isolée, éventuellement associée à une altération de l'état général.",
+        "action": "Signaler au médecin toute dyspnée ou toux sèche d'apparition nouvelle chez un patient sous amiodarone.",
+        "source_rcp": "RCP CORDARONE 150 mg/3 ml, section 4.4 : « L'apparition d'une dyspnée ou d'une toux sèche isolée ou associée à une altération de l'état général, doit faire évoquer une toxicité pulmonaire. »"
+      },
+      {
+        "evenement": "Dysthyroïdie liée à la surcharge iodée",
+        "explication": "L'amiodarone est fortement iodée et perturbe la fonction thyroïdienne, dans les deux sens (hypo- comme hyperthyroïdie), y compris plusieurs mois après l'arrêt.",
+        "action": "Veiller à la réalisation du dosage de TSH prescrit avant le traitement, régulièrement pendant, et plusieurs mois après son arrêt.",
+        "source_rcp": "RCP CORDARONE 200 mg, comprimé sécable, section 4.4 : « Un dosage de la TSH est recommandé chez tous les patients avant le début du traitement puis régulièrement au cours du traitement et plusieurs mois après son arrêt. »"
+      },
+      {
+        "evenement": "Photosensibilisation",
+        "explication": "Réaction de photosensibilisation fréquente et propre à l'amiodarone, pouvant laisser une pigmentation cutanée ardoisée.",
+        "action": "Conseiller au patient de ne pas s'exposer au soleil ni aux rayons ultraviolets pendant le traitement, ou de s'en protéger.",
+        "source_rcp": "RCP CORDARONE 200 mg, comprimé sécable, section 4.8 : « Photosensibilisation. Il est conseillé de ne pas s'exposer au soleil (et, de façon générale, aux rayons ultraviolets) en cours de traitement. »"
+      },
+      {
+        "evenement": "Troubles visuels",
+        "explication": "Les dépôts cornéens et, plus rarement, la neuropathie ou névrite optique dues à l'amiodarone imposent un avis ophtalmologique rapide.",
+        "action": "Signaler au médecin toute vision trouble ou baisse de l'acuité visuelle : un examen ophtalmologique complet avec fond d'œil doit être pratiqué rapidement.",
+        "source_rcp": "RCP CORDARONE 150 mg/3 ml, section 4.4 : « En cas de vision trouble ou de baisse de l'acuité visuelle, un examen ophtalmologique complet incluant un fond d'œil doit être rapidement pratiqué. »"
+      }
+    ],
+    "pictogrammes": []
+  },
+  "iv": {
+    "reconstitution": null,
+    "preparation": [
+      {
+        "voie": "PSE",
+        "contexte": "VVC, traitement d'attaque",
+        "detail": "Glucose 5% exclusivement",
+        "duree": "20 min à 2 h",
+        "stabilite": null
+      },
+      {
+        "voie": "PERF",
+        "contexte": "VVC, entretien",
+        "detail": "Glucose 5% exclusivement, 250 mL",
+        "duree": "Continu",
+        "stabilite": null
+      },
+      {
+        "voie": "IVD",
+        "contexte": "Arrêt cardiaque, FV réfractaire",
+        "detail": "20 mL de G5%",
+        "duree": "Bolus",
+        "stabilite": "Le produit doit être utilisé immédiatement après ouverture."
+      }
+    ],
+    "administration": {
+      "note_ajustement": "",
+      "posologie": [
+        {
+          "population": "Traitement d'attaque, troubles du rythme graves",
+          "population_type": "adulte",
+          "categorie": "generale",
+          "dose_mg_kg_min": 5,
+          "dose_mg_kg_max": 5,
+          "intervalle_min_h": 8,
+          "intervalle_max_h": 12,
+          "nb_prises_max_24h": 3
+        },
+        {
+          "population": "Traitement d'entretien, perfusion continue",
+          "population_type": "adulte",
+          "categorie": "generale",
+          "dose_journaliere_mg_kg_min": 10,
+          "dose_journaliere_mg_kg_max": 20,
+          "intervalle_min_h": 24,
+          "intervalle_max_h": 24,
+          "dose_journaliere_max_g": 1.2
+        },
+        {
+          "population": "Arrêt cardiaque par fibrillation ventriculaire résistante aux chocs électriques externes, dose initiale",
+          "population_type": "adulte",
+          "categorie": "generale",
+          "dose_par_prise_mg_min": 300,
+          "dose_par_prise_mg_max": 300,
+          "dose_mg_kg_min": 5,
+          "dose_mg_kg_max": 5
+        },
+        {
+          "population": "Arrêt cardiaque par fibrillation ventriculaire, dose supplémentaire si persistance",
+          "population_type": "adulte",
+          "categorie": "generale",
+          "dose_par_prise_mg_min": 150,
+          "dose_par_prise_mg_max": 150,
+          "dose_mg_kg_min": 2.5,
+          "dose_mg_kg_max": 2.5
+        }
+      ]
+    },
+    "incompatibilites": [
+      {
+        "substance": "Bicarbonate de sodium",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Furosémide",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Héparine sodique",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Céfazoline",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Ceftazidime",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Flucloxacilline",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Imipénem / cilastatine",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Pipéracilline / tazobactam",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Sulfate de magnésium",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Phosphate de potassium",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Chlorure de potassium",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Nitroprussiate de sodium",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Nutrition parentérale (mélanges pédiatriques HUG et nutrition parentérale totale)",
+        "niveau": "absolu"
+      }
+    ]
+  },
+  "oral": {
+    "formes": [
+      {
+        "type": "Comprimé sécable",
+        "dosage": "200 mg",
+        "secable": true,
+        "ouverture_gelule": null,
+        "posologie_adulte": [
+          {
+            "population": "Traitement d'attaque",
+            "population_type": "adulte",
+            "categorie": "generale",
+            "dose_par_prise_mg_min": 200,
+            "dose_par_prise_mg_max": 200,
+            "intervalle_min_h": 5,
+            "intervalle_max_h": 8,
+            "dose_journaliere_max_g": 1
+          },
+          {
+            "population": "Traitement d'entretien",
+            "population_type": "adulte",
+            "categorie": "generale",
+            "dose_par_prise_mg_min": 100,
+            "dose_par_prise_mg_max": 400,
+            "intervalle_min_h": 24,
+            "intervalle_max_h": 24,
+            "dose_journaliere_max_g": 0.4
+          }
+        ]
+      }
+    ],
+    "recommandation_sonde": {
+      "forme_preferee": "Comprimé sécable 200 mg écrasé",
+      "alternative": ""
+    }
+  },
+  "tracabilite": {
+    "rcp_source": [
+      {
+        "specialite": "CORDARONE 150 mg/3 ml, solution injectable en ampoule (IV)",
+        "titulaire": "SANOFI WINTHROP INDUSTRIE",
+        "date_maj": "2024-06-20",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/62305927/extrait"
+      },
+      {
+        "specialite": "CORDARONE 200 mg, comprimé sécable",
+        "titulaire": "SANOFI WINTHROP INDUSTRIE",
+        "date_maj": "2025-06-05",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/64408662/extrait"
+      }
+    ],
+    "statut": "valide",
+    "validation": {
+      "date": "2026-08-31",
+      "validateur": "Anna Trabaud-Lopez (IDE, porteuse du projet), vérification des données extraites contre les RCP ; équipe pharmacie, validation de la méthodologie et arbitrage des points litigieux",
+      "perimetre": [
+        "adulte"
+      ],
+      "prochaine_revision": "2026-11-30"
+    }
+  }
+}

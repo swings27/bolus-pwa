@@ -39,9 +39,12 @@ export default function Categories() {
                 </span>
               </div>
               {categorie.sousFamillesPresentes.length > 0 && (
-                <p className="text-[11px] text-texte-doux">
+                // div, pas p : ListeSeparee rend elle-même un <p> — un <p>
+                // dans un <p> est un nid de balises invalide (React avertit
+                // "cannot appear as a descendant of").
+                <div className="text-[11px] text-texte-doux">
                   <ListeSeparee items={categorie.sousFamillesPresentes} />
-                </p>
+                </div>
               )}
             </button>
           ))}

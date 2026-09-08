@@ -50,6 +50,21 @@ describe('formaterDose', () => {
   it('renvoie un tiret cadratin si aucun champ de dose n\'est renseigné', () => {
     expect(formaterDose(posologie())).toBe('—')
   })
+
+  // MUI (millions d'unités internationales) : introduites pour la
+  // spiramycine, même famille de champs que dose_par_prise_mg/
+  // dose_journaliere_mg_kg mais dans une unité distincte.
+  it('formate une dose fixe par prise en MUI', () => {
+    expect(formaterDose(posologie({ dose_par_prise_MUI: 3 }))).toBe('3 MUI')
+  })
+
+  it('formate une fourchette par prise en MUI', () => {
+    expect(formaterDose(posologie({ dose_par_prise_MUI_min: 1.5, dose_par_prise_MUI_max: 1.5 }))).toBe('1,5 MUI')
+  })
+
+  it('formate une dose journalière en MUI avec le suffixe "/ jour"', () => {
+    expect(formaterDose(posologie({ dose_journaliere_MUI_min: 6, dose_journaliere_MUI_max: 9 }))).toBe('6-9 MUI / jour')
+  })
 })
 
 describe('formaterIntervalle', () => {
@@ -90,6 +105,11 @@ describe('formaterMax', () => {
 
   it('applique la même règle à dose_max_par_prise_g, avec le suffixe "/prise"', () => {
     expect(formaterMax(posologie({ dose_max_par_prise_g: 2 }))).toBe('2 g/prise')
+  })
+
+  it('affiche dose_journaliere_max_MUI directement, sans conversion (contrairement aux grammes)', () => {
+    expect(formaterMax(posologie({ dose_journaliere_max_MUI: 4.5 }))).toBe('4,5 MUI/j')
+    expect(formaterMax(posologie({ dose_journaliere_max_MUI: 9 }))).toBe('9 MUI/j')
   })
 
   it('ne réutilise jamais nb_prises_max_24h (déjà un repli de formaterIntervalle)', () => {
@@ -162,6 +182,12 @@ describe('dedupliquerPosologies', () => {
     // Peu importe l'ordre d'apparition, le résultat garde toujours la fourchette.
     expect(dedupliquerPosologies([doseFixe, enFourchette])).toEqual([enFourchette])
     expect(dedupliquerPosologies([enFourchette, doseFixe])).toEqual([enFourchette])
+  })
+
+  it('reconnaît aussi une fourchette exprimée en MUI (pas seulement en mg)', () => {
+    const enFourchette = posologie({ population: 'X', categorie: 'generale', dose_par_prise_MUI_min: 1.5, dose_par_prise_MUI_max: 3 })
+    const doseFixe = posologie({ population: 'X', categorie: 'generale', dose_par_prise_MUI: 3 })
+    expect(dedupliquerPosologies([doseFixe, enFourchette])).toEqual([enFourchette])
   })
 
   it('ne fusionne pas deux populations identiques de categorie différente', () => {

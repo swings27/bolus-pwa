@@ -51,6 +51,23 @@ export interface IPosologieRcp {
   dose_max_par_prise_g?: number
   dose_ugkgmin_min?: number
   dose_ugkgmin_max?: number
+  /** MUI = millions d'unités internationales (ex. spiramycine) — même
+   * famille que dose_par_prise_mg(_min/_max)/dose_journaliere_max_g, en
+   * unité différente. */
+  dose_par_prise_MUI?: number
+  dose_par_prise_MUI_min?: number
+  dose_par_prise_MUI_max?: number
+  dose_journaliere_MUI_min?: number
+  dose_journaliere_MUI_max?: number
+  dose_journaliere_max_MUI?: number
+  /** Pédiatrie uniquement pour le moment (posologie au poids par palier de
+   * 10 kg, ou en UI/kg) — pas encore affiché, V1 se limite à l'adulte, voir
+   * SectionPosologies. Typés ici pour que construireFiche() ne perde aucun
+   * champ du JSON source. */
+  dose_journaliere_MUI_par_10kg_min?: number
+  dose_journaliere_MUI_par_10kg_max?: number
+  dose_par_prise_UI_kg_min?: number
+  dose_par_prise_UI_kg_max?: number
   intervalle_min_h?: number
   intervalle_max_h?: number
   intervalle_min_min?: number
@@ -100,8 +117,15 @@ export interface IPreparationVoie {
   detail: string
   duree?: string | null
   stabilite?: string | null
-  /** Précision de contexte (ex. "néonatologie", "état de mal épileptique"). */
+  /** Précision de contexte, informative (ex. "VVC recommandée", "état de mal
+   * épileptique") — ne filtre rien à l'affichage, contrairement à
+   * `population_type` ci-dessous. */
   contexte?: string
+  /** Même rôle que sur IPosologieRcp : une préparation propre à la
+   * pédiatrie (ex. dilution néonatologie) doit pouvoir être exclue du
+   * périmètre adulte, ce que le texte libre de `contexte` ne permet pas de
+   * détecter de façon fiable. */
+  population_type?: IPopulationType
 }
 
 /** Reconstitution d'une poudre avant dilution/injection (ex. amoxicilline,

@@ -31,12 +31,6 @@
         "source_rcp": "RCP Paracétamol Kabi 10 mg/mL, 4.5"
       },
       {
-        "substance": "Salicylamide",
-        "effet": "Le salicylamide peut allonger la demi-vie d'élimination du paracétamol.",
-        "action_infirmier": "Surveiller les signes de surdosage en cas d'association prolongée.",
-        "source_rcp": "RCP Paracétamol Kabi 10 mg/mL, 4.5"
-      },
-      {
         "substance": "Inducteurs enzymatiques",
         "effet": "Une attention particulière doit être exercée en cas de prise concomitante d'inducteurs enzymatiques, qui augmentent la production de métabolite hépatotoxique du paracétamol.",
         "action_infirmier": "Renforcer la surveillance hépatique en cas d'association, notamment en contexte de surdosage.",

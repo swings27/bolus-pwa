@@ -72,9 +72,12 @@ export default function DetailPerOs({ donnees }: IDetailPerOsProps) {
 
       <TitreSectionFiche>Formes disponibles</TitreSectionFiche>
       <div className="flex flex-col gap-1.5">
-        {donnees.formes.map((forme) => (
+        {donnees.formes.map((forme, index) => (
+          // type seul ne suffit pas comme clé : une molécule peut avoir
+          // deux formes du même type à des dosages différents (ex.
+          // spiramycine, deux "Comprimé pelliculé" à 1,5 et 3 MUI).
           <div
-            key={forme.type}
+            key={`${forme.type}-${forme.dosage ?? index}`}
             className="flex items-center justify-between gap-2 rounded-[10px] border border-texte/10 px-3 py-2.5"
           >
             <div className="min-w-0 flex-1">

@@ -2,9 +2,10 @@ import type { IPosologieRcp } from '../types'
 
 // Les fichiers RCP expriment une dose de plusieurs façons mutuellement
 // exclusives selon la molécule et l'indication (dose fixe par prise, dose
-// par kg, dose journalière par kg, débit en µg/kg/min...) — ces fonctions de
-// mise en forme testent les champs par ordre de spécificité et s'arrêtent au
-// premier renseigné, plutôt que d'imposer un seul format à toute la fiche.
+// par kg, dose journalière par kg, débit en µg/kg/min, dose en MUI pour une
+// molécule comme la spiramycine...) — ces fonctions de mise en forme testent
+// les champs par ordre de spécificité et s'arrêtent au premier renseigné,
+// plutôt que d'imposer un seul format à toute la fiche.
 
 function formaterNombre(n: number): string {
   return Number.isInteger(n) ? String(n) : String(n).replace('.', ',')
@@ -22,10 +23,18 @@ export function formaterDose(p: IPosologieRcp): string {
   if (p.dose_par_prise_mg !== undefined) return `${formaterNombre(p.dose_par_prise_mg)} mg`
   const parPrise = formaterPlage(p.dose_par_prise_mg_min, p.dose_par_prise_mg_max, 'mg')
   if (parPrise) return parPrise
+  // MUI (millions d'unités internationales, ex. spiramycine) : même place
+  // dans l'ordre de priorité que la dose par prise en mg ci-dessus, une
+  // unité différente pour la même façon d'exprimer la dose.
+  if (p.dose_par_prise_MUI !== undefined) return `${formaterNombre(p.dose_par_prise_MUI)} MUI`
+  const parPriseMUI = formaterPlage(p.dose_par_prise_MUI_min, p.dose_par_prise_MUI_max, 'MUI')
+  if (parPriseMUI) return parPriseMUI
   const parKg = formaterPlage(p.dose_mg_kg_min, p.dose_mg_kg_max, 'mg/kg')
   if (parKg) return `${parKg} / prise`
   const parKgParJour = formaterPlage(p.dose_journaliere_mg_kg_min, p.dose_journaliere_mg_kg_max, 'mg/kg')
   if (parKgParJour) return `${parKgParJour} / jour`
+  const parJourMUI = formaterPlage(p.dose_journaliere_MUI_min, p.dose_journaliere_MUI_max, 'MUI')
+  if (parJourMUI) return `${parJourMUI} / jour`
   const debit = formaterPlage(p.dose_ugkgmin_min, p.dose_ugkgmin_max, 'µg/kg/min')
   if (debit) return debit
   return '—'
@@ -61,6 +70,10 @@ function formaterGrammesOuMg(grammes: number, parUnite: string): string {
 // la même information sous deux libellés différents.
 export function formaterMax(p: IPosologieRcp): string | null {
   if (p.dose_journaliere_max_g !== undefined) return formaterGrammesOuMg(p.dose_journaliere_max_g, 'j')
+  // Pas de règle MUI→UI équivalente à formaterGrammesOuMg : contrairement à
+  // "0,04 g/j", une valeur décimale en MUI (ex. "4,5 MUI/j") est la façon
+  // normale de l'exprimer, aucune conversion nécessaire.
+  if (p.dose_journaliere_max_MUI !== undefined) return `${formaterNombre(p.dose_journaliere_max_MUI)} MUI/j`
   if (p.dose_max_par_prise_g !== undefined) return formaterGrammesOuMg(p.dose_max_par_prise_g, 'prise')
   return null
 }
@@ -123,11 +136,18 @@ function estUnePlageDeDose(p: IPosologieRcp): boolean {
   if (p.dose_par_prise_mg_min !== undefined || p.dose_par_prise_mg_max !== undefined) {
     return p.dose_par_prise_mg_min !== p.dose_par_prise_mg_max
   }
+  if (p.dose_par_prise_MUI !== undefined) return false
+  if (p.dose_par_prise_MUI_min !== undefined || p.dose_par_prise_MUI_max !== undefined) {
+    return p.dose_par_prise_MUI_min !== p.dose_par_prise_MUI_max
+  }
   if (p.dose_mg_kg_min !== undefined || p.dose_mg_kg_max !== undefined) {
     return p.dose_mg_kg_min !== p.dose_mg_kg_max
   }
   if (p.dose_journaliere_mg_kg_min !== undefined || p.dose_journaliere_mg_kg_max !== undefined) {
     return p.dose_journaliere_mg_kg_min !== p.dose_journaliere_mg_kg_max
+  }
+  if (p.dose_journaliere_MUI_min !== undefined || p.dose_journaliere_MUI_max !== undefined) {
+    return p.dose_journaliere_MUI_min !== p.dose_journaliere_MUI_max
   }
   if (p.dose_ugkgmin_min !== undefined || p.dose_ugkgmin_max !== undefined) {
     return p.dose_ugkgmin_min !== p.dose_ugkgmin_max

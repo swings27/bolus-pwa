@@ -1,0 +1,266 @@
+{
+  "dci": "spiramycine",
+  "commun": {
+    "noms_commerciaux": [
+      "Rovamycine"
+    ],
+    "famille": "Antibiotique macrolide",
+    "antidote": "",
+    "indications": [
+      "Pneumopathie communautaire",
+      "Surinfection de bronchite aiguë",
+      "Exacerbation de bronchite chronique",
+      "Asthme infecté",
+      "Angine à streptocoque A",
+      "Sinusite aiguë",
+      "Infections cutanées bénignes",
+      "Infections stomatologiques",
+      "Infections génitales non gonococciques",
+      "Prophylaxie rechutes RAA",
+      "Toxoplasmose de la grossesse",
+      "Prophylaxie méningite à méningocoque"
+    ],
+    "grossesse_allaitement": {
+      "grossesse": "L'utilisation de la spiramycine peut être envisagée au cours de la grossesse si besoin.",
+      "allaitement": "L'allaitement est déconseillé en cas de traitement par la spiramycine.",
+      "url_crat_grossesse": "https://www.lecrat.fr/13448/",
+      "url_crat_allaitement": "https://www.lecrat.fr/13449/",
+      "source": "RCP ROVAMYCINE 3 millions UI, comprimé pelliculé, section 4.6 (texte identique dans le RCP ROVAMYCINE 1,5 million UI injectable)"
+    },
+    "contre_indications": [
+      "Hypersensibilité à la spiramycine ou à l'un des excipients",
+      "Syndrome du QT long congénital connu ou antécédent familial, ou allongement acquis connu de l'intervalle QT",
+      "Association aux médicaments donnant des torsades de pointes (antiarythmiques de classe Ia et III, sultopride et autres torsadogènes)"
+    ],
+    "interactions_pertinentes": [
+      {
+        "substance": "Médicaments donnant des torsades de pointes : antiarythmiques de classe Ia (quinidine, hydroquinidine, disopyramide) et de classe III (amiodarone, sotalol, dofétilide, ibutilide), sultopride, autres torsadogènes (arsénieux, bépridil, cisapride, diphémanil, dolasétron IV, érythromycine IV, lévofloxacine, mizolastine, moxifloxacine, prucalopride, torémifène, vincamine IV)",
+        "effet": "Risque majoré de troubles du rythme ventriculaire, notamment de torsades de pointes. Association contre-indiquée avec la spiramycine par voie IV (association simplement déconseillée par voie orale).",
+        "action_infirmier": "Signaler au prescripteur toute co-prescription ; renforcer la surveillance clinique et électrocardiographique.",
+        "source_rcp": "RCP ROVAMYCINE 3 MUI comprimé, section 4.5 ; RCP ROVAMYCINE 1,5 MUI injectable, sections 4.3 et 4.5"
+      },
+      {
+        "substance": "Antiparasitaires torsadogènes",
+        "effet": "Risque majoré de troubles du rythme ventriculaire, notamment de torsades de pointes, précaution documentée pour la spiramycine par voie IV.",
+        "action_infirmier": "Signaler l'association au prescripteur ; renforcer la surveillance clinique et électrocardiographique.",
+        "source_rcp": "RCP ROVAMYCINE 1,5 MUI injectable, section 4.5"
+      },
+      {
+        "substance": "Neuroleptiques torsadogènes (amisulpride, chlorpromazine, cyamémazine, dropéridol, flupenthixol, fluphénazine, halopéridol, lévomépromazine, pimozide, pipampérone, pipotiazine, sulpiride, sultopride, tiapride, zuclopenthixol), méthadone",
+        "effet": "Risque majoré de troubles du rythme ventriculaire, notamment de torsades de pointes, précaution documentée pour la spiramycine par voie IV.",
+        "action_infirmier": "Signaler l'association au prescripteur ; renforcer la surveillance clinique et électrocardiographique.",
+        "source_rcp": "RCP ROVAMYCINE 1,5 MUI injectable, section 4.5"
+      },
+      {
+        "substance": "Bêta-bloquants de l'insuffisance cardiaque (bisoprolol, carvédilol, métoprolol, nébivolol), bradycardisants, digitaliques, anticholinestérasiques (ambénonium, donépézil, galantamine, mémantine, néostigmine, pyridostigmine, rivastigmine), hypokaliémiants (diurétiques hypokaliémiants, laxatifs stimulants, glucocorticoïdes, tétracosactide, amphotéricine B IV)",
+        "effet": "Risque majoré de troubles du rythme ventriculaire, notamment de torsades de pointes, favorisé par la bradycardie ou l'hypokaliémie, précaution documentée pour la spiramycine par voie IV.",
+        "action_infirmier": "Corriger toute hypokaliémie avant l'administration ; renforcer la surveillance clinique, électrolytique et électrocardiographique.",
+        "source_rcp": "RCP ROVAMYCINE 1,5 MUI injectable, section 4.5"
+      },
+      {
+        "substance": "Azithromycine, clarithromycine, roxithromycine, fluoroquinolones (ciprofloxacine, lévofloxacine, norfloxacine), ondansétron, anagrélide",
+        "effet": "Risque majoré de troubles du rythme ventriculaire, notamment de torsades de pointes, précaution documentée pour la spiramycine par voie IV.",
+        "action_infirmier": "Renforcer la surveillance clinique et électrocardiographique pendant l'association.",
+        "source_rcp": "RCP ROVAMYCINE 1,5 MUI injectable, section 4.5"
+      },
+      {
+        "substance": "Lévodopa",
+        "effet": "Inhibition de l'absorption de la carbidopa avec diminution des concentrations plasmatiques de la lévodopa.",
+        "action_infirmier": "Surveillance clinique ; signaler au prescripteur pour adaptation éventuelle de la posologie de la lévodopa.",
+        "source_rcp": "RCP ROVAMYCINE 3 MUI comprimé, section 4.5 ; RCP ROVAMYCINE 1,5 MUI injectable, section 4.5"
+      },
+      {
+        "substance": "Hydroxychloroquine ou chloroquine",
+        "effet": "Risque accru d'effets indésirables cardiovasculaires graves (allongement de l'intervalle QT, arythmies cardiaques, torsades de pointes) et de mortalité cardiovasculaire.",
+        "action_infirmier": "Signaler l'association au prescripteur ; renforcer la surveillance clinique et électrocardiographique.",
+        "source_rcp": "RCP ROVAMYCINE 3 MUI comprimé, section 4.5 ; RCP ROVAMYCINE 1,5 MUI injectable, section 4.5"
+      },
+      {
+        "substance": "Anticoagulants oraux",
+        "effet": "De nombreux cas d'augmentation de l'activité des anticoagulants oraux ont été rapportés chez des patients recevant des antibiotiques, dont les macrolides.",
+        "action_infirmier": "Renforcer la surveillance de l'INR pendant l'association et après son arrêt.",
+        "source_rcp": "RCP ROVAMYCINE 3 MUI comprimé, section 4.5 ; RCP ROVAMYCINE 1,5 MUI injectable, section 4.5"
+      }
+    ],
+    "surveillance_specifique": [
+      {
+        "evenement": "Allongement de l'intervalle QT",
+        "explication": "Effet de classe rapporté avec les macrolides, y compris la spiramycine ; le RCP injectable identifie la spiramycine par voie IV comme un médicament torsadogène.",
+        "action": "Signaler au prescripteur avant traitement tout facteur de risque connu (trouble électrolytique non corrigé, syndrome du QT long congénital, pathologie cardiaque, association à un médicament torsadogène) ; renforcer la surveillance clinique et électrocardiographique, en particulier par voie IV.",
+        "source_rcp": "RCP ROVAMYCINE 3 MUI comprimé, section 4.4 ; RCP ROVAMYCINE 1,5 MUI injectable, sections 4.3 à 4.5"
+      },
+      {
+        "evenement": "Réaction cutanée sévère",
+        "explication": "Réactions rares mais sévères rapportées avec la spiramycine ; se manifestent par une éruption progressive, des bulles, des lésions muqueuses ou un érythème fébrile généralisé avec pustules.",
+        "action": "Informer le patient des signes d'alerte ; en cas de survenue, arrêter le traitement et signaler immédiatement au prescripteur, contre-indique toute réadministration ultérieure de spiramycine.",
+        "source_rcp": "RCP ROVAMYCINE 3 MUI comprimé, section 4.4 ; RCP ROVAMYCINE 1,5 MUI injectable, section 4.4"
+      },
+      {
+        "evenement": "Déficit en Glucose-6-Phosphate-Déshydrogénase",
+        "explication": "De très rares cas d'anémie hémolytique ont été rapportés chez des patients présentant un déficit en G6PD.",
+        "action": "Signaler au prescripteur tout déficit en G6PD connu avant traitement ; surveiller les signes évocateurs d'anémie hémolytique.",
+        "source_rcp": "RCP ROVAMYCINE 3 MUI comprimé, section 4.4 ; RCP ROVAMYCINE 1,5 MUI injectable, section 4.4"
+      }
+    ],
+    "pictogrammes": []
+  },
+  "iv": {
+    "reconstitution": {
+      "solvant": "Eau pour préparations injectables (EPPI)",
+      "volume_par_1500000UI_mL": 4,
+      "stabilite_avant_dilution": "12 heures après reconstitution"
+    },
+    "preparation": [
+      {
+        "voie": "PERF",
+        "detail": "Diluer dans un volume minimal de 100 mL de G5 %",
+        "duree": "1 heure (perfusion lente)",
+        "stabilite": null
+      }
+    ],
+    "administration": {
+      "note_ajustement": "Aucun ajustement posologique nécessaire en cas d'insuffisance rénale (absence d'élimination rénale de la molécule active).",
+      "posologie": [
+        {
+          "population": "Fonction rénale normale",
+          "categorie": "generale",
+          "population_type": "adulte",
+          "dose_par_prise_MUI_min": 1.5,
+          "dose_par_prise_MUI_max": 1.5,
+          "intervalle_min_h": 8,
+          "intervalle_max_h": 8,
+          "dose_journaliere_max_MUI": 4.5
+        },
+        {
+          "population": "Infection sévère",
+          "categorie": "speciale",
+          "population_type": "adulte",
+          "dose_par_prise_MUI_min": 3,
+          "dose_par_prise_MUI_max": 3,
+          "intervalle_min_h": 8,
+          "intervalle_max_h": 8,
+          "dose_journaliere_max_MUI": 9
+        }
+      ]
+    },
+    "incompatibilites": []
+  },
+  "oral": {
+    "formes": [
+      {
+        "type": "Comprimé pelliculé",
+        "dosage": "1,5 million UI",
+        "secable": false,
+        "ouverture_gelule": null,
+        "posologie_adulte": [
+          {
+            "population": "Traitement standard",
+            "categorie": "generale",
+            "population_type": "adulte",
+            "dose_par_prise_MUI_min": 3,
+            "dose_par_prise_MUI_max": 3,
+            "intervalle_min_h": 8,
+            "intervalle_max_h": 12,
+            "nb_prises_min_24h": 2,
+            "nb_prises_max_24h": 3,
+            "dose_journaliere_max_MUI": 9
+          },
+          {
+            "population": "Prophylaxie méningocoque",
+            "categorie": "speciale",
+            "population_type": "adulte",
+            "dose_par_prise_MUI_min": 3,
+            "dose_par_prise_MUI_max": 3,
+            "intervalle_min_h": 12,
+            "intervalle_max_h": 12,
+            "dose_journaliere_max_MUI": 6
+          },
+          {
+            "population": "Enfant",
+            "categorie": "generale",
+            "population_type": "pediatrie",
+            "dose_journaliere_MUI_par_10kg_min": 1.5,
+            "dose_journaliere_MUI_par_10kg_max": 3,
+            "nb_prises_min_24h": 2,
+            "nb_prises_max_24h": 3
+          },
+          {
+            "population": "Prophylaxie méningocoque",
+            "categorie": "speciale",
+            "population_type": "pediatrie",
+            "dose_par_prise_UI_kg_min": 75000,
+            "dose_par_prise_UI_kg_max": 75000,
+            "intervalle_min_h": 12,
+            "intervalle_max_h": 12
+          }
+        ]
+      },
+      {
+        "type": "Comprimé pelliculé",
+        "dosage": "3 millions UI",
+        "secable": false,
+        "ouverture_gelule": null,
+        "posologie_adulte": [
+          {
+            "population": "Traitement standard",
+            "categorie": "generale",
+            "population_type": "adulte",
+            "dose_par_prise_MUI_min": 3,
+            "dose_par_prise_MUI_max": 3,
+            "intervalle_min_h": 8,
+            "intervalle_max_h": 12,
+            "nb_prises_min_24h": 2,
+            "nb_prises_max_24h": 3,
+            "dose_journaliere_max_MUI": 9
+          },
+          {
+            "population": "Prophylaxie méningocoque",
+            "categorie": "speciale",
+            "population_type": "adulte",
+            "dose_par_prise_MUI_min": 3,
+            "dose_par_prise_MUI_max": 3,
+            "intervalle_min_h": 12,
+            "intervalle_max_h": 12,
+            "dose_journaliere_max_MUI": 6
+          }
+        ]
+      }
+    ],
+    "recommandation_sonde": {
+      "forme_preferee": "",
+      "alternative": "Voie injectable, avis médical"
+    }
+  },
+  "tracabilite": {
+    "rcp_source": [
+      {
+        "specialite": "ROVAMYCINE 1 500 000 UI, comprimé pelliculé",
+        "titulaire": "TAMRISA ACCESS",
+        "date_maj": "2025-03-06",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/64212005/extrait"
+      },
+      {
+        "specialite": "ROVAMYCINE 3 MILLIONS UI, comprimé pelliculé",
+        "titulaire": "TAMRISA ACCESS",
+        "date_maj": "2025-03-06",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/67535280/extrait"
+      },
+      {
+        "specialite": "ROVAMYCINE 1,5 MILLIONS D'UNITES INTERNATIONALES, lyophilisat pour usage parentéral (IV)",
+        "titulaire": "TAMRISA ACCESS",
+        "date_maj": "2026-06-05",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/65952065/extrait"
+      }
+    ],
+    "statut": "valide",
+    "validation": {
+      "date": "2026-09-04",
+      "validateur": "Anna Trabaud-Lopez (IDE, porteuse du projet), vérification des données extraites contre les RCP ; équipe pharmacie, validation de la méthodologie et arbitrage des points litigieux",
+      "perimetre": [
+        "adulte",
+        "pediatrie"
+      ],
+      "prochaine_revision": "2026-12-04"
+    }
+  }
+}
