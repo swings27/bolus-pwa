@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Layout from './components/layout/Layout'
 import DisclaimerModal from './components/layout/DisclaimerModal'
+import Onboarding from './components/onboarding/Onboarding'
 import ErrorBoundary from './components/layout/ErrorBoundary'
 import CalculateurModal from './components/calculateurs/CalculateurModal'
 import { CalculateurModalProvider } from './contexts/CalculateurModalContext'
@@ -114,6 +115,11 @@ export default function App() {
           {/* Modal bloquante affichée par-dessus tout le reste tant que
               l'utilisateur n'a pas accepté le disclaimer. */}
           <DisclaimerModal />
+
+          {/* Porte plein écran de premier lancement, juste après le
+              disclaimer : Onboarding décide lui-même s'il a quelque chose à
+              afficher (disclaimer accepté + jamais vu), voir Onboarding.tsx. */}
+          <Onboarding />
 
           {loading ? (
             afficherChargement ? <EcranChargement /> : null

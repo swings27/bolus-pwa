@@ -4,7 +4,7 @@ import Header from '../components/layout/Header'
 import { useTheme } from '../contexts/ThemeContext'
 import type { Theme } from '../contexts/ThemeContext'
 import { db } from '../db'
-import { CLE_FICHES_VERSION, CLE_FICHES_DATE_CATALOGUE, CLE_STOCKAGE_PERSISTANT } from '../db/cles'
+import { CLE_FICHES_VERSION, CLE_FICHES_DATE_CATALOGUE, CLE_STOCKAGE_PERSISTANT, CLE_ONBOARDING_VU } from '../db/cles'
 
 interface IOptionTheme {
   valeur: Theme
@@ -104,6 +104,20 @@ export default function Parametres() {
             <LigneInfo label="Catalogue mis à jour le" valeur={dateCatalogue} />
             <LigneInfo label="Stockage persistant" valeur={stockagePersistant} />
           </div>
+        </section>
+
+        <section className="flex flex-col gap-1">
+          <h2 className="font-display text-lg font-semibold text-texte">Aide</h2>
+          <button
+            type="button"
+            // La suppression de la clé suffit : Onboarding lit cette même
+            // clé via useLiveQuery et se réaffiche automatiquement dès
+            // qu'elle disparaît, sans navigation ni état intermédiaire.
+            onClick={() => db.parametres.delete(CLE_ONBOARDING_VU)}
+            className="tactile flex items-center py-3 text-sm text-texte"
+          >
+            Revoir la présentation de l'application
+          </button>
         </section>
       </div>
     </div>
