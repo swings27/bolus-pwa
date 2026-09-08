@@ -256,7 +256,7 @@
       {
         "type": "Comprimé enrobé ou pelliculé",
         "dosage": "200 mg et 400 mg",
-        "secable": false,
+        "ecrasable": false,
         "ouverture_gelule": null,
         "posologie_adulte": [
           {
@@ -348,7 +348,7 @@
       {
         "type": "Comprimé pelliculé pédiatrique",
         "dosage": "100 mg",
-        "secable": false,
+        "ecrasable": false,
         "ouverture_gelule": null,
         "posologie_adulte": [
           {
@@ -385,7 +385,7 @@
       {
         "type": "Capsule molle",
         "dosage": "200 mg et 400 mg",
-        "secable": false,
+        "ecrasable": false,
         "ouverture_gelule": false,
         "posologie_adulte": [
           {
@@ -418,7 +418,7 @@
       {
         "type": "Comprimé orodispersible",
         "dosage": "200 mg",
-        "secable": false,
+        "ecrasable": false,
         "ouverture_gelule": null,
         "posologie_adulte": [
           {
@@ -450,7 +450,7 @@
       {
         "type": "Granulés pour solution buvable en sachet-dose",
         "dosage": "400 mg",
-        "secable": false,
+        "ecrasable": false,
         "ouverture_gelule": null,
         "posologie_adulte": [
           {
@@ -494,7 +494,7 @@
       {
         "type": "Suspension buvable en sachet-dose",
         "dosage": "400 mg par sachet de 10 mL",
-        "secable": false,
+        "ecrasable": false,
         "ouverture_gelule": null,
         "posologie_adulte": [
           {
@@ -527,7 +527,7 @@
       {
         "type": "Suspension buvable en flacon avec seringue graduée en kg",
         "dosage": "20 mg/mL",
-        "secable": false,
+        "ecrasable": false,
         "ouverture_gelule": null,
         "posologie_adulte": [
           {

@@ -238,7 +238,7 @@
       {
         "type": "Comprimé pelliculé",
         "dosage": "500 mg/62,5 mg (rapport 8/1)",
-        "secable": false,
+        "ecrasable": false,
         "ouverture_gelule": null,
         "posologie_adulte": [
           {
@@ -266,7 +266,7 @@
       {
         "type": "Poudre pour suspension buvable en sachet-dose",
         "dosage": "1 g/125 mg",
-        "secable": false,
+        "ecrasable": false,
         "ouverture_gelule": null,
         "posologie_adulte": [
           {
@@ -294,7 +294,7 @@
       {
         "type": "Poudre pour suspension buvable en flacon",
         "dosage": "100 mg/12,50 mg par mL (rapport 8/1)",
-        "secable": false,
+        "ecrasable": false,
         "ouverture_gelule": null,
         "posologie_adulte": [
           {

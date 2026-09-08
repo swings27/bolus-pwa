@@ -173,7 +173,7 @@
       {
         "type": "Comprimé sécable",
         "dosage": "10 mg",
-        "secable": true,
+        "ecrasable": true,
         "ouverture_gelule": null,
         "posologie_adulte": [
           {
@@ -211,14 +211,14 @@
       {
         "type": "Comprimé",
         "dosage": "2 mg et 5 mg",
-        "secable": true,
+        "ecrasable": true,
         "ouverture_gelule": null,
         "posologie_adulte": []
       },
       {
         "type": "Solution buvable en gouttes",
         "dosage": "1 % (10 mg/mL, soit 30 gouttes = 10 mg)",
-        "secable": false,
+        "ecrasable": false,
         "ouverture_gelule": null,
         "posologie_adulte": [
           {

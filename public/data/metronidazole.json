@@ -302,7 +302,7 @@
       {
         "type": "Comprimé pelliculé",
         "dosage": "250-500 mg",
-        "secable": false,
+        "ecrasable": false,
         "ouverture_gelule": null,
         "posologie_adulte": [
           {
@@ -363,7 +363,7 @@
       {
         "type": "Suspension buvable",
         "dosage": "125 mg/5 mL",
-        "secable": false,
+        "ecrasable": false,
         "ouverture_gelule": null,
         "posologie_adulte": [
           {

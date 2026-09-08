@@ -139,7 +139,7 @@
       {
         "type": "Comprimé (non enrobé ou pelliculé)",
         "dosage": "500 mg et 1000 mg",
-        "secable": false,
+        "ecrasable": false,
         "ouverture_gelule": null,
         "posologie_adulte": [
           {
@@ -183,7 +183,7 @@
       {
         "type": "Gélule",
         "dosage": "500 mg et 1000 mg",
-        "secable": false,
+        "ecrasable": false,
         "ouverture_gelule": false,
         "posologie_adulte": [
           {
@@ -227,7 +227,7 @@
       {
         "type": "Comprimé effervescent",
         "dosage": "1000 mg",
-        "secable": false,
+        "ecrasable": false,
         "ouverture_gelule": null,
         "posologie_adulte": [
           {
@@ -245,7 +245,7 @@
       {
         "type": "Poudre pour solution buvable en sachet-dose",
         "dosage": "1000 mg",
-        "secable": false,
+        "ecrasable": false,
         "ouverture_gelule": null,
         "posologie_adulte": [
           {
@@ -263,7 +263,7 @@
       {
         "type": "Suspension buvable",
         "dosage": "2,4 % (24 mg/mL), flacon avec pipette graduée en kg",
-        "secable": false,
+        "ecrasable": false,
         "ouverture_gelule": null,
         "posologie_adulte": [
           {
@@ -293,7 +293,7 @@
       {
         "type": "Suppositoire",
         "dosage": "1000 mg",
-        "secable": false,
+        "ecrasable": false,
         "ouverture_gelule": null,
         "posologie_adulte": [
           {

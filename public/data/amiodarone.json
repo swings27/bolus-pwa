@@ -262,7 +262,7 @@
       {
         "type": "Comprimé sécable",
         "dosage": "200 mg",
-        "secable": true,
+        "ecrasable": true,
         "ouverture_gelule": null,
         "posologie_adulte": [
           {

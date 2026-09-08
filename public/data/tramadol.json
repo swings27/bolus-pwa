@@ -1,0 +1,417 @@
+{
+  "dci": "tramadol",
+  "commun": {
+    "noms_commerciaux": [
+      "Topalgic",
+      "Contramal",
+      "Zamudol",
+      "Orozamudol",
+      "Zumalgic"
+    ],
+    "famille": "Antalgique opioïde central",
+    "antidote": "Naloxone",
+    "indications": [
+      "Douleur modérée à intense"
+    ],
+    "grossesse_allaitement": {
+      "grossesse": "Le tramadol ne doit donc pas être utilisé chez les femmes enceintes.",
+      "allaitement": "Il convient soit de ne pas utiliser le tramadol pendant la lactation, soit d'interrompre l'allaitement lors d'un traitement par tramadol.",
+      "url_crat_grossesse": "https://www.lecrat.fr/4541/",
+      "url_crat_allaitement": "https://www.lecrat.fr/4543/",
+      "source": "RCP TOPALGIC 100 mg/2 ml, solution injectable en ampoule, section 4.6"
+    },
+    "contre_indications": [
+      "Hypersensibilité à la substance active ou à l'un des excipients",
+      "Intoxication aiguë par l'alcool, les hypnotiques, les analgésiques, les opioïdes ou d'autres psychotropes",
+      "Traitement concomitant ou dans les 14 jours précédents par un inhibiteur de la MAO, notamment le linézolide et le bleu de méthylène",
+      "Insuffisance respiratoire sévère",
+      "Enfant de moins de 15 ans pour les formes injectable, gélule et comprimé effervescent (moins de 12 ans pour le comprimé orodispersible et les formes à libération prolongée, voir posologie)",
+      "Épilepsie non contrôlée par un traitement",
+      "Traitement de substitution aux opioïdes (sevrage des toxicomanes)",
+      "Grossesse (le tramadol ne doit généralement pas être utilisé)"
+    ],
+    "interactions_pertinentes": [
+      {
+        "substance": "Agonistes-antagonistes morphiniques",
+        "effet": "Diminution de l'effet antalgique par blocage compétitif des récepteurs opioïdes, avec risque d'apparition d'un syndrome de sevrage.",
+        "action_infirmier": "Signaler au prescripteur toute association avec la buprénorphine, la nalbuphine ou la pentazocine.",
+        "source_rcp": "RCP TOPALGIC 100 mg/2 ml, 4.5 (association déconseillée)"
+      },
+      {
+        "substance": "Alcool",
+        "effet": "Majoration de l'effet sédatif du tramadol par l'alcool ; l'altération de la vigilance peut rendre dangereuses la conduite de véhicules et l'utilisation de machines.",
+        "action_infirmier": "Signaler au prescripteur la consommation d'alcool ou la prise de médicaments contenant de l'alcool.",
+        "source_rcp": "RCP TOPALGIC 100 mg/2 ml, 4.5 (association déconseillée)"
+      },
+      {
+        "substance": "Carbamazépine",
+        "effet": "Diminution des concentrations plasmatiques de tramadol par induction enzymatique, pouvant réduire l'effet analgésique et raccourcir sa durée d'action.",
+        "action_infirmier": "Signaler au prescripteur toute co-prescription de carbamazépine.",
+        "source_rcp": "RCP TOPALGIC 100 mg/2 ml, 4.5 (association déconseillée)"
+      },
+      {
+        "substance": "Inhibiteurs sélectifs de la recapture de la sérotonine et venlafaxine",
+        "effet": "Risque d'apparition de convulsions et/ou d'un syndrome sérotoninergique, affection potentiellement mortelle.",
+        "action_infirmier": "Signaler au prescripteur toute association avec un ISRS ou la venlafaxine ; renforcer la surveillance clinique.",
+        "source_rcp": "RCP TOPALGIC 100 mg/2 ml, 4.5 (à prendre en compte)"
+      },
+      {
+        "substance": "IMAO-B",
+        "effet": "Risque d'apparition d'un syndrome sérotoninergique, affection potentiellement mortelle.",
+        "action_infirmier": "Signaler au prescripteur toute co-prescription d'un IMAO-B.",
+        "source_rcp": "RCP TOPALGIC 100 mg/2 ml, 4.5 (à prendre en compte)"
+      },
+      {
+        "substance": "Antivitamines K",
+        "effet": "Augmentation de l'effet de l'antivitamine K et du risque hémorragique.",
+        "action_infirmier": "Renforcer la surveillance de l'INR pendant l'association et après l'arrêt du tramadol ; signaler au prescripteur.",
+        "source_rcp": "RCP TOPALGIC 100 mg/2 ml, 4.5 (précaution d'emploi)"
+      },
+      {
+        "substance": "Benzodiazépines et barbituriques",
+        "effet": "Risque majoré de dépression respiratoire pouvant être fatale en cas de surdosage.",
+        "action_infirmier": "Signaler au prescripteur toute association avec une benzodiazépine ou un barbiturique ; surveiller la fonction respiratoire.",
+        "source_rcp": "RCP TOPALGIC 100 mg/2 ml, 4.5 (à prendre en compte)"
+      },
+      {
+        "substance": "Gabapentinoïdes",
+        "effet": "Risque de dépression respiratoire, d'hypotension, de sédation profonde, de coma ou de décès.",
+        "action_infirmier": "Signaler au prescripteur toute association avec la gabapentine ou la prégabaline.",
+        "source_rcp": "RCP TOPALGIC 100 mg/2 ml, 4.5"
+      },
+      {
+        "substance": "Bupropion",
+        "effet": "Augmentation des concentrations plasmatiques de tramadol par diminution de son métabolisme hépatique, avec risque additionnel de convulsions par addition des effets des deux médicaments.",
+        "action_infirmier": "Signaler au prescripteur toute co-prescription de bupropion.",
+        "source_rcp": "RCP TOPALGIC 100 mg/2 ml, 4.5"
+      },
+      {
+        "substance": "Ondansétron",
+        "effet": "Diminution de l'intensité et de la durée de l'effet analgésique du tramadol, et risque de diminution de l'effet antiémétique de l'ondansétron.",
+        "action_infirmier": "Signaler au prescripteur l'association avec l'ondansétron, notamment en cas d'antalgie jugée insuffisante.",
+        "source_rcp": "RCP TOPALGIC 100 mg/2 ml, 4.5"
+      },
+      {
+        "substance": "Autres analgésiques morphiniques agonistes et antitussifs opioïdes",
+        "effet": "Risque majoré de dépression respiratoire pouvant être fatale en cas de surdosage.",
+        "action_infirmier": "Signaler au prescripteur toute association avec un autre morphinique ou un antitussif opioïde.",
+        "source_rcp": "RCP TOPALGIC 100 mg/2 ml, 4.5 (à prendre en compte)"
+      },
+      {
+        "substance": "Inhibiteurs du CYP3A4",
+        "effet": "Réduction possible du métabolisme du tramadol, pouvant en augmenter les concentrations plasmatiques.",
+        "action_infirmier": "Signaler au prescripteur toute co-prescription d'un inhibiteur puissant du CYP3A4.",
+        "source_rcp": "RCP TOPALGIC 100 mg/2 ml, 4.5"
+      }
+    ],
+    "surveillance_specifique": [
+      {
+        "evenement": "Convulsions",
+        "explication": "Le tramadol abaisse le seuil épileptogène ; le risque augmente au-delà de 400 mg par jour et en cas d'association avec un médicament proconvulsivant ou abaissant lui-même ce seuil.",
+        "action": "Surveiller la survenue de convulsions, en particulier en cas d'association avec un médicament abaissant le seuil épileptogène ou de dépassement des doses recommandées ; signaler au prescripteur.",
+        "source_rcp": "RCP TOPALGIC 100 mg/2 ml, 4.4, 4.5 et 4.8"
+      },
+      {
+        "evenement": "Syndrome sérotoninergique",
+        "explication": "Affection potentiellement mortelle liée au double mécanisme d'action du tramadol (opioïde et sérotoninergique), majorée par l'association à d'autres substances sérotoninergiques.",
+        "action": "Surveiller l'apparition de modifications de l'état mental, d'une instabilité neurovégétative ou d'anomalies neuromusculaires, en particulier en association avec un traitement sérotoninergique ; signaler immédiatement au prescripteur.",
+        "source_rcp": "RCP TOPALGIC 100 mg/2 ml, 4.4, 4.5 et 4.8"
+      },
+      {
+        "evenement": "Dépression respiratoire",
+        "explication": "Risque en cas de dépassement important des doses recommandées ou d'association à d'autres dépresseurs du système nerveux central (benzodiazépines, gabapentinoïdes, autres opioïdes).",
+        "action": "Surveiller la fréquence respiratoire et l'état de conscience, en particulier en cas d'association avec un autre dépresseur du système nerveux central ; signaler au prescripteur.",
+        "source_rcp": "RCP TOPALGIC 100 mg/2 ml, 4.4 et 4.8"
+      }
+    ],
+    "pictogrammes": []
+  },
+  "iv": {
+    "reconstitution": null,
+    "preparation": [
+      {
+        "voie": "IVL",
+        "detail": "Injection intraveineuse lente sur 2 à 3 minutes, ampoule pure (non diluée)",
+        "duree": "2 à 3 minutes",
+        "stabilite": "Pendant 24h entre 15-25°C avec une solution de bicarbonate de sodium 4,2% ou Ringer, et 5 jours pour les autres diluants."
+      },
+      {
+        "voie": "PERF",
+        "detail": "Mise en solution pour perfusion dans le chlorure de sodium 0,9 % ou le glucose 5 %, concentration 1 à 5 mg/mL. Peut également être administré via un dispositif d'analgésie contrôlée par le patient (PCA), se référer au protocole du service.",
+        "duree": "≥ 15 minutes (durée non précisée par le RCP français, valeur par défaut LPPR/HAS)",
+        "stabilite": "24 heures après dilution dans NaCl 0,9 % ou glucose 5 %"
+      }
+    ],
+    "administration": {
+      "note_ajustement": "Dose adaptée selon la fonction rénale, la fonction hépatique et l'âge (> 75 ans), se référer au protocole du service.",
+      "posologie": [
+        {
+          "population": "Douleur intense",
+          "population_type": "adulte",
+          "categorie": "generale",
+          "dose_par_prise_mg_min": 50,
+          "dose_par_prise_mg_max": 100,
+          "intervalle_min_h": 4,
+          "intervalle_max_h": 6,
+          "dose_journaliere_max_g": 0.4
+        }
+      ]
+    },
+    "incompatibilites": [
+      {
+        "substance": "Diclofénac",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Indométacine",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Diazépam",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Piroxicam",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Phénylbutazone",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Acétylsalicylate de lysine",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Midazolam",
+        "niveau": "absolu"
+      }
+    ]
+  },
+  "oral": {
+    "formes": [
+      {
+        "type": "Gélule",
+        "dosage": "50 mg",
+        "secable": false,
+        "ouverture_gelule": false,
+        "posologie_adulte": [
+          {
+            "population": "Douleur aiguë",
+            "population_type": "adulte",
+            "categorie": "generale",
+            "palier": "Adulte et adolescent ≥ 15 ans",
+            "dose_par_prise_mg_min": 50,
+            "dose_par_prise_mg_max": 100,
+            "intervalle_min_h": 4,
+            "intervalle_max_h": 6,
+            "dose_journaliere_max_g": 0.4
+          },
+          {
+            "population": "Douleur chronique",
+            "population_type": "adulte",
+            "categorie": "generale",
+            "palier": "Adulte et adolescent ≥ 15 ans",
+            "dose_par_prise_mg_min": 50,
+            "dose_par_prise_mg_max": 100,
+            "intervalle_min_h": 4,
+            "intervalle_max_h": 6,
+            "dose_journaliere_max_g": 0.4
+          }
+        ]
+      },
+      {
+        "type": "Comprimé effervescent",
+        "dosage": "50 mg",
+        "secable": false,
+        "ouverture_gelule": null,
+        "posologie_adulte": [
+          {
+            "population": "Douleur aiguë ou chronique",
+            "population_type": "adulte",
+            "categorie": "generale",
+            "dose_par_prise_mg_min": 50,
+            "dose_par_prise_mg_max": 100,
+            "intervalle_min_h": 4,
+            "intervalle_max_h": 6,
+            "dose_journaliere_max_g": 0.4
+          }
+        ]
+      },
+      {
+        "type": "Comprimé orodispersible",
+        "dosage": "50 mg",
+        "secable": false,
+        "ouverture_gelule": null,
+        "posologie_adulte": [
+          {
+            "population": "Douleur aiguë ou chronique",
+            "population_type": "adulte",
+            "categorie": "generale",
+            "dose_par_prise_mg_min": 50,
+            "dose_par_prise_mg_max": 100,
+            "intervalle_min_h": 4,
+            "intervalle_max_h": 6,
+            "dose_journaliere_max_g": 0.4
+          }
+        ]
+      },
+      {
+        "type": "Solution buvable en gouttes",
+        "dosage": "100 mg/mL",
+        "secable": false,
+        "ouverture_gelule": null,
+        "posologie_adulte": [
+          {
+            "population": "Enfant",
+            "population_type": "pediatrie",
+            "categorie": "generale",
+            "age_min_mois": 36,
+            "dose_mg_kg_min": 1,
+            "dose_mg_kg_max": 2,
+            "intervalle_min_h": 6,
+            "intervalle_max_h": 8,
+            "nb_prises_max_24h": 4
+          },
+          {
+            "population": "Adolescent",
+            "population_type": "pediatrie",
+            "categorie": "generale",
+            "poids_min_kg": 50,
+            "dose_par_prise_mg_min": 50,
+            "dose_par_prise_mg_max": 100,
+            "intervalle_min_h": 6,
+            "intervalle_max_h": 8,
+            "nb_prises_max_24h": 4
+          }
+        ]
+      },
+      {
+        "type": "Gélule à libération prolongée (LP)",
+        "dosage": "50 mg, 100 mg, 150 mg et 200 mg",
+        "secable": false,
+        "ouverture_gelule": true,
+        "posologie_adulte": [
+          {
+            "population": "Traitement standard",
+            "population_type": "adulte",
+            "categorie": "generale",
+            "dose_par_prise_mg_min": 50,
+            "dose_par_prise_mg_max": 200,
+            "nb_prises_min_24h": 2,
+            "nb_prises_max_24h": 2,
+            "dose_journaliere_max_g": 0.4
+          }
+        ]
+      },
+      {
+        "type": "Comprimé à libération prolongée (LP)",
+        "dosage": "50 mg, 100 mg, 150 mg, 200 mg et 300 mg",
+        "secable": false,
+        "ouverture_gelule": null,
+        "posologie_adulte": [
+          {
+            "population": "Traitement standard",
+            "population_type": "adulte",
+            "categorie": "generale",
+            "dose_par_prise_mg_min": 50,
+            "dose_par_prise_mg_max": 200,
+            "nb_prises_min_24h": 2,
+            "nb_prises_max_24h": 2,
+            "dose_journaliere_max_g": 0.4
+          }
+        ]
+      }
+    ],
+    "recommandation_sonde": {
+      "forme_preferee": "Comprimé orodispersible (Orozamudol) pour un traitement à libération immédiate",
+      "alternative": "Gélule LP (Zamudol LP), à ouvrir sans écraser les granulés, pour un traitement à libération prolongée"
+    }
+  },
+  "tracabilite": {
+    "rcp_source": [
+      {
+        "specialite": "TOPALGIC 100 mg/2 ml, solution injectable en ampoule",
+        "titulaire": "NEURAXPHARM FRANCE",
+        "date_maj": "10/03/2025",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/62355702/extrait"
+      },
+      {
+        "specialite": "CONTRAMAL 100 mg/2 ml, solution injectable",
+        "titulaire": "LABORATOIRES GRÜNENTHAL",
+        "date_maj": "18/12/2025",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/62711493/extrait"
+      },
+      {
+        "specialite": "TRAMADOL ARROW 100 mg/2 mL, solution injectable/pour perfusion",
+        "titulaire": "EUGIA PHARMA (MALTA) LTD",
+        "date_maj": "04/06/2026",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/63777286/extrait"
+      },
+      {
+        "specialite": "TOPALGIC 50 mg, gélule",
+        "titulaire": "NEURAXPHARM FRANCE",
+        "date_maj": "31/08/2026",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/63435884/extrait"
+      },
+      {
+        "specialite": "CONTRAMAL 50 mg, gélule",
+        "titulaire": "LABORATOIRES GRÜNENTHAL",
+        "date_maj": "Non relevée lors de cette extraction",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/68655884/extrait"
+      },
+      {
+        "specialite": "ZUMALGIC 50 mg, comprimé effervescent",
+        "titulaire": "Laboratoire X.O",
+        "date_maj": "16/05/2025",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/66798225/extrait"
+      },
+      {
+        "specialite": "OROZAMUDOL 50 mg, comprimé orodispersible",
+        "titulaire": "VIATRIS MEDICAL",
+        "date_maj": "19/03/2025",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/64045143/extrait"
+      },
+      {
+        "specialite": "TOPALGIC 100 mg/ml, solution buvable",
+        "titulaire": "NEURAXPHARM FRANCE",
+        "date_maj": "10/06/2025",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/66125684/extrait"
+      },
+      {
+        "specialite": "CONTRAMAL 100 mg/ml, solution buvable",
+        "titulaire": "LABORATOIRES GRÜNENTHAL",
+        "date_maj": "30/10/2025",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/60477650/extrait"
+      },
+      {
+        "specialite": "TOPALGIC LP 100 mg, comprimé à libération prolongée",
+        "titulaire": "NEURAXPHARM FRANCE",
+        "date_maj": "16/10/2025",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/68303979/extrait"
+      },
+      {
+        "specialite": "CONTRAMAL LP 100 mg, comprimé à libération prolongée",
+        "titulaire": "LABORATOIRES GRÜNENTHAL",
+        "date_maj": "30/10/2025",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/68951381/extrait"
+      },
+      {
+        "specialite": "ZAMUDOL LP 100 mg, gélule à libération prolongée",
+        "titulaire": "VIATRIS MEDICAL",
+        "date_maj": "19/03/2025",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/66357533/extrait"
+      }
+    ],
+    "statut": "valide",
+    "validation": {
+      "date": "2026-09-04",
+      "validateur": "Anna Trabaud-Lopez (IDE, porteuse du projet), vérification des données extraites contre les RCP ; équipe pharmacie, validation de la méthodologie et arbitrage des points litigieux",
+      "perimetre": [
+        "adulte",
+        "pediatrie"
+      ],
+      "prochaine_revision": "2026-12-04"
+    }
+  }
+}

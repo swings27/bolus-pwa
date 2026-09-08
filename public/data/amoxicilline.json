@@ -307,7 +307,7 @@
       {
         "type": "Gélule",
         "dosage": "500 mg",
-        "secable": false,
+        "ecrasable": false,
         "ouverture_gelule": false,
         "posologie_adulte": [
           {
@@ -354,14 +354,14 @@
       {
         "type": "Comprimé dispersible",
         "dosage": "1 g",
-        "secable": false,
+        "ecrasable": false,
         "ouverture_gelule": null,
         "posologie_adulte": []
       },
       {
         "type": "Poudre pour suspension buvable",
         "dosage": "250 mg/5 ml - 500 mg/5 ml",
-        "secable": false,
+        "ecrasable": false,
         "posologie_adulte": [
           {
             "population": "Enfant < 40 kg, infections courantes",

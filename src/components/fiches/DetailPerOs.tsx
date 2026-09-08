@@ -89,7 +89,7 @@ export default function DetailPerOs({ donnees }: IDetailPerOsProps) {
                 <Badge tonalite="neutre">Déjà liquide</Badge>
               ) : (
                 <>
-                  <Badge tonalite={forme.secable ? 'oui' : 'non'}>{forme.secable ? 'Écrasable' : 'Non écrasable'}</Badge>
+                  <Badge tonalite={forme.ecrasable ? 'oui' : 'non'}>{forme.ecrasable ? 'Écrasable' : 'Non écrasable'}</Badge>
                   {/* ouverture_gelule à null (forme qui n'est pas une gélule)
                       est traité comme "non ouvrable", conformément à la
                       consigne d'afficher systématiquement les deux jetons sur

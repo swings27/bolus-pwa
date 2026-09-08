@@ -150,7 +150,7 @@
       {
         "type": "Comprimé pelliculé",
         "dosage": "1,5 million UI",
-        "secable": false,
+        "ecrasable": false,
         "ouverture_gelule": null,
         "posologie_adulte": [
           {
@@ -198,7 +198,7 @@
       {
         "type": "Comprimé pelliculé",
         "dosage": "3 millions UI",
-        "secable": false,
+        "ecrasable": false,
         "ouverture_gelule": null,
         "posologie_adulte": [
           {

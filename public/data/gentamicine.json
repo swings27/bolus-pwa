@@ -1,0 +1,273 @@
+{
+  "dci": "gentamicine",
+  "commun": {
+    "noms_commerciaux": [],
+    "famille": "Antibiotique aminoside",
+    "antidote": "",
+    "indications": [
+      "Infections urinaires sévères",
+      "Endocardite infectieuse",
+      "Méningite bactérienne",
+      "Infections ostéo-articulaires",
+      "Listériose",
+      "Bactériémie associée",
+      "Prophylaxie infections post-opératoires",
+      "Prophylaxie actes radiologiques / médecine interventionnelle"
+    ],
+    "grossesse_allaitement": {
+      "grossesse": "Les indications doivent être limitées aux tableaux cliniques sévères en l'absence d'alternative. Dans le cas d'une exposition en cours de grossesse, il est souhaitable d'évaluer la fonction auditive du nouveau-né (oto-émissions).",
+      "allaitement": "L'allaitement est possible en cas de traitement par la gentamicine.",
+      "url_crat_grossesse": "https://www.lecrat.fr/7712/",
+      "url_crat_allaitement": "https://www.lecrat.fr/7721/",
+      "source": "RCP GENTAMICINE PANPHARMA 160 mg, section 4.6"
+    },
+    "contre_indications": [
+      "Hypersensibilité à la substance active ou à l'un des excipients.",
+      "Cirrhose de grades B et C selon la classification de Child-Pugh.",
+      "Myasthénie.",
+      "Administration par voie sous-cutanée (absence d'efficacité et survenue de nécrose).",
+      "Administration simultanée d'un autre aminoside."
+    ],
+    "interactions_pertinentes": [
+      {
+        "substance": "Polymyxine B",
+        "effet": "Addition des effets néphrotoxiques de la polymyxine B et de la gentamicine.",
+        "action_infirmier": "Signaler au prescripteur toute co-prescription de polymyxine B ; si l'association ne peut être évitée, renforcer la surveillance de la fonction rénale.",
+        "source_rcp": "RCP GENTAMICINE PANPHARMA 160 mg, section 4.5"
+      },
+      {
+        "substance": "Toxine botulique",
+        "effet": "Risque d'augmentation des effets de la toxine botulique en association avec un aminoside, par extrapolation à partir des effets observés au cours du botulisme.",
+        "action_infirmier": "Signaler au prescripteur toute administration de toxine botulique chez un patient traité par gentamicine.",
+        "source_rcp": "RCP GENTAMICINE PANPHARMA 160 mg, section 4.5"
+      },
+      {
+        "substance": "Céfalotine",
+        "effet": "Majoration de la néphrotoxicité des aminosides par la céfalotine (association discutée dans la littérature).",
+        "action_infirmier": "Signaler au prescripteur toute co-prescription de céfalotine ; surveiller la fonction rénale.",
+        "source_rcp": "RCP GENTAMICINE PANPHARMA 160 mg, section 4.5"
+      },
+      {
+        "substance": "Curares",
+        "effet": "Potentialisation des curares lorsque la gentamicine est administrée par voie parentérale et/ou péritonéale avant, pendant ou après l'agent curarisant.",
+        "action_infirmier": "Signaler l'administration récente ou prévue de gentamicine à l'équipe d'anesthésie ; surveiller le degré de curarisation en fin d'anesthésie.",
+        "source_rcp": "RCP GENTAMICINE PANPHARMA 160 mg, section 4.5"
+      },
+      {
+        "substance": "Diurétiques de l'anse",
+        "effet": "Augmentation des risques néphrotoxiques et ototoxiques de la gentamicine, liée à l'insuffisance rénale fonctionnelle induite par la déshydratation entraînée par le diurétique.",
+        "action_infirmier": "Signaler au prescripteur toute co-prescription d'un diurétique de l'anse ; surveiller l'état d'hydratation, la fonction rénale, la fonction cochléo-vestibulaire et les concentrations plasmatiques de gentamicine.",
+        "source_rcp": "RCP GENTAMICINE PANPHARMA 160 mg, section 4.5"
+      },
+      {
+        "substance": "Autres aminosides",
+        "effet": "Risque d'ototoxicité cumulative.",
+        "action_infirmier": "Signaler au prescripteur tout traitement récent par un autre aminoside ; renforcer la surveillance auditive.",
+        "source_rcp": "RCP GENTAMICINE PANPHARMA 160 mg, section 4.5"
+      },
+      {
+        "substance": "Amphotéricine B administrée par voie intraveineuse",
+        "effet": "Risque accru de néphrotoxicité.",
+        "action_infirmier": "Signaler au prescripteur toute co-prescription d'amphotéricine B IV ; surveiller la fonction rénale.",
+        "source_rcp": "RCP GENTAMICINE PANPHARMA 160 mg, section 4.5"
+      },
+      {
+        "substance": "Ciclosporine",
+        "effet": "Majoration du risque néphrotoxique : augmentation de la créatininémie plus importante que sous ciclosporine seule.",
+        "action_infirmier": "Signaler au prescripteur toute co-prescription de ciclosporine ; surveiller la fonction rénale.",
+        "source_rcp": "RCP GENTAMICINE PANPHARMA 160 mg, section 4.5"
+      },
+      {
+        "substance": "Organoplatines",
+        "effet": "Addition des effets néphrotoxiques et/ou ototoxiques, notamment en cas d'insuffisance rénale préalable.",
+        "action_infirmier": "Signaler au prescripteur toute co-prescription d'un organoplatine ; surveiller les fonctions rénale et auditive.",
+        "source_rcp": "RCP GENTAMICINE PANPHARMA 160 mg, section 4.5"
+      },
+      {
+        "substance": "Tacrolimus",
+        "effet": "Majoration du risque néphrotoxique : augmentation de la créatininémie plus importante que sous tacrolimus seul (synergie des effets néphrotoxiques des deux substances).",
+        "action_infirmier": "Signaler au prescripteur toute co-prescription de tacrolimus ; surveiller la fonction rénale.",
+        "source_rcp": "RCP GENTAMICINE PANPHARMA 160 mg, section 4.5"
+      }
+    ],
+    "surveillance_specifique": [
+      {
+        "evenement": "Néphrotoxicité",
+        "explication": "En présence d'insuffisance rénale pré-existante, l'aminoside n'est utilisé que si nécessaire. Les signes cliniques d'atteinte rénale sont protéinurie, cylindrurie et hématurie.",
+        "action": "Surveiller la fonction rénale (créatininémie) et les signes cliniques évocateurs ; signaler au prescripteur toute dégradation.",
+        "source_rcp": "RCP GENTAMICINE PANPHARMA 160 mg, section 4.4"
+      },
+      {
+        "evenement": "Ototoxicité, notamment chez les patients porteurs d'une mutation de l'ADN mitochondrial",
+        "explication": "Une atteinte des nerfs cochléo-vestibulaires est possible ; les risques augmentent pour des durées de traitement supérieures à 5-7 jours. Il existe un risque accru d'ototoxicité, potentiellement irréversible, chez les patients présentant une mutation de l'ADN mitochondrial (en particulier la substitution A par G du nucléotide 1555 dans le gène de l'ARNr 12S). Chez les patients présentant des antécédents maternels de mutation pertinente ou de surdité induite par les aminosides, d'autres traitements ou des tests génétiques doivent être envisagés avant l'administration.",
+        "action": "Surveiller l'audition et l'équilibre du patient (acouphènes, vertiges, baisse de l'audition) ; rechercher les antécédents familiaux maternels de surdité liée aux aminosides avant l'instauration du traitement et signaler au prescripteur.",
+        "source_rcp": "RCP GENTAMICINE PANPHARMA 160 mg, section 4.4"
+      },
+      {
+        "evenement": "Surveillance des taux sanguins de gentamicine",
+        "explication": "Concentration maximale (pic) cible : 30 à 40 mg/L, à doser 30 minutes après la fin d'une perfusion elle-même réalisée sur 30 minutes. Concentration minimale (résiduelle) cible : inférieure à 0,5 mg/L. Les dosages plasmatiques ne sont pas systématiques : ils ne sont pas nécessaires pour un traitement d'une durée maximale de 3 jours, mais sont requis si la durée de traitement dépasse 5 jours (dosage à effectuer après 48 heures de traitement) ou en cas d'insuffisance rénale.",
+        "action": "Assurer le prélèvement du pic et/ou du taux résiduel selon les modalités indiquées ci-dessus ; en cas d'insuffisance rénale, ne pas réinjecter tant que le taux résiduel reste supérieur au seuil de toxicité et signaler au prescripteur.",
+        "source_rcp": "RCP GENTAMICINE PANPHARMA 160 mg, section 4.2"
+      },
+      {
+        "evenement": "Blocage neuromusculaire",
+        "explication": "La gentamicine possède des propriétés de blocage neuromusculaire ; une attention particulière doit être portée chez les patients ayant une maladie neuromusculaire préexistante (par exemple maladie de Parkinson).",
+        "action": "Signaler au prescripteur tout antécédent de maladie neuromusculaire avant l'instauration du traitement ; surveiller la fonction respiratoire et neuromusculaire du patient.",
+        "source_rcp": "RCP GENTAMICINE PANPHARMA 160 mg, section 4.4"
+      }
+    ],
+    "pictogrammes": []
+  },
+  "iv": {
+    "reconstitution": null,
+    "preparation": [
+      {
+        "voie": "PERF",
+        "detail": "Diluer la dose à administrer dans 50 à 200 mL environ de glucose 5 % ou de NaCl 0,9 %, en respectant une concentration maximale de 10 mg/mL.",
+        "duree": "30 minutes",
+        "stabilite": "Non précisé par le RCP."
+      },
+      {
+        "voie": "IM",
+        "detail": "Utiliser pur, schéma posologique identique à la voie intraveineuse.",
+        "duree": "< 1 min",
+        "stabilite": null
+      }
+    ],
+    "administration": {
+      "note_ajustement": "Dose adaptée selon la fonction rénale (la posologie de la première injection reste identique à celle du sujet à fonction rénale normale, quel que soit le degré d'insuffisance rénale ; les réinjections suivantes sont ensuite espacées ou conditionnées au dosage du taux résiduel selon le degré d'insuffisance) et selon le poids chez le patient obèse (poids corrigé), se référer au protocole du service et à la surveillance des taux résiduels. Chez le patient dialysé, programmer les injections 2 à 4 heures avant la séance de dialyse. Chez le nouveau-né, la posologie est adaptée selon l'âge post-conceptionnel, se référer au protocole du service ; une erreur même faible retentit fortement sur les concentrations sériques obtenues.",
+      "posologie": [
+        {
+          "population": "Traitement standard",
+          "categorie": "generale",
+          "population_type": "adulte",
+          "dose_journaliere_mg_kg_min": 3,
+          "dose_journaliere_mg_kg_max": 8,
+          "nb_prises_min_24h": 1,
+          "nb_prises_max_24h": 3,
+          "tdm_requis": true
+        },
+        {
+          "population": "Nourrisson et enfant",
+          "categorie": "generale",
+          "population_type": "pediatrie",
+          "dose_journaliere_mg_kg_min": 3,
+          "dose_journaliere_mg_kg_max": 8,
+          "nb_prises_min_24h": 1,
+          "nb_prises_max_24h": 1,
+          "tdm_requis": true
+        }
+      ]
+    },
+    "incompatibilites": [
+      {
+        "substance": "Amoxicilline",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Amoxicilline/acide clavulanique",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Benzylpénicilline (Pénicilline G)",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Céfazoline",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Céfépime",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Ceftazidime",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Ceftriaxone",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Céfuroxime",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Dexaméthasone phosphate disodique",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Flucloxacilline",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Furosémide",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Héparine sodique",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Imipénem/cilastatine",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Phénytoïne",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Pipéracilline/tazobactam",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Bicarbonate de sodium",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Triméthoprime/sulfaméthoxazole",
+        "niveau": "absolu"
+      }
+    ]
+  },
+  "oral": null,
+  "aerosol": null,
+  "tracabilite": {
+    "rcp_source": [
+      {
+        "specialite": "GENTAMICINE PANPHARMA 10 mg, solution injectable",
+        "titulaire": "Panpharma",
+        "date_maj": "2024-03-29",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/64477733/extrait"
+      },
+      {
+        "specialite": "GENTAMICINE PANPHARMA 40 mg, solution injectable",
+        "titulaire": "Panpharma",
+        "date_maj": "2024-05-15",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/63720680/extrait"
+      },
+      {
+        "specialite": "GENTAMICINE PANPHARMA 80 mg, solution injectable",
+        "titulaire": "Panpharma",
+        "date_maj": "2024-03-29",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/67796693/extrait"
+      },
+      {
+        "specialite": "GENTAMICINE PANPHARMA 160 mg, solution injectable",
+        "titulaire": "Panpharma",
+        "date_maj": "2024-03-29",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/68868512/extrait"
+      }
+    ],
+    "statut": "valide",
+    "validation": {
+      "date": "2026-09-05",
+      "validateur": "Anna Trabaud-Lopez (IDE, porteuse du projet), vérification des données extraites contre les RCP ; équipe pharmacie, validation de la méthodologie et arbitrage des points litigieux",
+      "perimetre": [
+        "adulte",
+        "pediatrie"
+      ],
+      "prochaine_revision": "2026-12-05"
+    }
+  }
+}

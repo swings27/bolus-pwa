@@ -1,0 +1,412 @@
+{
+  "dci": "ketoprofene",
+  "commun": {
+    "noms_commerciaux": [
+      "Profénid",
+      "Bi-Profénid",
+      "Kétum"
+    ],
+    "famille": "Anti-inflammatoire non stéroïdien, dérivé de l'acide propionique",
+    "antidote": "",
+    "indications": [
+      "Rhumatismes inflammatoires chroniques",
+      "Poussées aiguës rhumatismales",
+      "Douleur post-opératoire",
+      "Douleur d'origine néoplasique",
+      "Crise de colique néphrétique"
+    ],
+    "grossesse_allaitement": {
+      "grossesse": "À partir du début du 6ème mois de grossesse (24 semaines d'aménorrhée), toute prise de kétoprofène, même ponctuelle, est contre-indiquée. Une prise même unique à partir de 24 semaines d'aménorrhée justifie un contrôle échographique cardiaque et rénal du fœtus et/ou du nouveau-né. Sauf nécessité absolue, le kétoprofène ne doit pas être prescrit chez une femme qui envisage une grossesse ou au cours des 5 premiers mois de grossesse (avant 24 semaines d'aménorrhée). Le cas échéant, la dose devra être la plus faible possible et la durée du traitement la plus courte possible. Une prise prolongée est fortement déconseillée. En cas de prise à partir de la 20ème semaine d'aménorrhée, une surveillance cardiaque et rénale du fœtus pourrait s'avérer nécessaire. En cas de survenue d'oligoamnios, ou de constriction du canal artériel, le traitement par kétoprofène doit être interrompu.",
+      "allaitement": "Les A.I.N.S. passant dans le lait maternel, le kétoprofène est déconseillé chez la femme qui allaite.",
+      "url_crat_grossesse": "https://www.lecrat.fr/15338/",
+      "url_crat_allaitement": "https://www.lecrat.fr/15343/",
+      "source": "RCP KETOPROFENE MEDISOL 100 mg/4 ml, solution à diluer pour perfusion, section 4.6"
+    },
+    "contre_indications": [
+      "Hypersensibilité au kétoprofène, à un autre AINS, à l'acide acétylsalicylique ou à un excipient, des réactions anaphylactiques sévères, rarement fatales, ont été rapportées",
+      "Antécédents de réactions d'hypersensibilité (bronchospasme, asthme, rhinite, urticaire) au kétoprofène, à l'acide acétylsalicylique ou à d'autres AINS",
+      "Ulcère peptique évolutif ou antécédent d'hémorragie, d'ulcération ou de perforation gastro-intestinale",
+      "Hémorragie gastro-intestinale, hémorragie cérébro-vasculaire ou autre hémorragie évolutive",
+      "Insuffisance hépatique sévère",
+      "Insuffisance rénale sévère",
+      "Insuffisance cardiaque sévère",
+      "Grossesse à partir du début du 6ème mois (24 semaines d'aménorrhée)",
+      "Troubles de l'hémostase ou traitement anticoagulant en cours (contre-indication formelle par voie intramusculaire)",
+      "Allergie au blé, autre que la maladie cœliaque (comprimé sécable à libération prolongée de 100 mg, à base d'amidon de blé)",
+      "Antécédents récents de rectite ou de rectorragies (voie rectale)"
+    ],
+    "interactions_pertinentes": [
+      {
+        "substance": "Lithium",
+        "effet": "Augmentation de la lithémie pouvant atteindre des valeurs toxiques, par diminution de l'excrétion rénale du lithium.",
+        "action_infirmier": "Signaler au prescripteur toute association avec le lithium ; surveiller étroitement la lithémie pendant l'association et après l'arrêt du kétoprofène.",
+        "source_rcp": "RCP KETOPROFENE MEDISOL 100 mg/4 ml, 4.5"
+      },
+      {
+        "substance": "Méthotrexate",
+        "effet": "Augmentation de la toxicité hématologique du méthotrexate par diminution de sa clairance rénale, en particulier à des doses supérieures à 20 mg/semaine.",
+        "action_infirmier": "Signaler au prescripteur toute co-prescription de méthotrexate.",
+        "source_rcp": "RCP KETOPROFENE MEDISOL 100 mg/4 ml, 4.5"
+      },
+      {
+        "substance": "Anticoagulants oraux et héparines",
+        "effet": "Augmentation du risque hémorragique par agression de la muqueuse gastro-duodénale et par l'effet propre de l'anticoagulant.",
+        "action_infirmier": "Renforcer la surveillance clinique, voire biologique, de la coagulation pendant l'association.",
+        "source_rcp": "RCP KETOPROFENE MEDISOL 100 mg/4 ml, 4.5"
+      },
+      {
+        "substance": "IEC, antagonistes des récepteurs de l'angiotensine II et diurétiques",
+        "effet": "Risque d'insuffisance rénale aiguë chez le patient à risque (sujet âgé, déshydraté, fonction rénale altérée), par diminution de la filtration glomérulaire ; réduction possible de l'effet antihypertenseur.",
+        "action_infirmier": "Veiller à une bonne hydratation et surveiller la fonction rénale en début de traitement et régulièrement pendant l'association.",
+        "source_rcp": "RCP KETOPROFENE MEDISOL 100 mg/4 ml, 4.5"
+      },
+      {
+        "substance": "Ciclosporine, tacrolimus",
+        "effet": "Risque d'addition des effets néphrotoxiques, notamment chez le sujet âgé.",
+        "action_infirmier": "Surveiller la fonction rénale en début de traitement par le kétoprofène.",
+        "source_rcp": "RCP KETOPROFENE MEDISOL 100 mg/4 ml, 4.5"
+      },
+      {
+        "substance": "Autres AINS, y compris l'acide acétylsalicylique à dose anti-inflammatoire ou antalgique",
+        "effet": "Majoration du risque ulcérogène et hémorragique digestif par synergie additive.",
+        "action_infirmier": "Signaler au prescripteur toute association avec un autre AINS ou de l'aspirine ; surveiller les signes de saignement digestif.",
+        "source_rcp": "RCP KETOPROFENE MEDISOL 100 mg/4 ml, 4.5"
+      }
+    ],
+    "surveillance_specifique": [
+      {
+        "evenement": "Hémorragie, ulcération ou perforation gastro-intestinale",
+        "explication": "Des hémorragies, ulcérations ou perforations gastro-intestinales parfois fatales ont été rapportées avec tous les AINS, à n'importe quel moment du traitement, sans qu'il y ait eu nécessairement de signes d'alerte ou d'antécédents.",
+        "action": "Surveiller douleur abdominale, méléna et hématémèse ; arrêter le traitement et prévenir le prescripteur dès l'apparition d'un saignement digestif.",
+        "source_rcp": "RCP KETOPROFENE MEDISOL 100 mg/4 ml, 4.4"
+      },
+      {
+        "evenement": "Événement thrombotique artériel",
+        "explication": "Les données épidémiologiques suggèrent qu'un AINS utilisé à dose élevée et sur une longue durée peut être associé à une légère augmentation du risque d'infarctus du myocarde ou d'accident vasculaire cérébral ; les données sont insuffisantes pour écarter ce risque pour le kétoprofène.",
+        "action": "Signaler au prescripteur toute posologie prolongée chez un patient hypertendu non contrôlé, insuffisant cardiaque, coronarien, artéritique ou avec antécédent vasculaire cérébral.",
+        "source_rcp": "RCP KETOPROFENE MEDISOL 100 mg/4 ml, 4.4"
+      },
+      {
+        "evenement": "Insuffisance rénale fonctionnelle et rétention hydrosodée",
+        "explication": "En inhibant l'action vasodilatatrice des prostaglandines rénales, le kétoprofène peut provoquer une insuffisance rénale fonctionnelle par diminution de la filtration glomérulaire, un effet dose-dépendant ; une rétention hydrosodée avec œdèmes, hypertension ou majoration d'une insuffisance cardiaque est possible, ainsi qu'une hyperkaliémie chez le patient diabétique ou sous traitement hyperkaliémiant.",
+        "action": "Surveiller la diurèse, la fonction rénale, la kaliémie et l'apparition d'œdèmes, en particulier en début de traitement chez le sujet âgé, déshydraté, insuffisant cardiaque ou rénal.",
+        "source_rcp": "RCP KETOPROFENE MEDISOL 100 mg/4 ml, 4.4"
+      },
+      {
+        "evenement": "Réaction cutanée grave",
+        "explication": "Des réactions cutanées graves, parfois fatales, ont été très rarement rapportées avec les AINS, l'incidence semblant plus importante en début de traitement, le plus souvent au cours du premier mois.",
+        "action": "Arrêter le traitement et prévenir le prescripteur dès l'apparition d'une éruption cutanée, de lésions des muqueuses ou de tout autre signe d'hypersensibilité.",
+        "source_rcp": "RCP KETOPROFENE MEDISOL 100 mg/4 ml, 4.4 et 4.8"
+      },
+      {
+        "evenement": "Masquage des signes d'une infection",
+        "explication": "Comme les autres AINS, le kétoprofène, en présence d'une infection, peut masquer les signes de progression de celle-ci, notamment la fièvre.",
+        "action": "Ne pas se fier à la seule apyrexie pour juger de l'évolution d'une infection ; surveiller les autres signes et signaler toute aggravation.",
+        "source_rcp": "RCP KETOPROFENE MEDISOL 100 mg/4 ml, 4.4"
+      }
+    ],
+    "pictogrammes": []
+  },
+  "iv": {
+    "reconstitution": null,
+    "preparation": [
+      {
+        "voie": "PERF",
+        "detail": "Diluer extemporanément le contenu d'une ampoule à 100 mg dans 100 à 150 mL de solution isotonique de chlorure de sodium ou de glucose à 5 %",
+        "duree": "Environ 20 minutes",
+        "stabilite": "Après dilution dans NaCl 0,9 % ou glucose 5 % : stabilité physico-chimique démontrée 48 heures à 28 °C ; d'un point de vue microbiologique, le produit doit être utilisé immédiatement"
+      },
+      {
+        "voie": "IM",
+        "detail": "Utiliser pur, injection profonde et lente, dans la partie externe du quadrant supéro-externe de la fesse, dans des conditions d'asepsie rigoureuse",
+        "duree": "Non chiffrée par le RCP, l'injection doit être profonde et lente",
+        "stabilite": "À usage unique, utiliser immédiatement après ouverture"
+      }
+    ],
+    "administration": {
+      "note_ajustement": "Dose adaptée selon la fonction rénale et l'âge (réduire la posologie initiale, adapter selon la tolérance rénale), se référer au protocole du service.",
+      "posologie": [
+        {
+          "population": "Douleur post-opératoire (perfusion IV)",
+          "population_type": "adulte",
+          "dose_par_prise_mg_max": 100,
+          "dose_par_prise_mg_min": 100,
+          "categorie": "generale",
+          "dose_par_prise_mg": 100,
+          "nb_prises_min_24h": 1,
+          "nb_prises_max_24h": 2,
+          "dose_journaliere_max_g": 0.2
+        },
+        {
+          "population": "Crise de colique néphrétique (perfusion IV)",
+          "population_type": "adulte",
+          "dose_par_prise_mg_max": 100,
+          "dose_par_prise_mg_min": 100,
+          "categorie": "generale",
+          "dose_par_prise_mg": 100,
+          "nb_prises_min_24h": 1,
+          "nb_prises_max_24h": 3,
+          "dose_journaliere_max_g": 0.3
+        },
+        {
+          "population": "Rhumatismes en poussée, lombalgies, radiculalgies, algies néoplasiques (IM)",
+          "population_type": "adulte",
+          "dose_par_prise_mg_max": 100,
+          "dose_par_prise_mg_min": 100,
+          "categorie": "im",
+          "dose_par_prise_mg": 100,
+          "nb_prises_min_24h": 1,
+          "nb_prises_max_24h": 2,
+          "dose_journaliere_max_g": 0.2
+        },
+        {
+          "population": "Crise de colique néphrétique (IM)",
+          "population_type": "adulte",
+          "dose_par_prise_mg_max": 100,
+          "dose_par_prise_mg_min": 100,
+          "categorie": "im",
+          "dose_par_prise_mg": 100,
+          "nb_prises_min_24h": 1,
+          "nb_prises_max_24h": 3,
+          "dose_journaliere_max_g": 0.3
+        }
+      ]
+    },
+    "incompatibilites": []
+  },
+  "oral": {
+    "formes": [
+      {
+        "type": "Gélule",
+        "dosage": "50 mg",
+        "secable": false,
+        "ouverture_gelule": false,
+        "posologie_adulte": [
+          {
+            "population": "Traitement symptomatique au long cours",
+            "population_type": "adulte",
+            "categorie": "generale",
+            "dose_par_prise_mg_min": 50,
+            "dose_par_prise_mg_max": 50,
+            "nb_prises_min_24h": 2,
+            "nb_prises_max_24h": 3,
+            "dose_journaliere_max_g": 0.15
+          },
+          {
+            "population": "Poussées aiguës rhumatismales",
+            "population_type": "adulte",
+            "categorie": "generale",
+            "dose_par_prise_mg_min": 50,
+            "dose_par_prise_mg_max": 50,
+            "nb_prises_min_24h": 2,
+            "nb_prises_max_24h": 4,
+            "dose_journaliere_max_g": 0.2
+          }
+        ]
+      },
+      {
+        "type": "Comprimé pelliculé",
+        "dosage": "100 mg",
+        "secable": false,
+        "ouverture_gelule": null,
+        "posologie_adulte": [
+          {
+            "population": "Traitement symptomatique au long cours",
+            "population_type": "adulte",
+            "categorie": "generale",
+            "dose_par_prise_mg_min": 100,
+            "dose_par_prise_mg_max": 100,
+            "nb_prises_min_24h": 1,
+            "nb_prises_max_24h": 2,
+            "dose_journaliere_max_g": 0.2
+          },
+          {
+            "population": "Poussées aiguës rhumatismales",
+            "population_type": "adulte",
+            "categorie": "generale",
+            "dose_par_prise_mg_min": 100,
+            "dose_par_prise_mg_max": 100,
+            "nb_prises_min_24h": 2,
+            "nb_prises_max_24h": 2,
+            "dose_journaliere_max_g": 0.2
+          }
+        ]
+      },
+      {
+        "type": "Comprimé sécable à libération prolongée",
+        "dosage": "100 mg",
+        "secable": true,
+        "ouverture_gelule": null,
+        "posologie_adulte": [
+          {
+            "population": "Traitement symptomatique au long cours",
+            "population_type": "adulte",
+            "categorie": "generale",
+            "dose_par_prise_mg_min": 100,
+            "dose_par_prise_mg_max": 100,
+            "nb_prises_min_24h": 1,
+            "nb_prises_max_24h": 2,
+            "dose_journaliere_max_g": 0.2
+          },
+          {
+            "population": "Poussées aiguës rhumatismales",
+            "population_type": "adulte",
+            "categorie": "generale",
+            "dose_par_prise_mg_min": 100,
+            "dose_par_prise_mg_max": 100,
+            "nb_prises_min_24h": 2,
+            "nb_prises_max_24h": 2,
+            "dose_journaliere_max_g": 0.2
+          }
+        ]
+      },
+      {
+        "type": "Comprimé enrobé à libération prolongée",
+        "dosage": "200 mg",
+        "secable": false,
+        "ouverture_gelule": null,
+        "posologie_adulte": [
+          {
+            "population": "Traitement symptomatique au long cours",
+            "population_type": "adulte",
+            "categorie": "generale",
+            "dose_par_prise_mg_min": 200,
+            "dose_par_prise_mg_max": 200,
+            "nb_prises_min_24h": 1,
+            "nb_prises_max_24h": 1,
+            "dose_journaliere_max_g": 0.2
+          }
+        ]
+      },
+      {
+        "type": "Suppositoire",
+        "dosage": "100 mg",
+        "secable": false,
+        "ouverture_gelule": null,
+        "posologie_adulte": [
+          {
+            "population": "Traitement symptomatique au long cours",
+            "population_type": "adulte",
+            "categorie": "generale",
+            "dose_par_prise_mg_min": 100,
+            "dose_par_prise_mg_max": 100,
+            "nb_prises_min_24h": 1,
+            "nb_prises_max_24h": 2,
+            "dose_journaliere_max_g": 0.2
+          },
+          {
+            "population": "Poussées aiguës rhumatismales",
+            "population_type": "adulte",
+            "categorie": "generale",
+            "dose_par_prise_mg_min": 100,
+            "dose_par_prise_mg_max": 100,
+            "nb_prises_min_24h": 2,
+            "nb_prises_max_24h": 2,
+            "dose_journaliere_max_g": 0.2
+          }
+        ]
+      }
+    ],
+    "recommandation_sonde": {
+      "forme_preferee": "Aucune",
+      "alternative": "Voie rectale (suppositoire 100 mg)"
+    }
+  },
+  "tracabilite": {
+    "rcp_source": [
+      {
+        "specialite": "PROFENID 100 mg, comprimé pelliculé",
+        "titulaire": "PHOENIX LABS UNLIMITED COMPANY",
+        "date_maj": "18/12/2025",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/66771790/extrait"
+      },
+      {
+        "specialite": "KETOPROFENE CRISTERS 100 mg, comprimé pelliculé",
+        "titulaire": "CRISTERS",
+        "date_maj": "18/09/2024",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/60554125/extrait"
+      },
+      {
+        "specialite": "PROFENID 50 mg, gélule",
+        "titulaire": "PHOENIX LABS UNLIMITED COMPANY",
+        "date_maj": "18/12/2025",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/67225100/extrait"
+      },
+      {
+        "specialite": "KETOPROFENE CRISTERS 50 mg, gélule",
+        "titulaire": "CRISTERS",
+        "date_maj": "18/09/2024",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/61712279/extrait"
+      },
+      {
+        "specialite": "BI PROFENID LP 100 mg, comprimé sécable à libération prolongée",
+        "titulaire": "PHOENIX LABS UNLIMITED COMPANY",
+        "date_maj": "18/12/2025",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/61165486/extrait"
+      },
+      {
+        "specialite": "KETOPROFENE ZENTIVA LP 100 mg, comprimé sécable à libération prolongée",
+        "titulaire": "ZENTIVA FRANCE",
+        "date_maj": "16/06/2025",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/60494614/extrait"
+      },
+      {
+        "specialite": "KETOPROFENE CRISTERS LP 200 mg, comprimé enrobé à libération prolongée",
+        "titulaire": "CRISTERS",
+        "date_maj": "18/09/2024",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/62013467/extrait"
+      },
+      {
+        "specialite": "PROFENID LP 200 mg, gélule à libération prolongée",
+        "titulaire": "SANOFI WINTHROP INDUSTRIE",
+        "date_maj": "03/08/2026",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/68592067/extrait"
+      },
+      {
+        "specialite": "PROFENID 100 mg, suppositoire",
+        "titulaire": "PHOENIX LABS UNLIMITED COMPANY",
+        "date_maj": "18/12/2025",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/65146412/extrait"
+      },
+      {
+        "specialite": "KETOPROFENE PHARMY II 100 mg/2 ml, solution injectable intramusculaire",
+        "titulaire": "LABORATOIRES ETHYPHARM",
+        "date_maj": "07/07/2025",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/65012445/extrait"
+      },
+      {
+        "specialite": "PROFENID 100 mg/2 ml, solution injectable (I.M.)",
+        "titulaire": "SANOFI WINTHROP INDUSTRIE",
+        "date_maj": "03/08/2026",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/68566033/extrait"
+      },
+      {
+        "specialite": "KETOPROFENE MEDISOL 100 mg/4 ml, solution à diluer pour perfusion",
+        "titulaire": "MEDISOL",
+        "date_maj": "16/09/2024",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/67834521/extrait"
+      },
+      {
+        "specialite": "KETOPROFENE AGUETTANT 100 mg, solution pour perfusion",
+        "titulaire": "Laboratoire AGUETTANT",
+        "date_maj": "27/11/2025",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/62719935/extrait"
+      },
+      {
+        "specialite": "PROFENID 100 mg, poudre pour solution injectable (I.V.) en flacon",
+        "titulaire": "SANOFI WINTHROP INDUSTRIE",
+        "date_maj": "09/01/2025",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/62960085/extrait"
+      }
+    ],
+    "statut": "valide",
+    "validation": {
+      "date": "2026-09-05",
+      "validateur": "Anna Trabaud-Lopez (IDE, porteuse du projet), vérification des données extraites contre les RCP ; équipe pharmacie, validation de la méthodologie et arbitrage des points litigieux",
+      "perimetre": [
+        "adulte"
+      ],
+      "prochaine_revision": "2026-12-05"
+    }
+  }
+}

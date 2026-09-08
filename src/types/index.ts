@@ -155,7 +155,7 @@ export interface IGrossesseAllaitementRcp {
 export interface IFormeOraleRcp {
   type: string
   dosage?: string
-  secable?: boolean
+  ecrasable?: boolean
   ouverture_gelule?: boolean | null
   posologie_adulte: IPosologieRcp[]
 }

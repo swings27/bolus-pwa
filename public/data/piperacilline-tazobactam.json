@@ -1,0 +1,283 @@
+{
+  "dci": "piperacilline/tazobactam",
+  "commun": {
+    "noms_commerciaux": [
+      "Tazocilline"
+    ],
+    "famille": "Uréidopénicilline associée à un inhibiteur de bêta-lactamases",
+    "antidote": "",
+    "indications": [
+      "Pneumonies sévères, dont nosocomiales",
+      "Infections urinaires compliquées, pyélonéphrite",
+      "Infections intra-abdominales compliquées",
+      "Infections compliquées peau/tissus mous",
+      "Bactériémie associée",
+      "Neutropénie fébrile"
+    ],
+    "grossesse_allaitement": {
+      "grossesse": "La pipéracilline et le tazobactam traversent le placenta. La pipéracilline/tazobactam doit être utilisé pendant la grossesse uniquement si clairement indiqué, c'est-à-dire, uniquement si le bénéfice attendu est supérieur aux risques éventuels pour la femme enceinte et le fœtus.",
+      "allaitement": "Les femmes qui allaitent doivent être traitées uniquement si le bénéfice attendu est supérieur aux risques éventuels pour la femme et l'enfant.",
+      "url_crat_grossesse": "https://www.lecrat.fr/13474/",
+      "url_crat_allaitement": "https://www.lecrat.fr/13475/",
+      "source": "RCP TAZOCILLINE 4 g/0,5 g, section 4.6"
+    },
+    "contre_indications": [
+      "Hypersensibilité aux substances actives, à tout autre agent antibactérien de la classe des pénicillines ou à l'un des excipients",
+      "Antécédents de réaction allergique aiguë sévère à toute autre bêta-lactamine (céphalosporines, monobactames ou carbapénèmes)"
+    ],
+    "interactions_pertinentes": [
+      {
+        "substance": "Vancomycine",
+        "effet": "Une augmentation de l'incidence de lésion rénale aiguë a été rapportée chez les patients traités par l'association pipéracilline/tazobactam et vancomycine, en comparaison aux patients traités par vancomycine seule.",
+        "action_infirmier": "Signaler la co-prescription et surveiller la fonction rénale (créatinine, diurèse). Ne jamais administrer les deux médicaments en Y : ils sont physico-chimiquement incompatibles.",
+        "source_rcp": "RCP TAZOCILLINE 4 g/0,5 g, sections 4.4 et 4.5"
+      },
+      {
+        "substance": "Aminoglycosides",
+        "effet": "L'inactivation de la tobramycine et de la gentamicine par la pipéracilline a été démontrée chez des patients ayant une insuffisance rénale sévère ; le mélange in vitro d'une bêta-lactamine et d'un aminoglycoside entraîne une inactivation importante de l'aminoglycoside.",
+        "action_infirmier": "Reconstituer, diluer et administrer les deux antibiotiques séparément, sur des temps distincts. Ne jamais les mélanger dans la même seringue ou le même flacon de perfusion.",
+        "source_rcp": "RCP TAZOCILLINE 4 g/0,5 g, sections 4.5, 6.2 et 6.6"
+      },
+      {
+        "substance": "Myorelaxants non dépolarisants",
+        "effet": "La pipéracilline utilisée de façon simultanée avec le vécuronium a été impliquée dans la prolongation du bloc neuromusculaire du vécuronium ; le même allongement est attendu avec les autres myorelaxants non dépolarisants.",
+        "action_infirmier": "Signaler le traitement par pipéracilline/tazobactam avant toute anesthésie ou curarisation, et surveiller la récupération respiratoire en salle de réveil.",
+        "source_rcp": "RCP TAZOCILLINE 4 g/0,5 g, section 4.5"
+      },
+      {
+        "substance": "Héparine et anticoagulants oraux",
+        "effet": "L'administration simultanée d'héparine, d'anticoagulants oraux ou d'autres substances modifiant la coagulation, y compris la fonction plaquettaire, impose des tests de coagulation plus fréquents.",
+        "action_infirmier": "S'assurer que les tests de coagulation appropriés (INR, TP) sont réalisés plus fréquemment et surveillés régulièrement pendant l'association.",
+        "source_rcp": "RCP TAZOCILLINE 4 g/0,5 g, section 4.5"
+      },
+      {
+        "substance": "Méthotrexate",
+        "effet": "La pipéracilline peut réduire l'excrétion du méthotrexate et exposer à une toxicité de ce dernier.",
+        "action_infirmier": "Signaler la co-prescription au prescripteur et s'assurer que les taux sériques de méthotrexate sont surveillés.",
+        "source_rcp": "RCP TAZOCILLINE 4 g/0,5 g, section 4.5"
+      },
+      {
+        "substance": "Probénécide",
+        "effet": "L'administration simultanée de probénécide induit une demi-vie plus longue et une clairance rénale plus basse pour la pipéracilline comme pour le tazobactam ; le pic des concentrations plasmatiques n'est pas modifié.",
+        "action_infirmier": "Signaler la co-prescription au prescripteur, qui appréciera l'intérêt d'un ajustement.",
+        "source_rcp": "RCP TAZOCILLINE 4 g/0,5 g, section 4.5"
+      }
+    ],
+    "surveillance_specifique": [
+      {
+        "evenement": "Lymphohistiocytose hémophagocytaire au-delà de 10 jours de traitement",
+        "explication": "Syndrome potentiellement mortel d'activation immunitaire pathologique, rapporté sous pipéracilline/tazobactam, le plus souvent après plus de 10 jours de traitement : fièvre, hépatosplénomégalie, cytopénies.",
+        "action": "Au-delà de 10 jours de traitement, signaler immédiatement une fièvre persistante ou réapparue, une altération de l'état général ou une chute des lignées sanguines. Le traitement est interrompu si le diagnostic est établi.",
+        "source_rcp": "RCP TAZOCILLINE 4 g/0,5 g, section 4.4 : « des cas de LHH ont été rapportés chez des patients traités par pipéracilline/tazobactam, souvent après un traitement de plus de 10 jours […] Les patients développant des manifestations précoces d'une activation immunitaire pathologique doivent être immédiatement examinés. »"
+      },
+      {
+        "evenement": "Rhabdomyolyse",
+        "explication": "Des cas de rhabdomyolyse ont été rapportés avec l'utilisation de la pipéracilline/tazobactam.",
+        "action": "Signaler des douleurs musculaires diffuses, une faiblesse musculaire ou des urines foncées. Le traitement doit être interrompu et une prise en charge instaurée.",
+        "source_rcp": "RCP TAZOCILLINE 4 g/0,5 g, section 4.4 : « Des cas de rhabdomyolyse ont été rapportés avec l'utilisation de TAZOCILLINE. Si des signes ou symptômes de rhabdomyolyse sont observés, TAZOCILLINE doit être interrompu et un traitement approprié doit être instauré. »"
+      },
+      {
+        "evenement": "Saignements et anomalies de la coagulation, surtout en cas d'insuffisance rénale",
+        "explication": "Des saignements associés à des anomalies du temps de saignement, de l'agrégation plaquettaire et du temps de prothrombine se produisent sous bêta-lactamines, plus volontiers chez l'insuffisant rénal.",
+        "action": "Surveiller les points de ponction, les gencives et les selles ; signaler tout saignement. L'antibiotique doit alors être arrêté et un traitement approprié mis en place.",
+        "source_rcp": "RCP TAZOCILLINE 4 g/0,5 g, section 4.4 : « Si des saignements se produisent, l'antibiotique doit être arrêté et un traitement approprié mis en place. »"
+      },
+      {
+        "evenement": "Leucopénie et neutropénie lors des traitements prolongés",
+        "explication": "Une leucopénie et une neutropénie peuvent apparaître, particulièrement lors des traitements prolongés.",
+        "action": "S'assurer qu'une évaluation périodique de la numération sanguine est réalisée pendant les traitements prolongés.",
+        "source_rcp": "RCP TAZOCILLINE 4 g/0,5 g, section 4.4 : « Une leucopénie et une neutropénie peuvent apparaître, particulièrement lors de traitements prolongés ; par conséquent, une évaluation périodique de la fonction hématopoïétique doit être effectuée. »"
+      },
+      {
+        "evenement": "Convulsions sous fortes doses, en particulier chez l'insuffisant rénal",
+        "explication": "Comme avec les autres pénicillines, des complications neurologiques à type de convulsions peuvent survenir aux doses élevées, surtout si la fonction rénale est altérée.",
+        "action": "Surveiller la conscience et l'apparition de mouvements anormaux ou de convulsions chez les patients recevant de fortes doses ou insuffisants rénaux. Alerter immédiatement le prescripteur.",
+        "source_rcp": "RCP TAZOCILLINE 4 g/0,5 g, section 4.4 : « des complications neurologiques sous la forme de convulsions (crises) peuvent se produire quand des doses élevées sont administrées, particulièrement chez les patients avec une fonction rénale insuffisante »"
+      },
+      {
+        "evenement": "Hypokaliémie",
+        "explication": "Une hypokaliémie peut apparaître chez les patients dont la kaliémie est déjà basse ou qui reçoivent simultanément des médicaments hypokaliémiants.",
+        "action": "S'assurer qu'un contrôle périodique de l'ionogramme est réalisé chez ces patients.",
+        "source_rcp": "RCP TAZOCILLINE 4 g/0,5 g, section 4.4 : « Une hypokaliémie peut apparaître chez les patients avec une kaliémie basse ou ceux recevant simultanément des médicaments hypokaliémiants ; un contrôle périodique de l'ionogramme peut être recommandé chez de tels patients. »"
+      },
+      {
+        "evenement": "Réactions cutanées sévères",
+        "explication": "La pipéracilline/tazobactam peut entraîner des effets indésirables cutanés graves ; en cas d'éruption, l'évolution des lésions conditionne la poursuite du traitement.",
+        "action": "Surveiller étroitement toute éruption cutanée et la signaler. Le traitement doit être interrompu si les lésions évoluent.",
+        "source_rcp": "RCP TAZOCILLINE 4 g/0,5 g, section 4.4 : « En cas d'éruption cutanée, les patients devront faire l'objet d'une étroite surveillance et le traitement par TAZOCILLINE devra être interrompu si les lésions évoluent. »"
+      },
+      {
+        "evenement": "Colite pseudo-membraneuse pendant ou après le traitement",
+        "explication": "Les colites pseudo-membraneuses induites par les antibiotiques se manifestent par une diarrhée sévère et persistante pouvant mettre en jeu le pronostic vital, pendant ou après le traitement.",
+        "action": "Signaler toute diarrhée sévère ou persistante, y compris après la fin du traitement. Le traitement est alors arrêté.",
+        "source_rcp": "RCP TAZOCILLINE 4 g/0,5 g, section 4.4 : « Des colites pseudomembraneuses induites par les antibiotiques peuvent se manifester par une diarrhée sévère, persistante, pouvant mettre en jeu le pronostic vital. […] Dans ces cas, TAZOCILLINE doit être arrêté. »"
+      },
+      {
+        "evenement": "Récupération rénale retardée et lésion rénale aiguë",
+        "explication": "Chez les patients gravement malades, la pipéracilline/tazobactam a été associée à un taux plus faible d'amélioration réversible du débit de filtration glomérulaire ; l'association à la vancomycine majore l'incidence de lésion rénale aiguë.",
+        "action": "Surveiller la diurèse et la créatinine, en particulier en réanimation et lors d'une association à la vancomycine. Signaler toute baisse de la diurèse.",
+        "source_rcp": "RCP TAZOCILLINE 4 g/0,5 g, section 4.4 : « Cette analyse secondaire a conclu que la prise de pipéracilline/tazobactam était une cause de récupération rénale tardive chez ces patients. L'utilisation combinée de pipéracilline/tazobactam et de vancomycine peut être associée à une augmentation de l'incidence de lésion rénale aiguë. »"
+      },
+      {
+        "evenement": "Faux positifs du test Platelia Aspergillus, du test de Coombs et de la glycosurie",
+        "explication": "Les tests Platelia Aspergillus EIA des Laboratoires Bio Rad peuvent être faussement positifs sous pipéracilline/tazobactam ; le test de Coombs direct peut être positif et les méthodes non enzymatiques de mesure du glucose urinaire peuvent donner des faux positifs.",
+        "action": "Signaler le traitement au laboratoire avant un test Platelia Aspergillus, une épreuve de compatibilité transfusionnelle ou une recherche de glycosurie. Utiliser une méthode enzymatique pour la glycosurie.",
+        "source_rcp": "RCP TAZOCILLINE 4 g/0,5 g, section 4.5 : « Les tests Platelia Aspergillus EIA des Laboratoires Bio Rad peuvent donner des résultats faussement positifs chez les patients recevant TAZOCILLINE. […] Le test de Coombs direct peut être positif. »"
+      }
+    ],
+    "pictogrammes": []
+  },
+  "iv": {
+    "reconstitution": {
+      "solvant": "NaCl 0,9 %, eau pour préparations injectables (EPPI) ou glucose 5 %",
+      "volume_par_2000mg_mL": 10,
+      "volume_par_4000mg_mL": 20,
+      "stabilite_avant_dilution": "12 h entre 2 °C et 8 °C après reconstitution avec un solvant compatible."
+    },
+    "preparation": [
+      {
+        "voie": "PERF",
+        "detail": "NaCl 0,9 % ou Glucose 5 %, flacon reconstitué dilué dans 50 à 150 mL",
+        "duree": "30 min",
+        "stabilite": "12 h entre 2 °C et 8 °C après reconstitution et dilution"
+      },
+      {
+        "voie": "PSE",
+        "detail": "NaCl 0,9 % ou Glucose 5 %, 4 g/0,5 g dans 50 mL (90 mg/mL)",
+        "duree": "Continu",
+        "stabilite": "12 h entre 2 °C et 8 °C après reconstitution et dilution",
+        "contexte": "Perfusion continue"
+      }
+    ],
+    "administration": {
+      "note_ajustement": "Dose adaptée selon la fonction rénale et les séances de dialyse, se référer au protocole du service.",
+      "posologie": [
+        {
+          "population": "Et adolescent, infections urinaires, intra-abdominales, peau et tissus mous",
+          "categorie": "generale",
+          "population_type": "adulte",
+          "dose_par_prise_mg_min": 4000,
+          "dose_par_prise_mg_max": 4000,
+          "dose_journaliere_max_g": 12.0,
+          "intervalle_min_h": 8,
+          "intervalle_max_h": 8
+        },
+        {
+          "population": "Et adolescent, pneumonies nosocomiales et neutropénie fébrile",
+          "categorie": "generale",
+          "population_type": "adulte",
+          "dose_par_prise_mg_min": 4000,
+          "dose_par_prise_mg_max": 4000,
+          "dose_journaliere_max_g": 16.0,
+          "intervalle_min_h": 6,
+          "intervalle_max_h": 6
+        },
+        {
+          "population": "Enfant de 2 à 12 ans, infections intra-abdominales compliquées",
+          "categorie": "generale",
+          "population_type": "pediatrie",
+          "age_min_mois": 24,
+          "age_max_mois": 144,
+          "dose_mg_kg_min": 100,
+          "dose_mg_kg_max": 100,
+          "dose_par_prise_mg_max": 4000,
+          "intervalle_min_h": 8,
+          "intervalle_max_h": 8
+        },
+        {
+          "population": "Enfant de 2 à 12 ans, neutropénie fébrile",
+          "categorie": "generale",
+          "population_type": "pediatrie",
+          "age_min_mois": 24,
+          "age_max_mois": 144,
+          "dose_mg_kg_min": 80,
+          "dose_mg_kg_max": 80,
+          "dose_par_prise_mg_max": 4000,
+          "intervalle_min_h": 6,
+          "intervalle_max_h": 6
+        }
+      ]
+    },
+    "incompatibilites": [
+      {
+        "substance": "Gentamicine",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Amikacine",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Vancomycine",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Aciclovir",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Amiodarone",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Dobutamine",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Labétalol",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Nicardipine",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Bicarbonate de sodium",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Produits dérivés du sang et hydrolysats d'albumine",
+        "niveau": "absolu"
+      }
+    ]
+  },
+  "oral": null,
+  "tracabilite": {
+    "rcp_source": [
+      {
+        "specialite": "TAZOCILLINE 4 g/0,5 g, poudre pour solution pour perfusion",
+        "titulaire": "Pfizer Holding France",
+        "date_maj": "2025-11-13",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/60445784/extrait"
+      },
+      {
+        "specialite": "TAZOCILLINE 2 g/0,25 g, poudre pour solution pour perfusion",
+        "titulaire": "Pfizer Holding France",
+        "date_maj": "2025-11-13",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/67873780/extrait"
+      },
+      {
+        "specialite": "PIPERACILLINE/TAZOBACTAM PANPHARMA 4 g/500 mg, poudre pour solution pour perfusion",
+        "titulaire": "Panpharma",
+        "date_maj": "",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/63012514/extrait"
+      },
+      {
+        "specialite": "PIPERACILLINE/TAZOBACTAM TILLOMED 4 g/0,5 g, poudre pour solution pour perfusion",
+        "titulaire": "Tillomed",
+        "date_maj": "",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/61249272/extrait"
+      }
+    ],
+    "statut": "valide",
+    "validation": {
+      "date": "2026-08-31",
+      "validateur": "Anna Trabaud-Lopez (IDE, porteuse du projet), vérification des données extraites contre les RCP ; équipe pharmacie, validation de la méthodologie et arbitrage des points litigieux",
+      "perimetre": [
+        "adulte",
+        "pediatrie"
+      ],
+      "prochaine_revision": "2026-11-30"
+    }
+  }
+}
