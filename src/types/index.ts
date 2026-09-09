@@ -47,8 +47,15 @@ export interface IPosologieRcp {
   dose_mg_kg_max?: number
   dose_journaliere_mg_kg_min?: number
   dose_journaliere_mg_kg_max?: number
-  dose_journaliere_max_g?: number
-  dose_max_par_prise_g?: number
+  /** Number la plupart du temps, mais le RCP ne donne pas toujours un
+   * plafond chiffré — particulièrement en pédiatrie, où le maximum
+   * journalier dépend du poids de l'enfant plutôt que d'être une valeur
+   * fixe ("Selon poids", "Pas de maximum journalier établi"...). Une
+   * chaîne est affichée telle quelle par formaterMax(), sans tenter la
+   * conversion g→mg qui ne s'applique qu'à un nombre. Même raison pour
+   * dose_max_par_prise_g et dose_journaliere_max_MUI ci-dessous. */
+  dose_journaliere_max_g?: number | string
+  dose_max_par_prise_g?: number | string
   dose_ugkgmin_min?: number
   dose_ugkgmin_max?: number
   /** MUI = millions d'unités internationales (ex. spiramycine) — même
@@ -59,7 +66,7 @@ export interface IPosologieRcp {
   dose_par_prise_MUI_max?: number
   dose_journaliere_MUI_min?: number
   dose_journaliere_MUI_max?: number
-  dose_journaliere_max_MUI?: number
+  dose_journaliere_max_MUI?: number | string
   /** Pédiatrie uniquement pour le moment (posologie au poids par palier de
    * 10 kg, ou en UI/kg) — pas encore affiché, V1 se limite à l'adulte, voir
    * SectionPosologies. Typés ici pour que construireFiche() ne perde aucun

@@ -187,18 +187,14 @@
           "population_type": "adulte",
           "categorie": "generale",
           "dose_par_prise_mg_min": 300,
-          "dose_par_prise_mg_max": 300,
-          "dose_mg_kg_min": 5,
-          "dose_mg_kg_max": 5
+          "dose_par_prise_mg_max": 300
         },
         {
           "population": "Arrêt cardiaque par fibrillation ventriculaire, dose supplémentaire si persistance",
           "population_type": "adulte",
           "categorie": "generale",
           "dose_par_prise_mg_min": 150,
-          "dose_par_prise_mg_max": 150,
-          "dose_mg_kg_min": 2.5,
-          "dose_mg_kg_max": 2.5
+          "dose_par_prise_mg_max": 150
         }
       ]
     },

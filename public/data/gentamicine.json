@@ -125,13 +125,13 @@
         "voie": "PERF",
         "detail": "Diluer dans 50 à 200 mL environ de G5 % ou NaCl 0,9 %, concentration maximale de 10 mg/mL.",
         "duree": "30 minutes",
-        "stabilite": null
+        "stabilite": "Utilisation immédiate"
       },
       {
         "voie": "IM",
         "detail": "Utiliser pur",
         "duree": "< 1 min",
-        "stabilite": null
+        "stabilite": "Utilisation immédiate"
       }
     ],
     "administration": {

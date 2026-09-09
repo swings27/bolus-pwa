@@ -115,7 +115,9 @@
           "population": "Choc anaphylactique établi (après dilution 1mg dans 9ml de NaCl 0,9%)",
           "population_type": "adulte",
           "categorie": "generale",
-          "dose_par_prise_mg": 0.1
+          "dose_par_prise_mg": 0.1,
+          "intervalle_min_min": 1,
+          "intervalle_max_min": 2
         },
         {
           "population": "Choc anaphylactique établi",

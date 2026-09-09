@@ -1,10 +1,13 @@
 import { describe, it, expect } from 'vitest'
 import {
   formaterDose,
+  formaterDoseAbsolue,
+  formaterDoseParKg,
   formaterIntervalle,
   formaterMax,
   formaterPopulationDetail,
   libelleCategoriePosologie,
+  libelleIntervalle,
   dedupliquerPosologies,
 } from './posologie'
 import type { IPosologieRcp } from '../types'
@@ -80,8 +83,37 @@ describe('formaterIntervalle', () => {
     expect(formaterIntervalle(posologie({ nb_prises_min_24h: 2, nb_prises_max_24h: 4 }))).toBe('2-4 / jour')
   })
 
-  it('renvoie un tiret cadratin si rien n\'est renseigné', () => {
-    expect(formaterIntervalle(posologie())).toBe('—')
+  // Point 5 de l'audit posologie : un "—" ambigu (donnée manquante ou dose
+  // réellement unique ?) est remplacé par une valeur explicite selon la
+  // catégorie de la ligne.
+  it('affiche "Dose unique" si aucun champ de fréquence n\'est renseigné', () => {
+    expect(formaterIntervalle(posologie())).toBe('Dose unique')
+  })
+
+  it('affiche "Continue" pour une posologie en PSE sans fréquence renseignée', () => {
+    expect(formaterIntervalle(posologie({ categorie: 'pse' }))).toBe('Continue')
+  })
+})
+
+describe('libelleIntervalle', () => {
+  it('reste "Intervalle" quand un intervalle horaire ou en minutes est renseigné', () => {
+    expect(libelleIntervalle(posologie({ intervalle_min_h: 4, intervalle_max_h: 6 }))).toBe('Intervalle')
+    expect(libelleIntervalle(posologie({ intervalle_min_min: 5 }))).toBe('Intervalle')
+  })
+
+  // Régression : quand seul nb_prises_*_24h est renseigné (pas d'intervalle
+  // horaire dans le RCP), la valeur affichée est un nombre de prises par
+  // jour, pas un intervalle de temps — le libellé doit refléter ça.
+  it('devient "Prise journalière" quand seul nb_prises_*_24h est renseigné', () => {
+    expect(libelleIntervalle(posologie({ nb_prises_min_24h: 2, nb_prises_max_24h: 4 }))).toBe('Prise journalière')
+  })
+
+  it('privilégie "Intervalle" si les deux sont renseignés (le champ horaire prime toujours)', () => {
+    expect(libelleIntervalle(posologie({ intervalle_min_h: 4, nb_prises_max_24h: 2 }))).toBe('Intervalle')
+  })
+
+  it('reste "Intervalle" si rien n\'est renseigné (dose unique/continue)', () => {
+    expect(libelleIntervalle(posologie())).toBe('Intervalle')
   })
 })
 
@@ -118,6 +150,56 @@ describe('formaterMax', () => {
 
   it('renvoie null si aucun champ de maximum n\'est renseigné', () => {
     expect(formaterMax(posologie())).toBeNull()
+  })
+
+  // Point 3 de l'audit posologie : le RCP ne donne pas toujours un plafond
+  // chiffré (ex. maximum dépendant du poids en pédiatrie) — une chaîne est
+  // affichée telle quelle, sans tenter la conversion g→mg.
+  it('affiche dose_journaliere_max_g tel quel si c\'est une chaîne, sans conversion', () => {
+    expect(formaterMax(posologie({ dose_journaliere_max_g: 'Selon poids' }))).toBe('Selon poids')
+  })
+
+  it('affiche dose_journaliere_max_MUI tel quel si c\'est une chaîne', () => {
+    expect(formaterMax(posologie({ dose_journaliere_max_MUI: 'Non établi' }))).toBe('Non établi')
+  })
+
+  it('affiche dose_max_par_prise_g tel quel si c\'est une chaîne', () => {
+    expect(formaterMax(posologie({ dose_max_par_prise_g: 'Selon poids' }))).toBe('Selon poids')
+  })
+})
+
+describe('formaterDoseParKg / formaterDoseAbsolue', () => {
+  // Point 2 de l'audit posologie : une ligne peut combiner une dose au
+  // poids ET une dose absolue (ex. plafond) — les deux doivent pouvoir être
+  // lues indépendamment plutôt que par un seul formaterDose() qui n'en
+  // garde qu'une.
+  it('formaterDoseParKg lit dose_mg_kg avec le suffixe "/ prise"', () => {
+    expect(formaterDoseParKg(posologie({ dose_mg_kg_min: 0.01, dose_mg_kg_max: 0.02 }))).toBe('0,01-0,02 mg/kg / prise')
+  })
+
+  it('formaterDoseParKg se replie sur dose_journaliere_mg_kg avec le suffixe "/ jour"', () => {
+    expect(formaterDoseParKg(posologie({ dose_journaliere_mg_kg_min: 20, dose_journaliere_mg_kg_max: 90 }))).toBe(
+      '20-90 mg/kg / jour',
+    )
+  })
+
+  it('formaterDoseParKg renvoie null sans champ mg/kg', () => {
+    expect(formaterDoseParKg(posologie({ dose_par_prise_mg: 10 }))).toBeNull()
+  })
+
+  it('formaterDoseAbsolue lit dose_par_prise_mg (fixe ou fourchette)', () => {
+    expect(formaterDoseAbsolue(posologie({ dose_par_prise_mg: 10 }))).toBe('10 mg')
+    expect(formaterDoseAbsolue(posologie({ dose_par_prise_mg_max: 0.6 }))).toBe('0,6 mg')
+  })
+
+  it('formaterDoseAbsolue renvoie null sans champ mg absolu', () => {
+    expect(formaterDoseAbsolue(posologie({ dose_mg_kg_min: 1, dose_mg_kg_max: 1 }))).toBeNull()
+  })
+
+  it('les deux sont non-null ensemble pour une ligne combinant mg/kg et plafond absolu (cas atropine)', () => {
+    const p = posologie({ dose_mg_kg_min: 0.01, dose_mg_kg_max: 0.02, dose_par_prise_mg_max: 0.6 })
+    expect(formaterDoseParKg(p)).toBe('0,01-0,02 mg/kg / prise')
+    expect(formaterDoseAbsolue(p)).toBe('0,6 mg')
   })
 })
 

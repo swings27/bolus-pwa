@@ -115,7 +115,7 @@
         "voie": "PERF",
         "detail": "Diluer dans un volume minimal de 100 mL de G5 %",
         "duree": "1 heure (perfusion lente)",
-        "stabilite": null
+        "stabilite": "12h à moins de 25°C"
       }
     ],
     "administration": {

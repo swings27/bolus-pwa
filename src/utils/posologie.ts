@@ -40,6 +40,29 @@ export function formaterDose(p: IPosologieRcp): string {
   return '—'
 }
 
+/** Partie "au poids" d'une dose (mg/kg par prise, ou mg/kg par jour) —
+ * calculée séparément de formaterDose() pour pouvoir l'afficher côte à côte
+ * avec formaterDoseAbsolue() plutôt que de la masquer par ordre de
+ * priorité. Cas réel (atropine, adrénaline, pipéracilline/tazobactam en
+ * pédiatrie) : le RCP donne à la fois "0,01-0,02 mg/kg" ET un plafond
+ * absolu en mg — les deux sont des informations de sécurité distinctes,
+ * mieux vaut les montrer toutes les deux plutôt que de deviner laquelle
+ * afficher. */
+export function formaterDoseParKg(p: IPosologieRcp): string | null {
+  const parKg = formaterPlage(p.dose_mg_kg_min, p.dose_mg_kg_max, 'mg/kg')
+  if (parKg) return `${parKg} / prise`
+  const parKgParJour = formaterPlage(p.dose_journaliere_mg_kg_min, p.dose_journaliere_mg_kg_max, 'mg/kg')
+  if (parKgParJour) return `${parKgParJour} / jour`
+  return null
+}
+
+/** Partie "absolue" d'une dose (mg fixes ou fourchette de mg, jamais ramenés
+ * au poids) — voir formaterDoseParKg() ci-dessus. */
+export function formaterDoseAbsolue(p: IPosologieRcp): string | null {
+  if (p.dose_par_prise_mg !== undefined) return `${formaterNombre(p.dose_par_prise_mg)} mg`
+  return formaterPlage(p.dose_par_prise_mg_min, p.dose_par_prise_mg_max, 'mg')
+}
+
 export function formaterIntervalle(p: IPosologieRcp): string {
   const enHeures = formaterPlage(p.intervalle_min_h, p.intervalle_max_h, 'h')
   if (enHeures) return enHeures
@@ -47,7 +70,29 @@ export function formaterIntervalle(p: IPosologieRcp): string {
   if (enMinutes) return enMinutes
   const parJour = formaterPlage(p.nb_prises_min_24h, p.nb_prises_max_24h, '/ jour')
   if (parJour) return parJour
-  return '—'
+  // Aucun champ de fréquence renseigné : plutôt qu'un tiret cadratin
+  // ambigu (donnée manquante ou dose réellement unique ?), on affiche
+  // explicitement ce que ça signifie le plus souvent — un protocole en PSE
+  // ("categorie": "pse") est une perfusion continue, tout le reste sans
+  // fréquence est une dose unique (bolus, prémédication...).
+  return p.categorie === 'pse' ? 'Continue' : 'Dose unique'
+}
+
+/** Libellé à afficher au-dessus de la valeur de formaterIntervalle() —
+ * distinct de la valeur elle-même car le sens change selon le champ source :
+ * un vrai intervalle de temps (h/min) reste "Intervalle", mais quand seul
+ * `nb_prises_*_24h` est renseigné (aucun intervalle horaire dans le RCP), la
+ * valeur affichée est un nombre de prises par jour, pas un intervalle — le
+ * libellé doit le dire pour ne pas induire en erreur. */
+export function libelleIntervalle(p: IPosologieRcp): string {
+  const aIntervalle =
+    p.intervalle_min_h !== undefined ||
+    p.intervalle_max_h !== undefined ||
+    p.intervalle_min_min !== undefined ||
+    p.intervalle_max_min !== undefined
+  if (aIntervalle) return 'Intervalle'
+  const aNbPrises = p.nb_prises_min_24h !== undefined || p.nb_prises_max_24h !== undefined
+  return aNbPrises ? 'Prise journalière' : 'Intervalle'
 }
 
 // Convention clinique française : un dosage ne se dit en grammes que pour un
@@ -68,13 +113,29 @@ function formaterGrammesOuMg(grammes: number, parUnite: string): string {
 // Distinct de formaterIntervalle : ne reprend jamais nb_prises_max_24h (déjà
 // utilisé comme repli d'intervalle ci-dessus) pour ne pas afficher deux fois
 // la même information sous deux libellés différents.
+//
+// Les trois champs de maximum acceptent aussi une chaîne (ex. "Selon poids",
+// "Pas de maximum journalier établi") en plus d'un nombre — le RCP ne donne
+// pas toujours un plafond chiffré, particulièrement en pédiatrie où la dose
+// max dépend directement du poids de l'enfant plutôt que d'être une valeur
+// fixe. Une chaîne est affichée telle quelle, sans la conversion g→mg qui ne
+// s'applique qu'à une vraie valeur numérique.
 export function formaterMax(p: IPosologieRcp): string | null {
-  if (p.dose_journaliere_max_g !== undefined) return formaterGrammesOuMg(p.dose_journaliere_max_g, 'j')
+  const maxG = p.dose_journaliere_max_g
+  if (typeof maxG === 'string') return maxG
+  if (maxG !== undefined) return formaterGrammesOuMg(maxG, 'j')
+
+  const maxMUI = p.dose_journaliere_max_MUI
+  if (typeof maxMUI === 'string') return maxMUI
   // Pas de règle MUI→UI équivalente à formaterGrammesOuMg : contrairement à
   // "0,04 g/j", une valeur décimale en MUI (ex. "4,5 MUI/j") est la façon
   // normale de l'exprimer, aucune conversion nécessaire.
-  if (p.dose_journaliere_max_MUI !== undefined) return `${formaterNombre(p.dose_journaliere_max_MUI)} MUI/j`
-  if (p.dose_max_par_prise_g !== undefined) return formaterGrammesOuMg(p.dose_max_par_prise_g, 'prise')
+  if (maxMUI !== undefined) return `${formaterNombre(maxMUI)} MUI/j`
+
+  const maxParPrise = p.dose_max_par_prise_g
+  if (typeof maxParPrise === 'string') return maxParPrise
+  if (maxParPrise !== undefined) return formaterGrammesOuMg(maxParPrise, 'prise')
+
   return null
 }
 

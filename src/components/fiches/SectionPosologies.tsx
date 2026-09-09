@@ -6,10 +6,13 @@ import ChevronBascule from './ChevronBascule'
 import {
   dedupliquerPosologies,
   formaterDose,
+  formaterDoseAbsolue,
+  formaterDoseParKg,
   formaterIntervalle,
   formaterMax,
   formaterPopulationDetail,
   libelleCategoriePosologie,
+  libelleIntervalle,
 } from '../../utils/posologie'
 import type { IPosologieRcp } from '../../types'
 
@@ -33,9 +36,43 @@ function Puce({ children, couleur }: { children: ReactNode; couleur: string }) {
   )
 }
 
+function ChampPosologie({ libelle, valeur, accent }: { libelle: string; valeur: string; accent?: boolean }) {
+  return (
+    <div>
+      <div className="text-[9px] font-semibold uppercase tracking-wide text-texte-doux/70">{libelle}</div>
+      <div className="text-sm font-semibold text-texte" style={accent ? { color: 'var(--interactif)' } : undefined}>
+        {valeur}
+      </div>
+    </div>
+  )
+}
+
 function CartePosologie({ p }: { p: IPosologieRcp }) {
   const detailPopulation = formaterPopulationDetail(p)
   const max = formaterMax(p)
+
+  // Une ligne peut exprimer la dose de deux façons à la fois (ex. atropine
+  // pédiatrie : "0,01-0,02 mg/kg" ET un plafond absolu "0,6 mg") — les deux
+  // sont des informations de sécurité distinctes, on les affiche toutes les
+  // deux plutôt que d'en masquer une par ordre de priorité comme le fait
+  // formaterDose() pour le cas simple (une seule représentation). Prudence
+  // délibérée, surtout pour la pédiatrie où l'écart entre les deux peut
+  // compter.
+  const doseParKg = formaterDoseParKg(p)
+  const doseAbsolue = formaterDoseAbsolue(p)
+  const champsDose =
+    doseParKg && doseAbsolue
+      ? [
+          { libelle: 'Dose (au poids)', valeur: doseParKg },
+          { libelle: 'Dose (absolue)', valeur: doseAbsolue },
+        ]
+      : [{ libelle: 'Dose', valeur: formaterDose(p) }]
+
+  const champs = [
+    ...champsDose,
+    { libelle: libelleIntervalle(p), valeur: formaterIntervalle(p) },
+    ...(max ? [{ libelle: 'Max / 24 h', valeur: max, accent: true }] : []),
+  ]
 
   return (
     <div className="rounded-xl border border-texte/10 px-3.5 py-3">
@@ -51,27 +88,16 @@ function CartePosologie({ p }: { p: IPosologieRcp }) {
         )}
       </div>
       {/* grid (pas flex + justify-between) : chaque colonne occupe toujours
-          le même tiers de largeur, donc démarre au même x quelle que soit la
-          longueur du texte de la carte précédente ou suivante — avec
+          la même largeur, donc démarre au même x quelle que soit la longueur
+          du texte de la carte précédente ou suivante — avec
           justify-between, la position de "Intervalle" dépendait de la
-          largeur du texte de "Dose" et sautait d'une carte à l'autre. */}
-      <div className="grid grid-cols-3 gap-3.5 pr-1">
-        <div>
-          <div className="text-[9px] font-semibold uppercase tracking-wide text-texte-doux/70">Dose</div>
-          <div className="text-sm font-semibold text-texte">{formaterDose(p)}</div>
-        </div>
-        <div>
-          <div className="text-[9px] font-semibold uppercase tracking-wide text-texte-doux/70">Intervalle</div>
-          <div className="text-sm font-semibold text-texte">{formaterIntervalle(p)}</div>
-        </div>
-        {max && (
-          <div>
-            <div className="text-[9px] font-semibold uppercase tracking-wide text-texte-doux/70">Max / 24 h</div>
-            <div className="text-sm font-semibold" style={{ color: 'var(--interactif)' }}>
-              {max}
-            </div>
-          </div>
-        )}
+          largeur du texte de "Dose" et sautait d'une carte à l'autre.
+          2 colonnes (grille 2x2) quand les 4 champs sont présents (dose au
+          poids + dose absolue + intervalle + max), 3 colonnes sinon. */}
+      <div className={`grid gap-3.5 pr-1 ${champs.length > 3 ? 'grid-cols-2' : 'grid-cols-3'}`}>
+        {champs.map((champ) => (
+          <ChampPosologie key={champ.libelle} libelle={champ.libelle} valeur={champ.valeur} accent={champ.accent} />
+        ))}
       </div>
     </div>
   )
