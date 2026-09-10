@@ -32,8 +32,11 @@ describe('formaterDose', () => {
     expect(formaterDose(posologie({ dose_par_prise_mg_min: 400, dose_par_prise_mg_max: 400 }))).toBe('400 mg')
   })
 
-  it('formate une dose par kg avec le suffixe "/ prise"', () => {
-    expect(formaterDose(posologie({ dose_mg_kg_min: 15, dose_mg_kg_max: 15 }))).toBe('15 mg/kg / prise')
+  // Pas de suffixe "/ prise" : la carte n'affiche qu'une seule prise à la
+  // fois, le préciser serait redondant (contrairement à "/ jour" pour une
+  // dose journalière, qui change le sens de la valeur).
+  it('formate une dose par kg sans suffixe', () => {
+    expect(formaterDose(posologie({ dose_mg_kg_min: 15, dose_mg_kg_max: 15 }))).toBe('15 mg/kg')
   })
 
   it('formate une dose journalière par kg avec le suffixe "/ jour"', () => {
@@ -67,6 +70,24 @@ describe('formaterDose', () => {
 
   it('formate une dose journalière en MUI avec le suffixe "/ jour"', () => {
     expect(formaterDose(posologie({ dose_journaliere_MUI_min: 6, dose_journaliere_MUI_max: 9 }))).toBe('6-9 MUI / jour')
+  })
+
+  // mmol (millimoles) : introduites pour le chlorure de potassium, même
+  // famille que dose_journaliere_mg_kg mais dans une unité distincte.
+  it('formate une dose journalière en mmol/kg avec le suffixe "/ jour"', () => {
+    expect(formaterDose(posologie({ dose_journaliere_mmol_kg_min: 0.8, dose_journaliere_mmol_kg_max: 2 }))).toBe(
+      '0,8-2 mmol/kg / jour',
+    )
+  })
+
+  // dose_par_prise_g : introduit pour la fosfomycine, dosée directement en
+  // grammes dès l'adulte (4-8 g par prise) plutôt qu'en mg.
+  it('formate une dose par prise directement en grammes', () => {
+    expect(formaterDose(posologie({ dose_par_prise_g_min: 4, dose_par_prise_g_max: 8 }))).toBe('4-8 g')
+  })
+
+  it('bascule en mg si la fourchette en grammes n\'est pas entière', () => {
+    expect(formaterDose(posologie({ dose_par_prise_g_min: 0.5, dose_par_prise_g_max: 1 }))).toBe('500-1000 mg')
   })
 })
 
@@ -163,6 +184,16 @@ describe('formaterMax', () => {
     expect(formaterMax(posologie({ dose_journaliere_max_MUI: 'Non établi' }))).toBe('Non établi')
   })
 
+  // mmol (chlorure de potassium) : cas réel du RCP, le maximum dépend de la
+  // kaliémie mesurée plutôt que d'être une valeur fixe.
+  it('affiche dose_journaliere_max_mmol tel quel si c\'est une chaîne', () => {
+    expect(formaterMax(posologie({ dose_journaliere_max_mmol: 'Selon kaliémie' }))).toBe('Selon kaliémie')
+  })
+
+  it('affiche un nombre de dose_journaliere_max_mmol avec le suffixe "mmol/j"', () => {
+    expect(formaterMax(posologie({ dose_journaliere_max_mmol: 150 }))).toBe('150 mmol/j')
+  })
+
   it('affiche dose_max_par_prise_g tel quel si c\'est une chaîne', () => {
     expect(formaterMax(posologie({ dose_max_par_prise_g: 'Selon poids' }))).toBe('Selon poids')
   })
@@ -173,14 +204,21 @@ describe('formaterDoseParKg / formaterDoseAbsolue', () => {
   // poids ET une dose absolue (ex. plafond) — les deux doivent pouvoir être
   // lues indépendamment plutôt que par un seul formaterDose() qui n'en
   // garde qu'une.
-  it('formaterDoseParKg lit dose_mg_kg avec le suffixe "/ prise"', () => {
-    expect(formaterDoseParKg(posologie({ dose_mg_kg_min: 0.01, dose_mg_kg_max: 0.02 }))).toBe('0,01-0,02 mg/kg / prise')
+  // Valeur et suffixe séparés (pas une seule chaîne) : le composant met "/
+  // jour" en gras pour qu'une dose journalière ne soit jamais confondue
+  // avec une dose absolue par prise affichée juste à côté.
+  it('formaterDoseParKg lit dose_mg_kg sans suffixe (dose par prise)', () => {
+    expect(formaterDoseParKg(posologie({ dose_mg_kg_min: 0.01, dose_mg_kg_max: 0.02 }))).toEqual({
+      valeur: '0,01-0,02 mg/kg',
+      suffixe: null,
+    })
   })
 
   it('formaterDoseParKg se replie sur dose_journaliere_mg_kg avec le suffixe "/ jour"', () => {
-    expect(formaterDoseParKg(posologie({ dose_journaliere_mg_kg_min: 20, dose_journaliere_mg_kg_max: 90 }))).toBe(
-      '20-90 mg/kg / jour',
-    )
+    expect(formaterDoseParKg(posologie({ dose_journaliere_mg_kg_min: 20, dose_journaliere_mg_kg_max: 90 }))).toEqual({
+      valeur: '20-90 mg/kg',
+      suffixe: '/ jour',
+    })
   })
 
   it('formaterDoseParKg renvoie null sans champ mg/kg', () => {
@@ -198,8 +236,13 @@ describe('formaterDoseParKg / formaterDoseAbsolue', () => {
 
   it('les deux sont non-null ensemble pour une ligne combinant mg/kg et plafond absolu (cas atropine)', () => {
     const p = posologie({ dose_mg_kg_min: 0.01, dose_mg_kg_max: 0.02, dose_par_prise_mg_max: 0.6 })
-    expect(formaterDoseParKg(p)).toBe('0,01-0,02 mg/kg / prise')
+    expect(formaterDoseParKg(p)).toEqual({ valeur: '0,01-0,02 mg/kg', suffixe: null })
     expect(formaterDoseAbsolue(p)).toBe('0,6 mg')
+  })
+
+  // dose_par_prise_g : cas fosfomycine, dosée directement en grammes.
+  it('formaterDoseAbsolue lit dose_par_prise_g quand aucun champ mg n\'est renseigné', () => {
+    expect(formaterDoseAbsolue(posologie({ dose_par_prise_g_min: 4, dose_par_prise_g_max: 8 }))).toBe('4-8 g')
   })
 })
 

@@ -1,0 +1,247 @@
+{
+  "dci": "levetiracetam",
+  "commun": {
+    "noms_commerciaux": [
+      "Keppra"
+    ],
+    "famille": "Antiépileptique dérivé de la pyrrolidone, mécanisme d'action distinct des autres antiépileptiques",
+    "antidote": "",
+    "indications": [
+      "Crises partielles",
+      "Épilepsie myoclonique juvénile",
+      "Épilepsie généralisée idiopathique"
+    ],
+    "grossesse_allaitement": {
+      "grossesse": "Si après une évaluation attentive le traitement est considéré comme cliniquement nécessaire, le lévétiracétam peut être utilisé au cours de la grossesse.",
+      "allaitement": "Le lévétiracétam est excrété dans le lait maternel. Par conséquent, l'allaitement n'est pas recommandé. Toutefois, si un traitement par le lévétiracétam est nécessaire pendant l'allaitement, le rapport bénéfice/risque du traitement devra être évalué en considérant l'importance de l'allaitement.",
+      "url_crat_grossesse": "https://www.lecrat.fr/7045/",
+      "url_crat_allaitement": "https://www.lecrat.fr/7046/",
+      "source": "RCP LEVETIRACETAM VIATRIS 500 mg, comprimé pelliculé, section 4.6 (texte confirmé identique sur RCP LEVETIRACETAM VIATRIS 100 mg/mL, solution à diluer pour perfusion)"
+    },
+    "contre_indications": [
+      "Hypersensibilité au lévétiracétam, aux autres dérivés de la pyrrolidone, ou à l'un des excipients"
+    ],
+    "interactions_pertinentes": [
+      {
+        "substance": "Méthotrexate",
+        "effet": "Il a été rapporté que l'administration concomitante de lévétiracétam et de méthotrexate diminue la clairance du méthotrexate, entraînant une augmentation/prolongation de sa concentration sanguine, jusqu'à des niveaux potentiellement toxiques.",
+        "action_infirmier": "Signaler au prescripteur toute co-prescription de méthotrexate ; surveiller attentivement les taux plasmatiques de méthotrexate et de lévétiracétam.",
+        "source_rcp": "RCP LEVETIRACETAM VIATRIS 500 mg, section 4.5"
+      },
+      {
+        "substance": "Macrogol",
+        "effet": "Des cas isolés de diminution de l'efficacité du lévétiracétam ont été rapportés lorsque le macrogol a été administré de façon concomitante à la prise orale de lévétiracétam.",
+        "action_infirmier": "Signaler au prescripteur la co-prescription de macrogol ; surveiller l'efficacité clinique du traitement antiépileptique (recrudescence de crises).",
+        "source_rcp": "RCP LEVETIRACETAM VIATRIS 500 mg, section 4.5"
+      }
+    ],
+    "surveillance_specifique": [
+      {
+        "evenement": "Altération de la numération de la formule sanguine",
+        "explication": "De rares cas ont été décrits en association avec l'administration de lévétiracétam, généralement en début de traitement.",
+        "action": "Une numération de la formule sanguine complète est conseillée chez les patients souffrant de faiblesse importante, de fièvre, d'infections récurrentes ou de troubles de la coagulation ; signaler au prescripteur.",
+        "source_rcp": "RCP LEVETIRACETAM VIATRIS 500 mg, section 4.4"
+      },
+      {
+        "evenement": "Insuffisance rénale aiguë",
+        "explication": "L'utilisation du lévétiracétam a été très rarement associée à une insuffisance rénale aiguë, avec un délai d'apparition allant de quelques jours à plusieurs mois.",
+        "action": "Signaler au prescripteur toute dégradation de la fonction rénale (diurèse, créatininémie) sous traitement.",
+        "source_rcp": "RCP LEVETIRACETAM VIATRIS 500 mg, section 4.4"
+      },
+      {
+        "evenement": "Symptômes psychotiques et troubles du comportement",
+        "explication": "Le lévétiracétam peut provoquer des symptômes psychotiques et des troubles du comportement, y compris une irritabilité et une agressivité, avec parfois d'importants changements d'humeur ou de la personnalité.",
+        "action": "Surveiller l'apparition de signes psychiatriques ; signaler au prescripteur, qui pourra envisager une adaptation ou un arrêt progressif du traitement.",
+        "source_rcp": "RCP LEVETIRACETAM VIATRIS 500 mg, section 4.4"
+      },
+      {
+        "evenement": "Aggravation paradoxale de la fréquence ou de la gravité des crises convulsives",
+        "explication": "Comme avec d'autres antiépileptiques, le lévétiracétam peut dans de rares cas accroître la fréquence ou la gravité des crises, notamment au cours du premier mois suivant l'instauration ou l'augmentation de dose, effet le plus souvent réversible à l'arrêt ou à la diminution de la dose.",
+        "action": "Conseiller au patient de consulter immédiatement en cas d'aggravation des crises ; signaler au prescripteur.",
+        "source_rcp": "RCP LEVETIRACETAM VIATRIS 500 mg, section 4.4"
+      },
+      {
+        "evenement": "Allongement de l'intervalle QT à l'électrocardiogramme",
+        "explication": "De rares cas d'allongement de l'intervalle QT ont été observés en surveillance post-commercialisation, en particulier chez les patients présentant un allongement préexistant du QTc, sous traitement associé modifiant le QTc, une pathologie cardiaque ou des troubles électrolytiques.",
+        "action": "Renforcer la surveillance électrocardiographique chez les patients à risque ; signaler au prescripteur toute association avec un autre médicament modifiant l'intervalle QTc.",
+        "source_rcp": "RCP LEVETIRACETAM VIATRIS 500 mg, section 4.4 ; ANSM, actualité PRAC juillet 2020 sur l'allongement de l'intervalle QT sous lévétiracétam"
+      },
+      {
+        "evenement": "Recrudescence des crises, voire état de mal épileptique, en cas d'arrêt brutal du traitement",
+        "explication": "Le RCP impose un arrêt progressif du traitement, par paliers adaptés au poids (diminution de 500 mg deux fois par jour toutes les 2 à 4 semaines chez l'adulte et l'adolescent ≥ 50 kg ; paliers de 10 mg/kg puis 7 mg/kg deux fois par jour toutes les 2 semaines selon le poids chez l'enfant).",
+        "action": "Ne jamais interrompre brutalement le traitement ; respecter le schéma de décroissance progressive prescrit ; signaler au prescripteur toute inobservance.",
+        "source_rcp": "RCP LEVETIRACETAM VIATRIS 500 mg, section 4.2 (« Arrêt du traitement »)"
+      }
+    ],
+    "pictogrammes": []
+  },
+  "iv": {
+    "reconstitution": null,
+    "administration": {
+      "note_ajustement": "Dose adaptée selon la fonction rénale, la fonction hépatique sévère et l'âge, se référer au protocole du service et au RCP.",
+      "posologie": [
+        {
+          "population": "Traitement standard",
+          "categorie": "generale",
+          "population_type": "adulte",
+          "age_min_mois": 144,
+          "poids_min_kg": 50,
+          "dose_par_prise_mg_min": 250,
+          "dose_par_prise_mg_max": 1500,
+          "intervalle_min_h": 12,
+          "intervalle_max_h": 12,
+          "dose_journaliere_max_g": 3
+        },
+        {
+          "population": "Traitement standard",
+          "categorie": "generale",
+          "population_type": "pediatrie",
+          "age_min_mois": 48,
+          "poids_max_kg": 50,
+          "dose_mg_kg_min": 10,
+          "dose_mg_kg_max": 30,
+          "intervalle_min_h": 12,
+          "intervalle_max_h": 12,
+          "dose_journaliere_max_g": "Selon poids"
+        }
+      ]
+    },
+    "incompatibilites": [],
+    "preparation": [
+      {
+        "voie": "PERF",
+        "detail": "Dilution dans au moins 100 mL de NaCl 0,9 %, Ringer lactate, ou G5 % (concentration usuelle 2 mg/mL).",
+        "duree": "15 minutes",
+        "stabilite": "24 heures, entre 2 et 8 °C"
+      }
+    ]
+  },
+  "oral": {
+    "formes": [
+      {
+        "type": "Comprimé pelliculé",
+        "dosage": "250 mg, 500 mg, 750 mg et 1000 mg",
+        "ecrasable": false,
+        "ouverture_gelule": null,
+        "posologie_adulte": [
+          {
+            "population": "Traitement standard",
+            "categorie": "generale",
+            "population_type": "adulte",
+            "age_min_mois": 144,
+            "poids_min_kg": 50,
+            "dose_par_prise_mg_min": 250,
+            "dose_par_prise_mg_max": 1500,
+            "intervalle_min_h": 12,
+            "intervalle_max_h": 12,
+            "dose_journaliere_max_g": 3
+          }
+        ]
+      },
+      {
+        "type": "Solution buvable",
+        "dosage": "100 mg/mL",
+        "ecrasable": null,
+        "ouverture_gelule": null,
+        "posologie_adulte": [
+          {
+            "population": "Traitement standard - Enfant",
+            "categorie": "generale",
+            "population_type": "pediatrie",
+            "age_min_mois": 6,
+            "poids_max_kg": 50,
+            "dose_mg_kg_min": 10,
+            "dose_mg_kg_max": 30,
+            "intervalle_min_h": 12,
+            "intervalle_max_h": 12,
+            "dose_journaliere_max_g": "Selon poids"
+          },
+          {
+            "population": "Traitement standard - Nourrisson",
+            "categorie": "generale",
+            "population_type": "pediatrie",
+            "age_min_mois": 1,
+            "age_max_mois": 6,
+            "dose_mg_kg_min": 7,
+            "dose_mg_kg_max": 21,
+            "intervalle_min_h": 12,
+            "intervalle_max_h": 12,
+            "dose_journaliere_max_g": "Selon poids"
+          }
+        ]
+      }
+    ],
+    "recommandation_sonde": {
+      "forme_preferee": "Solution buvable",
+      "alternative": ""
+    }
+  },
+  "tracabilite": {
+    "rcp_source": [
+      {
+        "specialite": "KEPPRA 500 mg, comprimé pelliculé",
+        "titulaire": "UCB PHARMA SA",
+        "date_maj": "31/08/2026",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/68596770/extrait"
+      },
+      {
+        "specialite": "KEPPRA 250 mg, 750 mg et 1000 mg, comprimé pelliculé",
+        "titulaire": "UCB PHARMA SA",
+        "date_maj": "non relevée (redirection EMA)",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/65586187/extrait ; .../68754537/extrait ; .../68719194/extrait"
+      },
+      {
+        "specialite": "LEVETIRACETAM VIATRIS 500 mg, comprimé pelliculé",
+        "titulaire": "VIATRIS SANTE",
+        "date_maj": "05/12/2025",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/65523468/extrait"
+      },
+      {
+        "specialite": "LEVETIRACETAM VIATRIS 1000 mg, comprimé pelliculé",
+        "titulaire": "VIATRIS SANTE",
+        "date_maj": "05/12/2025",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/61407427/extrait"
+      },
+      {
+        "specialite": "KEPPRA 100 mg/mL, solution buvable",
+        "titulaire": "UCB PHARMA SA",
+        "date_maj": "non relevée (redirection EMA)",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/60132330/extrait"
+      },
+      {
+        "specialite": "LEVETIRACETAM EG 100 mg/mL, solution buvable",
+        "titulaire": "EG LABO - Laboratoires EuroGenerics",
+        "date_maj": "31/08/2026",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/67390276/extrait"
+      },
+      {
+        "specialite": "KEPPRA 100 mg/mL, solution à diluer pour perfusion",
+        "titulaire": "UCB PHARMA SA",
+        "date_maj": "non relevée (redirection EMA)",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/61901995/extrait"
+      },
+      {
+        "specialite": "LEVETIRACETAM VIATRIS 100 mg/mL, solution à diluer pour perfusion",
+        "titulaire": "VIATRIS SANTE",
+        "date_maj": "10/12/2025",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/68220693/extrait"
+      },
+      {
+        "specialite": "LEVETIRACETAM TILLOMED 100 mg/mL, solution à diluer pour perfusion",
+        "titulaire": "TILLOMED PHARMA GmbH",
+        "date_maj": "22/02/2024 (déclaration de commercialisation)",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/66707204/extrait"
+      }
+    ],
+    "statut": "valide",
+    "validation": {
+      "date": "2026-09-08",
+      "validateur": "Anna Trabaud-Lopez (IDE, porteuse du projet), vérification des données extraites contre les RCP ; équipe pharmacie, validation de la méthodologie et arbitrage des points litigieux",
+      "perimetre": [
+        "adulte",
+        "pediatrie"
+      ],
+      "prochaine_revision": "2026-12-08"
+    }
+  }
+}

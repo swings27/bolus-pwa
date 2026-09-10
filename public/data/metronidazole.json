@@ -159,8 +159,6 @@
           "population_type": "adulte",
           "dose_par_prise_mg_min": 1000,
           "dose_par_prise_mg_max": 1500,
-          "intervalle_min_h": 24,
-          "intervalle_max_h": 24,
           "nb_prises_max_24h": 1,
           "dose_journaliere_max_g": 1.5
         },
@@ -192,6 +190,8 @@
           "population_type": "pediatrie",
           "dose_journaliere_mg_kg_min": 35,
           "dose_journaliere_mg_kg_max": 50,
+          "intervalle_min_h": 8,
+          "intervalle_max_h": 8,
           "nb_prises_min_24h": 3,
           "nb_prises_max_24h": 3,
           "dose_journaliere_max_g": 2.4
@@ -203,6 +203,8 @@
           "age_max_mois": 144,
           "dose_journaliere_mg_kg_min": 20,
           "dose_journaliere_mg_kg_max": 40,
+          "intervalle_min_h": 8,
+          "intervalle_max_h": 24,
           "nb_prises_min_24h": 1,
           "nb_prises_max_24h": 3
         },
@@ -222,6 +224,8 @@
           "population_type": "pediatrie",
           "dose_journaliere_mg_kg_min": 15,
           "dose_journaliere_mg_kg_max": 15,
+          "intervalle_min_h": 12,
+          "intervalle_max_h": 24,
           "nb_prises_min_24h": 1,
           "nb_prises_max_24h": 2
         },
@@ -372,6 +376,8 @@
             "population_type": "pediatrie",
             "dose_journaliere_mg_kg_min": 30,
             "dose_journaliere_mg_kg_max": 40,
+            "intervalle_min_h": 8,
+            "intervalle_max_h": 8,
             "nb_prises_min_24h": 3,
             "nb_prises_max_24h": 3
           },

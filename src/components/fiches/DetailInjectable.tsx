@@ -7,20 +7,25 @@ interface IDetailInjectableProps {
   donnees: IFormeIv
 }
 
-const MOTIF_VOLUME_RECONSTITUTION = /^volume_par_(\d+)mg_mL$/
+// mg (ex. amoxicilline) ou UI (ex. spiramycine, dosée en unités
+// internationales plutôt qu'en poids) — la casse de l'unité est capturée
+// telle quelle plutôt que fixée en dur, voir IReconstitution.
+const MOTIF_VOLUME_RECONSTITUTION = /^volume_par_(\d+)(mg|UI)_mL$/
 
-/** Extrait et trie les paliers `volume_par_<dose>mg_mL` présents dans la
- * reconstitution — la liste des paliers varie d'une molécule à l'autre
- * (voir le commentaire sur IReconstitution), donc on les découvre plutôt que
- * d'en supposer un jeu fixe. */
-function volumesReconstitution(reconstitution: IReconstitution): { doseMg: number; volumeMl: number }[] {
+/** Extrait et trie les paliers `volume_par_<dose><unité>_mL` présents dans
+ * la reconstitution — la liste des paliers (et l'unité) varie d'une
+ * molécule à l'autre (voir le commentaire sur IReconstitution), donc on les
+ * découvre plutôt que d'en supposer un jeu fixe. */
+function volumesReconstitution(reconstitution: IReconstitution): { dose: number; unite: string; volumeMl: number }[] {
   return Object.entries(reconstitution)
     .map(([cle, valeur]) => {
       const correspondance = MOTIF_VOLUME_RECONSTITUTION.exec(cle)
-      return correspondance && typeof valeur === 'number' ? { doseMg: Number(correspondance[1]), volumeMl: valeur } : null
+      return correspondance && typeof valeur === 'number'
+        ? { dose: Number(correspondance[1]), unite: correspondance[2], volumeMl: valeur }
+        : null
     })
-    .filter((v): v is { doseMg: number; volumeMl: number } => v !== null)
-    .sort((a, b) => a.doseMg - b.doseMg)
+    .filter((v): v is { dose: number; unite: string; volumeMl: number } => v !== null)
+    .sort((a, b) => a.dose - b.dose)
 }
 
 const LABELS_VOIE: Record<string, string> = {
@@ -54,9 +59,9 @@ export default function DetailInjectable({ donnees }: IDetailInjectableProps) {
             {donnees.reconstitution.solvant && <p className="text-xs text-texte">{donnees.reconstitution.solvant}</p>}
             {volumes.length > 0 && (
               <ul className="mt-1.5 flex flex-col gap-0.5 text-[11.5px] text-texte-doux">
-                {volumes.map(({ doseMg, volumeMl }) => (
-                  <li key={doseMg}>
-                    {doseMg} mg → {volumeMl} mL
+                {volumes.map(({ dose, unite, volumeMl }) => (
+                  <li key={`${dose}-${unite}`}>
+                    {dose} {unite} → {volumeMl} mL
                   </li>
                 ))}
               </ul>

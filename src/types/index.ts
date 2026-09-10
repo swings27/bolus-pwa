@@ -19,10 +19,11 @@
 // camelCase, conformément aux conventions déjà en usage dans le reste du
 // code TypeScript de l'app.
 
-/** Populations couvertes par une ligne de posologie. Seul "adulte" est
- * affiché pour le moment (voir SectionPosologies) ; "pediatrie" reste
- * stocké pour une version ultérieure. */
-export type IPopulationType = 'adulte' | 'pediatrie'
+/** Populations couvertes par une ligne de posologie. Seul "pediatrie" est
+ * filtré pour le moment (voir SectionPosologies) ; "mixte" (ex. tranche
+ * d'âge/poids qui chevauche petits enfants et adultes) reste donc visible,
+ * comme "adulte". */
+export type IPopulationType = 'adulte' | 'pediatrie' | 'mixte'
 
 /** Une ligne de posologie telle qu'extraite d'un RCP. Les différents champs
  * de dose/intervalle sont mutuellement exclusifs selon la façon dont le RCP
@@ -43,6 +44,11 @@ export interface IPosologieRcp {
   dose_par_prise_mg?: number
   dose_par_prise_mg_min?: number
   dose_par_prise_mg_max?: number
+  /** Dose par prise directement en grammes plutôt qu'en mg (ex. fosfomycine,
+   * dosée en g dès l'adulte) — même rang de priorité que dose_par_prise_mg
+   * ci-dessus, voir formaterDose()/formaterDoseAbsolue(). */
+  dose_par_prise_g_min?: number
+  dose_par_prise_g_max?: number
   dose_mg_kg_min?: number
   dose_mg_kg_max?: number
   dose_journaliere_mg_kg_min?: number
@@ -75,6 +81,14 @@ export interface IPosologieRcp {
   dose_journaliere_MUI_par_10kg_max?: number
   dose_par_prise_UI_kg_min?: number
   dose_par_prise_UI_kg_max?: number
+  /** mmol = millimoles (ex. chlorure de potassium) — même famille que
+   * dose_journaliere_mg_kg(_min/_max)/dose_journaliere_max_g, en unité
+   * différente ; accepte aussi une chaîne pour dose_journaliere_max_mmol,
+   * même raison que dose_journaliere_max_g ci-dessus (ex. "Selon
+   * kaliémie"). */
+  dose_journaliere_mmol_kg_min?: number
+  dose_journaliere_mmol_kg_max?: number
+  dose_journaliere_max_mmol?: number | string
   intervalle_min_h?: number
   intervalle_max_h?: number
   intervalle_min_min?: number
@@ -138,16 +152,18 @@ export interface IPreparationVoie {
 /** Reconstitution d'une poudre avant dilution/injection (ex. amoxicilline,
  * vancomycine). Absente (null) pour les solutions déjà prêtes à l'emploi.
  *
- * `volume_par_<dose>mg_mL` : signature indexée plutôt qu'une liste de champs
- * fixes (500/1000/2000...) — les paliers de dose varient d'une molécule à
- * l'autre (ex. 4000 mg pour la pipéracilline/tazobactam), et une liste figée
- * fait silencieusement disparaître tout palier non prévu à l'avance (voir
+ * `volume_par_<dose>mg_mL` / `volume_par_<dose>UI_mL` : signature indexée
+ * plutôt qu'une liste de champs fixes (500/1000/2000...) — les paliers de
+ * dose ET l'unité varient d'une molécule à l'autre (ex. 4000 mg pour la
+ * pipéracilline/tazobactam, UI pour la spiramycine), et une liste figée fait
+ * silencieusement disparaître tout palier non prévu à l'avance (voir
  * DetailInjectable.tsx, qui les découvre dynamiquement plutôt que de les
  * énumérer un par un). */
 export interface IReconstitution {
   solvant?: string
   stabilite_avant_dilution?: string
   [cle: `volume_par_${number}mg_mL`]: number | undefined
+  [cle: `volume_par_${number}UI_mL`]: number | undefined
 }
 
 /** Grossesse et allaitement — contenu fixe (pas une liste dépliable comme

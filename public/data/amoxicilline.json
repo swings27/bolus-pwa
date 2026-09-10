@@ -157,6 +157,8 @@
           "poids_max_kg": 40,
           "dose_journaliere_mg_kg_min": 20,
           "dose_journaliere_mg_kg_max": 200,
+          "intervalle_min_h": 6,
+          "intervalle_max_h": 12,
           "nb_prises_min_24h": 2,
           "nb_prises_max_24h": 4,
           "dose_mg_kg_max": 25
@@ -168,6 +170,8 @@
           "poids_max_kg": 40,
           "dose_journaliere_mg_kg_min": 200,
           "dose_journaliere_mg_kg_max": 200,
+          "intervalle_min_h": 6,
+          "intervalle_max_h": 8,
           "nb_prises_min_24h": 3,
           "nb_prises_max_24h": 4,
           "dose_mg_kg_max": 25
@@ -179,6 +183,8 @@
           "poids_max_kg": 40,
           "dose_journaliere_mg_kg_min": 100,
           "dose_journaliere_mg_kg_max": 200,
+          "intervalle_min_h": 6,
+          "intervalle_max_h": 8,
           "nb_prises_min_24h": 3,
           "nb_prises_max_24h": 4,
           "dose_mg_kg_max": 25
@@ -190,6 +196,8 @@
           "poids_max_kg": 40,
           "dose_journaliere_mg_kg_min": 50,
           "dose_journaliere_mg_kg_max": 150,
+          "intervalle_min_h": 8,
+          "intervalle_max_h": 8,
           "nb_prises_min_24h": 3,
           "nb_prises_max_24h": 3,
           "dose_mg_kg_max": 25
@@ -202,7 +210,9 @@
           "dose_journaliere_mg_kg_min": 25,
           "dose_journaliere_mg_kg_max": 50,
           "nb_prises_min_24h": 3,
-          "nb_prises_max_24h": 3
+          "nb_prises_max_24h": 3,
+          "intervalle_min_h": 8,
+          "intervalle_max_h": 8
         },
         {
           "population": "Enfant < 40 kg, maladie de Lyme, phase tardive (atteinte systémique)",
@@ -212,7 +222,9 @@
           "dose_journaliere_mg_kg_min": 50,
           "dose_journaliere_mg_kg_max": 50,
           "nb_prises_min_24h": 3,
-          "nb_prises_max_24h": 3
+          "nb_prises_max_24h": 3,
+          "intervalle_min_h": 8,
+          "intervalle_max_h": 8
         },
         {
           "population": "Enfant < 40 kg, prophylaxie de l'endocardite bactérienne",
@@ -232,6 +244,8 @@
           "poids_min_kg": 4,
           "dose_journaliere_mg_kg_min": 20,
           "dose_journaliere_mg_kg_max": 150,
+          "intervalle_min_h": 8,
+          "intervalle_max_h": 8,
           "nb_prises_min_24h": 3,
           "nb_prises_max_24h": 3,
           "dose_mg_kg_max": 25
@@ -243,6 +257,8 @@
           "poids_max_kg": 4,
           "dose_journaliere_mg_kg_min": 20,
           "dose_journaliere_mg_kg_max": 100,
+          "intervalle_min_h": 12,
+          "intervalle_max_h": 12,
           "nb_prises_min_24h": 2,
           "nb_prises_max_24h": 2,
           "dose_mg_kg_max": 25
@@ -254,7 +270,9 @@
           "poids_max_kg": 40,
           "dose_journaliere_mg_kg_max": 120,
           "nb_prises_min_24h": 2,
-          "nb_prises_max_24h": 6
+          "nb_prises_max_24h": 6,
+          "intervalle_min_h": 4,
+          "intervalle_max_h": 12
         }
       ],
       "note_ajustement": "Dose adaptée selon la fonction rénale, se référer au protocole du service."
@@ -370,6 +388,8 @@
             "poids_max_kg": 40,
             "dose_journaliere_mg_kg_min": 20,
             "dose_journaliere_mg_kg_max": 90,
+            "intervalle_min_h": 8,
+            "intervalle_max_h": 8,
             "nb_prises_max_24h": 3
           },
           {
@@ -379,6 +399,8 @@
             "poids_max_kg": 40,
             "dose_journaliere_mg_kg_min": 40,
             "dose_journaliere_mg_kg_max": 90,
+            "intervalle_min_h": 8,
+            "intervalle_max_h": 8,
             "nb_prises_max_24h": 3
           },
           {
@@ -388,6 +410,8 @@
             "poids_max_kg": 40,
             "dose_journaliere_mg_kg_min": 100,
             "dose_journaliere_mg_kg_max": 100,
+            "intervalle_min_h": 8,
+            "intervalle_max_h": 8,
             "nb_prises_min_24h": 3,
             "nb_prises_max_24h": 3
           },
@@ -399,7 +423,9 @@
             "dose_journaliere_mg_kg_min": 25,
             "dose_journaliere_mg_kg_max": 50,
             "nb_prises_min_24h": 3,
-            "nb_prises_max_24h": 3
+            "nb_prises_max_24h": 3,
+            "intervalle_min_h": 8,
+            "intervalle_max_h": 8
           },
           {
             "population": "Enfant < 40 kg, Lyme, phase tardive",
@@ -409,7 +435,9 @@
             "dose_journaliere_mg_kg_min": 100,
             "dose_journaliere_mg_kg_max": 100,
             "nb_prises_min_24h": 3,
-            "nb_prises_max_24h": 3
+            "nb_prises_max_24h": 3,
+            "intervalle_min_h": 8,
+            "intervalle_max_h": 8
           },
           {
             "population": "Enfant < 40 kg, prophylaxie endocardite",

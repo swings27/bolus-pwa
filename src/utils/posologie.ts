@@ -19,48 +19,88 @@ function formaterPlage(min: number | undefined, max: number | undefined, unite: 
   return `${formaterNombre((min ?? max)!)} ${unite}`
 }
 
+// Même convention clinique que formaterGrammesOuMg (voir plus bas), mais
+// pour une dose par prise exprimée directement en grammes (ex. fosfomycine,
+// dosée en g et non en mg) plutôt qu'un plafond journalier isolé avec
+// suffixe "/j" — pas de suffixe ici, même raison que pour le mg (voir
+// formaterDose ci-dessous). Grammes entiers sur toute la fourchette → "g",
+// sinon on bascule toute la fourchette en mg pour rester cohérent (jamais
+// "4 g-8500 mg").
+function formaterDoseEnGrammes(min: number | undefined, max: number | undefined): string | null {
+  if (min === undefined && max === undefined) return null
+  const entiers = (min === undefined || Number.isInteger(min)) && (max === undefined || Number.isInteger(max))
+  if (entiers) return formaterPlage(min, max, 'g')
+  const versMg = (n: number) => Math.round(n * 1000 * 100) / 100
+  return formaterPlage(min !== undefined ? versMg(min) : undefined, max !== undefined ? versMg(max) : undefined, 'mg')
+}
+
 export function formaterDose(p: IPosologieRcp): string {
   if (p.dose_par_prise_mg !== undefined) return `${formaterNombre(p.dose_par_prise_mg)} mg`
   const parPrise = formaterPlage(p.dose_par_prise_mg_min, p.dose_par_prise_mg_max, 'mg')
   if (parPrise) return parPrise
+  // Dose par prise directement en grammes (ex. fosfomycine, 4-8 g) — même
+  // rang de priorité que le mg ci-dessus, juste une unité différente.
+  const parPriseG = formaterDoseEnGrammes(p.dose_par_prise_g_min, p.dose_par_prise_g_max)
+  if (parPriseG) return parPriseG
   // MUI (millions d'unités internationales, ex. spiramycine) : même place
   // dans l'ordre de priorité que la dose par prise en mg ci-dessus, une
   // unité différente pour la même façon d'exprimer la dose.
   if (p.dose_par_prise_MUI !== undefined) return `${formaterNombre(p.dose_par_prise_MUI)} MUI`
   const parPriseMUI = formaterPlage(p.dose_par_prise_MUI_min, p.dose_par_prise_MUI_max, 'MUI')
   if (parPriseMUI) return parPriseMUI
+  // Pas de suffixe "/ prise" ici : la carte n'affiche qu'une seule prise à
+  // la fois, le préciser serait redondant (contrairement à "/ jour"
+  // ci-dessous, qui change réellement le sens de la valeur).
   const parKg = formaterPlage(p.dose_mg_kg_min, p.dose_mg_kg_max, 'mg/kg')
-  if (parKg) return `${parKg} / prise`
+  if (parKg) return parKg
   const parKgParJour = formaterPlage(p.dose_journaliere_mg_kg_min, p.dose_journaliere_mg_kg_max, 'mg/kg')
   if (parKgParJour) return `${parKgParJour} / jour`
   const parJourMUI = formaterPlage(p.dose_journaliere_MUI_min, p.dose_journaliere_MUI_max, 'MUI')
   if (parJourMUI) return `${parJourMUI} / jour`
+  // mmol (millimoles, ex. chlorure de potassium) : même famille que
+  // dose_journaliere_mg_kg ci-dessus, en unité différente.
+  const parKgParJourMmol = formaterPlage(p.dose_journaliere_mmol_kg_min, p.dose_journaliere_mmol_kg_max, 'mmol/kg')
+  if (parKgParJourMmol) return `${parKgParJourMmol} / jour`
   const debit = formaterPlage(p.dose_ugkgmin_min, p.dose_ugkgmin_max, 'µg/kg/min')
   if (debit) return debit
   return '—'
 }
 
-/** Partie "au poids" d'une dose (mg/kg par prise, ou mg/kg par jour) —
- * calculée séparément de formaterDose() pour pouvoir l'afficher côte à côte
+/** Dose "au poids" (mg/kg), avec sa valeur et un suffixe optionnel séparés
+ * plutôt qu'une seule chaîne — pour que le composant d'affichage puisse
+ * mettre "/ jour" en évidence (gras) quand la dose est journalière plutôt
+ * que par prise, un écart qu'il ne faut jamais manquer. Pas de suffixe pour
+ * la dose par prise : la carte n'affiche qu'une seule prise à la fois, "/
+ * prise" serait redondant. */
+export interface IDoseParKg {
+  valeur: string
+  suffixe: '/ jour' | null
+}
+
+/** Calculée séparément de formaterDose() pour pouvoir l'afficher côte à côte
  * avec formaterDoseAbsolue() plutôt que de la masquer par ordre de
  * priorité. Cas réel (atropine, adrénaline, pipéracilline/tazobactam en
  * pédiatrie) : le RCP donne à la fois "0,01-0,02 mg/kg" ET un plafond
  * absolu en mg — les deux sont des informations de sécurité distinctes,
  * mieux vaut les montrer toutes les deux plutôt que de deviner laquelle
  * afficher. */
-export function formaterDoseParKg(p: IPosologieRcp): string | null {
+export function formaterDoseParKg(p: IPosologieRcp): IDoseParKg | null {
   const parKg = formaterPlage(p.dose_mg_kg_min, p.dose_mg_kg_max, 'mg/kg')
-  if (parKg) return `${parKg} / prise`
+  if (parKg) return { valeur: parKg, suffixe: null }
   const parKgParJour = formaterPlage(p.dose_journaliere_mg_kg_min, p.dose_journaliere_mg_kg_max, 'mg/kg')
-  if (parKgParJour) return `${parKgParJour} / jour`
+  if (parKgParJour) return { valeur: parKgParJour, suffixe: '/ jour' }
+  const parKgParJourMmol = formaterPlage(p.dose_journaliere_mmol_kg_min, p.dose_journaliere_mmol_kg_max, 'mmol/kg')
+  if (parKgParJourMmol) return { valeur: parKgParJourMmol, suffixe: '/ jour' }
   return null
 }
 
-/** Partie "absolue" d'une dose (mg fixes ou fourchette de mg, jamais ramenés
+/** Partie "absolue" d'une dose (mg ou g fixes/en fourchette, jamais ramenés
  * au poids) — voir formaterDoseParKg() ci-dessus. */
 export function formaterDoseAbsolue(p: IPosologieRcp): string | null {
   if (p.dose_par_prise_mg !== undefined) return `${formaterNombre(p.dose_par_prise_mg)} mg`
-  return formaterPlage(p.dose_par_prise_mg_min, p.dose_par_prise_mg_max, 'mg')
+  const enMg = formaterPlage(p.dose_par_prise_mg_min, p.dose_par_prise_mg_max, 'mg')
+  if (enMg) return enMg
+  return formaterDoseEnGrammes(p.dose_par_prise_g_min, p.dose_par_prise_g_max)
 }
 
 export function formaterIntervalle(p: IPosologieRcp): string {
@@ -132,6 +172,10 @@ export function formaterMax(p: IPosologieRcp): string | null {
   // normale de l'exprimer, aucune conversion nécessaire.
   if (maxMUI !== undefined) return `${formaterNombre(maxMUI)} MUI/j`
 
+  const maxMmol = p.dose_journaliere_max_mmol
+  if (typeof maxMmol === 'string') return maxMmol
+  if (maxMmol !== undefined) return `${formaterNombre(maxMmol)} mmol/j`
+
   const maxParPrise = p.dose_max_par_prise_g
   if (typeof maxParPrise === 'string') return maxParPrise
   if (maxParPrise !== undefined) return formaterGrammesOuMg(maxParPrise, 'prise')
@@ -196,6 +240,9 @@ function estUnePlageDeDose(p: IPosologieRcp): boolean {
   if (p.dose_par_prise_mg !== undefined) return false
   if (p.dose_par_prise_mg_min !== undefined || p.dose_par_prise_mg_max !== undefined) {
     return p.dose_par_prise_mg_min !== p.dose_par_prise_mg_max
+  }
+  if (p.dose_par_prise_g_min !== undefined || p.dose_par_prise_g_max !== undefined) {
+    return p.dose_par_prise_g_min !== p.dose_par_prise_g_max
   }
   if (p.dose_par_prise_MUI !== undefined) return false
   if (p.dose_par_prise_MUI_min !== undefined || p.dose_par_prise_MUI_max !== undefined) {

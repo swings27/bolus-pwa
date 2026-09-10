@@ -296,6 +296,8 @@
             "categorie": "generale",
             "dose_par_prise_mg_min": 50,
             "dose_par_prise_mg_max": 200,
+            "intervalle_min_h": 12,
+            "intervalle_max_h": 12,
             "nb_prises_min_24h": 2,
             "nb_prises_max_24h": 2,
             "dose_journaliere_max_g": 0.4

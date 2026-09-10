@@ -90,6 +90,7 @@
           "dose_par_prise_mg_max": 20,
           "nb_prises_max_24h": 4,
           "intervalle_min_h": 6,
+          "dose_journaliere_max_g": 0.08,
           "population_type": "adulte"
         },
         {

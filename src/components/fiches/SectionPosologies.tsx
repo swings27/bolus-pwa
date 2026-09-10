@@ -36,7 +36,7 @@ function Puce({ children, couleur }: { children: ReactNode; couleur: string }) {
   )
 }
 
-function ChampPosologie({ libelle, valeur, accent }: { libelle: string; valeur: string; accent?: boolean }) {
+function ChampPosologie({ libelle, valeur, accent }: { libelle: string; valeur: ReactNode; accent?: boolean }) {
   return (
     <div>
       <div className="text-[9px] font-semibold uppercase tracking-wide text-texte-doux/70">{libelle}</div>
@@ -60,10 +60,23 @@ function CartePosologie({ p }: { p: IPosologieRcp }) {
   // compter.
   const doseParKg = formaterDoseParKg(p)
   const doseAbsolue = formaterDoseAbsolue(p)
-  const champsDose =
+  const champsDose: { libelle: string; valeur: ReactNode }[] =
     doseParKg && doseAbsolue
       ? [
-          { libelle: 'Dose (au poids)', valeur: doseParKg },
+          {
+            libelle: 'Dose (au poids)',
+            // Le suffixe "/ jour" ressort en gras : une dose journalière
+            // affichée à côté d'une dose absolue par prise ne doit jamais
+            // pouvoir être confondue avec elle, l'écart entre les deux
+            // pouvant compter (voir formaterDoseParKg).
+            valeur: doseParKg.suffixe ? (
+              <>
+                {doseParKg.valeur} <b className="font-bold">{doseParKg.suffixe}</b>
+              </>
+            ) : (
+              doseParKg.valeur
+            ),
+          },
           { libelle: 'Dose (absolue)', valeur: doseAbsolue },
         ]
       : [{ libelle: 'Dose', valeur: formaterDose(p) }]

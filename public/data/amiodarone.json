@@ -168,8 +168,6 @@
           "categorie": "generale",
           "dose_mg_kg_min": 5,
           "dose_mg_kg_max": 5,
-          "intervalle_min_h": 8,
-          "intervalle_max_h": 12,
           "nb_prises_max_24h": 3
         },
         {
@@ -178,8 +176,6 @@
           "categorie": "generale",
           "dose_journaliere_mg_kg_min": 10,
           "dose_journaliere_mg_kg_max": 20,
-          "intervalle_min_h": 24,
-          "intervalle_max_h": 24,
           "dose_journaliere_max_g": 1.2
         },
         {

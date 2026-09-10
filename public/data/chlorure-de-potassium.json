@@ -1,0 +1,294 @@
+{
+  "dci": "chlorure de potassium",
+  "commun": {
+    "noms_commerciaux": [
+      "Diffu-K",
+      "Kaleorid LP"
+    ],
+    "famille": "Électrolyte supplémentation potassique",
+    "antidote": "",
+    "indications": [
+      "Hypokaliémie",
+      "Déplétion potassique sévère",
+      "Hypokaliémie médicamenteuse (diurétiques, corticoïdes, laxatifs)",
+      "Prévention des carences potassiques"
+    ],
+    "grossesse_allaitement": {
+      "grossesse": "Le chlorure de potassium ne sera administré au cours de la grossesse que si nécessaire.",
+      "allaitement": "En l'absence de données sur un éventuel passage dans le lait maternel, il est préférable d'éviter d'allaiter pendant le traitement.",
+      "url_crat_grossesse": null,
+      "url_crat_allaitement": null,
+      "source": "RCP CHLORURE DE POTASSIUM LAVOISIER 10 % (0,10 g/ml), solution à diluer pour perfusion, section 4.6"
+    },
+    "contre_indications": [
+      "Hyperkaliémie ou toute situation pouvant entraîner une hyperkaliémie",
+      "Insuffisance rénale sévère",
+      "Insuffisance surrénalienne aiguë",
+      "Acidose métabolique décompensée",
+      "Ulcère ou obstruction du tractus gastro-intestinal (formes orales à libération prolongée)"
+    ],
+    "interactions_pertinentes": [
+      {
+        "substance": "Diurétiques d'épargne potassique",
+        "effet": "Risque d'hyperkaliémie potentiellement létale, en particulier chez l'insuffisant rénal, par addition des effets hyperkaliémiants.",
+        "action_infirmier": "Signaler l'association au prescripteur avant administration et renforcer la surveillance de la kaliémie.",
+        "source_rcp": "RCP CHLORURE DE POTASSIUM LAVOISIER 10 %, 4.5"
+      },
+      {
+        "substance": "Inhibiteurs de l'enzyme de conversion et antagonistes des récepteurs de l'angiotensine II",
+        "effet": "Addition des effets hyperkaliémiants avec risque d'hyperkaliémie potentiellement létale.",
+        "action_infirmier": "Association à éviter sauf hypokaliémie préalable : vérifier la prescription et la kaliémie avant administration.",
+        "source_rcp": "RCP CHLORURE DE POTASSIUM LAVOISIER 10 %, 4.5"
+      },
+      {
+        "substance": "Ciclosporine, tacrolimus",
+        "effet": "Hyperkaliémie potentiellement létale, en particulier chez les patients ayant une insuffisance rénale, par addition des effets hyperkaliémiants.",
+        "action_infirmier": "Association à éviter sauf hypokaliémie préalable : vérifier la prescription et la kaliémie avant administration.",
+        "source_rcp": "RCP CHLORURE DE POTASSIUM LAVOISIER 10 %, 4.5"
+      },
+      {
+        "substance": "Héparines",
+        "effet": "Les héparines sont susceptibles de favoriser la survenue d'une hyperkaliémie ; l'association majore le risque d'hyperkaliémie.",
+        "action_infirmier": "Renforcer la surveillance de la kaliémie pendant l'association.",
+        "source_rcp": "RCP CHLORURE DE POTASSIUM LAVOISIER 10 %, 4.5"
+      },
+      {
+        "substance": "Anti-inflammatoires non stéroïdiens",
+        "effet": "Les AINS sont susceptibles de favoriser la survenue d'une hyperkaliémie ; l'association majore le risque d'hyperkaliémie.",
+        "action_infirmier": "Renforcer la surveillance de la kaliémie pendant l'association.",
+        "source_rcp": "RCP CHLORURE DE POTASSIUM LAVOISIER 10 %, 4.5"
+      },
+      {
+        "substance": "Triméthoprime",
+        "effet": "Le triméthoprime est susceptible de favoriser la survenue d'une hyperkaliémie ; l'association majore le risque d'hyperkaliémie.",
+        "action_infirmier": "Renforcer la surveillance de la kaliémie pendant l'association.",
+        "source_rcp": "RCP CHLORURE DE POTASSIUM LAVOISIER 10 %, 4.5"
+      }
+    ],
+    "surveillance_specifique": [
+      {
+        "evenement": "Arrêt cardiaque en cas d'administration rapide",
+        "explication": "Le chlorure de potassium injectable est une solution hypertonique : une administration rapide peut entraîner un arrêt cardiaque.",
+        "action": "Ne jamais injecter en intraveineuse directe. Diluer et contrôler le débit à l'aide d'une pompe volumétrique, selon les valeurs indiquées en Préparation.",
+        "source_rcp": "RCP CHLORURE DE POTASSIUM LAVOISIER 10 %, 4.2 et 4.4"
+      },
+      {
+        "evenement": "Hyperkaliémie en cours de perfusion",
+        "explication": "L'apport potassique peut faire basculer le patient en hyperkaliémie, d'abord visible sur l'électrocardiogramme (ondes T amples et pointues, disparition des ondes P, élargissement du QRS).",
+        "action": "Arrêter le traitement dès l'apparition d'une hyperkaliémie. Vérification répétée de l'ionogramme plasmatique et, si nécessaire, monitoring cardiovasculaire.",
+        "source_rcp": "RCP CHLORURE DE POTASSIUM LAVOISIER 10 %, 4.4 et 4.9"
+      },
+      {
+        "evenement": "Nécrose en cas d'extravasation",
+        "explication": "La solution est hypertonique et très agressive pour les tissus en cas de diffusion hors de la veine.",
+        "action": "Surveiller le point de perfusion pendant toute la durée d'administration et arrêter immédiatement en cas d'extravasation.",
+        "source_rcp": "RCP CHLORURE DE POTASSIUM LAVOISIER 10 %, 4.8"
+      },
+      {
+        "evenement": "Phlébite au site de perfusion",
+        "explication": "Survient notamment lorsque la concentration de la solution perfusée est trop élevée.",
+        "action": "Respecter la concentration maximale sur voie périphérique indiquée en Préparation et surveiller le trajet veineux.",
+        "source_rcp": "RCP CHLORURE DE POTASSIUM LAVOISIER 10 %, 4.8"
+      }
+    ],
+    "pictogrammes": []
+  },
+  "iv": {
+    "reconstitution": null,
+    "preparation": [
+      {
+        "voie": "PERF",
+        "detail": "Dilution obligatoire dans du NaCl 0,9% ou G5%, concentration maximale de 4 g pour 1L (1g pour 250ml)",
+        "duree": "Perfusion lente sur 12 à 24 h recommandé, maximum 1g par heure",
+        "stabilite": "Après ouverture de l'ampoule, utiliser immédiatement."
+      },
+      {
+        "voie": "PSE",
+        "detail": "Concentration après dilution dans NaCl 0,9% ou G5% et débit ajustés au cas par cas, sous surveillance accrue.",
+        "duree": "Continu",
+        "stabilite": "Après ouverture de l'ampoule, utiliser immédiatement.",
+        "contexte": "Soins intensifs, VVC"
+      }
+    ],
+    "administration": {
+      "note_ajustement": "Dose adaptée selon la kaliémie mesurée avant et pendant le traitement et selon la fonction rénale, se référer au protocole du service.",
+      "posologie": [
+        {
+          "population": "Apports quotidiens habituels en perfusion",
+          "population_type": "adulte",
+          "categorie": "generale",
+          "dose_journaliere_mmol_kg_min": 0.8,
+          "dose_journaliere_mmol_kg_max": 2,
+          "dose_journaliere_max_mmol": "Selon kaliémie"
+        },
+        {
+          "population": "Correction rapide en soins intensifs",
+          "population_type": "adulte",
+          "categorie": "generale",
+          "dose_journaliere_mmol_kg_min": 2,
+          "dose_journaliere_mmol_kg_max": 3,
+          "dose_journaliere_max_mmol": "Selon kaliémie"
+        },
+        {
+          "population": "Apport quotidien maximal en potassium",
+          "population_type": "pediatrie",
+          "categorie": "generale",
+          "dose_journaliere_mmol_kg_min": 0.1,
+          "dose_journaliere_mmol_kg_max": 3,
+          "dose_journaliere_max_mmol": "Selon kaliémie"
+        }
+      ]
+    },
+    "incompatibilites": [
+      {
+        "substance": "Méthylprednisolone",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Phénytoïne",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Triméthoprime/sulfaméthoxazole",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Amiodarone",
+        "niveau": "absolu"
+      }
+    ]
+  },
+  "aerosol": null,
+  "oral": {
+    "formes": [
+      {
+        "type": "Gélule",
+        "dosage": "600 mg",
+        "secable": false,
+        "ouverture_gelule": true,
+        "posologie_adulte": [
+          {
+            "population": "Traitement préventif",
+            "population_type": "adulte",
+            "categorie": "generale",
+            "dose_par_prise_mg_min": 600,
+            "dose_par_prise_mg_max": 600,
+            "nb_prises_min_24h": 2,
+            "nb_prises_max_24h": 3,
+            "dose_journaliere_max_g": 1.8
+          },
+          {
+            "population": "Traitement curatif",
+            "population_type": "adulte",
+            "categorie": "generale",
+            "dose_par_prise_mg_min": 600,
+            "dose_par_prise_mg_max": 600,
+            "nb_prises_min_24h": 5,
+            "nb_prises_max_24h": 12,
+            "dose_journaliere_max_g": 7.2
+          }
+        ]
+      },
+      {
+        "type": "Comprimé enrobé à libération prolongée",
+        "dosage": "600 mg et 1000 mg",
+        "secable": false,
+        "ouverture_gelule": null,
+        "posologie_adulte": [
+          {
+            "population": "Hypokaliémie franche",
+            "population_type": "adulte",
+            "categorie": "generale",
+            "dose_par_prise_mg_min": 1000,
+            "dose_par_prise_mg_max": 4000,
+            "nb_prises_min_24h": 2,
+            "nb_prises_max_24h": 3,
+            "dose_journaliere_max_g": "Selon kaliémie"
+          }
+        ]
+      },
+      {
+        "type": "Sirop",
+        "dosage": "440 mg de potassium par dose de 15 mL",
+        "secable": false,
+        "ouverture_gelule": null,
+        "posologie_adulte": [
+          {
+            "population": "Traitement préventif - sirop",
+            "population_type": "adulte",
+            "categorie": "speciale",
+            "dose_par_prise_mg_min": 440,
+            "dose_par_prise_mg_max": 440,
+            "dose_journaliere_max_g": 0.840,
+            "nb_prises_min_24h": 2,
+            "nb_prises_max_24h": 3
+          },
+          {
+            "population": "Traitement curatif - sirop",
+            "population_type": "adulte",
+            "categorie": "speciale",
+            "dose_par_prise_mg_min": 440,
+            "dose_par_prise_mg_max": 440,
+            "dose_journaliere_max_g": 3.520,
+            "nb_prises_min_24h": 4,
+            "nb_prises_max_24h": 8
+          }
+        ]
+      }
+    ],
+    "recommandation_sonde": {
+      "forme_preferee": "Sirop",
+      "alternative": "Gélule ouverte, microgranules en suspension dans l'eau"
+    }
+  },
+  "tracabilite": {
+    "rcp_source": [
+      {
+        "specialite": "CHLORURE DE POTASSIUM LAVOISIER 10 % (0,10 g/ml), solution à diluer pour perfusion",
+        "titulaire": "Laboratoires Chaix et Du Marais",
+        "date_maj": "2018-05-07",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/63662572/extrait"
+      },
+      {
+        "specialite": "CHLORURE DE POTASSIUM LAVOISIER 20 % (0,20 g/ml), solution à diluer pour perfusion",
+        "titulaire": "Laboratoires Chaix et Du Marais",
+        "date_maj": "2018-05-07",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/61334096/extrait"
+      },
+      {
+        "specialite": "DIFFU-K 600 mg, gélule",
+        "titulaire": "TEOFARMA S.R.L.",
+        "date_maj": "2026-08-31",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/60875266/extrait"
+      },
+      {
+        "specialite": "KALEORID LP 1000 mg, comprimé à libération prolongée",
+        "titulaire": "KARO PHARMA AB",
+        "date_maj": "",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/63382862/extrait"
+      },
+      {
+        "specialite": "KALEORID LP 600 mg, comprimé à libération prolongée",
+        "titulaire": "KARO PHARMA AB",
+        "date_maj": "",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/61958925/extrait"
+      },
+      {
+        "specialite": "POTASSIUM LIBERTY PHARMA 440 mg/ 15 ml, sirop en sachet-dose",
+        "titulaire": "LIBERTY PHARMA",
+        "date_maj": "2019-06-18",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/66678546/extrait"
+      }
+    ],
+    "statut": "valide",
+    "validation": {
+      "date": "2026-09-08",
+      "validateur": "Anna Trabaud-Lopez (IDE, porteuse du projet), vérification des données extraites contre les RCP ; équipe pharmacie, validation de la méthodologie et arbitrage des points litigieux",
+      "perimetre": [
+        "adulte",
+        "pediatrie"
+      ],
+      "prochaine_revision": "2026-12-08"
+    }
+  }
+}
