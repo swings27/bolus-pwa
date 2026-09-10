@@ -150,7 +150,8 @@
         "source_rcp": "RCP IBUPROFENE B. BRAUN 400 mg/100 mL, 4.4 et 4.8"
       }
     ],
-    "pictogrammes": []
+    "pictogrammes": [],
+    "note_ajustement": "Dose adaptée selon la fonction rénale, la fonction hépatique et l'âge, se référer au protocole du service."
   },
   "iv": {
     "reconstitution": null,
@@ -179,7 +180,6 @@
       }
     ],
     "administration": {
-      "note_ajustement": "Dose adaptée selon la fonction rénale, la fonction hépatique et l'âge, se référer au protocole du service.",
       "posologie": [
         {
           "population": "Douleur aiguë ou fièvre",

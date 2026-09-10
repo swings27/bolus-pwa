@@ -91,7 +91,8 @@
         "source_rcp": "RCP CHLORURE DE POTASSIUM LAVOISIER 10 %, 4.8"
       }
     ],
-    "pictogrammes": []
+    "pictogrammes": [],
+    "note_ajustement": "Dose adaptée selon la kaliémie mesurée avant et pendant le traitement et selon la fonction rénale, se référer au protocole du service."
   },
   "iv": {
     "reconstitution": null,
@@ -111,7 +112,6 @@
       }
     ],
     "administration": {
-      "note_ajustement": "Dose adaptée selon la kaliémie mesurée avant et pendant le traitement et selon la fonction rénale, se référer au protocole du service.",
       "posologie": [
         {
           "population": "Apports quotidiens habituels en perfusion",

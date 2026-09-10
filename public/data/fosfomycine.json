@@ -77,7 +77,8 @@
     "pictogrammes": [
       "Peut provoquer des sensations vertigineuses (voie orale) : prudence pour la conduite de véhicules et l'utilisation de machines",
       "Peut provoquer confusion et asthénie (voie intraveineuse) : prudence pour la conduite de véhicules et l'utilisation de machines"
-    ]
+    ],
+    "note_ajustement": "Ajustement posologique selon la fonction rénale et de la fonction hépatique, se référer au protocole de service."
   },
   "iv": {
     "reconstitution": {
@@ -96,7 +97,6 @@
       }
     ],
     "administration": {
-      "note_ajustement": "Ajustement posologique selon la fonction rénale et de la fonction hépatique, se référer au protocole de service.",
       "posologie": [
         {
           "population": "Infections systémiques standard (hors méningite)",

@@ -5,6 +5,10 @@ import TitreSectionFiche from './TitreSectionFiche'
 
 interface IDetailInjectableProps {
   donnees: IFormeIv
+  /** Ajustement posologique de la molécule (fiche.noteAjustement) : passé en
+   * prop plutôt que lu dans `donnees`, parce qu'il ne dépend pas de la voie
+   * et que DetailPerOs affiche exactement le même. */
+  noteAjustement: string | null
 }
 
 // mg (ex. amoxicilline) ou UI (ex. spiramycine, dosée en unités
@@ -43,7 +47,7 @@ const CARTE_STYLE = { backgroundColor: 'color-mix(in srgb, var(--texte) 5%, var(
 // prête à l'emploi) n'existent tout simplement pas pour cette fiche — on ne
 // les affiche pas du tout, plutôt qu'un "Non renseigné" qui suggérerait une
 // donnée manquante à compléter.
-export default function DetailInjectable({ donnees }: IDetailInjectableProps) {
+export default function DetailInjectable({ donnees, noteAjustement }: IDetailInjectableProps) {
   // Même filtre que SectionPosologies pour les posologies : le périmètre V1
   // est adulte uniquement, une préparation marquée `population_type:
   // "pediatrie"` (ex. dilution néonatologie) ne doit donc pas apparaître ici.
@@ -128,7 +132,7 @@ export default function DetailInjectable({ donnees }: IDetailInjectableProps) {
         titre="Posologies"
         posologies={donnees.administration.posologie}
         contexte="iv"
-        ajustement={donnees.administration.note_ajustement}
+        ajustement={noteAjustement}
       />
     </div>
   )

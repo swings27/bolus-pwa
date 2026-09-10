@@ -91,6 +91,17 @@ describe('validerFicheSource', () => {
     expect(validerFicheSource('x', brut)).toContain('x.json — iv.administration.posologie : doit être un tableau (reçu objet)')
   })
 
+  // Garde-fou de migration : plus rien ne lit note_ajustement sous `iv`, une
+  // fiche qui l'y laisserait perdrait sa note sur les DEUX onglets sans
+  // aucun signal.
+  it('signale une note_ajustement restée sous iv.administration', () => {
+    const brut = ficheValide() as { iv: { administration: Record<string, unknown> } }
+    brut.iv.administration.note_ajustement = 'Dose adaptée selon la fonction rénale.'
+    expect(validerFicheSource('x', brut)).toContain(
+      'x.json — iv.administration.note_ajustement : ce champ a déménagé dans "commun" (il s\'applique aussi à la voie orale) — le déplacer dans commun.note_ajustement',
+    )
+  })
+
   it('signale une forme orale sans son champ type, avec l\'index dans le chemin', () => {
     const brut = ficheValide() as { oral: { formes: Record<string, unknown>[] } }
     brut.oral.formes.push({ posologie_adulte: [] })

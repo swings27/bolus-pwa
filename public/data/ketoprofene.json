@@ -104,7 +104,8 @@
         "source_rcp": "RCP KETOPROFENE MEDISOL 100 mg/4 ml, 4.4"
       }
     ],
-    "pictogrammes": []
+    "pictogrammes": [],
+    "note_ajustement": "Dose adaptée selon la fonction rénale et l'âge (réduire la posologie initiale, adapter selon la tolérance rénale), se référer au protocole du service."
   },
   "iv": {
     "reconstitution": null,
@@ -122,7 +123,6 @@
       }
     ],
     "administration": {
-      "note_ajustement": "Dose adaptée selon la fonction rénale et l'âge (réduire la posologie initiale, adapter selon la tolérance rénale), se référer au protocole du service.",
       "posologie": [
         {
           "population": "Douleur post-opératoire",

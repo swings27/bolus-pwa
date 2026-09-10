@@ -92,7 +92,8 @@
         "source_rcp": "RCP Xyllomac 500 mg, section 4.4 : 'Des réactions de Jarisch-Herxheimer ont été observées après traitement de la maladie de Lyme par amoxicilline. [...] conséquence fréquente et en général spontanément résolutive du traitement antibiotique de la maladie de Lyme.'"
       }
     ],
-    "pictogrammes": []
+    "pictogrammes": [],
+    "note_ajustement": "Dose adaptée selon la fonction rénale, se référer au protocole du service."
   },
   "iv": {
     "reconstitution": {
@@ -274,8 +275,7 @@
           "intervalle_min_h": 4,
           "intervalle_max_h": 12
         }
-      ],
-      "note_ajustement": "Dose adaptée selon la fonction rénale, se référer au protocole du service."
+      ]
     },
     "incompatibilites": [
       {

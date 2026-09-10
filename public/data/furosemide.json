@@ -135,7 +135,8 @@
         "source_rcp": "RCP FUROSEMIDE RENAUDIN 20 mg/2 mL, solution injectable (IM-IV), section 4.4"
       }
     ],
-    "pictogrammes": []
+    "pictogrammes": [],
+    "note_ajustement": "Dose adaptée selon la fonction rénale, la fonction hépatique et la diurèse obtenue, se référer au protocole du service."
   },
   "iv": {
     "reconstitution": null,
@@ -167,7 +168,6 @@
       }
     ],
     "administration": {
-      "note_ajustement": "Dose adaptée selon la fonction rénale, la fonction hépatique et la diurèse obtenue, se référer au protocole du service.",
       "posologie": [
         {
           "population": "Indications usuelles",

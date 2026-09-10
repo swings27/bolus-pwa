@@ -21,7 +21,6 @@ function construireIv(brut: IFicheSourceIv | undefined): IFormeIv | null {
     reconstitution: brut.reconstitution ?? null,
     preparation: brut.preparation ?? [],
     administration: {
-      note_ajustement: videEnNull(brut.administration.note_ajustement),
       posologie: brut.administration.posologie,
     },
     incompatibilites: brut.incompatibilites,
@@ -85,6 +84,10 @@ export function construireFiche(id: string, brut: IFicheSource, meta: IFicheMeta
       (item) => item.action_infirmier,
     ),
     pictogrammes: brut.commun.pictogrammes,
+    // Lu dans `commun` (et non sous `iv`) : l'ajustement porte sur la
+    // molécule, pas sur une voie — il s'affiche donc au bas des posologies
+    // des deux onglets, voir DetailInjectable/DetailPerOs.
+    noteAjustement: videEnNull(brut.commun.note_ajustement),
     iv: construireIv(brut.iv),
     oral: construireOral(brut.oral),
     rcpSource: brut.tracabilite.rcp_source,

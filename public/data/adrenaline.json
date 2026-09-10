@@ -95,12 +95,12 @@
         "source_rcp": "RCP Adrénaline Aguettant 1 mg/mL ampoule, section 4.8 : 'À forte dose ou chez les patients sensibles à l'adrénaline [...] accès d'hypertension artérielle (provoquant parfois une hémorragie cérébrale).'"
       }
     ],
-    "pictogrammes": []
+    "pictogrammes": [],
+    "note_ajustement": ""
   },
   "iv": {
     "reconstitution": null,
     "administration": {
-      "note_ajustement": "",
       "posologie": [
         {
           "population": "Arrêt cardiaque (réanimation cardio-pulmonaire)",

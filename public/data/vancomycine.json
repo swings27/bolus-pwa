@@ -91,7 +91,8 @@
         "source_rcp": "RCP VANCOMYCINE VIATRIS 500 mg, section 4.4"
       }
     ],
-    "pictogrammes": []
+    "pictogrammes": [],
+    "note_ajustement": "Dose adaptée selon la fonction rénale, l'âge et le poids (patient obèse) ; aucune adaptation nécessaire en cas d'insuffisance hépatique seule, se référer au protocole du service et à la surveillance des taux résiduels. Population pédiatrique avec insuffisance rénale : ajustement selon la formule de Schwartz, se référer au RCP et au protocole du service."
   },
   "iv": {
     "reconstitution": {
@@ -118,7 +119,6 @@
       }
     ],
     "administration": {
-      "note_ajustement": "Dose adaptée selon la fonction rénale, l'âge et le poids (patient obèse) ; aucune adaptation nécessaire en cas d'insuffisance hépatique seule, se référer au protocole du service et à la surveillance des taux résiduels. Population pédiatrique avec insuffisance rénale : ajustement selon la formule de Schwartz, se référer au RCP et au protocole du service.",
       "posologie": [
         {
           "population": "Traitement standard",
@@ -128,7 +128,7 @@
           "dose_mg_kg_max": 20,
           "intervalle_min_h": 8,
           "intervalle_max_h": 12,
-          "dose_journaliere_g_max": 6,
+          "dose_journaliere_max_g": 6,
           "tdm_requis": true
         },
         {
@@ -149,7 +149,7 @@
           "dose_mg_kg_max": 15,
           "intervalle_min_h": 6,
           "intervalle_max_h": 6,
-          "dose_journaliere_g_max": "Selon poids",
+          "dose_journaliere_max_g": "Selon poids",
           "tdm_requis": true
         },
         {
@@ -158,7 +158,7 @@
           "population_type": "pediatrie",
           "dose_mg_kg_min": 15,
           "dose_mg_kg_max": 15,
-          "dose_journaliere_g_max": "Selon poids",
+          "dose_journaliere_max_g": "Selon poids",
           "tdm_requis": true
         },
         {
@@ -169,7 +169,7 @@
           "dose_mg_kg_max": 15,
           "intervalle_min_h": 12,
           "intervalle_max_h": 12,
-          "dose_journaliere_g_max": "Selon poids",
+          "dose_journaliere_max_g": "Selon poids",
           "tdm_requis": true
         },
         {
@@ -180,7 +180,7 @@
           "dose_mg_kg_max": 15,
           "intervalle_min_h": 8,
           "intervalle_max_h": 8,
-          "dose_journaliere_g_max": "Selon poids",
+          "dose_journaliere_max_g": "Selon poids",
           "tdm_requis": true
         },
         {

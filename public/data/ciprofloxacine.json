@@ -155,7 +155,8 @@
         "source_rcp": "RCP CIFLOX 500 mg, section 4.4"
       }
     ],
-    "pictogrammes": []
+    "pictogrammes": [],
+    "note_ajustement": "Dose adaptée selon la fonction rénale (clairance de la créatinine), se référer au protocole du service. Aucun ajustement nécessaire en cas d'insuffisance hépatique isolée."
   },
   "iv": {
     "reconstitution": null,
@@ -178,7 +179,7 @@
           "population_type": "adulte",
           "intervalle_min_h": 8,
           "intervalle_max_h": 12,
-          "dose_journaliere_g_max": 1.200
+          "dose_journaliere_max_g": 1.200
         },
         {
           "population": "Diarrhée infectieuse",
@@ -188,7 +189,7 @@
           "population_type": "adulte",
           "intervalle_min_h": 12,
           "intervalle_max_h": 12,
-          "dose_journaliere_g_max": 0.800
+          "dose_journaliere_max_g": 0.800
         },
         {
           "population": "Maladie du charbon, prophylaxie post-exposition et traitement curatif",
@@ -198,7 +199,7 @@
           "population_type": "adulte",
           "intervalle_min_h": 12,
           "intervalle_max_h": 12,
-          "dose_journaliere_g_max": 0.800
+          "dose_journaliere_max_g": 0.800
         },
         {
           "population": "Mucoviscidose, infection à Pseudomonas aeruginosa",
@@ -209,7 +210,7 @@
           "dose_par_prise_mg_max": 400,
           "intervalle_min_h": 8,
           "intervalle_max_h": 8,
-          "dose_journaliere_g_max": 1.200
+          "dose_journaliere_max_g": 1.200
         },
         {
           "population": "Infections urinaires compliquées et pyélonéphrite aiguë",
@@ -220,10 +221,9 @@
           "dose_par_prise_mg_max": 400,
           "intervalle_min_h": 8,
           "intervalle_max_h": 8,
-          "dose_journaliere_g_max": 1.200
+          "dose_journaliere_max_g": 1.200
         }
-      ],
-      "note_ajustement": "Dose adaptée selon la fonction rénale (clairance de la créatinine), se référer au protocole du service. Aucun ajustement nécessaire en cas d'insuffisance hépatique isolée."
+      ]
     },
     "incompatibilites": [
       {
@@ -299,7 +299,7 @@
             "dose_par_prise_mg_max": 750,
             "intervalle_min_h": 12,
             "intervalle_max_h": 12,
-            "dose_journaliere_g_max": 1.500,
+            "dose_journaliere_max_g": 1.500,
             "population_type": "adulte"
           },
           {
@@ -307,7 +307,7 @@
             "categorie": "speciale",
             "dose_par_prise_mg_min": 500,
             "dose_par_prise_mg_max": 500,
-            "dose_journaliere_g_max": 0.500,
+            "dose_journaliere_max_g": 0.500,
             "population_type": "adulte"
           },
           {
@@ -317,7 +317,7 @@
             "dose_par_prise_mg_max": 500,
             "intervalle_min_h": 12,
             "intervalle_max_h": 12,
-            "dose_journaliere_g_max": 1,
+            "dose_journaliere_max_g": 1,
             "population_type": "adulte"
           },
           {
@@ -326,7 +326,7 @@
             "dose_par_prise_mg_min": 500,
             "dose_par_prise_mg_max": 500,
             "population_type": "adulte",
-            "dose_journaliere_g_max": 0.500
+            "dose_journaliere_max_g": 0.500
           },
           {
             "population": "Maladie du charbon, prophylaxie post-exposition et traitement curatif",
@@ -335,7 +335,7 @@
             "dose_par_prise_mg_max": 500,
             "intervalle_min_h": 12,
             "intervalle_max_h": 12,
-            "dose_journaliere_g_max": 1,
+            "dose_journaliere_max_g": 1,
             "population_type": "adulte"
           }
         ]

@@ -132,7 +132,8 @@
         "source_rcp": "RCP CORDARONE 150 mg/3 ml, section 4.4 : « En cas de vision trouble ou de baisse de l'acuité visuelle, un examen ophtalmologique complet incluant un fond d'œil doit être rapidement pratiqué. »"
       }
     ],
-    "pictogrammes": []
+    "pictogrammes": [],
+    "note_ajustement": ""
   },
   "iv": {
     "reconstitution": null,
@@ -160,7 +161,6 @@
       }
     ],
     "administration": {
-      "note_ajustement": "",
       "posologie": [
         {
           "population": "Traitement d'attaque, troubles du rythme graves",

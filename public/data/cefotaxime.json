@@ -91,7 +91,8 @@
         "source_rcp": "RCP CEFOTAXIME NORIDEM 1 g, section 4.4 : « un test de Coombs positif a été enregistré chez certains patients traités par céfotaxime. Ce phénomène peut interférer avec les épreuves de compatibilité croisée de sang. Le dosage urinaire du glucose effectué avec des agents réducteurs non spécifiques peut donner lieu à des résultats faussement positifs. »"
       }
     ],
-    "pictogrammes": []
+    "pictogrammes": [],
+    "note_ajustement": "Dose adaptée selon la fonction rénale et les séances de dialyse, se référer au protocole du service."
   },
   "iv": {
     "reconstitution": {
@@ -123,7 +124,6 @@
       }
     ],
     "administration": {
-      "note_ajustement": "Dose adaptée selon la fonction rénale et les séances de dialyse, se référer au protocole du service.",
       "posologie": [
         {
           "population": "> 12 ans, infections courantes à bactéries sensibles",

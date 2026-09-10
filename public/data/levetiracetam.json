@@ -73,12 +73,12 @@
         "source_rcp": "RCP LEVETIRACETAM VIATRIS 500 mg, section 4.2 (« Arrêt du traitement »)"
       }
     ],
-    "pictogrammes": []
+    "pictogrammes": [],
+    "note_ajustement": "Dose adaptée selon la fonction rénale, la fonction hépatique sévère et l'âge, se référer au protocole du service et au RCP."
   },
   "iv": {
     "reconstitution": null,
     "administration": {
-      "note_ajustement": "Dose adaptée selon la fonction rénale, la fonction hépatique sévère et l'âge, se référer au protocole du service et au RCP.",
       "posologie": [
         {
           "population": "Traitement standard",

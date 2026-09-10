@@ -67,7 +67,8 @@
         "source_rcp": "RCP ATROPINE (SULFATE) AGUETTANT 0,25 mg/mL, section 4.8 : « Troubles visuels (mydriase, inhibition de l'accommodation, vision trouble, photophobie) » ; contre-indication 4.3 « Glaucome à angle fermé »"
       }
     ],
-    "pictogrammes": []
+    "pictogrammes": [],
+    "note_ajustement": "Dose adaptée selon la fonction rénale, la fonction hépatique et l'âge, se référer au protocole du service."
   },
   "iv": {
     "reconstitution": null,
@@ -92,7 +93,6 @@
       }
     ],
     "administration": {
-      "note_ajustement": "Dose adaptée selon la fonction rénale, la fonction hépatique et l'âge, se référer au protocole du service.",
       "posologie": [
         {
           "population": "Prémédication anesthésique",

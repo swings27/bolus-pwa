@@ -102,7 +102,8 @@
         "source_rcp": "RCP LEVMENTIN 1 g/200 mg, poudre pour solution injectable/pour perfusion (IV), section 4.4 : « Ce médicament contient 39,3 mg (1,0 mmol) de potassium par flacon. À prendre en compte chez les patients insuffisants rénaux ou les patients suivant un régime hypokaliémiant. » RCP AMOXICILLINE/ACIDE CLAVULANIQUE PANPHARMA 2 g/200 mg ADULTES, poudre pour solution injectable : 32,96 mg (0,8 mmol) de potassium par flacon."
       }
     ],
-    "pictogrammes": []
+    "pictogrammes": [],
+    "note_ajustement": "Dose adaptée selon la fonction rénale et la fonction hépatique, se référer au protocole du service."
   },
   "iv": {
     "reconstitution": {
@@ -201,8 +202,7 @@
           "intervalle_min_h": 12,
           "intervalle_max_h": 12
         }
-      ],
-      "note_ajustement": "Dose adaptée selon la fonction rénale et la fonction hépatique, se référer au protocole du service."
+      ]
     },
     "incompatibilites": [
       {

@@ -74,12 +74,12 @@
         "source_rcp": "Guide HUG des médicaments injectables"
       }
     ],
-    "pictogrammes": []
+    "pictogrammes": [],
+    "note_ajustement": "Dose adaptée selon la fonction rénale, la fonction hépatique et l'âge, se référer au protocole du service."
   },
   "iv": {
     "reconstitution": null,
     "administration": {
-      "note_ajustement": "Dose adaptée selon la fonction rénale, la fonction hépatique et l'âge, se référer au protocole du service.",
       "posologie": [
         {
           "population": "Urgences neuropsychiatriques",

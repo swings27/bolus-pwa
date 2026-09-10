@@ -116,7 +116,8 @@
         "source_rcp": "RCP GENTAMICINE PANPHARMA 160 mg, section 4.4"
       }
     ],
-    "pictogrammes": []
+    "pictogrammes": [],
+    "note_ajustement": "Dose adaptée selon la fonction rénale et les séances de dialyse, le poids chez le patient obèse (poids corrigé), se référer au protocole du service et à la surveillance des taux résiduels. Chez le nouveau-né, la posologie est adaptée selon l'âge post-conceptionnel."
   },
   "iv": {
     "reconstitution": null,
@@ -135,7 +136,6 @@
       }
     ],
     "administration": {
-      "note_ajustement": "Dose adaptée selon la fonction rénale et les séances de dialyse, le poids chez le patient obèse (poids corrigé), se référer au protocole du service et à la surveillance des taux résiduels. Chez le nouveau-né, la posologie est adaptée selon l'âge post-conceptionnel.",
       "posologie": [
         {
           "population": "Traitement standard",

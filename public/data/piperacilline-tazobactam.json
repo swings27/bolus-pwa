@@ -125,7 +125,8 @@
         "source_rcp": "RCP TAZOCILLINE 4 g/0,5 g, section 4.5 : « Les tests Platelia Aspergillus EIA des Laboratoires Bio Rad peuvent donner des résultats faussement positifs chez les patients recevant TAZOCILLINE. […] Le test de Coombs direct peut être positif. »"
       }
     ],
-    "pictogrammes": []
+    "pictogrammes": [],
+    "note_ajustement": "Dose adaptée selon la fonction rénale et les séances de dialyse, se référer au protocole du service."
   },
   "iv": {
     "reconstitution": {
@@ -150,7 +151,6 @@
       }
     ],
     "administration": {
-      "note_ajustement": "Dose adaptée selon la fonction rénale et les séances de dialyse, se référer au protocole du service.",
       "posologie": [
         {
           "population": "Infections urinaires, intra-abdominales, peau et tissus mous",

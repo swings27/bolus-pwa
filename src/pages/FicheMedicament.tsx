@@ -221,11 +221,15 @@ export default function FicheMedicament() {
                 Sélectionnez une forme d'administration ci-dessus
               </p>
             )}
+            {/* noteAjustement est passée aux deux : l'ajustement porte sur la
+                molécule (fonction rénale, hépatique, âge, poids), pas sur une
+                voie. Elle reste rendue à l'intérieur de l'onglet actif, donc
+                invisible tant qu'aucune forme n'est sélectionnée. */}
             {formeActive === 'injectable' && fiche.iv && (
-              <DetailInjectable donnees={fiche.iv} />
+              <DetailInjectable donnees={fiche.iv} noteAjustement={fiche.noteAjustement} />
             )}
             {formeActive === 'perOs' && fiche.oral && (
-              <DetailPerOs donnees={fiche.oral} />
+              <DetailPerOs donnees={fiche.oral} noteAjustement={fiche.noteAjustement} />
             )}
           </div>
         </div>

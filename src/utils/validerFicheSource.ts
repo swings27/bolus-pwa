@@ -146,6 +146,16 @@ export function validerFicheSource(id: string, brut: unknown): string[] {
       const administration = verifierChamp(erreurs, iv, ['iv'], 'administration', 'object')
       if (estObjet(administration)) {
         verifierChamp(erreurs, administration, ['iv', 'administration'], 'posologie', 'array')
+        // note_ajustement a déménagé dans `commun` (il porte sur la molécule
+        // et doit s'afficher sur les deux voies). Plus rien ne le lit ici :
+        // le laisser sous `iv` le ferait disparaître des deux onglets sans
+        // le moindre signal, d'où ce contrôle explicite.
+        if (administration.note_ajustement !== undefined) {
+          erreurs.signaler(
+            ['iv', 'administration', 'note_ajustement'],
+            'ce champ a déménagé dans "commun" (il s\'applique aussi à la voie orale) — le déplacer dans commun.note_ajustement',
+          )
+        }
       }
       verifierChamp(erreurs, iv, ['iv'], 'incompatibilites', 'array')
       verifierListeObjets(erreurs, ['iv', 'incompatibilites'], iv.incompatibilites, ['substance', 'niveau'])

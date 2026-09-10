@@ -32,7 +32,8 @@
         "action": "Signaler au prescripteur toute coprescription de morphine ou d'un dérivé morphinique."
       }
     ],
-    "pictogrammes": []
+    "pictogrammes": [],
+    "note_ajustement": null
   },
   "iv": {
     "reconstitution": null,
@@ -53,7 +54,6 @@
       }
     ],
     "administration": {
-      "note_ajustement": null,
       "posologie": [
         {
           "population": "Traitement standard",

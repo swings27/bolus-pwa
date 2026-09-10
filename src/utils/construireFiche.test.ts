@@ -147,19 +147,20 @@ describe('construireFiche', () => {
     ])
   })
 
-  it('normalise administration.note_ajustement vide en null', () => {
-    const fiche = construireFiche(
-      'x',
-      ficheSource({
-        iv: {
-          reconstitution: null,
-          administration: { note_ajustement: '', posologie: [] },
-          incompatibilites: [],
-        },
-      }),
-      META,
-    )
-    expect(fiche.iv?.administration.note_ajustement).toBeNull()
+  // note_ajustement vit dans `commun` (pas sous `iv`) : l'ajustement décrit
+  // la molécule, il doit rester lisible sur l'onglet oral comme sur
+  // l'injectable, et exister même pour une molécule sans forme injectable.
+  it('normalise commun.note_ajustement vide en null', () => {
+    const fiche = construireFiche('x', ficheSource({ commun: { ...ficheSource().commun, note_ajustement: '' } }), META)
+    expect(fiche.noteAjustement).toBeNull()
+  })
+
+  it('lit commun.note_ajustement même sans bloc iv (molécule orale seule)', () => {
+    const source = ficheSource({ commun: { ...ficheSource().commun, note_ajustement: 'Dose adaptée selon la fonction rénale.' } })
+    delete source.iv
+    const fiche = construireFiche('x', source, META)
+    expect(fiche.iv).toBeNull()
+    expect(fiche.noteAjustement).toBe('Dose adaptée selon la fonction rénale.')
   })
 
   it('normalise prochaine_revision absente en null', () => {

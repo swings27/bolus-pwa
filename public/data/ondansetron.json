@@ -67,7 +67,8 @@
         "source_rcp": "RCP ONDANSETRON VIATRIS 2 mg/ml, 4.4"
       }
     ],
-    "pictogrammes": []
+    "pictogrammes": [],
+    "note_ajustement": "Dose initiale IV limitée à 8 mg, à administrer en perfusion d'au moins 15 minutes, chez le sujet âgé de 75 ans ou plus ; dose totale limitée à 8 mg par jour par voie IV en cas d'insuffisance hépatique ; aucune adaptation nécessaire en cas d'insuffisance rénale, se référer au protocole du service."
   },
   "iv": {
     "reconstitution": null,
@@ -92,7 +93,6 @@
       }
     ],
     "administration": {
-      "note_ajustement": "Dose initiale IV limitée à 8 mg, à administrer en perfusion d'au moins 15 minutes, chez le sujet âgé de 75 ans ou plus ; dose totale limitée à 8 mg par jour par voie IV en cas d'insuffisance hépatique ; aucune adaptation nécessaire en cas d'insuffisance rénale, se référer au protocole du service.",
       "posologie": [
         {
           "population": "Chimiothérapie/radiothérapie émétisante",

@@ -5,6 +5,10 @@ import TitreSectionFiche from './TitreSectionFiche'
 
 interface IDetailPerOsProps {
   donnees: IFormeOraleBloc
+  /** Même ajustement posologique que sur l'onglet injectable
+   * (fiche.noteAjustement) : il porte sur la molécule — fonction rénale,
+   * hépatique, âge, poids — et vaut donc pour les deux voies. */
+  noteAjustement: string | null
 }
 
 type Tonalite = 'oui' | 'non' | 'neutre'
@@ -49,7 +53,7 @@ function estDejaLiquide(type: string): boolean {
 // (sécable, ouvrable), puis les posologies de chaque forme regroupées
 // dans une seule section — plutôt qu'une grosse carte par forme mélangeant
 // les deux, plus lourde à parcourir pour repérer une seule information.
-export default function DetailPerOs({ donnees }: IDetailPerOsProps) {
+export default function DetailPerOs({ donnees, noteAjustement }: IDetailPerOsProps) {
   return (
     <div className="flex flex-col">
       {donnees.recommandation_sonde && (
@@ -112,6 +116,7 @@ export default function DetailPerOs({ donnees }: IDetailPerOsProps) {
         titre="Posologies"
         posologies={donnees.formes.flatMap((forme) => forme.posologie_adulte)}
         contexte="oral"
+        ajustement={noteAjustement}
       />
     </div>
   )

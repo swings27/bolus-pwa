@@ -123,7 +123,8 @@
         "source_rcp": "RCP TOPALGIC 100 mg/2 ml, 4.4 et 4.8"
       }
     ],
-    "pictogrammes": []
+    "pictogrammes": [],
+    "note_ajustement": "Dose adaptée selon la fonction rénale, la fonction hépatique et l'âge (> 75 ans), se référer au protocole du service."
   },
   "iv": {
     "reconstitution": null,
@@ -143,7 +144,6 @@
       }
     ],
     "administration": {
-      "note_ajustement": "Dose adaptée selon la fonction rénale, la fonction hépatique et l'âge (> 75 ans), se référer au protocole du service.",
       "posologie": [
         {
           "population": "Douleur intense",

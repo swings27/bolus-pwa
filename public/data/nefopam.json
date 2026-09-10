@@ -57,7 +57,8 @@
         "source_rcp": "RCP ACUPAN 20 mg/2 ml, 4.4 et 4.8"
       }
     ],
-    "pictogrammes": []
+    "pictogrammes": [],
+    "note_ajustement": "Prudence particulière en cas d'insuffisance hépatique ou rénale (risque d'accumulation) ; traitement déconseillé chez le sujet âgé en raison des effets anticholinergiques, se référer au protocole du service."
   },
   "iv": {
     "reconstitution": null,
@@ -75,7 +76,6 @@
       }
     ],
     "administration": {
-      "note_ajustement": "Prudence particulière en cas d'insuffisance hépatique ou rénale (risque d'accumulation) ; traitement déconseillé chez le sujet âgé en raison des effets anticholinergiques, se référer au protocole du service.",
       "posologie": [
         {
           "population": "Douleur aiguë",

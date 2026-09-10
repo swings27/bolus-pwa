@@ -69,7 +69,8 @@
         "source_rcp": "RCP Paracétamol Kabi 10 mg/mL, 4.2 et 4.4 ; MARR ANSM Paracétamol Kabi, version 2, juin 2024 (ansm.sante.fr)"
       }
     ],
-    "pictogrammes": []
+    "pictogrammes": [],
+    "note_ajustement": "Dose maximale journalière réduite à 3 g et intervalle allongé (jusqu'à 8 h) en cas d'insuffisance hépatique, d'insuffisance rénale sévère, d'alcoolisme chronique, de malnutrition, de déshydratation ou de poids inférieur à 50 kg, se référer au protocole du service."
   },
   "iv": {
     "reconstitution": null,
@@ -82,7 +83,6 @@
       }
     ],
     "administration": {
-      "note_ajustement": "Dose maximale journalière réduite à 3 g et intervalle allongé (jusqu'à 8 h) en cas d'insuffisance hépatique, d'insuffisance rénale sévère, d'alcoolisme chronique, de malnutrition, de déshydratation ou de poids inférieur à 50 kg, se référer au protocole du service.",
       "posologie": [
         {
           "population": "≥ 50 kg",

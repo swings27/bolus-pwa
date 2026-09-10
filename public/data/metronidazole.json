@@ -128,7 +128,8 @@
         "source_rcp": "RCP FLAGYL 500 mg, comprimé pelliculé, section 4.4 : « Des cas de réactions cutanées sévères incluant syndrome de Stevens-Johnson, syndrome de Lyell, Pustulose Exanthématique Aiguë Généralisée (PEAG) ont été rapportés avec le métronidazole. »"
       }
     ],
-    "pictogrammes": []
+    "pictogrammes": [],
+    "note_ajustement": "Dose adaptée selon la fonction hépatique et chez le sujet âgé ; les jours d'hémodialyse, administrer la dose après la séance, se référer au protocole du service."
   },
   "iv": {
     "reconstitution": null,
@@ -141,7 +142,6 @@
       }
     ],
     "administration": {
-      "note_ajustement": "Dose adaptée selon la fonction hépatique et chez le sujet âgé ; les jours d'hémodialyse, administrer la dose après la séance, se référer au protocole du service.",
       "posologie": [
         {
           "population": "Infections à germes anaérobies, schéma fractionné",

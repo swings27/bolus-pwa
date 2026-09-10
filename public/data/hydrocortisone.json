@@ -65,7 +65,8 @@
     ],
     "pictogrammes": [
       "Conduite de véhicules et utilisation de machines : influence majeure retenue par le RCP oral HYDROCORTISONE ROUSSEL (section 4.7) en raison de vertiges et convulsions possibles ; le RCP injectable HYDROCORTISONE UPJOHN indique « sans objet » (section 4.7)."
-    ]
+    ],
+    "note_ajustement": ""
   },
   "iv": {
     "reconstitution": {
@@ -111,7 +112,6 @@
       }
     ],
     "administration": {
-      "note_ajustement": "",
       "posologie": [
         {
           "population": "> 12 ans, insuffisance surrénale aiguë",

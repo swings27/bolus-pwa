@@ -218,12 +218,14 @@ export interface IValidationRcp {
   prochaine_revision?: string
 }
 
-/** Détails d'administration par voie injectable (IV, IM, SC, PSE...). */
+/** Détails d'administration par voie injectable (IV, IM, SC, PSE...).
+ * L'ajustement posologique ne vit PAS ici : il décrit la molécule (fonction
+ * rénale, hépatique, âge, poids) et s'applique donc aux deux voies — voir
+ * IFiche.noteAjustement, alimenté par commun.note_ajustement. */
 export interface IFormeIv {
   reconstitution: IReconstitution | null
   preparation: IPreparationVoie[]
   administration: {
-    note_ajustement: string | null
     posologie: IPosologieRcp[]
   }
   incompatibilites: IIncompatibilite[]
@@ -283,6 +285,11 @@ export interface IFiche {
   /** Provient de commun.pictogrammes — toujours vide dans les fiches
    * publiées à ce jour, pas encore d'emplacement d'affichage dédié. */
   pictogrammes: string[]
+  /** Ajustement posologique (fonction rénale, hépatique, âge, poids) —
+   * provient de commun.note_ajustement : il décrit la molécule, pas une voie
+   * précise, et s'affiche donc au bas des posologies des DEUX onglets
+   * (injectable et oral), jamais quand aucune forme n'est sélectionnée. */
+  noteAjustement: string | null
   iv: IFormeIv | null
   oral: IFormeOraleBloc | null
   rcpSource: IRcpSource[]
@@ -316,13 +323,17 @@ export interface IFicheSourceCommun {
   interactions_pertinentes: IInteractionRcp[]
   surveillance_specifique: ISurveillanceRcp[]
   pictogrammes: string[]
+  /** Ajustement posologique de la molécule (fonction rénale, hépatique, âge,
+   * poids) — vit dans `commun` et non sous `iv`, pour être affiché aussi bien
+   * sur l'onglet injectable que sur l'onglet oral. Chaîne vide ou null quand
+   * le RCP n'en documente aucun (converti en `null` par construireFiche). */
+  note_ajustement?: string | null
 }
 
 export interface IFicheSourceIv {
   reconstitution: IReconstitution | null
   preparation?: IPreparationVoie[]
   administration: {
-    note_ajustement?: string
     posologie: IPosologieRcp[]
   }
   /** Seul bloc de précaution qui reste sous `iv` : une incompatibilité en Y
