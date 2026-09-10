@@ -1,0 +1,429 @@
+{
+  "dci": "ondansetron",
+  "commun": {
+    "noms_commerciaux": [
+      "Zophren"
+    ],
+    "famille": "Antiémétique antagoniste des récepteurs 5-HT3 de la sérotonine",
+    "antidote": "",
+    "indications": [
+      "Nausées/vomissements de chimiothérapie, radiothérapie ou post-opératires"
+    ],
+    "grossesse_allaitement": {
+      "grossesse": "L'ondansétron ne doit pas être utilisé au cours du premier trimestre de la grossesse.",
+      "allaitement": "En cas d'allaitement ou de désir d'allaitement et compte tenu du passage de l'ondansétron dans le lait maternel, l'utilisation de l'ondansétron est déconseillée.",
+      "url_crat_grossesse": "https://www.lecrat.fr/3394/",
+      "url_crat_allaitement": "https://www.lecrat.fr/3398/",
+      "source": "RCP ZOPHREN 2 mg/ml, solution injectable en ampoule, section 4.6"
+    },
+    "contre_indications": [
+      "Hypersensibilité à la substance active ou à l'un des excipients",
+      "Utilisation concomitante d'apomorphine",
+      "Phénylcétonurie pour le lyophilisat oral, en raison de la présence d'aspartam (source de phénylalanine)"
+    ],
+    "interactions_pertinentes": [
+      {
+        "substance": "Apomorphine",
+        "effet": "Association contre-indiquée : des cas d'hypotension profonde et de perte de conscience ont été rapportés lors de l'administration concomitante.",
+        "action_infirmier": "Signaler immédiatement au prescripteur toute co-prescription d'apomorphine.",
+        "source_rcp": "RCP ONDANSETRON VIATRIS 2 mg/ml, 4.3 et 4.5"
+      },
+      {
+        "substance": "Médicaments allongeant l'intervalle QT",
+        "effet": "Allongement supplémentaire de l'intervalle QT, avec augmentation du risque d'arythmie.",
+        "action_infirmier": "Signaler au prescripteur toute association avec un médicament allongeant l'intervalle QT ; renforcer la surveillance électrocardiographique.",
+        "source_rcp": "RCP ONDANSETRON VIATRIS 2 mg/ml, 4.5"
+      },
+      {
+        "substance": "Médicaments sérotoninergiques",
+        "effet": "Risque de syndrome sérotoninergique, affection potentiellement mortelle (troubles de la conscience, dysautonomie, anomalies neuromusculaires, symptômes gastro-intestinaux).",
+        "action_infirmier": "Signaler au prescripteur toute association avec un ISRS, un IRSNa ou la buprénorphine ; renforcer la surveillance clinique.",
+        "source_rcp": "RCP ONDANSETRON VIATRIS 2 mg/ml, 4.4 et 4.5"
+      },
+      {
+        "substance": "Tramadol",
+        "effet": "Diminution possible de l'effet analgésique du tramadol.",
+        "action_infirmier": "Signaler au prescripteur l'association avec le tramadol, notamment en cas d'antalgie jugée insuffisante.",
+        "source_rcp": "RCP ONDANSETRON VIATRIS 2 mg/ml, 4.5"
+      }
+    ],
+    "surveillance_specifique": [
+      {
+        "evenement": "Allongement de l'intervalle QT / torsades de pointes",
+        "explication": "L'ondansétron prolonge l'intervalle QT de façon dose-dépendante ; le risque est majoré en cas d'anomalies électrolytiques, d'insuffisance cardiaque ou d'association à un autre médicament allongeant le QT.",
+        "action": "Renforcer la surveillance électrocardiographique chez les patients à risque (anomalies électrolytiques, insuffisance cardiaque, traitement concomitant allongeant le QT) ; signaler au prescripteur.",
+        "source_rcp": "RCP ONDANSETRON VIATRIS 2 mg/ml, 4.4"
+      },
+      {
+        "evenement": "Syndrome sérotoninergique",
+        "explication": "Affection potentiellement mortelle rapportée en association avec d'autres substances sérotoninergiques (ISRS, IRSNa, buprénorphine).",
+        "action": "Surveiller l'apparition de troubles de la conscience, d'une dysautonomie ou d'anomalies neuromusculaires, en particulier en association avec un traitement sérotoninergique ; signaler immédiatement au prescripteur.",
+        "source_rcp": "RCP ONDANSETRON VIATRIS 2 mg/ml, 4.4 et 4.5"
+      },
+      {
+        "evenement": "Syndrome occlusif",
+        "explication": "L'ondansétron peut favoriser un ralentissement du transit intestinal par son action antagoniste des récepteurs 5-HT3.",
+        "action": "Surveiller attentivement le transit des patients en cours de traitement ; signaler au prescripteur toute constipation sévère.",
+        "source_rcp": "RCP ONDANSETRON VIATRIS 2 mg/ml, 4.4"
+      }
+    ],
+    "pictogrammes": []
+  },
+  "iv": {
+    "reconstitution": null,
+    "preparation": [
+      {
+        "voie": "IVD",
+        "detail": "Ampoule pure (non diluée), pour les doses ≤ 8 mg",
+        "duree": "Au moins 30 secondes",
+        "stabilite": "À usage unique, utiliser immédiatement après ouverture de l'ampoule"
+      },
+      {
+        "voie": "PERF",
+        "detail": "Dilution dans 50 à 100 mL de NaCl 0,9 %, G5%, Ringer, Mannitol 10% (ou chlorure de potassium associé au NaCl 0,9 % ou au G5 %).",
+        "duree": "Au moins 15 minutes",
+        "stabilite": "7 jours à 25 °C ou entre 2 et 8 °C après dilution."
+      },
+      {
+        "voie": "PSE",
+        "detail": "24 mg dilués dans 48 mL de NaCl 0,9 % ou de G5 % (concentration 0,5 mg/mL).",
+        "duree": "Continu",
+        "stabilite": "24 heures"
+      }
+    ],
+    "administration": {
+      "note_ajustement": "Dose initiale IV limitée à 8 mg, à administrer en perfusion d'au moins 15 minutes, chez le sujet âgé de 75 ans ou plus ; dose totale limitée à 8 mg par jour par voie IV en cas d'insuffisance hépatique ; aucune adaptation nécessaire en cas d'insuffisance rénale, se référer au protocole du service.",
+      "posologie": [
+        {
+          "population": "Chimiothérapie/radiothérapie émétisante",
+          "population_type": "adulte",
+          "categorie": "generale",
+          "dose_par_prise_mg_min": 8,
+          "dose_par_prise_mg_max": 16,
+          "intervalle_min_h": 6,
+          "intervalle_max_h": 12,
+          "dose_journaliere_max_g": 0.032
+        },
+        {
+          "population": "Chimiothérapie, perfusion continue",
+          "population_type": "adulte",
+          "categorie": "pse",
+          "dose_par_prise_mg_min": 24,
+          "dose_par_prise_mg_max": 24,
+          "dose_journaliere_max_g": 0.032
+        },
+        {
+          "population": "Nausées/vomissements post-opératoires",
+          "population_type": "adulte",
+          "categorie": "generale",
+          "dose_par_prise_mg_min": 4,
+          "dose_par_prise_mg_max": 4,
+          "intervalle_min_h": 8,
+          "intervalle_max_h": 8,
+          "dose_journaliere_max_g": 0.012
+        },
+        {
+          "population": "Nausées/vomissements post-opératoires, enfant",
+          "population_type": "pediatrie",
+          "categorie": "generale",
+          "age_min_mois": 1,
+          "dose_mg_kg_min": 0.1,
+          "dose_mg_kg_max": 0.1,
+          "dose_par_prise_mg_max": 4,
+          "intervalle_min_h": 8,
+          "intervalle_max_h": 8,
+          "dose_journaliere_max_g": 0.012
+        },
+        {
+          "population": "Chimiothérapie, enfant, dose initiale (jour 1)",
+          "population_type": "pediatrie",
+          "categorie": "generale",
+          "age_min_mois": 6,
+          "dose_mg_kg_min": 0.15,
+          "dose_mg_kg_max": 0.15,
+          "dose_par_prise_mg_max": 8,
+          "intervalle_min_h": 8,
+          "intervalle_max_h": 8,
+          "dose_journaliere_max_g": 0.024
+        }
+      ]
+    },
+    "incompatibilites": [
+      {
+        "substance": "Bicarbonate de sodium",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Fluorouracile (5-FU)",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Aciclovir",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Céfépime",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Ciclosporine",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Furosémide",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Insuline ultra-rapide",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Méropénème",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Méthylprednisolone",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Métronidazole",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Milrinone",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Phénytoïne",
+        "niveau": "absolu"
+      }
+    ]
+  },
+  "oral": {
+    "formes": [
+      {
+        "type": "Comprimé pelliculé",
+        "dosage": "4 mg et 8 mg",
+        "secable": false,
+        "ouverture_gelule": null,
+        "posologie_adulte": [
+          {
+            "population": "Prévention avant chimiothérapie",
+            "population_type": "adulte",
+            "categorie": "generale",
+            "dose_par_prise_mg_min": 8,
+            "dose_par_prise_mg_max": 8
+          },
+          {
+            "population": "Nausées/vomissements retardés",
+            "population_type": "adulte",
+            "categorie": "generale",
+            "dose_par_prise_mg_min": 8,
+            "dose_par_prise_mg_max": 8,
+            "dose_journaliere_max_g": 0.016,
+            "intervalle_min_h": 12,
+            "intervalle_max_h": 12
+          },
+          {
+            "population": "Enfant",
+            "population_type": "pediatrie",
+            "categorie": "generale",
+            "age_min_mois": 72,
+            "dose_par_prise_mg_min": 8,
+            "dose_par_prise_mg_max": 8,
+            "dose_journaliere_max_g": 0.016,
+            "intervalle_min_h": 12,
+            "intervalle_max_h": 12
+          }
+        ]
+      },
+      {
+        "type": "Lyophilisat oral",
+        "dosage": "4 mg et 8 mg",
+        "secable": false,
+        "ouverture_gelule": null,
+        "posologie_adulte": [
+          {
+            "population": "Prévention avant chimiothérapie",
+            "population_type": "adulte",
+            "categorie": "generale",
+            "dose_par_prise_mg_min": 8,
+            "dose_par_prise_mg_max": 8
+          },
+          {
+            "population": "Nausées/vomissements retardés",
+            "population_type": "adulte",
+            "categorie": "generale",
+            "dose_par_prise_mg_min": 8,
+            "dose_par_prise_mg_max": 8,
+            "dose_journaliere_max_g": 0.016,
+            "intervalle_min_h": 12,
+            "intervalle_max_h": 12
+          },
+          {
+            "population": "Surface corporelle 0,6 à 1,2 m²",
+            "population_type": "pediatrie",
+            "categorie": "speciale",
+            "age_min_mois": 6,
+            "dose_par_prise_mg_min": 4,
+            "dose_par_prise_mg_max": 4,
+            "dose_journaliere_max_g": 0.008,
+            "intervalle_min_h": 12,
+            "intervalle_max_h": 12
+          },
+          {
+            "population": "Surface corporelle > 1,2 m²",
+            "population_type": "pediatrie",
+            "categorie": "speciale",
+            "age_min_mois": 6,
+            "dose_par_prise_mg_min": 8,
+            "dose_par_prise_mg_max": 8,
+            "dose_journaliere_max_g": 0.016,
+            "intervalle_min_h": 12,
+            "intervalle_max_h": 12
+          },
+          {
+            "population": "Relais oral après dose IV",
+            "population_type": "pediatrie",
+            "categorie": "generale",
+            "age_min_mois": 6,
+            "dose_par_prise_mg_min": 4,
+            "dose_par_prise_mg_max": 4,
+            "dose_journaliere_max_g": 0.008,
+            "intervalle_min_h": 12,
+            "intervalle_max_h": 12
+          }
+        ]
+      },
+      {
+        "type": "Sirop",
+        "dosage": "4 mg/5 mL",
+        "secable": false,
+        "ouverture_gelule": null,
+        "posologie_adulte": [
+          {
+            "population": "Prévention avant chimiothérapie",
+            "population_type": "adulte",
+            "categorie": "generale",
+            "dose_par_prise_mg_min": 8,
+            "dose_par_prise_mg_max": 8
+          },
+          {
+            "population": "Nausées/vomissements retardés",
+            "population_type": "adulte",
+            "categorie": "generale",
+            "dose_par_prise_mg_min": 8,
+            "dose_par_prise_mg_max": 8,
+            "dose_journaliere_max_g": 0.016,
+            "intervalle_min_h": 12,
+            "intervalle_max_h": 12
+          },
+          {
+            "population": "Surface corporelle < 0,6 m²",
+            "population_type": "pediatrie",
+            "categorie": "speciale",
+            "age_min_mois": 6,
+            "dose_par_prise_mg_min": 2,
+            "dose_par_prise_mg_max": 2,
+            "dose_journaliere_max_g": 0.004,
+            "intervalle_min_h": 12,
+            "intervalle_max_h": 12
+          },
+          {
+            "population": "Surface corporelle 0,6 à 1,2 m²",
+            "population_type": "pediatrie",
+            "categorie": "speciale",
+            "age_min_mois": 6,
+            "dose_par_prise_mg_min": 4,
+            "dose_par_prise_mg_max": 4,
+            "dose_journaliere_max_g": 0.008,
+            "intervalle_min_h": 12,
+            "intervalle_max_h": 12
+          },
+          {
+            "population": "Surface corporelle > 1,2 m²",
+            "population_type": "pediatrie",
+            "categorie": "speciale",
+            "age_min_mois": 6,
+            "dose_par_prise_mg_min": 8,
+            "dose_par_prise_mg_max": 8,
+            "dose_journaliere_max_g": 0.016,
+            "intervalle_min_h": 12,
+            "intervalle_max_h": 12
+          },
+          {
+            "population": "Relais oral après dose IV",
+            "population_type": "pediatrie",
+            "categorie": "generale",
+            "age_min_mois": 6,
+            "dose_par_prise_mg_min": 2,
+            "dose_par_prise_mg_max": 4,
+            "dose_journaliere_max_g": 0.008,
+            "intervalle_min_h": 12,
+            "intervalle_max_h": 12
+          }
+        ]
+      }
+    ],
+    "recommandation_sonde": {
+      "forme_preferee": "Sirop",
+      "alternative": "Lyophilisat oral dissous dans un peu d'eau"
+    }
+  },
+  "tracabilite": {
+    "rcp_source": [
+      {
+        "specialite": "ZOPHREN 2 mg/ml, solution injectable en ampoule (IV)",
+        "titulaire": "SANDOZ",
+        "date_maj": "15/07/2024",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/65991171/extrait"
+      },
+      {
+        "specialite": "ONDANSETRON VIATRIS 2 mg/ml, solution injectable",
+        "titulaire": "VIATRIS SANTE",
+        "date_maj": "16/01/2025",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/63988721/extrait"
+      },
+      {
+        "specialite": "ZOPHREN 4 mg, comprimé pelliculé",
+        "titulaire": "SANDOZ",
+        "date_maj": "28/08/2025",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/60530882/extrait"
+      },
+      {
+        "specialite": "ZOPHREN 8 mg, comprimé pelliculé",
+        "titulaire": "SANDOZ",
+        "date_maj": "28/08/2025",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/65394952/extrait"
+      },
+      {
+        "specialite": "ZOPHREN 4 mg, lyophilisat oral",
+        "titulaire": "SANDOZ",
+        "date_maj": "14/10/2025",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/61187301/extrait"
+      },
+      {
+        "specialite": "ZOPHREN 8 mg, lyophilisat oral",
+        "titulaire": "SANDOZ",
+        "date_maj": "14/10/2025",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/66120057/extrait"
+      },
+      {
+        "specialite": "ZOPHREN 4 mg/5 ml, sirop",
+        "titulaire": "SANDOZ",
+        "date_maj": "26/01/2023",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/62518996/extrait"
+      }
+    ],
+    "statut": "valide",
+    "validation": {
+      "date": "2026-09-08",
+      "validateur": "Anna Trabaud-Lopez (IDE, porteuse du projet), vérification des données extraites contre les RCP ; équipe pharmacie, validation de la méthodologie et arbitrage des points litigieux",
+      "perimetre": [
+        "adulte",
+        "pediatrie"
+      ],
+      "prochaine_revision": "2026-12-08"
+    }
+  }
+}

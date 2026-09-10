@@ -73,6 +73,7 @@ export const CATEGORIES: ICategorie[] = [
     sousFamilles: [
       'Antiémétiques',
       'Antidiarrhéiques',
+      'Antispasmodiques',
       'Laxatifs',
       'Protecteurs gastriques',
     ],

@@ -1,0 +1,412 @@
+{
+  "dci": "ciprofloxacine",
+  "commun": {
+    "noms_commerciaux": [
+      "Ciflox"
+    ],
+    "famille": "Antibiotique fluoroquinolone",
+    "antidote": "",
+    "indications": [
+      "Infections respiratoires basses sévères",
+      "Pyélonéphrite aiguë / infection urinaire compliquée",
+      "Cystite aiguë non compliquée",
+      "Prostatite bactérienne",
+      "Infections gynécologiques hautes",
+      "Infections intra-abdominales",
+      "Infections ostéoarticulaires",
+      "Infections cutanées à Gram négatif",
+      "Otite maligne externe",
+      "Neutropénie fébrile (origine bactérienne suspectée)",
+      "Maladie du charbon (prophylaxie et traitement)",
+      "Prophylaxie invasive à méningocoque"
+    ],
+    "grossesse_allaitement": {
+      "grossesse": "Par mesure de précaution, il est préférable d'éviter l'utilisation de la ciprofloxacine pendant la grossesse.",
+      "allaitement": "Etant donné le risque potentiel d'atteinte articulaire, la ciprofloxacine ne doit pas être utilisée pendant l'allaitement.",
+      "url_crat_grossesse": "https://www.lecrat.fr/6630/",
+      "url_crat_allaitement": "https://www.lecrat.fr/6631/",
+      "source": "RCP CIFLOX 500 mg, comprimé pelliculé sécable, section 4.6 (confirmé identique dans RCP CIPROFLOXACINE VIATRIS 500 mg)"
+    },
+    "contre_indications": [
+      "Hypersensibilité à la substance active, aux autres quinolones ou à l'un des excipients",
+      "Administration concomitante de ciprofloxacine et de tizanidine (majoration des effets hypotenseur et sédatif de la tizanidine)"
+    ],
+    "interactions_pertinentes": [
+      {
+        "substance": "Anti-vitamines K",
+        "effet": "L'administration concomitante de ciprofloxacine peut augmenter les effets anticoagulants des antivitamines K.",
+        "action_infirmier": "Surveiller l'INR et signaler au prescripteur toute co-prescription avec un antivitamine K.",
+        "source_rcp": "RCP CIFLOX 500 mg, section 4.5"
+      },
+      {
+        "substance": "Théophylline",
+        "effet": "L'administration concomitante de ciprofloxacine et de théophylline peut occasionner un surdosage en théophylline et engendrer des effets indésirables dus à la théophylline.",
+        "action_infirmier": "Signaler au prescripteur toute co-prescription avec la théophylline et surveiller les signes de surdosage.",
+        "source_rcp": "RCP CIFLOX 500 mg, section 4.5"
+      },
+      {
+        "substance": "Méthotrexate",
+        "effet": "Le transport tubulaire rénal du méthotrexate peut être inhibé par l'administration concomitante de ciprofloxacine, ce qui peut aboutir à une augmentation des taux plasmatiques de méthotrexate et à un risque majoré de réactions toxiques.",
+        "action_infirmier": "Signaler immédiatement au prescripteur toute co-prescription avec le méthotrexate.",
+        "source_rcp": "RCP CIFLOX 500 mg, section 4.5"
+      },
+      {
+        "substance": "Ciclosporine",
+        "effet": "Une augmentation transitoire de la créatininémie a été observée lors de l'administration simultanée de ciprofloxacine et de ciclosporine.",
+        "action_infirmier": "Surveiller la fonction rénale (créatininémie) en cas de co-prescription avec la ciclosporine.",
+        "source_rcp": "RCP CIFLOX 500 mg, section 4.5"
+      },
+      {
+        "substance": "Médicaments connus pour allonger l'intervalle QT",
+        "effet": "La ciprofloxacine doit être utilisée avec précaution chez les patients traités par des médicaments connus pour allonger l'intervalle QT, du fait d'un risque cumulé d'allongement du QT.",
+        "action_infirmier": "Renforcer la surveillance électrocardiographique en cas de co-prescription avec un médicament allongeant le QT ; signaler au prescripteur.",
+        "source_rcp": "RCP CIFLOX 500 mg, section 4.4 et 4.5"
+      },
+      {
+        "substance": "Probénécide",
+        "effet": "Le probénécide accroît la concentration sérique de la ciprofloxacine.",
+        "action_infirmier": "Signaler au prescripteur toute co-prescription avec le probénécide.",
+        "source_rcp": "RCP CIFLOX 500 mg, section 4.5"
+      }
+    ],
+    "surveillance_specifique": [
+      {
+        "evenement": "Tendinite et rupture tendineuse (notamment tendon d'Achille), parfois bilatérale, dès les premières 48 heures",
+        "explication": "Risque majoré chez le sujet âgé, l'insuffisant rénal, le transplanté et en cas de corticothérapie associée.",
+        "action": "Interrompre la ciprofloxacine dès les premiers signes de tendinite (gonflement douloureux, inflammation) et signaler au prescripteur.",
+        "source_rcp": "RCP CIFLOX 500 mg, section 4.4"
+      },
+      {
+        "evenement": "Allongement de l'intervalle QT",
+        "explication": "Les fluoroquinolones, dont la ciprofloxacine, peuvent allonger l'intervalle QT, avec risque cumulé chez les patients à facteurs de risque ou sous traitement concomitant allongeant le QT.",
+        "action": "Renforcer la surveillance électrocardiographique chez les patients à risque ; signaler toute anomalie électrolytique au prescripteur avant traitement.",
+        "source_rcp": "RCP CIFLOX 500 mg, section 4.4"
+      },
+      {
+        "evenement": "Photosensibilisation",
+        "explication": "La ciprofloxacine peut provoquer des réactions de photosensibilité.",
+        "action": "Informer le patient d'éviter toute exposition directe et importante au soleil ou aux rayons UV pendant le traitement.",
+        "source_rcp": "RCP CIFLOX 500 mg, section 4.4"
+      },
+      {
+        "evenement": "Neuropathie périphérique sensorielle ou sensitivo-motrice",
+        "explication": "Effet indésirable spécifique aux fluoroquinolones, pouvant apparaître rapidement après le début du traitement.",
+        "action": "Signaler au prescripteur l'apparition de tout symptôme neurologique évocateur ; l'arrêt du traitement peut être nécessaire.",
+        "source_rcp": "RCP CIFLOX 500 mg, section 4.4"
+      },
+      {
+        "evenement": "Convulsions et abaissement du seuil épileptogène, y compris état de mal épileptique",
+        "explication": "Risque connu de la classe des quinolones, en particulier chez les patients ayant des antécédents neurologiques prédisposants.",
+        "action": "Surveiller l'apparition de signes neurologiques et signaler au prescripteur, en particulier chez un patient aux antécédents neurologiques.",
+        "source_rcp": "RCP CIFLOX 500 mg, section 4.4"
+      },
+      {
+        "evenement": "Manifestations psychiatriques (dépression, réactions psychotiques, idées suicidaires), possibles dès la première prise",
+        "explication": "Effet indésirable rare mais documenté pour la ciprofloxacine, pouvant survenir dès la première administration.",
+        "action": "Signaler immédiatement au prescripteur toute manifestation psychiatriques ou idée suicidaire ; interrompre le traitement.",
+        "source_rcp": "RCP CIFLOX 500 mg, section 4.4"
+      },
+      {
+        "evenement": "Nécrose hépatique et insuffisance hépatique mettant en jeu le pronostic vital",
+        "explication": "Effet indésirable rare mais grave, signalé pour la ciprofloxacine.",
+        "action": "Signaler au prescripteur tout signe d'atteinte hépatique (anorexie, ictère, urines foncées, prurit, sensibilité abdominale) ; le traitement doit être interrompu.",
+        "source_rcp": "RCP CIFLOX 500 mg, section 4.4"
+      },
+      {
+        "evenement": "Colite associée aux antibiotiques (Clostridioides difficile), pouvant apparaître plusieurs semaines après l'arrêt",
+        "explication": "Diarrhée sévère et persistante pouvant engager le pronostic vital.",
+        "action": "Interrompre immédiatement la ciprofloxacine devant une diarrhée sévère et persistante et signaler au prescripteur, y compris à distance du traitement.",
+        "source_rcp": "RCP CIFLOX 500 mg, section 4.4"
+      },
+      {
+        "evenement": "Cristallurie",
+        "explication": "Peut survenir en cas d'hydratation insuffisante ou d'alcalinité urinaire excessive.",
+        "action": "Assurer une hydratation correcte du patient et éviter toute alcalinité excessive des urines.",
+        "source_rcp": "RCP CIFLOX 500 mg, section 4.4"
+      },
+      {
+        "evenement": "Dysglycémie",
+        "explication": "Concerne surtout le patient âgé diabétique sous traitement hypoglycémiant oral concomitant (ex. sulfamides).",
+        "action": "Surveiller régulièrement la glycémie chez le patient diabétique traité par ciprofloxacine.",
+        "source_rcp": "RCP CIFLOX 500 mg, section 4.4"
+      },
+      {
+        "evenement": "Réactions d'hypersensibilité et anaphylactiques, pouvant survenir dès la première prise",
+        "explication": "Peuvent mettre en jeu le pronostic vital.",
+        "action": "Interrompre la ciprofloxacine et signaler immédiatement au prescripteur devant toute réaction d'hypersensibilité.",
+        "source_rcp": "RCP CIFLOX 500 mg, section 4.4"
+      },
+      {
+        "evenement": "Anévrisme et dissection aortiques, régurgitation ou insuffisance valvulaire cardiaque",
+        "explication": "Risque accru chez les patients aux antécédents familiaux, maladie du tissu conjonctif ou pathologie aortique connue.",
+        "action": "Devant une douleur abdominale, thoracique ou dorsale soudaine, orienter le patient vers un service d'urgence.",
+        "source_rcp": "RCP CIFLOX 500 mg, section 4.4"
+      },
+      {
+        "evenement": "Aggravation d'une myasthénie grave",
+        "explication": "Les symptômes de myasthénie peuvent être exacerbés par la ciprofloxacine.",
+        "action": "Utiliser avec prudence et signaler au prescripteur toute majoration des symptômes chez un patient myasthénique connu.",
+        "source_rcp": "RCP CIFLOX 500 mg, section 4.4"
+      },
+      {
+        "evenement": "Arthropathie chez l'enfant et l'adolescent",
+        "explication": "Observée chez l'animal immature ; conduit à réserver l'utilisation pédiatrique aux indications validées et à des prescripteurs expérimentés.",
+        "action": "Réserver l'administration pédiatrique aux indications documentées du RCP et signaler tout symptôme articulaire chez l'enfant traité.",
+        "source_rcp": "RCP CIFLOX 500 mg, section 4.4"
+      }
+    ],
+    "pictogrammes": []
+  },
+  "iv": {
+    "reconstitution": null,
+    "preparation": [
+      {
+        "voie": "PERF",
+        "detail": "Solution prête à l'emploi. Si dilution nécessaire : NaCl 0,9 %, Ringer, Ringer lactate, G5 % ou G10 %.",
+        "duree": "30 minutes pour 200 mg/100 mL - 60 minutes pour 400 mg/200 mL",
+        "stabilite": "Protéger de la lumière et utiliser immédiatement après ouverture."
+      }
+    ],
+    "administration": {
+      "posologie": [
+        {
+          "population": "Traitement standard",
+          "categorie": "generale",
+          "palier": "Standard IV, 400 mg x2-3/j",
+          "dose_par_prise_mg_min": 400,
+          "dose_par_prise_mg_max": 400,
+          "population_type": "adulte",
+          "intervalle_min_h": 8,
+          "intervalle_max_h": 12,
+          "dose_journaliere_g_max": 1.200
+        },
+        {
+          "population": "Diarrhée infectieuse",
+          "categorie": "speciale",
+          "dose_par_prise_mg_min": 400,
+          "dose_par_prise_mg_max": 400,
+          "population_type": "adulte",
+          "intervalle_min_h": 12,
+          "intervalle_max_h": 12,
+          "dose_journaliere_g_max": 0.800
+        },
+        {
+          "population": "Maladie du charbon, prophylaxie post-exposition et traitement curatif",
+          "categorie": "speciale",
+          "dose_par_prise_mg_min": 400,
+          "dose_par_prise_mg_max": 400,
+          "population_type": "adulte",
+          "intervalle_min_h": 12,
+          "intervalle_max_h": 12,
+          "dose_journaliere_g_max": 0.800
+        },
+        {
+          "population": "Mucoviscidose, infection à Pseudomonas aeruginosa",
+          "categorie": "generale",
+          "population_type": "pediatrie",
+          "dose_mg_kg_min": 10,
+          "dose_mg_kg_max": 10,
+          "dose_par_prise_mg_max": 400,
+          "intervalle_min_h": 8,
+          "intervalle_max_h": 8,
+          "dose_journaliere_g_max": 1.200
+        },
+        {
+          "population": "Infections urinaires compliquées et pyélonéphrite aiguë",
+          "categorie": "generale",
+          "population_type": "pediatrie",
+          "dose_mg_kg_min": 6,
+          "dose_mg_kg_max": 10,
+          "dose_par_prise_mg_max": 400,
+          "intervalle_min_h": 8,
+          "intervalle_max_h": 8,
+          "dose_journaliere_g_max": 1.200
+        }
+      ],
+      "note_ajustement": "Dose adaptée selon la fonction rénale (clairance de la créatinine), se référer au protocole du service. Aucun ajustement nécessaire en cas d'insuffisance hépatique isolée."
+    },
+    "incompatibilites": [
+      {
+        "substance": "Amoxicilline",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Amoxicilline/acide clavulanique",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Céfépime",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Ceftazidime",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Clindamycine phosphate",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Dexaméthasone phosphate disodique",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Flucloxacilline",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Furosémide",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Héparine sodique",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Magnésium sulfate",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Méthylprednisolone",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Phénytoïne",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Potassium phosphate",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Sodium bicarbonate",
+        "niveau": "absolu"
+      }
+    ]
+  },
+  "oral": {
+    "formes": [
+      {
+        "type": "Comprimé pelliculé",
+        "dosage": "250 mg - 750mg",
+        "ecrasable": false,
+        "ouverture_gelule": null,
+        "posologie_adulte": [
+          {
+            "population": "Traitement standard",
+            "categorie": "generale",
+            "dose_par_prise_mg_min": 250,
+            "dose_par_prise_mg_max": 750,
+            "intervalle_min_h": 12,
+            "intervalle_max_h": 12,
+            "dose_journaliere_g_max": 1.500,
+            "population_type": "adulte"
+          },
+          {
+            "population": "Urétrite et cervicite gonococciques (souches sensibles)",
+            "categorie": "speciale",
+            "dose_par_prise_mg_min": 500,
+            "dose_par_prise_mg_max": 500,
+            "dose_journaliere_g_max": 0.500,
+            "population_type": "adulte"
+          },
+          {
+            "population": "Diarrhée infectieuse (ex. Shigella spp., diarrhée du voyageur)",
+            "categorie": "speciale",
+            "dose_par_prise_mg_min": 500,
+            "dose_par_prise_mg_max": 500,
+            "intervalle_min_h": 12,
+            "intervalle_max_h": 12,
+            "dose_journaliere_g_max": 1,
+            "population_type": "adulte"
+          },
+          {
+            "population": "Prophylaxie des infections invasives à méningocoque",
+            "categorie": "speciale",
+            "dose_par_prise_mg_min": 500,
+            "dose_par_prise_mg_max": 500,
+            "population_type": "adulte",
+            "dose_journaliere_g_max": 0.500
+          },
+          {
+            "population": "Maladie du charbon, prophylaxie post-exposition et traitement curatif",
+            "categorie": "speciale",
+            "dose_par_prise_mg_min": 500,
+            "dose_par_prise_mg_max": 500,
+            "intervalle_min_h": 12,
+            "intervalle_max_h": 12,
+            "dose_journaliere_g_max": 1,
+            "population_type": "adulte"
+          }
+        ]
+      },
+      {
+        "type": "Comprimé pelliculé sécable",
+        "dosage": "500 mg",
+        "ecrasable": false,
+        "ouverture_gelule": null,
+        "posologie_adulte": []
+      }
+    ],
+    "recommandation_sonde": {
+      "forme_preferee": "",
+      "alternative": "Voie injectable, avis médical"
+    }
+  },
+  "tracabilite": {
+    "rcp_source": [
+      {
+        "specialite": "CIFLOX 500 mg, comprimé pelliculé sécable",
+        "titulaire": "Bayer HealthCare SAS",
+        "date_maj": "",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/65636245/extrait"
+      },
+      {
+        "specialite": "CIPROFLOXACINE VIATRIS 500 mg, comprimé pelliculé sécable",
+        "titulaire": "Viatris Santé",
+        "date_maj": "",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/62450285/extrait"
+      },
+      {
+        "specialite": "CIPROFLOXACINE ARROW 250 mg, comprimé pelliculé",
+        "titulaire": "Arrow Génériques",
+        "date_maj": "",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/66662862/extrait"
+      },
+      {
+        "specialite": "CIPROFLOXACINE ARROW 750 mg, comprimé pelliculé",
+        "titulaire": "Arrow Génériques",
+        "date_maj": "",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/68747076/extrait"
+      },
+      {
+        "specialite": "CIPROFLOXACINE PANPHARMA 200 mg/100 mL, solution pour perfusion",
+        "titulaire": "Panpharma",
+        "date_maj": "",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/60921386/extrait"
+      },
+      {
+        "specialite": "CIPROFLOXACINE PANPHARMA 400 mg/200 mL, solution pour perfusion",
+        "titulaire": "Panpharma",
+        "date_maj": "",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/66255471/extrait"
+      },
+      {
+        "specialite": "CIPROFLOXACINE KABI 200 mg/100 mL, solution pour perfusion",
+        "titulaire": "Fresenius Kabi France",
+        "date_maj": "",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/61085944/extrait"
+      }
+    ],
+    "statut": "valide",
+    "validation": {
+      "date": "2026-09-08",
+      "validateur": "Anna Trabaud-Lopez (IDE, porteuse du projet), vérification des données extraites contre les RCP ; équipe pharmacie, validation de la méthodologie et arbitrage des points litigieux",
+      "perimetre": [
+        "adulte",
+        "pediatrie"
+      ],
+      "prochaine_revision": "2026-12-08"
+    }
+  }
+}
