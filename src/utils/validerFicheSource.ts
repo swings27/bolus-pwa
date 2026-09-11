@@ -138,7 +138,12 @@ export function validerFicheSource(id: string, brut: unknown): string[] {
     }
   }
 
-  if (brut.iv !== undefined) {
+  // Une voie peut être déclarée absente de deux façons équivalentes : clé
+  // omise, ou `null` explicite (convention déjà en place pour `aerosol`, et
+  // utilisée par les fiches uniquement injectables pour `"oral": null`).
+  const voieAbsente = (valeur: unknown) => valeur === undefined || valeur === null
+
+  if (!voieAbsente(brut.iv)) {
     const iv = brut.iv
     if (!estObjet(iv)) {
       erreurs.signaler(['iv'], `doit être un objet (reçu ${typeDe(iv)})`)
@@ -162,7 +167,7 @@ export function validerFicheSource(id: string, brut: unknown): string[] {
     }
   }
 
-  if (brut.oral !== undefined) {
+  if (!voieAbsente(brut.oral)) {
     const oral = brut.oral
     if (!estObjet(oral)) {
       erreurs.signaler(['oral'], `doit être un objet (reçu ${typeDe(oral)})`)
@@ -182,7 +187,7 @@ export function validerFicheSource(id: string, brut: unknown): string[] {
     }
   }
 
-  if (brut.iv === undefined && brut.oral === undefined) {
+  if (voieAbsente(brut.iv) && voieAbsente(brut.oral)) {
     erreurs.signaler([], 'ni "iv" ni "oral" ne sont renseignés — une fiche doit documenter au moins une voie')
   }
 

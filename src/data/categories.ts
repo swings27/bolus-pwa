@@ -21,6 +21,13 @@ import type { ICategorie } from '../types'
 // catégories × 2 thèmes) : une seule couleur de base suffit, color-mix()
 // fait le reste au moment du rendu.
 export const CATEGORIES: ICategorie[] = [
+  { 
+    slug: 'anesthesiques',
+    label: 'Anesthésiques',
+    sousFamilles: ['Analgésiques', 'Curares', 'Généraux', 'Locaux'],
+    couleur: '#5C6B70',
+    code: 'AN'
+  },
   {
     slug: 'anti-infectieux',
     label: 'Anti-infectieux',
@@ -38,7 +45,7 @@ export const CATEGORIES: ICategorie[] = [
       'Opiacés',
     ],
     couleur: '#C65D3B',
-    code: 'AN',
+    code: 'AG',
   },
   {
     slug: 'cardiovasculaire',
@@ -86,20 +93,13 @@ export const CATEGORIES: ICategorie[] = [
     sousFamilles: [
       'Anticonvulsivants',
       'Antidépresseurs',
-      'Antipsychotiques',
+      'Neuroleptiques',
       'Anxiolytiques',
       'Hypnotiques',
     ],
     couleur: '#3F5D38',
     code: 'PS',
-  },
-  {
-    slug: 'autres',
-    label: 'Autres',
-    sousFamilles: [],
-    couleur: '#5C6B70',
-    code: 'AU',
-  },
+  }
 ]
 
 export function getCategorieBySlug(slug: string): ICategorie | undefined {

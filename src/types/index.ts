@@ -61,9 +61,25 @@ export interface IPosologieRcp {
    * conversion g→mg qui ne s'applique qu'à un nombre. Même raison pour
    * dose_max_par_prise_g et dose_journaliere_max_MUI ci-dessous. */
   dose_journaliere_max_g?: number | string
+  /** Maximum journalier rapporté au poids (ex. kétamine, 5 mg/kg/j) —
+   * affiché tel quel en mg/kg/j, jamais converti en mg ou g absolus : sans
+   * le poids du patient, la conversion n'a pas de sens. */
+  dose_mg_kg_j_max?: number | string
   dose_max_par_prise_g?: number | string
+  /** Débits de perfusion continue (PSE), une unité par molécule selon la
+   * formulation du RCP : µg/kg/min (adrénaline), mg/kg/h (kétamine),
+   * UI/kg/h (héparine sodique) et mg/h non rapporté au poids
+   * (nicardipine). Affichés tels quels par formaterDose(), sans conversion
+   * de l'un vers l'autre — c'est sous cette forme que le débit est réglé au
+   * pousse-seringue. */
   dose_ugkgmin_min?: number
   dose_ugkgmin_max?: number
+  dose_mgkgh_min?: number
+  dose_mgkgh_max?: number
+  dose_UI_kg_h_min?: number
+  dose_UI_kg_h_max?: number
+  debit_mg_h_min?: number
+  debit_mg_h_max?: number
   /** MUI = millions d'unités internationales (ex. spiramycine) — même
    * famille que dose_par_prise_mg(_min/_max)/dose_journaliere_max_g, en
    * unité différente. */
@@ -73,12 +89,18 @@ export interface IPosologieRcp {
   dose_journaliere_MUI_min?: number
   dose_journaliere_MUI_max?: number
   dose_journaliere_max_MUI?: number | string
-  /** Pédiatrie uniquement pour le moment (posologie au poids par palier de
-   * 10 kg, ou en UI/kg) — pas encore affiché, V1 se limite à l'adulte, voir
-   * SectionPosologies. Typés ici pour que construireFiche() ne perde aucun
-   * champ du JSON source. */
+  /** Posologie au poids par palier de 10 kg (spiramycine pédiatrique) — pas
+   * encore affiché, V1 se limite à l'adulte, voir SectionPosologies. Typé ici
+   * pour que construireFiche() ne perde aucun champ du JSON source. */
   dose_journaliere_MUI_par_10kg_min?: number
   dose_journaliere_MUI_par_10kg_max?: number
+  /** UI = unités internationales, sans rapport d'échelle avec les MUI
+   * ci-dessus : une héparine se dose en milliers d'UI, la spiramycine en
+   * millions. Par prise en valeur absolue (énoxaparine prophylactique,
+   * 2000-4000 UI) ou rapportée au poids (énoxaparine curative, héparine en
+   * bolus). */
+  dose_par_prise_UI_min?: number
+  dose_par_prise_UI_max?: number
   dose_par_prise_UI_kg_min?: number
   dose_par_prise_UI_kg_max?: number
   /** mmol = millimoles (ex. chlorure de potassium) — même famille que
@@ -290,6 +312,10 @@ export interface IFiche {
    * précise, et s'affiche donc au bas des posologies des DEUX onglets
    * (injectable et oral), jamais quand aucune forme n'est sélectionnée. */
   noteAjustement: string | null
+  /** Même rôle que noteAjustement, pour une molécule à préparation critique
+   * (commun.note_ajustement_absolue) — affichée au même endroit mais en
+   * rouge plein à texte blanc. */
+  noteAjustementAbsolue: string | null
   iv: IFormeIv | null
   oral: IFormeOraleBloc | null
   rcpSource: IRcpSource[]
@@ -328,6 +354,12 @@ export interface IFicheSourceCommun {
    * sur l'onglet injectable que sur l'onglet oral. Chaîne vide ou null quand
    * le RCP n'en documente aucun (converti en `null` par construireFiche). */
   note_ajustement?: string | null
+  /** Variante du champ ci-dessus pour les molécules dont la préparation ne
+   * souffre aucune approximation (stupéfiants, marge thérapeutique étroite) :
+   * même emplacement sur la fiche, mais rendu en rouge plein à texte blanc
+   * plutôt qu'en encadré ambre. Les deux peuvent coexister — aucune n'écrase
+   * l'autre à l'affichage (voir SectionPosologies). */
+  note_ajustement_absolue?: string | null
 }
 
 export interface IFicheSourceIv {
@@ -355,12 +387,20 @@ export interface IFicheSourceTracabilite {
   validation: IValidationRcp
 }
 
-/** Forme brute d'un fichier public/data/<id>.json, avant enrichissement. */
+/** Forme brute d'un fichier public/data/<id>.json, avant enrichissement.
+ *
+ * `iv`/`oral` acceptent aussi bien l'absence de la clé qu'un `null` explicite
+ * (même convention que `aerosol`) : une molécule uniquement injectable écrit
+ * indifféremment `"oral": null` ou rien du tout, les deux signifiant « cette
+ * voie n'existe pas pour cette molécule ». */
 export interface IFicheSource {
   dci: string
   commun: IFicheSourceCommun
-  iv?: IFicheSourceIv
-  oral?: IFicheSourceOral
+  iv?: IFicheSourceIv | null
+  oral?: IFicheSourceOral | null
+  /** Bloc aérosol : prévu au schéma, encore `null` dans toutes les fiches
+   * publiées — pas de type détaillé tant qu'aucune donnée réelle n'existe. */
+  aerosol?: unknown
   tracabilite: IFicheSourceTracabilite
 }
 

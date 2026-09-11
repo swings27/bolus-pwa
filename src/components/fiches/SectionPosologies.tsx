@@ -23,6 +23,9 @@ interface ISectionPosologiesProps {
    * — "generale" ne veut pas dire la même chose en IV et en oral. */
   contexte: 'iv' | 'oral'
   ajustement?: string | null
+  /** Même information que `ajustement`, pour une molécule à préparation
+   * critique — rendue en rouge plein à texte blanc juste en dessous. */
+  ajustementAbsolu?: string | null
 }
 
 function Puce({ children, couleur }: { children: ReactNode; couleur: string }) {
@@ -160,7 +163,13 @@ function BlocGroupe({ titre, repliable, children }: { titre: string | null; repl
 // sur un comprimé et une gélule) : dedupliquerPosologies() ne garde alors
 // que la ligne la plus englobante plutôt que d'afficher le même conseil
 // plusieurs fois — voir ce helper pour la règle exacte.
-export default function SectionPosologies({ titre, posologies, contexte, ajustement }: ISectionPosologiesProps) {
+export default function SectionPosologies({
+  titre,
+  posologies,
+  contexte,
+  ajustement,
+  ajustementAbsolu,
+}: ISectionPosologiesProps) {
   const adultes = dedupliquerPosologies(posologies.filter((p) => p.population_type !== 'pediatrie'))
   if (adultes.length === 0) return null
 
@@ -207,6 +216,22 @@ export default function SectionPosologies({ titre, posologies, contexte, ajustem
                 Ajustement posologique
               </p>
               <p className="text-[11px] leading-relaxed text-texte">{ajustement}</p>
+            </div>
+          </BlocAvertissement>
+        </div>
+      )}
+
+      {/* Même emplacement que l'ajustement ci-dessus, mais en rouge plein à
+          texte blanc : réservé aux molécules dont la préparation ne souffre
+          aucune approximation (stupéfiants, marge thérapeutique étroite). Les
+          deux blocs s'affichent si les deux champs sont renseignés — aucun
+          n'écrase l'autre. */}
+      {ajustementAbsolu && (
+        <div className="mt-3">
+          <BlocAvertissement couleur="var(--alerte-pleine)" variante="pleine">
+            <div>
+              <p className="mb-1 text-[9.5px] font-semibold uppercase tracking-wide text-white">Ajustement posologique</p>
+              <p className="text-[11px] font-medium leading-relaxed text-white">{ajustementAbsolu}</p>
             </div>
           </BlocAvertissement>
         </div>

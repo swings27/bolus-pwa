@@ -132,6 +132,7 @@
           "dose_par_prise_mg_max": 2000,
           "intervalle_min_h": 8,
           "intervalle_max_h": 8,
+          "dose_journaliere_max_g": 6,
           "population_type": "adulte"
         },
         {

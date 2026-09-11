@@ -9,6 +9,9 @@ interface IDetailPerOsProps {
    * (fiche.noteAjustement) : il porte sur la molécule — fonction rénale,
    * hépatique, âge, poids — et vaut donc pour les deux voies. */
   noteAjustement: string | null
+  /** Variante rouge plein, molécule à préparation critique — voir
+   * IFiche.noteAjustementAbsolue. */
+  noteAjustementAbsolue: string | null
 }
 
 type Tonalite = 'oui' | 'non' | 'neutre'
@@ -53,7 +56,7 @@ function estDejaLiquide(type: string): boolean {
 // (sécable, ouvrable), puis les posologies de chaque forme regroupées
 // dans une seule section — plutôt qu'une grosse carte par forme mélangeant
 // les deux, plus lourde à parcourir pour repérer une seule information.
-export default function DetailPerOs({ donnees, noteAjustement }: IDetailPerOsProps) {
+export default function DetailPerOs({ donnees, noteAjustement, noteAjustementAbsolue }: IDetailPerOsProps) {
   return (
     <div className="flex flex-col">
       {donnees.recommandation_sonde && (
@@ -117,6 +120,7 @@ export default function DetailPerOs({ donnees, noteAjustement }: IDetailPerOsPro
         posologies={donnees.formes.flatMap((forme) => forme.posologie_adulte)}
         contexte="oral"
         ajustement={noteAjustement}
+        ajustementAbsolu={noteAjustementAbsolue}
       />
     </div>
   )

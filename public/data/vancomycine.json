@@ -137,6 +137,8 @@
           "population_type": "adulte",
           "dose_mg_kg_min": 25,
           "dose_mg_kg_max": 30,
+          "intervalle_min_h": 24,
+          "intervalle_max_h": 24,
           "tdm_requis": true
         },
         {

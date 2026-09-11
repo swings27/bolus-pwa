@@ -89,6 +89,36 @@ describe('formaterDose', () => {
   it('bascule en mg si la fourchette en grammes n\'est pas entière', () => {
     expect(formaterDose(posologie({ dose_par_prise_g_min: 0.5, dose_par_prise_g_max: 1 }))).toBe('500-1000 mg')
   })
+
+  // UI : introduites pour les anticoagulants (énoxaparine, héparine). Sans
+  // rapport d'échelle avec les MUI de la spiramycine — d'où deux familles de
+  // champs distinctes plutôt qu'une conversion.
+  it('formate une dose par prise en UI', () => {
+    expect(formaterDose(posologie({ dose_par_prise_UI_min: 2000, dose_par_prise_UI_max: 4000 }))).toBe('2000-4000 UI')
+  })
+
+  it('formate une dose par prise en UI/kg', () => {
+    expect(formaterDose(posologie({ dose_par_prise_UI_kg_min: 100, dose_par_prise_UI_kg_max: 100 }))).toBe('100 UI/kg')
+  })
+
+  it('ne confond pas UI et MUI (ordres de grandeur incomparables)', () => {
+    expect(formaterDose(posologie({ dose_par_prise_MUI: 3 }))).toBe('3 MUI')
+    expect(formaterDose(posologie({ dose_par_prise_UI_min: 3, dose_par_prise_UI_max: 3 }))).toBe('3 UI')
+  })
+
+  // Débits de perfusion continue : chaque molécule garde l'unité de son RCP,
+  // c'est sous cette forme que le débit est réglé au pousse-seringue.
+  it('formate un débit en mg/kg/h', () => {
+    expect(formaterDose(posologie({ dose_mgkgh_min: 0.125, dose_mgkgh_max: 0.25 }))).toBe('0,125-0,25 mg/kg/h')
+  })
+
+  it('formate un débit en UI/kg/h', () => {
+    expect(formaterDose(posologie({ dose_UI_kg_h_min: 20, dose_UI_kg_h_max: 20 }))).toBe('20 UI/kg/h')
+  })
+
+  it('formate un débit en mg/h, non rapporté au poids', () => {
+    expect(formaterDose(posologie({ debit_mg_h_min: 3, debit_mg_h_max: 5 }))).toBe('3-5 mg/h')
+  })
 })
 
 describe('formaterIntervalle', () => {
@@ -104,9 +134,22 @@ describe('formaterIntervalle', () => {
     expect(formaterIntervalle(posologie({ nb_prises_min_24h: 2, nb_prises_max_24h: 4 }))).toBe('2-4 / jour')
   })
 
+  // Convention des fiches : un intervalle de 24 h pile note une
+  // administration unique, ce qui permet de renseigner un intervalle sur
+  // toutes les lignes plutôt que de laisser le champ vide.
+  it('affiche "Dose unique" pour un intervalle de 24 h pile', () => {
+    expect(formaterIntervalle(posologie({ intervalle_min_h: 24, intervalle_max_h: 24 }))).toBe('Dose unique')
+  })
+
+  it('garde un vrai intervalle horaire quand 24 n\'est qu\'une des deux bornes', () => {
+    expect(formaterIntervalle(posologie({ intervalle_min_h: 1, intervalle_max_h: 24 }))).toBe('1-24 h')
+    expect(formaterIntervalle(posologie({ intervalle_min_h: 24, intervalle_max_h: 48 }))).toBe('24-48 h')
+  })
+
   // Point 5 de l'audit posologie : un "—" ambigu (donnée manquante ou dose
   // réellement unique ?) est remplacé par une valeur explicite selon la
-  // catégorie de la ligne.
+  // catégorie de la ligne. Conservé en plus de la règle des 24 h ci-dessus,
+  // le temps que toutes les fiches renseignent un intervalle.
   it('affiche "Dose unique" si aucun champ de fréquence n\'est renseigné', () => {
     expect(formaterIntervalle(posologie())).toBe('Dose unique')
   })
@@ -192,6 +235,17 @@ describe('formaterMax', () => {
 
   it('affiche un nombre de dose_journaliere_max_mmol avec le suffixe "mmol/j"', () => {
     expect(formaterMax(posologie({ dose_journaliere_max_mmol: 150 }))).toBe('150 mmol/j')
+  })
+
+  // Maximum journalier au poids (kétamine) : reste en mg/kg/j, la conversion
+  // en mg absolus supposerait un poids que la fiche ne connaît pas.
+  it('affiche dose_mg_kg_j_max en mg/kg/j, sans conversion en mg ni en g', () => {
+    expect(formaterMax(posologie({ dose_mg_kg_j_max: 5 }))).toBe('5 mg/kg/j')
+    expect(formaterMax(posologie({ dose_mg_kg_j_max: 1.5 }))).toBe('1,5 mg/kg/j')
+  })
+
+  it('affiche dose_mg_kg_j_max tel quel si c\'est une chaîne', () => {
+    expect(formaterMax(posologie({ dose_mg_kg_j_max: 'Selon protocole' }))).toBe('Selon protocole')
   })
 
   it('affiche dose_max_par_prise_g tel quel si c\'est une chaîne', () => {

@@ -23,6 +23,13 @@
   --validation: #3f5d38;
   --validation-pastille: #3f5d38;
   --alerte: #c0392b;
+  /* Rouge plein, à texte blanc (ajustement "absolu" d'une fiche, voir
+     SectionPosologies) — délibérément PAS éclairci en thème sombre,
+     contrairement à --alerte : le blanc passe à ~5,9:1 sur ce rouge contre
+     ~2,4:1 sur le --alerte sombre (#e07a6b), qui est adouci pour servir de
+     teinte et non de fond plein. Une même valeur dans les deux thèmes, donc,
+     pour un signal qui doit rester maximal et lisible partout. */
+  --alerte-pleine: #c0392b;
   --indication: #0b3c49;
   --bloc-antidote: #d9dfc6;
   --bloc-alerte: #f0d1c5;

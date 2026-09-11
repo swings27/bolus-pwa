@@ -1,0 +1,272 @@
+{
+  "dci": "enoxaparine",
+  "commun": {
+    "noms_commerciaux": [
+      "Lovenox",
+      "Inhixa"
+    ],
+    "famille": "Anticoagulant héparine de bas poids moléculaire",
+    "antidote": "Sulfate de protamine",
+    "indications": [
+      "Prophylaxie MTEV chirurgicale",
+      "Prophylaxie MTEV médicale aiguë",
+      "Traitement TVP / EP",
+      "TVP / EP prolongé, cancer actif",
+      "Prévention thrombus hémodialyse",
+      "Angor instable / NSTEMI",
+      "Infarctus du myocarde (STEMI)"
+    ],
+    "grossesse_allaitement": {
+      "grossesse": "L'énoxaparine sodique ne doit être utilisée pendant la grossesse que si le médecin en a clairement établi la nécessité.",
+      "allaitement": "L'énoxaparine sodique peut être utilisée pendant l'allaitement.",
+      "url_crat_grossesse": "https://www.lecrat.fr/6614/",
+      "url_crat_allaitement": "https://www.lecrat.fr/6615/"
+    },
+    "note_ajustement": "Ajustement en fonction de l'âge, particulièrement à partir de 80 ans car risque accrus de complications hémorragiques aux doses curatives. Ajustements posologique snécessaires en fonction de la fonction rénale et du poids, avec surveillance clinique étroite recommandée.",
+    "contre_indications": [
+      "Hypersensibilité à l'énoxaparine sodique, à l'héparine ou à ses dérivés, y compris à d'autres héparines de bas poids moléculaire (HBPM), ou à l'un des excipients",
+      "Antécédent de thrombopénie induite par l'héparine (TIH) à médiation immunitaire au cours des 100 derniers jours, ou en présence d'anticorps circulants.",
+      "Saignement actif cliniquement significatif ou affection associée à un risque élevé d'hémorragie.",
+      "Rachianesthésie, anesthésie péridurale ou locorégionale, lorsque l'énoxaparine sodique est utilisée à dose curative dans les 24 heures précédentes."
+    ],
+    "interactions_pertinentes": [
+      {
+        "substance": "AINS (dont kétorolac) et salicylés systémiques à dose anti-inflammatoire",
+        "effet": "Association déconseillée : majoration du risque hémorragique.",
+        "action_infirmier": "Signaler au prescripteur ; si l'association est jugée indispensable, exercer une surveillance clinique et biologique étroite."
+      },
+      {
+        "substance": "Thrombolytiques (altéplase, rétéplase, streptokinase, ténectéplase, urokinase) et autres anticoagulants",
+        "effet": "Association déconseillée : majoration du risque hémorragique.",
+        "action_infirmier": "Signaler au prescripteur ; surveillance clinique et biologique étroite si l'association est maintenue."
+      },
+      {
+        "substance": "Antiagrégants plaquettaires (acide acétylsalicylique à dose antiagrégante, clopidogrel, ticlopidine, antagonistes de la glycoprotéine IIb/IIIa), dextran 40, glucocorticoïdes systémiques",
+        "effet": "Précaution d'emploi : risque hémorragique accru.",
+        "action_infirmier": "Surveiller l'apparition de signes de saignement pendant l'association."
+      },
+      {
+        "substance": "Médicaments augmentant le taux de potassium sérique",
+        "effet": "Risque d'hyperkaliémie majoré (l'héparine peut réduire la sécrétion surrénalienne d'aldostérone).",
+        "action_infirmier": "Surveiller régulièrement la kaliémie sous surveillance clinique et biologique étroite."
+      }
+    ],
+    "surveillance_specifique": [
+      {
+        "evenement": "Thrombopénie induite par l'héparine (TIH) de type II",
+        "explication": "Risque à médiation immuno-allergique, également présent avec les HBPM. Survient généralement entre le 5e et le 21e jour après le début du traitement ; risque plus élevé en postopératoire (notamment après chirurgie cardiaque) et chez les patients atteints de cancer.",
+        "action": "Réaliser une numération plaquettaire avant l'instauration du traitement puis régulièrement pendant celui-ci. Devant tout signe évocateur (nouvel épisode thromboembolique, lésion cutanée douloureuse au site d'injection, réaction allergique) ou une baisse confirmée de 30 à 50 % de la numération plaquettaire par rapport à la valeur initiale, interrompre immédiatement l'énoxaparine et signaler au prescripteur en vue d'un relais par un anticoagulant non héparinique."
+      },
+      {
+        "evenement": "Hémorragie",
+        "explication": "Comme tout anticoagulant, l'énoxaparine expose à un risque de saignement à n'importe quel site, majoré par certains facteurs de risque associés (hémostase altérée, antécédent d'ulcère gastroduodénal, AVC ischémique récent, hypertension artérielle sévère, chirurgie neurologique ou ophtalmologique récente, traitements associés modifiant l'hémostase).",
+        "action": "Rechercher systématiquement l'origine de tout saignement et signaler au prescripteur ; exercer une surveillance clinique étroite chez les patients présentant des facteurs de risque hémorragique."
+      },
+      {
+        "evenement": "Hématome intrarachidien lors d'une anesthésie/analgésie périmédullaire ou d'une ponction lombaire",
+        "explication": "Risque de lésion neurologique de gravité variable, pouvant aller jusqu'à une paralysie prolongée ou permanente. Le risque est majoré par l'utilisation postopératoire de cathéters périduraux, l'association à des traitements modifiant l'hémostase, une ponction traumatique ou répétée, ou des antécédents de chirurgie ou de malformation rachidienne. Les délais à respecter avant/après un geste périmédullaire sont détaillés dans les entrées de Préparation (voie SC).",
+        "action": "Exercer un suivi neurologique fréquent (douleur dorsale, déficits moteurs ou sensoriels des membres inférieurs, troubles sphinctériens) pendant toute la durée du traitement anticoagulant périmédullaire et signaler immédiatement au prescripteur tout signe évocateur."
+      },
+      {
+        "evenement": "Nécrose cutanée / vascularite cutanée",
+        "explication": "Réactions rares rapportées avec les HBPM, généralement précédées d'un purpura ou de placards érythémateux, infiltrés et douloureux, le plus souvent au site d'injection.",
+        "action": "Inspecter régulièrement les sites d'injection ; en cas de lésion évocatrice, signaler au prescripteur en vue d'un arrêt rapide du traitement."
+      },
+      {
+        "evenement": "Pustuloses exanthématiques aiguës généralisées",
+        "explication": "Réaction cutanée rapportée en association avec le traitement par énoxaparine, de fréquence indéterminée.",
+        "action": "Informer le patient des signes et symptômes évocateurs et exercer une surveillance cutanée étroite ; en cas de signes évocateurs, signaler au prescripteur en vue d'un arrêt immédiat du traitement."
+      },
+      {
+        "evenement": "Hyperkaliémie",
+        "explication": "Les héparines peuvent réduire la sécrétion surrénalienne d'aldostérone, en particulier chez les patients diabétiques, insuffisants rénaux chroniques, en acidose métabolique préexistante ou recevant un traitement hyperkaliémiant.",
+        "action": "Surveiller régulièrement la kaliémie, en particulier chez les patients à risque."
+      },
+      {
+        "evenement": "Adaptation en cas d'insuffisance rénale",
+        "explication": "L'exposition à l'énoxaparine est augmentée chez le patient insuffisant rénal, avec un risque hémorragique accru. Le TCA et l'ACT ne sont pas corrélés à l'activité antithrombotique de l'énoxaparine et ne permettent donc pas de surveiller son activité.",
+        "action": "Une surveillance biologique par mesure de l'activité anti-Xa peut être envisagée chez le patient insuffisant rénal ; se référer aux posologies adaptées indiquées dans l'ajustement posologique."
+      },
+      {
+        "evenement": "Relais avec les anticoagulants oraux",
+        "explication": "Le délai avant que l'AVK atteigne son effet maximal impose de poursuivre l'énoxaparine à dose constante jusqu'à ce que l'INR soit dans la zone thérapeutique souhaitée lors de deux contrôles successifs. Le relais avec un anticoagulant oral direct suit un schéma de chevauchement propre à chaque molécule.",
+        "action": "Surveiller l'INR selon la prescription lors d'un relais par AVK ; pour un relais par anticoagulant oral direct, se référer à l'information produit de la molécule concernée ; signaler au prescripteur toute anomalie."
+      }
+    ],
+    "pictogrammes": []
+  },
+  "iv": {
+    "reconstitution": null,
+    "preparation": [
+      {
+        "voie": "SC",
+        "detail": "Utiliser pur. Ne pas expulser la bulle d'air avant l'injection.",
+        "duree": "< 1 min",
+        "stabilite": "Seringue à usage unique : ne pas conserver après ouverture, utiliser immédiatement."
+      },
+      {
+        "voie": "IVD",
+        "contexte": "STEMI, bolus initial",
+        "detail": "Utiliser pur. Bolus intraveineux unique de 3 000 UI (30mg) recommandé.",
+        "duree": "1 à 2 min",
+        "stabilite": "Seringue à usage unique : ne pas conserver après ouverture, utiliser immédiatement."
+      },
+      {
+        "voie": "IVD",
+        "contexte": "Circuit hémodialyse",
+        "detail": "Utiliser pur. Introduire dans la ligne artérielle du circuit de dialyse en début de séance.",
+        "duree": "< 1 min",
+        "stabilite": "Seringue à usage unique : ne pas conserver après ouverture, utiliser immédiatement."
+      }
+    ],
+    "administration": {
+      "posologie": [
+        {
+          "population": "Prophylaxie chirurgicale, risque modéré",
+          "categorie": "generale",
+          "population_type": "adulte",
+          "dose_par_prise_UI_min": 2000,
+          "dose_par_prise_UI_max": 4000,
+          "intervalle_min_h": 24,
+          "intervalle_max_h": 24
+        },
+        {
+          "population": "Traitement curatif TVP/EP",
+          "categorie": "generale",
+          "population_type": "adulte",
+          "dose_par_prise_UI_kg_min": 100,
+          "dose_par_prise_UI_kg_max": 150,
+          "intervalle_min_h": 12,
+          "intervalle_max_h": 24,
+          "dose_journaliere_max_g": "Selon poids"
+        },
+        {
+          "population": "Prévention thrombus, circuit hémodialyse",
+          "categorie": "speciale",
+          "population_type": "adulte",
+          "dose_par_prise_UI_kg_min": 100,
+          "dose_par_prise_UI_kg_max": 100,
+          "intervalle_min_h": 24,
+          "intervalle_max_h": 24
+        },
+        {
+          "population": "Angor instable / NSTEMI / STEMI aigu",
+          "categorie": "generale",
+          "population_type": "adulte",
+          "dose_par_prise_UI_kg_min": 75,
+          "dose_par_prise_UI_kg_max": 100,
+          "intervalle_min_h": 12,
+          "intervalle_max_h": 12,
+          "dose_journaliere_max_g": "Selon poids"
+        },
+        {
+          "population": "Prophylaxie MTEV, insuffisance rénale sévère",
+          "categorie": "speciale",
+          "population_type": "adulte",
+          "dose_par_prise_UI_min": 2000,
+          "dose_par_prise_UI_max": 2000,
+          "intervalle_min_h": 24,
+          "intervalle_max_h": 24
+        },
+        {
+          "population": "TVP/EP, angor instable / NSTEMI, STEMI aigu insuffisance rénale sévère",
+          "categorie": "speciale",
+          "population_type": "adulte",
+          "dose_par_prise_UI_kg_min": 100,
+          "dose_par_prise_UI_kg_max": 100,
+          "intervalle_min_h": 24,
+          "intervalle_max_h": 24,
+          "dose_journaliere_max_g": "Selon poids"
+        }
+      ]
+    },
+    "incompatibilites": []
+  },
+  "oral": null,
+  "aerosol": null,
+  "tracabilite": {
+    "rcp_source": [
+      {
+        "specialite": "LOVENOX 2 000 UI (20 mg) à 10 000 UI (100 mg), solution injectable en seringue préremplie",
+        "titulaire": "SANOFI WINTHROP INDUSTRIE",
+        "date_maj": "04/08/2026",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/67010731/extrait"
+      },
+      {
+        "specialite": "LOVENOX 12 000 UI (120 mg)/0,8 mL et 15 000 UI (150 mg)/1 mL, solution injectable en seringue préremplie (haute concentration, 150 mg/mL)",
+        "titulaire": "SANOFI WINTHROP INDUSTRIE",
+        "date_maj": "04/08/2026",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/67118995/extrait"
+      },
+      {
+        "specialite": "LOVENOX 30 000 UI (300 mg)/3 mL, solution injectable, flacon multidose",
+        "titulaire": "SANOFI WINTHROP INDUSTRIE",
+        "date_maj": "14/08/2026",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/67753717/extrait"
+      },
+      {
+        "specialite": "ENOXAPARINE ARROW 10 000 UI (100 mg)/1 mL, solution injectable en seringue préremplie",
+        "titulaire": "ARROW GENERIQUES",
+        "date_maj": "26/06/2023",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/66760541/extrait"
+      },
+      {
+        "specialite": "ENOXAPARINE BIOGARAN 8 000 UI (80 mg)/0,8 mL, solution injectable en seringue préremplie",
+        "titulaire": "BIOGARAN",
+        "date_maj": "28/04/2026",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/60434745/extrait"
+      },
+      {
+        "specialite": "ENOXAPARINE EG 2 000 UI (20 mg)/0,2 mL, solution injectable en seringue préremplie",
+        "titulaire": "EG LABO - LABORATOIRES EUROGENERICS",
+        "date_maj": "07/11/2024",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/61796551/extrait"
+      },
+      {
+        "specialite": "ENOXAPARINE VENIPHARM 2 000 UI (20 mg)/0,2 mL, solution injectable en seringue préremplie",
+        "titulaire": "VENIPHARM",
+        "date_maj": "02/05/2024",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/68607423/extrait"
+      },
+      {
+        "specialite": "ENOXAPARINE TEVA 10 000 UI (100 mg)/1 mL, solution injectable en seringue préremplie",
+        "titulaire": "TEVA B.V.",
+        "date_maj": "24/04/2026",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/61539165/extrait"
+      },
+      {
+        "specialite": "ENOXAPARINE ZENTIVA 2 000 UI (20 mg)/0,2 mL, solution injectable en seringue préremplie",
+        "titulaire": "ZENTIVA FRANCE",
+        "date_maj": "12/08/2025",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/66670898/extrait"
+      },
+      {
+        "specialite": "ENOXAPARINE CRUSIA 10 000 UI (100 mg)/1 mL, solution injectable en seringue préremplie",
+        "titulaire": "LABORATORIOS FARMACÉUTICOS ROVI, S.A.",
+        "date_maj": "31/12/2025",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/60385789/extrait"
+      },
+      {
+        "specialite": "ENOXAPARINE BECAT 10 000 UI (100 mg)/1 mL, solution injectable en seringue préremplie",
+        "titulaire": "LABORATORIOS FARMACEUTICOS ROVI, S.A.",
+        "date_maj": "02/10/2025",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/61679306/extrait"
+      },
+      {
+        "specialite": "INHIXA 2 000 UI (20 mg) à 10 000 UI (100 mg), solution injectable en seringue préremplie (biosimilaire de l'énoxaparine sodique)",
+        "titulaire": "TECHDOW PHARMA NETHERLANDS B.V.",
+        "date_maj": "non disponible (voir usage)",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/61189163/extrait"
+      }
+    ],
+    "statut": "valide",
+    "validation": {
+      "date": "2026-09-09",
+      "validateur": "Anna Trabaud-Lopez (IDE, porteuse du projet), vérification des données extraites contre les RCP ; équipe pharmacie, validation de la méthodologie et arbitrage des points litigieux",
+      "perimetre": [
+        "adulte"
+      ],
+      "prochaine_revision": "2026-12-09"
+    }
+  }
+}

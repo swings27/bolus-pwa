@@ -15,7 +15,10 @@ function videEnNull(valeur: string | null | undefined): string | null {
   return valeur && valeur.trim().length > 0 ? valeur : null
 }
 
-function construireIv(brut: IFicheSourceIv | undefined): IFormeIv | null {
+// `brut` peut être absent (clé omise) ou explicitement `null` — les deux
+// veulent dire « cette voie n'existe pas pour cette molécule », voir
+// IFicheSource.
+function construireIv(brut: IFicheSourceIv | null | undefined): IFormeIv | null {
   if (!brut) return null
   return {
     reconstitution: brut.reconstitution ?? null,
@@ -27,7 +30,7 @@ function construireIv(brut: IFicheSourceIv | undefined): IFormeIv | null {
   }
 }
 
-function construireOral(brut: IFicheSourceOral | undefined): IFormeOraleBloc | null {
+function construireOral(brut: IFicheSourceOral | null | undefined): IFormeOraleBloc | null {
   if (!brut) return null
   return {
     formes: brut.formes,
@@ -88,6 +91,7 @@ export function construireFiche(id: string, brut: IFicheSource, meta: IFicheMeta
     // molécule, pas sur une voie — il s'affiche donc au bas des posologies
     // des deux onglets, voir DetailInjectable/DetailPerOs.
     noteAjustement: videEnNull(brut.commun.note_ajustement),
+    noteAjustementAbsolue: videEnNull(brut.commun.note_ajustement_absolue),
     iv: construireIv(brut.iv),
     oral: construireOral(brut.oral),
     rcpSource: brut.tracabilite.rcp_source,

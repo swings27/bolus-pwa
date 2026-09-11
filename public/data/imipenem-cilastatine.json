@@ -1,0 +1,206 @@
+{
+  "dci": "imipenem/ cilastatine",
+  "commun": {
+    "noms_commerciaux": [],
+    "famille": "Carbapénème associé à un inhibiteur de la déhydropeptidase rénale",
+    "antidote": "",
+    "indications": [
+      "Infections intra-abdominales compliquées",
+      "Pneumonies sévères, dont nosocomiales",
+      "Infections intra-partum et post-partum",
+      "Infections urinaires compliquées",
+      "Infections compliquées peau/tissus mous",
+      "Neutropénie fébrile",
+      "Bactériémie associée"
+    ],
+    "grossesse_allaitement": {
+      "grossesse": "Il n'y a pas d'études appropriées et d'études bien contrôlées concernant l'utilisation de l'imipénem/cilastatine chez la femme enceinte. L'imipénem/cilastatine ne doit être utilisé pendant la grossesse que si le bénéfice potentiel justifie le risque potentiel pour le fœtus.",
+      "allaitement": "L'imipénem et la cilastatine sont excrétés en faibles quantités dans le lait maternel. Il est donc peu probable que l'enfant nourri au sein soit exposé à des quantités significatives. Si l'utilisation de l'imipénem/cilastatine est jugée nécessaire, le bénéfice de l'allaitement pour l'enfant doit être évalué par rapport au risque possible pour celui-ci.",
+      "url_crat_grossesse": "https://www.lecrat.fr/13283/",
+      "url_crat_allaitement": "https://www.lecrat.fr/13282/"
+    },
+    "note_ajustement": "Dose et intervalle adaptés selon la fonction rénale, se référer au protocole du service. Aucune adaptation nécessaire en cas d'insuffisance hépatique, ni chez le sujet âgé à fonction rénale normale.",
+    "contre_indications": [
+      "Hypersensibilité aux substances actives ou à l'un des excipients",
+      "Hypersensibilité à tout autre antibiotique de la classe des carbapénèmes",
+      "Hypersensibilité sévère (réaction anaphylactique, réaction cutanée sévère) à tout autre bêta-lactamine (pénicillines, céphalosporines)"
+    ],
+    "interactions_pertinentes": [
+      {
+        "substance": "Ganciclovir",
+        "effet": "Des convulsions généralisées ont été rapportées chez des patients recevant du ganciclovir et de l'imipénem/cilastatine de façon concomitante.",
+        "action_infirmier": "Signaler la co-prescription au prescripteur : l'association n'est indiquée que si le bénéfice potentiel est supérieur aux risques. Surveiller l'apparition de convulsions."
+      },
+      {
+        "substance": "Acide valproïque / valproate de sodium",
+        "effet": "Des diminutions des concentrations d'acide valproïque, pouvant chuter en dessous du seuil thérapeutique, ont été rapportées lors de la co-administration avec des carbapénèmes, exposant à un risque de convulsions.",
+        "action_infirmier": "Signaler systématiquement au prescripteur tout traitement par acide valproïque ou valproate de sodium : l'association est déconseillée et un traitement antibiotique ou antiépileptique alternatif doit être envisagé."
+      },
+      {
+        "substance": "Anticoagulants oraux",
+        "effet": "Des augmentations des effets anticoagulants des anticoagulants oraux ont été rapportées chez des patients recevant simultanément des antibiotiques.",
+        "action_infirmier": "S'assurer que l'INR est contrôlé fréquemment pendant et juste après l'administration simultanée."
+      },
+      {
+        "substance": "Probénécide",
+        "effet": "L'administration concomitante augmente légèrement les concentrations plasmatiques et la demi-vie de l'imipénem, diminue d'environ 60 % l'élimination urinaire de l'imipénem actif, et double la concentration plasmatique et la demi-vie de la cilastatine.",
+        "action_infirmier": "Signaler la co-prescription au prescripteur."
+      }
+    ],
+    "surveillance_specifique": [
+      {
+        "evenement": "Toxicité hépatique",
+        "explication": "La fonction hépatique doit être étroitement surveillée pendant le traitement en raison d'un risque de toxicité hépatique documenté avec l'imipénem/cilastatine.",
+        "action": "S'assurer d'une surveillance de la fonction hépatique pendant le traitement, en particulier chez les patients ayant des troubles hépatiques préexistants."
+      },
+      {
+        "evenement": "Positivation du test de Coombs",
+        "explication": "Un test de Coombs direct ou indirect peut devenir positif au cours du traitement par l'imipénem/cilastatine.",
+        "action": "Signaler le traitement en cours au laboratoire avant toute épreuve de compatibilité transfusionnelle."
+      },
+      {
+        "evenement": "Effets indésirables neurologiques (myoclonies, état confusionnel, convulsions), surtout en cas de doses supérieures aux doses recommandées ou d'accumulation par insuffisance rénale",
+        "explication": "L'imipénem/cilastatine s'accumule en cas d'altération de la fonction rénale ; des effets indésirables sur le système nerveux central peuvent alors apparaître, en particulier chez les patients ayant des troubles du SNC (lésion cérébrale, antécédents de convulsions).",
+        "action": "Respecter strictement la posologie recommandée selon la fonction rénale et le poids. Signaler tout tremblement focal, myoclonie ou convulsion pour évaluation neurologique ; le traitement antiépileptique en cours doit être poursuivi."
+      },
+      {
+        "evenement": "Colite associée aux antibiotiques et colite pseudomembraneuse",
+        "explication": "Des cas de colite associée aux antibiotiques et de colite pseudomembraneuse, de sévérité variable pouvant engager le pronostic vital, ont été rapportés avec l'imipénem/cilastatine.",
+        "action": "Signaler toute diarrhée survenant pendant ou après le traitement. Ne pas administrer de médicament inhibant le péristaltisme intestinal."
+      }
+    ],
+    "pictogrammes": [
+      "Peut provoquer hallucinations, sensations vertigineuses ou somnolence : prudence pour la conduite de véhicules et l'utilisation de machines"
+    ]
+  },
+  "iv": {
+    "reconstitution": {
+      "solvant": "NaCl 0,9 %, G10 %, G5 % + NaCl 0,9 % ou 0,45 %, Mannitol 2,5%, 5 % ou 10 %, ou G5 % + chlorure de potassium 0,15 %",
+      "volume_par_500mg_mL": 10,
+      "stabilite_avant_dilution": "À diluer immédiatement après reconstitution."
+    },
+    "preparation": [
+      {
+        "voie": "PERF",
+        "detail": "Reconstituer puis diluer pour un volume total de 100 mL (environ 5 mg/mL d'imipénem et de cilastatine)",
+        "duree": "20 à 30 min (dose ≤ 500 mg) ou 40 à 60 min (dose > 500 mg)",
+        "stabilite": "4 heures à 25 °C ou 24 heures entre 2 °C et 8 °C après dilution",
+        "contexte": "Dose ≤ 500 mg"
+      }
+    ],
+    "administration": {
+      "posologie": [
+        {
+          "population": "Schéma standard",
+          "categorie": "generale",
+          "population_type": "adulte",
+          "dose_par_prise_mg_min": 500,
+          "dose_par_prise_mg_max": 500,
+          "dose_journaliere_max_g": 4.0,
+          "intervalle_min_h": 6,
+          "intervalle_max_h": 6
+        },
+        {
+          "population": "Germes moins sensibles ou infections très sévères",
+          "categorie": "generale",
+          "population_type": "adulte",
+          "dose_par_prise_mg_min": 1000,
+          "dose_par_prise_mg_max": 1000,
+          "dose_journaliere_max_g": 4.0,
+          "intervalle_min_h": 6,
+          "intervalle_max_h": 8
+        },
+        {
+          "population": "Traitement standard",
+          "categorie": "generale",
+          "population_type": "pediatrie",
+          "age_min_mois": 12,
+          "dose_mg_kg_min": 15,
+          "dose_mg_kg_max": 25,
+          "intervalle_min_h": 6,
+          "intervalle_max_h": 6
+        }
+      ]
+    },
+    "incompatibilites": [
+      {
+        "substance": "Amiodarone",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Chlorure de calcium",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Gluconate de calcium",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Ceftriaxone",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Fluconazole",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Gentamicine",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Midazolam",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Milrinone",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Nicardipine",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Nitroprussiate de sodium",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Bicarbonate de sodium",
+        "niveau": "absolu"
+      }
+    ]
+  },
+  "oral": null,
+  "aerosol": null,
+  "tracabilite": {
+    "rcp_source": [
+      {
+        "specialite": "IMIPENEM/CILASTATINE ARROW 500 mg/500 mg, poudre pour solution pour perfusion",
+        "titulaire": "Eugia Pharma (Malta) Ltd",
+        "date_maj": "",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/62866789/extrait"
+      },
+      {
+        "specialite": "IMIPENEM CILASTATINE VIATRIS 500 mg/500 mg, poudre pour solution pour perfusion",
+        "titulaire": "Viatris Santé",
+        "date_maj": "",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/69426034/extrait"
+      },
+      {
+        "specialite": "IMIPENEM CILASTATINE PANPHARMA 500 mg/500 mg, poudre pour solution pour perfusion",
+        "titulaire": "Panmedica",
+        "date_maj": "",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/65336568/extrait"
+      }
+    ],
+    "statut": "valide",
+    "validation": {
+      "date": "2026-09-09",
+      "validateur": "Anna Trabaud-Lopez (IDE, porteuse du projet), vérification des données extraites contre les RCP ; équipe pharmacie, validation de la méthodologie et arbitrage des points litigieux",
+      "perimetre": [
+        "adulte",
+        "pediatrie"
+      ],
+      "prochaine_revision": "2026-12-09"
+    }
+  }
+}

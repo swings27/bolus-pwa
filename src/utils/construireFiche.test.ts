@@ -163,6 +163,47 @@ describe('construireFiche', () => {
     expect(fiche.noteAjustement).toBe('Dose adaptée selon la fonction rénale.')
   })
 
+  // Une voie inexistante s'écrit indifféremment clé omise ou `null` explicite
+  // (même convention que `aerosol`) — les fiches uniquement injectables
+  // publient "oral": null.
+  it('traite "oral": null comme une absence de voie orale, sans perdre le bloc iv', () => {
+    const fiche = construireFiche(
+      'x',
+      ficheSource({
+        oral: null,
+        iv: { reconstitution: null, administration: { posologie: [] }, incompatibilites: [] },
+      }),
+      META,
+    )
+    expect(fiche.oral).toBeNull()
+    expect(fiche.iv).not.toBeNull()
+  })
+
+  // note_ajustement_absolue est une variante d'affichage (rouge plein) et non
+  // un remplacement : les deux champs sont lus indépendamment, aucun n'écrase
+  // l'autre.
+  it('lit note_ajustement et note_ajustement_absolue indépendamment', () => {
+    const fiche = construireFiche(
+      'x',
+      ficheSource({
+        commun: {
+          ...ficheSource().commun,
+          note_ajustement: 'Dose adaptée selon la fonction rénale.',
+          note_ajustement_absolue: 'Stupéfiant : se référer au protocole de service.',
+        },
+      }),
+      META,
+    )
+    expect(fiche.noteAjustement).toBe('Dose adaptée selon la fonction rénale.')
+    expect(fiche.noteAjustementAbsolue).toBe('Stupéfiant : se référer au protocole de service.')
+  })
+
+  it('normalise note_ajustement_absolue absente ou vide en null', () => {
+    expect(construireFiche('x', ficheSource(), META).noteAjustementAbsolue).toBeNull()
+    const vide = ficheSource({ commun: { ...ficheSource().commun, note_ajustement_absolue: '' } })
+    expect(construireFiche('x', vide, META).noteAjustementAbsolue).toBeNull()
+  })
+
   it('normalise prochaine_revision absente en null', () => {
     const fiche = construireFiche('x', ficheSource(), META)
     expect(fiche.prochaineRevision).toBeNull()

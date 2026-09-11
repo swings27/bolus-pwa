@@ -1,0 +1,363 @@
+{
+  "dci": "nicardipine",
+  "commun": {
+    "noms_commerciaux": [
+      "Loxen",
+      "Loxen LP"
+    ],
+    "famille": "Inhibiteur calcique sélectif à effets vasculaires dihydropyridine",
+    "antidote": "",
+    "indications": [
+      "Urgence hypertensive vitale",
+      "HTA maligne / encéphalopathie hypertensive",
+      "Dissection aortique",
+      "Pré-éclampsie sévère",
+      "Hypertension post-opératoire",
+      "Hypertension artérielle (voie orale)"
+    ],
+    "grossesse_allaitement": {
+      "grossesse": "La nicardipine par voie intraveineuse ne doit être utilisée pendant la grossesse que si les bénéfices escomptés sont supérieurs aux risques potentiels. La nicardipine ne doit pas être utilisée en cas de grossesse multiple ni chez des femmes enceintes présentant des troubles cardiovasculaires, sauf s'il n'existe pas d'autre alternative acceptable.",
+      "allaitement": "La nicardipine ne doit pas être utilisée pendant l'allaitement.",
+      "url_crat_grossesse": "https://www.lecrat.fr/7162/",
+      "url_crat_allaitement": "https://www.lecrat.fr/7159/"
+    },
+    "note_ajustement": "Insuffisance hépatique ou rénale : utiliser le schéma posologique préconisé pour les patients âgés, se référer au protocole du service.",
+    "contre_indications": [
+      "Hypersensibilité à la nicardipine ou à l'un des excipients",
+      "Sténose aortique sévère",
+      "Angor instable",
+      "Infarctus du myocarde datant de moins de 8 jours, pour la voie intraveineuse",
+      "Infarctus du myocarde datant de moins d'un mois, pour la voie orale",
+      "Hypertension compensatoire, en cas de shunt artérioveineux ou de coarctation de l'aorte, pour la voie intraveineuse"
+    ],
+    "interactions_pertinentes": [
+      {
+        "substance": "Dantrolène",
+        "effet": "Association déconseillée. Chez l'animal, des fibrillations ventriculaires mortelles sont constamment observées lors de l'administration IV concomitante d'un antagoniste calcique et de dantrolène.",
+        "action_infirmier": "Signaler au prescripteur toute association envisagée avec le dantrolène en perfusion."
+      },
+      {
+        "substance": "Idélalisib",
+        "effet": "Majoration des effets indésirables de la nicardipine, à type d'hypotension orthostatique, notamment chez le sujet âgé.",
+        "action_infirmier": "Surveiller la pression artérielle pendant le traitement par idélalisib et après son arrêt, signaler au prescripteur."
+      },
+      {
+        "substance": "Immunosuppresseurs",
+        "effet": "Augmentation des concentrations sanguines de l'immunosuppresseur par inhibition de son métabolisme.",
+        "action_infirmier": "Signaler au prescripteur ; surveillance des concentrations sanguines de l'immunosuppresseur et de la fonction rénale pendant le traitement et après l'arrêt."
+      },
+      {
+        "substance": "Inducteurs du CYP3A4",
+        "effet": "Diminution des concentrations plasmatiques de nicardipine par augmentation de son métabolisme hépatique, avec risque de perte d'efficacité antihypertensive.",
+        "action_infirmier": "Signaler au prescripteur toute co-prescription ; surveillance clinique pendant le traitement et après l'arrêt de l'inducteur."
+      },
+      {
+        "substance": "Inhibiteurs puissants du CYP3A4",
+        "effet": "Augmentation de la concentration plasmatique de nicardipine, avec majoration des effets indésirables, le plus souvent une hypotension, notamment chez le sujet âgé.",
+        "action_infirmier": "Signaler au prescripteur toute co-prescription ; surveillance clinique pendant le traitement et après l'arrêt de l'inhibiteur."
+      },
+      {
+        "substance": "Bêta-bloquants dans l'insuffisance cardiaque (bisoprolol, carvédilol, métoprolol, nébivolol) et bêta-bloquants en général (sauf esmolol)",
+        "effet": "Majoration de l'effet inotrope négatif, avec risque d'hypotension et de défaillance cardiaque chez les patients en insuffisance cardiaque latente ou non contrôlée.",
+        "action_infirmier": "Signaler au prescripteur toute association bêta-bloquante ; renforcer la surveillance clinique chez le patient insuffisant cardiaque."
+      },
+      {
+        "substance": "Sulfate de magnésium",
+        "effet": "Risque potentiel d'œdème pulmonaire ou de diminution excessive de la pression artérielle en cas d'administration concomitante (contexte pré-éclampsie).",
+        "action_infirmier": "Signaler au prescripteur toute association ; surveiller la pression artérielle et l'apparition de signes d'œdème pulmonaire."
+      },
+      {
+        "substance": "Digoxine",
+        "effet": "La nicardipine augmente les taux plasmatiques de digoxine.",
+        "action_infirmier": "Signaler au prescripteur ; surveiller la digoxinémie à l'instauration du traitement concomitant."
+      },
+      {
+        "substance": "Corticostéroïdes IV (glucocorticoïdes, minéralocorticoïdes) et tétracosactide, sauf hydrocortisone en traitement substitutif",
+        "effet": "Réduction de l'effet antihypertenseur de la nicardipine (rétention hydrosodée des corticoïdes).",
+        "action_infirmier": "Signaler au prescripteur toute association ; renforcer la surveillance de la pression artérielle."
+      },
+      {
+        "substance": "Inhibiteurs neuromusculaires compétitifs",
+        "effet": "La nicardipine, comme d'autres inhibiteurs calciques, augmente le bloc neuromusculaire ; la dose de vécuronium à perfuser peut devoir être réduite. L'antagonisation par la néostigmine ne semble pas affectée.",
+        "action_infirmier": "Signaler au prescripteur en contexte d'anesthésie/curarisation associée."
+      }
+    ],
+    "surveillance_specifique": [
+      {
+        "evenement": "Hypotension systémique et tachycardie réflexe à l'instauration ou lors d'une augmentation de débit",
+        "explication": "Les réductions pharmacologiques rapides de la pression artérielle induites par la nicardipine IV peuvent entraîner une hypotension systémique et une tachycardie réflexe. Le RCP prévoit une surveillance au minimum toutes les 5 minutes pendant la perfusion, jusqu'à stabilisation des signes vitaux, puis pendant au moins 12 heures après l'arrêt.",
+        "action": "Surveiller la pression artérielle et la fréquence cardiaque pendant la perfusion et après son arrêt ; signaler au prescripteur en cas de chute tensionnelle marquée."
+      },
+      {
+        "evenement": "Aggravation d'une insuffisance cardiaque congestive ou d'un œdème pulmonaire",
+        "explication": "La nicardipine doit être utilisée avec précaution chez les patients en insuffisance cardiaque congestive ou œdème pulmonaire, en particulier sous bêta-bloquant concomitant.",
+        "action": "Signaler au prescripteur tout antécédent d'insuffisance cardiaque ; surveiller les signes de décompensation (dyspnée, œdèmes, prise de poids)."
+      },
+      {
+        "evenement": "Hypoxie",
+        "explication": "Des cas d'hypoxie ont été rapportés après administration IV de nicardipine, en particulier chez des patients avec troubles pulmonaires préexistants ou affections compromettant la fonction respiratoire.",
+        "action": "Surveillance attentive de la saturation en oxygène chez les patients à risque respiratoire."
+      },
+      {
+        "evenement": "Œdème pulmonaire aigu chez la femme enceinte",
+        "explication": "Des œdèmes pulmonaires aigus ont été rapportés lors de l'utilisation de la nicardipine comme tocolytique pendant la grossesse, en particulier en cas de grossesse multiple, par voie IV et/ou avec bêta-2-agonistes associés.",
+        "action": "Surveillance étroite de la femme enceinte traitée par nicardipine ; en cas de survenue, arrêter immédiatement le traitement et signaler au prescripteur."
+      },
+      {
+        "evenement": "Réaction ou irritation au site de perfusion, phlébite",
+        "explication": "Des réactions au site de perfusion peuvent survenir, en particulier lors d'administrations prolongées en veine périphérique, la nicardipine est très phlébogène.",
+        "action": "Surveiller le point de ponction ; en cas de suspicion d'irritation, changer de site et se référer à la concentration/voie indiquées en Préparation."
+      },
+      {
+        "evenement": "Aggravation d'une hypertension portale chez le patient cirrhotique",
+        "explication": "Des doses élevées de nicardipine IV peuvent aggraver l'hypertension portale et l'index de circulation collatérale porto-systémique chez les patients cirrhotiques.",
+        "action": "Signaler au prescripteur tout antécédent de cirrhose ou d'hypertension portale."
+      },
+      {
+        "evenement": "Majoration d'une hypertension intracrânienne préexistante",
+        "explication": "La nicardipine doit être utilisée avec précaution chez les patients à risque d'augmentation de la pression intracrânienne.",
+        "action": "Surveiller la pression intracrânienne si monitorée, signaler tout signe clinique d'aggravation neurologique."
+      },
+      {
+        "evenement": "Intolérance héréditaire au fructose",
+        "explication": "Les ampoules IV contiennent du sorbitol ; le RCP NICARDIPINE ARROW souligne que l'administration IV de sorbitol/fructose peut être mortelle chez le nourrisson non diagnostiqué pour une intolérance héréditaire au fructose. Le comprimé contient du lactose, la gélule LP du saccharose.",
+        "action": "Rechercher les antécédents d'intolérance héréditaire au fructose avant administration, en particulier chez le nourrisson."
+      }
+    ],
+    "pictogrammes": []
+  },
+  "iv": {
+    "reconstitution": null,
+    "preparation": [
+      {
+        "voie": "PSE",
+        "detail": "Diluer dans du NaCl 0,9% ou G5% à une concentration de 0,1 à 0,2 mg/mL (10 mg dans 50 mL ou 20 mg dans 40 mL).",
+        "stabilite": "24 heures  entre 2 et 8 °C ou à 30 °C, à l'abri de la lumière.",
+        "duree": "Continu"
+      },
+      {
+        "voie": "PSE",
+        "detail": "Concentration plus élevée possible : 40 mg dans 40 mL (1 mg/mL).",
+        "stabilite": "24 heures entre 2 et 8 °C ou à 30 °C, à l'abri de la lumière.",
+        "duree": "Continu",
+        "contexte": "VVC uniquement"
+      }
+    ],
+    "administration": {
+      "posologie": [
+        {
+          "population": "Urgence hypertensive, dose initiale",
+          "population_type": "adulte",
+          "categorie": "pse",
+          "debit_mg_h_min": 3,
+          "debit_mg_h_max": 5,
+          "dose_journaliere_max_g": 0.360
+        },
+        {
+          "population": "Urgence hypertensive, dose d'entretien",
+          "population_type": "adulte",
+          "categorie": "pse",
+          "debit_mg_h_min": 2,
+          "debit_mg_h_max": 4,
+          "dose_journaliere_max_g": 0.360
+        },
+        {
+          "population": "Sujet âgé (≥ 65 ans) et grossesse(dont pré-éclampsie sévère)",
+          "population_type": "adulte",
+          "categorie": "pse",
+          "debit_mg_h_min": 1,
+          "debit_mg_h_max": 5,
+          "dose_journaliere_max_g": 0.360
+        },
+        {
+          "population": "Urgence hypertensive, dose initiale",
+          "population_type": "pediatrie",
+          "categorie": "pse",
+          "dose_ugkgmin_min": 0.5,
+          "dose_ugkgmin_max": 5,
+          "dose_journaliere_max_g": "Selon poids"
+        },
+        {
+          "population": "Urgence hypertensive, dose d'entretien",
+          "population_type": "pediatrie",
+          "categorie": "pse",
+          "dose_ugkgmin_min": 1,
+          "dose_ugkgmin_max": 4,
+          "dose_journaliere_max_g": "Selon poids"
+        }
+      ]
+    },
+    "incompatibilites": [
+      {
+        "substance": "Aciclovir",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Céfépime",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Ceftazidime",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Céfuroxime",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Clindamycine phosphate",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Dexaméthasone phosphate disodique",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Furosémide",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Héparine sodique",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Imipénem/cilastatine",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Méropénem",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Méthylprednisolone",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Phénytoïne",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Pipéracilline/tazobactam",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Phosphate de potassium",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Ringer-lactate / Ringer-acétate",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Bicarbonate de sodium",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Triméthoprime/sulfaméthoxazole",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Diazépam",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Méthohexital sodique",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Thiopental sodique",
+        "niveau": "absolu"
+      }
+    ]
+  },
+  "oral": {
+    "formes": [
+      {
+        "type": "Comprimé sécable",
+        "dosage": "20 mg",
+        "secable": true,
+        "ecrasable": false,
+        "ouverture_gelule": null,
+        "posologie_adulte": [
+          {
+            "population": "Hypertension artérielle",
+            "categorie": "generale",
+            "population_type": "adulte",
+            "dose_par_prise_mg_min": 20,
+            "dose_par_prise_mg_max": 30,
+            "dose_journaliere_max_g": 0.09,
+            "intervalle_min_h": 8,
+            "intervalle_max_h": 8
+          }
+        ]
+      },
+      {
+        "type": "Gélule à libération prolongée",
+        "dosage": "50 mg",
+        "secable": false,
+        "ecrasable": false,
+        "ouverture_gelule": false,
+        "posologie_adulte": [
+          {
+            "population": "Hypertension artérielle, traitement LP",
+            "categorie": "generale",
+            "population_type": "adulte",
+            "dose_par_prise_mg_min": 50,
+            "dose_par_prise_mg_max": 50,
+            "dose_journaliere_max_g": 0.1,
+            "intervalle_min_h": 12,
+            "intervalle_max_h": 12
+          }
+        ]
+      }
+    ],
+    "recommandation_sonde": {
+      "forme_preferee": "",
+      "alternative": "Voie injectable, avis médical"
+    }
+  },
+  "tracabilite": {
+    "rcp_source": [
+      {
+        "specialite": "LOXEN 10 mg/10 mL, solution injectable (I.V.)",
+        "titulaire": "Laboratoire X.O",
+        "date_maj": "17/04/2026",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/60718902/extrait"
+      },
+      {
+        "specialite": "NICARDIPINE AGUETTANT 10 mg/10 ml, solution injectable",
+        "titulaire": "Laboratoire Aguettant",
+        "date_maj": "18/05/2026",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/67962026/extrait"
+      },
+      {
+        "specialite": "NICARDIPINE ARROW 10 mg/10 mL, solution injectable",
+        "titulaire": "Eugia Pharma (Malta) Ltd",
+        "date_maj": "22/04/2026",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/69913202/extrait"
+      },
+      {
+        "specialite": "LOXEN 20 mg, comprimé sécable",
+        "titulaire": "Laboratoire X.O",
+        "date_maj": "24/04/2026",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/65984700/extrait"
+      },
+      {
+        "specialite": "LOXEN LP 50 mg, gélule à libération prolongée",
+        "titulaire": "Laboratoire X.O",
+        "date_maj": "17/04/2026",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/69198890/extrait"
+      }
+    ],
+    "statut": "valide",
+    "validation": {
+      "date": "2026-09-09",
+      "validateur": "Anna Trabaud-Lopez (IDE, porteuse du projet), vérification des données extraites contre les RCP ; équipe pharmacie, validation de la méthodologie et arbitrage des points litigieux",
+      "perimetre": [
+        "adulte",
+        "pediatrie"
+      ],
+      "prochaine_revision": "2026-12-09"
+    }
+  }
+}

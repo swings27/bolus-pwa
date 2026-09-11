@@ -1,0 +1,257 @@
+{
+  "dci": "kétamine",
+  "commun": {
+    "noms_commerciaux": [],
+    "famille": "Anesthésique général non barbiturique, dissociatif, antagoniste des récepteurs NMDA.",
+    "antidote": "",
+    "indications": [
+      "Anesthésie générale, agent unique",
+      "Agent d'induction anesthésique",
+      "Potentialisateur d'anesthésiques légers",
+      "Anesthésie obstétricale",
+      "Douleur péri-opératoire aiguë",
+      "Douleur aiguë en médecine d'urgence",
+      "Douleur procédurale (réanimation/soins palliatifs)",
+      "Douleur neuropathique réfractaire sévère",
+      "Douleur rebelle en soins palliatifs avancés"
+    ],
+    "grossesse_allaitement": {
+      "grossesse": "Il est préférable de ne pas utiliser la kétamine pendant le premier trimestre de la grossesse. Son utilisation ne doit être envisagée au cours des deuxième et troisième trimestres de la grossesse que si nécessaire ; la dose maximale conseillée est alors de 1,5 mg/kg, au lieu de la posologie usuelle de 2,5 mg/kg.",
+      "allaitement": "La kétamine ne doit pas être utilisée pendant l'allaitement.",
+      "url_crat_grossesse": null,
+      "url_crat_allaitement": null
+    },
+    "contre_indications": [
+      "Hypersensibilité à la substance active ou à l'un des excipients",
+      "Hypertension artérielle",
+      "Antécédent d'accident vasculaire cérébral",
+      "Insuffisance cardiaque sévère"
+    ],
+    "interactions_pertinentes": [
+      {
+        "substance": "Barbituriques et analgésiques narcotiques",
+        "effet": "La phase de récupération peut être prolongée en cas d'association.",
+        "action_infirmier": "Signaler au prescripteur toute co-prescription de barbituriques ou d'analgésiques narcotiques ; surveiller le réveil."
+      },
+      {
+        "substance": "Curares",
+        "effet": "La kétamine peut potentialiser le blocage neuromusculaire de l'atracurium et de la tubocurarine, pouvant inclure une dépression respiratoire avec apnée.",
+        "action_infirmier": "Signaler au prescripteur toute co-prescription d'atracurium ou de tubocurarine ; surveiller la fonction respiratoire."
+      },
+      {
+        "substance": "Agents anesthésiques halogénés",
+        "effet": "Peuvent prolonger la demi-vie d'élimination de la kétamine et retarder la phase de récupération ; à doses élevées ou en administration rapide, l'association augmente le risque de bradycardie, d'hypotension ou de réduction du débit cardiaque.",
+        "action_infirmier": "Signaler au prescripteur toute association avec un anesthésique halogéné ; surveiller la fréquence cardiaque et la pression artérielle."
+      },
+      {
+        "substance": "Thiopental",
+        "effet": "La kétamine peut antagoniser l'effet hypnotique du thiopental.",
+        "action_infirmier": "Signaler au prescripteur toute association avec le thiopental."
+      },
+      {
+        "substance": "Hormones thyroïdiennes et sympathomimétiques",
+        "effet": "Une hypertension artérielle et une tachycardie peuvent survenir en cas d'administration concomitante.",
+        "action_infirmier": "Signaler au prescripteur toute co-prescription d'hormones thyroïdiennes ou de sympathomimétiques ; surveiller la pression artérielle et la fréquence cardiaque."
+      },
+      {
+        "substance": "Antihypertenseurs",
+        "effet": "Le risque de développer une hypotension est augmenté en cas d'association.",
+        "action_infirmier": "Signaler au prescripteur toute co-prescription d'antihypertenseurs ; surveiller la pression artérielle."
+      },
+      {
+        "substance": "Théophylline",
+        "effet": "L'administration concomitante de théophylline peut entraîner une baisse du seuil convulsif.",
+        "action_infirmier": "Signaler au prescripteur toute co-prescription de théophylline."
+      }
+    ],
+    "surveillance_specifique": [
+      {
+        "evenement": "Réactions psychomimétiques à la phase d'émergence",
+        "explication": "Liées à l'effet dissociatif de la kétamine sur le système nerveux central ; leur fréquence est diminuée par l'absence de stimulation auditive, visuelle et tactile et par une prémédication par benzodiazépine ou dropéridol.",
+        "action": "Installer le patient au calme en limitant les stimulations sensorielles pendant le réveil ; signaler au prescripteur si une prémédication par benzodiazépine ou dropéridol n'a pas été réalisée."
+      },
+      {
+        "evenement": "Stimulation cardiovasculaire",
+        "explication": "À la différence de la plupart des autres agents anesthésiques ou sédatifs, la kétamine stimule le système cardiovasculaire plutôt que de le déprimer.",
+        "action": "Surveiller la fréquence cardiaque et la pression artérielle pendant et après l'administration ; signaler au prescripteur en cas d'hypertension ou de tachycardie marquée."
+      },
+      {
+        "evenement": "Dépression respiratoire modérée et transitoire ou apnée après injection IV rapide de fortes doses",
+        "explication": "Risque directement lié à la vitesse d'injection de la kétamine.",
+        "action": "Respecter la vitesse d'injection indiquée en Préparation ; en cas de survenue, arrêter l'injection, assurer la liberté des voies aériennes et la ventilation, et signaler au prescripteur."
+      },
+      {
+        "evenement": "Augmentation de courte durée de la pression intracrânienne",
+        "explication": "Effet documenté de la kétamine, à prendre en compte en cas d'hypertension intracrânienne préexistante.",
+        "action": "Utilisation prudente et surveillance neurologique renforcée en cas d'hypertension intracrânienne connue."
+      },
+      {
+        "evenement": "Complications urinaires (cystite non infectieuse, cystite interstitielle, cystite hémorragique, hydronéphrose, insuffisance rénale aiguë) lors d'une utilisation prolongée ou répétée",
+        "explication": "Toxicité urologique dose-dépendante documentée lors d'expositions prolongées (de 1 mois à plusieurs années), en particulier en cas d'abus ; le guide MARR de l'ANSM (juillet 2026) recommande une surveillance de la cytologie urinaire pour tout traitement prolongé ou répété.",
+        "action": "Signaler au prescripteur toute douleur pelvienne, hématurie ou trouble urinaire chez un patient traité par kétamine de façon prolongée ou répétée."
+      },
+      {
+        "evenement": "Atteinte hépatique, notamment cholestatique de type cholangite, pouvant être sévère",
+        "explication": "Rapportée lors d'utilisations prolongées (plus de 3 jours) et/ou répétées ; peut conduire à une transplantation hépatique dans les cas les plus sévères d'usage très prolongé à doses élevées.",
+        "action": "Réaliser un bilan hépatique complet (transaminases, phosphatases alcalines, GGT, bilirubine) avant toute administration répétée et régulièrement pendant le traitement ; signaler au prescripteur toute perturbation du bilan hépatique, l'arrêt du traitement doit alors être envisagé."
+      },
+      {
+        "evenement": "Dépendance, tolérance et pharmacodépendance, en particulier en cas d'antécédent de toxicomanie",
+        "explication": "La kétamine est une substance à potentiel d'abus et de mésusage ; les hallucinations qu'elle provoque peuvent conduire à un usage détourné.",
+        "action": "Évaluer le risque d'abus et de dépendance tout au long du traitement, en particulier en cas d'antécédent de toxicomanie ou de pharmacodépendance ; signaler au prescripteur."
+      }
+    ],
+    "pictogrammes": [],
+    "note_ajustement_absolue": "La kétamine est un stupéfiant, il est obligatoire de se référer au protocole de service et de solliciter un avis médical ou pharmaceutique en cas de doute. "
+  },
+  "iv": {
+    "reconstitution": null,
+    "preparation": [
+      {
+        "voie": "IVD",
+        "contexte": "Induction anesthésique",
+        "detail": "Utiliser pur, en injection lente en 60 secondes environ, afin d'éviter une dépression respiratoire.",
+        "duree": "Environ 60 secondes",
+        "stabilite": "Utiliser directement."
+      },
+      {
+        "voie": "IM",
+        "contexte": "Induction ou entretien anesthésique",
+        "detail": "Utiliser pur, en injection intramusculaire.",
+        "duree": "< 1 min",
+        "stabilite": "Utiliser directement."
+      },
+      {
+        "voie": "PERF",
+        "contexte": "Services spécialisés",
+        "detail": "Dilution dans du NaCl 0,9% ou G5%.",
+        "duree": "Continu ou discontinue",
+        "stabilite": "24 heures entre 2 et 8°C."
+      },
+      {
+        "voie": "PSE",
+        "contexte": "VVC uniquement.",
+        "detail": "Concentration maximale de 50 mg/mL.",
+        "duree": "Continu",
+        "stabilite": "24 heures entre 2 et 8°C."
+      }
+    ],
+    "administration": {
+      "posologie": [
+        {
+          "population": "Induction anesthésie",
+          "population_type": "mixte",
+          "categorie": "generale",
+          "dose_mg_kg_min": 1,
+          "dose_mg_kg_max": 4.5,
+          "intervalle_min_h": 24,
+          "intervalle_max_h": 24
+        },
+        {
+          "population": "Induction anesthésie",
+          "population_type": "mixte",
+          "categorie": "im",
+          "dose_mg_kg_min": 6.5,
+          "dose_mg_kg_max": 13,
+          "intervalle_min_h": 24,
+          "intervalle_max_h": 24
+        },
+        {
+          "population": "Douleur peropératoire",
+          "population_type": "mixte",
+          "categorie": "generale",
+          "dose_mgkgh_min": 0.125,
+          "dose_mgkgh_max": 0.25,
+          "intervalle_min_h": 24,
+          "intervalle_max_h": 24,
+          "dose_mg_kg_j_max": 5
+        },
+        {
+          "population": "Douleur aiguë, par titration",
+          "population_type": "mixte",
+          "categorie": "generale",
+          "dose_mg_kg_min": 0.1,
+          "dose_mg_kg_max": 1,
+          "intervalle_min_min": 5,
+          "intervalle_max_min": 10,
+          "dose_mg_kg_j_max": 5
+        },
+        {
+          "population": "Douleur chronique, neuropathique ou situation palliative",
+          "population_type": "mixte",
+          "categorie": "generale",
+          "dose_journaliere_mg_kg_min": 0.15,
+          "dose_journaliere_mg_kg_max": 1.5,
+          "intervalle_min_h": 1,
+          "intervalle_max_h": 24,
+          "dose_mg_kg_j_max": 5
+        }
+        
+      ]
+    },
+    "incompatibilites": [
+      {
+        "substance": "Barbituriques",
+        "niveau": "absolu"
+      }
+    ]
+  },
+  "oral": null,
+  "aerosol": null,
+  "tracabilite": {
+    "rcp_source": [
+      {
+        "specialite": "KETAMINE PANPHARMA 10 mg/mL, solution injectable (I.V.-I.M.)",
+        "titulaire": "PANPHARMA",
+        "date_maj": "19/12/2025 (page RCP), AMM du 26/01/1988, déclaration de commercialisation 03/06/2013",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/62768665/extrait"
+      },
+      {
+        "specialite": "KETAMINE PANPHARMA 50 mg/mL, solution injectable (I.V.-I.M.)",
+        "titulaire": "PANPHARMA",
+        "date_maj": "19/12/2025 (page RCP), AMM du 26/01/1988, déclaration de commercialisation 03/06/2013",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/69278297/extrait"
+      },
+      {
+        "specialite": "KETAMINE RENAUDIN 10 mg/mL, solution injectable",
+        "titulaire": "LABORATOIRE RENAUDIN",
+        "date_maj": "19/12/2025 (page RCP), AMM du 11/10/2010, déclaration de commercialisation 23/11/2010",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/67132571/extrait"
+      },
+      {
+        "specialite": "KETAMINE RENAUDIN 50 mg/mL, solution injectable",
+        "titulaire": "LABORATOIRE RENAUDIN",
+        "date_maj": "19/12/2025 (page RCP), AMM du 11/10/2010, déclaration de commercialisation 23/11/2010 (ampoule 5 mL) et 26/03/2020 (ampoule 10 mL)",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/63597509/extrait"
+      },
+      {
+        "specialite": "KETAMINE G.L. PHARMA 10 mg/mL, solution injectable",
+        "titulaire": "G.L. PHARMA GMBH",
+        "date_maj": "RCP 04/10/2024",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/64613845/extrait"
+      },
+      {
+        "specialite": "KETAMINE G.L. PHARMA 50 mg/mL, solution injectable",
+        "titulaire": "G.L. PHARMA GMBH",
+        "date_maj": "RCP 27/09/2024",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/63475544/extrait"
+      },
+      {
+        "specialite": "KETAMINE AGUETTANT 50 mg/mL, solution injectable",
+        "titulaire": "Laboratoire AGUETTANT",
+        "date_maj": "Non applicable",
+        "url_ansm": ""
+      }
+    ],
+    "statut": "valide",
+    "validation": {
+      "date": "2026-09-09",
+      "validateur": "Anna Trabaud-Lopez (IDE, porteuse du projet), vérification des données extraites contre les RCP ; équipe pharmacie, validation de la méthodologie et arbitrage des points litigieux",
+      "perimetre": [
+        "adulte",
+        "pediatrie"
+      ],
+      "prochaine_revision": "2026-12-09"
+    }
+  }
+}

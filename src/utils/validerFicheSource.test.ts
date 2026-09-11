@@ -102,6 +102,23 @@ describe('validerFicheSource', () => {
     )
   })
 
+  // "oral": null = voie inexistante (même convention que "aerosol": null),
+  // pas une donnée malformée.
+  it('accepte "oral": null comme une absence de voie orale', () => {
+    const brut = ficheValide() as Record<string, unknown>
+    brut.oral = null
+    expect(validerFicheSource('x', brut)).toEqual([])
+  })
+
+  it('signale quand les deux voies sont à null (aucune voie documentée)', () => {
+    const brut = ficheValide() as Record<string, unknown>
+    brut.iv = null
+    brut.oral = null
+    expect(validerFicheSource('x', brut)).toContain(
+      'x.json — (racine) : ni "iv" ni "oral" ne sont renseignés — une fiche doit documenter au moins une voie',
+    )
+  })
+
   it('signale une forme orale sans son champ type, avec l\'index dans le chemin', () => {
     const brut = ficheValide() as { oral: { formes: Record<string, unknown>[] } }
     brut.oral.formes.push({ posologie_adulte: [] })

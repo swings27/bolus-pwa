@@ -48,11 +48,20 @@ export function formaterDose(p: IPosologieRcp): string {
   if (p.dose_par_prise_MUI !== undefined) return `${formaterNombre(p.dose_par_prise_MUI)} MUI`
   const parPriseMUI = formaterPlage(p.dose_par_prise_MUI_min, p.dose_par_prise_MUI_max, 'MUI')
   if (parPriseMUI) return parPriseMUI
+  // UI (unités internationales, ex. énoxaparine en UI anti-Xa) — distinct des
+  // MUI ci-dessus (millions d'UI, spiramycine), l'ordre de grandeur n'est pas
+  // le même.
+  const parPriseUI = formaterPlage(p.dose_par_prise_UI_min, p.dose_par_prise_UI_max, 'UI')
+  if (parPriseUI) return parPriseUI
   // Pas de suffixe "/ prise" ici : la carte n'affiche qu'une seule prise à
   // la fois, le préciser serait redondant (contrairement à "/ jour"
   // ci-dessous, qui change réellement le sens de la valeur).
   const parKg = formaterPlage(p.dose_mg_kg_min, p.dose_mg_kg_max, 'mg/kg')
   if (parKg) return parKg
+  // UI/kg par prise (ex. énoxaparine curatif, héparine en bolus) — même
+  // logique que le mg/kg ci-dessus.
+  const parKgUI = formaterPlage(p.dose_par_prise_UI_kg_min, p.dose_par_prise_UI_kg_max, 'UI/kg')
+  if (parKgUI) return parKgUI
   const parKgParJour = formaterPlage(p.dose_journaliere_mg_kg_min, p.dose_journaliere_mg_kg_max, 'mg/kg')
   if (parKgParJour) return `${parKgParJour} / jour`
   const parJourMUI = formaterPlage(p.dose_journaliere_MUI_min, p.dose_journaliere_MUI_max, 'MUI')
@@ -61,8 +70,19 @@ export function formaterDose(p: IPosologieRcp): string {
   // dose_journaliere_mg_kg ci-dessus, en unité différente.
   const parKgParJourMmol = formaterPlage(p.dose_journaliere_mmol_kg_min, p.dose_journaliere_mmol_kg_max, 'mmol/kg')
   if (parKgParJourMmol) return `${parKgParJourMmol} / jour`
+  // Débits de perfusion continue (PSE). Quatre unités selon la molécule :
+  // µg/kg/min (adrénaline), mg/kg/h (kétamine), UI/kg/h (héparine) et mg/h
+  // (nicardipine, non rapporté au poids). Aucune conversion entre elles :
+  // chacune est reprise telle que le RCP la formule, c'est sous cette forme
+  // que le débit est réglé au pousse-seringue.
   const debit = formaterPlage(p.dose_ugkgmin_min, p.dose_ugkgmin_max, 'µg/kg/min')
   if (debit) return debit
+  const debitMgKgH = formaterPlage(p.dose_mgkgh_min, p.dose_mgkgh_max, 'mg/kg/h')
+  if (debitMgKgH) return debitMgKgH
+  const debitUIKgH = formaterPlage(p.dose_UI_kg_h_min, p.dose_UI_kg_h_max, 'UI/kg/h')
+  if (debitUIKgH) return debitUIKgH
+  const debitMgH = formaterPlage(p.debit_mg_h_min, p.debit_mg_h_max, 'mg/h')
+  if (debitMgH) return debitMgH
   return '—'
 }
 
@@ -87,6 +107,8 @@ export interface IDoseParKg {
 export function formaterDoseParKg(p: IPosologieRcp): IDoseParKg | null {
   const parKg = formaterPlage(p.dose_mg_kg_min, p.dose_mg_kg_max, 'mg/kg')
   if (parKg) return { valeur: parKg, suffixe: null }
+  const parKgUI = formaterPlage(p.dose_par_prise_UI_kg_min, p.dose_par_prise_UI_kg_max, 'UI/kg')
+  if (parKgUI) return { valeur: parKgUI, suffixe: null }
   const parKgParJour = formaterPlage(p.dose_journaliere_mg_kg_min, p.dose_journaliere_mg_kg_max, 'mg/kg')
   if (parKgParJour) return { valeur: parKgParJour, suffixe: '/ jour' }
   const parKgParJourMmol = formaterPlage(p.dose_journaliere_mmol_kg_min, p.dose_journaliere_mmol_kg_max, 'mmol/kg')
@@ -104,6 +126,12 @@ export function formaterDoseAbsolue(p: IPosologieRcp): string | null {
 }
 
 export function formaterIntervalle(p: IPosologieRcp): string {
+  // Un intervalle de 24 h pile est la façon dont les fiches notent une
+  // administration unique : plutôt que d'afficher "24 h", qui demande un
+  // calcul mental, la carte l'annonce directement comme une dose unique.
+  // C'est ce qui permet de renseigner un intervalle sur toutes les lignes,
+  // au lieu de laisser le champ vide pour signaler l'absence de répétition.
+  if (p.intervalle_min_h === 24 && p.intervalle_max_h === 24) return 'Dose unique'
   const enHeures = formaterPlage(p.intervalle_min_h, p.intervalle_max_h, 'h')
   if (enHeures) return enHeures
   const enMinutes = formaterPlage(p.intervalle_min_min, p.intervalle_max_min, 'min')
@@ -175,6 +203,13 @@ export function formaterMax(p: IPosologieRcp): string | null {
   const maxMmol = p.dose_journaliere_max_mmol
   if (typeof maxMmol === 'string') return maxMmol
   if (maxMmol !== undefined) return `${formaterNombre(maxMmol)} mmol/j`
+
+  // Maximum journalier au poids : reste en mg/kg/j, aucune conversion vers
+  // des mg ou des g absolus — elle supposerait un poids que la fiche ne
+  // connaît pas.
+  const maxMgKgJ = p.dose_mg_kg_j_max
+  if (typeof maxMgKgJ === 'string') return maxMgKgJ
+  if (maxMgKgJ !== undefined) return `${formaterNombre(maxMgKgJ)} mg/kg/j`
 
   const maxParPrise = p.dose_max_par_prise_g
   if (typeof maxParPrise === 'string') return maxParPrise
@@ -248,8 +283,14 @@ function estUnePlageDeDose(p: IPosologieRcp): boolean {
   if (p.dose_par_prise_MUI_min !== undefined || p.dose_par_prise_MUI_max !== undefined) {
     return p.dose_par_prise_MUI_min !== p.dose_par_prise_MUI_max
   }
+  if (p.dose_par_prise_UI_min !== undefined || p.dose_par_prise_UI_max !== undefined) {
+    return p.dose_par_prise_UI_min !== p.dose_par_prise_UI_max
+  }
   if (p.dose_mg_kg_min !== undefined || p.dose_mg_kg_max !== undefined) {
     return p.dose_mg_kg_min !== p.dose_mg_kg_max
+  }
+  if (p.dose_par_prise_UI_kg_min !== undefined || p.dose_par_prise_UI_kg_max !== undefined) {
+    return p.dose_par_prise_UI_kg_min !== p.dose_par_prise_UI_kg_max
   }
   if (p.dose_journaliere_mg_kg_min !== undefined || p.dose_journaliere_mg_kg_max !== undefined) {
     return p.dose_journaliere_mg_kg_min !== p.dose_journaliere_mg_kg_max

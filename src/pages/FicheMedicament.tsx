@@ -169,11 +169,17 @@ export default function FicheMedicament() {
       {/* Grille antidote / contre-indications : l'antidote s'ajuste à son
           contenu (souvent un seul nom court) plutôt que de forcer un
           partage strict 50/50, qui l'étirerait inutilement sur toute la
-          moitié de l'écran. */}
+          moitié de l'écran.
+          max-w-[45%] : le champ contient d'ordinaire un nom ("Naloxone",
+          "Flumazénil"), mais rien ne l'y oblige — l'héparine sodique y met
+          une phrase de 300 caractères. Sans plafond, la largeur au contenu
+          faisait déborder la page entière en largeur (le texte ne revenait
+          pas à la ligne, whitespace-nowrap). Le plafond laisse le texte
+          s'enrouler tout en gardant une colonne étroite pour un nom court. */}
       {(antidotePresent || contreIndicationsPresentes) && (
         <div className="mt-6 flex items-stretch gap-3 px-6">
           {antidotePresent && (
-            <div className="shrink-0 whitespace-nowrap">
+            <div className="max-w-[45%] shrink-0">
               <BlocInfo variant="validation" label="Antidote">
                 {fiche.antidote}
               </BlocInfo>
@@ -226,10 +232,18 @@ export default function FicheMedicament() {
                 voie. Elle reste rendue à l'intérieur de l'onglet actif, donc
                 invisible tant qu'aucune forme n'est sélectionnée. */}
             {formeActive === 'injectable' && fiche.iv && (
-              <DetailInjectable donnees={fiche.iv} noteAjustement={fiche.noteAjustement} />
+              <DetailInjectable
+                donnees={fiche.iv}
+                noteAjustement={fiche.noteAjustement}
+                noteAjustementAbsolue={fiche.noteAjustementAbsolue}
+              />
             )}
             {formeActive === 'perOs' && fiche.oral && (
-              <DetailPerOs donnees={fiche.oral} noteAjustement={fiche.noteAjustement} />
+              <DetailPerOs
+                donnees={fiche.oral}
+                noteAjustement={fiche.noteAjustement}
+                noteAjustementAbsolue={fiche.noteAjustementAbsolue}
+              />
             )}
           </div>
         </div>
