@@ -1,7 +1,10 @@
 import { useEffect, useState } from 'react'
 import { db } from '../db'
 import { CLE_FICHES_VERSION, CLE_FICHES_DATE_CATALOGUE } from '../db/cles'
-import type { IFiche } from '../types'
+import { CATALOGUE_FICHES } from '../data/categoriesFiches'
+import { construireFiche } from '../utils/construireFiche'
+import { validerFicheSource } from '../utils/validerFicheSource'
+import type { IFiche, IFicheSource } from '../types'
 
 interface IVersionFichier {
   version: string
@@ -26,10 +29,11 @@ async function recupererJson<T>(url: string): Promise<T> {
   return reponse.json()
 }
 
-// Ce hook synchronise les fiches médicaments du CDN (fichiers JSON
-// statiques dans /public/data/) vers Dexie (IndexedDB), pour que l'app
-// puisse ensuite lire les fiches localement, sans réseau. Il ne doit
-// s'exécuter qu'une fois au démarrage de l'app (appelé dans App.tsx).
+// Ce hook synchronise les fiches médicaments du CDN (un fichier JSON par
+// fiche dans /public/data/, voir src/data/categoriesFiches.ts pour la liste)
+// vers Dexie (IndexedDB), pour que l'app puisse ensuite lire les fiches
+// localement, sans réseau. Il ne doit s'exécuter qu'une fois au démarrage de
+// l'app (appelé dans App.tsx).
 export function useFichesLoader(): IEtatChargement {
   const [etat, setEtat] = useState<{ loading: boolean; error: string | null }>({
     loading: true,
@@ -70,7 +74,39 @@ export function useFichesLoader(): IEtatChargement {
           return
         }
 
-        const fiches = await recupererJson<IFiche[]>('/data/fiches-v1.json')
+        // Un fichier JSON par fiche (pas un instantané unique comme l'ancien
+        // fiches-v1.json) : chaque entrée de CATALOGUE_FICHES pointe vers
+        // /data/<id>.json, dont le contenu est assemblé en IFiche par
+        // construireFiche() (id + catégorie/sous-famille n'existent pas dans
+        // le JSON clinique lui-même).
+        const ids = Object.keys(CATALOGUE_FICHES)
+        // Chaque erreur est renommée avec l'id de la fiche avant de remonter :
+        // Promise.all rejette sur la première en échec, et « Le serveur est
+        // indisponible (404) » sans nom de fichier n'aide pas à retrouver
+        // laquelle des 35 fiches manque, est mal déployée ou contient un JSON
+        // invalide (une virgule oubliée casse tout le catalogue).
+        const brutes = await Promise.all(
+          ids.map((id) =>
+            recupererJson<IFicheSource>(`/data/${id}.json`).catch((err: unknown) => {
+              const detail = err instanceof Error ? err.message : String(err)
+              throw new Error(`Fiche "${id}" : ${detail}`)
+            }),
+          ),
+        )
+
+        // Valide la forme de CHAQUE fichier avant de les assembler en
+        // fiches : sans ça, un champ mal nommé ou du mauvais type ne casse
+        // rien (construireFiche() est tolérante — un "—" apparaît juste à
+        // l'affichage) ou, pire, fait planter le chargement avec un message
+        // technique qui ne dit ni quel fichier ni quel champ est en cause.
+        // Les erreurs de tous les fichiers sont accumulées avant d'échouer,
+        // pour ne pas devoir corriger puis recharger un par un.
+        const erreursValidation = brutes.flatMap((brut, index) => validerFicheSource(ids[index], brut))
+        if (erreursValidation.length > 0) {
+          throw new Error(erreursValidation.join('\n'))
+        }
+
+        const fiches: IFiche[] = brutes.map((brut, index) => construireFiche(ids[index], brut, CATALOGUE_FICHES[ids[index]]))
 
         // Le fichier distant est un instantané complet du catalogue (pas un
         // delta) : bulkPut seul insère/met à jour, mais ne retire jamais

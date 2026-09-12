@@ -1,0 +1,265 @@
+{
+  "dci": "héparine sodique",
+  "commun": {
+    "noms_commerciaux": [],
+    "famille": "Anticoagulant héparine non fractionnée",
+    "antidote": "Sulfate de protamine",
+    "indications": [
+      "Thrombose veineuse profonde / embolie pulmonaire",
+      "Infarctus du myocarde / angor instable",
+      "Embolies artérielles extracérébrales",
+      "Coagulopathies (certains cas)",
+      "Prévention thromboembolique artérielle",
+      "Circulation extracorporelle / épuration extra-rénale"
+    ],
+    "grossesse_allaitement": {
+      "grossesse": "L'héparine ne traverse pas le placenta. Aucune malformation ni fœtotoxicité de l'héparine n'ont été décrites chez l'animal, ni à ce jour dans l'espèce humaine. Lors de son utilisation chez la femme enceinte, une prudence particulière s'impose en raison des risques hémorragiques utéroplacentaires, particulièrement au moment de l'accouchement. Si une anesthésie péridurale est envisagée, il est impératif de suspendre le traitement héparinique.",
+      "allaitement": "L'héparine n'étant pas excrétée dans le lait maternel et ne passant pas la barrière digestive, l'allaitement est possible.",
+      "url_crat_grossesse": "https://www.lecrat.fr/6614/",
+      "url_crat_allaitement": "https://www.lecrat.fr/6615/"
+    },
+    "note_ajustement": "Posologie et surveillance biologique déterminées au cas par cas pour la thérapeutique endovasculaire, la chirurgie vasculaire artérielle et la circulation extra-corporelle/épuration extra-rénale, se référer au protocole du service. Dose généralement inférieure en cas de coagulopathie.",
+    "contre_indications": [
+      "Hypersensibilité à l'héparine sodique ou à l'un des excipients",
+      "Antécédents de thrombopénie grave de type II (thrombopénie induite par l'héparine, TIH), sous HNF ou HBPM",
+      "Maladies hémorragiques constitutionnelles",
+      "Lésion organique susceptible de saigner",
+      "Manifestations ou tendances hémorragiques liées à des troubles de l'hémostase",
+      "Hémorragie intracérébrale",
+      "Anesthésie péridurale ou rachianesthésie pendant un traitement par héparine, ne doivent jamais être effectuées",
+      "Prématuré, nouveau-né à terme et enfant de moins de 3 ans, pour les spécialités contenant de l'alcool benzylique",
+      "Accident vasculaire cérébral ischémique étendu à la phase aiguë, avec ou sans troubles de la conscience, généralement déconseillé ; si l'AVC est d'origine embolique, héparine à écarter dans les 3 premiers jours",
+      "Hypertension artérielle non contrôlée, généralement déconseillé",
+      "Endocardite infectieuse aiguë, sauf prothèse mécanique, généralement déconseillé",
+      "Traitement par anticoagulant oral d'action directe (apixaban, edoxaban, rivaroxaban...)"
+    ],
+    "interactions_pertinentes": [
+      {
+        "substance": "Défibrotide",
+        "effet": "Augmentation du risque hémorragique, quelle que soit la dose d'héparine (association déconseillée).",
+        "action_infirmier": "Signaler au prescripteur toute co-precription de défibrotide."
+      },
+      {
+        "substance": "Acide acétylsalicylique à doses anti-inflammatoires (≥ 1 g/prise et/ou ≥ 3 g/j) ou antalgiques/antipyrétiques (≥ 500 mg/prise et/ou < 3 g/j)",
+        "effet": "Augmentation du risque hémorragique par inhibition des fonctions plaquettaires et agression de la muqueuse gastro-duodénale, avec les doses curatives d'héparine et/ou chez le sujet âgé (association déconseillée).",
+        "action_infirmier": "Signaler au prescripteur toute co-prescription d'acide acétylsalicylique à ces doses."
+      },
+      {
+        "substance": "Anti-inflammatoires non stéroïdiens",
+        "effet": "Augmentation du risque hémorragique par agression de la muqueuse gastro-duodénale, avec les doses curatives d'héparine et/ou chez le sujet âgé (association déconseillée).",
+        "action_infirmier": "Signaler au prescripteur ; si l'association ne peut être évitée, renforcer la surveillance clinique."
+      },
+      {
+        "substance": "Dextran 40",
+        "effet": "Augmentation du risque hémorragique par inhibition des fonctions plaquettaires, avec les doses curatives d'héparine et/ou chez le sujet âgé (association déconseillée).",
+        "action_infirmier": "Signaler au prescripteur toute co-prescription de dextran."
+      },
+      {
+        "substance": "Anticoagulants oraux",
+        "effet": "Augmentation du risque hémorragique. Les anticoagulants oraux d'action directe ne doivent pas être administrés conjointement à l'héparine.",
+        "action_infirmier": "Lors du relais héparine/antivitamine K, respecter l'intervalle entre les prises et renforcer la surveillance clinique et biologique ; signaler au prescripteur toute co-prescription d'un anticoagulant oral d'action directe."
+      },
+      {
+        "substance": "Cobimétinib",
+        "effet": "Augmentation du risque hémorragique.",
+        "action_infirmier": "Surveillance clinique renforcée en cas de co-prescription de cobimétinib."
+      },
+      {
+        "substance": "Antiagrégants plaquettaires",
+        "effet": "Augmentation du risque hémorragique.",
+        "action_infirmier": "Signaler au prescripteur toute co-prescription d'un antiagrégant plaquettaire."
+      },
+      {
+        "substance": "Thrombolytiques",
+        "effet": "Augmentation du risque hémorragique, avec les doses curatives d'héparine.",
+        "action_infirmier": "Signaler au prescripteur ; surveillance clinique renforcée."
+      },
+      {
+        "substance": "Corticoïdes",
+        "effet": "Augmentation du risque hémorragique.",
+        "action_infirmier": "Signaler au prescripteur toute co-prescription de corticoïdes."
+      },
+      {
+        "substance": "Médicaments hyperkaliémiants",
+        "effet": "Risque de majoration de l'hyperkaliémie, potentiellement létale.",
+        "action_infirmier": "Surveiller la kaliémie en cas de traitement prolongé chez les patients à risque (diabète, insuffisance rénale chronique)."
+      }
+    ],
+    "surveillance_specifique": [
+      {
+        "evenement": "Thrombopénie induite par l'héparine (TIH) de type II",
+        "explication": "Thrombopénie grave, parfois thrombosante, d'origine immunologique, définie par un chiffre de plaquettes < 100 000 et/ou une chute relative de 30 à 50 % sur deux numérations successives. Survient essentiellement entre le 5e et le 21e jour de traitement (pic vers le 10e jour), mais peut être plus précoce en cas d'antécédent de TIH ; une TIH retardée peut survenir après l'arrêt du traitement.",
+        "action": "Numération plaquettaire avant traitement puis deux fois par semaine pendant 21 jours, puis à la même fréquence jusqu'à l'arrêt si le traitement se prolonge. Devant tout événement thrombotique sous héparine ou toute baisse de 30 à 50 % des plaquettes, faire pratiquer en urgence une numération plaquettaire et suspendre le traitement héparinique en cas de confirmation, sans attendre le résultat des tests immunologiques."
+      },
+      {
+        "evenement": "Résistance à l'héparine",
+        "explication": "Liée principalement à une activité antithrombine inférieure à 60 % de la normale (déficit congénital ou acquis) et/ou à une augmentation de la fixation protéique de l'héparine (syndrome inflammatoire, chirurgie, circulation extra-corporelle, cancer, obésité, hypersplénisme, insuffisance hépatique). Peut aussi survenir pendant la grossesse, le post-partum, chez le sujet âgé (> 65 ans), en cas d'hypoalbuminémie ou de thrombocytose.",
+        "action": "En cas de non-élévation du TCA malgré l'augmentation des doses, mesurer le TCA et l'activité anti-Xa sur le même échantillon (anti-Xa sur plasma non enrichi en antithrombine) et ajuster les doses sur l'anti-Xa plutôt que d'escalader empiriquement. Surveillance rapprochée du patient : cette résistance peut céder brutalement."
+      },
+      {
+        "evenement": "Hyperkaliémie et hypoaldostéronisme",
+        "explication": "L'héparine peut freiner la sécrétion d'aldostérone et entraîner de rares cas d'hypoaldostéronisme avec hyperkaliémie et/ou acidose métabolique, en particulier chez le diabétique, l'insuffisant rénal chronique, en cas d'acidose métabolique préexistante ou de traitement associé par IEC/AINS. Le risque augmente avec la durée du traitement et est habituellement réversible.",
+        "action": "Surveiller la kaliémie en cas de traitement prolongé chez les patients à risque."
+      },
+      {
+        "evenement": "Hémorragie surrénalienne / insuffisance surrénalienne aiguë",
+        "explication": "Des hémorragies surrénaliennes, entraînant une insuffisance surrénalienne aiguë, ont été observées au cours d'un traitement anticoagulant.",
+        "action": "Interrompre le traitement et alerter immédiatement le prescripteur devant tout signe ou symptôme d'hémorragie surrénalienne ou d'insuffisance surrénalienne aiguë, sans attendre la confirmation biologique."
+      },
+      {
+        "evenement": "Nécrose cutanée au point d'injection",
+        "explication": "Peut être précédée d'un purpura ou de placards érythémateux, infiltrés et douloureux, au point d'injection ou à distance.",
+        "action": "Surveiller le point d'injection ; en cas de signes évocateurs, suspendre immédiatement le traitement et signaler au prescripteur."
+      },
+      {
+        "evenement": "Apport en sodium",
+        "explication": "Teneur en sodium par unité : environ 4,7 mg/mL (23,5 mg/5 mL) pour Héparine Sodique Panpharma ; environ 6,6 mg par ampoule de 1 mL pour Héparine Choay 5 000 UI/1 mL (essentiellement « sans sodium ») ; environ 25 mg par flacon de 5 mL pour Héparine Choay 25 000 UI/5 mL (≈ 1,25 % de l'apport quotidien maximal OMS). Le RCP recommande de tenir compte de la teneur en sodium, en particulier à fortes doses ou avec Héparine Choay 25 000 UI/5 mL.",
+        "action": "Signaler au prescripteur en cas de régime hyposodé strict."
+      },
+      {
+        "evenement": "Accumulation d'alcool benzylique",
+        "explication": "Ces deux spécialités contiennent de l'alcool benzylique, associé à un risque d'acidose métabolique en cas d'accumulation chez la femme enceinte, la femme allaitante et le nouveau-né, et à des réactions toxiques/anaphylactoïdes (« syndrome de suffocation ») chez l'enfant de moins de 3 ans. Héparine Choay 5 000 UI/1 mL ne contient pas d'alcool benzylique. Le RCP recommande de privilégier Héparine Choay 5 000 UI/1 mL, sans alcool benzylique, dans ces populations.",
+        "action": "Signaler au prescripteur avant administration chez la femme enceinte, la femme allaitante et l'enfant de moins de 3 ans."
+      }
+    ],
+    "pictogrammes": []
+  },
+  "iv": {
+    "reconstitution": null,
+    "preparation": [
+      {
+        "voie": "IVD",
+        "detail": "Bolus initial de 50 UI/kg, avant le début de l'entretien continu, pour atteindre d'emblée une héparinémie efficace (facultatif).",
+        "duree": "Bolus",
+        "stabilite": null
+      },
+      {
+        "voie": "PSE",
+        "detail": "Dilution dans du NaCl 0,9%.",
+        "duree": "Continu",
+        "stabilite": "À utiliser immédiatement après première ouverture"
+      }
+    ],
+    "administration": {
+      "posologie": [
+        {
+          "population": "Traitement curatif, bolus initial",
+          "categorie": "generale",
+          "population_type": "adulte",
+          "dose_par_prise_UI_kg_min": 50,
+          "dose_par_prise_UI_kg_max": 50,
+          "intervalle_min_h": 24,
+          "intervalle_max_h": 24
+        },
+        {
+          "population": "Traitement curatif, entretien",
+          "categorie": "pse",
+          "population_type": "adulte",
+          "dose_UI_kg_h_min": 20,
+          "dose_UI_kg_h_max": 20,
+          "tdm_requis": true
+        }
+      ]
+    },
+    "incompatibilites": [
+      {
+        "substance": "Amikacine",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Amiodarone",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Atracurium",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Benzylpénicilline (Pénicilline G)",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Ciprofloxacine",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Clarithromycine",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Dobutamine",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Gentamicine",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Hydromorphone",
+        "niveau": "a_verifier"
+      },
+      {
+        "substance": "Labétalol",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Lévofloxacine",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Nicardipine",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Phénytoïne",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Ringer-lactate / Ringer-acétate",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Triméthoprime/Sulfaméthoxazole",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Vancomycine",
+        "niveau": "absolu"
+      }
+    ]
+  },
+  "oral": null,
+  "aerosol": null,
+  "tracabilite": {
+    "rcp_source": [
+      {
+        "specialite": "HEPARINE SODIQUE PANPHARMA 5 000 UI/ml, solution injectable (I.V.)",
+        "titulaire": "Panpharma",
+        "date_maj": "2025-03-04",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/64395923/extrait"
+      },
+      {
+        "specialite": "HEPARINE CHOAY 5 000 UI/1 mL, solution injectable",
+        "titulaire": "Cheplapharm Arzneimittel GmbH",
+        "date_maj": "2025-12-12",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/65822577/extrait"
+      },
+      {
+        "specialite": "HEPARINE CHOAY 25 000 UI/5 mL, solution injectable",
+        "titulaire": "Cheplapharm Arzneimittel GmbH",
+        "date_maj": "2026-08-04",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/65476933/extrait"
+      }
+    ],
+    "statut": "valide",
+    "validation": {
+      "date": "2026-09-09",
+      "validateur": "Anna Trabaud-Lopez (IDE, porteuse du projet), vérification des données extraites contre les RCP ; équipe pharmacie, validation de la méthodologie et arbitrage des points litigieux",
+      "perimetre": [
+        "adulte",
+        "pediatrie"
+      ],
+      "prochaine_revision": "2026-12-09"
+    }
+  }
+}

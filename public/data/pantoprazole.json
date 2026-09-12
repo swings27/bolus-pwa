@@ -1,0 +1,266 @@
+{
+  "dci": "pantoprazole",
+  "commun": {
+    "noms_commerciaux": [
+      "Eupantol",
+      "Inipomp",
+      "Ipraalox"
+    ],
+    "famille": "Antisécrétoire gastrique inhibiteur de la pompe à protons",
+    "antidote": "",
+    "indications": [
+      "Reflux gastro-œsophagien symptomatique",
+      "Œsophagite par reflux gastro-œsophagien",
+      "Prévention des récidives d'œsophagite",
+      "Prévention ulcères sous AINS",
+      "Éradication d'Helicobacter pylori",
+      "Ulcère gastrique",
+      "Ulcère duodénal",
+      "Syndrome de Zollinger-Ellison"
+    ],
+    "grossesse_allaitement": {
+      "grossesse": "Par mesure de précaution, il est préférable d'éviter l'utilisation du pantoprazole pendant la grossesse.",
+      "allaitement": "La décision d'arrêter l'allaitement ou d'arrêter/de s'abstenir du traitement par le pantoprazole doit tenir compte du bénéfice de l'allaitement pour l'enfant et du bénéfice du traitement par le pantoprazole pour la femme.",
+      "url_crat_grossesse": "https://www.lecrat.fr/12889/",
+      "url_crat_allaitement": "https://www.lecrat.fr/12888/"
+    },
+    "note_ajustement": "Adaptation de la posologie en cas d'insuffisance hépatique sévère. Utilisation déconseillée chez le patient de moins de 18 ans, se référer au protocole du service.",
+    "contre_indications": [
+      "Hypersensibilité à la substance active, aux benzimidazoles substitués ou à l'un des excipients"
+    ],
+    "interactions_pertinentes": [
+      {
+        "substance": "Inhibiteurs de la protéase du VIH à absorption pH-dépendante",
+        "effet": "Diminution significative de la biodisponibilité de l'inhibiteur de la protéase du VIH rapportée en cas d'administration concomitante avec un inhibiteur de la pompe à protons.",
+        "action_infirmier": "Signaler au prescripteur toute co-prescription d'atazanavir ou d'un autre inhibiteur de la protéase du VIH ; renforcer la surveillance clinique (charge virale) si l'association est jugée indispensable."
+      },
+      {
+        "substance": "Anticoagulants coumariniques",
+        "effet": "Des cas d'augmentation de l'INR et du temps de prothrombine, pouvant provoquer des hémorragies potentiellement fatales, ont été rapportés chez des patients recevant de façon concomitante un inhibiteur de la pompe à protons et de la warfarine ou de la phenprocoumone.",
+        "action_infirmier": "Signaler au prescripteur toute co-prescription de warfarine ou de phenprocoumone ; renforcer la surveillance de l'INR et du temps de prothrombine."
+      },
+      {
+        "substance": "Méthotrexate à forte dose",
+        "effet": "Une augmentation des taux sanguins de méthotrexate a été rapportée chez certains patients lors de l'utilisation concomitante de fortes doses de méthotrexate (par exemple 300 mg) et d'inhibiteurs de la pompe à protons.",
+        "action_infirmier": "Signaler au prescripteur toute co-prescription de méthotrexate à forte dose, notamment en cancérologie ou en cas de psoriasis."
+      }
+    ],
+    "surveillance_specifique": [
+      {
+        "evenement": "Masquage d'une tumeur gastrique maligne",
+        "explication": "La réponse symptomatique au traitement peut masquer les symptômes d'une tumeur gastrique maligne et en retarder le diagnostic.",
+        "action": "Signaler au prescripteur tout symptôme alarmant (perte de poids importante et involontaire, vomissements récurrents, dysphagie, hématémèse, anémie, méléna), en particulier en cas d'ulcère gastrique suspecté ou présent."
+      },
+      {
+        "evenement": "Hypomagnésémie",
+        "explication": "Des hypomagnésémies sévères ont été rarement rapportées chez des patients traités par un inhibiteur de la pompe à protons pendant au moins trois mois, le plus souvent pendant un an ; elle peut entraîner une hypocalcémie et/ou une hypokaliémie associées et débuter de façon insidieuse.",
+        "action": "Surveiller les signes cliniques d'hypomagnésémie (fatigue, tétanie, convulsions, sensations vertigineuses, troubles du rythme), en particulier lors d'un traitement prolongé ou associé à la digoxine ou à un médicament hypomagnésémiant (diurétiques) ; signaler au prescripteur en vue d'un dosage du magnésium sanguin."
+      },
+      {
+        "evenement": "Réactions cutanées sévères",
+        "explication": "Des réactions cutanées sévères pouvant menacer le pronostic vital (syndrome de Stevens-Johnson, nécrolyse épidermique toxique, réaction médicamenteuse avec éosinophilie et symptômes systémiques, érythème polymorphe) ont été rapportées avec le pantoprazole, à une fréquence indéterminée.",
+        "action": "Informer le patient des signes et symptômes évocateurs dès l'instauration du traitement ; en cas d'apparition, arrêter le pantoprazole et signaler immédiatement au prescripteur."
+      },
+      {
+        "evenement": "Interférence avec le dosage de la chromogranine A",
+        "explication": "Le pantoprazole augmente le taux de chromogranine A (CgA) par diminution de l'acidité gastrique, pouvant fausser l'interprétation des tests d'exploration des tumeurs neuroendocrines.",
+        "action": "Signaler au prescripteur le traitement par pantoprazole en cours avant tout dosage de chromogranine A ou de gastrine, l'augmentation du taux pouvant fausser l'interprétation des résultats."
+      },
+      {
+        "evenement": "Infections gastro-intestinales bactériennes",
+        "explication": "L'inhibition importante et durable de la sécrétion acide gastrique peut entraîner une légère augmentation du risque d'infections gastro-intestinales dues à des bactéries telles que Salmonella, Campylobacter ou Clostridioides difficile.",
+        "action": "Signaler au prescripteur l'apparition de diarrhées persistantes, fébriles ou inhabituelles en cours de traitement."
+      },
+      {
+        "evenement": "Risque de fracture",
+        "explication": "Un traitement prolongé (plus d'un an), en particulier à forte dose, par inhibiteur de la pompe à protons peut augmenter modérément le risque de fracture de la hanche, du poignet ou des vertèbres, principalement chez les sujets âgés ou en présence d'autres facteurs de risque identifiés.",
+        "action": "Signaler au prescripteur un traitement au long cours à forte dose, en particulier chez un patient présentant un risque d'ostéoporose."
+      }
+    ],
+    "pictogrammes": []
+  },
+  "iv": {
+    "reconstitution": {
+      "solvant": "Chlorure de sodium à 0,9 %",
+      "volume_par_40mg_mL": 10,
+      "stabilite_avant_dilution": "12h à 25 °C"
+    },
+    "preparation": [
+      {
+        "voie": "IVL",
+        "detail": "Solution reconstituée seule.",
+        "duree": "2 minutes",
+        "stabilite": "12h à 25 °C."
+      },
+      {
+        "voie": "PERF",
+        "detail": "Dilution dans 100ml de NaCl 0,9% ou G5%.",
+        "duree": "15 minutes",
+        "stabilite": "12h à 25°C."
+      }
+    ],
+    "administration": {
+      "posologie": [
+        {
+          "population": "Ulcère gastro-duodénal / œsophagite par RGO",
+          "population_type": "adulte",
+          "categorie": "generale",
+          "dose_par_prise_mg_min": 40,
+          "dose_par_prise_mg_max": 40,
+          "intervalle_min_h": 24,
+          "intervalle_max_h": 24
+        },
+        {
+          "population": "Syndrome de Zollinger-Ellison / hypersécrétion",
+          "population_type": "adulte",
+          "categorie": "speciale",
+          "dose_par_prise_mg_min": 80,
+          "dose_par_prise_mg_max": 80,
+          "intervalle_min_h": 12,
+          "intervalle_max_h": 24,
+          "dose_journaliere_max_mg": 160
+        }
+      ]
+    },
+    "incompatibilites": [
+      {
+        "substance": "Nutrition parentérale totale",
+        "niveau": "absolu"
+      }
+    ]
+  },
+  "oral": {
+    "formes": [
+      {
+        "type": "Comprimé gastro-résistant",
+        "dosage": "20 mg",
+        "ecrasable": false,
+        "ouverture_gelule": null,
+        "posologie_adulte": [
+          {
+            "population": "Reflux gastro-œsophagien symptomatique ou prévention ulcères sous AINS",
+            "population_type": "adulte",
+            "categorie": "generale",
+            "age_min_mois": 144,
+            "dose_par_prise_mg_min": 20,
+            "dose_par_prise_mg_max": 20,
+            "intervalle_min_h": 24,
+            "intervalle_max_h": 24
+          },
+          {
+            "population": "Traitement d'entretien / prévention récidive",
+            "population_type": "adulte",
+            "categorie": "generale",
+            "age_min_mois": 144,
+            "dose_par_prise_mg_min": 20,
+            "dose_par_prise_mg_max": 40,
+            "intervalle_min_h": 24,
+            "intervalle_max_h": 24
+          }
+        ]
+      },
+      {
+        "type": "Comprimé gastro-résistant",
+        "dosage": "40 mg",
+        "ecrasable": false,
+        "ouverture_gelule": null,
+        "posologie_adulte": [
+          {
+            "population": "Œsophagite par RGO",
+            "population_type": "adulte",
+            "categorie": "generale",
+            "age_min_mois": 144,
+            "dose_par_prise_mg_min": 40,
+            "dose_par_prise_mg_max": 80,
+            "intervalle_min_h": 24,
+            "intervalle_max_h": 24
+          },
+          {
+            "population": "Ulcère gastrique ou duodénal",
+            "population_type": "adulte",
+            "categorie": "generale",
+            "palier": "Adulte, pathologie ulcéreuse gastro-duodénale",
+            "dose_par_prise_mg_min": 40,
+            "dose_par_prise_mg_max": 80,
+            "intervalle_min_h": 24,
+            "intervalle_max_h": 24
+          },
+          {
+            "population": "Éradication d'Helicobacter pylori",
+            "population_type": "adulte",
+            "categorie": "speciale",
+            "dose_par_prise_mg_min": 40,
+            "dose_par_prise_mg_max": 40,
+            "intervalle_min_h": 12,
+            "intervalle_max_h": 12,
+            "dose_journaliere_max_mg": 80
+          },
+          {
+            "population": "Syndrome de Zollinger-Ellison / hypersécrétion",
+            "population_type": "adulte",
+            "categorie": "speciale",
+            "dose_par_prise_mg_min": 80,
+            "dose_par_prise_mg_max": 80,
+            "intervalle_min_h": 12,
+            "intervalle_max_h": 24,
+            "dose_journaliere_max_mg": 160
+          }
+        ]
+      }
+    ],
+    "recommandation_sonde": {
+      "forme_preferee": "",
+      "alternative": "Voie injectable, avis médical"
+    }
+  },
+  "aerosol": null,
+  "tracabilite": {
+    "rcp_source": [
+      {
+        "specialite": "EUPANTOL 40 mg, poudre pour solution injectable (IV)",
+        "titulaire": "TAKEDA FRANCE",
+        "date_maj": "04/08/2026",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/60550568/extrait"
+      },
+      {
+        "specialite": "PANTOPRAZOLE ZENTIVA 40 mg, poudre pour solution injectable",
+        "titulaire": "ZENTIVA FRANCE",
+        "date_maj": "09/08/2024",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/63174306/extrait"
+      },
+      {
+        "specialite": "INIPOMP 20 mg, comprimé gastro-résistant",
+        "titulaire": "TAKEDA FRANCE",
+        "date_maj": "02/09/2025",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/65220275/extrait"
+      },
+      {
+        "specialite": "INIPOMP 40 mg, comprimé gastro-résistant",
+        "titulaire": "TAKEDA FRANCE",
+        "date_maj": "02/09/2025",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/67560860/extrait"
+      },
+      {
+        "specialite": "PANTOPRAZOLE BIOGARAN 20 mg, comprimé gastrorésistant",
+        "titulaire": "BIOGARAN",
+        "date_maj": "01/12/2023",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/65109848/extrait"
+      },
+      {
+        "specialite": "PANTOPRAZOLE BIOGARAN 40 mg, comprimé gastrorésistant",
+        "titulaire": "BIOGARAN",
+        "date_maj": "01/12/2023",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/67626221/extrait"
+      }
+    ],
+    "statut": "valide",
+    "validation": {
+      "date": "2026-09-09",
+      "validateur": "Anna Trabaud-Lopez (IDE, porteuse du projet), vérification des données extraites contre les RCP ; équipe pharmacie, validation de la méthodologie et arbitrage des points litigieux",
+      "perimetre": [
+        "adulte"
+      ],
+      "prochaine_revision": "2026-12-09"
+    }
+  }
+}

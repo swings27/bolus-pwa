@@ -1,0 +1,195 @@
+{
+  "dci": "hydrocortisone",
+  "commun": {
+    "noms_commerciaux": [],
+    "famille": "Glucocorticoïde de référence, hormone identique au cortisol endogène",
+    "antidote": "",
+    "indications": [
+      "Insuffisance surrénale aiguë",
+      "Insuffisance surrénale transitoire du nouveau-né",
+      "Hyperplasie congénitale des surrénales avec syndrome de perte de sel",
+      "Insuffisance surrénale primitive (Addison, surrénalectomie)",
+      "Insuffisance corticotrope (hypopituitarisme secondaire)"
+    ],
+    "grossesse_allaitement": {
+      "grossesse": "L'insuffisance surrénale maternelle doit être traitée en cours de grossesse, en adaptant la posologie de l'hydrocortisone à la clinique, si besoin.",
+      "allaitement": "L'hydrocortisone étant excrétée dans le lait maternel, l'allaitement est à éviter.",
+      "url_crat_grossesse": "https://www.lecrat.fr/5077/",
+      "url_crat_allaitement": "https://www.lecrat.fr/5079/"
+    },
+    "contre_indications": [
+      "Hypersensibilité à la substance active ou à l'un des excipients",
+      "Tout état infectieux non traité d'origine bactérienne, virale, tuberculeuse ou fongique",
+      "Vaccination par un vaccin vivant atténué chez un patient recevant une corticothérapie immunosuppressive ou au long cours"
+    ],
+    "interactions_pertinentes": [
+      {
+        "substance": "Sultopride",
+        "effet": "Risque majoré de troubles du rythme ventriculaire, notamment de torsades de pointes, par addition des effets hypokaliémiants",
+        "action_infirmier": "Signaler au prescripteur toute co-prescription de sultopride"
+      },
+      {
+        "substance": "Vaccins vivants atténués",
+        "effet": "Risque de maladie vaccinale généralisée, potentiellement mortelle, chez le patient immunodéprimé par la corticothérapie",
+        "action_infirmier": "Signaler au prescripteur tout projet de vaccination vivante chez un patient sous corticothérapie"
+      },
+      {
+        "substance": "Anticoagulants oraux",
+        "effet": "Effet de l'anticoagulant pouvant être modifié par la corticothérapie",
+        "action_infirmier": "Renforcer la surveillance de l'INR en cas d'introduction ou d'arrêt de la corticothérapie"
+      },
+      {
+        "substance": "Médicaments hypokaliémiants",
+        "effet": "Risque majoré d'hypokaliémie par addition des effets",
+        "action_infirmier": "Surveiller la kaliémie en cas d'association"
+      }
+    ],
+    "surveillance_specifique": [
+      {
+        "evenement": "Décompensation d'une insuffisance surrénale lors d'un épisode de stress (infection, chirurgie, traumatisme) chez un patient sous hydrocortisone substitutive",
+        "explication": "Les besoins en cortisol augmentent lors du stress ; une dose substitutive habituelle peut devenir insuffisante et exposer à un collapsus surrénalien.",
+        "action": "Signaler au prescripteur toute situation de stress aigu chez un patient sous hydrocortisone substitutive, une majoration transitoire de la dose peut être nécessaire ; vérifier que le patient porte sa carte d'insuffisant surrénalien."
+      },
+      {
+        "evenement": "Arythmie ou hypotension en cas d'injection ou de perfusion IV trop rapide",
+        "explication": "Décrit spécifiquement pour l'hydrocortisone hémisuccinate injectable par le Guide HUG médicaments injectables ; aucune donnée équivalente dans les RCP français.",
+        "action": "Respecter la vitesse d'administration indiquée en Préparation ; en cas de survenue, arrêter l'injection et signaler au prescripteur."
+      }
+    ],
+    "pictogrammes": [
+      "Conduite de véhicules et utilisation de machines : influence majeure retenue par le RCP oral HYDROCORTISONE ROUSSEL (section 4.7) en raison de vertiges et convulsions possibles ; le RCP injectable HYDROCORTISONE UPJOHN indique « sans objet » (section 4.7)."
+    ],
+    "note_ajustement": null
+  },
+  "iv": {
+    "reconstitution": {
+      "solvant": "Eau pour préparations injectables (EPPI)",
+      "volume_par_100mg_mL": 2,
+      "stabilite_avant_dilution": "À utiliser immédiatement après reconstitution"
+    },
+    "preparation": [
+      {
+        "voie": "IVD",
+        "detail": "Injecter la solution reconstituée directement dans la tubulure de perfusion.",
+        "duree": "Bolus (dose ≤ 100 mg)",
+        "stabilite": null,
+        "contexte": ""
+      },
+      {
+        "voie": "IVL",
+        "detail": "Injecter la solution reconstituée en intraveineuse lente, non diluée.",
+        "duree": "3 à 5 minutes",
+        "stabilite": null,
+        "contexte": ""
+      },
+      {
+        "voie": "PERF",
+        "detail": "Diluer la solution reconstituée dans du NaCl 0,9 % ou G5 %. Concentration usuelle 0,1 à 1 mg/mL, concentration maximale 5 mg/mL.",
+        "duree": "20 à 30 minutes",
+        "stabilite": null,
+        "contexte": ""
+      },
+      {
+        "voie": "PSE",
+        "detail": "Solution reconstituée utilisée non diluée ou diluée avec du NaCl 0,9% ou G5%, concentration maximale 50 mg/mL.",
+        "duree": "Continue",
+        "stabilite": null,
+        "contexte": "VVC uniquement"
+      },
+      {
+        "voie": "IM",
+        "detail": "Utiliser reconstitué, en injection intramusculaire.",
+        "duree": "< 1 min",
+        "stabilite": null,
+        "contexte": ""
+      }
+    ],
+    "administration": {
+      "posologie": [
+        {
+          "population": "> 12 ans, insuffisance surrénale aiguë",
+          "population_type": "adulte",
+          "categorie": "generale",
+          "dose_par_prise_mg_min": 100,
+          "dose_par_prise_mg_max": 200,
+          "intervalle_min_h": 6,
+          "intervalle_max_h": 8,
+          "dose_journaliere_max_mg": 800
+          
+        },
+        {
+          "population": "Insuffisance surrénale aiguë",
+          "population_type": "pediatrie",
+          "categorie": "generale",
+          "age_max_mois": 132,
+          "dose_mg_kg_max": 5,
+          "intervalle_min_h": 6,
+          "intervalle_max_h": 8,
+          "dose_journaliere_max_g": "Selon poids"
+        }
+      ]
+    },
+    "incompatibilites": []
+  },
+  "oral": {
+    "formes": [
+      {
+        "type": "Comprimé sécable",
+        "dosage": "10 mg",
+        "ecrasable": true,
+        "ouverture_gelule": null,
+        "posologie_adulte": [
+          {
+            "population": "Traitement d'entretien",
+            "population_type": "adulte",
+            "categorie": "generale",
+            "dose_par_prise_mg_min": 10,
+            "dose_par_prise_mg_max": 20,
+            "intervalle_min_h": 8,
+            "intervalle_max_h": 12,
+            "dose_journaliere_max_mg": 40
+          },
+          {
+            "population": "Traitement d'entretien",
+            "population_type": "pediatrie",
+            "categorie": "generale",
+            "intervalle_min_h": 8,
+            "intervalle_max_h": 8,
+            "dose_journaliere_max_g": "Selon poids"
+          }
+        ]
+      }
+    ],
+    "recommandation_sonde": {
+      "forme_preferee": "Comprimé écrasé (10 mg)",
+      "alternative": ""
+    }
+  },
+  "aerosol": null,
+  "tracabilite": {
+    "rcp_source": [
+      {
+        "specialite": "HYDROCORTISONE UPJOHN 100 mg, préparation injectable",
+        "titulaire": "SERB",
+        "date_maj": "07/08/2012",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/61581417/extrait"
+      },
+      {
+        "specialite": "HYDROCORTISONE ROUSSEL 10 mg, comprimé sécable",
+        "titulaire": "PHOENIX LABS UNLIMITED COMPANY",
+        "date_maj": "03/03/2026",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/64124103/extrait"
+      }
+    ],
+    "statut": "valide",
+    "validation": {
+      "date": "2026-09-08",
+      "validateur": "Anna Trabaud-Lopez (IDE, porteuse du projet), vérification des données extraites contre les RCP ; équipe pharmacie, validation de la méthodologie et arbitrage des points litigieux",
+      "perimetre": [
+        "adulte",
+        "pediatrie"
+      ],
+      "prochaine_revision": "2026-12-08"
+    }
+  }
+}

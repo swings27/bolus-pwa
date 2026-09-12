@@ -7,6 +7,16 @@ interface IBlocAvertissementProps {
    * plutôt que d'en imposer une qui ne correspond à rien. */
   icone?: LucideIcon
   couleur: string
+  /** "teinte" (défaut) : fond très pâle + filet gauche saturé, pour un
+   * avertissement qui accompagne le contenu. "pleine" : fond entièrement
+   * saturé, réservé au signal qu'on ne doit pas pouvoir survoler sans le
+   * voir — c'est alors à l'appelant de mettre son texte en blanc. */
+  variante?: 'teinte' | 'pleine'
+  /** Intitulé en petites capitales au-dessus du contenu (ex. "Incompatible
+   * en Y", "Ajustement posologique"). Il prend `couleur` en variante teintée
+   * et le blanc sur fond plein — les trois blocs de la fiche médicament
+   * recopiaient chacun ce même bandeau avec sa couleur en dur. */
+  titre?: string
   children: ReactNode
 }
 
@@ -16,17 +26,41 @@ interface IBlocAvertissementProps {
 // même structure, seuls la couleur, l'icône (le cas échéant) et le texte
 // changent d'un usage à l'autre (chacun garde son propre <p>, donc sa
 // propre taille/couleur de texte).
-export default function BlocAvertissement({ icone: Icone, couleur, children }: IBlocAvertissementProps) {
+export default function BlocAvertissement({ icone: Icone, couleur, variante = 'teinte', titre, children }: IBlocAvertissementProps) {
+  const pleine = variante === 'pleine'
   return (
     <div
       className="flex items-start gap-2 rounded-lg px-4 py-3"
-      style={{
-        backgroundColor: `color-mix(in srgb, ${couleur} 10%, var(--fond))`,
-        borderLeft: `3px solid ${couleur}`,
-      }}
+      style={
+        pleine
+          ? { backgroundColor: couleur }
+          : {
+              backgroundColor: `color-mix(in srgb, ${couleur} 10%, var(--fond))`,
+              borderLeft: `3px solid ${couleur}`,
+            }
+      }
     >
-      {Icone && <Icone className="mt-0.5 h-4 w-4 shrink-0" style={{ color: couleur }} aria-hidden="true" />}
-      {children}
+      {/* Sur fond plein, l'icône reprend la couleur du texte de l'appelant
+          (blanc) plutôt que celle du fond, où elle disparaîtrait. */}
+      {Icone && (
+        <Icone className="mt-0.5 h-4 w-4 shrink-0" style={pleine ? undefined : { color: couleur }} aria-hidden="true" />
+      )}
+      {titre ? (
+        <div>
+          {/* Sur fond plein, le blanc est explicite et non hérité : sans lui
+              le titre retomberait sur la couleur de texte de la page, illisible
+              sur le rouge saturé. */}
+          <p
+            className={`mb-1 text-[9.5px] font-semibold uppercase tracking-wide ${pleine ? 'text-white' : ''}`}
+            style={pleine ? undefined : { color: couleur }}
+          >
+            {titre}
+          </p>
+          {children}
+        </div>
+      ) : (
+        children
+      )}
     </div>
   )
 }

@@ -1,0 +1,232 @@
+{
+  "dci": "fosfomycine",
+  "commun": {
+    "noms_commerciaux": [
+      "Monuril",
+      "Fomicyt"
+    ],
+    "famille": "Antibiotique dérivé phosphonique",
+    "antidote": "",
+    "indications": [
+      "Cystite aiguë non compliquée",
+      "Infection urinaire compliquée",
+      "Endocardite infectieuse",
+      "Infection osseuse et articulaire",
+      "Pneumonie nosocomiale",
+      "Infection cutanée compliquée",
+      "Méningite bactérienne",
+      "Infection intra-abdominale compliquée",
+      "Bactériémie associée"
+    ],
+    "grossesse_allaitement": {
+      "grossesse": "La fosfomycine doit être utilisée pendant la grossesse uniquement si cela est vraiment nécessaire.",
+      "allaitement": "Si cela est vraiment nécessaire, une dose orale unique de fosfomycine peut être utilisée pendant l'allaitement.",
+      "url_crat_grossesse": "https://www.lecrat.fr/6678/",
+      "url_crat_allaitement": "https://www.lecrat.fr/6679/"
+    },
+    "contre_indications": [
+      "Hypersensibilité à la substance active ou à l'un des excipients."
+    ],
+    "interactions_pertinentes": [
+      {
+        "substance": "Métoclopramide",
+        "effet": "Diminution démontrée des concentrations sériques et urinaires de fosfomycine.",
+        "action_infirmier": "Signaler au prescripteur toute co-prescription de métoclopramide (ou d'un autre médicament augmentant la motilité gastro-intestinale) chez un patient recevant de la fosfomycine par voie orale ; l'association doit être évitée."
+      },
+      {
+        "substance": "Anticoagulants oraux",
+        "effet": "De nombreux cas d'augmentation de l'activité des anticoagulants oraux ont été rapportés chez des patients recevant un traitement antibiotique, dont la fosfomycine ; la part respective de l'infection elle-même et du traitement dans le déséquilibre de l'INR est difficile à établir.",
+        "action_infirmier": "Surveiller l'INR et signaler au prescripteur toute co-prescription d'un antivitamine K, quelle que soit la voie d'administration de la fosfomycine."
+      }
+    ],
+    "surveillance_specifique": [
+      {
+        "evenement": "Réactions d'hypersensibilité graves : anaphylaxie, choc anaphylactique",
+        "explication": "Des réactions d'hypersensibilité graves et parfois fatales peuvent survenir pendant le traitement par fosfomycine, quelle que soit la voie d'administration.",
+        "action": "Interrompre immédiatement la fosfomycine devant tout signe d'hypersensibilité et signaler au prescripteur ; des mesures d'urgence adaptées doivent être instaurées."
+      },
+      {
+        "evenement": "Diarrhée associée à Clostridioides difficile et colite pseudomembraneuse",
+        "explication": "Décrite avec la fosfomycine, de sévérité variable pouvant engager le pronostic vital ; les médicaments qui inhibent le péristaltisme ne doivent pas être administrés en cas de survenue.",
+        "action": "Signaler au prescripteur toute diarrhée survenant pendant ou après le traitement par fosfomycine ; l'arrêt du traitement doit être envisagé."
+      },
+      {
+        "evenement": "Surveillance de la natrémie et de la kaliémie",
+        "explication": "La fosfomycine intraveineuse a une teneur élevée en sodium (0,33 g de sodium par gramme de fosfomycine, soit 17 % de l'apport sodé quotidien maximal recommandé par l'OMS pour 1 g ; la dose journalière maximale de 16 g représente 260 % de cet apport) et peut diminuer la kaliémie.",
+        "action": "Surveiller régulièrement la natrémie et la kaliémie, en particulier en traitement prolongé ou chez un patient à risque de surcharge hydrosodée (insuffisance cardiaque, syndrome néphrotique, cirrhose, hypertension, hyperaldostéronisme, œdème pulmonaire, hypoalbuminémie, nouveau-né sous restriction sodée) ; envisager une supplémentation potassique et signaler au prescripteur. Un régime pauvre en sodium est recommandé pendant le traitement."
+      },
+      {
+        "evenement": "Réactions hématologiques (neutropénie, agranulocytose)",
+        "explication": "Rapportées chez des patients recevant de la fosfomycine par voie intraveineuse.",
+        "action": "Surveiller la numération leucocytaire à intervalles réguliers pendant le traitement intraveineux et signaler au prescripteur toute anomalie."
+      },
+      {
+        "evenement": "Sélection de souches résistantes en monothérapie intraveineuse",
+        "explication": "La fosfomycine sélectionne rapidement des mutants résistants in vitro ; son utilisation seule par voie intraveineuse a été associée à la sélection de souches résistantes dans les études cliniques.",
+        "action": "Vérifier, dans la mesure du possible, que la fosfomycine intraveineuse est administrée dans le cadre d'une association antibactérienne, conformément à la prescription ; signaler au prescripteur toute monothérapie prolongée."
+      }
+    ],
+    "pictogrammes": [
+      "Peut provoquer des sensations vertigineuses (voie orale) : prudence pour la conduite de véhicules et l'utilisation de machines",
+      "Peut provoquer confusion et asthénie (voie intraveineuse) : prudence pour la conduite de véhicules et l'utilisation de machines"
+    ],
+    "note_ajustement": "Ajustement posologique selon la fonction rénale et de la fonction hépatique, se référer au protocole de service."
+  },
+  "iv": {
+    "reconstitution": {
+      "solvant": "Eau pour préparations injectables (EPPI) ou G5%",
+      "volume_par_1000mg_mL": 20,
+      "volume_par_2000mg_mL": 20,
+      "volume_par_4000mg_mL": 20,
+      "stabilite_avant_dilution": "24 heures à 25 °C à l'abri de la lumière."
+    },
+    "preparation": [
+      {
+        "voie": "PERF",
+        "detail": "Diluer dans 50ml (2g) ou 100ml (4g) de G5%, pour une concentration maximale de 40mg/ml",
+        "duree": "15 à 60 minutes ",
+        "stabilite": "24 heures à 25 °C à l'abri de la lumière."
+      }
+    ],
+    "administration": {
+      "posologie": [
+        {
+          "population": "Infections systémiques standard (hors méningite)",
+          "categorie": "generale",
+          "population_type": "mixte",
+          "age_min_mois": 144,
+          "poids_min_kg": 40,
+          "dose_par_prise_g_min": 4,
+          "dose_par_prise_g_max": 12,
+          "intervalle_min_h": 8,
+          "intervalle_max_h": 12,
+          "dose_journaliere_max_g": 24
+        },
+        {
+          "population": "Méningite bactérienne",
+          "categorie": "generale",
+          "population_type": "mixte",
+          "age_min_mois": 144,
+          "poids_min_kg": 40,
+          "dose_par_prise_g_min": 4,
+          "dose_par_prise_g_max": 8,
+          "intervalle_min_h": 6,
+          "intervalle_max_h": 8,
+          "dose_journaliere_max_g": 24
+        },
+        {
+          "population": "Nouveau-né prématuré (< 40 semaines d'âge post-menstruel)",
+          "categorie": "generale",
+          "population_type": "pediatrie",
+          "dose_journaliere_mg_kg_min": 100,
+          "dose_journaliere_mg_kg_max": 100,
+          "intervalle_min_h": 12,
+          "intervalle_max_h": 12,
+          "dose_journaliere_max_g": "Selon poids"
+        },
+        {
+          "population": "Nouveau-né à terme (40 à 44 semaines d'âge post-menstruel)",
+          "categorie": "generale",
+          "population_type": "pediatrie",
+          "dose_journaliere_mg_kg_min": 200,
+          "dose_journaliere_mg_kg_max": 200,
+          "intervalle_min_h": 8,
+          "intervalle_max_h": 8,
+          "dose_journaliere_max_g": "Selon poids"
+        },
+        {
+          "population": "Traitement standard - nourisson",
+          "categorie": "generale",
+          "population_type": "pediatrie",
+          "age_min_mois": 1,
+          "age_max_mois": 12,
+          "poids_max_kg": 10,
+          "dose_journaliere_mg_kg_min": 200,
+          "dose_journaliere_mg_kg_max": 300,
+          "intervalle_min_h": 8,
+          "intervalle_max_h": 8,
+          "dose_journaliere_max_g": 3
+        },
+        {
+          "population": "Traitement standard - enfant",
+          "categorie": "generale",
+          "population_type": "pediatrie",
+          "age_min_mois": 12,
+          "age_max_mois": 144,
+          "poids_min_kg": 10,
+          "poids_max_kg": 40,
+          "dose_journaliere_mg_kg_min": 200,
+          "dose_journaliere_mg_kg_max": 400,
+          "intervalle_min_h": 6,
+          "intervalle_max_h": 8,
+          "dose_journaliere_max_g": 4
+        }
+      ]
+    },
+    "incompatibilites": []
+  },
+  "oral": {
+    "formes": [
+      {
+        "type": "Granulés pour solution buvable en sachet",
+        "dosage": "3 g",
+        "ecrasable": null,
+        "ouverture_gelule": null,
+        "posologie_adulte": [
+          {
+            "population": "Cystite aiguë non compliquée",
+            "categorie": "generale",
+            "population_type": "adulte",
+            "age_min_mois": 144,
+            "dose_par_prise_mg_min": 3000,
+            "dose_par_prise_mg_max": 3000,
+            "dose_journaliere_max_g": 3
+          }
+        ]
+      }
+    ],
+    "recommandation_sonde": {
+      "forme_preferee": "Granulés pour solution buvable en sachet (Monuril), dissous dans un verre d'eau",
+      "alternative": null
+    }
+  },
+  "aerosol": null,
+  "tracabilite": {
+    "rcp_source": [
+      {
+        "specialite": "MONURIL 3 g, granulés pour solution buvable en sachet",
+        "titulaire": "Zambon France",
+        "date_maj": "2025-07-25",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/67951706/extrait"
+      },
+      {
+        "specialite": "FOSFOMYCINE BIOGARAN 3 g, granulés pour solution buvable en sachet",
+        "titulaire": "Biogaran",
+        "date_maj": "",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/66806921/extrait"
+      },
+      {
+        "specialite": "FOMICYT 2 g I.V., poudre pour solution à diluer pour perfusion",
+        "titulaire": "InfectoPharm Arzneimittel und Consilium",
+        "date_maj": "",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/62832018/extrait"
+      },
+      {
+        "specialite": "FOMICYT 4 g I.V., poudre pour solution à diluer pour perfusion",
+        "titulaire": "InfectoPharm Arzneimittel und Consilium",
+        "date_maj": "2019-08-26",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/65164104/extrait"
+      }
+    ],
+    "statut": "valide",
+    "validation": {
+      "date": "2026-09-08",
+      "validateur": "Anna Trabaud-Lopez (IDE, porteuse du projet), vérification des données extraites contre les RCP ; équipe pharmacie, validation de la méthodologie et arbitrage des points litigieux",
+      "perimetre": [
+        "adulte",
+        "pediatrie"
+      ],
+      "prochaine_revision": "2026-12-08"
+    }
+  }
+}

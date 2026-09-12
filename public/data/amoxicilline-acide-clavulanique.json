@@ -1,0 +1,364 @@
+{
+  "dci": "amoxicilline/acide clavulanique",
+  "commun": {
+    "noms_commerciaux": [
+      "Augmentin",
+      "Levmentin"
+    ],
+    "famille": "Aminopénicilline associée à un inhibiteur de bêta-lactamases",
+    "antidote": "",
+    "indications": [
+      "Infections ORL sévères",
+      "Exacerbation de bronchite chronique",
+      "Pneumonie aiguë communautaire",
+      "Cystite et pyélonéphrite",
+      "Infections cutanées et tissus mous",
+      "Morsures animales",
+      "Abcès dentaire sévère",
+      "Infections osseuses et articulaires",
+      "Infections intra-abdominales",
+      "Infections génitales de la femme",
+      "Prophylaxie des infections post-opératoires"
+    ],
+    "grossesse_allaitement": {
+      "grossesse": "L'utilisation de l'association amoxicilline/acide clavulanique doit être évitée pendant la grossesse, à moins que le médecin ne la considère nécessaire.",
+      "allaitement": "L'association amoxicilline/acide clavulanique ne peut être utilisée pendant l'allaitement qu'après évaluation du rapport bénéfice/risque par le médecin traitant.",
+      "url_crat_grossesse": "https://www.lecrat.fr/6701/",
+      "url_crat_allaitement": "https://www.lecrat.fr/6702/"
+    },
+    "contre_indications": [
+      "Hypersensibilité aux substances actives, aux pénicillines ou à l'un des excipients",
+      "Antécédents de réaction d'hypersensibilité immédiate sévère (par ex. anaphylaxie) à une autre bêta-lactamine",
+      "Antécédents d'ictère ou d'atteinte hépatique liés à l'association amoxicilline/acide clavulanique"
+    ],
+    "interactions_pertinentes": [
+      {
+        "substance": "Anticoagulants oraux",
+        "effet": "Une augmentation de l'INR a été rapportée chez des patients recevant l'association amoxicilline/acide clavulanique avec un anticoagulant oral.",
+        "action_infirmier": "Surveiller l'INR pendant le traitement et lors de l'introduction ou de l'arrêt de l'antibiotique chez tout patient sous AVK (acénocoumarol, warfarine)."
+      },
+      {
+        "substance": "Méthotrexate",
+        "effet": "Les pénicillines peuvent réduire l'excrétion du méthotrexate et augmenter ainsi sa toxicité.",
+        "action_infirmier": "Signaler immédiatement au prescripteur toute co-prescription avec le méthotrexate."
+      },
+      {
+        "substance": "Probénécide",
+        "effet": "Le probénécide diminue la sécrétion tubulaire rénale de l'amoxicilline, ce qui augmente et prolonge sa concentration sanguine.",
+        "action_infirmier": "Association non recommandée par le RCP. Signaler au prescripteur toute co-prescription de probénécide."
+      },
+      {
+        "substance": "Mycophénolate mofétil",
+        "effet": "Une diminution d'environ 50 % des concentrations résiduelles du métabolite actif du mycophénolate mofétil a été observée après le début de l'antibiotique.",
+        "action_infirmier": "Signaler au prescripteur toute co-prescription chez un patient transplanté ; ne pas modifier les horaires de prise sans avis médical."
+      },
+      {
+        "substance": "Allopurinol",
+        "effet": "L'administration concomitante d'allopurinol augmente la probabilité de survenue de réactions cutanées allergiques.",
+        "action_infirmier": "Surveiller l'apparition de toute éruption cutanée chez les patients sous allopurinol."
+      }
+    ],
+    "surveillance_specifique": [
+      {
+        "evenement": "Atteinte hépatique / ictère cholestatique",
+        "explication": "Effet propre à l'association : le risque hépatique est lié à l'acide clavulanique et concerne surtout les hommes, les patients âgés et les traitements prolongés. Les signes peuvent n'apparaître que plusieurs semaines après l'arrêt.",
+        "action": "Surveiller l'apparition d'un ictère, d'urines foncées ou de selles décolorées, en particulier chez l'homme âgé et en traitement prolongé. Signaler immédiatement au prescripteur."
+      },
+      {
+        "evenement": "Cristallurie, y compris lésions rénales aiguës, chez un patient à faible débit urinaire ou porteur d'une sonde vésicale",
+        "explication": "Survient principalement lors d'une administration parentérale de fortes doses d'amoxicilline, qui peut précipiter dans les sondes vésicales.",
+        "action": "Maintenir un apport hydrique et une diurèse adéquats lors des fortes doses. Chez un patient sondé, contrôler régulièrement la perméabilité de la sonde."
+      },
+      {
+        "evenement": "Convulsions chez l'insuffisant rénal ou en cas de fortes doses",
+        "explication": "Risque documenté avec les fortes doses de bêta-lactamines chez les patients prédisposés.",
+        "action": "Surveiller les signes neurologiques lors des perfusions de fortes doses. Vérifier que la dose a été adaptée à la fonction rénale."
+      },
+      {
+        "evenement": "Éruption morbilliforme en cas de suspicion de mononucléose infectieuse",
+        "explication": "L'association doit être évitée en cas de suspicion de mononucléose infectieuse.",
+        "action": "Vérifier l'absence de suspicion de mononucléose infectieuse avant l'administration. En cas d'éruption, informer le médecin et ne pas réadministrer sans avis."
+      },
+      {
+        "evenement": "Pustulose exanthématique aiguë généralisée (PEAG) en début de traitement",
+        "explication": "Se manifeste par un érythème généralisé fébrile associé à des pustules, en tout début de traitement.",
+        "action": "Arrêter le traitement en cas d'érythème fébrile avec pustules. Contre-indication à toute administration ultérieure d'amoxicilline."
+      },
+      {
+        "evenement": "Apport en potassium chez l'insuffisant rénal ou sous régime hypokaliémiant",
+        "explication": "L'acide clavulanique est présenté sous forme de clavulanate de potassium : chaque flacon apporte une quantité non négligeable de potassium, ce qui distingue cette association de l'amoxicilline seule.",
+        "action": "Signaler la quantité de potassium apportée par flacon chez un patient insuffisant rénal ou sous régime hypokaliémiant, en particulier si plusieurs flacons sont administrés par jour."
+      }
+    ],
+    "pictogrammes": [],
+    "note_ajustement": "Dose adaptée selon la fonction rénale et la fonction hépatique, se référer au protocole du service."
+  },
+  "iv": {
+    "reconstitution": {
+      "solvant": "Eau pour préparations injectables (EPPI)",
+      "volume_par_1000mg_mL": 20,
+      "volume_par_2000mg_mL": 20,
+      "stabilite_avant_dilution": "Utiliser ou diluer immédiatement, au maximum dans les 20 minutes suivant la reconstitution."
+    },
+    "preparation": [
+      {
+        "voie": "IVL",
+        "detail": "Utiliser pur, solution reconstituée dans 20 mL d'EPPI",
+        "duree": "3 à 4 min",
+        "stabilite": "Utiliser dans les 20 minutes suivant la reconstitution",
+        "contexte": "Dose ≤ 1 g/200 mg"
+      },
+      {
+        "voie": "PERF",
+        "detail": "NaCl 0,9%, 100 mL",
+        "duree": "30 à 40 min",
+        "stabilite": "1 h maximum entre la dilution et la fin de la perfusion"
+      }
+    ],
+    "administration": {
+      "posologie": [
+        {
+          "population": "Adulte et enfant ≥ 40 kg, formulation 1 g/200 mg",
+          "categorie": "generale",
+          "dose_par_prise_mg_min": 1000,
+          "dose_par_prise_mg_max": 1000,
+          "dose_journaliere_max_g": 3.0,
+          "intervalle_min_h": 8,
+          "intervalle_max_h": 8,
+          "population_type": "adulte"
+        },
+        {
+          "population": "Adulte et enfant ≥ 40 kg, formulation 2 g/200 mg",
+          "categorie": "generale",
+          "dose_par_prise_mg_min": 1000,
+          "dose_par_prise_mg_max": 2000,
+          "dose_journaliere_max_g": 6.0,
+          "intervalle_min_h": 8,
+          "intervalle_max_h": 12,
+          "population_type": "adulte"
+        },
+        {
+          "population": "Prophylaxie des infections post-opératoires, dose à l'induction anesthésique",
+          "categorie": "speciale",
+          "dose_par_prise_mg_min": 1000,
+          "dose_par_prise_mg_max": 2000,
+          "dose_journaliere_max_g": 6.0,
+          "intervalle_min_h": 8,
+          "intervalle_max_h": 8,
+          "nb_prises_max_24h": 3,
+          "population_type": "adulte"
+        },
+        {
+          "population": "Enfant de 3 mois et plus, < 40 kg, formulation 1 g/200 mg",
+          "population_type": "pediatrie",
+          "categorie": "generale",
+          "age_min_mois": 3,
+          "poids_max_kg": 40,
+          "dose_mg_kg_min": 25,
+          "dose_mg_kg_max": 25,
+          "intervalle_min_h": 8,
+          "intervalle_max_h": 8
+        },
+        {
+          "population": "Enfant de moins de 3 mois ou pesant moins de 4 kg, formulation 1 g/200 mg (perfusion uniquement)",
+          "population_type": "pediatrie",
+          "categorie": "generale",
+          "age_max_mois": 3,
+          "dose_mg_kg_min": 25,
+          "dose_mg_kg_max": 25,
+          "intervalle_min_h": 12,
+          "intervalle_max_h": 12
+        },
+        {
+          "population": "Enfant de 3 mois et plus, < 40 kg, formulation 2 g/200 mg",
+          "population_type": "pediatrie",
+          "categorie": "generale",
+          "age_min_mois": 3,
+          "poids_max_kg": 40,
+          "dose_mg_kg_min": 50,
+          "dose_mg_kg_max": 50,
+          "intervalle_min_h": 8,
+          "intervalle_max_h": 8
+        },
+        {
+          "population": "Enfant de moins de 3 mois ou pesant moins de 4 kg, formulation 2 g/200 mg",
+          "population_type": "pediatrie",
+          "categorie": "generale",
+          "age_max_mois": 3,
+          "dose_mg_kg_min": 50,
+          "dose_mg_kg_max": 50,
+          "intervalle_min_h": 12,
+          "intervalle_max_h": 12
+        }
+      ]
+    },
+    "incompatibilites": [
+      {
+        "substance": "Amikacine",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Gentamicine",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Ciprofloxacine",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Métronidazole",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Midazolam",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Hydrocortisone (succinate)",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Bicarbonate de sodium",
+        "niveau": "absolu"
+      }
+    ]
+  },
+  "oral": {
+    "formes": [
+      {
+        "type": "Comprimé pelliculé",
+        "dosage": "500 mg/62,5 mg (rapport 8/1)",
+        "ecrasable": false,
+        "ouverture_gelule": null,
+        "posologie_adulte": [
+          {
+            "population": "Adulte et enfant ≥ 40 kg, dose standard, toutes indications",
+            "categorie": "generale",
+            "dose_par_prise_mg_min": 1000,
+            "dose_par_prise_mg_max": 1000,
+            "dose_journaliere_max_g": 3.0,
+            "intervalle_min_h": 8,
+            "intervalle_max_h": 8,
+            "nb_prises_min_24h": 3,
+            "nb_prises_max_24h": 3,
+            "population_type": "adulte"
+          },
+          {
+            "population": "Adulte et enfant ≥ 40 kg, dose plus faible (infections de la peau et des tissus mous, sinusites non sévères)",
+            "categorie": "generale",
+            "dose_par_prise_mg_min": 1000,
+            "dose_par_prise_mg_max": 1000,
+            "intervalle_min_h": 12,
+            "intervalle_max_h": 12,
+            "dose_journaliere_max_g": 2.0,
+            "nb_prises_min_24h": 2,
+            "nb_prises_max_24h": 2,
+            "population_type": "adulte"
+          }
+        ]
+      },
+      {
+        "type": "Poudre pour suspension buvable en sachet-dose",
+        "dosage": "1 g/125 mg",
+        "ecrasable": false,
+        "ouverture_gelule": null,
+        "posologie_adulte": [
+          {
+            "population": "Adulte et enfant ≥ 40 kg, dose standard, toutes indications",
+            "categorie": "generale",
+            "dose_par_prise_mg_min": 1000,
+            "dose_par_prise_mg_max": 1000,
+            "intervalle_min_h": 8,
+            "intervalle_max_h": 8,
+            "dose_journaliere_max_g": 3.0,
+            "nb_prises_min_24h": 3,
+            "nb_prises_max_24h": 3,
+            "population_type": "adulte"
+          },
+          {
+            "population": "Adulte et enfant ≥ 40 kg, dose plus faible (infections de la peau et des tissus mous, sinusites non sévères)",
+            "categorie": "generale",
+            "dose_par_prise_mg_min": 1000,
+            "dose_par_prise_mg_max": 1000,
+            "intervalle_min_h": 12,
+            "intervalle_max_h": 12,
+            "dose_journaliere_max_g": 2.0,
+            "nb_prises_min_24h": 2,
+            "nb_prises_max_24h": 2,
+            "population_type": "adulte"
+          }
+        ]
+      },
+      {
+        "type": "Poudre pour suspension buvable en flacon",
+        "dosage": "100 mg/12,50 mg par mL (rapport 8/1)",
+        "ecrasable": false,
+        "ouverture_gelule": null,
+        "posologie_adulte": [
+          {
+            "population": "Enfant < 40 kg, toutes indications, selon la sévérité de l'infection",
+            "population_type": "pediatrie",
+            "categorie": "generale",
+            "poids_max_kg": 40,
+            "dose_journaliere_mg_kg_min": 40,
+            "dose_journaliere_mg_kg_max": 80,
+            "intervalle_min_h": 8,
+            "intervalle_max_h": 8,
+            "nb_prises_min_24h": 3,
+            "nb_prises_max_24h": 3,
+            "dose_journaliere_max_g": 3
+          }
+        ]
+      }
+    ],
+    "recommandation_sonde": {
+      "forme_preferee": "Poudre pour suspension buvable en sachet-dose 1 g/125 mg",
+      "alternative": "Poudre pour suspension buvable en flacon 100 mg/12,50 mg par mL"
+    }
+  },
+  "aerosol": null,
+  "tracabilite": {
+    "rcp_source": [
+      {
+        "specialite": "LEVMENTIN 1 g/200 mg, poudre pour solution injectable/pour perfusion (IV)",
+        "titulaire": "Laboratoires Delbert",
+        "date_maj": "2023-05-11",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/64582182/extrait"
+      },
+      {
+        "specialite": "AMOXICILLINE/ACIDE CLAVULANIQUE PANPHARMA 2 g/200 mg ADULTES, poudre pour solution injectable",
+        "titulaire": "Panpharma",
+        "date_maj": "2023-02-08",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/64473140/extrait"
+      },
+      {
+        "specialite": "AUGMENTIN 500 mg/62,5 mg, comprimé pelliculé (rapport amoxicilline/acide clavulanique : 8/1)",
+        "titulaire": "Laboratoire GlaxoSmithKline",
+        "date_maj": "2024-06-05",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/63565244/extrait"
+      },
+      {
+        "specialite": "AUGMENTIN 1 g/125 mg, poudre pour suspension buvable en sachet-dose",
+        "titulaire": "Laboratoire GlaxoSmithKline",
+        "date_maj": "2025-01-07",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/66053338/extrait"
+      },
+      {
+        "specialite": "AUGMENTIN 100 mg/12,50 mg par ml ENFANTS, poudre pour suspension buvable en flacon (rapport 8/1)",
+        "titulaire": "Laboratoire GlaxoSmithKline",
+        "date_maj": "2024-06-05",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/66853013/extrait"
+      }
+    ],
+    "statut": "valide",
+    "validation": {
+      "date": "2026-08-31",
+      "validateur": "Anna Trabaud-Lopez (IDE, porteuse du projet), vérification des données extraites contre les RCP ; équipe pharmacie, validation de la méthodologie et arbitrage des points litigieux",
+      "perimetre": [
+        "adulte",
+        "pediatrie"
+      ],
+      "prochaine_revision": "2026-11-30"
+    }
+  }
+}

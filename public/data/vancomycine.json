@@ -1,0 +1,350 @@
+{
+  "dci": "vancomycine",
+  "commun": {
+    "noms_commerciaux": [],
+    "famille": "Antibiotique glycopeptidique",
+    "antidote": "",
+    "indications": [
+      "Infections cutanées compliquées",
+      "Infections ostéo-articulaires",
+      "Pneumonie communautaire",
+      "Pneumonie nosocomiale (dont PAVM)",
+      "Endocardite infectieuse",
+      "Méningite bactérienne aiguë",
+      "Bactériémie associée",
+      "Prophylaxie péri-opératoire",
+      "Péritonite sur dialyse péritonéale",
+      "Infection à Clostridioides difficile (voie orale)"
+    ],
+    "grossesse_allaitement": {
+      "grossesse": "Le bénéfice thérapeutique élevé de la vancomycine justifie que son utilisation puisse être envisagée si besoin au cours de la grossesse, quel qu'en soit le terme.",
+      "allaitement": "Compte tenu du très faible passage de la vancomycine dans le lait maternel et de sa faible absorption digestive, l'utilisation de la vancomycine administrée par voie injectable ou par voie orale est envisageable en cours d'allaitement si nécessaire.",
+      "url_crat_grossesse": "https://www.lecrat.fr/13364/",
+      "url_crat_allaitement": "https://www.lecrat.fr/13363/"
+    },
+    "contre_indications": [
+      "Hypersensibilité à la substance active ou à l'un des excipients.",
+      "Administration par voie intramusculaire (risque de nécrose au site d'injection)."
+    ],
+    "interactions_pertinentes": [
+      {
+        "substance": "Aminosides",
+        "effet": "Risque accru de néphrotoxicité et d'ototoxicité en cas d'administration concomitante ou séquentielle avec la vancomycine.",
+        "action_infirmier": "Signaler au prescripteur toute co-prescription d'un aminoside ; renforcer la surveillance de la fonction rénale et auditive."
+      },
+      {
+        "substance": "Autres substances néphrotoxiques ou ototoxiques",
+        "effet": "Risque accru de néphrotoxicité ou d'ototoxicité en cas d'administration concomitante ou séquentielle avec la vancomycine.",
+        "action_infirmier": "Signaler au prescripteur toute co-prescription d'une de ces substances ; renforcer la surveillance de la fonction rénale et, si le traitement est prolongé, de la fonction auditive."
+      },
+      {
+        "substance": "Anesthésiques généraux",
+        "effet": "Majoration de la fréquence des effets indésirables (hypotension, érythème, urticaire, dépression myocardique, prurit) lorsque la vancomycine est administrée conjointement à des anesthésiques.",
+        "action_infirmier": "Signaler l'administration récente ou prévue de vancomycine à l'équipe d'anesthésie ; surveiller la tolérance hémodynamique et cutanée."
+      },
+      {
+        "substance": "Curares",
+        "effet": "Les effets des curares administrés conjointement peuvent être renforcés ou prolongés.",
+        "action_infirmier": "Signaler au prescripteur/à l'équipe d'anesthésie toute association avec un curare ; surveiller la récupération neuromusculaire."
+      },
+      {
+        "substance": "Warfarine",
+        "effet": "L'administration concomitante de vancomycine et de warfarine peut augmenter les effets de l'anticoagulant.",
+        "action_infirmier": "Signaler au prescripteur toute co-prescription d'anticoagulant oral ; surveiller l'INR."
+      }
+    ],
+    "surveillance_specifique": [
+      {
+        "evenement": "Syndrome de l'homme rouge",
+        "explication": "Une administration trop rapide de vancomycine par voie intraveineuse peut provoquer une libération d'histamine se traduisant par une hypotension importante, un érythème, un prurit, une éruption maculo-papuleuse et de la fièvre.",
+        "action": "Respecter la vitesse de perfusion indiquée en Préparation ; en cas de survenue, arrêter ou ralentir la perfusion et signaler au prescripteur."
+      },
+      {
+        "evenement": "Ototoxicité",
+        "explication": "Un risque accru d'ototoxicité a été rapporté chez les patients ayant des antécédents de surdité, recevant un traitement prolongé à doses élevées ou associé à un autre agent ototoxique (aminoside notamment).",
+        "action": "Surveiller la fonction auditive du patient (acouphènes, baisse de l'audition) et signaler tout signe évocateur au prescripteur."
+      },
+      {
+        "evenement": "Néphrotoxicité et surveillance des taux résiduels sanguins",
+        "explication": "Le contrôle régulier des taux sanguins résiduels de vancomycine est requis lors des traitements à doses élevées ou prolongés, en particulier en cas de dysfonctionnement rénal ; l'objectif habituel est un taux résiduel de 15 à 20 mg/L selon le site de l'infection et la sensibilité du pathogène.",
+        "action": "Assurer le prélèvement du taux résiduel juste avant l'administration suivante (chez le patient à fonction rénale normale, prélèvement généralement recommandé au 2e jour de traitement) ; surveiller la fonction rénale et signaler au prescripteur toute dégradation."
+      },
+      {
+        "evenement": "Réactions cutanées sévères (SCAR) : syndrome de Stevens-Johnson, nécrolyse épidermique toxique, DRESS, pustulose exanthématique aiguë généralisée",
+        "explication": "Peuvent engager le pronostic vital ou être mortelles. Surviennent en général dans les quelques jours à huit semaines suivant le début du traitement.",
+        "action": "Surveiller l'apparition de signes cutanés ou muqueux ; en cas de signes évocateurs, arrêter la perfusion et alerter immédiatement le prescripteur."
+      },
+      {
+        "evenement": "Douleur et thrombophlébite au site de perfusion",
+        "explication": "Fréquentes chez les patients recevant de la vancomycine par voie intraveineuse, parfois sévères.",
+        "action": "Surveiller le point de perfusion à chaque relais ; en cas de douleur, d'inflammation ou d'induration, arrêter la perfusion et signaler au prescripteur."
+      }
+    ],
+    "pictogrammes": [],
+    "note_ajustement": "Dose adaptée selon la fonction rénale, l'âge et le poids (patient obèse) ; aucune adaptation nécessaire en cas d'insuffisance hépatique seule, se référer au protocole du service et à la surveillance des taux résiduels. Population pédiatrique avec insuffisance rénale : ajustement selon la formule de Schwartz, se référer au RCP et au protocole du service."
+  },
+  "iv": {
+    "reconstitution": {
+      "solvant": "Eau pour préparations injectables (EPPI)",
+      "volume_par_125mg_mL": 10,
+      "volume_par_250mg_mL": 10,
+      "volume_par_500mg_mL": 10,
+      "volume_par_1000mg_mL": 20,
+      "stabilite_avant_dilution": "24 heures à 4°C"
+    },
+    "preparation": [
+      {
+        "voie": "PERF",
+        "detail": "Dilution dans au moins 100 à 200 mL de NaCl 0,9 % ou G5 %, concentration max de 10mg/ml",
+        "duree": "Au moins 60 minutes, ou débit maximal de 10 mg/min si cela impose une durée plus longue.",
+        "stabilite": "24 heures à <25°C ou 96h entre 2 et 8°C"
+      },
+      {
+        "voie": "PSE",
+        "detail": "Dilution dans NaCl 0,9% ou G5%, concentration max de 80mg/ml",
+        "duree": "Continu (24 heures)",
+        "stabilite": "24 heures à <25°C ou 96h entre 2 et 8°C",
+        "contexte": "VVC uniquement"
+      }
+    ],
+    "administration": {
+      "posologie": [
+        {
+          "population": "Traitement standard",
+          "categorie": "generale",
+          "population_type": "adulte",
+          "dose_mg_kg_min": 15,
+          "dose_mg_kg_max": 20,
+          "intervalle_min_h": 8,
+          "intervalle_max_h": 12,
+          "dose_journaliere_max_g": 6,
+          "tdm_requis": true
+        },
+        {
+          "population": "Dose de charge (patient grave)",
+          "categorie": "speciale",
+          "population_type": "adulte",
+          "dose_mg_kg_min": 25,
+          "dose_mg_kg_max": 30,
+          "intervalle_min_h": 24,
+          "intervalle_max_h": 24,
+          "tdm_requis": true
+        },
+        {
+          "population": "Traitement standard",
+          "categorie": "generale",
+          "population_type": "pediatrie",
+          "age_min_mois": 1,
+          "age_max_mois": 144,
+          "dose_mg_kg_min": 10,
+          "dose_mg_kg_max": 15,
+          "intervalle_min_h": 6,
+          "intervalle_max_h": 6,
+          "dose_journaliere_max_g": "Selon poids",
+          "tdm_requis": true
+        },
+        {
+          "population": "Nouveau-né (naissance à 27 jours), âge post-menstruel < 29 semaines",
+          "categorie": "generale",
+          "population_type": "pediatrie",
+          "dose_mg_kg_min": 15,
+          "dose_mg_kg_max": 15,
+          "dose_journaliere_max_g": "Selon poids",
+          "tdm_requis": true
+        },
+        {
+          "population": "Nouveau-né (naissance à 27 jours), âge post-menstruel 29 à 35 semaines",
+          "categorie": "generale",
+          "population_type": "pediatrie",
+          "dose_mg_kg_min": 15,
+          "dose_mg_kg_max": 15,
+          "intervalle_min_h": 12,
+          "intervalle_max_h": 12,
+          "dose_journaliere_max_g": "Selon poids",
+          "tdm_requis": true
+        },
+        {
+          "population": "Nouveau-né (naissance à 27 jours), âge post-menstruel > 35 semaines",
+          "categorie": "generale",
+          "population_type": "pediatrie",
+          "dose_mg_kg_min": 15,
+          "dose_mg_kg_max": 15,
+          "intervalle_min_h": 8,
+          "intervalle_max_h": 8,
+          "dose_journaliere_max_g": "Selon poids",
+          "tdm_requis": true
+        },
+        {
+          "population": "Prophylaxie péri-opératoire de l'endocardite bactérienne",
+          "categorie": "speciale",
+          "population_type": "adulte",
+          "dose_mg_kg_min": 15,
+          "dose_mg_kg_max": 15
+        }
+      ]
+    },
+    "incompatibilites": [
+      {
+        "substance": "Céfazoline",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Céfépime",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Ceftazidime",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Ceftriaxone",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Céfuroxime",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Furosémide",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Héparine sodique",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Méthylprednisolone",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Phénytoïne",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Pipéracilline/tazobactam",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Bicarbonate de sodium",
+        "niveau": "absolu"
+      }
+    ]
+  },
+  "oral": {
+    "formes": [
+      {
+        "type": "Poudre pour solution buvable (flacon injectable reconstitué avec de l'eau potable)",
+        "dosage": "500 mg/10 mL",
+        "ecrasable": false,
+        "ouverture_gelule": null,
+        "posologie_adulte": [
+          {
+            "population": "Infection à Clostridioides difficile non sévère",
+            "categorie": "generale",
+            "population_type": "adulte",
+            "dose_par_prise_mg_min": 125,
+            "dose_par_prise_mg_max": 125,
+            "intervalle_min_h": 6,
+            "intervalle_max_h": 6,
+            "dose_journaliere_max_g": 2
+          },
+          {
+            "population": "Infection à Clostridioides difficile sévère ou compliquée",
+            "categorie": "generale",
+            "population_type": "adulte",
+            "dose_par_prise_mg_min": 500,
+            "dose_par_prise_mg_max": 500,
+            "intervalle_min_h": 6,
+            "intervalle_max_h": 6,
+            "dose_journaliere_max_g": 2
+          },
+          {
+            "population": "Traitement standard",
+            "categorie": "generale",
+            "population_type": "pediatrie",
+            "age_max_mois": 144,
+            "dose_mg_kg_min": 10,
+            "dose_mg_kg_max": 10,
+            "intervalle_min_h": 6,
+            "intervalle_max_h": 6,
+            "dose_journaliere_max_g": 2
+          },
+          {
+            "population": "Récurrences multiples (schéma dégressif ou pulsé)",
+            "categorie": "speciale",
+            "population_type": "adulte",
+            "dose_par_prise_mg_min": 125,
+            "dose_par_prise_mg_max": 500
+          }
+        ]
+      }
+    ],
+    "recommandation_sonde": {
+      "forme_preferee": "",
+      "alternative": "Voie injectable, avis médical"
+    }
+  },
+  "aerosol": null,
+  "tracabilite": {
+    "rcp_source": [
+      {
+        "specialite": "VANCOMYCINE VIATRIS 500 mg, poudre pour solution à diluer pour perfusion ou pour solution buvable",
+        "titulaire": "Viatris Santé",
+        "date_maj": "2026-02-11",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/69031610/extrait"
+      },
+      {
+        "specialite": "VANCOMYCINE VIATRIS 125 mg, poudre pour solution à diluer pour perfusion",
+        "titulaire": "Viatris Santé",
+        "date_maj": "2026-02-11",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/60033510/extrait"
+      },
+      {
+        "specialite": "VANCOMYCINE VIATRIS 250 mg, poudre pour solution à diluer pour perfusion",
+        "titulaire": "Viatris Santé",
+        "date_maj": "2026-02-11",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/62747735/extrait"
+      },
+      {
+        "specialite": "VANCOMYCINE VIATRIS 1000 mg, poudre pour solution à diluer pour perfusion",
+        "titulaire": "Viatris Santé",
+        "date_maj": "2026-02-11",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/69553715/extrait"
+      },
+      {
+        "specialite": "VANCOMYCINE SANDOZ 500 mg, poudre pour solution à diluer pour perfusion ou pour solution buvable",
+        "titulaire": "Sandoz",
+        "date_maj": "2026-06-17",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/64022454/extrait"
+      },
+      {
+        "specialite": "VANCOMYCINE SANDOZ 1 g, poudre pour solution à diluer pour perfusion",
+        "titulaire": "Sandoz",
+        "date_maj": "2026-06-17",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/66193112/extrait"
+      },
+      {
+        "specialite": "VANCOMYCINE MIP 500 mg, poudre pour solution pour perfusion",
+        "titulaire": "MIP Pharma GmbH",
+        "date_maj": "2021-02-19",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/68624821/extrait"
+      },
+      {
+        "specialite": "VANCOMYCINE MIP 1000 mg, poudre pour solution pour perfusion",
+        "titulaire": "MIP Pharma GmbH",
+        "date_maj": "2021-02-19",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/65005479/extrait"
+      }
+    ],
+    "statut": "valide",
+    "validation": {
+      "date": "2026-09-08",
+      "validateur": "Anna Trabaud-Lopez (IDE, porteuse du projet), vérification des données extraites contre les RCP ; équipe pharmacie, validation de la méthodologie et arbitrage des points litigieux",
+      "perimetre": [
+        "adulte",
+        "pediatrie"
+      ],
+      "prochaine_revision": "2026-12-08"
+    }
+  }
+}

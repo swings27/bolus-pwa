@@ -1,0 +1,312 @@
+{
+  "dci": "céfotaxime",
+  "commun": {
+    "noms_commerciaux": [],
+    "famille": "Céphalosporine de 3e génération",
+    "antidote": "",
+    "indications": [
+      "Pneumonie bactérienne",
+      "Infections urinaires compliquées, pyélonéphrite",
+      "Infections graves peau/tissus mous",
+      "Infections génitales, dont gonorrhée",
+      "Infections intra-abdominales",
+      "Méningite bactérienne",
+      "Endocardite",
+      "Borréliose",
+      "Bactériémie associée",
+      "Septicémie",
+      "Prophylaxie périopératoire",
+      "Prophylaxie résection endoscopique de prostate"
+    ],
+    "grossesse_allaitement": {
+      "grossesse": "Le céfotaxime franchit la barrière placentaire. Par conséquent, il ne doit pas être utilisé pendant la grossesse, sauf si les bénéfices attendus dépassent les risques.",
+      "allaitement": "Une décision doit être prise concernant l'arrêt de l'allaitement ou du traitement.",
+      "url_crat_grossesse": "https://www.lecrat.fr/3062/",
+      "url_crat_allaitement": "https://www.lecrat.fr/3621/"
+    },
+    "contre_indications": [
+      "Hypersensibilité au céfotaxime, à une autre céphalosporine ou à l'un des excipients",
+      "Antécédent de réaction d'hypersensibilité immédiate et/ou grave à la pénicilline ou à un autre antibiotique bêta-lactamine (monobactame, carbapénème)",
+      "Reconstitution avec de la lidocaïne : antécédent d'hypersensibilité à la lidocaïne ou à un autre anesthésique local à liaison amide",
+      "Reconstitution avec de la lidocaïne : bloc cardiaque, insuffisance cardiaque grave",
+      "Reconstitution avec de la lidocaïne : administration par voie intraveineuse",
+      "Reconstitution avec de la lidocaïne : enfant de moins de 30 mois"
+    ],
+    "interactions_pertinentes": [
+      {
+        "substance": "Probénécide",
+        "effet": "Le probénécide double l'exposition au céfotaxime et réduit de moitié son excrétion rénale aux doses thérapeutiques.",
+        "action_infirmier": "Aucun ajustement n'est nécessaire si la fonction rénale est normale. Signaler au prescripteur toute co-prescription chez un patient insuffisant rénal, une adaptation posologique pouvant être requise."
+      },
+      {
+        "substance": "Aminosides et diurétiques de l'anse",
+        "effet": "Le céfotaxime peut exacerber les effets néphrotoxiques des médicaments néphrotoxiques tels que les aminosides ou les diurétiques puissants.",
+        "action_infirmier": "Surveiller la fonction rénale (créatinine, diurèse) pendant l'association, en particulier chez le sujet âgé ou insuffisant rénal."
+      },
+      {
+        "substance": "Anticoagulants oraux",
+        "effet": "De nombreux cas d'augmentation de l'activité des anticoagulants oraux ont été rapportés chez des patients recevant des antibiotiques, certaines céphalosporines étant particulièrement impliquées.",
+        "action_infirmier": "Surveiller l'INR pendant le traitement et lors de l'instauration ou de l'arrêt du céfotaxime chez tout patient sous antivitamine K."
+      }
+    ],
+    "surveillance_specifique": [
+      {
+        "evenement": "Arythmie engageant le pronostic vital après administration intraveineuse rapide sur cathéter veineux central",
+        "explication": "Signalée après commercialisation chez un très petit nombre de patients ayant reçu le céfotaxime en IV rapide par voie centrale.",
+        "action": "Respecter la vitesse d'administration indiquée en Préparation ; ne jamais accélérer une injection sur voie centrale."
+      },
+      {
+        "evenement": "Encéphalopathie sous fortes doses, en particulier chez l'insuffisant rénal",
+        "explication": "Les fortes doses de bêta-lactamines peuvent provoquer une altération de la conscience, des mouvements anormaux et des convulsions.",
+        "action": "Surveiller la conscience et l'apparition de mouvements anormaux ou de convulsions chez les patients recevant de fortes doses, surtout en cas d'insuffisance rénale. Alerter immédiatement le prescripteur."
+      },
+      {
+        "evenement": "Leucopénie, neutropénie ou agranulocytose au-delà de 7 à 10 jours de traitement",
+        "explication": "Une leucopénie, une neutropénie et, plus rarement, une insuffisance médullaire, une pancytopénie ou une agranulocytose peuvent se développer sous céfotaxime.",
+        "action": "Pour tout traitement de plus de 7 à 10 jours, s'assurer que la numération des globules blancs est surveillée. Le traitement doit être arrêté en cas de neutropénie."
+      },
+      {
+        "evenement": "Réactions cutanées sévères",
+        "explication": "Rapportées après commercialisation avec le céfotaxime ; elles peuvent engager le pronostic vital. Chez l'enfant, l'éruption peut être confondue avec l'infection en cours.",
+        "action": "Arrêter immédiatement le céfotaxime devant toute éruption cutanée ou atteinte des muqueuses, a fortiori fébrile. Après une telle réaction, le céfotaxime ne doit jamais être réadministré."
+      },
+      {
+        "evenement": "Diarrhée à Clostridium difficile et colite pseudo-membraneuse",
+        "explication": "Une diarrhée grave ou persistante survenant pendant le traitement ou dans les semaines qui suivent peut traduire une infection à Clostridium difficile, dont la forme la plus grave est la colite pseudo-membraneuse.",
+        "action": "Signaler toute diarrhée grave ou persistante. Ne pas administrer de médicament ralentissant le péristaltisme, qui favorise la stase fécale. En cas de suspicion de colite pseudo-membraneuse, le céfotaxime est arrêté immédiatement."
+      },
+      {
+        "evenement": "Test de Coombs positif et faux positif du dosage urinaire du glucose",
+        "explication": "Le céfotaxime peut rendre le test de Coombs positif, ce qui interfère avec les épreuves de compatibilité croisée du sang, et fausser le dosage urinaire du glucose réalisé avec des agents réducteurs non spécifiques.",
+        "action": "Signaler le traitement par céfotaxime au laboratoire avant toute épreuve de compatibilité transfusionnelle. Utiliser une méthode spécifique à la glucose-oxydase pour la glycosurie."
+      }
+    ],
+    "pictogrammes": [],
+    "note_ajustement": "Dose adaptée selon la fonction rénale et les séances de dialyse, se référer au protocole du service."
+  },
+  "iv": {
+    "reconstitution": {
+      "solvant": "Eau pour préparations injectables (EPPI) ou lidocaïne à 1% (IM)",
+      "volume_par_500mg_mL": 2,
+      "volume_par_1000mg_mL": 4,
+      "volume_par_2000mg_mL": 10,
+      "stabilite_avant_dilution": "12 h entre 2 °C et 8 °C pour l'EPPI ; 6 h entre 2 °C et 8 °C pour la lidocaïne à 1 %."
+    },
+    "preparation": [
+      {
+        "voie": "IVL",
+        "detail": "Utiliser la solution reconstituée",
+        "duree": "3 à 5 min",
+        "stabilite": "12 h entre 2 °C et 8 °C"
+      },
+      {
+        "voie": "PERF",
+        "detail": "NaCl 0,9 %, Glucose 5 % ou Ringer lactate, 40 à 50 mL pour 1 g ou 100 mL pour 2 g",
+        "duree": "20 min à 50-60 min",
+        "stabilite": "24 h entre 2 °C et 8 °C après reconstitution et dilution (0,25 à 50 mg/mL, poche polypropylène)"
+      },
+      {
+        "voie": "IM",
+        "detail": "Utiliser la solution reconstituée",
+        "duree": "< 1 min",
+        "stabilite": "12 h entre 2 °C et 8 °C pour l'EPPI ; 6 h entre 2 °C et 8 °C pour la lidocaïne à 1 %.",
+        "contexte": "Cas exceptionnels"
+      }
+    ],
+    "administration": {
+      "posologie": [
+        {
+          "population": "> 12 ans, infections courantes à bactéries sensibles",
+          "categorie": "generale",
+          "population_type": "mixte",
+          "dose_par_prise_mg_min": 1000,
+          "dose_par_prise_mg_max": 1000,
+          "dose_journaliere_max_g": 2.0,
+          "intervalle_min_h": 12,
+          "intervalle_max_h": 12
+        },
+        {
+          "population": "> 12 ans, bactéries sensibles ou modérément sensibles, ou infection plurimicrobienne",
+          "categorie": "generale",
+          "population_type": "mixte",
+          "dose_par_prise_mg_min": 1000,
+          "dose_par_prise_mg_max": 2000,
+          "dose_journaliere_max_g": 4.0,
+          "intervalle_min_h": 12,
+          "intervalle_max_h": 12
+        },
+        {
+          "population": "> 12 ans, infections à posologie renforcée ou foyer non localisé",
+          "categorie": "generale",
+          "population_type": "mixte",
+          "dose_par_prise_mg_min": 2000,
+          "dose_par_prise_mg_max": 3000,
+          "intervalle_min_h": 6,
+          "intervalle_max_h": 8,
+          "dose_journaliere_max_g": 12
+        },
+        {
+          "population": "Méningite bactérienne",
+          "categorie": "generale",
+          "dose_mg_kg_min": 50,
+          "dose_mg_kg_max": 75,
+          "dose_journaliere_max_g": 24,
+          "population_type": "adulte",
+          "intervalle_min_h": 6,
+          "intervalle_max_h": 8
+        },
+        {
+          "population": "Méningite à pneumocoque, 48 à 72 premières heures",
+          "categorie": "speciale",
+          "population_type": "adulte",
+          "dose_mg_kg_min": 50,
+          "dose_mg_kg_max": 75,
+          "dose_journaliere_max_g": "Selon poids",
+          "intervalle_min_h": 6,
+          "intervalle_max_h": 6
+        },
+        {
+          "population": "Gonorrhée",
+          "categorie": "speciale",
+          "population_type": "adulte",
+          "dose_par_prise_mg_min": 500,
+          "dose_par_prise_mg_max": 1000,
+          "dose_journaliere_max_g": 1.0
+        },
+        {
+          "population": "Prophylaxie périopératoire",
+          "categorie": "speciale",
+          "population_type": "adulte",
+          "dose_par_prise_mg_min": 1000,
+          "dose_par_prise_mg_max": 2000,
+          "dose_journaliere_max_g": 2.0
+        },
+        {
+          "population": "Prophylaxie des résections endoscopiques de prostate",
+          "categorie": "speciale",
+          "population_type": "adulte",
+          "dose_par_prise_mg_min": 1000,
+          "dose_par_prise_mg_max": 1000,
+          "dose_journaliere_max_g": 1.0
+        },
+        {
+          "population": "Voie intramusculaire",
+          "categorie": "im",
+          "population_type": "adulte",
+          "dose_par_prise_mg_max": 1000,
+          "dose_journaliere_max_g": 2,
+          "intervalle_min_h": 12,
+          "intervalle_max_h": 12
+        },
+        {
+          "population": "Nouveau-né (0 à 28 jours), nourrisson et enfant jusqu'à 12 ans",
+          "categorie": "generale",
+          "population_type": "pediatrie",
+          "age_max_mois": 144,
+          "dose_journaliere_mg_kg_min": 50,
+          "dose_journaliere_mg_kg_max": 200,
+          "intervalle_min_h": 6,
+          "intervalle_max_h": 12,
+          "dose_journaliere_max_g": "Selon poids"
+        },
+        {
+          "population": "Nourrisson prématuré",
+          "categorie": "generale",
+          "population_type": "pediatrie",
+          "dose_journaliere_mg_kg_min": 50,
+          "dose_journaliere_mg_kg_max": 50,
+          "intervalle_min_h": 6,
+          "intervalle_max_h": 12,
+          "dose_journaliere_max_g": "Selon poids"
+        },
+        {
+          "population": "Méningite bactérienne, enfant",
+          "categorie": "generale",
+          "population_type": "pediatrie",
+          "dose_journaliere_mg_kg_min": 150,
+          "dose_journaliere_mg_kg_max": 200,
+          "intervalle_min_h": 6,
+          "intervalle_max_h": 8,
+          "dose_journaliere_max_g": 12
+        },
+        {
+          "population": "Méningite bactérienne, nouveau-né de 0 à 7 jours",
+          "categorie": "generale",
+          "population_type": "pediatrie",
+          "dose_mg_kg_min": 50,
+          "dose_mg_kg_max": 50,
+          "intervalle_min_h": 12,
+          "intervalle_max_h": 12,
+          "dose_journaliere_max_g": "Selon poids"
+        },
+        {
+          "population": "Méningite bactérienne, nouveau-né de 7 à 28 jours",
+          "categorie": "generale",
+          "population_type": "pediatrie",
+          "dose_mg_kg_min": 50,
+          "dose_mg_kg_max": 50,
+          "intervalle_min_h": 8,
+          "intervalle_max_h": 8,
+          "dose_journaliere_max_g": "Selon poids"
+        },
+        {
+          "population": "Méningite à pneumocoque, 48 à 72 premières heures, nourrisson de plus de 3 mois et enfant",
+          "categorie": "speciale",
+          "population_type": "pediatrie",
+          "age_min_mois": 3,
+          "dose_mg_kg_min": 50,
+          "dose_mg_kg_max": 75,
+          "intervalle_min_h": 6,
+          "intervalle_max_h": 6,
+          "dose_journaliere_max_g": "Selon poids"
+        }
+      ]
+    },
+    "incompatibilites": [
+      {
+        "substance": "Aminosides",
+        "niveau": "absolu"
+      }
+    ]
+  },
+  "oral": null,
+  "aerosol": null,
+  "tracabilite": {
+    "rcp_source": [
+      {
+        "specialite": "CEFOTAXIME NORIDEM 1 g, poudre pour solution injectable/pour perfusion",
+        "titulaire": "Noridem Enterprises Limited",
+        "date_maj": "2026-03-04",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/68252641/extrait"
+      },
+      {
+        "specialite": "CEFOTAXIME NORIDEM 0,5 g, poudre pour solution injectable/pour perfusion",
+        "titulaire": "Noridem Enterprises Limited",
+        "date_maj": "",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/68400129/extrait"
+      },
+      {
+        "specialite": "CEFOTAXIME NORIDEM 2 g, poudre pour solution injectable/pour perfusion",
+        "titulaire": "Noridem Enterprises Limited",
+        "date_maj": "",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/60386439/extrait"
+      },
+      {
+        "specialite": "CEFOTAXIME PANPHARMA 1 g, poudre pour solution injectable (IM-IV)",
+        "titulaire": "Panpharma",
+        "date_maj": "2024-04-12",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/63754202/extrait"
+      }
+    ],
+    "statut": "valide",
+    "validation": {
+      "date": "2026-09-08",
+      "validateur": "Anna Trabaud-Lopez (IDE, porteuse du projet), vérification des données extraites contre les RCP ; équipe pharmacie, validation de la méthodologie et arbitrage des points litigieux",
+      "perimetre": [
+        "adulte",
+        "pediatrie"
+      ],
+      "prochaine_revision": "2026-12-08"
+    }
+  }
+}

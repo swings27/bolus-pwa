@@ -1,0 +1,284 @@
+{
+  "dci": "noradrénaline",
+  "commun": {
+    "noms_commerciaux": [
+      "Tanoren",
+      "Cronomir"
+    ],
+    "famille": "Catécholamine stimulant cardiaque, glucosides cardiotoniques exclus",
+    "antidote": "",
+    "indications": [
+      "Choc / collapsus",
+      "Hypotension péri-opératoire",
+      "Hémorragie digestive"
+    ],
+    "grossesse_allaitement": {
+      "grossesse": "Compte-tenu de ses indications, la noradrénaline peut être administrée durant la grossesse si nécessaire. Cependant, les propriétés pharmacodynamiques de la substance doivent être prises en compte. En effet, la noradrénaline peut nuire à la perfusion placentaire et induire une bradycardie fœtale. Elle pourrait également exercer un effet contractile sur l'utérus de la femme enceinte et conduire à une asphyxie fœtale en fin de grossesse.",
+      "allaitement": "Aucune information n'est disponible sur l'utilisation de la noradrénaline pendant l'allaitement.",
+      "url_crat_grossesse": null,
+      "url_crat_allaitement": null
+    },
+    "note_ajustement_absolue": "Posologie titrée en continu selon la réponse hémodynamique du patient, comme les autres catécholamines d'urgence. Utilisation chez l'enfant non recommandée.",
+    "contre_indications": [
+      "Hypersensibilité à la substance active ou à l'un des excipients",
+      "Anesthésiques à base de cyclopropane ou d'halothane (risque d'arythmies cardiaques graves, notamment de fibrillation ventriculaire)",
+      "Intolérance héréditaire au fructose, pour la spécialité Renaudin, qui contient du sorbitol"
+    ],
+    "interactions_pertinentes": [
+      {
+        "substance": "Anesthésiques volatils halogénés",
+        "effet": "Troubles du rythme ventriculaire graves par augmentation de l'excitabilité cardiaque.",
+        "action_infirmier": "Signaler au prescripteur/anesthésiste toute administration de noradrénaline chez un patient sous anesthésique volatil halogéné, association contre-indiquée avec le cyclopropane et l'halothane (cf. contre-indications), déconseillée avec les autres agents de cette classe."
+      },
+      {
+        "substance": "Antidépresseurs imipraminiques",
+        "effet": "Hypertension paroxystique avec possibilité de troubles du rythme, par inhibition de l'entrée du sympathomimétique dans la fibre sympathique.",
+        "action_infirmier": "Signaler au prescripteur toute prise concomitante d'un antidépresseur imipraminique. Association déconseillée."
+      },
+      {
+        "substance": "Médicaments mixtes adrénergiques-sérotoninergiques",
+        "effet": "Hypertension paroxystique avec possibilité de troubles du rythme.",
+        "action_infirmier": "Signaler au prescripteur toute prise concomitante. Association déconseillée."
+      },
+      {
+        "substance": "IMAO non sélectifs (ou dans les 14 jours suivant leur arrêt), IMAO-A sélectifs, linézolide, bleu de méthylène",
+        "effet": "Augmentation de l'action pressive du sympathomimétique, le plus souvent modérée mais parfois marquée.",
+        "action_infirmier": "Signaler au prescripteur toute prise concomitante. À n'utiliser que sous contrôle médical strict."
+      },
+      {
+        "substance": "Alpha-1 agonistes",
+        "effet": "Risque d'hypertension prononcée par addition des effets vasopresseurs.",
+        "action_infirmier": "Signaler au prescripteur toute prise concomitante. Surveillance renforcée de la pression artérielle."
+      },
+      {
+        "substance": "Alpha-1 bloquants",
+        "effet": "Peuvent diminuer l'action pressive de la noradrénaline.",
+        "action_infirmier": "Signaler au prescripteur toute prise concomitante. Surveillance de l'efficacité tensionnelle de la noradrénaline."
+      },
+      {
+        "substance": "Bêtabloquants",
+        "effet": "Une hypertension sévère peut résulter de l'association.",
+        "action_infirmier": "Signaler au prescripteur toute prise de bêtabloquant. Surveillance renforcée de la pression artérielle."
+      },
+      {
+        "substance": "Hormones thyroïdiennes",
+        "effet": "Effets cardiaques accrus possibles.",
+        "action_infirmier": "Signaler au prescripteur toute prise concomitante. Surveillance cardiaque renforcée."
+      },
+      {
+        "substance": "Alcaloïdes de l'ergot de seigle à action alpha-1 agoniste",
+        "effet": "Stimulation des effets vasopresseurs et vasoconstricteurs.",
+        "action_infirmier": "Signaler au prescripteur toute prise concomitante. Surveillance renforcée de la pression artérielle."
+      },
+      {
+        "substance": "Lithium",
+        "effet": "Diminue l'effet de la noradrénaline.",
+        "action_infirmier": "Signaler au prescripteur toute prise concomitante. Surveillance de l'efficacité tensionnelle."
+      },
+      {
+        "substance": "Réserpine, amphétamines, guanéthidine",
+        "effet": "Peuvent renforcer les effets de la noradrénaline.",
+        "action_infirmier": "Signaler au prescripteur toute prise concomitante. Surveillance renforcée de la pression artérielle et de la fréquence cardiaque."
+      },
+      {
+        "substance": "Glucosides digitaliques",
+        "effet": "Peuvent occasionnellement provoquer une arythmie.",
+        "action_infirmier": "Signaler au prescripteur toute prise concomitante. Surveillance électrocardiographique."
+      },
+      {
+        "substance": "Lévodopa",
+        "effet": "Peut renforcer les effets de la noradrénaline.",
+        "action_infirmier": "Signaler au prescripteur toute prise concomitante."
+      },
+      {
+        "substance": "Propofol",
+        "effet": "Association documentée avec un risque de syndrome de perfusion du propofol (PRIS).",
+        "action_infirmier": "Signaler au prescripteur toute association prolongée avec le propofol. Surveillance clinique et biologique du syndrome de perfusion du propofol."
+      }
+    ],
+    "surveillance_specifique": [
+      {
+        "evenement": "Ischémie et nécrose des extrémités induites par le vasopresseur",
+        "explication": "Vasoconstriction périphérique intense propre à la noradrénaline, pouvant réduire la perfusion des extrémités indépendamment de toute extravasation, en particulier lors d'administrations prolongées ou à doses élevées.",
+        "action": "Surveiller la coloration, la chaleur et le temps de recoloration cutanée des extrémités ; signaler tout signe d'ischémie au prescripteur (surélévation du membre, réchauffement, pose d'une attelle, vasodilatateur selon prescription)."
+      },
+      {
+        "evenement": "Nécrose tissulaire par extravasation",
+        "explication": "L'extravasation du produit hors de la veine perfusée entraîne une vasoconstriction locale intense pouvant provoquer une nécrose des tissus environnants, risque à l'origine de la préférence pour la voie veineuse centrale.",
+        "action": "Contrôler fréquemment le reflux veineux et le point de perfusion ; en cas d'extravasation, arrêter la perfusion et signaler immédiatement au médecin pour infiltration locale de phentolamine."
+      },
+      {
+        "evenement": "Hypertension artérielle sévère et bradycardie réflexe",
+        "explication": "Effet dose-dépendant de la stimulation alpha-adrénergique par la noradrénaline, pouvant survenir à dose thérapeutique comme en cas de surdosage.",
+        "action": "Surveillance continue de la pression artérielle et de la fréquence cardiaque pendant toute la durée de la perfusion ; signaler au prescripteur toute élévation tensionnelle jugée excessive."
+      },
+      {
+        "evenement": "Aggravation d'une ischémie myocardique ou coronarienne préexistante",
+        "explication": "Les patients présentant une dysfonction ventriculaire gauche majeure, une thrombose coronarienne, mésentérique ou périphérique, un infarctus récent ou un angor de Prinzmetal sont plus exposés aux effets délétères de la vasoconstriction.",
+        "action": "Signaler au prescripteur tout antécédent cardiovasculaire de ce type avant et pendant le traitement ; surveillance électrocardiographique renforcée."
+      },
+      {
+        "evenement": "Risque de confusion entre les différentes concentrations de noradrénaline commercialisées",
+        "explication": "Plusieurs présentations coexistent en France avec des concentrations, des modes de préparation et des indications différents : 2 mg/mL à diluer (choc/collapsus, VVC), 0,5 mg/mL prête à l'emploi (choc/collapsus, VVC), 0,5 mg/mL à diluer, TANOREN, et 10 microgrammes/mL prête à l'emploi, CRONOMIR, ces deux dernières réservées à l'hypotension péri-opératoire, cette dernière seule autorisée par voie veineuse périphérique.",
+        "action": "Vérifier systématiquement le nom de spécialité et la concentration exacte de l'ampoule/du flacon avant toute préparation ou changement de seringue, en particulier pour TANOREN et CRONOMIR dont la concentration n'est, selon le RCP CRONOMIR, 'pas adaptée aux situations de soins critiques'."
+      }
+    ],
+    "pictogrammes": []
+  },
+  "iv": {
+    "reconstitution": null,
+    "preparation": [
+      {
+        "voie": "PSE",
+        "contexte": "VVC recommandée, voie dédiée",
+        "detail": "Diluer obligatoirement dans du G5%, NaCl 0,9% ou un mélange isotonique G5%/NaCl 0,9% (sauf Cronomir, solution prête à l'emploi). Concentration finale de 0,5 mg/mL (500 microgrammes/mL).",
+        "duree": "Continue",
+        "stabilite": "À utiliser immédiatement après dilution ; en cas d'utilisation non immédiate, ne pas dépasser 24 heures entre 2 et 8 °C"
+      },
+      {
+        "voie": "PERF",
+        "contexte": "Utilisation TANOREN réservée au bloc opératoire, avec pompe volumétrique",
+        "detail": "Diluer obligatoirement dans du G5% ou NaCl 0,9%, 50ml pour une concentration de 20 microgrammes/ml, ou 100ml pour 10 microgrammes/ml.",
+        "duree": "Continue"
+      },
+      {
+        "voie": "IRRIG",
+        "contexte": "Lavage gastrique",
+        "detail": "Dilution dans 250 à 500ml de NaCl 0,9% glacé.",
+        "duree": "Itératif"
+      }
+    ],
+    "administration": {
+      "posologie": [
+        {
+          "population": "Chocs / collapsus établi",
+          "population_type": "adulte",
+          "categorie": "pse",
+          "dose_ug_kg_minute_min": 0.1,
+          "dose_ug_kg_minute_max": 5,
+          "dose_journaliere_max_g":"Selon PAM"
+        },
+        {
+          "population": "Hypotension péri-opératoire",
+          "population_type": "adulte",
+          "categorie": "pse",
+          "dose_ug_kg_minute_min": 0.04,
+          "dose_ug_kg_minute_max": 0.1,
+          "dose_journaliere_max_g": "Selon PAM"
+        },
+        {
+          "population": "Hémorragie digestive, irrigation gastrique (lavage)",
+          "population_type": "adulte",
+          "categorie": "speciale",
+          "dose_par_prise_mg_min": 8,
+          "dose_par_prise_mg_max": 16,
+          "intervalle": "Fractionné ou continu"
+        }
+      ]
+    },
+    "incompatibilites": [
+      {
+        "substance": "Céphalotine (céphalosporine de 1re génération)",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Céfapirine sodique",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Barbituriques (amobarbital sodique, pentobarbital sodique, sécobarbital [quinalbarbitone] sodique, thiopental sodique)",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Maléate de chlorphéniramine",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Chlorothiazide sodique",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Nitrofurantoïne sodique",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Novobiocine sodique",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Phénytoïne sodique",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Iodure de sodium",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Sulfate de streptomycine",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Sulfadiazine sodique",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Sulfafurazole diéthanolamine",
+        "niveau": "absolu"
+      }
+    ]
+  },
+  "oral": null,
+  "aerosol": null,
+  "tracabilite": {
+    "rcp_source": [
+      {
+        "specialite": "Noradrénaline (tartrate) Aguettant 2 mg/mL (sans sulfites), solution à diluer pour perfusion",
+        "titulaire": "Laboratoire Aguettant",
+        "date_maj": "2026-01-23",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/64234749/extrait"
+      },
+      {
+        "specialite": "Noradrénaline Renaudin 2 mg/mL sans conservateur, solution à diluer pour perfusion",
+        "titulaire": "Laboratoire Renaudin",
+        "date_maj": "2025-07-17",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/64803855/extrait"
+      },
+      {
+        "specialite": "Noradrénaline (tartrate) Renaudin 0,5 mg/mL, solution pour perfusion (prête à l'emploi)",
+        "titulaire": "Laboratoire Renaudin",
+        "date_maj": "2022-02-21",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/60181402/extrait"
+      },
+      {
+        "specialite": "TANOREN 0,5 mg/mL, solution à diluer pour solution injectable/pour perfusion",
+        "titulaire": "Laboratoire Renaudin",
+        "date_maj": "2025-04-15",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/60743407/extrait"
+      },
+      {
+        "specialite": "CRONOMIR 10 microgrammes/mL, solution injectable/pour perfusion (prête à l'emploi)",
+        "titulaire": "Laboratoire Aguettant",
+        "date_maj": "2022-07-29",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/60385077/extrait"
+      },
+      {
+        "specialite": "ANSM, Information de sécurité 'TANOREN 0,5 mg/mL [...] Attention au risque d'erreurs médicamenteuses et de confusion avec les autres spécialités à base de noradrénaline'",
+        "titulaire": "Agence Nationale de Sécurité du Médicament et des produits de santé"
+      },
+      {
+        "specialite": "AP-HP, Hôpitaux Universitaires Est Parisien, 'Noradrénaline : utilisation en réanimation chirurgicale'",
+        "titulaire": "Assistance Publique - Hôpitaux de Paris"
+      }
+    ],
+    "statut": "valide",
+    "validation": {
+      "date": "2026-09-09",
+      "validateur": "Anna Trabaud-Lopez (IDE, porteuse du projet), vérification des données extraites contre les RCP ; équipe pharmacie, validation de la méthodologie et arbitrage des points litigieux",
+      "perimetre": [
+        "adulte",
+        "pediatrie"
+      ],
+      "prochaine_revision": "2026-12-09"
+    }
+  }
+}

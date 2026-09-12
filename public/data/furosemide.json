@@ -1,0 +1,433 @@
+{
+  "dci": "furosémide",
+  "commun": {
+    "noms_commerciaux": [
+      "Lasilix",
+      "Lasilix spécial"
+    ],
+    "famille": "Diurétique de l'anse",
+    "antidote": "",
+    "indications": [
+      "Urgence hypertensive avec atteinte viscérale",
+      "Encéphalopathie hypertensive",
+      "Œdème aigu du poumon",
+      "Asystolie",
+      "Rétention sodée sévère",
+      "Insuffisance rénale aiguë oligo-anurique",
+      "Poussée d'insuffisance rénale aiguë",
+      "Radiologie du bas appareil urinaire",
+      "Œdèmes d'origine cardiaque ou rénale",
+      "Œdèmes d'origine hépatique",
+      "Hypertension artérielle",
+      "Insuffisance rénale chronique",
+      "Syndrome néphrotique avec rétention hydrosodée"
+    ],
+    "grossesse_allaitement": {
+      "grossesse": "En règle générale, l'administration du furosémide doit être évitée chez la femme enceinte et ne jamais être prescrite au cours des œdèmes physiologiques (et ne nécessitant donc pas de traitement) de la grossesse.",
+      "allaitement": "Il est préférable de ne pas allaiter en cas de traitement par furosémide.",
+      "url_crat_grossesse": "https://www.lecrat.fr/11557/",
+      "url_crat_allaitement": "https://www.lecrat.fr/11558/"
+    },
+    "contre_indications": [
+      "Hypersensibilité à la substance active ou à l'un des excipients",
+      "Insuffisance rénale aiguë fonctionnelle",
+      "Encéphalopathie hépatique",
+      "Obstruction sur les voies urinaires",
+      "Hypovolémie ou déshydratation",
+      "Hypokaliémie sévère",
+      "Hyponatrémie sévère",
+      "Hépatite en évolution et insuffisance hépatocellulaire sévère",
+      "Association au lithium",
+      "Grossesse"
+    ],
+    "interactions_pertinentes": [
+      {
+        "substance": "Lithium",
+        "effet": "Augmentation de la lithémie avec signes de surdosage, comme lors d'un régime désodé, par diminution de l'excrétion urinaire du lithium.",
+        "action_infirmier": "Association déconseillée. Si elle ne peut être évitée, surveillance stricte de la lithémie."
+      },
+      {
+        "substance": "Digitaliques",
+        "effet": "L'hypokaliémie induite par le furosémide favorise les effets toxiques des digitaliques.",
+        "action_infirmier": "Corriger toute hypokaliémie au préalable et assurer une surveillance clinique, électrolytique et électrocardiographique."
+      },
+      {
+        "substance": "Aminosides",
+        "effet": "Augmentation des risques néphrotoxiques et ototoxiques des aminosides, par insuffisance rénale fonctionnelle liée à la déshydratation.",
+        "action_infirmier": "Signaler l'association ; diminuer le débit de perfusion du furosémide en présence d'aminosides."
+      },
+      {
+        "substance": "AINS et acide acétylsalicylique à dose anti-inflammatoire ou antalgique",
+        "effet": "Insuffisance rénale aiguë chez le malade à risque, sujet âgé ou déshydraté, par diminution de la filtration glomérulaire.",
+        "action_infirmier": "Assurer une hydratation correcte du patient et surveiller la diurèse et la fonction rénale."
+      },
+      {
+        "substance": "Inhibiteurs de l'enzyme de conversion et antagonistes des récepteurs de l'angiotensine II",
+        "effet": "Risque d'hypotension artérielle brutale et/ou d'insuffisance rénale aiguë lors de l'instauration du traitement ou de l'augmentation de la posologie.",
+        "action_infirmier": "Surveiller la pression artérielle lors de l'instauration ou d'une augmentation de dose."
+      },
+      {
+        "substance": "Autres médicaments hypokaliémiants",
+        "effet": "Risque majoré d'hypokaliémie.",
+        "action_infirmier": "Surveiller la kaliémie, avec correction si besoin."
+      },
+      {
+        "substance": "Médicaments susceptibles de donner des torsades de pointes",
+        "effet": "Risque majoré de troubles du rythme ventriculaire, favorisé par l'hypokaliémie induite par le furosémide.",
+        "action_infirmier": "Corriger toute hypokaliémie avant l'association et surveiller l'électrocardiogramme."
+      },
+      {
+        "substance": "Produits de contraste iodés",
+        "effet": "Risque majoré d'insuffisance rénale fonctionnelle aiguë en cas de déshydratation provoquée par le diurétique.",
+        "action_infirmier": "Réhydrater le patient avant l'administration du produit de contraste."
+      },
+      {
+        "substance": "Metformine",
+        "effet": "Acidose lactique déclenchée par l'insuffisance rénale fonctionnelle liée aux diurétiques de l'anse, en particulier en cas d'altération de la fonction rénale.",
+        "action_infirmier": "Signaler au prescripteur toute co-prescription de metformine ; surveiller la fonction rénale."
+      }
+    ],
+    "surveillance_specifique": [
+      {
+        "evenement": "Hypokaliémie",
+        "explication": "La déplétion potassique avec hypokaliémie constitue le risque majeur des diurétiques de l'anse.",
+        "action": "Contrôler la kaliémie avant et pendant le traitement ; signaler toute valeur basse ou tout trouble du rythme."
+      },
+      {
+        "evenement": "Hyponatrémie",
+        "explication": "Le furosémide augmente l'élimination sodée ; la natrémie peut chuter rapidement, surtout chez le sujet âgé.",
+        "action": "Contrôler la natrémie avant la mise en route du traitement, puis à intervalles réguliers."
+      },
+      {
+        "evenement": "Atteinte cochléo-vestibulaire",
+        "explication": "Le risque d'atteinte de l'audition augmente avec un débit d'administration élevé et lors de l'association à d'autres médicaments ototoxiques, notamment les aminosides.",
+        "action": "Respecter le débit maximal indiqué en Préparation ; diminuer le débit en présence d'aminosides et signaler acouphènes ou baisse d'audition."
+      },
+      {
+        "evenement": "Dégradation de la fonction rénale",
+        "explication": "Le furosémide peut provoquer une insuffisance rénale fonctionnelle par déshydratation, en particulier chez le sujet âgé ou sous inhibiteur de l'enzyme de conversion.",
+        "action": "Contrôler régulièrement la créatininémie pendant le traitement."
+      },
+      {
+        "evenement": "Diurèse insuffisante ou excessive",
+        "explication": "La posologie du furosémide se règle sur la diurèse obtenue ; en insuffisance rénale aiguë, l'absence de reprise de la diurèse conduit à arrêter le traitement.",
+        "action": "Mesurer et consigner la diurèse ; signaler l'absence de reprise de diurèse ou une perte de poids rapide."
+      },
+      {
+        "evenement": "Hypotension symptomatique",
+        "explication": "L'hypovolémie induite par le diurétique peut provoquer vertiges, évanouissements ou pertes de connaissance.",
+        "action": "Contrôler la pression artérielle après l'injection et prévenir le patient du risque au lever."
+      }
+    ],
+    "pictogrammes": [],
+    "note_ajustement": "Dose adaptée selon la fonction rénale, la fonction hépatique et la diurèse obtenue, se référer au protocole du service."
+  },
+  "iv": {
+    "reconstitution": null,
+    "preparation": [
+      {
+        "voie": "IVL",
+        "contexte": "Ampoule de 20 mg ou 250mg",
+        "detail": "Utiliser pur, injection IV lente",
+        "duree": "≥ 5 min",
+        "stabilite": "Après ouverture, le produit doit être utilisé immédiatement."
+      },
+      {
+        "voie": "PERF",
+        "detail": "Diluer dans 100ml de NaCl 0,9 %",
+        "duree": "10 à 15 min",
+        "stabilite": "24 h"
+      },
+      {
+        "voie": "PSE",
+        "detail": "Sans dilution ou dans du NaCl 0,9%",
+        "duree": "Continu, débit maximal 4 mg/min",
+        "stabilite": "24 h"
+      },
+      {
+        "voie": "IM",
+        "detail": "Utiliser pur",
+        "duree": "< 1 min",
+        "stabilite": "Après ouverture, le produit doit être utilisé immédiatement."
+      }
+    ],
+    "administration": {
+      "posologie": [
+        {
+          "population": "Indications usuelles",
+          "population_type": "adulte",
+          "categorie": "generale",
+          "dose_par_prise_mg_min": 20,
+          "dose_par_prise_mg_max": 20,
+          "dose_journaliere_max_mg": 60,
+          "intervalle_min_h": 8,
+          "intervalle_max_h": 12
+        },
+        {
+          "population": "Indications usuelles",
+          "population_type": "adulte",
+          "categorie": "im",
+          "dose_par_prise_mg_min": 20,
+          "dose_par_prise_mg_max": 20,
+          "dose_journaliere_max_mg": 60,
+          "intervalle_min_h": 8,
+          "intervalle_max_h": 12
+        },
+        {
+          "population": "Insuffisance rénale aiguë oligo-anurique, injection discontinue",
+          "population_type": "adulte",
+          "categorie": "generale",
+          "dose_par_prise_mg_min": 40,
+          "dose_par_prise_mg_max": 250,
+          "intervalle_min_h": 4,
+          "intervalle_max_h": 6,
+          "dose_journaliere_max_g": 1.5
+        },
+        {
+          "population": "Insuffisance rénale aiguë oligo-anurique, perfusion continue",
+          "population_type": "adulte",
+          "categorie": "pse",
+          "dose_par_prise_mg_min": 40,
+          "dose_par_prise_mg_max": 250,
+          "dose_journaliere_max_g": 1.5
+        },
+        {
+          "population": "Indications usuelles",
+          "population_type": "pediatrie",
+          "categorie": "generale",
+          "dose_journaliere_mg_kg_min": 0.5,
+          "dose_journaliere_mg_kg_max": 1,
+          "dose_journaliere_max_g": "Selon poids"
+        }
+      ]
+    },
+    "incompatibilites": [
+      {
+        "substance": "Adrénaline",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Amiodarone",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Atracurium",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Ciprofloxacine",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Clarithromycine",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Dobutamine",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Dopamine",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Fluconazole",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Gentamicine",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Labétalol",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Lévofloxacine",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Métoclopramide",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Midazolam",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Milrinone",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Morphine",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Nicardipine",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Ondansétron",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Phosphate de potassium",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Vancomycine",
+        "niveau": "absolu"
+      }
+    ]
+  },
+  "oral": {
+    "formes": [
+      {
+        "type": "Comprimé",
+        "dosage": "20 mg",
+        "ecrasable": false,
+        "ouverture_gelule": null,
+        "posologie_adulte": []
+      },
+      {
+        "type": "Comprimé sécable",
+        "dosage": "40 mg",
+        "ecrasable": true,
+        "ouverture_gelule": null,
+        "posologie_adulte": [
+          {
+            "population": "Hypertension artérielle ou œdèmes modérés",
+            "population_type": "adulte",
+            "categorie": "generale",
+            "dose_par_prise_mg_min": 20,
+            "dose_par_prise_mg_max": 40,
+            "dose_journaliere_max_mg": 40
+          },
+          {
+            "population": "Œdèmes importants d'origine cardiaque, rénale ou hépatique",
+            "population_type": "adulte",
+            "dose_par_prise_mg_max": 80,
+            "dose_par_prise_mg_min": 40,
+            "categorie": "generale",
+            "dose_journaliere_max_mg": 160,
+            "intervalle_min_h": 12,
+            "intervalle_max_h": 24
+          }
+        ]
+      },
+      {
+        "type": "Comprimé sécable",
+        "dosage": "500 mg",
+        "ecrasable": true,
+        "ouverture_gelule": null,
+        "posologie_adulte": [
+          {
+            "population": "Insuffisance rénale chronique, créatininémie 20 à 40 mg/l",
+            "population_type": "adulte",
+            "categorie": "speciale",
+            "dose_par_prise_mg_min": 40,
+            "dose_par_prise_mg_max": 80,
+            "intervalle_min_h": 8,
+            "intervalle_max_h": 24,
+            "dose_journaliere_max_mg": 120
+          },
+          {
+            "population": "Insuffisance rénale chronique, créatininémie 40 à 100 mg/l",
+            "population_type": "adulte",
+            "categorie": "speciale",
+            "dose_par_prise_mg_min": 80,
+            "dose_par_prise_mg_max": 120,
+            "intervalle_min_h": 8,
+            "intervalle_max_h": 24,
+            "dose_journaliere_max_mg": 250
+          },
+          {
+            "population": "Hémodialysé, veille et avant-veille de la séance",
+            "population_type": "adulte",
+            "categorie": "speciale",
+            "dose_par_prise_mg_min": 250,
+            "dose_par_prise_mg_max": 500,
+            "dose_journaliere_max_g": 1
+          }
+        ]
+      },
+      {
+        "type": "Solution buvable",
+        "dosage": "10 mg/mL",
+        "ecrasable": false,
+        "ouverture_gelule": null,
+        "posologie_adulte": [
+          {
+            "population": "Enfant et nourrisson, œdèmes d'origine cardiaque, rénale ou hépatique",
+            "population_type": "pediatrie",
+            "categorie": "generale",
+            "dose_journaliere_mg_kg_min": 1,
+            "dose_journaliere_mg_kg_max": 2,
+            "dose_journaliere_max_g": "Selon poids"
+          }
+        ]
+      }
+    ],
+    "recommandation_sonde": {
+      "forme_preferee": "Solution buvable 10 mg/mL",
+      "alternative": ""
+    }
+  },
+  "aerosol": null,
+  "tracabilite": {
+    "rcp_source": [
+      {
+        "specialite": "FUROSEMIDE RENAUDIN 20 mg/2 mL, solution injectable (IM-IV)",
+        "titulaire": "LABORATOIRE RENAUDIN",
+        "date_maj": "2024-07-02",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/affichageDoc.php?specid=67240789&typedoc=R"
+      },
+      {
+        "specialite": "LASILIX SPECIAL 250 mg/25 ml, solution injectable en ampoule",
+        "titulaire": "SANOFI WINTHROP INDUSTRIE",
+        "date_maj": "2023-12-04",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/affichageDoc.php?specid=67537203&typedoc=R"
+      },
+      {
+        "specialite": "LASILIX 40 mg, comprimé sécable",
+        "titulaire": "SANOFI WINTHROP INDUSTRIE",
+        "date_maj": "2025-02-05",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/affichageDoc.php?specid=65606743&typedoc=R"
+      },
+      {
+        "specialite": "LASILIX FAIBLE 20 mg, comprimé",
+        "titulaire": "SANOFI WINTHROP INDUSTRIE",
+        "date_maj": "2024-03-19",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/affichageDoc.php?specid=69304938&typedoc=R"
+      },
+      {
+        "specialite": "FUROSEMIDE BIOGARAN 20 mg, comprimé",
+        "titulaire": "BIOGARAN",
+        "date_maj": "2024-06-10",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/63921217/extrait"
+      },
+      {
+        "specialite": "LASILIX 10 mg/ml, solution buvable",
+        "titulaire": "SANOFI WINTHROP INDUSTRIE",
+        "date_maj": "2024-03-19",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/affichageDoc.php?specid=63736250&typedoc=R"
+      },
+      {
+        "specialite": "LASILIX SPECIAL 500 mg, comprimé sécable",
+        "titulaire": "SANOFI WINTHROP INDUSTRIE",
+        "date_maj": "2025-05-13",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/affichageDoc.php?specid=61547571&typedoc=R"
+      }
+    ],
+    "statut": "valide",
+    "validation": {
+      "date": "2026-08-31",
+      "validateur": "Anna Trabaud-Lopez (IDE, porteuse du projet), vérification des données extraites contre les RCP ; équipe pharmacie, validation de la méthodologie et arbitrage des points litigieux",
+      "perimetre": [
+        "adulte",
+        "pediatrie"
+      ],
+      "prochaine_revision": "2026-11-30"
+    }
+  }
+}

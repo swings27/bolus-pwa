@@ -1,0 +1,219 @@
+{
+  "dci": "héparine calcique",
+  "commun": {
+    "noms_commerciaux": [
+      "Calciparine"
+    ],
+    "famille": "Anticoagulant héparine non fractionnée, voie sous-cutanée",
+    "antidote": "Sulfate de protamine",
+    "indications": [
+      "Thrombose veineuse profonde / embolie pulmonaire",
+      "Infarctus du myocarde / angor instable",
+      "Embolies artérielles extracérébrales",
+      "Prévention thromboembolique post-chirurgicale",
+      "Prévention thromboembolique chez patient alité"
+    ],
+    "grossesse_allaitement": {
+      "grossesse": "L'héparine ne traverse pas le placenta. Aucune malformation ni fœtotoxicité de l'héparine n'ont été décrites chez l'animal, ni à ce jour dans l'espèce humaine. Lors de son utilisation chez la femme enceinte, une prudence particulière s'impose en raison des risques hémorragiques utéroplacentaires, particulièrement au moment de l'accouchement. Si une anesthésie péridurale est envisagée, il est nécessaire de suspendre l'héparine.",
+      "allaitement": "L'héparine n'étant pas excrétée dans le lait maternel et ne passant pas la barrière digestive, l'allaitement est possible.",
+      "url_crat_grossesse": "https://www.lecrat.fr/6614/",
+      "url_crat_allaitement": "https://www.lecrat.fr/6615/"
+    },
+    "note_ajustement": "Utilisation en prévention chez le patient alité pour affection médicale aiguë réservée à l'insuffisance rénale sévère, comme alternative possible à une HBPM, se référer au protocole du service.",
+    "contre_indications": [
+      "Hypersensibilité à l'héparine ou à l'un des excipients",
+      "Antécédents de thrombopénie grave de type II (thrombopénie induite par l'héparine, TIH), sous héparine non fractionnée ou héparine de bas poids moléculaire",
+      "Maladies hémorragiques constitutionnelles",
+      "Traitement par anticoagulant oral d'action directe (AOD : apixaban, edoxaban, rivaroxaban...)",
+      "Lésion organique susceptible de saigner",
+      "Manifestations ou tendances hémorragiques liées à des troubles de l'hémostase",
+      "Hémorragie intracérébrale",
+      "Anesthésie péridurale ou rachianesthésie, ne doivent jamais être effectuées pendant le traitement",
+      "Accident vasculaire cérébral ischémique étendu à la phase aiguë, avec ou sans troubles de la conscience (délai de 72 heures si l'AVC est d'origine embolique)",
+      "Endocardite infectieuse aiguë, en dehors de celles survenant sur prothèse mécanique",
+      "Hypertension artérielle non contrôlée",
+      "Dans les 24 premières heures suivant une hémorragie intracérébrale"
+    ],
+    "interactions_pertinentes": [
+      {
+        "substance": "Anticoagulants oraux d'action directe",
+        "effet": "Association contre-indiquée, quelle que soit la dose d'héparine : augmentation du risque hémorragique.",
+        "action_infirmier": "Signaler au prescripteur toute co-prescription d'un anticoagulant oral d'action directe ; lors d'un relais de l'un par l'autre, respecter l'intervalle entre les prises."
+      },
+      {
+        "substance": "Défibrotide",
+        "effet": "Association déconseillée, quelle que soit la dose d'héparine : risque hémorragique accru.",
+        "action_infirmier": "Signaler au prescripteur toute co-prescription de défibrotide."
+      },
+      {
+        "substance": "Acide acétylsalicylique",
+        "effet": "À doses anti-inflammatoires (≥ 1 g/prise et/ou ≥ 3 g/j) ou antalgiques/antipyrétiques (≥ 500 mg/prise et/ou < 3 g/j) : association déconseillée avec les doses curatives d'héparine et/ou chez le sujet âgé (inhibition des fonctions plaquettaires et agression de la muqueuse gastro-duodénale). À doses antiagrégantes (50 à 375 mg/j) avec des doses curatives d'héparine, ou à toute dose avec des doses préventives chez le sujet de moins de 65 ans : à prendre en compte, augmentation du risque hémorragique.",
+        "action_infirmier": "Signaler au prescripteur toute co-prescription d'acide acétylsalicylique ; renforcer la surveillance clinique si l'association ne peut être évitée."
+      },
+      {
+        "substance": "Anti-inflammatoires non stéroïdiens",
+        "effet": "Association déconseillée avec les doses curatives d'héparine et/ou chez le sujet âgé (agression de la muqueuse gastro-duodénale) ; à prendre en compte avec les doses préventives.",
+        "action_infirmier": "Signaler au prescripteur ; si l'association ne peut être évitée, renforcer la surveillance clinique."
+      },
+      {
+        "substance": "Dextran 40",
+        "effet": "Association déconseillée : augmentation du risque hémorragique par inhibition des fonctions plaquettaires.",
+        "action_infirmier": "Signaler au prescripteur toute co-prescription de dextran."
+      },
+      {
+        "substance": "Anticoagulants oraux de type antivitamine K",
+        "effet": "Précaution d'emploi, quelle que soit la dose d'héparine : augmentation du risque hémorragique.",
+        "action_infirmier": "Lors du relais héparine/AVK (nécessitant plusieurs jours), renforcer la surveillance clinique et biologique."
+      },
+      {
+        "substance": "Cobimétinib",
+        "effet": "Précaution d'emploi : augmentation du risque hémorragique.",
+        "action_infirmier": "Surveillance clinique renforcée en cas de co-prescription de cobimétinib."
+      },
+      {
+        "substance": "Thrombolytiques",
+        "effet": "À prendre en compte avec des doses curatives d'héparine : augmentation du risque hémorragique.",
+        "action_infirmier": "Signaler au prescripteur ; surveillance clinique renforcée."
+      },
+      {
+        "substance": "Antiagrégants plaquettaires",
+        "effet": "À prendre en compte, quelle que soit la dose d'héparine : augmentation du risque hémorragique.",
+        "action_infirmier": "Signaler au prescripteur toute co-prescription d'un antiagrégant plaquettaire."
+      },
+      {
+        "substance": "Corticoïdes",
+        "effet": "À prendre en compte, quelle que soit la dose d'héparine : augmentation du risque hémorragique.",
+        "action_infirmier": "Signaler au prescripteur toute co-prescription de corticoïdes."
+      },
+      {
+        "substance": "Autres médicaments hyperkaliémiants",
+        "effet": "À prendre en compte : risque de majoration de l'hyperkaliémie, potentiellement létale.",
+        "action_infirmier": "Surveiller la kaliémie en cas de traitement prolongé chez les patients à risque (diabète, insuffisance rénale chronique)."
+      }
+    ],
+    "surveillance_specifique": [
+      {
+        "evenement": "Thrombopénie induite par l'héparine (TIH) de type II",
+        "explication": "Thrombopénie grave, parfois thrombosante, d'évolution potentiellement fatale, d'origine immunologique, définie par un chiffre de plaquettes < 100 000 et/ou une chute relative de 30 à 50 % sur deux numérations successives. Survient essentiellement entre le 5e et le 21e jour de traitement (pic vers le 10e jour), mais peut être plus précoce en cas d'antécédent de TIH ; une TIH retardée peut survenir après l'arrêt du traitement et le risque de récidive en cas de réintroduction peut persister plusieurs années.",
+        "action": "Rechercher systématiquement un antécédent de TIH par un interrogatoire approfondi avant le début du traitement. Numération plaquettaire avant traitement puis deux fois par semaine pendant 21 jours, puis à la même fréquence jusqu'à l'arrêt si le traitement se prolonge. (voir extraction_log), rythme pouvant être réduit à une fois par semaine au-delà si le traitement se prolonge. Devant tout événement thrombotique sous héparine ou toute baisse de 30 à 50 % des plaquettes, faire pratiquer en urgence une numération plaquettaire (par exemple score des 4T) et suspendre le traitement héparinique en cas de confirmation, sans attendre le résultat des tests immunologiques. Avis spécialisé systématique en cas de TIH confirmée."
+      },
+      {
+        "evenement": "Résistance à l'héparine",
+        "explication": "Liée principalement à une activité antithrombine inférieure à 60 % de la normale (déficit congénital ou acquis, notamment en cas d'insuffisance hépatique) et/ou à une augmentation de la fixation protéique de l'héparine (syndrome inflammatoire, chirurgie, circulation extracorporelle, cancer, obésité, hypersplénisme). Peut aussi survenir pendant la grossesse, le post-partum, chez le sujet âgé (> 65 ans), en cas d'hypoalbuminémie ou de thrombocytose.",
+        "action": "En cas de non-élévation du TCA malgré l'augmentation des doses, mesurer le TCA et l'activité anti-Xa sur le même échantillon (anti-Xa sur plasma non enrichi en antithrombine) et ajuster les doses sur l'anti-Xa plutôt que d'escalader empiriquement. Surveillance rapprochée du patient : cette résistance peut céder brutalement."
+      },
+      {
+        "evenement": "Hyperkaliémie et hypoaldostéronisme",
+        "explication": "L'héparine peut freiner la sécrétion d'aldostérone et entraîner de rares cas d'hypoaldostéronisme avec hyperkaliémie et/ou acidose métabolique, en particulier chez le diabétique, l'insuffisant rénal chronique, en cas d'acidose métabolique préexistante ou de traitement associé par IEC/AINS. Le risque augmente avec la durée du traitement et est habituellement réversible.",
+        "action": "Surveiller la kaliémie en cas de traitement prolongé chez les patients à risque."
+      },
+      {
+        "evenement": "Nécrose cutanée au point d'injection ou à distance",
+        "explication": "Peut être précédée d'un purpura ou de placards érythémateux, infiltrés et douloureux, avec ou sans effets systémiques.",
+        "action": "Surveiller le point d'injection ; en cas de signes évocateurs, suspendre immédiatement le traitement et signaler au prescripteur."
+      },
+      {
+        "evenement": "Hématome périmédullaire lors d'une anesthésie loco-régionale rachidienne ou d'une ponction lombaire",
+        "explication": "Le risque augmente selon la technique : rachianesthésie sans cathéter < rachianesthésie avec cathéter < anesthésie péridurale < anesthésie péridurale avec cathéter. Une incidence plus élevée de saignements a été rapportée, en particulier chez la femme âgée. Effet indésirable classé très rare en 4.8 (hématomes spinaux). Le RCP prévoit un délai de 6 heures après le retrait d'un cathéter intrarachidien avant l'injection d'une dose préventive d'héparine.",
+        "action": "Discuter avec le prescripteur le rapport bénéfice-risque avant toute anesthésie loco-régionale intrathécale ou périmédullaire ; différer la ponction lombaire chaque fois que possible. Surveiller l'apparition de signes neurologiques et signaler sans délai."
+      }
+    ],
+    "pictogrammes": []
+  },
+  "iv": {
+    "reconstitution": null,
+    "preparation": [
+      {
+        "voie": "SC",
+        "detail": "Utiliser pure. Ne pas expulser la bulle d'air avant l'injection.",
+        "duree": "< 1 min",
+        "stabilite": "À usage unique. Utiliser immédiatement."
+      }
+    ],
+    "administration": {
+      "posologie": [
+        {
+          "population": "Traitement curatif",
+          "categorie": "generale",
+          "population_type": "adulte",
+          "dose_par_prise_UI_min": 2500,
+          "dose_par_prise_UI_max": 15000,
+          "intervalle_min_h": 8,
+          "intervalle_max_h": 12,
+          "dose_journaliere_max_UI": "Selon TCA/anti-Xa",
+          "tdm_requis": true
+        },
+        {
+          "population": "Prévention, schéma standard",
+          "categorie": "generale",
+          "population_type": "adulte",
+          "palier": "Prévention standard (5000 UI/12h)",
+          "dose_par_prise_UI_min": 5000,
+          "dose_par_prise_UI_max": 5000,
+          "intervalle_min_h": 12,
+          "intervalle_max_h": 12,
+          "dose_journaliere_max_UI": 10000,
+          "tdm_requis": true
+        },
+        {
+          "population": "Prévention, haut risque thromboembolique",
+          "categorie": "generale",
+          "population_type": "adulte",
+          "dose_par_prise_UI_min": 5000,
+          "dose_par_prise_UI_max": 5000,
+          "intervalle_min_h": 8,
+          "intervalle_max_h": 8,
+          "dose_journaliere_max_UI": 15000,
+          "tdm_requis": true
+        }
+      ]
+    },
+    "incompatibilites": []
+  },
+  "oral": null,
+  "aerosol": null,
+  "tracabilite": {
+    "rcp_source": [
+      {
+        "specialite": "CALCIPARINE SOUS CUTANEE 25 000 UI/1 mL, solution injectable",
+        "titulaire": "Cheplapharm Arzneimittel GmbH",
+        "date_maj": null,
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/63018531/extrait"
+      },
+      {
+        "specialite": "CALCIPARINE SOUS CUTANEE 20 000 UI/0,8 mL, solution injectable",
+        "titulaire": "Cheplapharm Arzneimittel GmbH",
+        "date_maj": null,
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/60852495/extrait"
+      },
+      {
+        "specialite": "CALCIPARINE SOUS CUTANEE 12 500 UI/0,5 mL, solution injectable",
+        "titulaire": "Cheplapharm Arzneimittel GmbH",
+        "date_maj": null,
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/66977349/extrait"
+      },
+      {
+        "specialite": "HEPARINE CALCIQUE PANPHARMA 25 000 UI/mL, solution injectable en seringue préremplie (S.C.)",
+        "titulaire": "Panpharma",
+        "date_maj": null,
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/64741268/extrait"
+      },
+      {
+        "specialite": "HEPARINE CALCIQUE PANPHARMA 25 000 UI/mL, solution injectable (S.C.)",
+        "titulaire": "Panpharma",
+        "date_maj": null,
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/66346693/extrait"
+      }
+    ],
+    "statut": "valide",
+    "validation": {
+      "date": "2026-09-09",
+      "validateur": "Anna Trabaud-Lopez (IDE, porteuse du projet), vérification des données extraites contre les RCP ; équipe pharmacie, validation de la méthodologie et arbitrage des points litigieux",
+      "perimetre": [
+        "adulte",
+        "pediatrie"
+      ],
+      "prochaine_revision": "2026-12-09"
+    }
+  }
+}

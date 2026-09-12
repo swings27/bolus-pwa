@@ -1,0 +1,162 @@
+{
+  "dci": "néfopam",
+  "commun": {
+    "noms_commerciaux": [
+      "Acupan"
+    ],
+    "famille": "Antalgique non morphinique, non salicylé, à action centrale",
+    "antidote": "",
+    "indications": [
+      "Douleur aiguë post-opératoire"
+    ],
+    "grossesse_allaitement": {
+      "grossesse": "En l'absence d'étude chez l'animal et de données cliniques humaines, le risque n'est pas connu ; par conséquent, par mesure de prudence, ne pas prescrire de néfopam pendant la grossesse, ni pendant l'allaitement.",
+      "allaitement": "En l'absence d'étude chez l'animal et de données cliniques humaines, le risque n'est pas connu ; par conséquent, par mesure de prudence, ne pas prescrire de néfopam pendant la grossesse, ni pendant l'allaitement.",
+      "url_crat_grossesse": "https://www.lecrat.fr/7885/",
+      "url_crat_allaitement": "https://www.lecrat.fr/7887/"
+    },
+    "contre_indications": [
+      "Hypersensibilité à la substance active ou à l'un des excipients",
+      "Enfant de moins de 15 ans, en l'absence d'étude clinique",
+      "Convulsions ou antécédents de troubles convulsifs",
+      "Risques de rétention urinaire liés à des troubles urétroprostatiques",
+      "Risque de glaucome par fermeture de l'angle"
+    ],
+    "interactions_pertinentes": [
+      {
+        "substance": "Alcool",
+        "effet": "Majoration de l'effet sédatif par l'alcool, avec altération de la vigilance pouvant rendre dangereuses la conduite de véhicules et l'utilisation de machines.",
+        "action_infirmier": "Signaler au prescripteur la consommation d'alcool ou la prise de médicaments contenant de l'alcool ; conseiller d'éviter les boissons alcoolisées."
+      },
+      {
+        "substance": "Dépresseurs du système nerveux central",
+        "effet": "Addition des effets dépresseurs du système nerveux central, avec diminution de la vigilance.",
+        "action_infirmier": "Signaler au prescripteur toute association avec un autre médicament dépresseur du système nerveux central ; renforcer la surveillance de la vigilance."
+      }
+    ],
+    "surveillance_specifique": [
+      {
+        "evenement": "Convulsions",
+        "explication": "Le néfopam est contre-indiqué en cas d'antécédent de troubles convulsifs ; des convulsions ont néanmoins été rapportées comme effet indésirable rare, notamment en situation de surdosage.",
+        "action": "Surveiller la survenue de convulsions, en particulier en cas de dépassement des doses recommandées ; signaler au prescripteur."
+      },
+      {
+        "evenement": "Effets anticholinergiques",
+        "explication": "Le néfopam possède une activité anticholinergique propre, à l'origine d'une augmentation modérée de la fréquence cardiaque ; la prudence est renforcée chez les patients porteurs d'une pathologie cardiovasculaire.",
+        "action": "Surveiller la fréquence cardiaque et la survenue de sueurs, de sécheresse buccale ou de difficultés à uriner, en particulier chez les patients porteurs d'une pathologie cardiovasculaire ; signaler au prescripteur."
+      },
+      {
+        "evenement": "Pharmacodépendance et mésusage",
+        "explication": "Le néfopam peut entraîner une pharmacodépendance pouvant conduire à un abus, en particulier chez les patients ayant des antécédents de consommation de substances psychoactives ou de troubles de la santé mentale ; il n'est pas indiqué dans le traitement des affections douloureuses chroniques.",
+        "action": "Surveiller les signes de dépendance ou de mésusage, en particulier chez les patients à risque ; signaler au prescripteur en cas de doute et réévaluer régulièrement le bénéfice/risque du traitement."
+      }
+    ],
+    "pictogrammes": [],
+    "note_ajustement": "Prudence particulière en cas d'insuffisance hépatique ou rénale (risque d'accumulation) ; traitement déconseillé chez le sujet âgé en raison des effets anticholinergiques, se référer au protocole du service."
+  },
+  "iv": {
+    "reconstitution": null,
+    "preparation": [
+      {
+        "voie": "PERF",
+        "detail": "Dilution dans NaCl 0,9% ou G5%. Attention à la survenue de nausées, vertiges et sueurs.",
+        "duree": "> 15 minutes",
+        "stabilite": "À usage unique, à utiliser immédiatement après ouverture de l'ampoule"
+      },
+      {
+        "voie": "IM",
+        "detail": "Utiliser pur",
+        "stabilite": "À usage unique, à utiliser immédiatement après ouverture de l'ampoule"
+      }
+    ],
+    "administration": {
+      "posologie": [
+        {
+          "population": "Douleur aiguë",
+          "population_type": "adulte",
+          "categorie": "generale",
+          "dose_par_prise_mg_min": 20,
+          "dose_par_prise_mg_max": 20,
+          "intervalle_min_h": 4,
+          "intervalle_max_h": 4,
+          "dose_journaliere_max_mg": 120
+        },
+        {
+          "population": "Voie intramusculaire",
+          "population_type": "adulte",
+          "categorie": "im",
+          "dose_par_prise_mg_min": 20,
+          "dose_par_prise_mg_max": 20,
+          "intervalle_min_h": 6,
+          "intervalle_max_h": 6,
+          "dose_journaliere_max_mg": 120
+        }
+      ]
+    },
+    "incompatibilites": []
+  },
+  "oral": {
+    "formes": [
+      {
+        "type": "Comprimé pelliculé",
+        "dosage": "30 mg",
+        "ecrasable": false,
+        "ouverture_gelule": null,
+        "posologie_adulte": [
+          {
+            "population": "Douleur aiguë",
+            "population_type": "adulte",
+            "categorie": "generale",
+            "dose_par_prise_mg_min": 30,
+            "dose_par_prise_mg_max": 60,
+            "intervalle_min_h": 4,
+            "intervalle_max_h": 8,
+            "dose_journaliere_max_mg": 180
+          }
+        ]
+      }
+    ],
+    "recommandation_sonde": {
+      "forme_preferee": "",
+      "alternative": "Voie injectable (IV/IM) de la même molécule, à discuter avec le prescripteur"
+    }
+  },
+  "aerosol": null,
+  "tracabilite": {
+    "rcp_source": [
+      {
+        "specialite": "ACUPAN 20 mg/2 ml, solution injectable",
+        "titulaire": "BIOCODEX",
+        "date_maj": "31/03/2026",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/62580656/extrait"
+      },
+      {
+        "specialite": "NEFOPAM VIATRIS 20 mg/2 ml, solution injectable",
+        "titulaire": "VIATRIS SANTÉ",
+        "date_maj": "31/03/2026",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/62227567/extrait"
+      },
+      {
+        "specialite": "ACUPAN, comprimé (néfopam 30 mg)",
+        "titulaire": "BIOCODEX",
+        "date_maj": "31/03/2026",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/68943687/extrait"
+      },
+      {
+        "specialite": "NEFOPAM PANPHARMA 30 mg, comprimé pelliculé",
+        "titulaire": "Laboratoire CEVIDRA",
+        "date_maj": "21/04/2026",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/60601468/extrait"
+      }
+    ],
+    "statut": "valide",
+    "validation": {
+      "date": "2026-09-04",
+      "validateur": "Anna Trabaud-Lopez (IDE, porteuse du projet), vérification des données extraites contre les RCP ; équipe pharmacie, validation de la méthodologie et arbitrage des points litigieux",
+      "perimetre": [
+        "adulte"
+      ],
+      "prochaine_revision": "2026-12-04"
+    }
+  }
+}

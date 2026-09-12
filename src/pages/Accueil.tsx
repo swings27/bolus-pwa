@@ -13,7 +13,17 @@ export default function Accueil() {
   // undefined tant que la première requête Dexie n'a pas résolu ; on
   // n'affiche alors aucune tuile plutôt qu'un faux "0 catégorie".
   const categories = useCategoriesAvecFiches()
-  const categoriesAffichees = (categories ?? []).slice(0, NOMBRE_CATEGORIES_ACCUEIL)
+  // Les quatre catégories les mieux fournies, et non les quatre premières
+  // déclarées : l'accueil doit ouvrir sur ce qu'il y a réellement à
+  // consulter, sans faire passer une catégorie à une seule fiche devant une
+  // catégorie à dix. La copie ([...]) est délibérée — sort() trierait sur
+  // place le tableau que useCategoriesAvecFiches() rend aussi à la page
+  // Catégories, qui le veut dans son ordre de déclaration. À nombre de
+  // fiches égal cet ordre de déclaration est conservé (le tri de JavaScript
+  // est stable), ce qui évite que deux tuiles permutent d'un rendu à l'autre.
+  const categoriesAffichees = [...(categories ?? [])]
+    .sort((a, b) => b.nombreFiches - a.nombreFiches)
+    .slice(0, NOMBRE_CATEGORIES_ACCUEIL)
 
   return (
     <div className="flex flex-col">

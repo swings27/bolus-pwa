@@ -1,0 +1,575 @@
+{
+  "dci": "midazolam",
+  "commun": {
+    "noms_commerciaux": [
+      "Buccolam"
+    ],
+    "famille": "Benzodiazépine hypnotique et sédatif à action rapide.",
+    "antidote": "Flumazénil",
+    "indications": [
+      "Sédation vigile (procédures diagnostiques/thérapeutiques)",
+      "Prémédication anesthésique",
+      "Induction de l'anesthésie",
+      "Agent sédatif associé à l'anesthésie",
+      "Sédation en soins intensifs",
+      "Crise convulsive aiguë prolongée"
+    ],
+    "grossesse_allaitement": {
+      "grossesse": "Le midazolam peut être utilisé au cours de la grossesse en cas de nécessité absolue, mais il est préférable d'éviter de l'utiliser pour les césariennes.",
+      "allaitement": "Le midazolam passe en faible quantité dans le lait maternel. Les mères qui allaitent doivent être informées de la nécessité de suspendre l'allaitement pendant les 24 heures qui suivent une administration du midazolam.",
+      "url_crat_grossesse": null,
+      "url_crat_allaitement": null
+    },
+    "note_ajustement": "Insuffisance hépatique : clairance réduite, demi-vie prolongée, réduire la dose et renforcer la surveillance clinique. Insuffisance rénale : accumulation possible du métabolite actif lors d'une perfusion prolongée en soins intensifs, se référer au protocole du service. Sujet âgé (> 60 ans), patient en mauvais état général ou atteint de maladie chronique : posologies adaptées.",
+    "contre_indications": [
+      "Hypersensibilité à la substance active, aux benzodiazépines ou aux excipients",
+      "Insuffisance respiratoire sévère ou dépression respiratoire aiguë (contre-indication propre à l'indication sédation vigile)"
+    ],
+    "interactions_pertinentes": [
+      {
+        "substance": "Inhibiteurs puissants du CYP3A4",
+        "effet": "Augmentation significative des concentrations plasmatiques et de la demi-vie du midazolam (multipliée jusqu'à 5 fois avec le kétoconazole ou le lopinavir/ritonavir), majorant le risque de sédation prolongée et de dépression respiratoire.",
+        "action_infirmier": "Signaler au prescripteur toute co-prescription ; surveiller la profondeur de la sédation et la fonction respiratoire."
+      },
+      {
+        "substance": "Inducteurs du CYP3A4",
+        "effet": "Diminution des concentrations plasmatiques du midazolam, pouvant réduire son efficacité (jusqu'à 60-90 % pour la rifampicine et les anticonvulsivants inducteurs).",
+        "action_infirmier": "Signaler au prescripteur toute co-prescription."
+      },
+      {
+        "substance": "Alcool et autres dépresseurs du système nerveux central",
+        "effet": "Majoration du risque de sédation, de dépression respiratoire, de coma et de décès par effet dépresseur additif sur le système nerveux central.",
+        "action_infirmier": "Éviter l'association ; surveiller étroitement la vigilance et la fonction respiratoire."
+      },
+      {
+        "substance": "Opioïdes",
+        "effet": "L'utilisation concomitante de midazolam et d'opioïdes peut entraîner une sédation, une dépression respiratoire, un coma et le décès.",
+        "action_infirmier": "Utiliser la dose efficace la plus faible pendant la durée la plus courte possible ; surveiller étroitement la sédation et la fonction respiratoire."
+      }
+    ],
+    "surveillance_specifique": [
+      {
+        "evenement": "Dépression respiratoire, apnée, arrêt respiratoire et/ou cardiaque",
+        "explication": "Effets indésirables cardio-respiratoires sévères documentés, survenant plus volontiers en cas d'injection trop rapide ou de dose élevée.",
+        "action": "Administrer uniquement dans un lieu équipé pour la surveillance et la réanimation cardio-respiratoire ; respecter la vitesse d'injection indiquée en Préparation ; surveiller la fréquence respiratoire et la saturation en oxygène."
+      },
+      {
+        "evenement": "Réactions paradoxales",
+        "explication": "Peuvent survenir avec des doses élevées et/ou une injection trop rapide ; plus fréquemment rapportées chez l'enfant et le sujet âgé.",
+        "action": "Signaler au prescripteur ; réévaluer la posologie."
+      },
+      {
+        "evenement": "Syndrome de sevrage à l'arrêt d'une sédation prolongée en soins intensifs",
+        "explication": "Une dépendance physique peut se développer lors d'une sédation prolongée ; l'arrêt brutal peut entraîner céphalées, myalgies, anxiété, agitation, confusion, hallucinations ou convulsions.",
+        "action": "Diminuer progressivement les doses en fin de sédation prolongée ; signaler tout symptôme de sevrage."
+      },
+      {
+        "evenement": "Échappement thérapeutique (tolérance) en sédation prolongée",
+        "explication": "Une diminution de l'effet sédatif peut apparaître lors d'une sédation prolongée en soins intensifs.",
+        "action": "Réévaluer régulièrement le niveau de sédation ; signaler au prescripteur si une augmentation de dose semble nécessaire."
+      }
+    ],
+    "pictogrammes": []
+  },
+  "iv": {
+    "reconstitution": null,
+    "preparation": [
+      {
+        "voie": "IVL",
+        "detail": "Utiliser pur, dilution possible dans NaCl 0,9%",
+        "duree": "Titration lente, environ 1 mg/30 secondes en sédation vigile ; fractions de 1 à 2,5mg injectées en 20 à 30 secondes avec un intervalle de 2 minutes en anesthésie ou soins intensifs.",
+        "stabilite": "Utiliser immédiatement"
+      },
+      {
+        "voie": "IM",
+        "detail": "Utiliser pur",
+        "duree": "<1 min",
+        "stabilite": "Utiliser immédiatement"
+      },
+      {
+        "voie": "SC",
+        "contexte": "Soins palliatifs",
+        "detail": "Utiliser pur ou dilué",
+        "duree": "Peut-être utilisé en titration ou en continu",
+        "stabilite": "Utiliser immédiatement ou 24h à 24°C à l'abri de la lumière si dilution."
+      },
+      {
+        "voie": "IR",
+        "population_type": "pediatrie",
+        "detail": "Solution injectable administrée par voie rectale à l'aide d'un dispositif adapté à la seringue ; compléter avec de l'eau jusqu'à 10 mL si besoin",
+        "duree": "<1 min",
+        "stabilite": "Utiliser immédiatement"
+      },
+      {
+        "voie": "PSE",
+        "detail": "NaCl 0,9%, dilution standard : 50 mg dans 50 mL (concentration 1 mg/mL)",
+        "duree": "Continu",
+        "stabilite": "24 heures à 24°C, à l'abri de la lumière."
+      }
+    ],
+    "administration": {
+      "posologie": [
+        {
+          "population": "Sédation vigile < 60 ans",
+          "population_type": "adulte",
+          "categorie": "generale",
+          "age_min_mois": 144,
+          "dose_par_prise_mg_min": 2,
+          "dose_par_prise_mg_max": 2.5,
+          "intervalle_min_min": 2,
+          "intervalle_max_min": 3,
+          "dose_journaliere_max_mg": 7.5
+        },
+        {
+          "population": "Sédation vigile ≥ 60 ans, en mauvais état général ou atteint de maladie chronique",
+          "population_type": "adulte",
+          "categorie": "speciale",
+          "dose_par_prise_mg_min": 0.5,
+          "dose_par_prise_mg_max": 1,
+          "intervalle_min_min": 2,
+          "intervalle_max_min": 3,
+          "dose_journaliere_max_mg": 3.5
+        },
+        {
+          "population": "Prémédication anesthésique < 60 ans",
+          "population_type": "adulte",
+          "categorie": "generale",
+          "dose_par_prise_mg_min": 1,
+          "dose_par_prise_mg_max": 2,
+          "intervalle_min_h": 24,
+          "intervalle_max_h": 24
+        },
+        {
+          "population": "Prémédication anesthésique < 60 ans",
+          "population_type": "adulte",
+          "categorie": "im",
+          "dose_mg_kg_min": 0.07,
+          "dose_mg_kg_max": 0.1,
+          "intervalle_min_h": 24,
+          "intervalle_max_h": 24
+        },
+        {
+          "population": "Prémédication anesthésique ≥ 60 ans ou affaibli",
+          "population_type": "adulte",
+          "categorie": "generale",
+          "dose_par_prise_mg_min": 0.5,
+          "dose_par_prise_mg_max": 0.5,
+          "intervalle_min_h": 24,
+          "intervalle_max_h": 24,
+          "dose_journaliere_max_mg": 3
+        },
+        {
+          "population": "Prémédication anesthésique ≥ 60 ans ou affaibli",
+          "population_type": "adulte",
+          "categorie": "im",
+          "dose_mg_kg_min": 0.025,
+          "dose_mg_kg_max": 0.05,
+          "intervalle_min_h": 24,
+          "intervalle_max_h": 24,
+          "dose_journaliere_max_mg": 3
+        },
+        {
+          "population": "Induction de l'anesthésie prémédiqué < 60 ans",
+          "population_type": "adulte",
+          "categorie": "speciale",
+          "dose_mg_kg_min": 0.15,
+          "dose_mg_kg_max": 0.2,
+          "intervalle_min_h": 24,
+          "intervalle_max_h": 24
+        },
+        {
+          "population": "Induction de l'anesthésie non prémédiqué < 60 ans",
+          "population_type": "adulte",
+          "categorie": "speciale",
+          "dose_mg_kg_min": 0.3,
+          "dose_mg_kg_max": 0.35,
+          "intervalle_min_h": 24,
+          "intervalle_max_h": 24
+        },
+        {
+          "population": "Induction de l'anesthésie prémédiqué ≥ 60 ans, en mauvais état général ou atteint de maladie chronique",
+          "population_type": "adulte",
+          "categorie": "speciale",
+          "dose_mg_kg_min": 0.05,
+          "dose_mg_kg_max": 0.15,
+          "intervalle_min_h": 24,
+          "intervalle_max_h": 24
+        },
+        {
+          "population": "Induction de l'anesthésie non prémédiqué ≥ 60 ans",
+          "population_type": "adulte",
+          "categorie": "speciale",
+          "dose_mg_kg_min": 0.15,
+          "dose_mg_kg_max": 0.3,
+          "intervalle_min_h": 24,
+          "intervalle_max_h": 24
+        },
+        {
+          "population": "Sédation en unité de soins intensifs, dose de charge",
+          "population_type": "adulte",
+          "categorie": "generale",
+          "dose_mg_kg_min": 0.03,
+          "dose_mg_kg_max": 0.3,
+          "intervalle_min_h": 24,
+          "intervalle_max_h": 24
+        },
+        {
+          "population": "Sédation en unité de soins intensifs, entretien (perfusion continue)",
+          "population_type": "adulte",
+          "categorie": "pse",
+          "dose_mg_kg_h_min": 0.03,
+          "dose_mg_kg_h_max": 0.2
+        },
+        {
+          "population": "Soins palliatifs, sédation proportionné, < 65 ans, titration",
+          "population_type": "adulte",
+          "categorie": "speciale",
+          "dose_par_prise_mg_min": 0.5,
+          "dose_par_prise_mg_max": 1,
+          "intervalle_min_min": 2,
+          "intervalle_max_min": 3
+        },
+        {
+          "population": "Soins palliatifs, sédation proportionné, < 65 ans, continu",
+          "population_type": "adulte",
+          "categorie": "pse",
+          "dose_mg_kg_h_min": 0.5,
+          "dose_mg_kg_h_max": 1
+        },
+        {
+          "population": "Soins palliatifs, sédation proportionné, < 65 ans, titration",
+          "population_type": "adulte",
+          "categorie": "sc",
+          "dose_par_prise_mg_min": 0.05,
+          "dose_par_prise_mg_max": 0.1,
+          "intervalle_min_min": 20,
+          "intervalle_max_min": 30
+        },
+        {
+          "population": "Sédation proportionné, > 65 ans, insuffisance d'organe, dénutrition sévère ou déshydratation",
+          "population_type": "adulte",
+          "categorie": "speciale",
+          "dose_par_prise_mg_min": 0.5,
+          "dose_par_prise_mg_max": 0.5,
+          "intervalle_min_min": 2,
+          "intervalle_max_min": 5
+        },
+        {
+          "population": "Soins palliatifs, sédation profonde, < 65 ans, titration",
+          "population_type": "adulte",
+          "categorie": "speciale",
+          "dose_par_prise_mg_min": 1,
+          "dose_par_prise_mg_max": 1,
+          "intervalle_min_min": 2,
+          "intervalle_max_min": 3
+        },
+        {
+          "population": "Soins palliatifs, sédation profonde, < 65 ans, continu",
+          "population_type": "adulte",
+          "categorie": "pse",
+          "dose_mg_h_min": 1,
+          "dose_mg_h_max": 1
+        },
+        {
+          "population": "Soins palliatifs, sédation profonde, < 65 ans, titration",
+          "population_type": "adulte",
+          "categorie": "sc",
+          "dose_par_prise_mg_min": 1,
+          "dose_par_prise_mg_max": 1,
+          "intervalle_min_min": 20,
+          "intervalle_max_min": 30
+        },
+        {
+          "population": "Sédation proportionné et profonde, > 65 ans, insuffisance d'organe, dénutrition sévère ou déshydratation",
+          "population_type": "adulte",
+          "categorie": "generale",
+          "dose_par_prise_mg_min": 0.5,
+          "dose_par_prise_mg_max": 0.5,
+          "intervalle_min_min": 2,
+          "intervalle_max_min": 5
+        },
+        {
+          "population": "Sédation vigile",
+          "population_type": "pediatrie",
+          "categorie": "generale",
+          "age_min_mois": 6,
+          "age_max_mois": 60,
+          "dose_mg_kg_min": 0.05,
+          "dose_mg_kg_max": 0.1,
+          "intervalle_min_min": 2,
+          "intervalle_max_min": 3,
+          "dose_journaliere_max_mg": 6
+        },
+        {
+          "population": "Sédation vigile",
+          "population_type": "pediatrie",
+          "categorie": "generale",
+          "age_min_mois": 72,
+          "age_max_mois": 144,
+          "dose_mg_kg_min": 0.025,
+          "dose_mg_kg_max": 0.05,
+          "intervalle_min_min": 2,
+          "intervalle_max_min": 3,
+          "dose_journaliere_max_mg": 10
+        },
+        {
+          "population": "Sédation vigile / prémédication",
+          "population_type": "pediatrie",
+          "categorie": "ir",
+          "age_min_mois": 6,
+          "age_max_mois": null,
+          "dose_mg_kg_min": 0.3,
+          "dose_mg_kg_max": 0.5,
+          "intervalle_min_h": 24,
+          "intervalle_max_h": 24,
+          "dose_journaliere_max_g": "Selon poids"
+        },
+        {
+          "population": "Sédation vigile, enfant",
+          "population_type": "pediatrie",
+          "categorie": "im",
+          "dose_mg_kg_min": 0.05,
+          "dose_mg_kg_max": 0.15,
+          "intervalle_min_h": 24,
+          "intervalle_max_h": 24,
+          "dose_journaliere_max_g": "Selon poids"
+        },
+        {
+          "population": "Prémédication anesthésique",
+          "population_type": "pediatrie",
+          "categorie": "im",
+          "age_min_mois": 12,
+          "age_max_mois": null,
+          "dose_mg_kg_min": 0.08,
+          "dose_mg_kg_max": 0.2,
+          "intervalle_min_h": 24,
+          "intervalle_max_h": 24,
+          "dose_journaliere_max_g": "Selon poids"
+        },
+        {
+          "population": "Sédation en soins intensifs, dose de charge",
+          "population_type": "pediatrie",
+          "categorie": "generale",
+          "age_min_mois": 6,
+          "age_max_mois": null,
+          "dose_mg_kg_min": 0.05,
+          "dose_mg_kg_max": 0.2,
+          "intervalle_min_h": 24,
+          "intervalle_max_h": 24
+        },
+        {
+          "population": "Sédation en soins intensifs — entretien continu",
+          "population_type": "pediatrie",
+          "categorie": "pse",
+          "age_min_mois": 6,
+          "age_max_mois": null,
+          "dose_mg_kg_h_min": 0.06,
+          "dose_mg_kg_h_max": 0.12
+        },
+        {
+          "population": "Sédation en soins intensifs, âge gestationnel < 32 SA ",
+          "population_type": "pediatrie",
+          "categorie": "pse",
+          "dose_mg_kg_h_min": 0.03,
+          "dose_mg_kg_h_max": 0.03
+        },
+        {
+          "population": "Sédation en soins intensifs, âge gestationnel > 32 SA",
+          "population_type": "pediatrie",
+          "categorie": "pse",
+          "age_min_jours": 0,
+          "age_max_mois": 6,
+          "dose_mg_kg_h_min": 0.06,
+          "dose_mg_kg_h_max": 0.06
+        }
+      ]
+    },
+    "incompatibilites": [
+      {
+        "substance": "Amoxicilline",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Amoxicilline/acide clavulanique",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Céfépime",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Ceftazidime",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Céfuroxime",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Dexaméthasone (phosphate disodique)",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Ésoméprazole",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Flucloxacilline",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Furosémide",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Imipénem/cilastatine",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Bicarbonate de sodium",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Triméthoprime/sulfaméthoxazole",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Nutrition parentérale totale",
+        "niveau": "a_verifier"
+      }
+    ]
+  },
+  "oral": {
+    "formes": [
+      {
+        "type": "Solution buccale",
+        "dosage": "2,5 mg - 5 mg - 7,5 mg - 10 mg",
+        "ecrasable": null,
+        "ouverture_gelule": null,
+        "posologie_adulte": [
+          {
+            "population": "Crise convulsive aiguë prolongée",
+            "population_type": "pediatrie",
+            "categorie": "generale",
+            "dose_par_prise_mg_min": 2.5,
+            "dose_par_prise_mg_max": 2.5,
+            "age_min_mois": 3,
+            "age_max_mois": 11
+          },
+          {
+            "population": "Crise convulsive aiguë prolongée",
+            "population_type": "pediatrie",
+            "categorie": "generale",
+            "dose_par_prise_mg_min": 5,
+            "dose_par_prise_mg_max": 5,
+            "age_min_mois": 12,
+            "age_max_mois": 59
+          },
+          {
+            "population": "Crise convulsive aiguë prolongée",
+            "population_type": "pediatrie",
+            "categorie": "generale",
+            "dose_par_prise_mg_min": 7.5,
+            "dose_par_prise_mg_max": 7.5,
+            "age_min_mois": 60,
+            "age_max_mois": 119
+          },
+          {
+            "population": "Crise convulsive aiguë prolongée",
+            "population_type": "adulte",
+            "categorie": "generale",
+            "dose_par_prise_mg_min": 10,
+            "dose_par_prise_mg_max": 10,
+            "age_min_mois": 120,
+            "age_max_mois": null
+          }
+        ]
+      }
+    ],
+    "recommandation_sonde": {
+      "forme_preferee": "",
+      "alternative": "Voie injectable, avis médical"
+    }
+  },
+  "aerosol": null,
+  "tracabilite": {
+    "rcp_source": [
+      {
+        "specialite": "MIDAZOLAM PANPHARMA 5 mg/mL, solution injectable",
+        "titulaire": "PANPHARMA",
+        "date_maj": "06/03/2026 (page RCP)",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/61324091/extrait"
+      },
+      {
+        "specialite": "MIDAZOLAM PANPHARMA 1 mg/mL, solution injectable",
+        "titulaire": "PANPHARMA",
+        "date_maj": "Déclaration de commercialisation 10/02/2004",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/63680638/extrait"
+      },
+      {
+        "specialite": "MIDAZOLAM AGUETTANT 5 mg/mL, solution injectable",
+        "titulaire": "Laboratoire AGUETTANT",
+        "date_maj": "16/08/2023",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/63020895/extrait"
+      },
+      {
+        "specialite": "MIDAZOLAM AGUETTANT 1 mg/mL, solution injectable",
+        "titulaire": "Laboratoire AGUETTANT",
+        "date_maj": "16/08/2023",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/66231933/extrait"
+      },
+      {
+        "specialite": "MIDAZOLAM VIATRIS 5 mg/mL, solution injectable ou rectale",
+        "titulaire": "VIATRIS SANTÉ",
+        "date_maj": "Non relevée lors de cette session",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/63736019/extrait"
+      },
+      {
+        "specialite": "MIDAZOLAM VIATRIS 1 mg/mL, solution injectable ou rectale",
+        "titulaire": "VIATRIS SANTÉ",
+        "date_maj": "26/07/2024",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/67824655/extrait"
+      },
+      {
+        "specialite": "MIDAZOLAM ACCORD 5 mg/mL, solution injectable",
+        "titulaire": "ACCORD HEALTHCARE France SAS",
+        "date_maj": "07/08/2025",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/68529120/extrait"
+      },
+      {
+        "specialite": "MIDAZOLAM ACCORD 1 mg/mL, solution injectable",
+        "titulaire": "ACCORD HEALTHCARE France SAS",
+        "date_maj": "07/08/2025",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/68341392/extrait"
+      },
+      {
+        "specialite": "MIDAZOLAM KALCEKS 5 mg/mL, solution injectable/pour perfusion",
+        "titulaire": "AS KALCEKS",
+        "date_maj": "26/06/2024",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/67386324/extrait"
+      },
+      {
+        "specialite": "HYPNOVEL 5 mg/mL, solution injectable",
+        "titulaire": "Non déterminé (spécialité historique Roche)",
+        "date_maj": "Non applicable",
+        "url_ansm": ""
+      },
+      {
+        "specialite": "BUCCOLAM 2,5 mg / 5 mg / 7,5 mg / 10 mg, solution buccale",
+        "titulaire": "NEURAXPHARM PHARMACEUTICALS S.L.",
+        "date_maj": "Non relevée lors de cette session",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/65629845/extrait"
+      }
+    ],
+    "statut": "valide",
+    "validation": {
+      "date": "2026-09-07",
+      "validateur": "Anna Trabaud-Lopez (IDE, porteuse du projet), vérification des données extraites contre les RCP ; équipe pharmacie, validation de la méthodologie et arbitrage des points litigieux",
+      "perimetre": [
+        "adulte",
+        "pediatrie"
+      ],
+      "prochaine_revision": "2026-12-07"
+    }
+  }
+}

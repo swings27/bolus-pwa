@@ -1,0 +1,242 @@
+{
+  "dci": "phloroglucinol",
+  "commun": {
+    "noms_commerciaux": [
+      "Spasfon",
+      "Spasfon Lyoc",
+      "Spasmocalm"
+    ],
+    "famille": "Antispasmodique musculotrope",
+    "antidote": "",
+    "indications": [
+      "Douleurs digestives et biliaires",
+      "Coliques néphrétiques",
+      "Douleurs spasmodiques gynécologiques",
+      "Contractions de grossesse (adjuvant)"
+    ],
+    "grossesse_allaitement": {
+      "grossesse": "L'utilisation de phloroglucinol ne doit être envisagée au cours de la grossesse que si nécessaire.",
+      "allaitement": "En l'absence de données, il est conseillé d'éviter l'utilisation de phloroglucinol pendant l'allaitement.",
+      "url_crat_grossesse": "https://www.lecrat.fr/11748/",
+      "url_crat_allaitement": "https://www.lecrat.fr/11749/"
+    },
+    "contre_indications": [
+      "Hypersensibilité à la substance active ou à l'un des excipients.",
+      "Allergie au blé (comprimé enrobé, en raison de l'amidon de blé qu'il contient)."
+    ],
+    "interactions_pertinentes": [],
+    "surveillance_specifique": [
+      {
+        "evenement": "Association avec des antalgiques majeurs",
+        "explication": "Effet spasmogène de la morphine et de ses dérivés susceptible de s'opposer à l'effet antispasmodique attendu du phloroglucinol.",
+        "action": "Signaler au prescripteur toute coprescription de morphine ou d'un dérivé morphinique."
+      }
+    ],
+    "pictogrammes": [],
+    "note_ajustement": null
+  },
+  "iv": {
+    "reconstitution": null,
+    "preparation": [
+      {
+        "voie": "IVD",
+        "detail": "Utiliser pur (ampoule de 4 mL).",
+        "duree": "Bolus",
+        "contexte": "+ trimethylphloroglucinol",
+        "stabilite": null
+      },
+      {
+        "voie": "IM",
+        "detail": "Utiliser pur (ampoule de 4 mL).",
+        "duree": "< 1 minute",
+        "contexte": "+ trimethylphloroglucinol",
+        "stabilite": null
+      }
+    ],
+    "administration": {
+      "posologie": [
+        {
+          "population": "Traitement standard",
+          "categorie": "generale",
+          "population_type": "adulte",
+          "dose_par_prise_mg_min": 40,
+          "dose_par_prise_mg_max": 40,
+          "dose_journaliere_max_mg": 120,
+          "intervalle_min_h": 8,
+          "intervalle_max_h": 8
+        }
+      ]
+    },
+    "incompatibilites": [
+      {
+        "substance": "Noramidopyrine",
+        "niveau": "absolu"
+      }
+    ]
+  },
+  "aerosol": null,
+  "oral": {
+    "formes": [
+      {
+        "type": "Lyophilisat oral",
+        "dosage": "80mg - 160 mg",
+        "ecrasable": null,
+        "ouverture_gelule": null,
+        "posologie_adulte": [
+          {
+            "population": "Traitement standard",
+            "categorie": "generale",
+            "dose_par_prise_mg_min": 160,
+            "dose_par_prise_mg_max": 160,
+            "dose_journaliere_max_mg": 480,
+            "intervalle_min_h": 2,
+            "intervalle_max_h": 8,
+            "population_type": "adulte"
+          }
+        ]
+      },
+      {
+        "type": "Comprimé orodispersible",
+        "dosage": "80mg - 160mg",
+        "ecrasable": true,
+        "ouverture_gelule": null,
+        "posologie_adulte": [
+          {
+            "population": "Traitement standard",
+            "categorie": "generale",
+            "dose_par_prise_mg_min": 160,
+            "dose_par_prise_mg_max": 160,
+            "dose_journaliere_max_mg": 480,
+            "intervalle_min_h": 2,
+            "intervalle_max_h": 8,
+            "population_type": "adulte"
+          },
+          {
+            "population": "Traitement standard",
+            "categorie": "generale",
+            "population_type": "pediatrie",
+            "age_min_mois": 24,
+            "dose_par_prise_mg_min": 80,
+            "dose_par_prise_mg_max": 80,
+            "dose_journaliere_max_mg": 160,
+            "intervalle_min_h": 2,
+            "intervalle_max_h": 12
+          }
+        ]
+      },
+      {
+        "type": "Comprimé enrobé",
+        "dosage": "80 mg / 80 mg (phloroglucinol / triméthylphloroglucinol)",
+        "ecrasable": false,
+        "ouverture_gelule": null,
+        "posologie_adulte": [
+          {
+            "population": "Traitement standard",
+            "categorie": "generale",
+            "population_type": "adulte",
+            "dose_par_prise_mg_min": 160,
+            "dose_par_prise_mg_max": 160,
+            "dose_journaliere_max_mg": 480,
+            "intervalle_min_h": 2,
+            "intervalle_max_h": 8
+          },
+          {
+            "population": "Traitement standard",
+            "categorie": "generale",
+            "population_type": "pediatrie",
+            "age_min_mois": 72,
+            "dose_par_prise_mg_min": 80,
+            "dose_par_prise_mg_max": 80,
+            "dose_journaliere_max_mg": 160,
+            "intervalle_min_h": 2,
+            "intervalle_max_h": 12
+          }
+        ]
+      },
+      {
+        "type": "Suppositoire",
+        "dosage": "150 mg / 150 mg (phloroglucinol / triméthylphloroglucinol)",
+        "ecrasable": null,
+        "ouverture_gelule": null,
+        "posologie_adulte": [
+          {
+            "population": "Traitement standard - suppositoire",
+            "categorie": "speciale",
+            "population_type": "adulte",
+            "dose_par_prise_mg_min": 150,
+            "dose_par_prise_mg_max": 150,
+            "dose_journaliere_max_mg": 450,
+            "intervalle_min_h": 2,
+            "intervalle_max_h": 8
+          }
+        ]
+      }
+    ],
+    "recommandation_sonde": {
+      "forme_preferee": "Comprimé orodispersible",
+      "alternative": "Lyophilisat oral"
+    }
+  },
+  "tracabilite": {
+    "rcp_source": [
+      {
+        "specialite": "Spasfon Lyoc 80 mg, lyophilisat oral",
+        "titulaire": "TEVA SANTE",
+        "date_maj": "10/01/2024",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/62944693/extrait"
+      },
+      {
+        "specialite": "Spasfon Lyoc 160 mg, lyophilisat oral",
+        "titulaire": "TEVA SANTE",
+        "date_maj": "23/04/2026",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/64970338/extrait"
+      },
+      {
+        "specialite": "Phloroglucinol EG 80 mg, comprimé orodispersible",
+        "titulaire": "EG LABO - Laboratoires EuroGenerics",
+        "date_maj": "07/07/2026",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/60399956/extrait"
+      },
+      {
+        "specialite": "Phloroglucinol Biogaran 160 mg, comprimé orodispersible",
+        "titulaire": "Biogaran",
+        "date_maj": "05/04/2023",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/66482348/extrait"
+      },
+      {
+        "specialite": "Spasfon, comprimé enrobé",
+        "titulaire": "TEVA SANTE",
+        "date_maj": "25/09/2020",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/68081368/extrait"
+      },
+      {
+        "specialite": "Spasfon, suppositoire",
+        "titulaire": "ACINO AG",
+        "date_maj": "19/08/2025",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/65923640/extrait"
+      },
+      {
+        "specialite": "Spasfon, solution injectable en ampoule",
+        "titulaire": "TEVA SANTE",
+        "date_maj": "22/07/2020",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/62998997/extrait"
+      },
+      {
+        "specialite": "Phloroglucinol/Triméthylphloroglucinol Arrow, solution injectable",
+        "titulaire": "EUGIA PHARMA (MALTA) LTD",
+        "date_maj": "04/01/2023",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/61788266/extrait"
+      }
+    ],
+    "statut": "valide",
+    "validation": {
+      "date": "2026-09-08",
+      "validateur": "Anna Trabaud-Lopez (IDE, porteuse du projet), vérification des données extraites contre les RCP ; équipe pharmacie, validation de la méthodologie et arbitrage des points litigieux",
+      "perimetre": [
+        "adulte",
+        "pediatrie"
+      ],
+      "prochaine_revision": "2026-12-08"
+    }
+  }
+}

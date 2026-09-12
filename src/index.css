@@ -23,10 +23,15 @@
   --validation: #3f5d38;
   --validation-pastille: #3f5d38;
   --alerte: #c0392b;
+  /* Rouge plein, à texte blanc (ajustement "absolu" d'une fiche, voir
+     SectionPosologies) — délibérément PAS éclairci en thème sombre,
+     contrairement à --alerte : le blanc passe à ~5,9:1 sur ce rouge contre
+     ~2,4:1 sur le --alerte sombre (#e07a6b), qui est adouci pour servir de
+     teinte et non de fond plein. Une même valeur dans les deux thèmes, donc,
+     pour un signal qui doit rester maximal et lisible partout. */
+  --alerte-pleine: #c0392b;
   --indication: #0b3c49;
   --bloc-antidote: #d9dfc6;
-  --bloc-alerte: #f0d1c5;
-  --bloc-indication: #d4d6ce;
   --zone-surveillance: #f7e6db;
   --onglet-inactif: #e6eaeb;
   --opacite-tint: 18%;
@@ -50,10 +55,6 @@
   --nav-actif: #c65d3b;
   --nav-inactif: #0b3c49;
   --calc-fond: #c65d3b;
-  /* Même couleur que --nav-fond (le footer) : le cercle du Calculateur
-     paraît ainsi "posé" dans le prolongement de la barre plutôt que
-     découpé dessus. */
-  --calc-contour: var(--nav-fond);
   --calc-icone: #fffcf5;
   --calc-ombre: rgba(11, 60, 73, 0.18);
   /* Même couleur que --fond (pas une teinte propre) : le Header ne se
@@ -118,8 +119,6 @@
   --alerte: #e07a6b;
   --indication: #f2e9da;
   --bloc-antidote: #344b48;
-  --bloc-alerte: #362b2d;
-  --bloc-indication: #34464a;
   --zone-surveillance: color-mix(in srgb, #e8946e 15%, #0f272e);
   --onglet-inactif: color-mix(in srgb, #f2e9da 12%, #17343c);
   --opacite-tint: 22%;
@@ -151,8 +150,6 @@
   --nav-actif: #e8946e;
   --nav-inactif: #f2e9da;
   --calc-fond: #e8946e;
-  /* Même couleur que --nav-fond (le footer), comme en clair. */
-  --calc-contour: var(--nav-fond);
   --calc-icone: #fffcf5;
   /* Même teinte que --ombre-header (le halo clair entre le Header et le
      contenu) plutôt qu'une ombre noire propre : cohérence des ombres
@@ -205,15 +202,7 @@
   --color-interactif: var(--interactif);
   --color-accent: var(--accent);
   --color-accent-clair: var(--accent-clair);
-  --color-validation: var(--validation);
-  --color-validation-pastille: var(--validation-pastille);
   --color-alerte: var(--alerte);
-  --color-indication: var(--indication);
-  --color-bloc-antidote: var(--bloc-antidote);
-  --color-bloc-alerte: var(--bloc-alerte);
-  --color-bloc-indication: var(--bloc-indication);
-  --color-zone-surveillance: var(--zone-surveillance);
-  --color-onglet-inactif: var(--onglet-inactif);
 
   /* Polices chargées via Google Fonts (voir index.html). Namespace
      --font-* : Tailwind v4 génère automatiquement les utilitaires

@@ -1,36 +1,42 @@
 import { Activity, Blend, Baby } from 'lucide-react'
-import type { ISurveillance, IGrossesseAllaitement } from '../../types'
+import type { ISurveillance, IGrossesseAllaitementRcp, IRcpSource } from '../../types'
 import GroupePrecaution from './GroupePrecaution'
+import LienExterne from './LienExterne'
 import AccordeonImbrique from './AccordeonImbrique'
 import SourcesRcp from './SourcesRcp'
 
 interface IPrecautionsFicheProps {
   surveillanceSpecifique: ISurveillance[]
-  interactionsMedicamenteuses: ISurveillance[] | null
-  grossesseAllaitement: IGrossesseAllaitement | null
-  sourcesRcp: string[]
+  interactionsMedicamenteuses: ISurveillance[]
+  grossesseAllaitement: IGrossesseAllaitementRcp | null
+  rcpSource: IRcpSource[]
+  statut: string
   dateRevision: string
+  perimetreValidation: string[]
+  prochaineRevision: string | null
 }
 
 // Zone "Précautions" en bas de fiche : regroupe surveillance spécifique,
 // interactions médicamenteuses et grossesse/allaitement, chacun dans son
 // propre groupe dépliable (voir GroupePrecaution), plus l'accès aux
-// sources RCP. Remplace l'ancien SurveillanceAccordeon, qui n'affichait que
-// la surveillance seule sans les deux autres catégories.
+// sources RCP.
 export default function PrecautionsFiche({
   surveillanceSpecifique,
   interactionsMedicamenteuses,
   grossesseAllaitement,
-  sourcesRcp,
+  rcpSource,
+  statut,
   dateRevision,
+  perimetreValidation,
+  prochaineRevision,
 }: IPrecautionsFicheProps) {
   const aSurveillance = surveillanceSpecifique.length > 0
-  const aInteractions = (interactionsMedicamenteuses?.length ?? 0) > 0
+  const aInteractions = interactionsMedicamenteuses.length > 0
 
   // Rien à montrer dans cette zone : ni précaution, ni sources — n'arrive
-  // pas en pratique (sourcesRcp existe toujours), mais reste correct si un
+  // pas en pratique (rcpSource existe toujours), mais reste correct si un
   // jour une fiche minimale en est dépourvue.
-  if (!aSurveillance && !aInteractions && !grossesseAllaitement && sourcesRcp.length === 0) return null
+  if (!aSurveillance && !aInteractions && !grossesseAllaitement && rcpSource.length === 0) return null
 
   // Espace réservé par <main> pour la BottomNavBar/les bandeaux flottants
   // (voir Layout.tsx) : flex-1 suffit à remplir la hauteur DISPONIBLE de
@@ -73,31 +79,41 @@ export default function PrecautionsFiche({
 
         {aInteractions && (
           <GroupePrecaution icone={Blend} titre="Interactions médicamenteuses">
-            <AccordeonImbrique items={interactionsMedicamenteuses!} />
+            <AccordeonImbrique items={interactionsMedicamenteuses} />
           </GroupePrecaution>
         )}
 
         {grossesseAllaitement && (
           <GroupePrecaution icone={Baby} titre="Grossesse / Allaitement">
-            <div className="flex flex-col gap-2 pb-1.5">
-              <div className="flex items-baseline gap-2.5">
-                <span className="w-[72px] shrink-0 text-[11px] font-semibold uppercase text-texte-doux">
-                  Grossesse
-                </span>
-                <span className="text-xs leading-relaxed text-texte">{grossesseAllaitement.grossesse}</span>
+            <div className="flex flex-col gap-3 pb-1.5">
+              <div>
+                <span className="text-[11px] font-semibold uppercase text-texte-doux">Grossesse</span>
+                <p className="mt-0.5 text-xs leading-relaxed text-texte">{grossesseAllaitement.grossesse}</p>
+                {grossesseAllaitement.url_crat_grossesse && (
+                  <LienExterne href={grossesseAllaitement.url_crat_grossesse}>Voir sur le CRAT</LienExterne>
+                )}
               </div>
-              <div className="flex items-baseline gap-2.5">
-                <span className="w-[72px] shrink-0 text-[11px] font-semibold uppercase text-texte-doux">
-                  Allaitement
-                </span>
-                <span className="text-xs leading-relaxed text-texte">{grossesseAllaitement.allaitement}</span>
+              <div>
+                <span className="text-[11px] font-semibold uppercase text-texte-doux">Allaitement</span>
+                <p className="mt-0.5 text-xs leading-relaxed text-texte">{grossesseAllaitement.allaitement}</p>
+                {grossesseAllaitement.url_crat_allaitement && (
+                  <LienExterne href={grossesseAllaitement.url_crat_allaitement}>Voir sur le CRAT</LienExterne>
+                )}
               </div>
             </div>
           </GroupePrecaution>
         )}
       </div>
 
-      {sourcesRcp.length > 0 && <SourcesRcp sources={sourcesRcp} dateRevision={dateRevision} />}
+      {rcpSource.length > 0 && (
+        <SourcesRcp
+          sources={rcpSource}
+          statut={statut}
+          dateRevision={dateRevision}
+          perimetreValidation={perimetreValidation}
+          prochaineRevision={prochaineRevision}
+        />
+      )}
     </div>
   )
 }

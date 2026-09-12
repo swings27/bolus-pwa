@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react'
+import TexteRepliable from './TexteRepliable'
 
 type Variant = 'validation' | 'alerte' | 'indication'
 
@@ -6,6 +7,10 @@ interface IBlocInfoProps {
   label: string
   variant: Variant
   children: ReactNode
+  /** Replie le contenu à 3 lignes avec un bouton "Voir tout" quand il
+   * déborde (ex. contre-indications/indications à rallonge comme celles de
+   * l'ibuprofène) — omis par défaut (ex. Antidote, toujours court). */
+  repliable?: boolean
 }
 
 // Couleur saturée (pastille + bordure), par variant. Le fond se calcule à
@@ -28,7 +33,7 @@ const CONFIG: Record<Variant, { saturee: string }> = {
 // ça, seul le conteneur invisible qui l'enveloppe est étiré, pas la boîte
 // bordée elle-même. Sans effet ailleurs (un parent à hauteur automatique
 // ignore un h-full sur son enfant).
-export default function BlocInfo({ label, variant, children }: IBlocInfoProps) {
+export default function BlocInfo({ label, variant, children, repliable = false }: IBlocInfoProps) {
   const { saturee } = CONFIG[variant]
 
   return (
@@ -45,7 +50,13 @@ export default function BlocInfo({ label, variant, children }: IBlocInfoProps) {
       >
         {label}
       </span>
-      <div className="text-sm text-texte">{children}</div>
+      {repliable ? (
+        <TexteRepliable couleur={saturee} className="text-sm text-texte">
+          {children}
+        </TexteRepliable>
+      ) : (
+        <div className="text-sm text-texte">{children}</div>
+      )}
     </div>
   )
 }

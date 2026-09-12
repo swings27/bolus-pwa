@@ -14,6 +14,7 @@ import { useFiche } from '../hooks/useFiche'
 import { useFavoris } from '../hooks/useFavoris'
 import { enregistrerConsultation } from '../utils/historique'
 import { TAILLE_MAX_FAVORIS } from '../utils/favoris'
+import { avecMarqueDeposee } from '../utils/marques'
 
 // Squelette plutôt qu'un spinner : des blocs approximant la mise en page
 // réelle (titre, cartes, bloc de forme) donnent une impression de chargement
@@ -63,8 +64,8 @@ export default function FicheMedicament() {
   const formesDisponibles = useMemo<Forme[]>(() => {
     if (!fiche) return []
     const formes: Forme[] = []
-    if (fiche.injectable) formes.push('injectable')
-    if (fiche.perOsSonde) formes.push('perOs')
+    if (fiche.iv) formes.push('injectable')
+    if (fiche.oral) formes.push('perOs')
     return formes
   }, [fiche])
 
@@ -138,17 +139,24 @@ export default function FicheMedicament() {
       <div className="flex flex-col gap-1 px-6 pt-2">
         <div className="-mr-2.5 flex items-center justify-between gap-2">
           <p className="text-xs font-semibold uppercase tracking-widest text-accent">
-            {fiche.sousFamille}
+            {fiche.famille}
           </p>
           <BoutonFavori
             actif={favoris.includes(fiche.id)}
             onClick={async () => setFavoriBloque(await basculer(fiche.id))}
           />
         </div>
-        <h1 className="font-display text-[2.5rem] leading-tight text-texte">{fiche.dci}</h1>
+        {/* break-words (pas juste la largeur du conteneur) : un dci comme
+            "piperacilline/tazobactam" n'a aucun espace, seulement un "/" —
+            le navigateur ne le traite pas de façon fiable comme un point de
+            coupure et le texte peut déborder au lieu de passer à la ligne,
+            contrairement à "amoxicilline/acide clavulanique" qui a un
+            espace. break-words force la coupure dès que la ligne déborde,
+            avec ou sans espace/tiret dans le texte. */}
+        <h1 className="break-words font-display text-[2.5rem] leading-tight text-texte">{fiche.dci}</h1>
         {fiche.nomsCommerciaux.length > 0 && (
           <div className="text-sm text-texte-doux">
-            <ListeSeparee items={fiche.nomsCommerciaux} />
+            <ListeSeparee items={avecMarqueDeposee(fiche.nomsCommerciaux)} />
           </div>
         )}
         {favoriBloque && (
@@ -161,11 +169,17 @@ export default function FicheMedicament() {
       {/* Grille antidote / contre-indications : l'antidote s'ajuste à son
           contenu (souvent un seul nom court) plutôt que de forcer un
           partage strict 50/50, qui l'étirerait inutilement sur toute la
-          moitié de l'écran. */}
+          moitié de l'écran.
+          max-w-[45%] : le champ contient d'ordinaire un nom ("Naloxone",
+          "Flumazénil"), mais rien ne l'y oblige — l'héparine sodique y met
+          une phrase de 300 caractères. Sans plafond, la largeur au contenu
+          faisait déborder la page entière en largeur (le texte ne revenait
+          pas à la ligne, whitespace-nowrap). Le plafond laisse le texte
+          s'enrouler tout en gardant une colonne étroite pour un nom court. */}
       {(antidotePresent || contreIndicationsPresentes) && (
         <div className="mt-6 flex items-stretch gap-3 px-6">
           {antidotePresent && (
-            <div className="shrink-0 whitespace-nowrap">
+            <div className="max-w-[45%] shrink-0">
               <BlocInfo variant="validation" label="Antidote">
                 {fiche.antidote}
               </BlocInfo>
@@ -173,7 +187,7 @@ export default function FicheMedicament() {
           )}
           {contreIndicationsPresentes && (
             <div className="min-w-0 flex-1">
-              <BlocInfo variant="alerte" label="Contre-indications">
+              <BlocInfo variant="alerte" label="Contre-indications" repliable>
                 <ListeSeparee items={fiche.contreIndications} />
               </BlocInfo>
             </div>
@@ -184,7 +198,7 @@ export default function FicheMedicament() {
       {/* Indications */}
       {fiche.indications.length > 0 && (
         <div className="mt-3 px-6">
-          <BlocInfo variant="indication" label="Indications">
+          <BlocInfo variant="indication" label="Indications" repliable>
             <ListeSeparee items={fiche.indications} />
           </BlocInfo>
         </div>
@@ -213,11 +227,23 @@ export default function FicheMedicament() {
                 Sélectionnez une forme d'administration ci-dessus
               </p>
             )}
-            {formeActive === 'injectable' && fiche.injectable && (
-              <DetailInjectable donnees={fiche.injectable} />
+            {/* noteAjustement est passée aux deux : l'ajustement porte sur la
+                molécule (fonction rénale, hépatique, âge, poids), pas sur une
+                voie. Elle reste rendue à l'intérieur de l'onglet actif, donc
+                invisible tant qu'aucune forme n'est sélectionnée. */}
+            {formeActive === 'injectable' && fiche.iv && (
+              <DetailInjectable
+                donnees={fiche.iv}
+                noteAjustement={fiche.noteAjustement}
+                noteAjustementAbsolue={fiche.noteAjustementAbsolue}
+              />
             )}
-            {formeActive === 'perOs' && fiche.perOsSonde && (
-              <DetailPerOs donnees={fiche.perOsSonde} />
+            {formeActive === 'perOs' && fiche.oral && (
+              <DetailPerOs
+                donnees={fiche.oral}
+                noteAjustement={fiche.noteAjustement}
+                noteAjustementAbsolue={fiche.noteAjustementAbsolue}
+              />
             )}
           </div>
         </div>
@@ -227,8 +253,11 @@ export default function FicheMedicament() {
         surveillanceSpecifique={fiche.surveillanceSpecifique}
         interactionsMedicamenteuses={fiche.interactionsMedicamenteuses}
         grossesseAllaitement={fiche.grossesseAllaitement}
-        sourcesRcp={fiche.sourcesRcp}
+        rcpSource={fiche.rcpSource}
+        statut={fiche.statut}
         dateRevision={fiche.dateRevision}
+        perimetreValidation={fiche.perimetreValidation}
+        prochaineRevision={fiche.prochaineRevision}
       />
     </div>
   )
