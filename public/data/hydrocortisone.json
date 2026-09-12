@@ -15,8 +15,7 @@
       "grossesse": "L'insuffisance surrénale maternelle doit être traitée en cours de grossesse, en adaptant la posologie de l'hydrocortisone à la clinique, si besoin.",
       "allaitement": "L'hydrocortisone étant excrétée dans le lait maternel, l'allaitement est à éviter.",
       "url_crat_grossesse": "https://www.lecrat.fr/5077/",
-      "url_crat_allaitement": "https://www.lecrat.fr/5079/",
-      "source": "RCP HYDROCORTISONE UPJOHN 100 mg, poudre et solvant pour solution injectable, section 4.6"
+      "url_crat_allaitement": "https://www.lecrat.fr/5079/"
     },
     "contre_indications": [
       "Hypersensibilité à la substance active ou à l'un des excipients",
@@ -27,46 +26,40 @@
       {
         "substance": "Sultopride",
         "effet": "Risque majoré de troubles du rythme ventriculaire, notamment de torsades de pointes, par addition des effets hypokaliémiants",
-        "action_infirmier": "Signaler au prescripteur toute co-prescription de sultopride",
-        "source_rcp": "RCP HYDROCORTISONE UPJOHN 100 mg, section 4.5"
+        "action_infirmier": "Signaler au prescripteur toute co-prescription de sultopride"
       },
       {
         "substance": "Vaccins vivants atténués",
         "effet": "Risque de maladie vaccinale généralisée, potentiellement mortelle, chez le patient immunodéprimé par la corticothérapie",
-        "action_infirmier": "Signaler au prescripteur tout projet de vaccination vivante chez un patient sous corticothérapie",
-        "source_rcp": "RCP HYDROCORTISONE UPJOHN 100 mg, section 4.5"
+        "action_infirmier": "Signaler au prescripteur tout projet de vaccination vivante chez un patient sous corticothérapie"
       },
       {
         "substance": "Anticoagulants oraux",
         "effet": "Effet de l'anticoagulant pouvant être modifié par la corticothérapie",
-        "action_infirmier": "Renforcer la surveillance de l'INR en cas d'introduction ou d'arrêt de la corticothérapie",
-        "source_rcp": "RCP HYDROCORTISONE UPJOHN 100 mg, section 4.5"
+        "action_infirmier": "Renforcer la surveillance de l'INR en cas d'introduction ou d'arrêt de la corticothérapie"
       },
       {
         "substance": "Médicaments hypokaliémiants",
         "effet": "Risque majoré d'hypokaliémie par addition des effets",
-        "action_infirmier": "Surveiller la kaliémie en cas d'association",
-        "source_rcp": "RCP HYDROCORTISONE UPJOHN 100 mg, section 4.5"
+        "action_infirmier": "Surveiller la kaliémie en cas d'association"
       }
     ],
     "surveillance_specifique": [
       {
         "evenement": "Décompensation d'une insuffisance surrénale lors d'un épisode de stress (infection, chirurgie, traumatisme) chez un patient sous hydrocortisone substitutive",
         "explication": "Les besoins en cortisol augmentent lors du stress ; une dose substitutive habituelle peut devenir insuffisante et exposer à un collapsus surrénalien.",
-        "action": "Signaler au prescripteur toute situation de stress aigu chez un patient sous hydrocortisone substitutive, une majoration transitoire de la dose peut être nécessaire ; vérifier que le patient porte sa carte d'insuffisant surrénalien.",
-        "source_rcp": "RCP HYDROCORTISONE ROUSSEL 10 mg, section 4.4"
+        "action": "Signaler au prescripteur toute situation de stress aigu chez un patient sous hydrocortisone substitutive, une majoration transitoire de la dose peut être nécessaire ; vérifier que le patient porte sa carte d'insuffisant surrénalien."
       },
       {
         "evenement": "Arythmie ou hypotension en cas d'injection ou de perfusion IV trop rapide",
         "explication": "Décrit spécifiquement pour l'hydrocortisone hémisuccinate injectable par le Guide HUG médicaments injectables ; aucune donnée équivalente dans les RCP français.",
-        "action": "Respecter la vitesse d'administration indiquée en Préparation ; en cas de survenue, arrêter l'injection et signaler au prescripteur.",
-        "source_rcp": "Guide HUG médicaments injectables (fiche SOLU-CORTEF), 20/03/2026"
+        "action": "Respecter la vitesse d'administration indiquée en Préparation ; en cas de survenue, arrêter l'injection et signaler au prescripteur."
       }
     ],
     "pictogrammes": [
       "Conduite de véhicules et utilisation de machines : influence majeure retenue par le RCP oral HYDROCORTISONE ROUSSEL (section 4.7) en raison de vertiges et convulsions possibles ; le RCP injectable HYDROCORTISONE UPJOHN indique « sans objet » (section 4.7)."
     ],
-    "note_ajustement": ""
+    "note_ajustement": null
   },
   "iv": {
     "reconstitution": {
@@ -121,7 +114,7 @@
           "dose_par_prise_mg_max": 200,
           "intervalle_min_h": 6,
           "intervalle_max_h": 8,
-          "dose_journaliere_max_g": 0.800
+          "dose_journaliere_max_mg": 800
           
         },
         {
@@ -154,7 +147,7 @@
             "dose_par_prise_mg_max": 20,
             "intervalle_min_h": 8,
             "intervalle_max_h": 12,
-            "dose_journaliere_max_g": 0.040
+            "dose_journaliere_max_mg": 40
           },
           {
             "population": "Traitement d'entretien",
@@ -172,6 +165,7 @@
       "alternative": ""
     }
   },
+  "aerosol": null,
   "tracabilite": {
     "rcp_source": [
       {

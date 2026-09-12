@@ -11,12 +11,18 @@ function formaterNombre(n: number): string {
   return Number.isInteger(n) ? String(n) : String(n).replace('.', ',')
 }
 
+// Une seule borne renseignée est une borne, pas une valeur : le RCP dit
+// "jusqu'à 1 g" ou "au moins 6 h", jamais "1 g" ni "6 h" fermes. Sans
+// préfixe, les deux sens opposés s'affichaient à l'identique — "5 min" pour
+// un délai minimal à respecter comme pour un délai maximal avant répétition.
+// Même convention ≥/≤ que les bornes d'âge et de poids (voir
+// formaterPlageAge/formaterPlagePoids plus bas).
 function formaterPlage(min: number | undefined, max: number | undefined, unite: string): string | null {
   if (min === undefined && max === undefined) return null
   if (min !== undefined && max !== undefined) {
     return min === max ? `${formaterNombre(min)} ${unite}` : `${formaterNombre(min)}-${formaterNombre(max)} ${unite}`
   }
-  return `${formaterNombre((min ?? max)!)} ${unite}`
+  return `${min !== undefined ? '≥' : '≤'} ${formaterNombre((min ?? max)!)} ${unite}`
 }
 
 // Même convention clinique que formaterGrammesOuMg (voir plus bas), mais
@@ -35,7 +41,6 @@ function formaterDoseEnGrammes(min: number | undefined, max: number | undefined)
 }
 
 export function formaterDose(p: IPosologieRcp): string {
-  if (p.dose_par_prise_mg !== undefined) return `${formaterNombre(p.dose_par_prise_mg)} mg`
   const parPrise = formaterPlage(p.dose_par_prise_mg_min, p.dose_par_prise_mg_max, 'mg')
   if (parPrise) return parPrise
   // Dose par prise directement en grammes (ex. fosfomycine, 4-8 g) — même
@@ -75,13 +80,13 @@ export function formaterDose(p: IPosologieRcp): string {
   // (nicardipine, non rapporté au poids). Aucune conversion entre elles :
   // chacune est reprise telle que le RCP la formule, c'est sous cette forme
   // que le débit est réglé au pousse-seringue.
-  const debit = formaterPlage(p.dose_ugkgmin_min, p.dose_ugkgmin_max, 'µg/kg/min')
+  const debit = formaterPlage(p.dose_ug_kg_minute_min, p.dose_ug_kg_minute_max, 'µg/kg/min')
   if (debit) return debit
-  const debitMgKgH = formaterPlage(p.dose_mgkgh_min, p.dose_mgkgh_max, 'mg/kg/h')
+  const debitMgKgH = formaterPlage(p.dose_mg_kg_h_min, p.dose_mg_kg_h_max, 'mg/kg/h')
   if (debitMgKgH) return debitMgKgH
   const debitUIKgH = formaterPlage(p.dose_UI_kg_h_min, p.dose_UI_kg_h_max, 'UI/kg/h')
   if (debitUIKgH) return debitUIKgH
-  const debitMgH = formaterPlage(p.debit_mg_h_min, p.debit_mg_h_max, 'mg/h')
+  const debitMgH = formaterPlage(p.dose_mg_h_min, p.dose_mg_h_max, 'mg/h')
   if (debitMgH) return debitMgH
   return '—'
 }
@@ -119,13 +124,17 @@ export function formaterDoseParKg(p: IPosologieRcp): IDoseParKg | null {
 /** Partie "absolue" d'une dose (mg ou g fixes/en fourchette, jamais ramenés
  * au poids) — voir formaterDoseParKg() ci-dessus. */
 export function formaterDoseAbsolue(p: IPosologieRcp): string | null {
-  if (p.dose_par_prise_mg !== undefined) return `${formaterNombre(p.dose_par_prise_mg)} mg`
   const enMg = formaterPlage(p.dose_par_prise_mg_min, p.dose_par_prise_mg_max, 'mg')
   if (enMg) return enMg
   return formaterDoseEnGrammes(p.dose_par_prise_g_min, p.dose_par_prise_g_max)
 }
 
 export function formaterIntervalle(p: IPosologieRcp): string {
+  // Intervalle rédigé en toutes lettres quand aucune valeur chiffrée ne
+  // convient (ex. noradrénaline en irrigation gastrique, "Fractionné ou
+  // continu") — prioritaire sur les champs numériques : c'est une formulation
+  // délibérée du RCP, pas un repli.
+  if (p.intervalle !== undefined && p.intervalle.trim().length > 0) return p.intervalle
   // Un intervalle de 24 h pile est la façon dont les fiches notent une
   // administration unique : plutôt que d'afficher "24 h", qui demande un
   // calcul mental, la carte l'annonce directement comme une dose unique.
@@ -193,12 +202,25 @@ export function formaterMax(p: IPosologieRcp): string | null {
   if (typeof maxG === 'string') return maxG
   if (maxG !== undefined) return formaterGrammesOuMg(maxG, 'j')
 
+  // Maximum journalier déjà exprimé en mg par le RCP (ex. midazolam,
+  // 7,5 mg/j) : affiché tel quel, sans repasser par la règle g↔mg qui ne
+  // concerne que les valeurs saisies en grammes.
+  const maxMg = p.dose_journaliere_max_mg
+  if (typeof maxMg === 'string') return maxMg
+  if (maxMg !== undefined) return `${formaterNombre(maxMg)} mg/j`
+
   const maxMUI = p.dose_journaliere_max_MUI
   if (typeof maxMUI === 'string') return maxMUI
   // Pas de règle MUI→UI équivalente à formaterGrammesOuMg : contrairement à
   // "0,04 g/j", une valeur décimale en MUI (ex. "4,5 MUI/j") est la façon
   // normale de l'exprimer, aucune conversion nécessaire.
   if (maxMUI !== undefined) return `${formaterNombre(maxMUI)} MUI/j`
+
+  // UI (héparine calcique) — sans rapport d'échelle avec les MUI ci-dessus,
+  // voir dose_par_prise_UI.
+  const maxUI = p.dose_journaliere_max_UI
+  if (typeof maxUI === 'string') return maxUI
+  if (maxUI !== undefined) return `${formaterNombre(maxUI)} UI/j`
 
   const maxMmol = p.dose_journaliere_max_mmol
   if (typeof maxMmol === 'string') return maxMmol
@@ -218,12 +240,41 @@ export function formaterMax(p: IPosologieRcp): string | null {
   return null
 }
 
-function formaterPlageAge(min?: number | null, max?: number | null): string | null {
-  if (min == null && max == null) return null
-  const enAnnees = (mois: number) => Math.round((mois / 12) * 10) / 10
-  if (min != null && max != null) return `${formaterNombre(enAnnees(min))}-${formaterNombre(enAnnees(max))} ans`
-  if (min != null) return `≥ ${formaterNombre(enAnnees(min))} ans`
-  return `≤ ${formaterNombre(enAnnees(max!))} ans`
+// Une borne d'âge est rendue dans l'unité où elle se dit, pas dans une unité
+// unique : "0 j" pour un nouveau-né (que "0 an" ne décrirait pas), "6 mois"
+// pour un nourrisson (et non "0,5 an"), des années au-delà de 2 ans. Le RCP
+// donne l'âge tantôt en jours (néonatologie), tantôt en mois — les deux
+// champs peuvent d'ailleurs se mélanger sur une même ligne (ex. midazolam,
+// de la naissance à 6 mois).
+function formaterBorneAge(jours?: number | null, mois?: number | null): { valeur: string; unite: string } | null {
+  if (jours != null) return { valeur: formaterNombre(jours), unite: 'j' }
+  if (mois == null) return null
+  if (mois < 24) return { valeur: formaterNombre(mois), unite: 'mois' }
+  return { valeur: formaterNombre(Math.round((mois / 12) * 10) / 10), unite: 'ans' }
+}
+
+function formaterPlageAge(
+  minJours?: number | null,
+  minMois?: number | null,
+  maxJours?: number | null,
+  maxMois?: number | null,
+): string | null {
+  const min = formaterBorneAge(minJours, minMois)
+  const max = formaterBorneAge(maxJours, maxMois)
+  if (min === null && max === null) return null
+  if (min !== null && max !== null) {
+    // Unité écrite une seule fois quand les deux bornes la partagent
+    // ("6-12 ans"), deux fois sinon ("0 j-6 mois") — ce qui arrive dès qu'une
+    // tranche part de la naissance pour finir en mois.
+    if (min.unite === max.unite) {
+      return min.valeur === max.valeur
+        ? `${min.valeur} ${min.unite}`
+        : `${min.valeur}-${max.valeur} ${min.unite}`
+    }
+    return `${min.valeur} ${min.unite}-${max.valeur} ${max.unite}`
+  }
+  const borne = min ?? max!
+  return `${min !== null ? '≥' : '≤'} ${borne.valeur} ${borne.unite}`
 }
 
 function formaterPlagePoids(min?: number | null, max?: number | null): string | null {
@@ -237,9 +288,10 @@ function formaterPlagePoids(min?: number | null, max?: number | null): string | 
  * RCP la chiffre (souvent le cas en pédiatrie, plus rarement pour l'adulte,
  * où la tranche est en général déjà nommée dans `population`). */
 export function formaterPopulationDetail(p: IPosologieRcp): string | null {
-  const parties = [formaterPlageAge(p.age_min_mois, p.age_max_mois), formaterPlagePoids(p.poids_min_kg, p.poids_max_kg)].filter(
-    (partie): partie is string => partie !== null,
-  )
+  const parties = [
+    formaterPlageAge(p.age_min_jours, p.age_min_mois, p.age_max_jours, p.age_max_mois),
+    formaterPlagePoids(p.poids_min_kg, p.poids_max_kg),
+  ].filter((partie): partie is string => partie !== null)
   return parties.length > 0 ? parties.join(' · ') : null
 }
 
@@ -247,6 +299,7 @@ const LABELS_CATEGORIE_IV: Record<string, string> = {
   generale: 'Voie IV',
   im: 'Voie IM',
   sc: 'Voie SC',
+  ir: 'Voie intrarectale',
   pse: 'PSE (perfusion continue)',
   speciale: 'Protocole particulier',
   ajustement: 'Ajustement',
@@ -272,7 +325,6 @@ export function libelleCategoriePosologie(categorie: string | undefined, context
 // 400 mg) — reprend le même ordre de priorité que formaterDose() pour tester
 // la bonne paire de champs selon la façon dont *cette* ligne exprime sa dose.
 function estUnePlageDeDose(p: IPosologieRcp): boolean {
-  if (p.dose_par_prise_mg !== undefined) return false
   if (p.dose_par_prise_mg_min !== undefined || p.dose_par_prise_mg_max !== undefined) {
     return p.dose_par_prise_mg_min !== p.dose_par_prise_mg_max
   }
@@ -298,8 +350,8 @@ function estUnePlageDeDose(p: IPosologieRcp): boolean {
   if (p.dose_journaliere_MUI_min !== undefined || p.dose_journaliere_MUI_max !== undefined) {
     return p.dose_journaliere_MUI_min !== p.dose_journaliere_MUI_max
   }
-  if (p.dose_ugkgmin_min !== undefined || p.dose_ugkgmin_max !== undefined) {
-    return p.dose_ugkgmin_min !== p.dose_ugkgmin_max
+  if (p.dose_ug_kg_minute_min !== undefined || p.dose_ug_kg_minute_max !== undefined) {
+    return p.dose_ug_kg_minute_min !== p.dose_ug_kg_minute_max
   }
   return false
 }

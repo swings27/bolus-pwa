@@ -17,8 +17,7 @@
       "grossesse": "Le tramadol ne doit donc pas être utilisé chez les femmes enceintes.",
       "allaitement": "Il convient soit de ne pas utiliser le tramadol pendant la lactation, soit d'interrompre l'allaitement lors d'un traitement par tramadol.",
       "url_crat_grossesse": "https://www.lecrat.fr/4541/",
-      "url_crat_allaitement": "https://www.lecrat.fr/4543/",
-      "source": "RCP TOPALGIC 100 mg/2 ml, solution injectable en ampoule, section 4.6"
+      "url_crat_allaitement": "https://www.lecrat.fr/4543/"
     },
     "contre_indications": [
       "Hypersensibilité à la substance active ou à l'un des excipients",
@@ -33,94 +32,79 @@
       {
         "substance": "Agonistes-antagonistes morphiniques",
         "effet": "Diminution de l'effet antalgique par blocage compétitif des récepteurs opioïdes, avec risque d'apparition d'un syndrome de sevrage.",
-        "action_infirmier": "Signaler au prescripteur toute association avec la buprénorphine, la nalbuphine ou la pentazocine.",
-        "source_rcp": "RCP TOPALGIC 100 mg/2 ml, 4.5 (association déconseillée)"
+        "action_infirmier": "Signaler au prescripteur toute association avec la buprénorphine, la nalbuphine ou la pentazocine."
       },
       {
         "substance": "Alcool",
         "effet": "Majoration de l'effet sédatif du tramadol par l'alcool ; l'altération de la vigilance peut rendre dangereuses la conduite de véhicules et l'utilisation de machines.",
-        "action_infirmier": "Signaler au prescripteur la consommation d'alcool ou la prise de médicaments contenant de l'alcool.",
-        "source_rcp": "RCP TOPALGIC 100 mg/2 ml, 4.5 (association déconseillée)"
+        "action_infirmier": "Signaler au prescripteur la consommation d'alcool ou la prise de médicaments contenant de l'alcool."
       },
       {
         "substance": "Carbamazépine",
         "effet": "Diminution des concentrations plasmatiques de tramadol par induction enzymatique, pouvant réduire l'effet analgésique et raccourcir sa durée d'action.",
-        "action_infirmier": "Signaler au prescripteur toute co-prescription de carbamazépine.",
-        "source_rcp": "RCP TOPALGIC 100 mg/2 ml, 4.5 (association déconseillée)"
+        "action_infirmier": "Signaler au prescripteur toute co-prescription de carbamazépine."
       },
       {
         "substance": "Inhibiteurs sélectifs de la recapture de la sérotonine et venlafaxine",
         "effet": "Risque d'apparition de convulsions et/ou d'un syndrome sérotoninergique, affection potentiellement mortelle.",
-        "action_infirmier": "Signaler au prescripteur toute association avec un ISRS ou la venlafaxine ; renforcer la surveillance clinique.",
-        "source_rcp": "RCP TOPALGIC 100 mg/2 ml, 4.5 (à prendre en compte)"
+        "action_infirmier": "Signaler au prescripteur toute association avec un ISRS ou la venlafaxine ; renforcer la surveillance clinique."
       },
       {
         "substance": "IMAO-B",
         "effet": "Risque d'apparition d'un syndrome sérotoninergique, affection potentiellement mortelle.",
-        "action_infirmier": "Signaler au prescripteur toute co-prescription d'un IMAO-B.",
-        "source_rcp": "RCP TOPALGIC 100 mg/2 ml, 4.5 (à prendre en compte)"
+        "action_infirmier": "Signaler au prescripteur toute co-prescription d'un IMAO-B."
       },
       {
         "substance": "Antivitamines K",
         "effet": "Augmentation de l'effet de l'antivitamine K et du risque hémorragique.",
-        "action_infirmier": "Renforcer la surveillance de l'INR pendant l'association et après l'arrêt du tramadol ; signaler au prescripteur.",
-        "source_rcp": "RCP TOPALGIC 100 mg/2 ml, 4.5 (précaution d'emploi)"
+        "action_infirmier": "Renforcer la surveillance de l'INR pendant l'association et après l'arrêt du tramadol ; signaler au prescripteur."
       },
       {
         "substance": "Benzodiazépines et barbituriques",
         "effet": "Risque majoré de dépression respiratoire pouvant être fatale en cas de surdosage.",
-        "action_infirmier": "Signaler au prescripteur toute association avec une benzodiazépine ou un barbiturique ; surveiller la fonction respiratoire.",
-        "source_rcp": "RCP TOPALGIC 100 mg/2 ml, 4.5 (à prendre en compte)"
+        "action_infirmier": "Signaler au prescripteur toute association avec une benzodiazépine ou un barbiturique ; surveiller la fonction respiratoire."
       },
       {
         "substance": "Gabapentinoïdes",
         "effet": "Risque de dépression respiratoire, d'hypotension, de sédation profonde, de coma ou de décès.",
-        "action_infirmier": "Signaler au prescripteur toute association avec la gabapentine ou la prégabaline.",
-        "source_rcp": "RCP TOPALGIC 100 mg/2 ml, 4.5"
+        "action_infirmier": "Signaler au prescripteur toute association avec la gabapentine ou la prégabaline."
       },
       {
         "substance": "Bupropion",
         "effet": "Augmentation des concentrations plasmatiques de tramadol par diminution de son métabolisme hépatique, avec risque additionnel de convulsions par addition des effets des deux médicaments.",
-        "action_infirmier": "Signaler au prescripteur toute co-prescription de bupropion.",
-        "source_rcp": "RCP TOPALGIC 100 mg/2 ml, 4.5"
+        "action_infirmier": "Signaler au prescripteur toute co-prescription de bupropion."
       },
       {
         "substance": "Ondansétron",
         "effet": "Diminution de l'intensité et de la durée de l'effet analgésique du tramadol, et risque de diminution de l'effet antiémétique de l'ondansétron.",
-        "action_infirmier": "Signaler au prescripteur l'association avec l'ondansétron, notamment en cas d'antalgie jugée insuffisante.",
-        "source_rcp": "RCP TOPALGIC 100 mg/2 ml, 4.5"
+        "action_infirmier": "Signaler au prescripteur l'association avec l'ondansétron, notamment en cas d'antalgie jugée insuffisante."
       },
       {
         "substance": "Autres analgésiques morphiniques agonistes et antitussifs opioïdes",
         "effet": "Risque majoré de dépression respiratoire pouvant être fatale en cas de surdosage.",
-        "action_infirmier": "Signaler au prescripteur toute association avec un autre morphinique ou un antitussif opioïde.",
-        "source_rcp": "RCP TOPALGIC 100 mg/2 ml, 4.5 (à prendre en compte)"
+        "action_infirmier": "Signaler au prescripteur toute association avec un autre morphinique ou un antitussif opioïde."
       },
       {
         "substance": "Inhibiteurs du CYP3A4",
         "effet": "Réduction possible du métabolisme du tramadol, pouvant en augmenter les concentrations plasmatiques.",
-        "action_infirmier": "Signaler au prescripteur toute co-prescription d'un inhibiteur puissant du CYP3A4.",
-        "source_rcp": "RCP TOPALGIC 100 mg/2 ml, 4.5"
+        "action_infirmier": "Signaler au prescripteur toute co-prescription d'un inhibiteur puissant du CYP3A4."
       }
     ],
     "surveillance_specifique": [
       {
         "evenement": "Convulsions",
         "explication": "Le tramadol abaisse le seuil épileptogène ; le risque augmente au-delà de 400 mg par jour et en cas d'association avec un médicament proconvulsivant ou abaissant lui-même ce seuil.",
-        "action": "Surveiller la survenue de convulsions, en particulier en cas d'association avec un médicament abaissant le seuil épileptogène ou de dépassement des doses recommandées ; signaler au prescripteur.",
-        "source_rcp": "RCP TOPALGIC 100 mg/2 ml, 4.4, 4.5 et 4.8"
+        "action": "Surveiller la survenue de convulsions, en particulier en cas d'association avec un médicament abaissant le seuil épileptogène ou de dépassement des doses recommandées ; signaler au prescripteur."
       },
       {
         "evenement": "Syndrome sérotoninergique",
         "explication": "Affection potentiellement mortelle liée au double mécanisme d'action du tramadol (opioïde et sérotoninergique), majorée par l'association à d'autres substances sérotoninergiques.",
-        "action": "Surveiller l'apparition de modifications de l'état mental, d'une instabilité neurovégétative ou d'anomalies neuromusculaires, en particulier en association avec un traitement sérotoninergique ; signaler immédiatement au prescripteur.",
-        "source_rcp": "RCP TOPALGIC 100 mg/2 ml, 4.4, 4.5 et 4.8"
+        "action": "Surveiller l'apparition de modifications de l'état mental, d'une instabilité neurovégétative ou d'anomalies neuromusculaires, en particulier en association avec un traitement sérotoninergique ; signaler immédiatement au prescripteur."
       },
       {
         "evenement": "Dépression respiratoire",
         "explication": "Risque en cas de dépassement important des doses recommandées ou d'association à d'autres dépresseurs du système nerveux central (benzodiazépines, gabapentinoïdes, autres opioïdes).",
-        "action": "Surveiller la fréquence respiratoire et l'état de conscience, en particulier en cas d'association avec un autre dépresseur du système nerveux central ; signaler au prescripteur.",
-        "source_rcp": "RCP TOPALGIC 100 mg/2 ml, 4.4 et 4.8"
+        "action": "Surveiller la fréquence respiratoire et l'état de conscience, en particulier en cas d'association avec un autre dépresseur du système nerveux central ; signaler au prescripteur."
       }
     ],
     "pictogrammes": [],
@@ -153,7 +137,7 @@
           "dose_par_prise_mg_max": 100,
           "intervalle_min_h": 4,
           "intervalle_max_h": 6,
-          "dose_journaliere_max_g": 0.4
+          "dose_journaliere_max_mg": 400
         }
       ]
     },
@@ -212,7 +196,7 @@
             "dose_par_prise_mg_max": 100,
             "intervalle_min_h": 4,
             "intervalle_max_h": 6,
-            "dose_journaliere_max_g": 0.4
+            "dose_journaliere_max_mg": 400
           }
         ]
       },
@@ -230,7 +214,7 @@
             "dose_par_prise_mg_max": 100,
             "intervalle_min_h": 4,
             "intervalle_max_h": 6,
-            "dose_journaliere_max_g": 0.4
+            "dose_journaliere_max_mg": 400
           }
         ]
       },
@@ -280,7 +264,7 @@
             "intervalle_max_h": 12,
             "nb_prises_min_24h": 2,
             "nb_prises_max_24h": 2,
-            "dose_journaliere_max_g": 0.4
+            "dose_journaliere_max_mg": 400
           }
         ]
       },
@@ -300,7 +284,7 @@
             "intervalle_max_h": 12,
             "nb_prises_min_24h": 2,
             "nb_prises_max_24h": 2,
-            "dose_journaliere_max_g": 0.4
+            "dose_journaliere_max_mg": 400
           }
         ]
       }
@@ -310,6 +294,7 @@
       "alternative": "Gélule LP (Zamudol LP), à ouvrir sans écraser les granulés, pour un traitement à libération prolongée"
     }
   },
+  "aerosol": null,
   "tracabilite": {
     "rcp_source": [
       {

@@ -10,7 +10,7 @@
 // src/utils/construireFiche.ts à partir de src/data/categoriesFiches.ts.
 //
 // Convention : les types qui reflètent directement une clé du JSON source
-// gardent son casing snake_case (ex. dose_par_prise_mg, note_ajustement)
+// gardent son casing snake_case (ex. dose_par_prise_mg_min, note_ajustement)
 // plutôt que d'être renommés en camelCase — cela évite une couche de
 // traduction supplémentaire pour des structures déjà profondément
 // imbriquées. Seuls les champs ajoutés par l'app (id, categorie,
@@ -41,11 +41,12 @@ export interface IPosologieRcp {
    * redondant avec le texte de `population` ("Infections standard",
    * "posologie renforcée"). */
   palier?: string
-  dose_par_prise_mg?: number
+  /** Toujours une paire min/max, même pour une dose fixe (les deux bornes
+   * portent alors la même valeur) — pas de forme scalaire. */
   dose_par_prise_mg_min?: number
   dose_par_prise_mg_max?: number
   /** Dose par prise directement en grammes plutôt qu'en mg (ex. fosfomycine,
-   * dosée en g dès l'adulte) — même rang de priorité que dose_par_prise_mg
+   * dosée en g dès l'adulte) — même rang de priorité que la paire en mg
    * ci-dessus, voir formaterDose()/formaterDoseAbsolue(). */
   dose_par_prise_g_min?: number
   dose_par_prise_g_max?: number
@@ -61,6 +62,10 @@ export interface IPosologieRcp {
    * conversion g→mg qui ne s'applique qu'à un nombre. Même raison pour
    * dose_max_par_prise_g et dose_journaliere_max_MUI ci-dessous. */
   dose_journaliere_max_g?: number | string
+  /** Maximum journalier déjà exprimé en mg par le RCP (ex. midazolam,
+   * 7,5 mg/j) — affiché tel quel, sans la règle g↔mg de
+   * dose_journaliere_max_g, qui ne concerne que les valeurs en grammes. */
+  dose_journaliere_max_mg?: number | string
   /** Maximum journalier rapporté au poids (ex. kétamine, 5 mg/kg/j) —
    * affiché tel quel en mg/kg/j, jamais converti en mg ou g absolus : sans
    * le poids du patient, la conversion n'a pas de sens. */
@@ -72,14 +77,14 @@ export interface IPosologieRcp {
    * (nicardipine). Affichés tels quels par formaterDose(), sans conversion
    * de l'un vers l'autre — c'est sous cette forme que le débit est réglé au
    * pousse-seringue. */
-  dose_ugkgmin_min?: number
-  dose_ugkgmin_max?: number
-  dose_mgkgh_min?: number
-  dose_mgkgh_max?: number
+  dose_ug_kg_minute_min?: number
+  dose_ug_kg_minute_max?: number
+  dose_mg_kg_h_min?: number
+  dose_mg_kg_h_max?: number
   dose_UI_kg_h_min?: number
   dose_UI_kg_h_max?: number
-  debit_mg_h_min?: number
-  debit_mg_h_max?: number
+  dose_mg_h_min?: number
+  dose_mg_h_max?: number
   /** MUI = millions d'unités internationales (ex. spiramycine) — même
    * famille que dose_par_prise_mg(_min/_max)/dose_journaliere_max_g, en
    * unité différente. */
@@ -103,6 +108,10 @@ export interface IPosologieRcp {
   dose_par_prise_UI_max?: number
   dose_par_prise_UI_kg_min?: number
   dose_par_prise_UI_kg_max?: number
+  /** Maximum journalier en UI (ex. héparine calcique, 10 000 UI/j) —
+   * accepte aussi une chaîne quand le plafond dépend d'un suivi biologique
+   * ("Selon TCA/anti-Xa"). */
+  dose_journaliere_max_UI?: number | string
   /** mmol = millimoles (ex. chlorure de potassium) — même famille que
    * dose_journaliere_mg_kg(_min/_max)/dose_journaliere_max_g, en unité
    * différente ; accepte aussi une chaîne pour dose_journaliere_max_mmol,
@@ -111,6 +120,10 @@ export interface IPosologieRcp {
   dose_journaliere_mmol_kg_min?: number
   dose_journaliere_mmol_kg_max?: number
   dose_journaliere_max_mmol?: number | string
+  /** Intervalle rédigé en toutes lettres, quand aucune valeur chiffrée ne
+   * convient (ex. "Fractionné ou continu") — prioritaire sur les champs
+   * numériques ci-dessous, voir formaterIntervalle(). */
+  intervalle?: string
   intervalle_min_h?: number
   intervalle_max_h?: number
   intervalle_min_min?: number
@@ -119,6 +132,12 @@ export interface IPosologieRcp {
   nb_prises_max_24h?: number
   age_min_mois?: number | null
   age_max_mois?: number | null
+  /** Âge en jours plutôt qu'en mois (néonatologie, ex. midazolam à partir de
+   * la naissance) — prioritaire sur la borne en mois correspondante, et
+   * mélangeable avec elle sur une même ligne (« 0 j-6 mois »), voir
+   * formaterPopulationDetail(). */
+  age_min_jours?: number | null
+  age_max_jours?: number | null
   poids_min_kg?: number | null
   poids_max_kg?: number | null
   /** Surveillance du taux sanguin résiduel requise (jamais affiché comme
@@ -132,24 +151,18 @@ export interface IIncompatibilite {
   niveau: string
 }
 
-/** Interaction médicamenteuse pertinente pour le geste infirmier.
- * `source_rcp` existe dans le JSON source mais n'est pas affiché (citation
- * de sourcing interne, pas une donnée clinique) — voir construireFiche(). */
+/** Interaction médicamenteuse pertinente pour le geste infirmier. */
 export interface IInteractionRcp {
   substance: string
   effet: string
   action_infirmier: string
-  source_rcp?: string
 }
 
-/** Point de surveillance clinique spécifique, tel que structuré dans le
- * bloc "iv" des fichiers sources. `source_rcp` existe dans le JSON source
- * mais n'est pas affiché, voir IInteractionRcp ci-dessus. */
+/** Point de surveillance clinique spécifique. */
 export interface ISurveillanceRcp {
   evenement: string
   explication: string
   action: string
-  source_rcp?: string
 }
 
 /** Une étape de préparation avant administration, pour une voie donnée
@@ -195,8 +208,6 @@ export interface IGrossesseAllaitementRcp {
   allaitement: string
   url_crat_grossesse?: string | null
   url_crat_allaitement?: string | null
-  /** Pas affiché — voir note_statut/source_rcp pour la même convention. */
-  source?: string
 }
 
 /** Une forme galénique orale disponible (comprimé, gélule, suspension...),
@@ -220,16 +231,12 @@ export interface IRecommandationSonde {
   alternative?: string
 }
 
-/** Référence RCP consultée pour construire la fiche. `note_statut` peut
- * exister dans le JSON source (annotation ponctuelle sur le statut de
- * commercialisation) mais n'est pas affiché, comme les autres champs
- * "note"/"source_rcp" — voir construireFiche(). */
+/** Référence RCP consultée pour construire la fiche. */
 export interface IRcpSource {
   specialite: string
   titulaire?: string
   date_maj?: string
   url_ansm?: string
-  note_statut?: string
 }
 
 /** Traçabilité de la validation clinique de la fiche. */

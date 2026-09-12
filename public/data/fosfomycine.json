@@ -22,8 +22,7 @@
       "grossesse": "La fosfomycine doit être utilisée pendant la grossesse uniquement si cela est vraiment nécessaire.",
       "allaitement": "Si cela est vraiment nécessaire, une dose orale unique de fosfomycine peut être utilisée pendant l'allaitement.",
       "url_crat_grossesse": "https://www.lecrat.fr/6678/",
-      "url_crat_allaitement": "https://www.lecrat.fr/6679/",
-      "source": "RCP MONURIL 3 g, granulés pour solution buvable en sachet, section 4.6"
+      "url_crat_allaitement": "https://www.lecrat.fr/6679/"
     },
     "contre_indications": [
       "Hypersensibilité à la substance active ou à l'un des excipients."
@@ -32,46 +31,39 @@
       {
         "substance": "Métoclopramide",
         "effet": "Diminution démontrée des concentrations sériques et urinaires de fosfomycine.",
-        "action_infirmier": "Signaler au prescripteur toute co-prescription de métoclopramide (ou d'un autre médicament augmentant la motilité gastro-intestinale) chez un patient recevant de la fosfomycine par voie orale ; l'association doit être évitée.",
-        "source_rcp": "RCP MONURIL 3 g, section 4.5, interaction propre à la voie orale (absorption digestive)."
+        "action_infirmier": "Signaler au prescripteur toute co-prescription de métoclopramide (ou d'un autre médicament augmentant la motilité gastro-intestinale) chez un patient recevant de la fosfomycine par voie orale ; l'association doit être évitée."
       },
       {
         "substance": "Anticoagulants oraux",
         "effet": "De nombreux cas d'augmentation de l'activité des anticoagulants oraux ont été rapportés chez des patients recevant un traitement antibiotique, dont la fosfomycine ; la part respective de l'infection elle-même et du traitement dans le déséquilibre de l'INR est difficile à établir.",
-        "action_infirmier": "Surveiller l'INR et signaler au prescripteur toute co-prescription d'un antivitamine K, quelle que soit la voie d'administration de la fosfomycine.",
-        "source_rcp": "RCP MONURIL 3 g et RCP FOMICYT 2 g / 4 g IV, section 4.5"
+        "action_infirmier": "Surveiller l'INR et signaler au prescripteur toute co-prescription d'un antivitamine K, quelle que soit la voie d'administration de la fosfomycine."
       }
     ],
     "surveillance_specifique": [
       {
         "evenement": "Réactions d'hypersensibilité graves : anaphylaxie, choc anaphylactique",
         "explication": "Des réactions d'hypersensibilité graves et parfois fatales peuvent survenir pendant le traitement par fosfomycine, quelle que soit la voie d'administration.",
-        "action": "Interrompre immédiatement la fosfomycine devant tout signe d'hypersensibilité et signaler au prescripteur ; des mesures d'urgence adaptées doivent être instaurées.",
-        "source_rcp": "RCP MONURIL 3 g et RCP FOMICYT 2 g / 4 g IV, section 4.4"
+        "action": "Interrompre immédiatement la fosfomycine devant tout signe d'hypersensibilité et signaler au prescripteur ; des mesures d'urgence adaptées doivent être instaurées."
       },
       {
         "evenement": "Diarrhée associée à Clostridioides difficile et colite pseudomembraneuse",
         "explication": "Décrite avec la fosfomycine, de sévérité variable pouvant engager le pronostic vital ; les médicaments qui inhibent le péristaltisme ne doivent pas être administrés en cas de survenue.",
-        "action": "Signaler au prescripteur toute diarrhée survenant pendant ou après le traitement par fosfomycine ; l'arrêt du traitement doit être envisagé.",
-        "source_rcp": "RCP MONURIL 3 g et RCP FOMICYT 2 g / 4 g IV, section 4.4"
+        "action": "Signaler au prescripteur toute diarrhée survenant pendant ou après le traitement par fosfomycine ; l'arrêt du traitement doit être envisagé."
       },
       {
         "evenement": "Surveillance de la natrémie et de la kaliémie",
         "explication": "La fosfomycine intraveineuse a une teneur élevée en sodium (0,33 g de sodium par gramme de fosfomycine, soit 17 % de l'apport sodé quotidien maximal recommandé par l'OMS pour 1 g ; la dose journalière maximale de 16 g représente 260 % de cet apport) et peut diminuer la kaliémie.",
-        "action": "Surveiller régulièrement la natrémie et la kaliémie, en particulier en traitement prolongé ou chez un patient à risque de surcharge hydrosodée (insuffisance cardiaque, syndrome néphrotique, cirrhose, hypertension, hyperaldostéronisme, œdème pulmonaire, hypoalbuminémie, nouveau-né sous restriction sodée) ; envisager une supplémentation potassique et signaler au prescripteur. Un régime pauvre en sodium est recommandé pendant le traitement.",
-        "source_rcp": "RCP FOMICYT 2 g / 4 g IV, section 4.4, spécifique à la voie intraveineuse."
+        "action": "Surveiller régulièrement la natrémie et la kaliémie, en particulier en traitement prolongé ou chez un patient à risque de surcharge hydrosodée (insuffisance cardiaque, syndrome néphrotique, cirrhose, hypertension, hyperaldostéronisme, œdème pulmonaire, hypoalbuminémie, nouveau-né sous restriction sodée) ; envisager une supplémentation potassique et signaler au prescripteur. Un régime pauvre en sodium est recommandé pendant le traitement."
       },
       {
         "evenement": "Réactions hématologiques (neutropénie, agranulocytose)",
         "explication": "Rapportées chez des patients recevant de la fosfomycine par voie intraveineuse.",
-        "action": "Surveiller la numération leucocytaire à intervalles réguliers pendant le traitement intraveineux et signaler au prescripteur toute anomalie.",
-        "source_rcp": "RCP FOMICYT 2 g / 4 g IV, section 4.4"
+        "action": "Surveiller la numération leucocytaire à intervalles réguliers pendant le traitement intraveineux et signaler au prescripteur toute anomalie."
       },
       {
         "evenement": "Sélection de souches résistantes en monothérapie intraveineuse",
         "explication": "La fosfomycine sélectionne rapidement des mutants résistants in vitro ; son utilisation seule par voie intraveineuse a été associée à la sélection de souches résistantes dans les études cliniques.",
-        "action": "Vérifier, dans la mesure du possible, que la fosfomycine intraveineuse est administrée dans le cadre d'une association antibactérienne, conformément à la prescription ; signaler au prescripteur toute monothérapie prolongée.",
-        "source_rcp": "RCP FOMICYT 2 g / 4 g IV, section 4.4"
+        "action": "Vérifier, dans la mesure du possible, que la fosfomycine intraveineuse est administrée dans le cadre d'une association antibactérienne, conformément à la prescription ; signaler au prescripteur toute monothérapie prolongée."
       }
     ],
     "pictogrammes": [

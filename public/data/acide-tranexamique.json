@@ -1,0 +1,274 @@
+{
+  "dci": "acide tranéxamique",
+  "commun": {
+    "noms_commerciaux": [
+      "Exacyl",
+      "Spotof"
+    ],
+    "famille": "Antifibrinolytique, acide aminé de synthèse",
+    "antidote": "",
+    "indications": [
+      "Fibrinolyse générale",
+      "Fibrinolyse locale",
+      "Ménorragies / métrorragies",
+      "Hémorragies digestives",
+      "Hématuries",
+      "Hémorragies opératoires ORL"
+    ],
+    "grossesse_allaitement": {
+      "grossesse": "Il n'existe pas de données cliniques suffisantes sur l'utilisation de l'acide tranexamique chez la femme enceinte. Bien que les études effectuées chez l'animal n'aient pas mis en évidence d'effets tératogènes, l'acide tranexamique n'est pas recommandé pendant le premier trimestre de grossesse. Les données cliniques limitées sur l'utilisation de l'acide tranexamique dans différentes situations cliniques hémorragiques pendant les deuxième et troisième trimestres n'ont pas mis en évidence d'effet délétère sur le fœtus. L'acide tranexamique ne doit être utilisé pendant la grossesse que si le bénéfice escompté justifie le risque potentiel.",
+      "allaitement": "L'acide tranexamique est excrété dans le lait maternel. Par conséquent, l'allaitement n'est pas recommandé.",
+      "url_crat_grossesse": "https://www.lecrat.fr/12124/",
+      "url_crat_allaitement": "https://www.lecrat.fr/7514/"
+    },
+    "note_ajustement": "Insuffisance hépatique : aucun ajustement posologique nécessaire. Insuffisance rénale : posologie réduite et espacée selon la créatininémie, se référer au prescripteur et au protocole du service.",
+    "contre_indications": [
+      "Hypersensibilité à la substance active ou à l'un des excipients",
+      "Thrombose veineuse ou artérielle aiguë",
+      "États fibrinolytiques consécutifs à une coagulopathie de consommation, à l'exception des états associés à une activation prédominante du système fibrinolytique avec une hémorragie grave aiguë",
+      "Insuffisance rénale grave (risque d'accumulation)",
+      "Antécédents de convulsions",
+      "Injections intrathécales, épidurales, intraventriculaires et application intracérébrale (risque d'œdème cérébral, de convulsions et de décès), forme injectable, voie intraveineuse exclusivement",
+      "Allergie au blé, autre que la maladie cœliaque, pour la forme orale, qui contient de l'amidon de blé"
+    ],
+    "interactions_pertinentes": [
+      {
+        "substance": "Anticoagulants",
+        "effet": "Aucune étude d'interaction n'a été réalisée avec les anticoagulants ; un traitement simultané modifie l'équilibre hémostatique et nécessite un encadrement spécialisé.",
+        "action_infirmier": "Signaler au prescripteur tout traitement anticoagulant en cours ; un traitement simultané doit être administré sous la stricte surveillance d'un médecin spécialisé dans ce domaine."
+      },
+      {
+        "substance": "Médicaments agissant sur l'hémostase",
+        "effet": "Risque théorique d'augmentation de la formation de thrombus lors de l'association avec des médicaments agissant sur l'hémostase, notamment les œstrogènes.",
+        "action_infirmier": "Signaler au prescripteur toute co-prescription d'un médicament agissant sur l'hémostase, en particulier un contraceptif œstroprogestatif."
+      },
+      {
+        "substance": "Thrombolytiques",
+        "effet": "L'effet antifibrinolytique de l'acide tranexamique peut être antagonisé par les thrombolytiques.",
+        "action_infirmier": "Signaler au prescripteur toute co-prescription d'un thrombolytique."
+      }
+    ],
+    "surveillance_specifique": [
+      {
+        "evenement": "Erreur de voie d'administration de la forme injectable",
+        "explication": "L'acide tranexamique injectable ne doit être administré que par voie intraveineuse. Des effets indésirables graves, y compris d'issue fatale, ont été rapportés après administration accidentelle par voie intrathécale : douleurs sévères dorsales, fessières et des membres inférieurs, myoclonies, crises convulsives généralisées, arythmies cardiaques. Le risque de confusion existe avec d'autres produits injectables utilisés au cours de la même procédure, en particulier des produits administrés par voie intrathécale. La voie intramusculaire est également proscrite par le RCP.",
+        "action": "Vérifier scrupuleusement la voie d'administration avant toute injection. Étiqueter clairement toute seringue contenant de l'acide tranexamique avec la mention de la voie intraveineuse, dès le prélèvement du produit. Ne jamais administrer par voie intramusculaire, intrathécale, épidurale, intraventriculaire ou intracérébrale. Signaler immédiatement au prescripteur tout doute sur la voie prévue."
+      },
+      {
+        "evenement": "Atteinte rénale aiguë (dont nécrose corticale) après hémorragie du post-partum à dose totale > 2 g",
+        "explication": "Des cas d'atteintes rénales aiguës, dont des nécroses corticales, ont été rapportés avec l'utilisation de l'acide tranexamique à des doses totales supérieures à 2 g dans le traitement de l'hémorragie du post-partum. Le lien de causalité avec l'acide tranexamique n'a pu être écarté.",
+        "action": "Signaler au prescripteur toute dose totale élevée dans l'hémorragie du post-partum."
+      },
+      {
+        "evenement": "Convulsions",
+        "explication": "Des cas de convulsions ont été rapportés en association avec un traitement par l'acide tranexamique, essentiellement après une injection intraveineuse à dose élevée (notamment en chirurgie de pontage aortocoronarien). Aux doses recommandées, l'incidence des crises post-opératoires est similaire à celle constatée chez des patients non traités.",
+        "action": "Signaler au prescripteur tout antécédent de convulsions (contre-indication) ; en cas d'administration de doses élevées, renforcer la surveillance neurologique."
+      },
+      {
+        "evenement": "Événements thrombo-emboliques",
+        "explication": "Les patients ayant des antécédents personnels de maladie thrombo-embolique, ou une incidence familiale accrue de tels événements (haut risque de thrombophilie), ainsi que les patientes sous contraception œstroprogestative, présentent un risque accru d'événement thrombotique sous acide tranexamique.",
+        "action": "Signaler au prescripteur tout antécédent thrombo-embolique personnel ou familial, ou toute contraception œstroprogestative associée, avant l'administration."
+      },
+      {
+        "evenement": "Troubles visuels lors d'une utilisation continue et prolongée de la forme injectable",
+        "explication": "Des troubles visuels (déficience visuelle, vision trouble, perturbation de la vision des couleurs) peuvent survenir, en particulier lors d'une utilisation continue et prolongée de la solution injectable.",
+        "action": "Surveiller l'apparition de troubles visuels et signaler au prescripteur ; des examens ophtalmologiques réguliers sont indiqués en cas d'utilisation continue et prolongée, le traitement pouvant être interrompu si nécessaire."
+      },
+      {
+        "evenement": "Hématurie des voies urinaires supérieures",
+        "explication": "En cas d'hématurie provenant des voies urinaires supérieures, il existe un risque d'obstruction urétrale par formation de caillots.",
+        "action": "Surveiller la diurèse et signaler au prescripteur toute hématurie des voies urinaires hautes."
+      },
+      {
+        "evenement": "Malaise avec hypotension sur injection intraveineuse trop rapide",
+        "explication": "Un malaise avec hypotension, avec ou sans perte de connaissance, survient généralement après une injection intraveineuse trop rapide (exceptionnellement après administration orale).",
+        "action": "Respecter la vitesse indiquée en Préparation. En cas de malaise ou d'hypotension, arrêter l'injection, surveiller la tension artérielle et signaler au prescripteur."
+      }
+    ],
+    "pictogrammes": []
+  },
+  "iv": {
+    "reconstitution": null,
+    "preparation": [
+      {
+        "voie": "IVL",
+        "detail": "Utiliser pure",
+        "duree": "A raison de 1 mL/minute (0,1g/ml).",
+        "stabilite": "Utiliser immédiatement (ampoule à usage unique)."
+      },
+      {
+        "voie": "PERF",
+        "detail": "Diluer dans 50 à 250 mL de NaCl 0,9 % ou de G5 %. Débit maximal : 100 mg/minute.",
+        "duree": "30 minutes à 1 heure.",
+        "stabilite": null
+      }
+    ],
+    "administration": {
+      "posologie": [
+        {
+          "population": "Fibrinolyse locale",
+          "population_type": "adulte",
+          "categorie": "generale",
+          "dose_par_prise_mg_min": 500,
+          "dose_par_prise_mg_max": 1000,
+          "intervalle_min_h": 8,
+          "intervalle_max_h": 12,
+          "dose_journaliere_max_g": 3
+        },
+        {
+          "population": "Fibrinolyse générale",
+          "population_type": "adulte",
+          "categorie": "generale",
+          "dose_par_prise_mg_min": 1000,
+          "dose_par_prise_mg_max": 1000,
+          "intervalle_min_h": 6,
+          "intervalle_max_h": 8,
+          "dose_journaliere_max_g": 4
+        },
+        {
+          "population": "Coagulation intravasculaire disséminée avec hémorragie grave aiguë (dose unique)",
+          "population_type": "adulte",
+          "categorie": "speciale",
+          "dose_par_prise_mg_min": 1000,
+          "dose_par_prise_mg_max": 1000,
+          "intervalle_min_h": 24,
+          "intervalle_max_h": 24
+        },
+        {
+          "population": "Fibrinolyse générale ou locale",
+          "population_type": "pediatrie",
+          "categorie": "generale",
+          "age_min_mois": 12,
+          "dose_journaliere_mg_kg_min": 20,
+          "dose_journaliere_mg_kg_max": 20,
+          "dose_journaliere_max_g": "Selon poids"
+        }
+      ]
+    },
+    "incompatibilites": [
+      {
+        "substance": "Urokinase",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Noradrénaline (bitartrate)",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Désoxyépinéphrine (chlorhydrate)",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Métaraminol (bitartrate)",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Benzylpénicillines",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Tétracyclines (chlorhydrate de tétracycline, nitrate de rolitétracycline, rolitétracycline)",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Dipyridamole",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Diazépam",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Midazolam",
+        "niveau": "absolu"
+      }
+    ]
+  },
+  "aerosol": null,
+  "oral": {
+    "formes": [
+      {
+        "type": "Comprimé pelliculé",
+        "dosage": "500 mg",
+        "ecrasable": false,
+        "ouverture_gelule": null,
+        "posologie_adulte": [
+          {
+            "population": "Fibrinolyse générale ou locale",
+            "population_type": "adulte",
+            "categorie": "generale",
+            "dose_par_prise_mg_min": 500,
+            "dose_par_prise_mg_max": 2000,
+            "dose_journaliere_max_g": 4,
+            "intervalle_min_h": 8,
+            "intervalle_max_h": 12
+          },
+          {
+            "population": "Fibrinolyse générale ou locale",
+            "population_type": "pediatrie",
+            "age_min_mois": 12,
+            "categorie": "generale",
+            "dose_journaliere_mg_kg_min": 20,
+            "dose_journaliere_mg_kg_max": 20,
+            "dose_journaliere_max_g": "Selon poids"
+          }
+        ]
+      },
+      {
+        "type": "Solution buvable",
+        "dosage": "1 g/10 mL (100 mg/mL)",
+        "ecrasable": null,
+        "ouverture_gelule": null,
+        "posologie_adulte": []
+      }
+    ],
+    "recommandation_sonde": {
+      "forme_preferee": "Solution buvable",
+      "alternative": ""
+    }
+  },
+  "tracabilite": {
+    "rcp_source": [
+      {
+        "specialite": "EXACYL 0,5 g/5 ml IV, solution injectable",
+        "titulaire": "CHEPLAPHARM ARZNEIMITTEL GmbH",
+        "date_maj": "2026-04-10",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/62330898/extrait"
+      },
+      {
+        "specialite": "ACIDE TRANEXAMIQUE AGUETTANT 0,5 g/5 mL, solution injectable",
+        "titulaire": "Laboratoire AGUETTANT",
+        "date_maj": "2026-04-28",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/64314490/extrait"
+      },
+      {
+        "specialite": "EXACYL 1 g/10 ml, solution buvable",
+        "titulaire": "CHEPLAPHARM ARZNEIMITTEL GmbH",
+        "date_maj": "2026-04-10",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/60862443/extrait"
+      },
+      {
+        "specialite": "SPOTOF 1 g/10 ml, solution buvable",
+        "titulaire": "LABORATOIRE CCD",
+        "date_maj": "2022-05-03",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/61268422/extrait"
+      },
+      {
+        "specialite": "EXACYL 500 mg, comprimé pelliculé",
+        "titulaire": "CHEPLAPHARM ARZNEIMITTEL GmbH",
+        "date_maj": "2026-04-10",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/61224073/extrait"
+      }
+    ],
+    "statut": "valide",
+    "validation": {
+      "date": "2026-09-10",
+      "validateur": "Anna Trabaud-Lopez (IDE, porteuse du projet), vérification des données extraites contre les RCP ; équipe pharmacie, validation de la méthodologie et arbitrage des points litigieux",
+      "perimetre": [
+        "adulte",
+        "pediatrie"
+      ],
+      "prochaine_revision": "2026-12-10"
+    }
+  }
+}

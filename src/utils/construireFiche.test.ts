@@ -109,8 +109,7 @@ describe('construireFiche', () => {
             {
               evenement: 'Hépatotoxicité',
               explication: 'Risque en cas de surdosage.',
-              action: 'Doser le paracétamol plasmatique.',
-              source_rcp: 'RCP 4.9',
+              action: 'Doser le paracétamol plasmatique.',
             },
           ],
         },
@@ -134,8 +133,7 @@ describe('construireFiche', () => {
             {
               substance: 'Probénécide',
               effet: 'Diminue la clairance du paracétamol.',
-              action_infirmier: 'Envisager une diminution de dose.',
-              source_rcp: 'RCP 4.5',
+              action_infirmier: 'Envisager une diminution de dose.',
             },
           ],
         },

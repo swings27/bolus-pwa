@@ -109,15 +109,15 @@
     "preparation": [
       {
         "voie": "IVD",
-        "contexte": "Induction anesthésique",
-        "detail": "Utiliser pur, en injection lente en 60 secondes environ, afin d'éviter une dépression respiratoire.",
-        "duree": "Environ 60 secondes",
+        "contexte": "Induction ou entretien anesthésique",
+        "detail": "Diluer avec du NaCl 0,9% ou G5%.",
+        "duree": "Environ 60 secondes, afin d'éviter une dépression respiratoire",
         "stabilite": "Utiliser directement."
       },
       {
         "voie": "IM",
         "contexte": "Induction ou entretien anesthésique",
-        "detail": "Utiliser pur, en injection intramusculaire.",
+        "detail": "Diluer avec du NaCl 0,9% ou G5%.",
         "duree": "< 1 min",
         "stabilite": "Utiliser directement."
       },
@@ -130,7 +130,7 @@
       },
       {
         "voie": "PSE",
-        "contexte": "VVC uniquement.",
+        "contexte": "VVC recommandée.",
         "detail": "Concentration maximale de 50 mg/mL.",
         "duree": "Continu",
         "stabilite": "24 heures entre 2 et 8°C."
@@ -160,8 +160,8 @@
           "population": "Douleur peropératoire",
           "population_type": "mixte",
           "categorie": "generale",
-          "dose_mgkgh_min": 0.125,
-          "dose_mgkgh_max": 0.25,
+          "dose_mg_kg_h_min": 0.125,
+          "dose_mg_kg_h_max": 0.25,
           "intervalle_min_h": 24,
           "intervalle_max_h": 24,
           "dose_mg_kg_j_max": 5

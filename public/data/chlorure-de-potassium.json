@@ -17,8 +17,7 @@
       "grossesse": "Le chlorure de potassium ne sera administré au cours de la grossesse que si nécessaire.",
       "allaitement": "En l'absence de données sur un éventuel passage dans le lait maternel, il est préférable d'éviter d'allaiter pendant le traitement.",
       "url_crat_grossesse": null,
-      "url_crat_allaitement": null,
-      "source": "RCP CHLORURE DE POTASSIUM LAVOISIER 10 % (0,10 g/ml), solution à diluer pour perfusion, section 4.6"
+      "url_crat_allaitement": null
     },
     "contre_indications": [
       "Hyperkaliémie ou toute situation pouvant entraîner une hyperkaliémie",
@@ -31,64 +30,54 @@
       {
         "substance": "Diurétiques d'épargne potassique",
         "effet": "Risque d'hyperkaliémie potentiellement létale, en particulier chez l'insuffisant rénal, par addition des effets hyperkaliémiants.",
-        "action_infirmier": "Signaler l'association au prescripteur avant administration et renforcer la surveillance de la kaliémie.",
-        "source_rcp": "RCP CHLORURE DE POTASSIUM LAVOISIER 10 %, 4.5"
+        "action_infirmier": "Signaler l'association au prescripteur avant administration et renforcer la surveillance de la kaliémie."
       },
       {
         "substance": "Inhibiteurs de l'enzyme de conversion et antagonistes des récepteurs de l'angiotensine II",
         "effet": "Addition des effets hyperkaliémiants avec risque d'hyperkaliémie potentiellement létale.",
-        "action_infirmier": "Association à éviter sauf hypokaliémie préalable : vérifier la prescription et la kaliémie avant administration.",
-        "source_rcp": "RCP CHLORURE DE POTASSIUM LAVOISIER 10 %, 4.5"
+        "action_infirmier": "Association à éviter sauf hypokaliémie préalable : vérifier la prescription et la kaliémie avant administration."
       },
       {
         "substance": "Ciclosporine, tacrolimus",
         "effet": "Hyperkaliémie potentiellement létale, en particulier chez les patients ayant une insuffisance rénale, par addition des effets hyperkaliémiants.",
-        "action_infirmier": "Association à éviter sauf hypokaliémie préalable : vérifier la prescription et la kaliémie avant administration.",
-        "source_rcp": "RCP CHLORURE DE POTASSIUM LAVOISIER 10 %, 4.5"
+        "action_infirmier": "Association à éviter sauf hypokaliémie préalable : vérifier la prescription et la kaliémie avant administration."
       },
       {
         "substance": "Héparines",
         "effet": "Les héparines sont susceptibles de favoriser la survenue d'une hyperkaliémie ; l'association majore le risque d'hyperkaliémie.",
-        "action_infirmier": "Renforcer la surveillance de la kaliémie pendant l'association.",
-        "source_rcp": "RCP CHLORURE DE POTASSIUM LAVOISIER 10 %, 4.5"
+        "action_infirmier": "Renforcer la surveillance de la kaliémie pendant l'association."
       },
       {
         "substance": "Anti-inflammatoires non stéroïdiens",
         "effet": "Les AINS sont susceptibles de favoriser la survenue d'une hyperkaliémie ; l'association majore le risque d'hyperkaliémie.",
-        "action_infirmier": "Renforcer la surveillance de la kaliémie pendant l'association.",
-        "source_rcp": "RCP CHLORURE DE POTASSIUM LAVOISIER 10 %, 4.5"
+        "action_infirmier": "Renforcer la surveillance de la kaliémie pendant l'association."
       },
       {
         "substance": "Triméthoprime",
         "effet": "Le triméthoprime est susceptible de favoriser la survenue d'une hyperkaliémie ; l'association majore le risque d'hyperkaliémie.",
-        "action_infirmier": "Renforcer la surveillance de la kaliémie pendant l'association.",
-        "source_rcp": "RCP CHLORURE DE POTASSIUM LAVOISIER 10 %, 4.5"
+        "action_infirmier": "Renforcer la surveillance de la kaliémie pendant l'association."
       }
     ],
     "surveillance_specifique": [
       {
         "evenement": "Arrêt cardiaque en cas d'administration rapide",
         "explication": "Le chlorure de potassium injectable est une solution hypertonique : une administration rapide peut entraîner un arrêt cardiaque.",
-        "action": "Ne jamais injecter en intraveineuse directe. Diluer et contrôler le débit à l'aide d'une pompe volumétrique, selon les valeurs indiquées en Préparation.",
-        "source_rcp": "RCP CHLORURE DE POTASSIUM LAVOISIER 10 %, 4.2 et 4.4"
+        "action": "Ne jamais injecter en intraveineuse directe. Diluer et contrôler le débit à l'aide d'une pompe volumétrique, selon les valeurs indiquées en Préparation."
       },
       {
         "evenement": "Hyperkaliémie en cours de perfusion",
         "explication": "L'apport potassique peut faire basculer le patient en hyperkaliémie, d'abord visible sur l'électrocardiogramme (ondes T amples et pointues, disparition des ondes P, élargissement du QRS).",
-        "action": "Arrêter le traitement dès l'apparition d'une hyperkaliémie. Vérification répétée de l'ionogramme plasmatique et, si nécessaire, monitoring cardiovasculaire.",
-        "source_rcp": "RCP CHLORURE DE POTASSIUM LAVOISIER 10 %, 4.4 et 4.9"
+        "action": "Arrêter le traitement dès l'apparition d'une hyperkaliémie. Vérification répétée de l'ionogramme plasmatique et, si nécessaire, monitoring cardiovasculaire."
       },
       {
         "evenement": "Nécrose en cas d'extravasation",
         "explication": "La solution est hypertonique et très agressive pour les tissus en cas de diffusion hors de la veine.",
-        "action": "Surveiller le point de perfusion pendant toute la durée d'administration et arrêter immédiatement en cas d'extravasation.",
-        "source_rcp": "RCP CHLORURE DE POTASSIUM LAVOISIER 10 %, 4.8"
+        "action": "Surveiller le point de perfusion pendant toute la durée d'administration et arrêter immédiatement en cas d'extravasation."
       },
       {
         "evenement": "Phlébite au site de perfusion",
         "explication": "Survient notamment lorsque la concentration de la solution perfusée est trop élevée.",
-        "action": "Respecter la concentration maximale sur voie périphérique indiquée en Préparation et surveiller le trajet veineux.",
-        "source_rcp": "RCP CHLORURE DE POTASSIUM LAVOISIER 10 %, 4.8"
+        "action": "Respecter la concentration maximale sur voie périphérique indiquée en Préparation et surveiller le trajet veineux."
       }
     ],
     "pictogrammes": [],
@@ -164,7 +153,7 @@
       {
         "type": "Gélule",
         "dosage": "600 mg",
-        "secable": false,
+        "ecrasable": false,
         "ouverture_gelule": true,
         "posologie_adulte": [
           {
@@ -192,7 +181,7 @@
       {
         "type": "Comprimé enrobé à libération prolongée",
         "dosage": "600 mg et 1000 mg",
-        "secable": false,
+        "ecrasable": false,
         "ouverture_gelule": null,
         "posologie_adulte": [
           {
@@ -210,7 +199,7 @@
       {
         "type": "Sirop",
         "dosage": "440 mg de potassium par dose de 15 mL",
-        "secable": false,
+        "ecrasable": false,
         "ouverture_gelule": null,
         "posologie_adulte": [
           {
@@ -219,7 +208,7 @@
             "categorie": "speciale",
             "dose_par_prise_mg_min": 440,
             "dose_par_prise_mg_max": 440,
-            "dose_journaliere_max_g": 0.840,
+            "dose_journaliere_max_mg": 840,
             "nb_prises_min_24h": 2,
             "nb_prises_max_24h": 3
           },

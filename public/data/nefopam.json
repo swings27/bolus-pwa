@@ -13,8 +13,7 @@
       "grossesse": "En l'absence d'étude chez l'animal et de données cliniques humaines, le risque n'est pas connu ; par conséquent, par mesure de prudence, ne pas prescrire de néfopam pendant la grossesse, ni pendant l'allaitement.",
       "allaitement": "En l'absence d'étude chez l'animal et de données cliniques humaines, le risque n'est pas connu ; par conséquent, par mesure de prudence, ne pas prescrire de néfopam pendant la grossesse, ni pendant l'allaitement.",
       "url_crat_grossesse": "https://www.lecrat.fr/7885/",
-      "url_crat_allaitement": "https://www.lecrat.fr/7887/",
-      "source": "RCP ACUPAN 20 mg/2 ml, solution injectable, section 4.6"
+      "url_crat_allaitement": "https://www.lecrat.fr/7887/"
     },
     "contre_indications": [
       "Hypersensibilité à la substance active ou à l'un des excipients",
@@ -27,34 +26,29 @@
       {
         "substance": "Alcool",
         "effet": "Majoration de l'effet sédatif par l'alcool, avec altération de la vigilance pouvant rendre dangereuses la conduite de véhicules et l'utilisation de machines.",
-        "action_infirmier": "Signaler au prescripteur la consommation d'alcool ou la prise de médicaments contenant de l'alcool ; conseiller d'éviter les boissons alcoolisées.",
-        "source_rcp": "RCP ACUPAN 20 mg/2 ml, 4.5 (association déconseillée)"
+        "action_infirmier": "Signaler au prescripteur la consommation d'alcool ou la prise de médicaments contenant de l'alcool ; conseiller d'éviter les boissons alcoolisées."
       },
       {
         "substance": "Dépresseurs du système nerveux central",
         "effet": "Addition des effets dépresseurs du système nerveux central, avec diminution de la vigilance.",
-        "action_infirmier": "Signaler au prescripteur toute association avec un autre médicament dépresseur du système nerveux central ; renforcer la surveillance de la vigilance.",
-        "source_rcp": "RCP ACUPAN 20 mg/2 ml, 4.5 (à prendre en compte)"
+        "action_infirmier": "Signaler au prescripteur toute association avec un autre médicament dépresseur du système nerveux central ; renforcer la surveillance de la vigilance."
       }
     ],
     "surveillance_specifique": [
       {
         "evenement": "Convulsions",
         "explication": "Le néfopam est contre-indiqué en cas d'antécédent de troubles convulsifs ; des convulsions ont néanmoins été rapportées comme effet indésirable rare, notamment en situation de surdosage.",
-        "action": "Surveiller la survenue de convulsions, en particulier en cas de dépassement des doses recommandées ; signaler au prescripteur.",
-        "source_rcp": "RCP ACUPAN 20 mg/2 ml, 4.3, 4.8 et 4.9"
+        "action": "Surveiller la survenue de convulsions, en particulier en cas de dépassement des doses recommandées ; signaler au prescripteur."
       },
       {
         "evenement": "Effets anticholinergiques",
         "explication": "Le néfopam possède une activité anticholinergique propre, à l'origine d'une augmentation modérée de la fréquence cardiaque ; la prudence est renforcée chez les patients porteurs d'une pathologie cardiovasculaire.",
-        "action": "Surveiller la fréquence cardiaque et la survenue de sueurs, de sécheresse buccale ou de difficultés à uriner, en particulier chez les patients porteurs d'une pathologie cardiovasculaire ; signaler au prescripteur.",
-        "source_rcp": "RCP ACUPAN 20 mg/2 ml, 4.4, 4.8 et 5.1"
+        "action": "Surveiller la fréquence cardiaque et la survenue de sueurs, de sécheresse buccale ou de difficultés à uriner, en particulier chez les patients porteurs d'une pathologie cardiovasculaire ; signaler au prescripteur."
       },
       {
         "evenement": "Pharmacodépendance et mésusage",
         "explication": "Le néfopam peut entraîner une pharmacodépendance pouvant conduire à un abus, en particulier chez les patients ayant des antécédents de consommation de substances psychoactives ou de troubles de la santé mentale ; il n'est pas indiqué dans le traitement des affections douloureuses chroniques.",
-        "action": "Surveiller les signes de dépendance ou de mésusage, en particulier chez les patients à risque ; signaler au prescripteur en cas de doute et réévaluer régulièrement le bénéfice/risque du traitement.",
-        "source_rcp": "RCP ACUPAN 20 mg/2 ml, 4.4 et 4.8"
+        "action": "Surveiller les signes de dépendance ou de mésusage, en particulier chez les patients à risque ; signaler au prescripteur en cas de doute et réévaluer régulièrement le bénéfice/risque du traitement."
       }
     ],
     "pictogrammes": [],
@@ -85,7 +79,7 @@
           "dose_par_prise_mg_max": 20,
           "intervalle_min_h": 4,
           "intervalle_max_h": 4,
-          "dose_journaliere_max_g": 0.12
+          "dose_journaliere_max_mg": 120
         },
         {
           "population": "Voie intramusculaire",
@@ -95,7 +89,7 @@
           "dose_par_prise_mg_max": 20,
           "intervalle_min_h": 6,
           "intervalle_max_h": 6,
-          "dose_journaliere_max_g": 0.12
+          "dose_journaliere_max_mg": 120
         }
       ]
     },
@@ -117,7 +111,7 @@
             "dose_par_prise_mg_max": 60,
             "intervalle_min_h": 4,
             "intervalle_max_h": 8,
-            "dose_journaliere_max_g": 0.18
+            "dose_journaliere_max_mg": 180
           }
         ]
       }
@@ -127,6 +121,7 @@
       "alternative": "Voie injectable (IV/IM) de la même molécule, à discuter avec le prescripteur"
     }
   },
+  "aerosol": null,
   "tracabilite": {
     "rcp_source": [
       {

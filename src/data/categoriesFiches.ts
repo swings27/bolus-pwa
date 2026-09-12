@@ -18,6 +18,7 @@ export interface IFicheMeta {
 // ET la liste des fiches à charger par useFichesLoader — un fichier JSON
 // ajouté dans public/data/ doit être déclaré ici pour apparaître dans l'app.
 export const CATALOGUE_FICHES: Record<string, IFicheMeta> = {
+  'acide-tranexamique': { categorie: 'cardiovasculaire', sousFamille: 'Hémostatiques' },
   adrenaline: { categorie: 'cardiovasculaire', sousFamille: 'Cardiotropes' },
   amiodarone: { categorie: 'cardiovasculaire', sousFamille: 'Cardiotropes' },
   amoxicilline: { categorie: 'anti-infectieux', sousFamille: 'Antibiotiques' },
@@ -31,6 +32,7 @@ export const CATALOGUE_FICHES: Record<string, IFicheMeta> = {
   fosfomycine: { categorie: 'anti-infectieux', sousFamille: 'Antibiotiques' },
   furosemide: { categorie: 'cardiovasculaire', sousFamille: 'Diurétiques' },
   gentamicine: { categorie: 'anti-infectieux', sousFamille: 'Antibiotiques' },
+  'heparine-calcique': { categorie: 'cardiovasculaire', sousFamille: 'Anticoagulants' },
   'heparine-sodique': { categorie: 'cardiovasculaire', sousFamille: 'Anticoagulants' },
   hydrocortisone: { categorie: 'endocrinologie', sousFamille: 'Corticoïdes'},
   ibuprofene: { categorie: 'antalgiques', sousFamille: 'AINS' },
@@ -39,9 +41,12 @@ export const CATALOGUE_FICHES: Record<string, IFicheMeta> = {
   ketoprofene: { categorie: 'antalgiques', sousFamille: 'AINS' },
   levetiracetam: { categorie: 'psychotropes', sousFamille: 'Anticonvulsivants' },
   metronidazole: { categorie: 'anti-infectieux', sousFamille: 'Antibiotiques' },
+  midazolam: { categorie: 'psychotropes', sousFamille: 'Hypnotiques' },
   nefopam: { categorie: 'antalgiques', sousFamille: 'Antalgiques palier 1'},
   nicardipine: { categorie: 'cardiovasculaire', sousFamille: 'Antihypertenseurs' },
+  noradrenaline: { categorie: 'cardiovasculaire', sousFamille: 'Cardiotropes' },
   ondansetron: { categorie: 'gastrologie', sousFamille: 'Antiémétiques'},
+  pantoprazole: { categorie: 'gastrologie', sousFamille: 'Protecteurs gastriques' },
   paracetamol: { categorie: 'antalgiques', sousFamille: 'Antalgiques palier 1' },
   'piperacilline-tazobactam': { categorie: 'anti-infectieux', sousFamille: 'Antibiotiques' },
   phloroglucinol: { categorie: 'gastrologie', sousFamille: 'Antispasmodiques'},

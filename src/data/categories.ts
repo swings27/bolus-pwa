@@ -55,6 +55,7 @@ export const CATEGORIES: ICategorie[] = [
       'Antihypertenseurs',
       'Cardiotropes',
       'Diurétiques',
+      'Hémostatiques',
       'Hypolipémiants',
     ],
     couleur: '#8C2F39',

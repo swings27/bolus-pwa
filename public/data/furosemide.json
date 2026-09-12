@@ -26,8 +26,7 @@
       "grossesse": "En règle générale, l'administration du furosémide doit être évitée chez la femme enceinte et ne jamais être prescrite au cours des œdèmes physiologiques (et ne nécessitant donc pas de traitement) de la grossesse.",
       "allaitement": "Il est préférable de ne pas allaiter en cas de traitement par furosémide.",
       "url_crat_grossesse": "https://www.lecrat.fr/11557/",
-      "url_crat_allaitement": "https://www.lecrat.fr/11558/",
-      "source": "RCP FUROSEMIDE RENAUDIN 20 mg/2 mL, solution injectable (IM-IV), section 4.6"
+      "url_crat_allaitement": "https://www.lecrat.fr/11558/"
     },
     "contre_indications": [
       "Hypersensibilité à la substance active ou à l'un des excipients",
@@ -45,94 +44,79 @@
       {
         "substance": "Lithium",
         "effet": "Augmentation de la lithémie avec signes de surdosage, comme lors d'un régime désodé, par diminution de l'excrétion urinaire du lithium.",
-        "action_infirmier": "Association déconseillée. Si elle ne peut être évitée, surveillance stricte de la lithémie.",
-        "source_rcp": "RCP FUROSEMIDE RENAUDIN 20 mg/2 mL, solution injectable (IM-IV), section 4.5"
+        "action_infirmier": "Association déconseillée. Si elle ne peut être évitée, surveillance stricte de la lithémie."
       },
       {
         "substance": "Digitaliques",
         "effet": "L'hypokaliémie induite par le furosémide favorise les effets toxiques des digitaliques.",
-        "action_infirmier": "Corriger toute hypokaliémie au préalable et assurer une surveillance clinique, électrolytique et électrocardiographique.",
-        "source_rcp": "RCP FUROSEMIDE RENAUDIN 20 mg/2 mL, solution injectable (IM-IV), section 4.5"
+        "action_infirmier": "Corriger toute hypokaliémie au préalable et assurer une surveillance clinique, électrolytique et électrocardiographique."
       },
       {
         "substance": "Aminosides",
         "effet": "Augmentation des risques néphrotoxiques et ototoxiques des aminosides, par insuffisance rénale fonctionnelle liée à la déshydratation.",
-        "action_infirmier": "Signaler l'association ; diminuer le débit de perfusion du furosémide en présence d'aminosides.",
-        "source_rcp": "RCP FUROSEMIDE RENAUDIN 20 mg/2 mL, solution injectable (IM-IV), section 4.5 ; Guide HUG d'administration des médicaments injectables chez l'adulte (version 20.03.2026), fiche LASIX (furosémide)"
+        "action_infirmier": "Signaler l'association ; diminuer le débit de perfusion du furosémide en présence d'aminosides."
       },
       {
         "substance": "AINS et acide acétylsalicylique à dose anti-inflammatoire ou antalgique",
         "effet": "Insuffisance rénale aiguë chez le malade à risque, sujet âgé ou déshydraté, par diminution de la filtration glomérulaire.",
-        "action_infirmier": "Assurer une hydratation correcte du patient et surveiller la diurèse et la fonction rénale.",
-        "source_rcp": "RCP FUROSEMIDE RENAUDIN 20 mg/2 mL, solution injectable (IM-IV), section 4.5"
+        "action_infirmier": "Assurer une hydratation correcte du patient et surveiller la diurèse et la fonction rénale."
       },
       {
         "substance": "Inhibiteurs de l'enzyme de conversion et antagonistes des récepteurs de l'angiotensine II",
         "effet": "Risque d'hypotension artérielle brutale et/ou d'insuffisance rénale aiguë lors de l'instauration du traitement ou de l'augmentation de la posologie.",
-        "action_infirmier": "Surveiller la pression artérielle lors de l'instauration ou d'une augmentation de dose.",
-        "source_rcp": "RCP FUROSEMIDE RENAUDIN 20 mg/2 mL, solution injectable (IM-IV), section 4.5"
+        "action_infirmier": "Surveiller la pression artérielle lors de l'instauration ou d'une augmentation de dose."
       },
       {
         "substance": "Autres médicaments hypokaliémiants",
         "effet": "Risque majoré d'hypokaliémie.",
-        "action_infirmier": "Surveiller la kaliémie, avec correction si besoin.",
-        "source_rcp": "RCP FUROSEMIDE RENAUDIN 20 mg/2 mL, solution injectable (IM-IV), section 4.5"
+        "action_infirmier": "Surveiller la kaliémie, avec correction si besoin."
       },
       {
         "substance": "Médicaments susceptibles de donner des torsades de pointes",
         "effet": "Risque majoré de troubles du rythme ventriculaire, favorisé par l'hypokaliémie induite par le furosémide.",
-        "action_infirmier": "Corriger toute hypokaliémie avant l'association et surveiller l'électrocardiogramme.",
-        "source_rcp": "RCP FUROSEMIDE RENAUDIN 20 mg/2 mL, solution injectable (IM-IV), section 4.5"
+        "action_infirmier": "Corriger toute hypokaliémie avant l'association et surveiller l'électrocardiogramme."
       },
       {
         "substance": "Produits de contraste iodés",
         "effet": "Risque majoré d'insuffisance rénale fonctionnelle aiguë en cas de déshydratation provoquée par le diurétique.",
-        "action_infirmier": "Réhydrater le patient avant l'administration du produit de contraste.",
-        "source_rcp": "RCP FUROSEMIDE RENAUDIN 20 mg/2 mL, solution injectable (IM-IV), section 4.5"
+        "action_infirmier": "Réhydrater le patient avant l'administration du produit de contraste."
       },
       {
         "substance": "Metformine",
         "effet": "Acidose lactique déclenchée par l'insuffisance rénale fonctionnelle liée aux diurétiques de l'anse, en particulier en cas d'altération de la fonction rénale.",
-        "action_infirmier": "Signaler au prescripteur toute co-prescription de metformine ; surveiller la fonction rénale.",
-        "source_rcp": "RCP FUROSEMIDE RENAUDIN 20 mg/2 mL, solution injectable (IM-IV), section 4.5"
+        "action_infirmier": "Signaler au prescripteur toute co-prescription de metformine ; surveiller la fonction rénale."
       }
     ],
     "surveillance_specifique": [
       {
         "evenement": "Hypokaliémie",
         "explication": "La déplétion potassique avec hypokaliémie constitue le risque majeur des diurétiques de l'anse.",
-        "action": "Contrôler la kaliémie avant et pendant le traitement ; signaler toute valeur basse ou tout trouble du rythme.",
-        "source_rcp": "RCP FUROSEMIDE RENAUDIN 20 mg/2 mL, solution injectable (IM-IV), section 4.4"
+        "action": "Contrôler la kaliémie avant et pendant le traitement ; signaler toute valeur basse ou tout trouble du rythme."
       },
       {
         "evenement": "Hyponatrémie",
         "explication": "Le furosémide augmente l'élimination sodée ; la natrémie peut chuter rapidement, surtout chez le sujet âgé.",
-        "action": "Contrôler la natrémie avant la mise en route du traitement, puis à intervalles réguliers.",
-        "source_rcp": "RCP FUROSEMIDE RENAUDIN 20 mg/2 mL, solution injectable (IM-IV), section 4.4"
+        "action": "Contrôler la natrémie avant la mise en route du traitement, puis à intervalles réguliers."
       },
       {
         "evenement": "Atteinte cochléo-vestibulaire",
         "explication": "Le risque d'atteinte de l'audition augmente avec un débit d'administration élevé et lors de l'association à d'autres médicaments ototoxiques, notamment les aminosides.",
-        "action": "Respecter le débit maximal indiqué en Préparation ; diminuer le débit en présence d'aminosides et signaler acouphènes ou baisse d'audition.",
-        "source_rcp": "RCP FUROSEMIDE RENAUDIN 20 mg/2 mL, solution injectable (IM-IV), sections 4.4 et 4.5 ; Guide HUG d'administration des médicaments injectables chez l'adulte (version 20.03.2026), fiche LASIX (furosémide)"
+        "action": "Respecter le débit maximal indiqué en Préparation ; diminuer le débit en présence d'aminosides et signaler acouphènes ou baisse d'audition."
       },
       {
         "evenement": "Dégradation de la fonction rénale",
         "explication": "Le furosémide peut provoquer une insuffisance rénale fonctionnelle par déshydratation, en particulier chez le sujet âgé ou sous inhibiteur de l'enzyme de conversion.",
-        "action": "Contrôler régulièrement la créatininémie pendant le traitement.",
-        "source_rcp": "RCP FUROSEMIDE RENAUDIN 20 mg/2 mL, solution injectable (IM-IV), section 4.4"
+        "action": "Contrôler régulièrement la créatininémie pendant le traitement."
       },
       {
         "evenement": "Diurèse insuffisante ou excessive",
         "explication": "La posologie du furosémide se règle sur la diurèse obtenue ; en insuffisance rénale aiguë, l'absence de reprise de la diurèse conduit à arrêter le traitement.",
-        "action": "Mesurer et consigner la diurèse ; signaler l'absence de reprise de diurèse ou une perte de poids rapide.",
-        "source_rcp": "RCP LASILIX SPECIAL 250 mg/25 ml, solution injectable en ampoule, section 4.2"
+        "action": "Mesurer et consigner la diurèse ; signaler l'absence de reprise de diurèse ou une perte de poids rapide."
       },
       {
         "evenement": "Hypotension symptomatique",
         "explication": "L'hypovolémie induite par le diurétique peut provoquer vertiges, évanouissements ou pertes de connaissance.",
-        "action": "Contrôler la pression artérielle après l'injection et prévenir le patient du risque au lever.",
-        "source_rcp": "RCP FUROSEMIDE RENAUDIN 20 mg/2 mL, solution injectable (IM-IV), section 4.4"
+        "action": "Contrôler la pression artérielle après l'injection et prévenir le patient du risque au lever."
       }
     ],
     "pictogrammes": [],
@@ -175,7 +159,7 @@
           "categorie": "generale",
           "dose_par_prise_mg_min": 20,
           "dose_par_prise_mg_max": 20,
-          "dose_journaliere_max_g": 0.06,
+          "dose_journaliere_max_mg": 60,
           "intervalle_min_h": 8,
           "intervalle_max_h": 12
         },
@@ -185,7 +169,7 @@
           "categorie": "im",
           "dose_par_prise_mg_min": 20,
           "dose_par_prise_mg_max": 20,
-          "dose_journaliere_max_g": 0.06,
+          "dose_journaliere_max_mg": 60,
           "intervalle_min_h": 8,
           "intervalle_max_h": 12
         },
@@ -301,14 +285,14 @@
       {
         "type": "Comprimé",
         "dosage": "20 mg",
-        "secable": false,
+        "ecrasable": false,
         "ouverture_gelule": null,
         "posologie_adulte": []
       },
       {
         "type": "Comprimé sécable",
         "dosage": "40 mg",
-        "secable": true,
+        "ecrasable": true,
         "ouverture_gelule": null,
         "posologie_adulte": [
           {
@@ -317,7 +301,7 @@
             "categorie": "generale",
             "dose_par_prise_mg_min": 20,
             "dose_par_prise_mg_max": 40,
-            "dose_journaliere_max_g": 0.04
+            "dose_journaliere_max_mg": 40
           },
           {
             "population": "Œdèmes importants d'origine cardiaque, rénale ou hépatique",
@@ -325,7 +309,7 @@
             "dose_par_prise_mg_max": 80,
             "dose_par_prise_mg_min": 40,
             "categorie": "generale",
-            "dose_journaliere_max_g": 0.16,
+            "dose_journaliere_max_mg": 160,
             "intervalle_min_h": 12,
             "intervalle_max_h": 24
           }
@@ -334,28 +318,28 @@
       {
         "type": "Comprimé sécable",
         "dosage": "500 mg",
-        "secable": true,
+        "ecrasable": true,
         "ouverture_gelule": null,
         "posologie_adulte": [
           {
             "population": "Insuffisance rénale chronique, créatininémie 20 à 40 mg/l",
             "population_type": "adulte",
             "categorie": "speciale",
-            "dose_par_prise_mg_max": 40,
-            "dose_par_prise_mg_min": 80,
+            "dose_par_prise_mg_min": 40,
+            "dose_par_prise_mg_max": 80,
             "intervalle_min_h": 8,
             "intervalle_max_h": 24,
-            "dose_journaliere_max_g": 0.12
+            "dose_journaliere_max_mg": 120
           },
           {
             "population": "Insuffisance rénale chronique, créatininémie 40 à 100 mg/l",
             "population_type": "adulte",
             "categorie": "speciale",
-            "dose_par_prise_mg_max": 80,
-            "dose_par_prise_mg_min": 120,
+            "dose_par_prise_mg_min": 80,
+            "dose_par_prise_mg_max": 120,
             "intervalle_min_h": 8,
             "intervalle_max_h": 24,
-            "dose_journaliere_max_g": 0.25
+            "dose_journaliere_max_mg": 250
           },
           {
             "population": "Hémodialysé, veille et avant-veille de la séance",
@@ -370,7 +354,7 @@
       {
         "type": "Solution buvable",
         "dosage": "10 mg/mL",
-        "secable": false,
+        "ecrasable": false,
         "ouverture_gelule": null,
         "posologie_adulte": [
           {
@@ -389,6 +373,7 @@
       "alternative": ""
     }
   },
+  "aerosol": null,
   "tracabilite": {
     "rcp_source": [
       {

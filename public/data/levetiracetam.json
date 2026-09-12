@@ -15,8 +15,7 @@
       "grossesse": "Si après une évaluation attentive le traitement est considéré comme cliniquement nécessaire, le lévétiracétam peut être utilisé au cours de la grossesse.",
       "allaitement": "Le lévétiracétam est excrété dans le lait maternel. Par conséquent, l'allaitement n'est pas recommandé. Toutefois, si un traitement par le lévétiracétam est nécessaire pendant l'allaitement, le rapport bénéfice/risque du traitement devra être évalué en considérant l'importance de l'allaitement.",
       "url_crat_grossesse": "https://www.lecrat.fr/7045/",
-      "url_crat_allaitement": "https://www.lecrat.fr/7046/",
-      "source": "RCP LEVETIRACETAM VIATRIS 500 mg, comprimé pelliculé, section 4.6 (texte confirmé identique sur RCP LEVETIRACETAM VIATRIS 100 mg/mL, solution à diluer pour perfusion)"
+      "url_crat_allaitement": "https://www.lecrat.fr/7046/"
     },
     "contre_indications": [
       "Hypersensibilité au lévétiracétam, aux autres dérivés de la pyrrolidone, ou à l'un des excipients"
@@ -25,52 +24,44 @@
       {
         "substance": "Méthotrexate",
         "effet": "Il a été rapporté que l'administration concomitante de lévétiracétam et de méthotrexate diminue la clairance du méthotrexate, entraînant une augmentation/prolongation de sa concentration sanguine, jusqu'à des niveaux potentiellement toxiques.",
-        "action_infirmier": "Signaler au prescripteur toute co-prescription de méthotrexate ; surveiller attentivement les taux plasmatiques de méthotrexate et de lévétiracétam.",
-        "source_rcp": "RCP LEVETIRACETAM VIATRIS 500 mg, section 4.5"
+        "action_infirmier": "Signaler au prescripteur toute co-prescription de méthotrexate ; surveiller attentivement les taux plasmatiques de méthotrexate et de lévétiracétam."
       },
       {
         "substance": "Macrogol",
         "effet": "Des cas isolés de diminution de l'efficacité du lévétiracétam ont été rapportés lorsque le macrogol a été administré de façon concomitante à la prise orale de lévétiracétam.",
-        "action_infirmier": "Signaler au prescripteur la co-prescription de macrogol ; surveiller l'efficacité clinique du traitement antiépileptique (recrudescence de crises).",
-        "source_rcp": "RCP LEVETIRACETAM VIATRIS 500 mg, section 4.5"
+        "action_infirmier": "Signaler au prescripteur la co-prescription de macrogol ; surveiller l'efficacité clinique du traitement antiépileptique (recrudescence de crises)."
       }
     ],
     "surveillance_specifique": [
       {
         "evenement": "Altération de la numération de la formule sanguine",
         "explication": "De rares cas ont été décrits en association avec l'administration de lévétiracétam, généralement en début de traitement.",
-        "action": "Une numération de la formule sanguine complète est conseillée chez les patients souffrant de faiblesse importante, de fièvre, d'infections récurrentes ou de troubles de la coagulation ; signaler au prescripteur.",
-        "source_rcp": "RCP LEVETIRACETAM VIATRIS 500 mg, section 4.4"
+        "action": "Une numération de la formule sanguine complète est conseillée chez les patients souffrant de faiblesse importante, de fièvre, d'infections récurrentes ou de troubles de la coagulation ; signaler au prescripteur."
       },
       {
         "evenement": "Insuffisance rénale aiguë",
         "explication": "L'utilisation du lévétiracétam a été très rarement associée à une insuffisance rénale aiguë, avec un délai d'apparition allant de quelques jours à plusieurs mois.",
-        "action": "Signaler au prescripteur toute dégradation de la fonction rénale (diurèse, créatininémie) sous traitement.",
-        "source_rcp": "RCP LEVETIRACETAM VIATRIS 500 mg, section 4.4"
+        "action": "Signaler au prescripteur toute dégradation de la fonction rénale (diurèse, créatininémie) sous traitement."
       },
       {
         "evenement": "Symptômes psychotiques et troubles du comportement",
         "explication": "Le lévétiracétam peut provoquer des symptômes psychotiques et des troubles du comportement, y compris une irritabilité et une agressivité, avec parfois d'importants changements d'humeur ou de la personnalité.",
-        "action": "Surveiller l'apparition de signes psychiatriques ; signaler au prescripteur, qui pourra envisager une adaptation ou un arrêt progressif du traitement.",
-        "source_rcp": "RCP LEVETIRACETAM VIATRIS 500 mg, section 4.4"
+        "action": "Surveiller l'apparition de signes psychiatriques ; signaler au prescripteur, qui pourra envisager une adaptation ou un arrêt progressif du traitement."
       },
       {
         "evenement": "Aggravation paradoxale de la fréquence ou de la gravité des crises convulsives",
         "explication": "Comme avec d'autres antiépileptiques, le lévétiracétam peut dans de rares cas accroître la fréquence ou la gravité des crises, notamment au cours du premier mois suivant l'instauration ou l'augmentation de dose, effet le plus souvent réversible à l'arrêt ou à la diminution de la dose.",
-        "action": "Conseiller au patient de consulter immédiatement en cas d'aggravation des crises ; signaler au prescripteur.",
-        "source_rcp": "RCP LEVETIRACETAM VIATRIS 500 mg, section 4.4"
+        "action": "Conseiller au patient de consulter immédiatement en cas d'aggravation des crises ; signaler au prescripteur."
       },
       {
         "evenement": "Allongement de l'intervalle QT à l'électrocardiogramme",
         "explication": "De rares cas d'allongement de l'intervalle QT ont été observés en surveillance post-commercialisation, en particulier chez les patients présentant un allongement préexistant du QTc, sous traitement associé modifiant le QTc, une pathologie cardiaque ou des troubles électrolytiques.",
-        "action": "Renforcer la surveillance électrocardiographique chez les patients à risque ; signaler au prescripteur toute association avec un autre médicament modifiant l'intervalle QTc.",
-        "source_rcp": "RCP LEVETIRACETAM VIATRIS 500 mg, section 4.4 ; ANSM, actualité PRAC juillet 2020 sur l'allongement de l'intervalle QT sous lévétiracétam"
+        "action": "Renforcer la surveillance électrocardiographique chez les patients à risque ; signaler au prescripteur toute association avec un autre médicament modifiant l'intervalle QTc."
       },
       {
         "evenement": "Recrudescence des crises, voire état de mal épileptique, en cas d'arrêt brutal du traitement",
         "explication": "Le RCP impose un arrêt progressif du traitement, par paliers adaptés au poids (diminution de 500 mg deux fois par jour toutes les 2 à 4 semaines chez l'adulte et l'adolescent ≥ 50 kg ; paliers de 10 mg/kg puis 7 mg/kg deux fois par jour toutes les 2 semaines selon le poids chez l'enfant).",
-        "action": "Ne jamais interrompre brutalement le traitement ; respecter le schéma de décroissance progressive prescrit ; signaler au prescripteur toute inobservance.",
-        "source_rcp": "RCP LEVETIRACETAM VIATRIS 500 mg, section 4.2 (« Arrêt du traitement »)"
+        "action": "Ne jamais interrompre brutalement le traitement ; respecter le schéma de décroissance progressive prescrit ; signaler au prescripteur toute inobservance."
       }
     ],
     "pictogrammes": [],
@@ -176,6 +167,7 @@
       "alternative": ""
     }
   },
+  "aerosol": null,
   "tracabilite": {
     "rcp_source": [
       {

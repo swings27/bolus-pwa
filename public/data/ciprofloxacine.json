@@ -24,8 +24,7 @@
       "grossesse": "Par mesure de précaution, il est préférable d'éviter l'utilisation de la ciprofloxacine pendant la grossesse.",
       "allaitement": "Etant donné le risque potentiel d'atteinte articulaire, la ciprofloxacine ne doit pas être utilisée pendant l'allaitement.",
       "url_crat_grossesse": "https://www.lecrat.fr/6630/",
-      "url_crat_allaitement": "https://www.lecrat.fr/6631/",
-      "source": "RCP CIFLOX 500 mg, comprimé pelliculé sécable, section 4.6 (confirmé identique dans RCP CIPROFLOXACINE VIATRIS 500 mg)"
+      "url_crat_allaitement": "https://www.lecrat.fr/6631/"
     },
     "contre_indications": [
       "Hypersensibilité à la substance active, aux autres quinolones ou à l'un des excipients",
@@ -35,124 +34,104 @@
       {
         "substance": "Anti-vitamines K",
         "effet": "L'administration concomitante de ciprofloxacine peut augmenter les effets anticoagulants des antivitamines K.",
-        "action_infirmier": "Surveiller l'INR et signaler au prescripteur toute co-prescription avec un antivitamine K.",
-        "source_rcp": "RCP CIFLOX 500 mg, section 4.5"
+        "action_infirmier": "Surveiller l'INR et signaler au prescripteur toute co-prescription avec un antivitamine K."
       },
       {
         "substance": "Théophylline",
         "effet": "L'administration concomitante de ciprofloxacine et de théophylline peut occasionner un surdosage en théophylline et engendrer des effets indésirables dus à la théophylline.",
-        "action_infirmier": "Signaler au prescripteur toute co-prescription avec la théophylline et surveiller les signes de surdosage.",
-        "source_rcp": "RCP CIFLOX 500 mg, section 4.5"
+        "action_infirmier": "Signaler au prescripteur toute co-prescription avec la théophylline et surveiller les signes de surdosage."
       },
       {
         "substance": "Méthotrexate",
         "effet": "Le transport tubulaire rénal du méthotrexate peut être inhibé par l'administration concomitante de ciprofloxacine, ce qui peut aboutir à une augmentation des taux plasmatiques de méthotrexate et à un risque majoré de réactions toxiques.",
-        "action_infirmier": "Signaler immédiatement au prescripteur toute co-prescription avec le méthotrexate.",
-        "source_rcp": "RCP CIFLOX 500 mg, section 4.5"
+        "action_infirmier": "Signaler immédiatement au prescripteur toute co-prescription avec le méthotrexate."
       },
       {
         "substance": "Ciclosporine",
         "effet": "Une augmentation transitoire de la créatininémie a été observée lors de l'administration simultanée de ciprofloxacine et de ciclosporine.",
-        "action_infirmier": "Surveiller la fonction rénale (créatininémie) en cas de co-prescription avec la ciclosporine.",
-        "source_rcp": "RCP CIFLOX 500 mg, section 4.5"
+        "action_infirmier": "Surveiller la fonction rénale (créatininémie) en cas de co-prescription avec la ciclosporine."
       },
       {
         "substance": "Médicaments connus pour allonger l'intervalle QT",
         "effet": "La ciprofloxacine doit être utilisée avec précaution chez les patients traités par des médicaments connus pour allonger l'intervalle QT, du fait d'un risque cumulé d'allongement du QT.",
-        "action_infirmier": "Renforcer la surveillance électrocardiographique en cas de co-prescription avec un médicament allongeant le QT ; signaler au prescripteur.",
-        "source_rcp": "RCP CIFLOX 500 mg, section 4.4 et 4.5"
+        "action_infirmier": "Renforcer la surveillance électrocardiographique en cas de co-prescription avec un médicament allongeant le QT ; signaler au prescripteur."
       },
       {
         "substance": "Probénécide",
         "effet": "Le probénécide accroît la concentration sérique de la ciprofloxacine.",
-        "action_infirmier": "Signaler au prescripteur toute co-prescription avec le probénécide.",
-        "source_rcp": "RCP CIFLOX 500 mg, section 4.5"
+        "action_infirmier": "Signaler au prescripteur toute co-prescription avec le probénécide."
       }
     ],
     "surveillance_specifique": [
       {
         "evenement": "Tendinite et rupture tendineuse (notamment tendon d'Achille), parfois bilatérale, dès les premières 48 heures",
         "explication": "Risque majoré chez le sujet âgé, l'insuffisant rénal, le transplanté et en cas de corticothérapie associée.",
-        "action": "Interrompre la ciprofloxacine dès les premiers signes de tendinite (gonflement douloureux, inflammation) et signaler au prescripteur.",
-        "source_rcp": "RCP CIFLOX 500 mg, section 4.4"
+        "action": "Interrompre la ciprofloxacine dès les premiers signes de tendinite (gonflement douloureux, inflammation) et signaler au prescripteur."
       },
       {
         "evenement": "Allongement de l'intervalle QT",
         "explication": "Les fluoroquinolones, dont la ciprofloxacine, peuvent allonger l'intervalle QT, avec risque cumulé chez les patients à facteurs de risque ou sous traitement concomitant allongeant le QT.",
-        "action": "Renforcer la surveillance électrocardiographique chez les patients à risque ; signaler toute anomalie électrolytique au prescripteur avant traitement.",
-        "source_rcp": "RCP CIFLOX 500 mg, section 4.4"
+        "action": "Renforcer la surveillance électrocardiographique chez les patients à risque ; signaler toute anomalie électrolytique au prescripteur avant traitement."
       },
       {
         "evenement": "Photosensibilisation",
         "explication": "La ciprofloxacine peut provoquer des réactions de photosensibilité.",
-        "action": "Informer le patient d'éviter toute exposition directe et importante au soleil ou aux rayons UV pendant le traitement.",
-        "source_rcp": "RCP CIFLOX 500 mg, section 4.4"
+        "action": "Informer le patient d'éviter toute exposition directe et importante au soleil ou aux rayons UV pendant le traitement."
       },
       {
         "evenement": "Neuropathie périphérique sensorielle ou sensitivo-motrice",
         "explication": "Effet indésirable spécifique aux fluoroquinolones, pouvant apparaître rapidement après le début du traitement.",
-        "action": "Signaler au prescripteur l'apparition de tout symptôme neurologique évocateur ; l'arrêt du traitement peut être nécessaire.",
-        "source_rcp": "RCP CIFLOX 500 mg, section 4.4"
+        "action": "Signaler au prescripteur l'apparition de tout symptôme neurologique évocateur ; l'arrêt du traitement peut être nécessaire."
       },
       {
         "evenement": "Convulsions et abaissement du seuil épileptogène, y compris état de mal épileptique",
         "explication": "Risque connu de la classe des quinolones, en particulier chez les patients ayant des antécédents neurologiques prédisposants.",
-        "action": "Surveiller l'apparition de signes neurologiques et signaler au prescripteur, en particulier chez un patient aux antécédents neurologiques.",
-        "source_rcp": "RCP CIFLOX 500 mg, section 4.4"
+        "action": "Surveiller l'apparition de signes neurologiques et signaler au prescripteur, en particulier chez un patient aux antécédents neurologiques."
       },
       {
         "evenement": "Manifestations psychiatriques (dépression, réactions psychotiques, idées suicidaires), possibles dès la première prise",
         "explication": "Effet indésirable rare mais documenté pour la ciprofloxacine, pouvant survenir dès la première administration.",
-        "action": "Signaler immédiatement au prescripteur toute manifestation psychiatriques ou idée suicidaire ; interrompre le traitement.",
-        "source_rcp": "RCP CIFLOX 500 mg, section 4.4"
+        "action": "Signaler immédiatement au prescripteur toute manifestation psychiatriques ou idée suicidaire ; interrompre le traitement."
       },
       {
         "evenement": "Nécrose hépatique et insuffisance hépatique mettant en jeu le pronostic vital",
         "explication": "Effet indésirable rare mais grave, signalé pour la ciprofloxacine.",
-        "action": "Signaler au prescripteur tout signe d'atteinte hépatique (anorexie, ictère, urines foncées, prurit, sensibilité abdominale) ; le traitement doit être interrompu.",
-        "source_rcp": "RCP CIFLOX 500 mg, section 4.4"
+        "action": "Signaler au prescripteur tout signe d'atteinte hépatique (anorexie, ictère, urines foncées, prurit, sensibilité abdominale) ; le traitement doit être interrompu."
       },
       {
         "evenement": "Colite associée aux antibiotiques (Clostridioides difficile), pouvant apparaître plusieurs semaines après l'arrêt",
         "explication": "Diarrhée sévère et persistante pouvant engager le pronostic vital.",
-        "action": "Interrompre immédiatement la ciprofloxacine devant une diarrhée sévère et persistante et signaler au prescripteur, y compris à distance du traitement.",
-        "source_rcp": "RCP CIFLOX 500 mg, section 4.4"
+        "action": "Interrompre immédiatement la ciprofloxacine devant une diarrhée sévère et persistante et signaler au prescripteur, y compris à distance du traitement."
       },
       {
         "evenement": "Cristallurie",
         "explication": "Peut survenir en cas d'hydratation insuffisante ou d'alcalinité urinaire excessive.",
-        "action": "Assurer une hydratation correcte du patient et éviter toute alcalinité excessive des urines.",
-        "source_rcp": "RCP CIFLOX 500 mg, section 4.4"
+        "action": "Assurer une hydratation correcte du patient et éviter toute alcalinité excessive des urines."
       },
       {
         "evenement": "Dysglycémie",
         "explication": "Concerne surtout le patient âgé diabétique sous traitement hypoglycémiant oral concomitant (ex. sulfamides).",
-        "action": "Surveiller régulièrement la glycémie chez le patient diabétique traité par ciprofloxacine.",
-        "source_rcp": "RCP CIFLOX 500 mg, section 4.4"
+        "action": "Surveiller régulièrement la glycémie chez le patient diabétique traité par ciprofloxacine."
       },
       {
         "evenement": "Réactions d'hypersensibilité et anaphylactiques, pouvant survenir dès la première prise",
         "explication": "Peuvent mettre en jeu le pronostic vital.",
-        "action": "Interrompre la ciprofloxacine et signaler immédiatement au prescripteur devant toute réaction d'hypersensibilité.",
-        "source_rcp": "RCP CIFLOX 500 mg, section 4.4"
+        "action": "Interrompre la ciprofloxacine et signaler immédiatement au prescripteur devant toute réaction d'hypersensibilité."
       },
       {
         "evenement": "Anévrisme et dissection aortiques, régurgitation ou insuffisance valvulaire cardiaque",
         "explication": "Risque accru chez les patients aux antécédents familiaux, maladie du tissu conjonctif ou pathologie aortique connue.",
-        "action": "Devant une douleur abdominale, thoracique ou dorsale soudaine, orienter le patient vers un service d'urgence.",
-        "source_rcp": "RCP CIFLOX 500 mg, section 4.4"
+        "action": "Devant une douleur abdominale, thoracique ou dorsale soudaine, orienter le patient vers un service d'urgence."
       },
       {
         "evenement": "Aggravation d'une myasthénie grave",
         "explication": "Les symptômes de myasthénie peuvent être exacerbés par la ciprofloxacine.",
-        "action": "Utiliser avec prudence et signaler au prescripteur toute majoration des symptômes chez un patient myasthénique connu.",
-        "source_rcp": "RCP CIFLOX 500 mg, section 4.4"
+        "action": "Utiliser avec prudence et signaler au prescripteur toute majoration des symptômes chez un patient myasthénique connu."
       },
       {
         "evenement": "Arthropathie chez l'enfant et l'adolescent",
         "explication": "Observée chez l'animal immature ; conduit à réserver l'utilisation pédiatrique aux indications validées et à des prescripteurs expérimentés.",
-        "action": "Réserver l'administration pédiatrique aux indications documentées du RCP et signaler tout symptôme articulaire chez l'enfant traité.",
-        "source_rcp": "RCP CIFLOX 500 mg, section 4.4"
+        "action": "Réserver l'administration pédiatrique aux indications documentées du RCP et signaler tout symptôme articulaire chez l'enfant traité."
       }
     ],
     "pictogrammes": [],
@@ -189,7 +168,7 @@
           "population_type": "adulte",
           "intervalle_min_h": 12,
           "intervalle_max_h": 12,
-          "dose_journaliere_max_g": 0.800
+          "dose_journaliere_max_mg": 800
         },
         {
           "population": "Maladie du charbon, prophylaxie post-exposition et traitement curatif",
@@ -199,7 +178,7 @@
           "population_type": "adulte",
           "intervalle_min_h": 12,
           "intervalle_max_h": 12,
-          "dose_journaliere_max_g": 0.800
+          "dose_journaliere_max_mg": 800
         },
         {
           "population": "Mucoviscidose, infection à Pseudomonas aeruginosa",
@@ -307,7 +286,7 @@
             "categorie": "speciale",
             "dose_par_prise_mg_min": 500,
             "dose_par_prise_mg_max": 500,
-            "dose_journaliere_max_g": 0.500,
+            "dose_journaliere_max_mg": 500,
             "population_type": "adulte"
           },
           {
@@ -326,7 +305,7 @@
             "dose_par_prise_mg_min": 500,
             "dose_par_prise_mg_max": 500,
             "population_type": "adulte",
-            "dose_journaliere_max_g": 0.500
+            "dose_journaliere_max_mg": 500
           },
           {
             "population": "Maladie du charbon, prophylaxie post-exposition et traitement curatif",
@@ -353,6 +332,7 @@
       "alternative": "Voie injectable, avis médical"
     }
   },
+  "aerosol": null,
   "tracabilite": {
     "rcp_source": [
       {

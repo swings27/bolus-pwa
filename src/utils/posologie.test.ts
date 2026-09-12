@@ -20,8 +20,10 @@ function posologie(champs: Partial<IPosologieRcp> = {}): IPosologieRcp {
 }
 
 describe('formaterDose', () => {
+  // Une dose fixe s'écrit avec les deux bornes à la même valeur : il n'existe
+  // pas de forme scalaire dans les fiches.
   it('formate une dose fixe par prise', () => {
-    expect(formaterDose(posologie({ dose_par_prise_mg: 1000 }))).toBe('1000 mg')
+    expect(formaterDose(posologie({ dose_par_prise_mg_min: 1000, dose_par_prise_mg_max: 1000 }))).toBe('1000 mg')
   })
 
   it('formate une fourchette par prise, avec virgule française', () => {
@@ -46,11 +48,13 @@ describe('formaterDose', () => {
   })
 
   it('formate un débit en µg/kg/min', () => {
-    expect(formaterDose(posologie({ dose_ugkgmin_min: 0.01, dose_ugkgmin_max: 1 }))).toBe('0,01-1 µg/kg/min')
+    expect(formaterDose(posologie({ dose_ug_kg_minute_min: 0.01, dose_ug_kg_minute_max: 1 }))).toBe('0,01-1 µg/kg/min')
   })
 
-  it('respecte la priorité dose_par_prise_mg sur les autres champs si plusieurs sont renseignés', () => {
-    expect(formaterDose(posologie({ dose_par_prise_mg: 10, dose_mg_kg_min: 1, dose_mg_kg_max: 1 }))).toBe('10 mg')
+  it('respecte la priorité de la dose en mg sur les autres champs si plusieurs sont renseignés', () => {
+    expect(
+      formaterDose(posologie({ dose_par_prise_mg_min: 10, dose_par_prise_mg_max: 10, dose_mg_kg_min: 1, dose_mg_kg_max: 1 })),
+    ).toBe('10 mg')
   })
 
   it('renvoie un tiret cadratin si aucun champ de dose n\'est renseigné', () => {
@@ -109,7 +113,7 @@ describe('formaterDose', () => {
   // Débits de perfusion continue : chaque molécule garde l'unité de son RCP,
   // c'est sous cette forme que le débit est réglé au pousse-seringue.
   it('formate un débit en mg/kg/h', () => {
-    expect(formaterDose(posologie({ dose_mgkgh_min: 0.125, dose_mgkgh_max: 0.25 }))).toBe('0,125-0,25 mg/kg/h')
+    expect(formaterDose(posologie({ dose_mg_kg_h_min: 0.125, dose_mg_kg_h_max: 0.25 }))).toBe('0,125-0,25 mg/kg/h')
   })
 
   it('formate un débit en UI/kg/h', () => {
@@ -117,7 +121,29 @@ describe('formaterDose', () => {
   })
 
   it('formate un débit en mg/h, non rapporté au poids', () => {
-    expect(formaterDose(posologie({ debit_mg_h_min: 3, debit_mg_h_max: 5 }))).toBe('3-5 mg/h')
+    expect(formaterDose(posologie({ dose_mg_h_min: 3, dose_mg_h_max: 5 }))).toBe('3-5 mg/h')
+  })
+
+  it('replie un débit mg/h min=max en valeur unique', () => {
+    expect(formaterDose(posologie({ dose_mg_h_min: 1, dose_mg_h_max: 1 }))).toBe('1 mg/h')
+  })
+
+  // Une borne seule est une borne, pas une dose ferme : sans le préfixe, le
+  // plafond "jusqu'à 1 g" de la voie IM (amoxicilline, céfotaxime)
+  // s'affichait exactement comme une dose fixe de 1000 mg.
+  it("préfixe d'un ≤ une dose dont seule la borne haute est renseignée", () => {
+    expect(formaterDose(posologie({ dose_par_prise_mg_max: 1000 }))).toBe('≤ 1000 mg')
+    expect(formaterDose(posologie({ dose_mg_kg_max: 25 }))).toBe('≤ 25 mg/kg')
+    expect(formaterDose(posologie({ dose_journaliere_mg_kg_max: 120 }))).toBe('≤ 120 mg/kg / jour')
+  })
+
+  it("préfixe d'un ≥ une dose dont seule la borne basse est renseignée", () => {
+    expect(formaterDose(posologie({ dose_par_prise_mg_min: 500 }))).toBe('≥ 500 mg')
+  })
+
+  it('préfixe aussi une borne seule exprimée en grammes, conversion g→mg comprise', () => {
+    expect(formaterDose(posologie({ dose_par_prise_g_max: 8 }))).toBe('≤ 8 g')
+    expect(formaterDose(posologie({ dose_par_prise_g_max: 1.5 }))).toBe('≤ 1500 mg')
   })
 })
 
@@ -132,6 +158,22 @@ describe('formaterIntervalle', () => {
 
   it('se replie sur le nombre de prises par jour en dernier recours', () => {
     expect(formaterIntervalle(posologie({ nb_prises_min_24h: 2, nb_prises_max_24h: 4 }))).toBe('2-4 / jour')
+  })
+
+  // Intervalle en toutes lettres : prioritaire sur les champs chiffrés, c'est
+  // une formulation délibérée du RCP.
+  it('affiche un intervalle rédigé en toutes lettres', () => {
+    expect(formaterIntervalle(posologie({ intervalle: 'Fractionné ou continu' }))).toBe('Fractionné ou continu')
+  })
+
+  it('fait primer l\'intervalle en toutes lettres sur les champs chiffrés', () => {
+    expect(formaterIntervalle(posologie({ intervalle: 'Selon réponse clinique', intervalle_min_h: 6, intervalle_max_h: 8 }))).toBe(
+      'Selon réponse clinique',
+    )
+  })
+
+  it('ignore un intervalle en toutes lettres vide et retombe sur les champs chiffrés', () => {
+    expect(formaterIntervalle(posologie({ intervalle: '   ', intervalle_min_h: 6, intervalle_max_h: 8 }))).toBe('6-8 h')
   })
 
   // Convention des fiches : un intervalle de 24 h pile note une
@@ -156,6 +198,19 @@ describe('formaterIntervalle', () => {
 
   it('affiche "Continue" pour une posologie en PSE sans fréquence renseignée', () => {
     expect(formaterIntervalle(posologie({ categorie: 'pse' }))).toBe('Continue')
+  })
+
+  // Deux bornes de sens opposé rendaient le même texte : "5 min" pour un
+  // délai minimal à respecter (diazépam) comme pour un délai maximal avant
+  // répétition (adrénaline). Le préfixe est ce qui les distingue.
+  it("distingue un intervalle minimal d'un intervalle maximal", () => {
+    expect(formaterIntervalle(posologie({ intervalle_min_min: 5 }))).toBe('≥ 5 min')
+    expect(formaterIntervalle(posologie({ intervalle_max_min: 5 }))).toBe('≤ 5 min')
+    expect(formaterIntervalle(posologie({ intervalle_min_h: 6 }))).toBe('≥ 6 h')
+  })
+
+  it('préfixe un nombre de prises journalières plafonné', () => {
+    expect(formaterIntervalle(posologie({ nb_prises_max_24h: 3 }))).toBe('≤ 3 / jour')
   })
 })
 
@@ -237,6 +292,19 @@ describe('formaterMax', () => {
     expect(formaterMax(posologie({ dose_journaliere_max_mmol: 150 }))).toBe('150 mmol/j')
   })
 
+  // Maximum déjà exprimé en mg par le RCP (midazolam) : pas de passage par
+  // la règle g↔mg, qui ne concerne que les valeurs saisies en grammes.
+  it('affiche dose_journaliere_max_mg en mg/j, sans conversion', () => {
+    expect(formaterMax(posologie({ dose_journaliere_max_mg: 7.5 }))).toBe('7,5 mg/j')
+  })
+
+  // UI (héparine calcique), y compris quand le plafond dépend d'un suivi
+  // biologique plutôt que d'un chiffre.
+  it('affiche dose_journaliere_max_UI en UI/j, chaîne comprise', () => {
+    expect(formaterMax(posologie({ dose_journaliere_max_UI: 10000 }))).toBe('10000 UI/j')
+    expect(formaterMax(posologie({ dose_journaliere_max_UI: 'Selon TCA/anti-Xa' }))).toBe('Selon TCA/anti-Xa')
+  })
+
   // Maximum journalier au poids (kétamine) : reste en mg/kg/j, la conversion
   // en mg absolus supposerait un poids que la fiche ne connaît pas.
   it('affiche dose_mg_kg_j_max en mg/kg/j, sans conversion en mg ni en g', () => {
@@ -276,12 +344,12 @@ describe('formaterDoseParKg / formaterDoseAbsolue', () => {
   })
 
   it('formaterDoseParKg renvoie null sans champ mg/kg', () => {
-    expect(formaterDoseParKg(posologie({ dose_par_prise_mg: 10 }))).toBeNull()
+    expect(formaterDoseParKg(posologie({ dose_par_prise_mg_min: 10, dose_par_prise_mg_max: 10 }))).toBeNull()
   })
 
-  it('formaterDoseAbsolue lit dose_par_prise_mg (fixe ou fourchette)', () => {
-    expect(formaterDoseAbsolue(posologie({ dose_par_prise_mg: 10 }))).toBe('10 mg')
-    expect(formaterDoseAbsolue(posologie({ dose_par_prise_mg_max: 0.6 }))).toBe('0,6 mg')
+  it('formaterDoseAbsolue lit dose_par_prise_mg_min/max (fourchette ou borne seule)', () => {
+    expect(formaterDoseAbsolue(posologie({ dose_par_prise_mg_min: 10, dose_par_prise_mg_max: 10 }))).toBe('10 mg')
+    expect(formaterDoseAbsolue(posologie({ dose_par_prise_mg_max: 0.6 }))).toBe('≤ 0,6 mg')
   })
 
   it('formaterDoseAbsolue renvoie null sans champ mg absolu', () => {
@@ -291,7 +359,7 @@ describe('formaterDoseParKg / formaterDoseAbsolue', () => {
   it('les deux sont non-null ensemble pour une ligne combinant mg/kg et plafond absolu (cas atropine)', () => {
     const p = posologie({ dose_mg_kg_min: 0.01, dose_mg_kg_max: 0.02, dose_par_prise_mg_max: 0.6 })
     expect(formaterDoseParKg(p)).toEqual({ valeur: '0,01-0,02 mg/kg', suffixe: null })
-    expect(formaterDoseAbsolue(p)).toBe('0,6 mg')
+    expect(formaterDoseAbsolue(p)).toBe('≤ 0,6 mg')
   })
 
   // dose_par_prise_g : cas fosfomycine, dosée directement en grammes.
@@ -319,6 +387,27 @@ describe('formaterPopulationDetail', () => {
     ).toBe('6-12 ans · 18-33 kg')
   })
 
+  // Rendu pédiatrique : chaque borne est dite dans son unité naturelle. Un
+  // nourrisson de 6 mois ne se décrit pas comme "0,5 an", et un nouveau-né
+  // pas comme "0 an".
+  it('garde les mois en dessous de 2 ans plutôt que de les convertir en années', () => {
+    expect(formaterPopulationDetail(posologie({ age_min_mois: 1, age_max_mois: 12 }))).toBe('1-12 mois')
+    expect(formaterPopulationDetail(posologie({ age_max_mois: 6 }))).toBe('≤ 6 mois')
+  })
+
+  it('lit un âge en jours (néonatologie) et le mélange avec une borne en mois', () => {
+    expect(formaterPopulationDetail(posologie({ age_min_jours: 0, age_max_mois: 6 }))).toBe('0 j-6 mois')
+    expect(formaterPopulationDetail(posologie({ age_max_jours: 28 }))).toBe('≤ 28 j')
+  })
+
+  it('privilégie la borne en jours sur celle en mois quand les deux sont posées', () => {
+    expect(formaterPopulationDetail(posologie({ age_min_jours: 7, age_min_mois: 0 }))).toBe('≥ 7 j')
+  })
+
+  it('replie une tranche d\'âge dégénérée (min = max) en valeur unique', () => {
+    expect(formaterPopulationDetail(posologie({ age_min_mois: 36, age_max_mois: 36 }))).toBe('3 ans')
+  })
+
   it('affiche une borne unique avec ≥ ou ≤ selon le sens', () => {
     expect(formaterPopulationDetail(posologie({ age_min_mois: 144 }))).toBe('≥ 12 ans')
     expect(formaterPopulationDetail(posologie({ poids_max_kg: 12 }))).toBe('≤ 12 kg')
@@ -335,6 +424,10 @@ describe('libelleCategoriePosologie', () => {
     expect(libelleCategoriePosologie(undefined, 'iv')).toBe('Voie IV')
   })
 
+  it('libelle la voie intrarectale (midazolam)', () => {
+    expect(libelleCategoriePosologie('ir', 'iv')).toBe('Voie intrarectale')
+  })
+
   it('renvoie la valeur brute pour une categorie inconnue de la table', () => {
     expect(libelleCategoriePosologie('mystere', 'iv')).toBe('mystere')
   })
@@ -343,8 +436,8 @@ describe('libelleCategoriePosologie', () => {
 describe('dedupliquerPosologies', () => {
   it('ne garde qu\'une ligne quand plusieurs partagent la même categorie + population', () => {
     const resultat = dedupliquerPosologies([
-      posologie({ population: 'Douleur ou fièvre', categorie: 'generale', dose_par_prise_mg: 400 }),
-      posologie({ population: 'Douleur ou fièvre', categorie: 'generale', dose_par_prise_mg: 400 }),
+      posologie({ population: 'Douleur ou fièvre', categorie: 'generale', dose_par_prise_mg_min: 400, dose_par_prise_mg_max: 400 }),
+      posologie({ population: 'Douleur ou fièvre', categorie: 'generale', dose_par_prise_mg_min: 400, dose_par_prise_mg_max: 400 }),
     ])
     expect(resultat).toHaveLength(1)
   })
@@ -356,7 +449,7 @@ describe('dedupliquerPosologies', () => {
       dose_par_prise_mg_min: 200,
       dose_par_prise_mg_max: 400,
     })
-    const doseFixe = posologie({ population: 'Douleur ou fièvre', categorie: 'generale', dose_par_prise_mg: 400 })
+    const doseFixe = posologie({ population: 'Douleur ou fièvre', categorie: 'generale', dose_par_prise_mg_min: 400, dose_par_prise_mg_max: 400 })
 
     // Peu importe l'ordre d'apparition, le résultat garde toujours la fourchette.
     expect(dedupliquerPosologies([doseFixe, enFourchette])).toEqual([enFourchette])

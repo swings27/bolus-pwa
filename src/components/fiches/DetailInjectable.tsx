@@ -1,6 +1,7 @@
 import type { IFormeIv, IReconstitution } from '../../types'
 import BlocAvertissement from '../layout/BlocAvertissement'
 import SectionPosologies from './SectionPosologies'
+import TexteRepliable from './TexteRepliable'
 import TitreSectionFiche from './TitreSectionFiche'
 
 interface IDetailInjectableProps {
@@ -117,7 +118,11 @@ export default function DetailInjectable({ donnees, noteAjustement, noteAjusteme
               <p className="mb-1 text-[9.5px] font-semibold uppercase tracking-wide" style={{ color: 'var(--alerte)' }}>
                 Incompatible en Y
               </p>
-              <p className="text-[12.5px] leading-relaxed text-texte">
+              {/* Liste repliée à 3 lignes comme les indications et les
+                  contre-indications : certaines molécules en alignent une
+                  quinzaine (héparine sodique), ce qui repoussait les
+                  posologies hors de l'écran. */}
+              <TexteRepliable couleur="var(--alerte)" className="text-[12.5px] leading-relaxed text-texte">
                 {donnees.incompatibilites
                   .map((incompatibilite) =>
                     incompatibilite.niveau && incompatibilite.niveau !== 'absolu'
@@ -125,7 +130,7 @@ export default function DetailInjectable({ donnees, noteAjustement, noteAjusteme
                       : incompatibilite.substance,
                   )
                   .join(' · ')}
-              </p>
+              </TexteRepliable>
             </div>
           </BlocAvertissement>
         </div>

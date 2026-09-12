@@ -20,8 +20,7 @@
       "grossesse": "Au cours du premier trimestre, le métronidazole doit être uniquement utilisé pour traiter des infections graves menaçant le pronostic vital, si aucune autre alternative plus sûre n'est possible. Au cours des deuxième et troisième trimestres, le métronidazole peut également être utilisé pour traiter d'autres infections si ses bénéfices escomptés sont manifestement plus importants que tout risque potentiel.",
       "allaitement": "Étant donné que le métronidazole est sécrété dans le lait maternel, l'allaitement doit être interrompu au cours du traitement. Après la fin du traitement par métronidazole, il convient d'attendre 2 à 3 jours supplémentaires avant de reprendre l'allaitement en raison de la demi-vie prolongée du métronidazole.",
       "url_crat_grossesse": "https://www.lecrat.fr/10412/",
-      "url_crat_allaitement": "https://www.lecrat.fr/10413/",
-      "source": "RCP METRONIDAZOLE B BRAUN 0,5 %, section 4.6"
+      "url_crat_allaitement": "https://www.lecrat.fr/10413/"
     },
     "contre_indications": [
       "Hypersensibilité au métronidazole, à un autre dérivé nitro-imidazolé ou à l'un des excipients",
@@ -32,100 +31,84 @@
       {
         "substance": "Alcool",
         "effet": "Effet antabuse : chaleur, rougeurs, vomissements, tachycardie, sensations vertigineuses.",
-        "action_infirmier": "Vérifier l'absence d'alcool dans les autres médicaments administrés et informer le patient d'éviter toute boisson alcoolisée pendant le traitement et jusqu'à élimination complète du métronidazole.",
-        "source_rcp": "RCP METRONIDAZOLE NORIDEM 500 mg/100 mL, section 4.5"
+        "action_infirmier": "Vérifier l'absence d'alcool dans les autres médicaments administrés et informer le patient d'éviter toute boisson alcoolisée pendant le traitement et jusqu'à élimination complète du métronidazole."
       },
       {
         "substance": "Anticoagulants oraux",
         "effet": "Le métronidazole potentialise l'effet anticoagulant de ces dérivés et augmente le risque de saignement en raison de la réduction de leur dégradation hépatique.",
-        "action_infirmier": "Surveiller l'INR à l'instauration et à l'arrêt du métronidazole et signaler tout saignement ; un ajustement de la dose de l'anticoagulant peut être nécessaire.",
-        "source_rcp": "RCP METRONIDAZOLE NORIDEM 500 mg/100 mL, section 4.5"
+        "action_infirmier": "Surveiller l'INR à l'instauration et à l'arrêt du métronidazole et signaler tout saignement ; un ajustement de la dose de l'anticoagulant peut être nécessaire."
       },
       {
         "substance": "Lithium",
         "effet": "Une augmentation des concentrations sériques de lithium a été observée lors du traitement par métronidazole, pouvant atteindre des valeurs toxiques.",
-        "action_infirmier": "S'assurer que la lithémie, la créatininémie et les électrolytes sanguins sont surveillés pendant l'association, et signaler tout signe de surdosage en lithium.",
-        "source_rcp": "RCP METRONIDAZOLE NORIDEM 500 mg/100 mL, section 4.5"
+        "action_infirmier": "S'assurer que la lithémie, la créatininémie et les électrolytes sanguins sont surveillés pendant l'association, et signaler tout signe de surdosage en lithium."
       },
       {
         "substance": "Amiodarone",
         "effet": "Un allongement de l'intervalle QT et des torsades de pointes ont été rapportés lors de la co-administration de métronidazole et d'amiodarone.",
-        "action_infirmier": "S'assurer qu'un ECG avec surveillance de l'intervalle QT est réalisé pendant l'association et signaler immédiatement sensations vertigineuses, palpitations ou syncope.",
-        "source_rcp": "RCP METRONIDAZOLE NORIDEM 500 mg/100 mL, section 4.5"
+        "action_infirmier": "S'assurer qu'un ECG avec surveillance de l'intervalle QT est réalisé pendant l'association et signaler immédiatement sensations vertigineuses, palpitations ou syncope."
       },
       {
         "substance": "Busulfan",
         "effet": "La co-administration avec le métronidazole peut augmenter significativement les concentrations plasmatiques du busulfan, avec un risque important de toxicité et de mortalité.",
-        "action_infirmier": "Signaler au prescripteur toute co-prescription : l'association doit être évitée.",
-        "source_rcp": "RCP METRONIDAZOLE NORIDEM 500 mg/100 mL, section 4.5"
+        "action_infirmier": "Signaler au prescripteur toute co-prescription : l'association doit être évitée."
       },
       {
         "substance": "Disulfirame",
         "effet": "Une administration simultanée de disulfirame peut provoquer des états de confusion voire des réactions psychotiques, réversibles à l'arrêt de l'association.",
-        "action_infirmier": "Signaler au prescripteur toute co-prescription : l'association doit être évitée. Surveiller l'apparition d'une confusion.",
-        "source_rcp": "RCP METRONIDAZOLE NORIDEM 500 mg/100 mL, section 4.5"
+        "action_infirmier": "Signaler au prescripteur toute co-prescription : l'association doit être évitée. Surveiller l'apparition d'une confusion."
       },
       {
         "substance": "Ciclosporine et tacrolimus",
         "effet": "Le traitement simultané par métronidazole expose à une augmentation des concentrations sériques de ciclosporine et de tacrolimus.",
-        "action_infirmier": "S'assurer que les taux sanguins de l'immunosuppresseur et la créatininémie sont contrôlés fréquemment, en particulier à l'instauration et à l'arrêt du métronidazole.",
-        "source_rcp": "RCP METRONIDAZOLE NORIDEM 500 mg/100 mL, section 4.5"
+        "action_infirmier": "S'assurer que les taux sanguins de l'immunosuppresseur et la créatininémie sont contrôlés fréquemment, en particulier à l'instauration et à l'arrêt du métronidazole."
       },
       {
         "substance": "Phénytoïne et carbamazépine",
         "effet": "Le métronidazole inhibe le métabolisme de la phénytoïne et de la carbamazépine et accroît leurs concentrations plasmatiques ; l'efficacité du métronidazole est par ailleurs réduite par la phénytoïne.",
-        "action_infirmier": "Signaler la co-prescription au prescripteur et surveiller l'apparition de signes de surdosage en antiépileptique (somnolence, ataxie, nystagmus).",
-        "source_rcp": "RCP METRONIDAZOLE NORIDEM 500 mg/100 mL, section 4.5"
+        "action_infirmier": "Signaler la co-prescription au prescripteur et surveiller l'apparition de signes de surdosage en antiépileptique (somnolence, ataxie, nystagmus)."
       }
     ],
     "surveillance_specifique": [
       {
         "evenement": "Encéphalopathie ou syndrome cérébelleux",
         "explication": "Des cas d'encéphalopathie, avec lésions du cervelet et du corps calleux visibles à l'IRM, ont été rapportés sous métronidazole ; la plupart sont réversibles à l'arrêt, de rares évolutions fatales ont été décrites.",
-        "action": "Surveiller l'apparition d'une ataxie, d'une dysarthrie, de troubles de la démarche, d'un nystagmus, de tremblements, de vertiges ou d'une confusion. Alerter immédiatement le prescripteur : le traitement doit être arrêté.",
-        "source_rcp": "RCP METRONIDAZOLE NORIDEM 500 mg/100 mL, section 4.4 : « Des cas de crise convulsive, de myoclonie et de neuropathie périphérique […] ont été rapportés chez des patients traités par métronidazole. L'apparition de signes neurologiques anormaux exige une évaluation rapide du rapport bénéfice/risque de la poursuite du traitement. »"
+        "action": "Surveiller l'apparition d'une ataxie, d'une dysarthrie, de troubles de la démarche, d'un nystagmus, de tremblements, de vertiges ou d'une confusion. Alerter immédiatement le prescripteur : le traitement doit être arrêté."
       },
       {
         "evenement": "Neuropathie périphérique, en particulier en traitement prolongé",
         "explication": "Principalement caractérisée par un engourdissement ou une paresthésie d'une extrémité, elle apparaît surtout lors des traitements prolongés ou chez les patients atteints d'affections neurologiques périphériques.",
-        "action": "Interroger le patient sur des fourmillements ou un engourdissement des mains et des pieds à chaque administration prolongée et signaler toute apparition au prescripteur.",
-        "source_rcp": "RCP METRONIDAZOLE NORIDEM 500 mg/100 mL, section 4.4"
+        "action": "Interroger le patient sur des fourmillements ou un engourdissement des mains et des pieds à chaque administration prolongée et signaler toute apparition au prescripteur."
       },
       {
         "evenement": "Dépression de la moelle osseuse et leucopénie",
         "explication": "Un traitement prolongé ou à forte dose par métronidazole peut être associé à une dépression médullaire et à une altération de l'hématopoïèse.",
-        "action": "S'assurer qu'une numération globulaire est réalisée régulièrement en cas de traitement prolongé, de forte dose, d'antécédent de dyscrasie sanguine, d'infection grave ou d'insuffisance hépatique grave.",
-        "source_rcp": "RCP METRONIDAZOLE NORIDEM 500 mg/100 mL, section 4.4 : « Une surveillance clinique et de laboratoire régulière (y compris une numération globulaire) est conseillée en cas de traitement à forte dose ou prolongé »"
+        "action": "S'assurer qu'une numération globulaire est réalisée régulièrement en cas de traitement prolongé, de forte dose, d'antécédent de dyscrasie sanguine, d'infection grave ou d'insuffisance hépatique grave."
       },
       {
         "evenement": "Coloration foncée des urines",
         "explication": "Le métronidazole peut foncer les urines ; il s'agit d'un effet attendu de la molécule, sans gravité.",
-        "action": "Prévenir le patient pour éviter toute inquiétude et ne pas confondre cette coloration avec une hématurie.",
-        "source_rcp": "RCP METRONIDAZOLE NORIDEM 500 mg/100 mL, section 4.4 : « Les patients doivent être avertis que le métronidazole peut foncer les urines. »"
+        "action": "Prévenir le patient pour éviter toute inquiétude et ne pas confondre cette coloration avec une hématurie."
       },
       {
         "evenement": "Résultats de bilan hépatique et métabolique faussement bas",
         "explication": "Le métronidazole interfère avec le dosage spectrophotométrique des ASAT, ALAT, LDH, triglycérides et du glucose, et peut masquer une élévation réelle des enzymes hépatiques en donnant des valeurs abaissées, voire nulles.",
-        "action": "Signaler le traitement par métronidazole au laboratoire lors de tout prélèvement de bilan hépatique, de triglycérides ou de glycémie.",
-        "source_rcp": "RCP METRONIDAZOLE NORIDEM 500 mg/100 mL, section 4.4"
+        "action": "Signaler le traitement par métronidazole au laboratoire lors de tout prélèvement de bilan hépatique, de triglycérides ou de glycémie."
       },
       {
         "evenement": "Hépatotoxicité sévère chez les patients atteints du syndrome de Cockayne",
         "explication": "Des cas d'insuffisance hépatique aiguë, parfois fatals, de survenue très rapide après l'instauration du traitement, ont été rapportés dans cette population avec les produits contenant du métronidazole.",
-        "action": "S'assurer que des tests de la fonction hépatique sont réalisés avant, pendant et après le traitement. Signaler immédiatement tout symptôme d'atteinte hépatique : le traitement doit alors être interrompu.",
-        "source_rcp": "RCP METRONIDAZOLE NORIDEM 500 mg/100 mL, section 4.4"
+        "action": "S'assurer que des tests de la fonction hépatique sont réalisés avant, pendant et après le traitement. Signaler immédiatement tout symptôme d'atteinte hépatique : le traitement doit alors être interrompu."
       },
       {
         "evenement": "Diarrhée sévère persistante et colite pseudomembraneuse",
         "explication": "Une diarrhée sévère survenant pendant le traitement ou dans les semaines qui suivent peut traduire une colite pseudomembraneuse à Clostridioides difficile, susceptible d'engager le pronostic vital.",
-        "action": "Signaler toute diarrhée sévère ou persistante. N'administrer aucun médicament antipéristaltique, qui aggraverait la situation.",
-        "source_rcp": "RCP METRONIDAZOLE NORIDEM 500 mg/100 mL, section 4.4 : « Aucun médicament antipéristaltique ne doit être administré. »"
+        "action": "Signaler toute diarrhée sévère ou persistante. N'administrer aucun médicament antipéristaltique, qui aggraverait la situation."
       },
       {
         "evenement": "Réactions cutanées sévères",
         "explication": "Ces réactions ont été rapportées avec le métronidazole ; la survenue en début de traitement d'un érythème généralisé fébrile associé à des pustules doit faire suspecter une pustulose exanthématique aiguë généralisée.",
-        "action": "Surveiller l'état cutané et signaler immédiatement toute éruption progressive, bulle, lésion muqueuse ou érythème fébrile. Le traitement est arrêté et le métronidazole ne doit jamais être réadministré.",
-        "source_rcp": "RCP FLAGYL 500 mg, comprimé pelliculé, section 4.4 : « Des cas de réactions cutanées sévères incluant syndrome de Stevens-Johnson, syndrome de Lyell, Pustulose Exanthématique Aiguë Généralisée (PEAG) ont été rapportés avec le métronidazole. »"
+        "action": "Surveiller l'état cutané et signaler immédiatement toute éruption progressive, bulle, lésion muqueuse ou érythème fébrile. Le traitement est arrêté et le métronidazole ne doit jamais être réadministré."
       }
     ],
     "pictogrammes": [],
@@ -159,7 +142,8 @@
           "population_type": "adulte",
           "dose_par_prise_mg_min": 1000,
           "dose_par_prise_mg_max": 1500,
-          "nb_prises_max_24h": 1,
+          "intervalle_min_h": 24,
+          "intervalle_max_h": 24,
           "dose_journaliere_max_g": 1.5
         },
         {
@@ -245,7 +229,8 @@
           "age_max_mois": 144,
           "dose_mg_kg_min": 20,
           "dose_mg_kg_max": 30,
-          "nb_prises_max_24h": 1
+          "intervalle_min_h": 24,
+          "intervalle_max_h": 24
         },
         {
           "population": "Prophylaxie post-opératoire, nouveau-né d'âge gestationnel inférieur à 40 semaines",
@@ -253,7 +238,8 @@
           "population_type": "pediatrie",
           "dose_mg_kg_min": 10,
           "dose_mg_kg_max": 10,
-          "nb_prises_max_24h": 1
+          "intervalle_min_h": 24,
+          "intervalle_max_h": 24
         }
       ]
     },
@@ -359,7 +345,8 @@
             "population_type": "adulte",
             "dose_par_prise_mg_min": 2000,
             "dose_par_prise_mg_max": 2000,
-            "nb_prises_max_24h": 1,
+            "intervalle_min_h": 24,
+            "intervalle_max_h": 24,
             "dose_journaliere_max_g": 2
           }
         ]
@@ -394,7 +381,7 @@
             "population_type": "pediatrie",
             "age_min_mois": 24,
             "age_max_mois": 60,
-            "dose_journaliere_max_g": 0.25
+            "dose_journaliere_max_mg": 250
           },
           {
             "population": "Lambliase, enfant de 5 à 10 ans",
@@ -402,7 +389,7 @@
             "population_type": "pediatrie",
             "age_min_mois": 60,
             "age_max_mois": 120,
-            "dose_journaliere_max_g": 0.375
+            "dose_journaliere_max_mg": 375
           },
           {
             "population": "Lambliase, enfant de 10 à 15 ans",
@@ -410,7 +397,7 @@
             "population_type": "pediatrie",
             "age_min_mois": 120,
             "age_max_mois": 180,
-            "dose_journaliere_max_g": 0.5
+            "dose_journaliere_max_mg": 500
           }
         ]
       }

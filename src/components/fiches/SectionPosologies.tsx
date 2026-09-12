@@ -84,7 +84,7 @@ function CartePosologie({ p }: { p: IPosologieRcp }) {
         ]
       : [{ libelle: 'Dose', valeur: formaterDose(p) }]
 
-  const champs = [
+  const champs: { libelle: string; valeur: ReactNode; accent?: boolean }[] = [
     ...champsDose,
     { libelle: libelleIntervalle(p), valeur: formaterIntervalle(p) },
     ...(max ? [{ libelle: 'Max / 24 h', valeur: max, accent: true }] : []),

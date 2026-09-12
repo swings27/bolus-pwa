@@ -20,8 +20,7 @@
       "grossesse": "Le bénéfice thérapeutique élevé de la vancomycine justifie que son utilisation puisse être envisagée si besoin au cours de la grossesse, quel qu'en soit le terme.",
       "allaitement": "Compte tenu du très faible passage de la vancomycine dans le lait maternel et de sa faible absorption digestive, l'utilisation de la vancomycine administrée par voie injectable ou par voie orale est envisageable en cours d'allaitement si nécessaire.",
       "url_crat_grossesse": "https://www.lecrat.fr/13364/",
-      "url_crat_allaitement": "https://www.lecrat.fr/13363/",
-      "source": "RCP VANCOMYCINE SANDOZ 500 mg, section 4.6, position concordante avec VANCOMYCINE VIATRIS 500 mg (variante de formulation : « dans le lait », sans « maternel »)"
+      "url_crat_allaitement": "https://www.lecrat.fr/13363/"
     },
     "contre_indications": [
       "Hypersensibilité à la substance active ou à l'un des excipients.",
@@ -31,64 +30,54 @@
       {
         "substance": "Aminosides",
         "effet": "Risque accru de néphrotoxicité et d'ototoxicité en cas d'administration concomitante ou séquentielle avec la vancomycine.",
-        "action_infirmier": "Signaler au prescripteur toute co-prescription d'un aminoside ; renforcer la surveillance de la fonction rénale et auditive.",
-        "source_rcp": "RCP VANCOMYCINE VIATRIS 500 mg, section 4.5"
+        "action_infirmier": "Signaler au prescripteur toute co-prescription d'un aminoside ; renforcer la surveillance de la fonction rénale et auditive."
       },
       {
         "substance": "Autres substances néphrotoxiques ou ototoxiques",
         "effet": "Risque accru de néphrotoxicité ou d'ototoxicité en cas d'administration concomitante ou séquentielle avec la vancomycine.",
-        "action_infirmier": "Signaler au prescripteur toute co-prescription d'une de ces substances ; renforcer la surveillance de la fonction rénale et, si le traitement est prolongé, de la fonction auditive.",
-        "source_rcp": "RCP VANCOMYCINE VIATRIS 500 mg, section 4.5"
+        "action_infirmier": "Signaler au prescripteur toute co-prescription d'une de ces substances ; renforcer la surveillance de la fonction rénale et, si le traitement est prolongé, de la fonction auditive."
       },
       {
         "substance": "Anesthésiques généraux",
         "effet": "Majoration de la fréquence des effets indésirables (hypotension, érythème, urticaire, dépression myocardique, prurit) lorsque la vancomycine est administrée conjointement à des anesthésiques.",
-        "action_infirmier": "Signaler l'administration récente ou prévue de vancomycine à l'équipe d'anesthésie ; surveiller la tolérance hémodynamique et cutanée.",
-        "source_rcp": "RCP VANCOMYCINE VIATRIS 500 mg, section 4.5"
+        "action_infirmier": "Signaler l'administration récente ou prévue de vancomycine à l'équipe d'anesthésie ; surveiller la tolérance hémodynamique et cutanée."
       },
       {
         "substance": "Curares",
         "effet": "Les effets des curares administrés conjointement peuvent être renforcés ou prolongés.",
-        "action_infirmier": "Signaler au prescripteur/à l'équipe d'anesthésie toute association avec un curare ; surveiller la récupération neuromusculaire.",
-        "source_rcp": "RCP VANCOMYCINE VIATRIS 500 mg, section 4.5"
+        "action_infirmier": "Signaler au prescripteur/à l'équipe d'anesthésie toute association avec un curare ; surveiller la récupération neuromusculaire."
       },
       {
         "substance": "Warfarine",
         "effet": "L'administration concomitante de vancomycine et de warfarine peut augmenter les effets de l'anticoagulant.",
-        "action_infirmier": "Signaler au prescripteur toute co-prescription d'anticoagulant oral ; surveiller l'INR.",
-        "source_rcp": "RCP VANCOMYCINE VIATRIS 500 mg, section 4.5"
+        "action_infirmier": "Signaler au prescripteur toute co-prescription d'anticoagulant oral ; surveiller l'INR."
       }
     ],
     "surveillance_specifique": [
       {
         "evenement": "Syndrome de l'homme rouge",
         "explication": "Une administration trop rapide de vancomycine par voie intraveineuse peut provoquer une libération d'histamine se traduisant par une hypotension importante, un érythème, un prurit, une éruption maculo-papuleuse et de la fièvre.",
-        "action": "Respecter la vitesse de perfusion indiquée en Préparation ; en cas de survenue, arrêter ou ralentir la perfusion et signaler au prescripteur.",
-        "source_rcp": "RCP VANCOMYCINE VIATRIS 500 mg, section 4.4"
+        "action": "Respecter la vitesse de perfusion indiquée en Préparation ; en cas de survenue, arrêter ou ralentir la perfusion et signaler au prescripteur."
       },
       {
         "evenement": "Ototoxicité",
         "explication": "Un risque accru d'ototoxicité a été rapporté chez les patients ayant des antécédents de surdité, recevant un traitement prolongé à doses élevées ou associé à un autre agent ototoxique (aminoside notamment).",
-        "action": "Surveiller la fonction auditive du patient (acouphènes, baisse de l'audition) et signaler tout signe évocateur au prescripteur.",
-        "source_rcp": "RCP VANCOMYCINE VIATRIS 500 mg, section 4.4"
+        "action": "Surveiller la fonction auditive du patient (acouphènes, baisse de l'audition) et signaler tout signe évocateur au prescripteur."
       },
       {
         "evenement": "Néphrotoxicité et surveillance des taux résiduels sanguins",
         "explication": "Le contrôle régulier des taux sanguins résiduels de vancomycine est requis lors des traitements à doses élevées ou prolongés, en particulier en cas de dysfonctionnement rénal ; l'objectif habituel est un taux résiduel de 15 à 20 mg/L selon le site de l'infection et la sensibilité du pathogène.",
-        "action": "Assurer le prélèvement du taux résiduel juste avant l'administration suivante (chez le patient à fonction rénale normale, prélèvement généralement recommandé au 2e jour de traitement) ; surveiller la fonction rénale et signaler au prescripteur toute dégradation.",
-        "source_rcp": "RCP VANCOMYCINE VIATRIS 500 mg, section 4.4"
+        "action": "Assurer le prélèvement du taux résiduel juste avant l'administration suivante (chez le patient à fonction rénale normale, prélèvement généralement recommandé au 2e jour de traitement) ; surveiller la fonction rénale et signaler au prescripteur toute dégradation."
       },
       {
         "evenement": "Réactions cutanées sévères (SCAR) : syndrome de Stevens-Johnson, nécrolyse épidermique toxique, DRESS, pustulose exanthématique aiguë généralisée",
         "explication": "Peuvent engager le pronostic vital ou être mortelles. Surviennent en général dans les quelques jours à huit semaines suivant le début du traitement.",
-        "action": "Surveiller l'apparition de signes cutanés ou muqueux ; en cas de signes évocateurs, arrêter la perfusion et alerter immédiatement le prescripteur.",
-        "source_rcp": "RCP VANCOMYCINE VIATRIS 500 mg, section 4.4"
+        "action": "Surveiller l'apparition de signes cutanés ou muqueux ; en cas de signes évocateurs, arrêter la perfusion et alerter immédiatement le prescripteur."
       },
       {
         "evenement": "Douleur et thrombophlébite au site de perfusion",
         "explication": "Fréquentes chez les patients recevant de la vancomycine par voie intraveineuse, parfois sévères.",
-        "action": "Surveiller le point de perfusion à chaque relais ; en cas de douleur, d'inflammation ou d'induration, arrêter la perfusion et signaler au prescripteur.",
-        "source_rcp": "RCP VANCOMYCINE VIATRIS 500 mg, section 4.4"
+        "action": "Surveiller le point de perfusion à chaque relais ; en cas de douleur, d'inflammation ou d'induration, arrêter la perfusion et signaler au prescripteur."
       }
     ],
     "pictogrammes": [],
@@ -246,7 +235,7 @@
       {
         "type": "Poudre pour solution buvable (flacon injectable reconstitué avec de l'eau potable)",
         "dosage": "500 mg/10 mL",
-        "secable": false,
+        "ecrasable": false,
         "ouverture_gelule": null,
         "posologie_adulte": [
           {
@@ -295,6 +284,7 @@
       "alternative": "Voie injectable, avis médical"
     }
   },
+  "aerosol": null,
   "tracabilite": {
     "rcp_source": [
       {

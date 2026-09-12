@@ -24,8 +24,7 @@
       "grossesse": "L'utilisation de l'association amoxicilline/acide clavulanique doit être évitée pendant la grossesse, à moins que le médecin ne la considère nécessaire.",
       "allaitement": "L'association amoxicilline/acide clavulanique ne peut être utilisée pendant l'allaitement qu'après évaluation du rapport bénéfice/risque par le médecin traitant.",
       "url_crat_grossesse": "https://www.lecrat.fr/6701/",
-      "url_crat_allaitement": "https://www.lecrat.fr/6702/",
-      "source": "RCP LEVMENTIN 1 g/200 mg, poudre pour solution injectable/pour perfusion (IV), section 4.6"
+      "url_crat_allaitement": "https://www.lecrat.fr/6702/"
     },
     "contre_indications": [
       "Hypersensibilité aux substances actives, aux pénicillines ou à l'un des excipients",
@@ -36,70 +35,59 @@
       {
         "substance": "Anticoagulants oraux",
         "effet": "Une augmentation de l'INR a été rapportée chez des patients recevant l'association amoxicilline/acide clavulanique avec un anticoagulant oral.",
-        "action_infirmier": "Surveiller l'INR pendant le traitement et lors de l'introduction ou de l'arrêt de l'antibiotique chez tout patient sous AVK (acénocoumarol, warfarine).",
-        "source_rcp": "RCP LEVMENTIN 1 g/200 mg, poudre pour solution injectable/pour perfusion (IV), section 4.5"
+        "action_infirmier": "Surveiller l'INR pendant le traitement et lors de l'introduction ou de l'arrêt de l'antibiotique chez tout patient sous AVK (acénocoumarol, warfarine)."
       },
       {
         "substance": "Méthotrexate",
         "effet": "Les pénicillines peuvent réduire l'excrétion du méthotrexate et augmenter ainsi sa toxicité.",
-        "action_infirmier": "Signaler immédiatement au prescripteur toute co-prescription avec le méthotrexate.",
-        "source_rcp": "RCP LEVMENTIN 1 g/200 mg, poudre pour solution injectable/pour perfusion (IV), section 4.5"
+        "action_infirmier": "Signaler immédiatement au prescripteur toute co-prescription avec le méthotrexate."
       },
       {
         "substance": "Probénécide",
         "effet": "Le probénécide diminue la sécrétion tubulaire rénale de l'amoxicilline, ce qui augmente et prolonge sa concentration sanguine.",
-        "action_infirmier": "Association non recommandée par le RCP. Signaler au prescripteur toute co-prescription de probénécide.",
-        "source_rcp": "RCP LEVMENTIN 1 g/200 mg, poudre pour solution injectable/pour perfusion (IV), section 4.5"
+        "action_infirmier": "Association non recommandée par le RCP. Signaler au prescripteur toute co-prescription de probénécide."
       },
       {
         "substance": "Mycophénolate mofétil",
         "effet": "Une diminution d'environ 50 % des concentrations résiduelles du métabolite actif du mycophénolate mofétil a été observée après le début de l'antibiotique.",
-        "action_infirmier": "Signaler au prescripteur toute co-prescription chez un patient transplanté ; ne pas modifier les horaires de prise sans avis médical.",
-        "source_rcp": "RCP LEVMENTIN 1 g/200 mg, poudre pour solution injectable/pour perfusion (IV), section 4.5"
+        "action_infirmier": "Signaler au prescripteur toute co-prescription chez un patient transplanté ; ne pas modifier les horaires de prise sans avis médical."
       },
       {
         "substance": "Allopurinol",
         "effet": "L'administration concomitante d'allopurinol augmente la probabilité de survenue de réactions cutanées allergiques.",
-        "action_infirmier": "Surveiller l'apparition de toute éruption cutanée chez les patients sous allopurinol.",
-        "source_rcp": "RCP LEVMENTIN 1 g/200 mg, poudre pour solution injectable/pour perfusion (IV), section 4.5"
+        "action_infirmier": "Surveiller l'apparition de toute éruption cutanée chez les patients sous allopurinol."
       }
     ],
     "surveillance_specifique": [
       {
         "evenement": "Atteinte hépatique / ictère cholestatique",
         "explication": "Effet propre à l'association : le risque hépatique est lié à l'acide clavulanique et concerne surtout les hommes, les patients âgés et les traitements prolongés. Les signes peuvent n'apparaître que plusieurs semaines après l'arrêt.",
-        "action": "Surveiller l'apparition d'un ictère, d'urines foncées ou de selles décolorées, en particulier chez l'homme âgé et en traitement prolongé. Signaler immédiatement au prescripteur.",
-        "source_rcp": "RCP LEVMENTIN 1 g/200 mg, poudre pour solution injectable/pour perfusion (IV), section 4.4 : « Des effets hépatiques ont été signalés essentiellement chez les hommes et les patients âgés et pourraient être associés à un traitement prolongé. [...] les signes et symptômes apparaissent généralement pendant ou peu de temps après le traitement mais, dans certains cas, ils peuvent ne survenir que plusieurs semaines après l'arrêt du traitement. »"
+        "action": "Surveiller l'apparition d'un ictère, d'urines foncées ou de selles décolorées, en particulier chez l'homme âgé et en traitement prolongé. Signaler immédiatement au prescripteur."
       },
       {
         "evenement": "Cristallurie, y compris lésions rénales aiguës, chez un patient à faible débit urinaire ou porteur d'une sonde vésicale",
         "explication": "Survient principalement lors d'une administration parentérale de fortes doses d'amoxicilline, qui peut précipiter dans les sondes vésicales.",
-        "action": "Maintenir un apport hydrique et une diurèse adéquats lors des fortes doses. Chez un patient sondé, contrôler régulièrement la perméabilité de la sonde.",
-        "source_rcp": "RCP LEVMENTIN 1 g/200 mg, poudre pour solution injectable/pour perfusion (IV), section 4.4 : « De très rares cas de cristallurie (incluant des lésions rénales aiguës) ont été observés chez des patients ayant un faible débit urinaire, principalement lors d'une administration parentérale. [...] Chez les patients porteurs de sondes vésicales, il convient de contrôler régulièrement la perméabilité de la sonde. »"
+        "action": "Maintenir un apport hydrique et une diurèse adéquats lors des fortes doses. Chez un patient sondé, contrôler régulièrement la perméabilité de la sonde."
       },
       {
         "evenement": "Convulsions chez l'insuffisant rénal ou en cas de fortes doses",
         "explication": "Risque documenté avec les fortes doses de bêta-lactamines chez les patients prédisposés.",
-        "action": "Surveiller les signes neurologiques lors des perfusions de fortes doses. Vérifier que la dose a été adaptée à la fonction rénale.",
-        "source_rcp": "RCP LEVMENTIN 1 g/200 mg, poudre pour solution injectable/pour perfusion (IV), section 4.4 : « Des convulsions sont possibles chez les patients insuffisants rénaux ou chez les patients recevant des doses élevées. »"
+        "action": "Surveiller les signes neurologiques lors des perfusions de fortes doses. Vérifier que la dose a été adaptée à la fonction rénale."
       },
       {
         "evenement": "Éruption morbilliforme en cas de suspicion de mononucléose infectieuse",
         "explication": "L'association doit être évitée en cas de suspicion de mononucléose infectieuse.",
-        "action": "Vérifier l'absence de suspicion de mononucléose infectieuse avant l'administration. En cas d'éruption, informer le médecin et ne pas réadministrer sans avis.",
-        "source_rcp": "RCP LEVMENTIN 1 g/200 mg, poudre pour solution injectable/pour perfusion (IV), section 4.4 : « L'association amoxicilline/acide clavulanique doit être évitée en cas de suspicion de mononucléose infectieuse, car la survenue d'une éruption morbilliforme a été associée à cette pathologie après l'utilisation d'amoxicilline. »"
+        "action": "Vérifier l'absence de suspicion de mononucléose infectieuse avant l'administration. En cas d'éruption, informer le médecin et ne pas réadministrer sans avis."
       },
       {
         "evenement": "Pustulose exanthématique aiguë généralisée (PEAG) en début de traitement",
         "explication": "Se manifeste par un érythème généralisé fébrile associé à des pustules, en tout début de traitement.",
-        "action": "Arrêter le traitement en cas d'érythème fébrile avec pustules. Contre-indication à toute administration ultérieure d'amoxicilline.",
-        "source_rcp": "RCP LEVMENTIN 1 g/200 mg, poudre pour solution injectable/pour perfusion (IV), section 4.4 : « La survenue au début du traitement d'un érythème généralisé fébrile associé à des pustules, peut être le symptôme d'une pustulose exanthématique aiguë généralisée (PEAG). Cette réaction nécessite l'arrêt du traitement [...] et contre-indique toute future utilisation d'amoxicilline chez le patient. »"
+        "action": "Arrêter le traitement en cas d'érythème fébrile avec pustules. Contre-indication à toute administration ultérieure d'amoxicilline."
       },
       {
         "evenement": "Apport en potassium chez l'insuffisant rénal ou sous régime hypokaliémiant",
         "explication": "L'acide clavulanique est présenté sous forme de clavulanate de potassium : chaque flacon apporte une quantité non négligeable de potassium, ce qui distingue cette association de l'amoxicilline seule.",
-        "action": "Signaler la quantité de potassium apportée par flacon chez un patient insuffisant rénal ou sous régime hypokaliémiant, en particulier si plusieurs flacons sont administrés par jour.",
-        "source_rcp": "RCP LEVMENTIN 1 g/200 mg, poudre pour solution injectable/pour perfusion (IV), section 4.4 : « Ce médicament contient 39,3 mg (1,0 mmol) de potassium par flacon. À prendre en compte chez les patients insuffisants rénaux ou les patients suivant un régime hypokaliémiant. » RCP AMOXICILLINE/ACIDE CLAVULANIQUE PANPHARMA 2 g/200 mg ADULTES, poudre pour solution injectable : 32,96 mg (0,8 mmol) de potassium par flacon."
+        "action": "Signaler la quantité de potassium apportée par flacon chez un patient insuffisant rénal ou sous régime hypokaliémiant, en particulier si plusieurs flacons sont administrés par jour."
       }
     ],
     "pictogrammes": [],
@@ -328,6 +316,7 @@
       "alternative": "Poudre pour suspension buvable en flacon 100 mg/12,50 mg par mL"
     }
   },
+  "aerosol": null,
   "tracabilite": {
     "rcp_source": [
       {

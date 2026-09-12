@@ -49,11 +49,6 @@ function versAccordeon<T>(items: T[], titre: (item: T) => string, detail: (item:
   return items.map((item) => ({ titre: titre(item), detail: detail(item), conduite: conduite(item) }))
 }
 
-// `source_rcp` existe sur chaque entrée de interactions_pertinentes et
-// surveillance_specifique mais n'est jamais affiché (citation de sourcing
-// interne, pas une information clinique utile au geste infirmier) — les
-// deux mappings ci-dessous l'ignorent volontairement.
-
 /** Assemble une IFiche affichable à partir du JSON brut d'un fichier
  * public/data/<id>.json et de sa métadonnée de classement. Le contenu de
  * `brut` n'est jamais modifié, seulement lu et réorganisé. */

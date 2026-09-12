@@ -13,8 +13,7 @@
       "grossesse": "L'ondansétron ne doit pas être utilisé au cours du premier trimestre de la grossesse.",
       "allaitement": "En cas d'allaitement ou de désir d'allaitement et compte tenu du passage de l'ondansétron dans le lait maternel, l'utilisation de l'ondansétron est déconseillée.",
       "url_crat_grossesse": "https://www.lecrat.fr/3394/",
-      "url_crat_allaitement": "https://www.lecrat.fr/3398/",
-      "source": "RCP ZOPHREN 2 mg/ml, solution injectable en ampoule, section 4.6"
+      "url_crat_allaitement": "https://www.lecrat.fr/3398/"
     },
     "contre_indications": [
       "Hypersensibilité à la substance active ou à l'un des excipients",
@@ -25,46 +24,39 @@
       {
         "substance": "Apomorphine",
         "effet": "Association contre-indiquée : des cas d'hypotension profonde et de perte de conscience ont été rapportés lors de l'administration concomitante.",
-        "action_infirmier": "Signaler immédiatement au prescripteur toute co-prescription d'apomorphine.",
-        "source_rcp": "RCP ONDANSETRON VIATRIS 2 mg/ml, 4.3 et 4.5"
+        "action_infirmier": "Signaler immédiatement au prescripteur toute co-prescription d'apomorphine."
       },
       {
         "substance": "Médicaments allongeant l'intervalle QT",
         "effet": "Allongement supplémentaire de l'intervalle QT, avec augmentation du risque d'arythmie.",
-        "action_infirmier": "Signaler au prescripteur toute association avec un médicament allongeant l'intervalle QT ; renforcer la surveillance électrocardiographique.",
-        "source_rcp": "RCP ONDANSETRON VIATRIS 2 mg/ml, 4.5"
+        "action_infirmier": "Signaler au prescripteur toute association avec un médicament allongeant l'intervalle QT ; renforcer la surveillance électrocardiographique."
       },
       {
         "substance": "Médicaments sérotoninergiques",
         "effet": "Risque de syndrome sérotoninergique, affection potentiellement mortelle (troubles de la conscience, dysautonomie, anomalies neuromusculaires, symptômes gastro-intestinaux).",
-        "action_infirmier": "Signaler au prescripteur toute association avec un ISRS, un IRSNa ou la buprénorphine ; renforcer la surveillance clinique.",
-        "source_rcp": "RCP ONDANSETRON VIATRIS 2 mg/ml, 4.4 et 4.5"
+        "action_infirmier": "Signaler au prescripteur toute association avec un ISRS, un IRSNa ou la buprénorphine ; renforcer la surveillance clinique."
       },
       {
         "substance": "Tramadol",
         "effet": "Diminution possible de l'effet analgésique du tramadol.",
-        "action_infirmier": "Signaler au prescripteur l'association avec le tramadol, notamment en cas d'antalgie jugée insuffisante.",
-        "source_rcp": "RCP ONDANSETRON VIATRIS 2 mg/ml, 4.5"
+        "action_infirmier": "Signaler au prescripteur l'association avec le tramadol, notamment en cas d'antalgie jugée insuffisante."
       }
     ],
     "surveillance_specifique": [
       {
         "evenement": "Allongement de l'intervalle QT / torsades de pointes",
         "explication": "L'ondansétron prolonge l'intervalle QT de façon dose-dépendante ; le risque est majoré en cas d'anomalies électrolytiques, d'insuffisance cardiaque ou d'association à un autre médicament allongeant le QT.",
-        "action": "Renforcer la surveillance électrocardiographique chez les patients à risque (anomalies électrolytiques, insuffisance cardiaque, traitement concomitant allongeant le QT) ; signaler au prescripteur.",
-        "source_rcp": "RCP ONDANSETRON VIATRIS 2 mg/ml, 4.4"
+        "action": "Renforcer la surveillance électrocardiographique chez les patients à risque (anomalies électrolytiques, insuffisance cardiaque, traitement concomitant allongeant le QT) ; signaler au prescripteur."
       },
       {
         "evenement": "Syndrome sérotoninergique",
         "explication": "Affection potentiellement mortelle rapportée en association avec d'autres substances sérotoninergiques (ISRS, IRSNa, buprénorphine).",
-        "action": "Surveiller l'apparition de troubles de la conscience, d'une dysautonomie ou d'anomalies neuromusculaires, en particulier en association avec un traitement sérotoninergique ; signaler immédiatement au prescripteur.",
-        "source_rcp": "RCP ONDANSETRON VIATRIS 2 mg/ml, 4.4 et 4.5"
+        "action": "Surveiller l'apparition de troubles de la conscience, d'une dysautonomie ou d'anomalies neuromusculaires, en particulier en association avec un traitement sérotoninergique ; signaler immédiatement au prescripteur."
       },
       {
         "evenement": "Syndrome occlusif",
         "explication": "L'ondansétron peut favoriser un ralentissement du transit intestinal par son action antagoniste des récepteurs 5-HT3.",
-        "action": "Surveiller attentivement le transit des patients en cours de traitement ; signaler au prescripteur toute constipation sévère.",
-        "source_rcp": "RCP ONDANSETRON VIATRIS 2 mg/ml, 4.4"
+        "action": "Surveiller attentivement le transit des patients en cours de traitement ; signaler au prescripteur toute constipation sévère."
       }
     ],
     "pictogrammes": [],
@@ -102,7 +94,7 @@
           "dose_par_prise_mg_max": 16,
           "intervalle_min_h": 6,
           "intervalle_max_h": 12,
-          "dose_journaliere_max_g": 0.032
+          "dose_journaliere_max_mg": 32
         },
         {
           "population": "Chimiothérapie, perfusion continue",
@@ -110,7 +102,7 @@
           "categorie": "pse",
           "dose_par_prise_mg_min": 24,
           "dose_par_prise_mg_max": 24,
-          "dose_journaliere_max_g": 0.032
+          "dose_journaliere_max_mg": 32
         },
         {
           "population": "Nausées/vomissements post-opératoires",
@@ -120,7 +112,7 @@
           "dose_par_prise_mg_max": 4,
           "intervalle_min_h": 8,
           "intervalle_max_h": 8,
-          "dose_journaliere_max_g": 0.012
+          "dose_journaliere_max_mg": 12
         },
         {
           "population": "Nausées/vomissements post-opératoires, enfant",
@@ -132,7 +124,7 @@
           "dose_par_prise_mg_max": 4,
           "intervalle_min_h": 8,
           "intervalle_max_h": 8,
-          "dose_journaliere_max_g": 0.012
+          "dose_journaliere_max_mg": 12
         },
         {
           "population": "Chimiothérapie, enfant, dose initiale (jour 1)",
@@ -144,7 +136,7 @@
           "dose_par_prise_mg_max": 8,
           "intervalle_min_h": 8,
           "intervalle_max_h": 8,
-          "dose_journaliere_max_g": 0.024
+          "dose_journaliere_max_mg": 24
         }
       ]
     },
@@ -204,7 +196,7 @@
       {
         "type": "Comprimé pelliculé",
         "dosage": "4 mg et 8 mg",
-        "secable": false,
+        "ecrasable": false,
         "ouverture_gelule": null,
         "posologie_adulte": [
           {
@@ -220,7 +212,7 @@
             "categorie": "generale",
             "dose_par_prise_mg_min": 8,
             "dose_par_prise_mg_max": 8,
-            "dose_journaliere_max_g": 0.016,
+            "dose_journaliere_max_mg": 16,
             "intervalle_min_h": 12,
             "intervalle_max_h": 12
           },
@@ -231,7 +223,7 @@
             "age_min_mois": 72,
             "dose_par_prise_mg_min": 8,
             "dose_par_prise_mg_max": 8,
-            "dose_journaliere_max_g": 0.016,
+            "dose_journaliere_max_mg": 16,
             "intervalle_min_h": 12,
             "intervalle_max_h": 12
           }
@@ -240,7 +232,7 @@
       {
         "type": "Lyophilisat oral",
         "dosage": "4 mg et 8 mg",
-        "secable": false,
+        "ecrasable": false,
         "ouverture_gelule": null,
         "posologie_adulte": [
           {
@@ -256,7 +248,7 @@
             "categorie": "generale",
             "dose_par_prise_mg_min": 8,
             "dose_par_prise_mg_max": 8,
-            "dose_journaliere_max_g": 0.016,
+            "dose_journaliere_max_mg": 16,
             "intervalle_min_h": 12,
             "intervalle_max_h": 12
           },
@@ -267,7 +259,7 @@
             "age_min_mois": 6,
             "dose_par_prise_mg_min": 4,
             "dose_par_prise_mg_max": 4,
-            "dose_journaliere_max_g": 0.008,
+            "dose_journaliere_max_mg": 8,
             "intervalle_min_h": 12,
             "intervalle_max_h": 12
           },
@@ -278,7 +270,7 @@
             "age_min_mois": 6,
             "dose_par_prise_mg_min": 8,
             "dose_par_prise_mg_max": 8,
-            "dose_journaliere_max_g": 0.016,
+            "dose_journaliere_max_mg": 16,
             "intervalle_min_h": 12,
             "intervalle_max_h": 12
           },
@@ -289,7 +281,7 @@
             "age_min_mois": 6,
             "dose_par_prise_mg_min": 4,
             "dose_par_prise_mg_max": 4,
-            "dose_journaliere_max_g": 0.008,
+            "dose_journaliere_max_mg": 8,
             "intervalle_min_h": 12,
             "intervalle_max_h": 12
           }
@@ -298,7 +290,7 @@
       {
         "type": "Sirop",
         "dosage": "4 mg/5 mL",
-        "secable": false,
+        "ecrasable": false,
         "ouverture_gelule": null,
         "posologie_adulte": [
           {
@@ -314,7 +306,7 @@
             "categorie": "generale",
             "dose_par_prise_mg_min": 8,
             "dose_par_prise_mg_max": 8,
-            "dose_journaliere_max_g": 0.016,
+            "dose_journaliere_max_mg": 16,
             "intervalle_min_h": 12,
             "intervalle_max_h": 12
           },
@@ -325,7 +317,7 @@
             "age_min_mois": 6,
             "dose_par_prise_mg_min": 2,
             "dose_par_prise_mg_max": 2,
-            "dose_journaliere_max_g": 0.004,
+            "dose_journaliere_max_mg": 4,
             "intervalle_min_h": 12,
             "intervalle_max_h": 12
           },
@@ -336,7 +328,7 @@
             "age_min_mois": 6,
             "dose_par_prise_mg_min": 4,
             "dose_par_prise_mg_max": 4,
-            "dose_journaliere_max_g": 0.008,
+            "dose_journaliere_max_mg": 8,
             "intervalle_min_h": 12,
             "intervalle_max_h": 12
           },
@@ -347,7 +339,7 @@
             "age_min_mois": 6,
             "dose_par_prise_mg_min": 8,
             "dose_par_prise_mg_max": 8,
-            "dose_journaliere_max_g": 0.016,
+            "dose_journaliere_max_mg": 16,
             "intervalle_min_h": 12,
             "intervalle_max_h": 12
           },
@@ -358,7 +350,7 @@
             "age_min_mois": 6,
             "dose_par_prise_mg_min": 2,
             "dose_par_prise_mg_max": 4,
-            "dose_journaliere_max_g": 0.008,
+            "dose_journaliere_max_mg": 8,
             "intervalle_min_h": 12,
             "intervalle_max_h": 12
           }
@@ -370,6 +362,7 @@
       "alternative": "Lyophilisat oral dissous dans un peu d'eau"
     }
   },
+  "aerosol": null,
   "tracabilite": {
     "rcp_source": [
       {

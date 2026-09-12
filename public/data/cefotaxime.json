@@ -22,8 +22,7 @@
       "grossesse": "Le céfotaxime franchit la barrière placentaire. Par conséquent, il ne doit pas être utilisé pendant la grossesse, sauf si les bénéfices attendus dépassent les risques.",
       "allaitement": "Une décision doit être prise concernant l'arrêt de l'allaitement ou du traitement.",
       "url_crat_grossesse": "https://www.lecrat.fr/3062/",
-      "url_crat_allaitement": "https://www.lecrat.fr/3621/",
-      "source": "RCP CEFOTAXIME NORIDEM 1 g, section 4.6"
+      "url_crat_allaitement": "https://www.lecrat.fr/3621/"
     },
     "contre_indications": [
       "Hypersensibilité au céfotaxime, à une autre céphalosporine ou à l'un des excipients",
@@ -37,58 +36,49 @@
       {
         "substance": "Probénécide",
         "effet": "Le probénécide double l'exposition au céfotaxime et réduit de moitié son excrétion rénale aux doses thérapeutiques.",
-        "action_infirmier": "Aucun ajustement n'est nécessaire si la fonction rénale est normale. Signaler au prescripteur toute co-prescription chez un patient insuffisant rénal, une adaptation posologique pouvant être requise.",
-        "source_rcp": "RCP CEFOTAXIME PANPHARMA 1 g, section 4.5"
+        "action_infirmier": "Aucun ajustement n'est nécessaire si la fonction rénale est normale. Signaler au prescripteur toute co-prescription chez un patient insuffisant rénal, une adaptation posologique pouvant être requise."
       },
       {
         "substance": "Aminosides et diurétiques de l'anse",
         "effet": "Le céfotaxime peut exacerber les effets néphrotoxiques des médicaments néphrotoxiques tels que les aminosides ou les diurétiques puissants.",
-        "action_infirmier": "Surveiller la fonction rénale (créatinine, diurèse) pendant l'association, en particulier chez le sujet âgé ou insuffisant rénal.",
-        "source_rcp": "RCP CEFOTAXIME PANPHARMA 1 g, sections 4.4 et 4.5"
+        "action_infirmier": "Surveiller la fonction rénale (créatinine, diurèse) pendant l'association, en particulier chez le sujet âgé ou insuffisant rénal."
       },
       {
         "substance": "Anticoagulants oraux",
         "effet": "De nombreux cas d'augmentation de l'activité des anticoagulants oraux ont été rapportés chez des patients recevant des antibiotiques, certaines céphalosporines étant particulièrement impliquées.",
-        "action_infirmier": "Surveiller l'INR pendant le traitement et lors de l'instauration ou de l'arrêt du céfotaxime chez tout patient sous antivitamine K.",
-        "source_rcp": "RCP CEFOTAXIME PANPHARMA 1 g, section 4.5"
+        "action_infirmier": "Surveiller l'INR pendant le traitement et lors de l'instauration ou de l'arrêt du céfotaxime chez tout patient sous antivitamine K."
       }
     ],
     "surveillance_specifique": [
       {
         "evenement": "Arythmie engageant le pronostic vital après administration intraveineuse rapide sur cathéter veineux central",
         "explication": "Signalée après commercialisation chez un très petit nombre de patients ayant reçu le céfotaxime en IV rapide par voie centrale.",
-        "action": "Respecter la vitesse d'administration indiquée en Préparation ; ne jamais accélérer une injection sur voie centrale.",
-        "source_rcp": "RCP CEFOTAXIME NORIDEM 1 g, sections 4.2 et 4.4 : « une arythmie susceptible d'engager le pronostic vital a été signalée chez un très petit nombre de patients ayant reçu une administration rapide de céfotaxime par voie intraveineuse au moyen d'un cathéter veineux central. Le temps recommandé d'injection ou de perfusion doit être respecté »"
+        "action": "Respecter la vitesse d'administration indiquée en Préparation ; ne jamais accélérer une injection sur voie centrale."
       },
       {
         "evenement": "Encéphalopathie sous fortes doses, en particulier chez l'insuffisant rénal",
         "explication": "Les fortes doses de bêta-lactamines peuvent provoquer une altération de la conscience, des mouvements anormaux et des convulsions.",
-        "action": "Surveiller la conscience et l'apparition de mouvements anormaux ou de convulsions chez les patients recevant de fortes doses, surtout en cas d'insuffisance rénale. Alerter immédiatement le prescripteur.",
-        "source_rcp": "RCP CEFOTAXIME NORIDEM 1 g, section 4.4 : « De fortes doses d'antibiotiques bêta-lactamines, en particulier chez les patients souffrant d'insuffisance rénale, peuvent provoquer une encéphalopathie (altération de la conscience, mouvements anormaux et convulsions) »"
+        "action": "Surveiller la conscience et l'apparition de mouvements anormaux ou de convulsions chez les patients recevant de fortes doses, surtout en cas d'insuffisance rénale. Alerter immédiatement le prescripteur."
       },
       {
         "evenement": "Leucopénie, neutropénie ou agranulocytose au-delà de 7 à 10 jours de traitement",
         "explication": "Une leucopénie, une neutropénie et, plus rarement, une insuffisance médullaire, une pancytopénie ou une agranulocytose peuvent se développer sous céfotaxime.",
-        "action": "Pour tout traitement de plus de 7 à 10 jours, s'assurer que la numération des globules blancs est surveillée. Le traitement doit être arrêté en cas de neutropénie.",
-        "source_rcp": "RCP CEFOTAXIME NORIDEM 1 g, section 4.4 : « Pour les traitements de plus de 7 à 10 jours, le nombre de globules blancs dans le sang doit être surveillé, et le traitement doit être arrêté en cas de neutropénie. »"
+        "action": "Pour tout traitement de plus de 7 à 10 jours, s'assurer que la numération des globules blancs est surveillée. Le traitement doit être arrêté en cas de neutropénie."
       },
       {
         "evenement": "Réactions cutanées sévères",
         "explication": "Rapportées après commercialisation avec le céfotaxime ; elles peuvent engager le pronostic vital. Chez l'enfant, l'éruption peut être confondue avec l'infection en cours.",
-        "action": "Arrêter immédiatement le céfotaxime devant toute éruption cutanée ou atteinte des muqueuses, a fortiori fébrile. Après une telle réaction, le céfotaxime ne doit jamais être réadministré.",
-        "source_rcp": "RCP CEFOTAXIME NORIDEM 1 g, section 4.4 : « Si le patient a développé les réactions PEAG, SSJ, NET ou DRESS en utilisant le céfotaxime, le traitement par céfotaxime ne doit pas être réinstauré, et doit être définitivement abandonné. »"
+        "action": "Arrêter immédiatement le céfotaxime devant toute éruption cutanée ou atteinte des muqueuses, a fortiori fébrile. Après une telle réaction, le céfotaxime ne doit jamais être réadministré."
       },
       {
         "evenement": "Diarrhée à Clostridium difficile et colite pseudo-membraneuse",
         "explication": "Une diarrhée grave ou persistante survenant pendant le traitement ou dans les semaines qui suivent peut traduire une infection à Clostridium difficile, dont la forme la plus grave est la colite pseudo-membraneuse.",
-        "action": "Signaler toute diarrhée grave ou persistante. Ne pas administrer de médicament ralentissant le péristaltisme, qui favorise la stase fécale. En cas de suspicion de colite pseudo-membraneuse, le céfotaxime est arrêté immédiatement.",
-        "source_rcp": "RCP CEFOTAXIME NORIDEM 1 g, section 4.4 : « Les maladies associées à Clostridium difficile peuvent être favorisées par la stase fécale. Les médicaments qui inhibent le péristaltisme ne doivent pas être administrés. »"
+        "action": "Signaler toute diarrhée grave ou persistante. Ne pas administrer de médicament ralentissant le péristaltisme, qui favorise la stase fécale. En cas de suspicion de colite pseudo-membraneuse, le céfotaxime est arrêté immédiatement."
       },
       {
         "evenement": "Test de Coombs positif et faux positif du dosage urinaire du glucose",
         "explication": "Le céfotaxime peut rendre le test de Coombs positif, ce qui interfère avec les épreuves de compatibilité croisée du sang, et fausser le dosage urinaire du glucose réalisé avec des agents réducteurs non spécifiques.",
-        "action": "Signaler le traitement par céfotaxime au laboratoire avant toute épreuve de compatibilité transfusionnelle. Utiliser une méthode spécifique à la glucose-oxydase pour la glycosurie.",
-        "source_rcp": "RCP CEFOTAXIME NORIDEM 1 g, section 4.4 : « un test de Coombs positif a été enregistré chez certains patients traités par céfotaxime. Ce phénomène peut interférer avec les épreuves de compatibilité croisée de sang. Le dosage urinaire du glucose effectué avec des agents réducteurs non spécifiques peut donner lieu à des résultats faussement positifs. »"
+        "action": "Signaler le traitement par céfotaxime au laboratoire avant toute épreuve de compatibilité transfusionnelle. Utiliser une méthode spécifique à la glucose-oxydase pour la glycosurie."
       }
     ],
     "pictogrammes": [],
@@ -279,6 +269,8 @@
       }
     ]
   },
+  "oral": null,
+  "aerosol": null,
   "tracabilite": {
     "rcp_source": [
       {

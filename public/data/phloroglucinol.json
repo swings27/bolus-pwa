@@ -61,7 +61,7 @@
           "population_type": "adulte",
           "dose_par_prise_mg_min": 40,
           "dose_par_prise_mg_max": 40,
-          "dose_journaliere_max_g": 0.12,
+          "dose_journaliere_max_mg": 120,
           "intervalle_min_h": 8,
           "intervalle_max_h": 8
         }
@@ -88,7 +88,7 @@
             "categorie": "generale",
             "dose_par_prise_mg_min": 160,
             "dose_par_prise_mg_max": 160,
-            "dose_journaliere_max_g": 0.48,
+            "dose_journaliere_max_mg": 480,
             "intervalle_min_h": 2,
             "intervalle_max_h": 8,
             "population_type": "adulte"
@@ -106,7 +106,7 @@
             "categorie": "generale",
             "dose_par_prise_mg_min": 160,
             "dose_par_prise_mg_max": 160,
-            "dose_journaliere_max_g": 0.48,
+            "dose_journaliere_max_mg": 480,
             "intervalle_min_h": 2,
             "intervalle_max_h": 8,
             "population_type": "adulte"
@@ -118,7 +118,7 @@
             "age_min_mois": 24,
             "dose_par_prise_mg_min": 80,
             "dose_par_prise_mg_max": 80,
-            "dose_journaliere_max_g": 0.16,
+            "dose_journaliere_max_mg": 160,
             "intervalle_min_h": 2,
             "intervalle_max_h": 12
           }
@@ -136,7 +136,7 @@
             "population_type": "adulte",
             "dose_par_prise_mg_min": 160,
             "dose_par_prise_mg_max": 160,
-            "dose_journaliere_max_g": 0.48,
+            "dose_journaliere_max_mg": 480,
             "intervalle_min_h": 2,
             "intervalle_max_h": 8
           },
@@ -147,7 +147,7 @@
             "age_min_mois": 72,
             "dose_par_prise_mg_min": 80,
             "dose_par_prise_mg_max": 80,
-            "dose_journaliere_max_g": 0.16,
+            "dose_journaliere_max_mg": 160,
             "intervalle_min_h": 2,
             "intervalle_max_h": 12
           }
@@ -165,7 +165,7 @@
             "population_type": "adulte",
             "dose_par_prise_mg_min": 150,
             "dose_par_prise_mg_max": 150,
-            "dose_journaliere_max_g": 0.45,
+            "dose_journaliere_max_mg": 450,
             "intervalle_min_h": 2,
             "intervalle_max_h": 8
           }

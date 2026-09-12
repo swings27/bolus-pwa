@@ -149,40 +149,40 @@
           "population": "Urgence hypertensive, dose initiale",
           "population_type": "adulte",
           "categorie": "pse",
-          "debit_mg_h_min": 3,
-          "debit_mg_h_max": 5,
-          "dose_journaliere_max_g": 0.360
+          "dose_mg_h_min": 3,
+          "dose_mg_h_max": 5,
+          "dose_journaliere_max_mg": 360
         },
         {
           "population": "Urgence hypertensive, dose d'entretien",
           "population_type": "adulte",
           "categorie": "pse",
-          "debit_mg_h_min": 2,
-          "debit_mg_h_max": 4,
-          "dose_journaliere_max_g": 0.360
+          "dose_mg_h_min": 2,
+          "dose_mg_h_max": 4,
+          "dose_journaliere_max_mg": 360
         },
         {
           "population": "Sujet âgé (≥ 65 ans) et grossesse(dont pré-éclampsie sévère)",
           "population_type": "adulte",
           "categorie": "pse",
-          "debit_mg_h_min": 1,
-          "debit_mg_h_max": 5,
-          "dose_journaliere_max_g": 0.360
+          "dose_mg_h_min": 1,
+          "dose_mg_h_max": 5,
+          "dose_journaliere_max_mg": 360
         },
         {
           "population": "Urgence hypertensive, dose initiale",
           "population_type": "pediatrie",
           "categorie": "pse",
-          "dose_ugkgmin_min": 0.5,
-          "dose_ugkgmin_max": 5,
+          "dose_ug_kg_minute_min": 0.5,
+          "dose_ug_kg_minute_max": 5,
           "dose_journaliere_max_g": "Selon poids"
         },
         {
           "population": "Urgence hypertensive, dose d'entretien",
           "population_type": "pediatrie",
           "categorie": "pse",
-          "dose_ugkgmin_min": 1,
-          "dose_ugkgmin_max": 4,
+          "dose_ug_kg_minute_min": 1,
+          "dose_ug_kg_minute_max": 4,
           "dose_journaliere_max_g": "Selon poids"
         }
       ]
@@ -275,7 +275,6 @@
       {
         "type": "Comprimé sécable",
         "dosage": "20 mg",
-        "secable": true,
         "ecrasable": false,
         "ouverture_gelule": null,
         "posologie_adulte": [
@@ -285,7 +284,7 @@
             "population_type": "adulte",
             "dose_par_prise_mg_min": 20,
             "dose_par_prise_mg_max": 30,
-            "dose_journaliere_max_g": 0.09,
+            "dose_journaliere_max_mg": 90,
             "intervalle_min_h": 8,
             "intervalle_max_h": 8
           }
@@ -294,7 +293,6 @@
       {
         "type": "Gélule à libération prolongée",
         "dosage": "50 mg",
-        "secable": false,
         "ecrasable": false,
         "ouverture_gelule": false,
         "posologie_adulte": [
@@ -304,7 +302,7 @@
             "population_type": "adulte",
             "dose_par_prise_mg_min": 50,
             "dose_par_prise_mg_max": 50,
-            "dose_journaliere_max_g": 0.1,
+            "dose_journaliere_max_mg": 100,
             "intervalle_min_h": 12,
             "intervalle_max_h": 12
           }
@@ -316,6 +314,7 @@
       "alternative": "Voie injectable, avis médical"
     }
   },
+  "aerosol": null,
   "tracabilite": {
     "rcp_source": [
       {

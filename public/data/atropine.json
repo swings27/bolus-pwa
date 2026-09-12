@@ -17,8 +17,7 @@
       "grossesse": "L'atropine ne doit pas être utilisée pendant la grossesse à moins que cela ne soit absolument nécessaire.",
       "allaitement": "Il doit être décidé d'arrêter ou non l'allaitement ou d'arrêter/de s'abstenir de suivre le traitement en prenant en compte le bénéfice de l'allaitement pour l'enfant et le bénéfice du traitement pour la femme. S'il est décidé durant le traitement de poursuivre l'allaitement, l'enfant doit être surveillé pour déceler la survenue d'effets anticholinergiques.",
       "url_crat_grossesse": null,
-      "url_crat_allaitement": null,
-      "source": "RCP ATROPINE (SULFATE) AGUETTANT 0,25 mg/mL, solution injectable, section 4.6"
+      "url_crat_allaitement": null
     },
     "contre_indications": [
       "Hypersensibilité au principe actif ou à l'un des excipients",
@@ -31,40 +30,34 @@
       {
         "substance": "Autres médicaments à activité anticholinergique",
         "effet": "L'association potentialise les effets indésirables atropiniques : rétention urinaire, constipation, sécheresse buccale (RCP).",
-        "action_infirmier": "Repérer les traitements anticholinergiques en cours et surveiller l'apparition d'une rétention urinaire, d'une constipation ou d'une sécheresse buccale marquée après administration d'atropine.",
-        "source_rcp": "RCP ATROPINE (SULFATE) AGUETTANT 0,25 mg/mL / ATROPINE SULFATE AGUETTANT 0,1 mg/mL, section 4.5"
+        "action_infirmier": "Repérer les traitements anticholinergiques en cours et surveiller l'apparition d'une rétention urinaire, d'une constipation ou d'une sécheresse buccale marquée après administration d'atropine."
       }
     ],
     "surveillance_specifique": [
       {
         "evenement": "Bradycardie transitoire en début d'administration, suivie d'une tachycardie avec palpitations et arythmies",
         "explication": "L'atropine peut d'abord aggraver transitoirement la bradycardie avant d'exercer son effet vagolytique, puis provoquer une accélération marquée de la fréquence cardiaque.",
-        "action": "Monitorage de la fréquence cardiaque et du rythme pendant et après l'injection ; ne pas conclure à un échec sur la seule phase initiale.",
-        "source_rcp": "RCP ATROPINE (SULFATE) AGUETTANT 0,25 mg/mL, sections 4.4/4.8 : « Une bradycardie transitoire peut apparaître, suivie d'une tachycardie accompagnée de palpitations et d'arythmies » ; « exacerbation transitoire de la bradycardie »"
+        "action": "Monitorage de la fréquence cardiaque et du rythme pendant et après l'injection ; ne pas conclure à un échec sur la seule phase initiale."
       },
       {
         "evenement": "Retard à la mise en place d'une stimulation cardiaque externe chez le patient instable",
         "explication": "Dans les blocs de haut grade (second degré Mobitz II, troisième degré), l'atropine est souvent inefficace : l'attendre retarde le seul traitement efficace.",
-        "action": "Ne pas différer la stimulation externe pour attendre l'effet de l'atropine chez un patient instable ; alerter immédiatement le médecin.",
-        "source_rcp": "RCP ATROPINE (SULFATE) AGUETTANT 0,25 mg/mL, section 4.4 : « L'administration d'atropine ne doit pas retarder la mise en place d'une stimulation externe pour les patients instables, en particulier ceux présentant un bloc de haut grade (second degré de type Mobitz II ou troisième degré). »"
+        "action": "Ne pas différer la stimulation externe pour attendre l'effet de l'atropine chez un patient instable ; alerter immédiatement le médecin."
       },
       {
         "evenement": "Hyperthermie, en particulier en cas de fièvre ou de température ambiante élevée",
         "explication": "L'atropine bloque la sudation ; la thermorégulation est compromise, avec risque d'hyperpyrexie surtout chez l'enfant et la personne âgée.",
-        "action": "Surveiller la température ; découvrir le patient et refroidir l'environnement en cas d'ascension thermique après administration.",
-        "source_rcp": "RCP ATROPINE (SULFATE) AGUETTANT 0,25 mg/mL, sections 4.4 (« Fièvre, ou lorsque la température ambiante est élevée ») et 4.8 (« Hyperpyrexie », « température du corps élevée »)"
+        "action": "Surveiller la température ; découvrir le patient et refroidir l'environnement en cas d'ascension thermique après administration."
       },
       {
         "evenement": "Rétention urinaire",
         "explication": "L'atropine inhibe le contrôle parasympathique de la vessie ; le risque est majoré en cas de troubles urétro-prostatiques.",
-        "action": "Surveiller la reprise des mictions et rechercher un globe vésical, en particulier chez l'homme âgé.",
-        "source_rcp": "RCP ATROPINE (SULFATE) AGUETTANT 0,25 mg/mL, section 4.8 : « Inhibition du contrôle parasympathique de la vessie, rétention urinaire »"
+        "action": "Surveiller la reprise des mictions et rechercher un globe vésical, en particulier chez l'homme âgé."
       },
       {
         "evenement": "Troubles visuels : mydriase, inhibition de l'accommodation, vision trouble, photophobie",
         "explication": "Effet antimuscarinique oculaire de l'atropine, qui peut aussi déclencher une crise de glaucome par fermeture de l'angle chez le sujet prédisposé.",
-        "action": "Prévenir le patient du flou visuel et de la photophobie ; signaler immédiatement toute douleur oculaire ou baisse d'acuité visuelle brutale.",
-        "source_rcp": "RCP ATROPINE (SULFATE) AGUETTANT 0,25 mg/mL, section 4.8 : « Troubles visuels (mydriase, inhibition de l'accommodation, vision trouble, photophobie) » ; contre-indication 4.3 « Glaucome à angle fermé »"
+        "action": "Prévenir le patient du flou visuel et de la photophobie ; signaler immédiatement toute douleur oculaire ou baisse d'acuité visuelle brutale."
       }
     ],
     "pictogrammes": [],
@@ -125,7 +118,7 @@
           "dose_par_prise_mg_max": 0.5,
           "intervalle_min_min": 3,
           "intervalle_max_min": 5,
-          "dose_journaliere_max_g": 0.003
+          "dose_journaliere_max_mg": 3
         },
         {
           "population": "Antidote des anticholinestérasiques, organophosphorés, carbamates et champignons muscariniques",
@@ -151,7 +144,7 @@
           "dose_par_prise_mg_max": 1,
           "intervalle_min_h": 6,
           "intervalle_max_h": 6,
-          "dose_journaliere_max_g": 0.002
+          "dose_journaliere_max_mg": 2
         },
         {
           "population": "Prémédication anesthésique, enfant",
@@ -228,6 +221,8 @@
       }
     ]
   },
+  "oral": null,
+  "aerosol": null,
   "tracabilite": {
     "rcp_source": [
       {
