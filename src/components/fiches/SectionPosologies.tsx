@@ -210,13 +210,8 @@ export default function SectionPosologies({
 
       {ajustement && (
         <div className="mt-3">
-          <BlocAvertissement couleur="var(--ajustement)">
-            <div>
-              <p className="mb-1 text-[9.5px] font-semibold uppercase tracking-wide" style={{ color: 'var(--ajustement)' }}>
-                Ajustement posologique
-              </p>
-              <p className="text-[11px] leading-relaxed text-texte">{ajustement}</p>
-            </div>
+          <BlocAvertissement couleur="var(--ajustement)" titre="Ajustement posologique">
+            <p className="text-[11px] leading-relaxed text-texte">{ajustement}</p>
           </BlocAvertissement>
         </div>
       )}
@@ -228,11 +223,8 @@ export default function SectionPosologies({
           n'écrase l'autre. */}
       {ajustementAbsolu && (
         <div className="mt-3">
-          <BlocAvertissement couleur="var(--alerte-pleine)" variante="pleine">
-            <div>
-              <p className="mb-1 text-[9.5px] font-semibold uppercase tracking-wide text-white">Ajustement posologique</p>
-              <p className="text-[11px] font-medium leading-relaxed text-white">{ajustementAbsolu}</p>
-            </div>
+          <BlocAvertissement couleur="var(--alerte-pleine)" variante="pleine" titre="Ajustement posologique">
+            <p className="text-[11px] font-medium leading-relaxed text-white">{ajustementAbsolu}</p>
           </BlocAvertissement>
         </div>
       )}

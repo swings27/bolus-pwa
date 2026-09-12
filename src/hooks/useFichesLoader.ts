@@ -80,7 +80,19 @@ export function useFichesLoader(): IEtatChargement {
         // construireFiche() (id + catégorie/sous-famille n'existent pas dans
         // le JSON clinique lui-même).
         const ids = Object.keys(CATALOGUE_FICHES)
-        const brutes = await Promise.all(ids.map((id) => recupererJson<IFicheSource>(`/data/${id}.json`)))
+        // Chaque erreur est renommée avec l'id de la fiche avant de remonter :
+        // Promise.all rejette sur la première en échec, et « Le serveur est
+        // indisponible (404) » sans nom de fichier n'aide pas à retrouver
+        // laquelle des 35 fiches manque, est mal déployée ou contient un JSON
+        // invalide (une virgule oubliée casse tout le catalogue).
+        const brutes = await Promise.all(
+          ids.map((id) =>
+            recupererJson<IFicheSource>(`/data/${id}.json`).catch((err: unknown) => {
+              const detail = err instanceof Error ? err.message : String(err)
+              throw new Error(`Fiche "${id}" : ${detail}`)
+            }),
+          ),
+        )
 
         // Valide la forme de CHAQUE fichier avant de les assembler en
         // fiches : sans ça, un champ mal nommé ou du mauvais type ne casse

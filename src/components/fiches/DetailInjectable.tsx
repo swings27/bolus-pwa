@@ -113,25 +113,20 @@ export default function DetailInjectable({ donnees, noteAjustement, noteAjusteme
 
       {donnees.incompatibilites.length > 0 && (
         <div className="mt-5">
-          <BlocAvertissement couleur="var(--alerte)">
-            <div>
-              <p className="mb-1 text-[9.5px] font-semibold uppercase tracking-wide" style={{ color: 'var(--alerte)' }}>
-                Incompatible en Y
-              </p>
-              {/* Liste repliée à 3 lignes comme les indications et les
-                  contre-indications : certaines molécules en alignent une
-                  quinzaine (héparine sodique), ce qui repoussait les
-                  posologies hors de l'écran. */}
-              <TexteRepliable couleur="var(--alerte)" className="text-[12.5px] leading-relaxed text-texte">
-                {donnees.incompatibilites
-                  .map((incompatibilite) =>
-                    incompatibilite.niveau && incompatibilite.niveau !== 'absolu'
-                      ? `${incompatibilite.substance} (${incompatibilite.niveau})`
-                      : incompatibilite.substance,
-                  )
-                  .join(' · ')}
-              </TexteRepliable>
-            </div>
+          <BlocAvertissement couleur="var(--alerte)" titre="Incompatible en Y">
+            {/* Liste repliée à 3 lignes comme les indications et les
+                contre-indications : certaines molécules en alignent une
+                vingtaine (nicardipine), ce qui repoussait les posologies
+                hors de l'écran. */}
+            <TexteRepliable couleur="var(--alerte)" className="text-[12.5px] leading-relaxed text-texte">
+              {donnees.incompatibilites
+                .map((incompatibilite) =>
+                  incompatibilite.niveau && incompatibilite.niveau !== 'absolu'
+                    ? `${incompatibilite.substance} (${incompatibilite.niveau})`
+                    : incompatibilite.substance,
+                )
+                .join(' · ')}
+            </TexteRepliable>
           </BlocAvertissement>
         </div>
       )}

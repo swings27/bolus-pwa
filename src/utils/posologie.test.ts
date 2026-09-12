@@ -137,6 +137,12 @@ describe('formaterDose', () => {
     expect(formaterDose(posologie({ dose_journaliere_mg_kg_max: 120 }))).toBe('≤ 120 mg/kg / jour')
   })
 
+  // Spiramycine pediatrique : le RCP formule la dose par palier de 10 kg, pas
+  // au kg — elle etait declaree dans le type mais aucune fonction ne la mettait
+  // en forme, la ligne affichait donc un tiret cadratin.
+  it('formate une dose journalière exprimée par palier de 10 kg', () => {
+    expect(formaterDose(posologie({ dose_journaliere_MUI_par_10kg_min: 1.5, dose_journaliere_MUI_par_10kg_max: 3 }))).toBe('1,5-3 MUI/10 kg / jour')
+  })
   it("préfixe d'un ≥ une dose dont seule la borne basse est renseignée", () => {
     expect(formaterDose(posologie({ dose_par_prise_mg_min: 500 }))).toBe('≥ 500 mg')
   })
@@ -462,6 +468,22 @@ describe('dedupliquerPosologies', () => {
     expect(dedupliquerPosologies([doseFixe, enFourchette])).toEqual([enFourchette])
   })
 
+  // Regression : les debits (mg/h, mg/kg/h, UI/kg/h) et les mmol/kg etaient
+  // connus de formaterDose() mais absents de la liste que estUnePlageDeDose()
+  // recopiait a cote — une fourchette en mg/h passait donc pour une dose fixe,
+  // et perdait l'arbitrage contre un doublon moins englobant. Les deux lisent
+  // desormais la meme table FAMILLES_DOSE.
+  it('reconnaît une fourchette exprimée par un débit de perfusion (mg/h, mg/kg/h, UI/kg/h)', () => {
+    for (const enFourchette of [
+      posologie({ population: 'X', categorie: 'pse', dose_mg_h_min: 3, dose_mg_h_max: 5 }),
+      posologie({ population: 'X', categorie: 'pse', dose_mg_kg_h_min: 0.5, dose_mg_kg_h_max: 2 }),
+      posologie({ population: 'X', categorie: 'pse', dose_UI_kg_h_min: 10, dose_UI_kg_h_max: 20 }),
+      posologie({ population: 'X', categorie: 'pse', dose_journaliere_mmol_kg_min: 1, dose_journaliere_mmol_kg_max: 3 }),
+    ]) {
+      const doseFixe = posologie({ population: 'X', categorie: 'pse', dose_mg_h_min: 4, dose_mg_h_max: 4 })
+      expect(dedupliquerPosologies([doseFixe, enFourchette])).toEqual([enFourchette])
+    }
+  })
   it('ne fusionne pas deux populations identiques de categorie différente', () => {
     const enIv = posologie({ population: 'Douleur ou fièvre', categorie: 'generale' })
     const enSpeciale = posologie({ population: 'Douleur ou fièvre', categorie: 'speciale' })

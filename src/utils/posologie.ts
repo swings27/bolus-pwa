@@ -40,54 +40,106 @@ function formaterDoseEnGrammes(min: number | undefined, max: number | undefined)
   return formaterPlage(min !== undefined ? versMg(min) : undefined, max !== undefined ? versMg(max) : undefined, 'mg')
 }
 
-export function formaterDose(p: IPosologieRcp): string {
-  const parPrise = formaterPlage(p.dose_par_prise_mg_min, p.dose_par_prise_mg_max, 'mg')
-  if (parPrise) return parPrise
+/** Une façon d'exprimer une dose dans les fiches RCP (dose fixe par prise,
+ * dose au poids, débit en µg/kg/min...). Les champs numériques vont toujours
+ * par paire `_min`/`_max`, voir IPosologieRcp. */
+interface IFamilleDose {
+  min: keyof IPosologieRcp
+  max: keyof IPosologieRcp
+  unite: string
+  /** Renseigné pour la seule famille qui admet aussi une forme scalaire
+   * (dose_par_prise_MUI) : une valeur unique, jamais une fourchette. */
+  scalaire?: keyof IPosologieRcp
+  /** "/ jour" quand la valeur est journalière. Jamais "/ prise" pour son
+   * opposé : la carte n'affiche qu'une prise à la fois, le préciser serait
+   * redondant — alors que "/ jour" change réellement le sens de la valeur. */
+  suffixe?: '/ jour'
+  /** Dose rapportée au poids : alimente la colonne "Dose (au poids)" quand
+   * la ligne porte AUSSI une dose absolue (voir formaterDoseParKg). */
+  auPoids?: boolean
+  /** Dose absolue en mg ou en g : alimente la colonne "Dose (absolue)". */
+  absolue?: boolean
+  /** Bornes saisies en grammes, donc soumises à la règle clinique g↔mg
+   * (voir formaterDoseEnGrammes). */
+  enGrammes?: boolean
+}
+
+// Toutes les façons dont une fiche peut exprimer une dose, DANS L'ORDRE DE
+// PRIORITÉ : formaterDose() s'arrête à la première famille renseignée sur la
+// ligne. Les quatre fonctions qui suivent parcourent ce même tableau — mise
+// en forme, dose au poids, dose absolue, détection de fourchette — au lieu
+// de recopier chacune sa propre liste de champs. C'est précisément cette
+// duplication qui avait laissé les débits (mg/h, mg/kg/h, UI/kg/h) et les
+// mmol/kg connus de formaterDose() mais ignorés de estUnePlageDeDose() :
+// ajouter une unité se fait désormais ici, à un seul endroit.
+const FAMILLES_DOSE: IFamilleDose[] = [
+  { min: 'dose_par_prise_mg_min', max: 'dose_par_prise_mg_max', unite: 'mg', absolue: true },
   // Dose par prise directement en grammes (ex. fosfomycine, 4-8 g) — même
   // rang de priorité que le mg ci-dessus, juste une unité différente.
-  const parPriseG = formaterDoseEnGrammes(p.dose_par_prise_g_min, p.dose_par_prise_g_max)
-  if (parPriseG) return parPriseG
-  // MUI (millions d'unités internationales, ex. spiramycine) : même place
-  // dans l'ordre de priorité que la dose par prise en mg ci-dessus, une
-  // unité différente pour la même façon d'exprimer la dose.
-  if (p.dose_par_prise_MUI !== undefined) return `${formaterNombre(p.dose_par_prise_MUI)} MUI`
-  const parPriseMUI = formaterPlage(p.dose_par_prise_MUI_min, p.dose_par_prise_MUI_max, 'MUI')
-  if (parPriseMUI) return parPriseMUI
-  // UI (unités internationales, ex. énoxaparine en UI anti-Xa) — distinct des
-  // MUI ci-dessus (millions d'UI, spiramycine), l'ordre de grandeur n'est pas
-  // le même.
-  const parPriseUI = formaterPlage(p.dose_par_prise_UI_min, p.dose_par_prise_UI_max, 'UI')
-  if (parPriseUI) return parPriseUI
-  // Pas de suffixe "/ prise" ici : la carte n'affiche qu'une seule prise à
-  // la fois, le préciser serait redondant (contrairement à "/ jour"
-  // ci-dessous, qui change réellement le sens de la valeur).
-  const parKg = formaterPlage(p.dose_mg_kg_min, p.dose_mg_kg_max, 'mg/kg')
-  if (parKg) return parKg
-  // UI/kg par prise (ex. énoxaparine curatif, héparine en bolus) — même
-  // logique que le mg/kg ci-dessus.
-  const parKgUI = formaterPlage(p.dose_par_prise_UI_kg_min, p.dose_par_prise_UI_kg_max, 'UI/kg')
-  if (parKgUI) return parKgUI
-  const parKgParJour = formaterPlage(p.dose_journaliere_mg_kg_min, p.dose_journaliere_mg_kg_max, 'mg/kg')
-  if (parKgParJour) return `${parKgParJour} / jour`
-  const parJourMUI = formaterPlage(p.dose_journaliere_MUI_min, p.dose_journaliere_MUI_max, 'MUI')
-  if (parJourMUI) return `${parJourMUI} / jour`
-  // mmol (millimoles, ex. chlorure de potassium) : même famille que
-  // dose_journaliere_mg_kg ci-dessus, en unité différente.
-  const parKgParJourMmol = formaterPlage(p.dose_journaliere_mmol_kg_min, p.dose_journaliere_mmol_kg_max, 'mmol/kg')
-  if (parKgParJourMmol) return `${parKgParJourMmol} / jour`
+  { min: 'dose_par_prise_g_min', max: 'dose_par_prise_g_max', unite: 'g', absolue: true, enGrammes: true },
+  // MUI (millions d'unités internationales, ex. spiramycine) : même façon
+  // d'exprimer la dose que le mg par prise, une autre unité.
+  { min: 'dose_par_prise_MUI_min', max: 'dose_par_prise_MUI_max', unite: 'MUI', scalaire: 'dose_par_prise_MUI' },
+  // UI (unités internationales, ex. énoxaparine en UI anti-Xa) — distinct
+  // des MUI ci-dessus (millions d'UI), l'ordre de grandeur n'est pas le même.
+  { min: 'dose_par_prise_UI_min', max: 'dose_par_prise_UI_max', unite: 'UI' },
+  { min: 'dose_mg_kg_min', max: 'dose_mg_kg_max', unite: 'mg/kg', auPoids: true },
+  // UI/kg par prise (ex. énoxaparine curatif, héparine en bolus).
+  { min: 'dose_par_prise_UI_kg_min', max: 'dose_par_prise_UI_kg_max', unite: 'UI/kg', auPoids: true },
+  { min: 'dose_journaliere_mg_kg_min', max: 'dose_journaliere_mg_kg_max', unite: 'mg/kg', suffixe: '/ jour', auPoids: true },
+  { min: 'dose_journaliere_MUI_min', max: 'dose_journaliere_MUI_max', unite: 'MUI', suffixe: '/ jour' },
+  // Posologie au poids par palier de 10 kg (spiramycine pédiatrique) : le
+  // RCP la formule ainsi, elle n'est pas ramenée au kg — une division
+  // donnerait un nombre que personne ne prescrit sous cette forme.
+  {
+    min: 'dose_journaliere_MUI_par_10kg_min',
+    max: 'dose_journaliere_MUI_par_10kg_max',
+    unite: 'MUI/10 kg',
+    suffixe: '/ jour',
+    auPoids: true,
+  },
+  // mmol (millimoles, ex. chlorure de potassium).
+  { min: 'dose_journaliere_mmol_kg_min', max: 'dose_journaliere_mmol_kg_max', unite: 'mmol/kg', suffixe: '/ jour', auPoids: true },
   // Débits de perfusion continue (PSE). Quatre unités selon la molécule :
   // µg/kg/min (adrénaline), mg/kg/h (kétamine), UI/kg/h (héparine) et mg/h
   // (nicardipine, non rapporté au poids). Aucune conversion entre elles :
   // chacune est reprise telle que le RCP la formule, c'est sous cette forme
   // que le débit est réglé au pousse-seringue.
-  const debit = formaterPlage(p.dose_ug_kg_minute_min, p.dose_ug_kg_minute_max, 'µg/kg/min')
-  if (debit) return debit
-  const debitMgKgH = formaterPlage(p.dose_mg_kg_h_min, p.dose_mg_kg_h_max, 'mg/kg/h')
-  if (debitMgKgH) return debitMgKgH
-  const debitUIKgH = formaterPlage(p.dose_UI_kg_h_min, p.dose_UI_kg_h_max, 'UI/kg/h')
-  if (debitUIKgH) return debitUIKgH
-  const debitMgH = formaterPlage(p.dose_mg_h_min, p.dose_mg_h_max, 'mg/h')
-  if (debitMgH) return debitMgH
+  { min: 'dose_ug_kg_minute_min', max: 'dose_ug_kg_minute_max', unite: 'µg/kg/min' },
+  { min: 'dose_mg_kg_h_min', max: 'dose_mg_kg_h_max', unite: 'mg/kg/h' },
+  { min: 'dose_UI_kg_h_min', max: 'dose_UI_kg_h_max', unite: 'UI/kg/h' },
+  { min: 'dose_mg_h_min', max: 'dose_mg_h_max', unite: 'mg/h' },
+]
+
+// Lecture typée d'un champ de dose désigné par son nom : IPosologieRcp mêle
+// des champs numériques et textuels (population, categorie, et les plafonds
+// qui acceptent une chaîne), ce filtre évite d'avoir à forcer le type à
+// l'aveugle. Les champs listés dans FAMILLES_DOSE sont tous numériques —
+// une valeur d'un autre type ne peut venir que d'un JSON mal formé, et vaut
+// alors "non renseigné" plutôt qu'un affichage incohérent.
+function valeurNumerique(p: IPosologieRcp, champ: keyof IPosologieRcp): number | undefined {
+  const valeur = p[champ]
+  return typeof valeur === 'number' ? valeur : undefined
+}
+
+/** Rend une famille de dose telle qu'elle s'affiche, ou null si la ligne ne
+ * la renseigne pas — sans le suffixe "/ jour", que les appelants ajoutent
+ * eux-mêmes (SectionPosologies le met en gras, voir IDoseParKg). */
+function formaterFamille(p: IPosologieRcp, famille: IFamilleDose): string | null {
+  if (famille.scalaire !== undefined) {
+    const scalaire = valeurNumerique(p, famille.scalaire)
+    if (scalaire !== undefined) return `${formaterNombre(scalaire)} ${famille.unite}`
+  }
+  const min = valeurNumerique(p, famille.min)
+  const max = valeurNumerique(p, famille.max)
+  return famille.enGrammes ? formaterDoseEnGrammes(min, max) : formaterPlage(min, max, famille.unite)
+}
+
+export function formaterDose(p: IPosologieRcp): string {
+  for (const famille of FAMILLES_DOSE) {
+    const valeur = formaterFamille(p, famille)
+    if (valeur) return famille.suffixe ? `${valeur} ${famille.suffixe}` : valeur
+  }
   return '—'
 }
 
@@ -110,23 +162,23 @@ export interface IDoseParKg {
  * mieux vaut les montrer toutes les deux plutôt que de deviner laquelle
  * afficher. */
 export function formaterDoseParKg(p: IPosologieRcp): IDoseParKg | null {
-  const parKg = formaterPlage(p.dose_mg_kg_min, p.dose_mg_kg_max, 'mg/kg')
-  if (parKg) return { valeur: parKg, suffixe: null }
-  const parKgUI = formaterPlage(p.dose_par_prise_UI_kg_min, p.dose_par_prise_UI_kg_max, 'UI/kg')
-  if (parKgUI) return { valeur: parKgUI, suffixe: null }
-  const parKgParJour = formaterPlage(p.dose_journaliere_mg_kg_min, p.dose_journaliere_mg_kg_max, 'mg/kg')
-  if (parKgParJour) return { valeur: parKgParJour, suffixe: '/ jour' }
-  const parKgParJourMmol = formaterPlage(p.dose_journaliere_mmol_kg_min, p.dose_journaliere_mmol_kg_max, 'mmol/kg')
-  if (parKgParJourMmol) return { valeur: parKgParJourMmol, suffixe: '/ jour' }
+  for (const famille of FAMILLES_DOSE) {
+    if (!famille.auPoids) continue
+    const valeur = formaterFamille(p, famille)
+    if (valeur) return { valeur, suffixe: famille.suffixe ?? null }
+  }
   return null
 }
 
 /** Partie "absolue" d'une dose (mg ou g fixes/en fourchette, jamais ramenés
  * au poids) — voir formaterDoseParKg() ci-dessus. */
 export function formaterDoseAbsolue(p: IPosologieRcp): string | null {
-  const enMg = formaterPlage(p.dose_par_prise_mg_min, p.dose_par_prise_mg_max, 'mg')
-  if (enMg) return enMg
-  return formaterDoseEnGrammes(p.dose_par_prise_g_min, p.dose_par_prise_g_max)
+  for (const famille of FAMILLES_DOSE) {
+    if (!famille.absolue) continue
+    const valeur = formaterFamille(p, famille)
+    if (valeur) return valeur
+  }
+  return null
 }
 
 export function formaterIntervalle(p: IPosologieRcp): string {
@@ -322,36 +374,17 @@ export function libelleCategoriePosologie(categorie: string | undefined, context
 
 // Une dose exprimée par une fourchette (min ≠ max) couvre déjà le cas d'une
 // dose fixe à l'intérieur de cette fourchette (ex. 200-400 mg couvre le cas
-// 400 mg) — reprend le même ordre de priorité que formaterDose() pour tester
-// la bonne paire de champs selon la façon dont *cette* ligne exprime sa dose.
+// 400 mg) — parcourt FAMILLES_DOSE dans le même ordre que formaterDose()
+// pour tester la façon dont *cette* ligne exprime sa dose, et non une liste
+// de champs recopiée à côté qui finit toujours par diverger.
 function estUnePlageDeDose(p: IPosologieRcp): boolean {
-  if (p.dose_par_prise_mg_min !== undefined || p.dose_par_prise_mg_max !== undefined) {
-    return p.dose_par_prise_mg_min !== p.dose_par_prise_mg_max
-  }
-  if (p.dose_par_prise_g_min !== undefined || p.dose_par_prise_g_max !== undefined) {
-    return p.dose_par_prise_g_min !== p.dose_par_prise_g_max
-  }
-  if (p.dose_par_prise_MUI !== undefined) return false
-  if (p.dose_par_prise_MUI_min !== undefined || p.dose_par_prise_MUI_max !== undefined) {
-    return p.dose_par_prise_MUI_min !== p.dose_par_prise_MUI_max
-  }
-  if (p.dose_par_prise_UI_min !== undefined || p.dose_par_prise_UI_max !== undefined) {
-    return p.dose_par_prise_UI_min !== p.dose_par_prise_UI_max
-  }
-  if (p.dose_mg_kg_min !== undefined || p.dose_mg_kg_max !== undefined) {
-    return p.dose_mg_kg_min !== p.dose_mg_kg_max
-  }
-  if (p.dose_par_prise_UI_kg_min !== undefined || p.dose_par_prise_UI_kg_max !== undefined) {
-    return p.dose_par_prise_UI_kg_min !== p.dose_par_prise_UI_kg_max
-  }
-  if (p.dose_journaliere_mg_kg_min !== undefined || p.dose_journaliere_mg_kg_max !== undefined) {
-    return p.dose_journaliere_mg_kg_min !== p.dose_journaliere_mg_kg_max
-  }
-  if (p.dose_journaliere_MUI_min !== undefined || p.dose_journaliere_MUI_max !== undefined) {
-    return p.dose_journaliere_MUI_min !== p.dose_journaliere_MUI_max
-  }
-  if (p.dose_ug_kg_minute_min !== undefined || p.dose_ug_kg_minute_max !== undefined) {
-    return p.dose_ug_kg_minute_min !== p.dose_ug_kg_minute_max
+  for (const famille of FAMILLES_DOSE) {
+    // Une valeur scalaire n'est jamais une fourchette, et masque la paire
+    // min/max de sa propre famille (voir formaterFamille).
+    if (famille.scalaire !== undefined && valeurNumerique(p, famille.scalaire) !== undefined) return false
+    const min = valeurNumerique(p, famille.min)
+    const max = valeurNumerique(p, famille.max)
+    if (min !== undefined || max !== undefined) return min !== max
   }
   return false
 }

@@ -1,6 +1,7 @@
 import { Activity, Blend, Baby } from 'lucide-react'
 import type { ISurveillance, IGrossesseAllaitementRcp, IRcpSource } from '../../types'
 import GroupePrecaution from './GroupePrecaution'
+import LienExterne from './LienExterne'
 import AccordeonImbrique from './AccordeonImbrique'
 import SourcesRcp from './SourcesRcp'
 
@@ -89,30 +90,14 @@ export default function PrecautionsFiche({
                 <span className="text-[11px] font-semibold uppercase text-texte-doux">Grossesse</span>
                 <p className="mt-0.5 text-xs leading-relaxed text-texte">{grossesseAllaitement.grossesse}</p>
                 {grossesseAllaitement.url_crat_grossesse && (
-                  <a
-                    href={grossesseAllaitement.url_crat_grossesse}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="mt-1 inline-block text-[11px] underline"
-                    style={{ color: 'var(--interactif)' }}
-                  >
-                    Voir sur le CRAT ↗
-                  </a>
+                  <LienExterne href={grossesseAllaitement.url_crat_grossesse}>Voir sur le CRAT</LienExterne>
                 )}
               </div>
               <div>
                 <span className="text-[11px] font-semibold uppercase text-texte-doux">Allaitement</span>
                 <p className="mt-0.5 text-xs leading-relaxed text-texte">{grossesseAllaitement.allaitement}</p>
                 {grossesseAllaitement.url_crat_allaitement && (
-                  <a
-                    href={grossesseAllaitement.url_crat_allaitement}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="mt-1 inline-block text-[11px] underline"
-                    style={{ color: 'var(--interactif)' }}
-                  >
-                    Voir sur le CRAT ↗
-                  </a>
+                  <LienExterne href={grossesseAllaitement.url_crat_allaitement}>Voir sur le CRAT</LienExterne>
                 )}
               </div>
             </div>

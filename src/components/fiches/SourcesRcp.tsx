@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import { X } from 'lucide-react'
 import { useFocusTrap } from '../../hooks/useFocusTrap'
 import type { IRcpSource } from '../../types'
+import LienExterne from './LienExterne'
 
 interface ISourcesRcpProps {
   sources: IRcpSource[]
@@ -117,15 +118,7 @@ export default function SourcesRcp({
                     </div>
                   )}
                   {source.url_ansm && (
-                    <a
-                      href={source.url_ansm}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="mt-1 inline-block text-[11px] underline"
-                      style={{ color: 'var(--interactif)' }}
-                    >
-                      Voir sur la BDPM ↗
-                    </a>
+                    <LienExterne href={source.url_ansm}>Voir sur la BDPM</LienExterne>
                   )}
                 </li>
               ))}
