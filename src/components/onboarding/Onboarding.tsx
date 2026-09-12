@@ -17,12 +17,12 @@ const ECRANS: IEcranOnboarding[] = [
   {
     titre: 'Basé sur les RCP officiels',
     texte:
-      "Bolus s'appuie sur les RCP (Résumé des Caractéristiques du Produit) publiés par l'ANSM. Vos pratiques de service peuvent différer sur certaines molécules, vérifiez toujours vos protocoles locaux ou solliciter les référents disponibles.",
+      "Bolus s'appuie sur les RCP (Résumé des Caractéristiques du Produit) publiés par l'ANSM, des guides et protocoles de l'OMéDIT ou des HUG (Hôpitaux Universitaires de Genève) ainsi que les recommandations de la SFAR (Société Française d'Anesthésie Réanimation). Vos pratiques de service peuvent différer sur certaines molécules, vérifiez toujours vos protocoles locaux ou solliciter les référents disponibles.",
   },
   {
     titre: 'Tous les médicaments, sans exception',
     texte:
-      "Toutes les molécules du catalogue sont accessibles gratuitement. Recherchez par DCI (Dénomination Commune Internationale) ou nom commercial, et utilisez les calculateurs indépendants pour vos débits et dilutions.",
+      "Toutes les molécules du catalogue sont accessibles gratuitement. Recherchez par DCI (Dénomination Commune Internationale) ou nom commercial, chaque fiche vous permettra de préparer, administrer et surveiller la molécule. Les posologies des fiches sont indicatives, toujours se référer à la prescription et au médecin prescripteur. Utilisez les calculateurs indépendants pour vos débits et dilutions.",
   },
   {
     titre: "C'est parti !",
