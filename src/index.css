@@ -304,3 +304,59 @@ body {
     opacity: 0.5;
   }
 }
+
+/* --------------------------------------------------------------------
+   Onboarding — le "o" animé (voir Onboarding.tsx / LogoO.tsx)
+   -------------------------------------------------------------------- */
+
+/* Position (left) posée en JS selon l'écran actif ; seule l'interpolation
+   entre deux positions est soumise à prefers-reduced-motion, comme
+   .transition-page — sans elle, le "o" saute directement à sa position
+   plutôt que de glisser. */
+@media (prefers-reduced-motion: no-preference) {
+  .onboarding-o-piste {
+    transition: left 500ms ease;
+  }
+}
+
+/* Rotation continue, indépendante du changement d'écran (élément imbriqué
+   séparé : un seul élément ne peut pas à la fois transitionner "left" et
+   tourner en continu via une "animation", les deux mécanismes écraseraient
+   la même propriété transform). Le "o" étant un cercle à deux tons
+   symétrique (180°), une rotation trop lente y est presque imperceptible
+   à l'œil (rien à quoi accrocher le regard sur la moitié du tour) — 8s par
+   tour reste un mouvement continu et discret, mais clairement visible. */
+@media (prefers-reduced-motion: no-preference) {
+  .onboarding-o-rotation {
+    animation: rotation-o 8s linear infinite;
+  }
+}
+
+@keyframes rotation-o {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Légère transition de contenu à chaque changement d'écran (voir
+   Onboarding.tsx, remonté via key={etape}) — même principe que
+   entree-page, un fondu + léger déplacement plutôt qu'une coupure nette. */
+@media (prefers-reduced-motion: no-preference) {
+  .onboarding-contenu {
+    animation: entree-onboarding 220ms ease-out;
+  }
+}
+
+@keyframes entree-onboarding {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

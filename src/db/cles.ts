@@ -14,6 +14,7 @@
 // synchronisée manuellement si cette valeur change un jour.
 export const CLE_THEME = 'theme'
 export const CLE_DISCLAIMER_ACCEPTE = 'disclaimer_accepte'
+export const CLE_ONBOARDING_VU = 'onboarding_vu'
 export const CLE_FICHES_VERSION = 'fiches_version'
 export const CLE_FICHES_DATE_CATALOGUE = 'fiches_date_catalogue'
 export const CLE_STOCKAGE_PERSISTANT = 'stockage_persistant'
