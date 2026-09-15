@@ -77,6 +77,10 @@ const FAMILLES_DOSE: IFamilleDose[] = [
   // Dose par prise directement en grammes (ex. fosfomycine, 4-8 g) — même
   // rang de priorité que le mg ci-dessus, juste une unité différente.
   { min: 'dose_par_prise_g_min', max: 'dose_par_prise_g_max', unite: 'g', absolue: true, enGrammes: true },
+  // Microgrammes par prise (ex. sufentanil) : même rang que le mg et le g
+  // ci-dessus. Aucune conversion vers le mg — le RCP prescrit en µg, et
+  // "0,03 mg" ne se dit pas au chevet.
+  { min: 'dose_par_prise_ug_min', max: 'dose_par_prise_ug_max', unite: 'µg', absolue: true },
   // MUI (millions d'unités internationales, ex. spiramycine) : même façon
   // d'exprimer la dose que le mg par prise, une autre unité.
   { min: 'dose_par_prise_MUI_min', max: 'dose_par_prise_MUI_max', unite: 'MUI', scalaire: 'dose_par_prise_MUI' },
@@ -84,6 +88,9 @@ const FAMILLES_DOSE: IFamilleDose[] = [
   // des MUI ci-dessus (millions d'UI), l'ordre de grandeur n'est pas le même.
   { min: 'dose_par_prise_UI_min', max: 'dose_par_prise_UI_max', unite: 'UI' },
   { min: 'dose_mg_kg_min', max: 'dose_mg_kg_max', unite: 'mg/kg', auPoids: true },
+  // µg/kg par prise, à distinguer du débit dose_ug_kg_minute plus bas :
+  // une dose ponctuelle, pas une vitesse.
+  { min: 'dose_ug_kg_min', max: 'dose_ug_kg_max', unite: 'µg/kg', auPoids: true },
   // UI/kg par prise (ex. énoxaparine curatif, héparine en bolus).
   { min: 'dose_par_prise_UI_kg_min', max: 'dose_par_prise_UI_kg_max', unite: 'UI/kg', auPoids: true },
   { min: 'dose_journaliere_mg_kg_min', max: 'dose_journaliere_mg_kg_max', unite: 'mg/kg', suffixe: '/ jour', auPoids: true },
@@ -107,6 +114,7 @@ const FAMILLES_DOSE: IFamilleDose[] = [
   // que le débit est réglé au pousse-seringue.
   { min: 'dose_ug_kg_minute_min', max: 'dose_ug_kg_minute_max', unite: 'µg/kg/min' },
   { min: 'dose_mg_kg_h_min', max: 'dose_mg_kg_h_max', unite: 'mg/kg/h' },
+  { min: 'dose_ug_kg_h_min', max: 'dose_ug_kg_h_max', unite: 'µg/kg/h' },
   { min: 'dose_UI_kg_h_min', max: 'dose_UI_kg_h_max', unite: 'UI/kg/h' },
   { min: 'dose_mg_h_min', max: 'dose_mg_h_max', unite: 'mg/h' },
 ]
@@ -260,6 +268,13 @@ export function formaterMax(p: IPosologieRcp): string | null {
   const maxMg = p.dose_journaliere_max_mg
   if (typeof maxMg === 'string') return maxMg
   if (maxMg !== undefined) return `${formaterNombre(maxMg)} mg/j`
+
+  // Microgrammes : aucune règle de bascule vers le mg, contrairement au
+  // couple g↔mg. Un plafond de sufentanil se lit "720 µg/j", jamais
+  // "0,72 mg/j".
+  const maxUg = p.dose_journaliere_max_ug
+  if (typeof maxUg === 'string') return maxUg
+  if (maxUg !== undefined) return `${formaterNombre(maxUg)} µg/j`
 
   const maxMUI = p.dose_journaliere_max_MUI
   if (typeof maxMUI === 'string') return maxMUI

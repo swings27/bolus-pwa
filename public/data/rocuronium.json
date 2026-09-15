@@ -1,9 +1,9 @@
 {
   "dci": "rocuronium",
   "commun": {
-    "noms_commerciaux": [],
-    "famille": "Curare non dépolarisant, aminostéroïdien à délai d'action court et durée intermédiaire classe pharmacothérapeutique RCP : CURARE. Liste I, réservé à l'usage hospitalier ; prescription initiale et administration réservées aux médecins spécialistes ou compétents en anesthésie-réanimation, ou aux médecins exerçant en structure d'urgence ou de médecine d'urgence",
-    "antidote": "Sugammadex, pour décurariser un bloc neuromusculaire profond, à dose adaptée au degré du bloc ; à défaut, un inhibiteur de l'acétylcholinestérase ne peut être utilisé qu'après le début d'une décurarisation spontanée significative. L'efficacité de la décurarisation pharmacologique est évaluée par le monitorage instrumental de la curarisation",
+    "noms_commerciaux": ["Esmeron"],
+    "famille": "Curare non dépolarisant",
+    "antidote": "Sugammadex",
     "indications": [
       "Intubation trachéale (induction anesthésique)",
       "Relaxation musculaire per-opératoire",
@@ -16,6 +16,7 @@
       "url_crat_grossesse": null,
       "url_crat_allaitement": null
     },
+    "note_ajustement_absolue": "Réservé à l'usage de services très spécifiques, toujours se référer au protocole du service ou médecin prescripteur.",
     "contre_indications": [
       "Hypersensibilité au rocuronium, à l'ion bromure ou à l'un des excipients"
     ],
@@ -114,35 +115,27 @@
       }
     ],
     "pictogrammes": [],
-    "note_ajustement": "Chez le sujet âgé (65 ans ou plus) et chez les patients présentant une atteinte hépatique et/ou des voies biliaires cliniquement significative et/ou une insuffisance rénale : la dose d'intubation reste la dose standard de 0,6 mg/kg, mais la dose d'entretien est réduite à 0,075-0,1 mg/kg et le débit de perfusion continue à 0,3-0,4 mg/kg/h ; une prolongation de la durée d'action a été observée chez ces patients à la dose de 0,6 mg/kg. Chez le patient en surcharge pondérale ou obèse (excès de poids ≥ 30 % par rapport au poids idéal), les doses doivent être réduites en se basant sur le poids idéal, sous peine d'un allongement de la durée d'action si le poids réel est utilisé pour le calcul. Chez le patient brûlé, une résistance aux curares non dépolarisants est généralement observée, imposant un ajustement de la posologie en fonction de la réponse clinique."
+    "note_ajustement": "Chez le sujet âgé (65 ans ou plus) et chez les patients présentant une atteinte hépatique et/ou des voies biliaires cliniquement significative et/ou une insuffisance rénale : la dose d'entretien doit être réduite. Chez le patient en surcharge pondérale ou obèse, les doses doivent être réduites en se basant sur le poids idéal. Chez le patient brûlé, une résistance aux curares non dépolarisants est généralement observée, imposant un ajustement de la posologie en fonction de la réponse clinique."
   },
   "iv": {
     "reconstitution": null,
     "preparation": [
       {
         "voie": "IVD",
-        "contexte": "induction / entretien",
-        "detail": "Utiliser pur, en injection intraveineuse directe (bolus).",
+        "contexte": "Induction / entretien",
+        "detail": "Utiliser pur",
         "duree": "Bolus",
-        "stabilite": null
+        "stabilite": "Utiliser immédiatement"
       },
       {
         "voie": "PSE",
-        "contexte": "entretien, soins aigus",
-        "detail": "Utiliser pur, en pousse-seringue électrique : 500 mg dans 50 mL, soit 10 mg/mL (concentration non diluée).",
+        "contexte": "Entretien, soins aigus",
+        "detail": "Utiliser pur (concentration de 10 mg/mL) ou dilué avec du NaCl 0,9% ou G5% (concentration de 0,5 à 2 mg/mL).",
         "duree": "Continu",
-        "stabilite": null
-      },
-      {
-        "voie": "PERF",
-        "contexte": "entretien, dilution standard",
-        "detail": "500 mg de bromure de rocuronium dilués dans un soluté de chlorure de sodium à 0,9 % ou de glucose à 5 %, pour une concentration de 0,5 à 2 mg/mL.",
-        "duree": "Continu",
-        "stabilite": "Sur le plan microbiologique, à utiliser immédiatement après dilution ; en cas d'utilisation non immédiate, la conservation ne doit pas dépasser 24 heures entre 2 et 8 °C."
+        "stabilite": "24h entre 2° et 8°C"
       }
     ],
     "administration": {
-      "note_ajustement": "",
       "posologie": [
         {
           "population": "Intubation trachéale, induction de routine",
@@ -163,28 +156,32 @@
           "population_type": "adulte",
           "categorie": "generale",
           "dose_mg_kg_min": 0.15,
-          "dose_mg_kg_max": 0.15
+          "dose_mg_kg_max": 0.15,
+          "nb_prises_min_24h": 1,
+          "dose_journaliere_max_g": "Selon twitch"
         },
         {
           "population": "Entretien anesthésique, sous anesthésiques volatils prolongés",
           "population_type": "adulte",
-          "categorie": "generale",
+          "categorie": "speciale",
           "dose_mg_kg_min": 0.075,
-          "dose_mg_kg_max": 0.1
+          "dose_mg_kg_max": 0.1,
+          "nb_prises_min_24h": 1,
+          "dose_journaliere_max_g": "Selon twitch"
         },
         {
-          "population": "Entretien anesthésique en perfusion continue, sous anesthésie intraveineuse",
+          "population": "Entretien anesthésique, sous anesthésie intraveineuse",
           "population_type": "adulte",
           "categorie": "pse",
-          "dose_mgkgh_min": 0.3,
-          "dose_mgkgh_max": 0.6
+          "dose_mg_kg_h_min": 0.3,
+          "dose_mg_kg_h_max": 0.6
         },
         {
-          "population": "Entretien anesthésique en perfusion continue, sous halogénés",
+          "population": "Entretien anesthésique, sous halogénés",
           "population_type": "adulte",
           "categorie": "pse",
-          "dose_mgkgh_min": 0.3,
-          "dose_mgkgh_max": 0.4
+          "dose_mg_kg_h_min": 0.3,
+          "dose_mg_kg_h_max": 0.4
         },
         {
           "population": "Intubation trachéale, induction de routine (population pédiatrique)",
@@ -210,8 +207,8 @@
           "categorie": "pse",
           "age_min_jours": 0,
           "age_max_mois": 216,
-          "dose_mgkgh_min": 0.3,
-          "dose_mgkgh_max": 0.6
+          "dose_mg_kg_h_min": 0.3,
+          "dose_mg_kg_h_max": 0.6
         }
       ]
     },

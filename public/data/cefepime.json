@@ -17,7 +17,7 @@
     ],
     "grossesse_allaitement": {
       "grossesse": "En l'absence d'études cliniques adéquates et bien contrôlées chez la femme enceinte, l'utilisation du céfépime ne peut être envisagée au cours de la grossesse que si nécessaire.",
-      "allaitement": "Le passage du céfépime dans le lait maternel est faible et les quantités ingérées très inférieures aux doses thérapeutiques ; des précautions doivent être prises lorsque le céfépime est utilisé chez la femme allaitante. Interrompre l'allaitement (ou le médicament) en cas de survenue de diarrhée, de candidose ou d'éruption cutanée chez le nourrisson.",
+      "allaitement": "Le passage du céfépime dans le lait maternel est faible et les quantités ingérées très inférieures aux doses thérapeutiques ; des précautions doivent être prises lorsque le céfépime est utilisé chez la femme allaitante.",
       "url_crat_grossesse": "https://www.lecrat.fr/12566/",
       "url_crat_allaitement": "https://www.lecrat.fr/12567/"
     },
@@ -26,7 +26,7 @@
       "Hypersensibilité aux autres antibiotiques du groupe des céphalosporines",
       "Hypersensibilité aux bêta-lactamines (pénicillines, monobactames, carbapénèmes)"
     ],
-    "note_ajustement": "Insuffisance rénale (clairance de la créatinine ≤ 50 mL/min) : adaptation obligatoire, risque d'encéphalopathie en cas d'accumulation. Posologie usuelle 1 g x2/j → clairance 50-30 mL/min : 1 g x1/j ; 29-11 mL/min : 500 mg x1/j ; ≤10 mL/min : 250 mg x1/j ; hémodialyse : dose de charge 1 g puis 500 mg x1/j (administrée après la séance les jours de dialyse). Posologie usuelle 2 g x2/j → 50-30 mL/min : 2 g x1/j ; 29-11 mL/min : 1 g x1/j ; ≤10 mL/min : 500 mg x1/j ; hémodialyse : idem. Posologie usuelle 2 g x3/j → 50-30 mL/min : 1 g x3/j ; 29-11 mL/min : 1 g x2/j ; ≤10 mL/min : 1 g x1/j ; hémodialyse : idem. Pédiatrie (50 mg/kg x3/j) → 50-30 mL/min : 25 mg/kg x3/j ; 29-11 mL/min : 25 mg/kg x2/j ; ≤10 mL/min : 25 mg/kg x1/j. Dialyse péritonéale : mêmes doses qu'en fonction rénale normale mais toutes les 48 heures. Sujet âgé : pas d'adaptation spécifique si fonction rénale normale, mais la fonction rénale se dégradant avec l'âge, se référer à l'adaptation ci-dessus. Se référer au protocole du service pour le calcul de la clairance à la créatinine. Population pédiatrique : les données cliniques disponibles chez le nourrisson et l'enfant ne permettent pas de recommander le céfépime en monothérapie dans la neutropénie fébrile, se référer au protocole du service pour une éventuelle association. Indication non documentée avant l'âge de 2 mois.",
+    "note_ajustement": "Insuffisance rénale (clairance de la créatinine ≤ 50 mL/min) : adaptation obligatoire, risque d'encéphalopathie en cas d'accumulation.",
     "interactions_pertinentes": [
       {
         "substance": "Antibiotiques bactériostatiques",
@@ -39,7 +39,7 @@
         "action_infirmier": "Signaler au prescripteur toute co-prescription d'AVK ; surveiller l'INR pendant l'association."
       },
       {
-        "substance": "Aminosides (ex. gentamicine) ou diurétiques puissants",
+        "substance": "Aminosides ou diurétiques puissants",
         "effet": "Majoration du risque de néphrotoxicité en cas d'association, avec retentissement possible sur l'élimination rénale du céfépime.",
         "action_infirmier": "Signaler au prescripteur toute co-prescription ; surveiller la fonction rénale pendant l'association."
       }
@@ -61,9 +61,7 @@
         "action": "Signaler le traitement par céfépime en cours en cas de recherche de glycosurie."
       }
     ],
-    "pictogrammes": [
-      "Altération possible de l'aptitude à conduire des véhicules et à utiliser des machines (risque d'encéphalopathie)"
-    ]
+    "pictogrammes": []
   },
   "iv": {
     "reconstitution": {
@@ -73,19 +71,19 @@
     "preparation": [
       {
         "voie": "IVL",
-        "detail": "Reconstituer avec de l'eau pour préparation injectable ou un soluté compatible (chlorure de sodium 0,9 % avec ou sans glucose 5 %, glucose 5 ou 10 %, Ringer avec ou sans glucose 5 %, lactate de sodium M/6) : 10 mL pour 1 g (concentration obtenue 90 mg/mL) ou 10 mL pour 2 g (concentration obtenue 160 mg/mL). Injecter en intraveineuse lente sur 3 à 5 minutes.",
+        "detail": "Reconstituer avec NaCl 0,9%, G5 %, G10 %, Ringer, lactate de sodium M/6).",
         "duree": "3 à 5 minutes",
         "stabilite": "4 heures à 25 °C, 24 heures entre 2 et 8 °C."
       },
       {
         "voie": "PERF",
-        "detail": "Diluer la solution reconstituée dans un soluté compatible (chlorure de sodium 0,9 % avec ou sans glucose 5 %, glucose 5 ou 10 %, Ringer avec ou sans glucose 5 %, lactate de sodium M/6) pour obtenir une concentration de 50 à 100 mg/mL. Perfuser sur 30 minutes.",
+        "detail": "Reconstituer avec NaCl 0,9%, G5 %, G10 %, Ringer, lactate de sodium M/6). Concentration 50 à 100mg/ml.",
         "duree": "30 minutes",
         "stabilite": "4 heures à 25 °C, 24 heures entre 2 et 8 °C."
       },
       {
         "voie": "IM",
-        "detail": "Utiliser pur, en injection intramusculaire profonde. Reconstituer avec de l'eau pour préparation injectable ou une solution de chlorhydrate de lidocaïne à 0,5-1 %. Réservé aux dosages 500 mg et 1 g, le dosage 2 g ne doit pas être injecté par voie intramusculaire.",
+        "detail": "Reconstituer avec de l'eau pour préparation injectable (EPPI) ou lidocaïne à 0,5-1 %.",
         "duree": "< 1 min",
         "stabilite": "24 heures à température inférieure à 25 °C, 7 jours entre 2 et 8 °C.",
         "contexte": "500 mg et 1 g uniquement"
@@ -100,34 +98,38 @@
           "dose_par_prise_mg_min": 1000,
           "dose_par_prise_mg_max": 1000,
           "intervalle_min_h": 12,
-          "intervalle_max_h": 12
+          "intervalle_max_h": 12,
+          "dose_journaliere_max_g": 2
         },
         {
-          "population": "Infections sévères : septicémies/bactériémies, pneumonies, infections urinaires compliquées, infections biliaires",
+          "population": "Infections sévères (septicémies/bactériémies, pneumonies, infections urinaires compliquées, infections biliaires)",
           "categorie": "generale",
           "population_type": "adulte",
           "dose_par_prise_mg_min": 2000,
           "dose_par_prise_mg_max": 2000,
           "intervalle_min_h": 12,
-          "intervalle_max_h": 12
+          "intervalle_max_h": 12,
+          "dose_journaliere_max_g": 4
         },
         {
           "population": "Neutropénie fébrile, traitement empirique en monothérapie",
-          "categorie": "generale",
+          "categorie": "speciale",
           "population_type": "adulte",
           "dose_par_prise_mg_min": 2000,
           "dose_par_prise_mg_max": 2000,
           "intervalle_min_h": 8,
-          "intervalle_max_h": 12
+          "intervalle_max_h": 12,
+          "dose_journaliere_max_g": 6
         },
         {
           "population": "Infections sévères à Pseudomonas",
-          "categorie": "generale",
+          "categorie": "speciale",
           "population_type": "adulte",
           "dose_par_prise_mg_min": 2000,
           "dose_par_prise_mg_max": 2000,
           "intervalle_min_h": 8,
-          "intervalle_max_h": 8
+          "intervalle_max_h": 8,
+          "dose_journaliere_max_g": 6
         },
         {
           "population": "Neutropénie fébrile, neutropénie de durée prévisible courte",
@@ -138,7 +140,8 @@
           "dose_mg_kg_min": 50,
           "dose_mg_kg_max": 50,
           "intervalle_min_h": 8,
-          "intervalle_max_h": 8
+          "intervalle_max_h": 8,
+          "dose_journaliere_max_g": "Selon poids"
         }
       ]
     },

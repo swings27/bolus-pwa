@@ -5,7 +5,7 @@
       "Xylocaïne",
       "Xylocard"
     ],
-    "famille": "Anesthésique local à liaison amide ; en usage intraveineux systémique, antiarythmique de classe IB",
+    "famille": "Anesthésique local à liaison amide et antiarythmique de classe IB",
     "antidote": "",
     "indications": [
       "Anesthésie locale par infiltration",
@@ -32,8 +32,8 @@
       "Association aux antiarythmiques torsadogènes, amiodarone, disopyramide, quinidiniques, sotalol (usage IV systémique)",
       "Administration intraveineuse à une concentration supérieure à 5 mg/mL chez l'enfant de moins de 5 ans (anesthésie IV régionale)",
       "Bloc paracervical en anesthésie obstétricale (risque d'hypertonie utérine et d'hypoxie néonatale)",
-      "Enfant de moins de 6 ans (XYLOCAINE 5 % NEBULISEUR, pulvérisation buccopharyngée)",
-      "Enfant (XYLOCAINE VISQUEUSE 2 %, gel oral)"
+      "Enfant de moins de 6 ans (pulvérisation buccopharyngée)",
+      "Enfant (gel oral)"
     ],
     "interactions_pertinentes": [
       {
@@ -78,61 +78,33 @@
       {
         "voie": "IVD",
         "contexte": "FV réfractaire (ACR)",
-        "detail": "100 mg en bolus IV, non dilué, alternative à l'amiodarone en cas de contre-indication ou d'indisponibilité",
+        "detail": "Utiliser pur, alternative à l'amiodarone en cas de contre-indication ou d'indisponibilité",
         "duree": "Bolus",
-        "stabilite": null
+        "stabilite": "Utilisation immédiate"
       },
       {
         "voie": "IVL",
-        "contexte": "trouble du rythme ventriculaire",
-        "detail": "Dose de charge de 1 à 1,5 mg/kg (environ 100 mg), non diluée",
+        "contexte": "Trouble du rythme ventriculaire",
+        "detail": "Utiliser pur",
         "duree": "1 à 2 min",
-        "stabilite": null
+        "stabilite": "Utilisation immédiate"
       },
       {
         "voie": "PSE",
-        "contexte": "entretien antiarythmique",
-        "detail": "Diluer XYLOCARD 50 mg/mL exclusivement dans une solution isotonique (NaCl 0,9 % ou glucose 5 %) avant perfusion, ne jamais administrer non dilué. Débit d'entretien : voir posologie",
+        "contexte": "Entretien antiarythmique (Xylocard)",
+        "detail": "Diluer dans du NaCl 0,9 % ou G5 %",
         "duree": "Continu",
-        "stabilite": "Après dilution : à utiliser immédiatement"
-      },
-      {
-        "voie": "PERF",
-        "contexte": "analgésie péri-opératoire",
-        "detail": "Bolus de 1,5 mg/kg avant l'incision cutanée puis perfusion continue de 1,5 à 2 mg/kg/h pendant l'intervention, sans dépasser 24 heures postopératoires",
-        "duree": "Continu, ≤ 24 h postopératoires",
         "stabilite": null
       }
     ],
     "administration": {
-      "note_ajustement": "",
       "posologie": [
-        {
-          "population": "Anesthésie intraveineuse régionale",
-          "population_type": "adulte",
-          "categorie": "speciale",
-          "dose_par_prise_mg_max": 200
-        },
-        {
-          "population": "Infiltration péri- ou intra-articulaire",
-          "population_type": "adulte",
-          "categorie": "speciale",
-          "dose_par_prise_mg_max": 200
-        },
-        {
-          "population": "Enfant 5 à 12 ans, anesthésie IV régionale",
-          "population_type": "pediatrie",
-          "categorie": "speciale",
-          "dose_mg_kg_max": 2.5
-        },
         {
           "population": "Trouble du rythme ventriculaire menaçant le pronostic vital, dose de charge",
           "population_type": "adulte",
           "categorie": "generale",
           "dose_mg_kg_min": 1,
-          "dose_mg_kg_max": 1.5,
-          "dose_par_prise_mg_min": 100,
-          "dose_par_prise_mg_max": 100
+          "dose_mg_kg_max": 1.5
         },
         {
           "population": "Fibrillation ventriculaire réfractaire (ACR), dose initiale",
@@ -147,13 +119,6 @@
           "categorie": "speciale",
           "dose_par_prise_mg_min": 50,
           "dose_par_prise_mg_max": 50
-        },
-        {
-          "population": "Analgésie péri-opératoire, chirurgie abdominale",
-          "population_type": "adulte",
-          "categorie": "speciale",
-          "dose_mg_kg_min": 1.5,
-          "dose_mg_kg_max": 1.5
         }
       ]
     },
@@ -165,24 +130,25 @@
       {
         "type": "Gel oral",
         "dosage": "2 % (20 mg/mL)",
-        "secable": false,
+        "ecrasable": null,
         "ouverture_gelule": null,
         "posologie_adulte": [
           {
-            "population": "Douleur buccale ou oeso-gastrique / anesthésie de contact",
+            "population": "Douleur buccale ou oeso-gastrique",
             "population_type": "adulte",
             "categorie": "generale",
             "dose_par_prise_mg_min": 200,
             "dose_par_prise_mg_max": 300,
             "intervalle_min_h": 8,
-            "intervalle_max_h": 8
+            "intervalle_max_h": 8,
+            "dose_journaliere_max_g": 0.9
           }
         ]
       },
       {
         "type": "Solution pour pulvérisation buccopharyngée",
         "dosage": "5 %, 9 mg par pulvérisation",
-        "secable": false,
+        "ecrasable": null,
         "ouverture_gelule": null,
         "posologie_adulte": [
           {

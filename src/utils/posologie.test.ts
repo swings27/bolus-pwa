@@ -51,6 +51,31 @@ describe('formaterDose', () => {
     expect(formaterDose(posologie({ dose_ug_kg_minute_min: 0.01, dose_ug_kg_minute_max: 1 }))).toBe('0,01-1 µg/kg/min')
   })
 
+  // Microgrammes (sufentanil) : trois familles distinctes, dont deux que la
+  // seule lecture du nom peut faire confondre — dose_ug_kg_* est une dose
+  // ponctuelle, dose_ug_kg_minute_* un débit. Ces tests fixent la
+  // différence.
+  it('formate une dose par prise en µg', () => {
+    expect(formaterDose(posologie({ dose_par_prise_ug_min: 15, dose_par_prise_ug_max: 20 }))).toBe('15-20 µg')
+  })
+
+  it('formate une dose au poids en µg/kg, sans la confondre avec un débit', () => {
+    expect(formaterDose(posologie({ dose_ug_kg_min: 0.1, dose_ug_kg_max: 2 }))).toBe('0,1-2 µg/kg')
+    expect(formaterDose(posologie({ dose_ug_kg_minute_min: 0.1, dose_ug_kg_minute_max: 2 }))).toBe('0,1-2 µg/kg/min')
+  })
+
+  it('formate un débit en µg/kg/h', () => {
+    expect(formaterDose(posologie({ dose_ug_kg_h_min: 0.2, dose_ug_kg_h_max: 2 }))).toBe('0,2-2 µg/kg/h')
+  })
+
+  // Une dose au poids ET un plafond absolu sur la même ligne se lisent côte
+  // à côte, comme pour les mg (voir formaterDoseParKg).
+  it('affiche ensemble la dose au poids en µg/kg et la dose absolue en µg', () => {
+    const p = posologie({ dose_ug_kg_min: 0.2, dose_ug_kg_max: 0.5, dose_par_prise_ug_min: 30, dose_par_prise_ug_max: 30 })
+    expect(formaterDoseParKg(p)).toEqual({ valeur: '0,2-0,5 µg/kg', suffixe: null })
+    expect(formaterDoseAbsolue(p)).toBe('30 µg')
+  })
+
   it('respecte la priorité de la dose en mg sur les autres champs si plusieurs sont renseignés', () => {
     expect(
       formaterDose(posologie({ dose_par_prise_mg_min: 10, dose_par_prise_mg_max: 10, dose_mg_kg_min: 1, dose_mg_kg_max: 1 })),
@@ -302,6 +327,13 @@ describe('formaterMax', () => {
   // la règle g↔mg, qui ne concerne que les valeurs saisies en grammes.
   it('affiche dose_journaliere_max_mg en mg/j, sans conversion', () => {
     expect(formaterMax(posologie({ dose_journaliere_max_mg: 7.5 }))).toBe('7,5 mg/j')
+  })
+
+  // Microgrammes (sufentanil sublingual) : même principe, aucune bascule
+  // vers le mg — "0,72 mg/j" ne se dit pas au chevet.
+  it('affiche dose_journaliere_max_ug en µg/j, sans conversion', () => {
+    expect(formaterMax(posologie({ dose_journaliere_max_ug: 720 }))).toBe('720 µg/j')
+    expect(formaterMax(posologie({ dose_journaliere_max_ug: 30 }))).toBe('30 µg/j')
   })
 
   // UI (héparine calcique), y compris quand le plafond dépend d'un suivi

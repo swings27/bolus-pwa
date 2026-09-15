@@ -28,7 +28,7 @@
     "contre_indications": [
       "Hypersensibilité à l'urapidil ou à l'un des excipients",
       "Sténose de l'isthme aortique",
-      "Shunt artério-veineux (à l'exception des shunts artério-veineux des patients hémodialysés)"
+      "Shunt artério-veineux (exception des patients hémodialysés)"
     ],
     "interactions_pertinentes": [
       {
@@ -116,27 +116,20 @@
     "preparation": [
       {
         "voie": "IVL",
-        "detail": "Bolus de 25 mg (5 mL) d'urapidil injecté sans dilution (solution prête à l'emploi, 5 mg/mL). En l'absence de réduction suffisante de la pression artérielle après 5 minutes, renouveler l'injection pour atteindre 50 mg au total.",
+        "detail": "Utiliser pur",
         "stabilite": "À usage unique, à utiliser immédiatement après ouverture de l'ampoule.",
         "duree": "20 secondes"
       },
       {
         "voie": "PSE",
-        "detail": "Seringue électrique, produit non dilué (solution prête à l'emploi, 5 mg/mL) : débit de charge de 120 mg/h (24 mL/h), puis débit d'entretien de 9 à 60 mg/h (1,8 à 12 mL/h) selon la réponse tensionnelle.",
-        "stabilite": "À usage unique, à utiliser immédiatement après ouverture de l'ampoule.",
+        "detail": "Utiliser pur ou dilué avec du NaCl 0,9%, G5% ou G10%",
+        "stabilite": "Si dilution : 50 heures entre 15 et 25 °C, sinon utiliser immédiatement",
         "duree": "Continu"
       },
       {
-        "voie": "PSE",
-        "detail": "Alternative avec dilution (URAPIDIL KALCEKS) : prélever 100 mg (20 mL) et diluer à un volume total de 50 mL avec une solution pour perfusion compatible (chlorure de sodium à 0,9 %, glucose à 5 % ou 10 %), soit une concentration de 2 mg/mL. Ne pas dépasser 4 mg d'urapidil par mL de solution.",
-        "stabilite": "Stabilité physico-chimique démontrée pendant 50 heures à 25 °C et entre 2 et 8 °C. D'un point de vue microbiologique, à utiliser immédiatement ; à défaut, la conservation avant utilisation ne doit normalement pas dépasser 24 heures entre 2 et 8 °C.",
-        "duree": "Continu",
-        "contexte": "dilution optionnelle"
-      },
-      {
         "voie": "PERF",
-        "detail": "Perfusion goutte-à-goutte : 250 mg d'urapidil ajoutés à 500 mL d'une solution pour perfusion compatible (chlorure de sodium à 0,9 %, glucose à 5 % ou 10 %), soit 0,5 mg/mL. Débit initial de 2 mg/min, puis débit d'entretien de 9 mg/h en moyenne.",
-        "stabilite": "Stabilité physico-chimique démontrée pendant 50 heures à 25 °C et entre 2 et 8 °C. D'un point de vue microbiologique, à utiliser immédiatement ; à défaut, ne pas dépasser 24 heures entre 2 et 8 °C.",
+        "detail": "Une ampoule dans 500 mL de NaCl 0,9%, G5% ou G10%, soit 0,5 mg/mL.",
+        "stabilite": "50 heures entre 15 et 25 °C",
         "duree": "Continu"
       }
     ],
@@ -147,35 +140,38 @@
           "population_type": "adulte",
           "categorie": "generale",
           "dose_par_prise_mg_min": 25,
-          "dose_par_prise_mg_max": 50
+          "dose_par_prise_mg_max": 50,
+          "nb_prises_min_24h": 1,
+          "nb_prises_max_24h": 3,
+          "dose_journaliere_max_g": 0.1
         },
         {
-          "population": "Urgence hypertensive, débit de charge (seringue électrique)",
+          "population": "Urgence hypertensive, débit de charge",
           "population_type": "adulte",
           "categorie": "pse",
-          "debit_mg_h_min": 120,
-          "debit_mg_h_max": 120
+          "dose_mg_h_min": 120,
+          "dose_mg_h_max": 120
         },
         {
-          "population": "Urgence hypertensive, dose d'entretien (seringue électrique)",
+          "population": "Urgence hypertensive, dose d'entretien",
           "population_type": "adulte",
           "categorie": "pse",
-          "debit_mg_h_min": 9,
-          "debit_mg_h_max": 60
+          "dose_mg_h_min": 9,
+          "dose_mg_h_max": 60
         },
         {
           "population": "Urgence hypertensive, dose initiale continue",
           "population_type": "pediatrie",
           "categorie": "pse",
-          "dose_mgkgh_min": 2,
-          "dose_mgkgh_max": 2
+          "dose_mg_kg_h_min": 2,
+          "dose_mg_kg_h_max": 2
         },
         {
           "population": "Urgence hypertensive, dose d'entretien continue",
           "population_type": "pediatrie",
           "categorie": "pse",
-          "dose_mgkgh_min": 0.8,
-          "dose_mgkgh_max": 0.8
+          "dose_mg_kg_h_min": 0.8,
+          "dose_mg_kg_h_max": 0.8
         }
       ]
     },
@@ -185,14 +181,16 @@
     "formes": [
       {
         "type": "Gélule à libération prolongée",
-        "dosage": "30 mg",
-        "ecrasable": true,
+        "dosage": "30 mg - 60mg",
+        "ecrasable": false,
         "ouverture_gelule": true,
         "posologie_adulte": [
           {
             "population": "Hypertension artérielle, monothérapie",
             "categorie": "generale",
             "population_type": "adulte",
+            "dose_par_prise_mg_min": 30,
+            "dose_par_prise_mg_max": 90,
             "dose_journaliere_max_g": 0.18,
             "intervalle_min_h": 12,
             "intervalle_max_h": 12
@@ -201,6 +199,8 @@
             "population": "Hypertension artérielle, sujet âgé",
             "categorie": "generale",
             "population_type": "adulte",
+            "dose_par_prise_mg_min": 30,
+            "dose_par_prise_mg_max": 60,
             "dose_journaliere_max_g": 0.12,
             "intervalle_min_h": 12,
             "intervalle_max_h": 12
@@ -210,18 +210,9 @@
       {
         "type": "Gélule à libération prolongée",
         "dosage": "60 mg",
-        "ecrasable": true,
+        "ecrasable": false,
         "ouverture_gelule": true,
-        "posologie_adulte": [
-          {
-            "population": "Hypertension artérielle, monothérapie",
-            "categorie": "generale",
-            "population_type": "adulte",
-            "dose_journaliere_max_g": 0.18,
-            "intervalle_min_h": 12,
-            "intervalle_max_h": 12
-          }
-        ]
+        "posologie_adulte": []
       }
     ],
     "recommandation_sonde": {
@@ -229,6 +220,7 @@
       "alternative": null
     }
   },
+  "aerosol": null,
   "tracabilite": {
     "rcp_source": [
       {

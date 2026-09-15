@@ -2,11 +2,11 @@
   "dci": "sufentanil",
   "commun": {
     "noms_commerciaux": [
-      "SUFENTA",
-      "DZUVEO"
+      "Sufenta",
+      "Dzuveo"
     ],
-    "famille": "Analgésique morphinique de synthèse, agoniste pur des récepteurs opioïdes µ, dérivé de la série des phénylpipéridines. Le sufentanil est classé stupéfiant : prescription sur ordonnance sécurisée limitée à 7 jours, réservée aux médecins spécialisés en anesthésie-réanimation ou en médecine d'urgence, usage hospitalier exclusif",
-    "antidote": "Naloxone. La dépression respiratoire pouvant durer plus longtemps que l'effet de la naloxone, une administration répétée peut être nécessaire",
+    "famille": "Analgésique morphinique de synthèse, agoniste pur des récepteurs opioïdes µ, dérivé de la série des phénylpipéridines",
+    "antidote": "Naloxone",
     "indications": [
       "Anesthésie générale balancée (adjuvant analgésique)",
       "Anesthésie-analgésie principale, chirurgie cardio-vasculaire",
@@ -14,21 +14,22 @@
       "Sédation prolongée en soins intensifs / réanimation (patient ventilé)",
       "Anesthésie générale balancée, enfant > 1 mois (voie IV)",
       "Analgésie péridurale post-opératoire, enfant > 1 an",
-      "Douleur aiguë modérée à sévère de l'adulte (Dzuveo, voie sublinguale)"
+      "Douleur aiguë modérée à sévère de l'adulte"
     ],
     "grossesse_allaitement": {
-      "grossesse": "L'utilisation du sufentanil par voie injectable (intraveineuse, péridurale) au cours de la grossesse ne doit être envisagée que si nécessaire ; le sufentanil traverse le placenta. Pour la voie sublinguale (Dzuveo), le sufentanil n'est pas recommandé au cours de la grossesse ni chez les femmes en âge de procréer n'utilisant pas de contraception, et ne devrait pas être administré pendant la grossesse.",
-      "allaitement": "Le sufentanil est excrété dans le lait maternel. Pour la voie injectable, à des doses n'excédant pas 30 microgrammes, il est conseillé d'attendre 4 heures après l'administration avant d'allaiter ; au-delà de cette dose, l'allaitement est déconseillé. Pour la voie sublinguale (Dzuveo), dont les doses peuvent atteindre 720 microgrammes par jour, il existe une forte probabilité d'incidence chez le nouveau-né ou le nourrisson allaité.",
+      "grossesse": "L'utilisation du sufentanil par voie injectable (intraveineuse, péridurale) au cours de la grossesse ne doit être envisagée que si nécessaire ; le sufentanil traverse le placenta. Pour la voie sublinguale, le sufentanil n'est pas recommandé au cours de la grossesse ni chez les femmes en âge de procréer n'utilisant pas de contraception, et ne devrait pas être administré pendant la grossesse.",
+      "allaitement": "Le sufentanil est excrété dans le lait maternel. Pour la voie injectable, à des doses n'excédant pas 30 microgrammes, il est conseillé d'attendre 4 heures après l'administration avant d'allaiter ; au-delà de cette dose, l'allaitement est déconseillé. Pour la voie sublinguale, dont les doses peuvent atteindre 720 microgrammes par jour, il existe une forte probabilité d'incidence chez le nouveau-né ou le nourrisson allaité.",
       "url_crat_grossesse": null,
       "url_crat_allaitement": null
     },
-    "note_ajustement": "Une diminution de la posologie est recommandée chez les patients âgés, affaiblis ou de classe ASA III/IV, ainsi qu'en cas d'hypothyroïdie non contrôlée, de maladie pulmonaire, de capacité respiratoire diminuée, d'insuffisance hépatique ou rénale, ou de consommation chronique d'alcool, chez ces patients, la surveillance post-opératoire doit être prolongée. Pour la voie sublinguale (Dzuveo) : aucun ajustement particulier n'est nécessaire chez le patient âgé ; utiliser avec prudence en cas d'insuffisance hépatique modérée à sévère ou d'insuffisance rénale sévère, la durée d'action pouvant être prolongée ; sécurité et efficacité non établies chez l'enfant et l'adolescent de moins de 18 ans. Nouveau-né et nourrisson de moins de 3 mois (voie IV) : en raison de la grande variabilité des paramètres pharmacocinétiques chez le nouveau-né, aucune recommandation posologique ne peut être donnée ; aucune donnée disponible chez le nouveau-né et le nourrisson de moins de 3 mois. Enfant de moins d'un an (voie péridurale) : sécurité et efficacité non établies.",
+    "note_ajustement": "Une diminution de la posologie est recommandée chez les patients âgés, affaiblis ou de classe ASA III/IV, ainsi qu'en cas d'hypothyroïdie non contrôlée, de maladie pulmonaire, de capacité respiratoire diminuée, d'insuffisance hépatique ou rénale, ou de consommation chronique d'alcool, chez ces patients, la surveillance post-opératoire doit être prolongée. Utiliser avec prudence en cas d'insuffisance hépatique modérée à sévère ou d'insuffisance rénale sévère, la durée d'action pouvant être prolongée.",
+    "note_ajustement_absolue": "Stupéfiant dont l'utilisation se fait selon les protocoles du service, se référer au médecin prescripteur.",
     "contre_indications": [
       "Hypersensibilité à la substance active, à l'un des excipients, ou aux morphiniques.",
       "Traitement ou pathologie associés pouvant contre-indiquer une administration par voie péridurale : hémorragie sévère ou choc, septicémie, infection au site d'injection, perturbation de l'hémostase (thrombocytopénie, coagulopathie), traitement anticoagulant.",
       "Association aux agonistes-antagonistes morphiniques (nalbuphine, buprénorphine) ou aux morphiniques antagonistes partiels (naltrexone, nalméfène).",
-      "Utilisation de la voie intraveineuse durant l'accouchement ou avant le clampage du cordon ombilical en cas de césarienne, en raison d'une éventuelle dépression respiratoire chez le nouveau-né, l'utilisation par voie péridurale pendant l'accouchement, à des doses allant jusqu'à 30 microgrammes, n'influence pas la condition de la mère ou du nouveau-né.",
-      "Dépression respiratoire significative ou fonction respiratoire compromise (Dzuveo, voie sublinguale)."
+      "Utilisation de la voie intraveineuse durant l'accouchement ou avant le clampage du cordon ombilical en cas de césarienne, en raison d'une éventuelle dépression respiratoire chez le nouveau-né",
+      "Dépression respiratoire significative ou fonction respiratoire compromise."
     ],
     "interactions_pertinentes": [
       {
@@ -141,157 +142,74 @@
     "preparation": [
       {
         "voie": "IVL",
-        "contexte": "anesthésie générale, adulte",
-        "detail": "Utiliser pur, ou dilué dans du chlorure de sodium à 0,9 % ou du glucose à 5 % si nécessaire. Administration lente recommandée pour prévenir la rigidité musculaire, notamment thoracique.",
-        "duree": "Injection lente",
-        "stabilite": null
-      },
-      {
-        "voie": "IVL",
-        "contexte": "anesthésie générale, enfant > 1 mois",
-        "detail": "Utiliser pur, ou dilué dans du chlorure de sodium à 0,9 % ou du glucose à 5 % si nécessaire. Prémédication par un anticholinergique (atropine) recommandée, sauf contre-indication.",
-        "duree": "Bolus lent d'au moins 30 secondes.",
+        "detail": "Utiliser pur, ou dilué dans du NaCl 0,9% ou du G5% si nécessaire.",
+        "duree": "Au moins 30 secondes",
         "stabilite": null
       },
       {
         "voie": "PSE",
-        "contexte": "sédation prolongée, soins intensifs/réanimation, adulte",
-        "detail": "Le RCP ne chiffre pas de concentration pour cet usage. Préparation courante rapportée par le Guide HUG des médicaments injectables : 250 microgrammes (1 ampoule de 250 µg/5 mL) complétés à 50 mL avec du chlorure de sodium à 0,9 % ou du glucose à 5 % (concentration finale 5 microgrammes/mL).",
+        "contexte": "Sédation prolongée",
+        "detail": "Une ampoule de 250 microgrammes dans 50 mL de NaCl 0,9% ou G5% (concentration finale 5 microgrammes/mL)",
         "duree": "Continu",
-        "stabilite": "Solution diluée (NaCl 0,9 % ou glucose 5 %) : à utiliser dans les 24 heures suivant la préparation. Sur le plan microbiologique, à utiliser immédiatement, sauf si la dilution a été réalisée dans des conditions d'asepsie contrôlées et validées."
+        "stabilite": "A utiliser dans les 24 heures suivant la préparation"
       },
       {
         "voie": "PERIDURALE",
-        "contexte": "chirurgie générale (thoracique/urologique/orthopédique)",
-        "detail": "Dose diluée dans un volume de 10 mL.",
+        "contexte": "Obstétrique",
+        "detail": "Dose diluée dans un volume de 10 mL, peut-être associée à un anesthésique local tel que la bupivacaïne.",
         "duree": "< 1 min",
-        "stabilite": "Solution diluée : à utiliser dans les 24 heures suivant la préparation."
-      },
-      {
-        "voie": "PERIDURALE",
-        "contexte": "obstétrique (accouchement)",
-        "detail": "Dose diluée dans un volume de 10 mL, associée à un anesthésique local tel que la bupivacaïne (0,125 % - 0,25 %).",
-        "duree": "< 1 min",
-        "stabilite": "Solution diluée : à utiliser dans les 24 heures suivant la préparation."
-      },
-      {
-        "voie": "PERIDURALE",
-        "contexte": "post-césarienne",
-        "detail": "Dose diluée dans un volume de 10 mL, associée à un anesthésique local tel que la bupivacaïne (0,125 % - 0,25 %).",
-        "duree": "< 1 min",
-        "stabilite": "Solution diluée : à utiliser dans les 24 heures suivant la préparation."
-      },
-      {
-        "voie": "PERIDURALE",
-        "contexte": "post-opératoire, bolus",
-        "detail": "Dose diluée dans un volume de 10 mL, en dose unique ou répétée.",
-        "duree": "< 1 min",
-        "stabilite": "Solution diluée : à utiliser dans les 24 heures suivant la préparation."
-      },
-      {
-        "voie": "PERIDURALE",
-        "contexte": "post-opératoire, perfusion continue",
-        "detail": "Perfusion continue par voie péridurale.",
-        "duree": "Continu",
-        "stabilite": "Solution diluée : à utiliser dans les 24 heures suivant la préparation."
-      },
-      {
-        "voie": "PERIDURALE",
-        "contexte": "post-opératoire, enfant > 1 an",
-        "detail": "SUFENTA ne doit être administré par voie péridurale à l'enfant que par des médecins anesthésistes spécialement formés à l'anesthésie péridurale de l'enfant et à la prise en charge des effets dépresseurs respiratoires des opioïdes, avec matériel de réanimation et antimorphiniques rapidement disponibles.",
-        "duree": "< 1 min",
-        "stabilite": "Solution diluée : à utiliser dans les 24 heures suivant la préparation."
+        "stabilite": "A utiliser dans les 24 heures suivant la préparation."
       }
     ],
     "administration": {
-      "note_ajustement": "Voir commun.note_ajustement.",
       "posologie": [
         {
           "population": "Anesthésie générale balancée, interventions courtes ou moyennes (induction)",
           "population_type": "adulte",
           "categorie": "generale",
-          "dose_ugkg_min": 0.1,
-          "dose_ugkg_max": 2
+          "dose_ug_kg_min": 0.1,
+          "dose_ug_kg_max": 2
         },
         {
           "population": "Anesthésie générale balancée, interventions majeures > 2 heures (entretien)",
           "population_type": "adulte",
           "categorie": "speciale",
-          "dose_ugkgh_min": 1,
-          "dose_ugkgh_max": 1
+          "dose_ug_kg_h_min": 1,
+          "dose_ug_kg_h_max": 1,
+          "nb_prises_min_24h": 1
         },
         {
-          "population": "Anesthésie-analgésie, chirurgie cardio-vasculaire (induction)",
+          "population": "Sédation prolongée (patient ventilé)",
+          "population_type": "adulte",
+          "categorie": "pse",
+          "dose_ug_kg_h_min": 0.2,
+          "dose_ug_kg_h_max": 2
+        },
+        {
+          "population": "Analgésie péridurale obstétrique",
           "population_type": "adulte",
           "categorie": "speciale",
-          "dose_ugkg_min": 8,
-          "dose_ugkg_max": 20
-        },
-        {
-          "population": "Sédation prolongée en soins intensifs ou en réanimation (patient ventilé)",
-          "population_type": "adulte",
-          "categorie": "pse",
-          "dose_ugkgh_min": 0.2,
-          "dose_ugkgh_max": 2
-        },
-        {
-          "population": "Analgésie péridurale, chirurgie générale (thoracique/urologique/orthopédique), dose initiale",
-          "population_type": "adulte",
-          "categorie": "generale",
-          "dose_ugkg_min": 0.75,
-          "dose_ugkg_max": 0.75
-        },
-        {
-          "population": "Analgésie péridurale obstétricale (accouchement)",
-          "population_type": "adulte",
-          "categorie": "generale",
           "dose_par_prise_ug_min": 15,
-          "dose_par_prise_ug_max": 20
-        },
-        {
-          "population": "Analgésie péridurale post-césarienne",
-          "population_type": "adulte",
-          "categorie": "generale",
-          "dose_par_prise_ug_min": 25,
-          "dose_par_prise_ug_max": 25
-        },
-        {
-          "population": "Analgésie péridurale post-opératoire, bolus",
-          "population_type": "adulte",
-          "categorie": "generale",
-          "dose_ugkg_min": 0.75,
-          "dose_ugkg_max": 0.75
-        },
-        {
-          "population": "Analgésie péridurale post-opératoire, perfusion continue",
-          "population_type": "adulte",
-          "categorie": "pse",
-          "dose_ugkgh_min": 0.2,
-          "dose_ugkgh_max": 0.3
+          "dose_par_prise_ug_max": 20,
+          "nb_prises_min_24h": 1,
+          "nb_prises_max_24h": 2,
+          "dose_journaliere_max_ug": 30
         },
         {
           "population": "Anesthésie générale balancée, induction",
           "population_type": "pediatrie",
           "categorie": "generale",
           "age_min_mois": 1,
-          "dose_ugkg_min": 0.2,
-          "dose_ugkg_max": 0.5
+          "dose_ug_kg_min": 0.2,
+          "dose_ug_kg_max": 0.5
         },
         {
           "population": "Anesthésie générale balancée, entretien chez le patient ventilé",
           "population_type": "pediatrie",
           "categorie": "generale",
           "age_min_mois": 1,
-          "dose_ugkg_min": 0.3,
-          "dose_ugkg_max": 2
-        },
-        {
-          "population": "Analgésie péridurale post-opératoire",
-          "population_type": "pediatrie",
-          "categorie": "generale",
-          "age_min_mois": 12,
-          "dose_ugkg_min": 0.25,
-          "dose_ugkg_max": 0.75
+          "dose_ug_kg_min": 0.3,
+          "dose_ug_kg_max": 2
         }
       ]
     },
@@ -307,7 +225,7 @@
         "ecrasable": false,
         "posologie_adulte": [
           {
-            "population": "Douleur aiguë modérée à sévère de l'",
+            "population": "Douleur aiguë modérée à sévère",
             "categorie": "generale",
             "population_type": "adulte",
             "dose_par_prise_ug_min": 30,
