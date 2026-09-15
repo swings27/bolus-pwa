@@ -35,7 +35,7 @@ export default function TableReferenceIMC() {
       {/* L'unité est passée dans le titre : en disposition par colonnes, il
           n'y a plus de colonne "IMC (kg/m²)" pour la porter, et sans elle
           "18,5 à 24,9" ne dirait pas de quoi il parle. */}
-      <span className="text-[10px] font-semibold uppercase tracking-widest text-texte-doux">
+      <span className="text-etiquette font-semibold uppercase tracking-widest text-texte-doux">
         Repères OMS · IMC en kg/m²
       </span>
 
@@ -74,7 +74,7 @@ export default function TableReferenceIMC() {
                   // l'autre : aucune couleur d'alerte sur l'obésité sévère,
                   // aucun vert sur la corpulence normale. Une échelle colorée
                   // serait déjà une lecture de la valeur calculée.
-                  className={`border-b border-texte/10 px-0.5 pb-1.5 pt-2 align-bottom text-center text-[9.5px] font-medium leading-tight text-texte ${index > 0 ? 'border-l border-texte/10' : ''}`}
+                  className={`border-b border-texte/10 px-0.5 pb-1.5 pt-2 align-bottom text-center text-etiquette font-medium leading-tight text-texte ${index > 0 ? 'border-l border-texte/10' : ''}`}
                 >
                   {categorie}
                 </th>
@@ -88,7 +88,7 @@ export default function TableReferenceIMC() {
                 // colonne à l'autre, les fourchettes restent alignées.
                 <td
                   key={categorie}
-                  className={`px-0.5 pb-2 pt-1.5 text-center text-[11px] font-semibold tabular-nums leading-tight text-texte ${index > 0 ? 'border-l border-texte/10' : ''}`}
+                  className={`px-0.5 pb-2 pt-1.5 text-center text-xs font-semibold tabular-nums leading-tight text-texte ${index > 0 ? 'border-l border-texte/10' : ''}`}
                 >
                   {plage}
                 </td>
@@ -98,7 +98,7 @@ export default function TableReferenceIMC() {
         </table>
       </div>
 
-      <p className="text-[10px] italic leading-relaxed" style={{ color: 'var(--texte-doux)' }}>
+      <p className="text-etiquette italic leading-relaxed" style={{ color: 'var(--texte-doux)' }}>
         À titre indicatif. La lecture et l'interprétation restent de la responsabilité du professionnel.
       </p>
     </div>

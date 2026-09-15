@@ -49,7 +49,7 @@ export default function TexteRepliable({ children, couleur, className = '' }: IT
           type="button"
           onClick={() => setOuvert((v) => !v)}
           aria-expanded={ouvert}
-          className="tactile mt-1.5 flex w-fit items-center gap-1 text-[11px] font-semibold"
+          className="tactile mt-1.5 flex w-fit items-center gap-1 text-xs font-semibold"
           style={{ color: couleur }}
         >
           {ouvert ? 'Réduire' : 'Voir tout'}

@@ -138,7 +138,7 @@ export default function SearchDropdown() {
           className="absolute inset-x-0 top-full z-20 mt-2 overflow-hidden rounded-2xl bg-surface shadow-lg"
         >
           {afficherHistorique && (
-            <p className="px-4 pb-1 pt-3 text-[11px] font-semibold uppercase tracking-widest text-texte-doux">
+            <p className="px-4 pb-1 pt-3 text-xs font-semibold uppercase tracking-widest text-texte-doux">
               Consultées récemment
             </p>
           )}

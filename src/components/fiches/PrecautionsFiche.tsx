@@ -64,7 +64,7 @@ export default function PrecautionsFiche({
       }}
     >
       <span
-        className="absolute -top-3 left-6 rounded-full px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wide"
+        className="absolute -top-3 left-6 rounded-full px-2.5 py-1 text-etiquette font-semibold uppercase tracking-wide"
         style={{ backgroundColor: 'var(--accent)', color: 'var(--fond)' }}
       >
         Précautions
@@ -87,14 +87,14 @@ export default function PrecautionsFiche({
           <GroupePrecaution icone={Baby} titre="Grossesse / Allaitement">
             <div className="flex flex-col gap-3 pb-1.5">
               <div>
-                <span className="text-[11px] font-semibold uppercase text-texte-doux">Grossesse</span>
+                <span className="text-xs font-semibold uppercase text-texte-doux">Grossesse</span>
                 <p className="mt-0.5 text-xs leading-relaxed text-texte">{grossesseAllaitement.grossesse}</p>
                 {grossesseAllaitement.url_crat_grossesse && (
                   <LienExterne href={grossesseAllaitement.url_crat_grossesse}>Voir sur le CRAT</LienExterne>
                 )}
               </div>
               <div>
-                <span className="text-[11px] font-semibold uppercase text-texte-doux">Allaitement</span>
+                <span className="text-xs font-semibold uppercase text-texte-doux">Allaitement</span>
                 <p className="mt-0.5 text-xs leading-relaxed text-texte">{grossesseAllaitement.allaitement}</p>
                 {grossesseAllaitement.url_crat_allaitement && (
                   <LienExterne href={grossesseAllaitement.url_crat_allaitement}>Voir sur le CRAT</LienExterne>

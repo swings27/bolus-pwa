@@ -42,7 +42,7 @@ export default function BlocInfo({ label, variant, children, repliable = false }
       style={{ backgroundColor: `color-mix(in srgb, ${saturee} 10%, var(--fond))`, borderColor: saturee }}
     >
       <span
-        className="absolute -top-3 left-4 rounded-full px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wide"
+        className="absolute -top-3 left-4 rounded-full px-2.5 py-1 text-etiquette font-semibold uppercase tracking-wide"
         // var(--fond) plutôt que blanc en dur : --fond est clair en thème
         // clair (crème) et sombre en thème sombre, ce qui donne toujours un
         // texte contrasté sur la pastille saturée, dans les deux thèmes.

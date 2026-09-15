@@ -58,7 +58,7 @@ export default function BoutonRetourBeta({ decalageBas = 0 }: IBoutonRetourBetaP
       }}
     >
       <MessageSquarePlus className="h-4 w-4 shrink-0" aria-hidden="true" />
-      <span className="text-[11px] font-semibold">Un retour ?</span>
+      <span className="text-xs font-semibold">Un retour ?</span>
     </a>
   )
 }

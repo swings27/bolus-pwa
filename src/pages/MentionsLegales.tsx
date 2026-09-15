@@ -2,9 +2,20 @@ import PageDocument from '../components/layout/PageDocument'
 import SectionDocument from '../components/layout/SectionDocument'
 import { EDITEUR, HEBERGEUR } from '../data/editeur'
 
+// Date de dernière modification du texte — à mettre à jour manuellement si
+// son contenu change. Ne doit JAMAIS être recalculée à partir de la date du
+// jour : "à jour aujourd'hui" est vrai tous les jours et n'informe de rien
+// sur quand ce document a réellement été revu. Même convention que
+// DATE_MISE_A_JOUR_CGU dans CGU.tsx.
+const DATE_MISE_A_JOUR = '15 septembre 2026'
+
 export default function MentionsLegales() {
   return (
     <PageDocument titre="Mentions légales">
+      <p className="text-sm" style={{ color: 'var(--texte-doux)' }}>
+        Dernière mise à jour : {DATE_MISE_A_JOUR}.
+      </p>
+
       <SectionDocument titre="Éditeur de l'application">
         <p>
           {EDITEUR.nom}
@@ -37,7 +48,7 @@ export default function MentionsLegales() {
 
       <SectionDocument titre="Propriété intellectuelle">
         <p>
-          La structure, le contenu éditorial, la charte graphique et le nom Bolus sont protégés.
+          La structure, le contenu éditorial et la charte graphique sont protégés.
           Toute reproduction ou réutilisation sans autorisation préalable est interdite.
         </p>
         <p>

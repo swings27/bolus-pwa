@@ -1,6 +1,7 @@
 import { ChevronDown } from 'lucide-react'
 import { useNavigate } from 'react-router-dom'
 import Header from '../components/layout/Header'
+import TitrePage from '../components/layout/TitrePage'
 import Wordmark from '../components/layout/Wordmark'
 import SearchDropdown from '../components/fiches/SearchDropdown'
 import CategorieCard from '../components/categories/CategorieCard'
@@ -44,9 +45,7 @@ export default function Accueil() {
       {/* Recherche */}
       <div className="flex flex-col gap-3 px-6 pb-8">
         <div>
-          <h2 className="font-display text-2xl font-semibold text-texte">
-            Rechercher un médicament
-          </h2>
+          <TitrePage niveau="h2">Rechercher un médicament</TitrePage>
           <p className="text-sm text-texte/60">Par nom, DCI ou nom commercial</p>
         </div>
         <SearchDropdown />

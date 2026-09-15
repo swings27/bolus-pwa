@@ -66,7 +66,7 @@ export default function DetailInjectable({ donnees, noteAjustement, noteAjusteme
           <div className="rounded-xl p-3.5" style={CARTE_STYLE}>
             {donnees.reconstitution.solvant && <p className="text-xs text-texte">{donnees.reconstitution.solvant}</p>}
             {volumes.length > 0 && (
-              <ul className="mt-1.5 flex flex-col gap-0.5 text-[11.5px] text-texte-doux">
+              <ul className="mt-1.5 flex flex-col gap-0.5 text-xs text-texte-doux">
                 {volumes.map(({ dose, unite, volumeMl }) => (
                   <li key={`${dose}-${unite}`}>
                     {dose} {unite} → {volumeMl} mL
@@ -75,7 +75,7 @@ export default function DetailInjectable({ donnees, noteAjustement, noteAjusteme
               </ul>
             )}
             {donnees.reconstitution.stabilite_avant_dilution && (
-              <p className="mt-2.5 border-t border-texte/10 pt-2 text-[11px] leading-relaxed text-texte-doux">
+              <p className="mt-2.5 border-t border-texte/10 pt-2 text-xs leading-relaxed text-texte-doux">
                 <b className="font-semibold">Stabilité</b> · {donnees.reconstitution.stabilite_avant_dilution}
               </p>
             )}
@@ -91,17 +91,17 @@ export default function DetailInjectable({ donnees, noteAjustement, noteAjusteme
               <div key={index} className="rounded-xl p-3.5" style={CARTE_STYLE}>
                 <div className="mb-2 flex flex-wrap items-center gap-2">
                   <span
-                    className="rounded-md px-2 py-1 text-[10px] font-semibold"
+                    className="rounded-md px-2 py-1 text-etiquette font-semibold"
                     style={{ backgroundColor: 'var(--texte)', color: 'var(--fond)' }}
                   >
                     {LABELS_VOIE[prep.voie] ?? prep.voie}
                   </span>
-                  {prep.duree && <span className="text-[11.5px] font-semibold text-texte">{prep.duree}</span>}
-                  {prep.contexte && <span className="text-[10.5px] italic text-texte-doux">{prep.contexte}</span>}
+                  {prep.duree && <span className="text-xs font-semibold text-texte">{prep.duree}</span>}
+                  {prep.contexte && <span className="text-xs italic text-texte-doux">{prep.contexte}</span>}
                 </div>
                 <p className="text-xs leading-relaxed text-texte">{prep.detail}</p>
                 {prep.stabilite && (
-                  <p className="mt-2.5 border-t border-texte/10 pt-2 text-[11px] leading-relaxed text-texte-doux">
+                  <p className="mt-2.5 border-t border-texte/10 pt-2 text-xs leading-relaxed text-texte-doux">
                     <b className="font-semibold">Stabilité</b> · {prep.stabilite}
                   </p>
                 )}
@@ -118,7 +118,7 @@ export default function DetailInjectable({ donnees, noteAjustement, noteAjusteme
                 contre-indications : certaines molécules en alignent une
                 vingtaine (nicardipine), ce qui repoussait les posologies
                 hors de l'écran. */}
-            <TexteRepliable couleur="var(--alerte)" className="text-[12.5px] leading-relaxed text-texte">
+            <TexteRepliable couleur="var(--alerte)" className="text-sm leading-relaxed text-texte">
               {donnees.incompatibilites
                 .map((incompatibilite) =>
                   incompatibilite.niveau && incompatibilite.niveau !== 'absolu'

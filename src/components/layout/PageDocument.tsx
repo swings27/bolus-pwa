@@ -1,5 +1,6 @@
 import type { ReactNode } from 'react'
 import Header from './Header'
+import TitrePage from './TitrePage'
 
 interface IPageDocumentProps {
   titre: string
@@ -17,7 +18,7 @@ export default function PageDocument({ titre, children }: IPageDocumentProps) {
       <Header variant="retour" />
 
       <div className="flex flex-col gap-8 px-6 pt-4">
-        <h1 className="font-display text-2xl font-semibold text-texte">{titre}</h1>
+        <TitrePage>{titre}</TitrePage>
 
         <div className="mx-auto flex w-full max-w-prose flex-col gap-8 leading-relaxed">
           {children}

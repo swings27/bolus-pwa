@@ -43,7 +43,7 @@ export default function SelecteurForme({ formes, forme, onChange }: ISelecteurFo
             type="button"
             onClick={() => onChange(valeur)}
             aria-pressed={actif}
-            className="tactile flex-1 rounded-full px-4 py-3 text-center text-[12.5px] font-semibold"
+            className="tactile flex-1 rounded-full px-4 py-3 text-center text-sm font-semibold"
             style={{
               backgroundColor: actif ? couleur : 'var(--fond)',
               color: actif ? 'var(--fond)' : couleur,
