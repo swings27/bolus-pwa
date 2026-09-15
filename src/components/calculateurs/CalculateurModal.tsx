@@ -7,7 +7,6 @@
 // en cas de couplage.
 
 import { useEffect, useRef, useState } from 'react'
-import type { FocusEvent } from 'react'
 import { Info, X } from 'lucide-react'
 import { useCalculateurModal } from '../../contexts/CalculateurModalContext'
 import { useFocusTrap } from '../../hooks/useFocusTrap'
@@ -16,13 +15,15 @@ import BlocAvertissement from '../layout/BlocAvertissement'
 import CalcDebit from './CalcDebit'
 import CalcDosePoids from './CalcDosePoids'
 import CalcIMC from './CalcIMC'
+import CalcConversion from './CalcConversion'
 
-type Onglet = 'debit' | 'dosePoids' | 'imc'
+type Onglet = 'debit' | 'dosePoids' | 'imc' | 'conversion'
 
 const ONGLETS: { valeur: Onglet; label: string }[] = [
   { valeur: 'debit', label: 'Débit' },
   { valeur: 'dosePoids', label: 'Dose / poids' },
   { valeur: 'imc', label: 'IMC' },
+  { valeur: 'conversion', label: 'Conversion' },
 ]
 
 // Affiché en modale (par-dessus la page courante) plutôt que sur sa propre
@@ -31,29 +32,9 @@ const ONGLETS: { valeur: Onglet; label: string }[] = [
 export default function CalculateurModal() {
   const { estOuvert, fermer } = useCalculateurModal()
   const [onglet, setOnglet] = useState<Onglet>('debit')
-  const [champFocus, setChampFocus] = useState(false)
   const conteneurRef = useRef<HTMLDivElement>(null)
 
   useFocusTrap(estOuvert, conteneurRef)
-
-  // iOS n'offre aucun bouton "terminé" natif sur un clavier décimal — sans
-  // ce bouton, la seule façon de refermer le clavier serait de fermer toute
-  // la modale. On détecte le focus par capture plutôt qu'un onFocus/onBlur
-  // par champ : un seul point de suivi pour les 3 calculateurs, qui n'ont
-  // pas à s'en soucier individuellement.
-  function gererFocusCapture(evenement: FocusEvent<HTMLDivElement>) {
-    if (evenement.target instanceof HTMLInputElement) setChampFocus(true)
-  }
-  function gererBlurCapture(evenement: FocusEvent<HTMLDivElement>) {
-    const suivant = evenement.relatedTarget
-    if (!(suivant instanceof Node) || !evenement.currentTarget.contains(suivant)) {
-      setChampFocus(false)
-    }
-  }
-  function terminerSaisie() {
-    if (document.activeElement instanceof HTMLElement) document.activeElement.blur()
-    setChampFocus(false)
-  }
 
   // Échap referme la modale : le piège de focus (useFocusTrap) empêche déjà
   // Tab de s'échapper vers la page en dessous, mais un utilisateur clavier
@@ -98,30 +79,25 @@ export default function CalculateurModal() {
         </div>
 
         <div className="mt-4">
-          <SegmentedControl options={ONGLETS} valeur={onglet} onChange={setOnglet} />
+          {/* Grille 2x2 et non une rangée unique : à quatre onglets sur un
+              écran de 390 px, « Dose / poids » se coupait sur trois lignes et
+              « Conversion », un seul mot insécable, imposait sa largeur aux
+              trois autres. Sur deux rangées, chaque libellé tient sur une
+              ligne et les quatre boutons font la même taille. */}
+          <SegmentedControl
+            options={ONGLETS}
+            valeur={onglet}
+            onChange={setOnglet}
+            classeConteneur="grid grid-cols-2 gap-2"
+            classeBouton="px-3 py-2.5"
+          />
         </div>
 
-        <div
-          className="mt-4 rounded-xl p-4"
-          style={{ backgroundColor: 'var(--surface)' }}
-          onFocusCapture={gererFocusCapture}
-          onBlurCapture={gererBlurCapture}
-        >
-          {champFocus && (
-            <div className="mb-3 flex justify-end">
-              <button
-                type="button"
-                onClick={terminerSaisie}
-                className="rounded-full px-3 py-1.5 text-xs font-semibold"
-                style={{ backgroundColor: 'var(--interactif)', color: 'var(--surface)' }}
-              >
-                Terminé
-              </button>
-            </div>
-          )}
+        <div className="mt-4 rounded-xl p-4" style={{ backgroundColor: 'var(--surface)' }}>
           {onglet === 'debit' && <CalcDebit />}
           {onglet === 'dosePoids' && <CalcDosePoids />}
           {onglet === 'imc' && <CalcIMC />}
+          {onglet === 'conversion' && <CalcConversion />}
         </div>
 
         <div className="mt-4">

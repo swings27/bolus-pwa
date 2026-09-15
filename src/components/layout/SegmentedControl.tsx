@@ -13,6 +13,11 @@ interface ISegmentedControlProps<T extends string> {
    * pour une rangée plus dense (ex. 4 calibres avec légende sur deux lignes
    * dans CalcDebit). */
   classeBouton?: string
+  /** Disposition des options. Une rangée unique par défaut ; à remplacer par
+   * une grille (ex. "grid grid-cols-2 gap-2") quand les libellés ne tiennent
+   * plus côte à côte sur un écran de téléphone — voir les 4 onglets de
+   * CalculateurModal. */
+  classeConteneur?: string
 }
 
 // Rangée de boutons à bascule (un seul actif à la fois) : forme/onglet/
@@ -31,9 +36,10 @@ export default function SegmentedControl<T extends string>({
   valeur,
   onChange,
   classeBouton = 'px-4 py-3',
+  classeConteneur = 'flex gap-2',
 }: ISegmentedControlProps<T>) {
   return (
-    <div className="flex gap-2">
+    <div className={classeConteneur}>
       {options.map((option) => {
         const actif = option.valeur === valeur
         return (
