@@ -11,10 +11,14 @@ import ChampNumerique from './ChampNumerique'
 import ResultatCalcul from './ResultatCalcul'
 import BoutonReinitialiser from './BoutonReinitialiser'
 import { parseNombre, formaterFR, nombrePositif } from './nombreUtils'
+import TableReferenceIMC from './TableReferenceIMC'
 
-// Pas de seuil ni de catégorie (maigreur/normal/surpoids...) affichée ici :
-// même principe que les autres calculateurs (voir ResultatCalcul), un
-// chiffre neutre, pas un avis clinique.
+// Le résultat reste un chiffre neutre : aucun seuil, aucune catégorie
+// déduite de la valeur saisie, aucune couleur (voir ResultatCalcul). La
+// grille de repères affichée en dessous n'y change rien — elle est
+// entièrement statique et n'est reliée d'aucune façon à l'IMC calculé, pas
+// même par une surbrillance ; voir l'en-tête de TableReferenceIMC, qui
+// détaille pourquoi ce cloisonnement doit le rester.
 export default function CalcIMC() {
   const [poids, setPoids] = useState('')
   const [taille, setTaille] = useState('')
@@ -39,6 +43,11 @@ export default function CalcIMC() {
       </div>
 
       {imc !== null && <BoutonReinitialiser onClick={reinitialiser} />}
+
+      {/* Aucune prop : la table ne sait rien de `imc`, et ne doit rien en
+          savoir. Elle s'affiche à l'identique champ vide comme champ
+          rempli. */}
+      <TableReferenceIMC />
     </div>
   )
 }
