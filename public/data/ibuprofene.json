@@ -256,7 +256,7 @@
           {
             "population": "Rhumatologie, traitement d'attaque",
             "population_type": "adulte",
-            "categorie": "generale",
+            "categorie": "speciale",
             "dose_par_prise_mg_min": 800,
             "dose_par_prise_mg_max": 800,
             "intervalle_min_h": 6,
@@ -267,7 +267,7 @@
           {
             "population": "Rhumatologie, traitement d'entretien",
             "population_type": "adulte",
-            "categorie": "generale",
+            "categorie": "speciale",
             "dose_par_prise_mg_min": 400,
             "dose_par_prise_mg_max": 400,
             "intervalle_min_h": 6,
@@ -405,17 +405,6 @@
         "ouverture_gelule": null,
         "posologie_adulte": [
           {
-            "population": "Douleur légère à modérée ou fièvre",
-            "population_type": "adulte",
-            "categorie": "generale",
-            "dose_par_prise_mg_min": 200,
-            "dose_par_prise_mg_max": 400,
-            "intervalle_min_h": 4,
-            "intervalle_max_h": 6,
-            "nb_prises_max_24h": 6,
-            "dose_journaliere_max_g": 1.2
-          },
-          {
             "population": "Adolescent, palier 200 à 400 mg",
             "population_type": "pediatrie",
             "categorie": "generale",
@@ -532,8 +521,8 @@
       }
     ],
     "recommandation_sonde": {
-      "forme_preferee": "Granulés pour solution buvable en sachet-dose 400 mg",
-      "alternative": "Suspension buvable en sachet-dose 400 mg"
+      "forme_preferee": "Granulés pour solution buvable en sachet-dose",
+      "alternative": "Suspension buvable en sachet-dose"
     }
   },
   "aerosol": null,

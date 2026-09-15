@@ -1,0 +1,389 @@
+{
+  "dci": "sufentanil",
+  "commun": {
+    "noms_commerciaux": [
+      "SUFENTA",
+      "DZUVEO"
+    ],
+    "famille": "Analgésique morphinique de synthèse, agoniste pur des récepteurs opioïdes µ, dérivé de la série des phénylpipéridines. Le sufentanil est classé stupéfiant : prescription sur ordonnance sécurisée limitée à 7 jours, réservée aux médecins spécialisés en anesthésie-réanimation ou en médecine d'urgence, usage hospitalier exclusif",
+    "antidote": "Naloxone. La dépression respiratoire pouvant durer plus longtemps que l'effet de la naloxone, une administration répétée peut être nécessaire",
+    "indications": [
+      "Anesthésie générale balancée (adjuvant analgésique)",
+      "Anesthésie-analgésie principale, chirurgie cardio-vasculaire",
+      "Analgésie péridurale chirurgicale, obstétricale ou post-opératoire",
+      "Sédation prolongée en soins intensifs / réanimation (patient ventilé)",
+      "Anesthésie générale balancée, enfant > 1 mois (voie IV)",
+      "Analgésie péridurale post-opératoire, enfant > 1 an",
+      "Douleur aiguë modérée à sévère de l'adulte (Dzuveo, voie sublinguale)"
+    ],
+    "grossesse_allaitement": {
+      "grossesse": "L'utilisation du sufentanil par voie injectable (intraveineuse, péridurale) au cours de la grossesse ne doit être envisagée que si nécessaire ; le sufentanil traverse le placenta. Pour la voie sublinguale (Dzuveo), le sufentanil n'est pas recommandé au cours de la grossesse ni chez les femmes en âge de procréer n'utilisant pas de contraception, et ne devrait pas être administré pendant la grossesse.",
+      "allaitement": "Le sufentanil est excrété dans le lait maternel. Pour la voie injectable, à des doses n'excédant pas 30 microgrammes, il est conseillé d'attendre 4 heures après l'administration avant d'allaiter ; au-delà de cette dose, l'allaitement est déconseillé. Pour la voie sublinguale (Dzuveo), dont les doses peuvent atteindre 720 microgrammes par jour, il existe une forte probabilité d'incidence chez le nouveau-né ou le nourrisson allaité.",
+      "url_crat_grossesse": null,
+      "url_crat_allaitement": null
+    },
+    "note_ajustement": "Une diminution de la posologie est recommandée chez les patients âgés, affaiblis ou de classe ASA III/IV, ainsi qu'en cas d'hypothyroïdie non contrôlée, de maladie pulmonaire, de capacité respiratoire diminuée, d'insuffisance hépatique ou rénale, ou de consommation chronique d'alcool, chez ces patients, la surveillance post-opératoire doit être prolongée. Pour la voie sublinguale (Dzuveo) : aucun ajustement particulier n'est nécessaire chez le patient âgé ; utiliser avec prudence en cas d'insuffisance hépatique modérée à sévère ou d'insuffisance rénale sévère, la durée d'action pouvant être prolongée ; sécurité et efficacité non établies chez l'enfant et l'adolescent de moins de 18 ans. Nouveau-né et nourrisson de moins de 3 mois (voie IV) : en raison de la grande variabilité des paramètres pharmacocinétiques chez le nouveau-né, aucune recommandation posologique ne peut être donnée ; aucune donnée disponible chez le nouveau-né et le nourrisson de moins de 3 mois. Enfant de moins d'un an (voie péridurale) : sécurité et efficacité non établies.",
+    "contre_indications": [
+      "Hypersensibilité à la substance active, à l'un des excipients, ou aux morphiniques.",
+      "Traitement ou pathologie associés pouvant contre-indiquer une administration par voie péridurale : hémorragie sévère ou choc, septicémie, infection au site d'injection, perturbation de l'hémostase (thrombocytopénie, coagulopathie), traitement anticoagulant.",
+      "Association aux agonistes-antagonistes morphiniques (nalbuphine, buprénorphine) ou aux morphiniques antagonistes partiels (naltrexone, nalméfène).",
+      "Utilisation de la voie intraveineuse durant l'accouchement ou avant le clampage du cordon ombilical en cas de césarienne, en raison d'une éventuelle dépression respiratoire chez le nouveau-né, l'utilisation par voie péridurale pendant l'accouchement, à des doses allant jusqu'à 30 microgrammes, n'influence pas la condition de la mère ou du nouveau-né.",
+      "Dépression respiratoire significative ou fonction respiratoire compromise (Dzuveo, voie sublinguale)."
+    ],
+    "interactions_pertinentes": [
+      {
+        "substance": "Agonistes-antagonistes morphiniques",
+        "effet": "Diminution de l'effet antalgique par blocage compétitif des récepteurs opioïdes, avec risque d'apparition d'un syndrome de sevrage.",
+        "action_infirmier": "Association contre-indiquée, signaler immédiatement au prescripteur toute co-prescription de nalbuphine ou de buprénorphine."
+      },
+      {
+        "substance": "Morphiniques antagonistes partiels",
+        "effet": "Risque de diminution de l'effet antalgique du sufentanil.",
+        "action_infirmier": "Association contre-indiquée, signaler immédiatement au prescripteur toute co-prescription de naltrexone ou de nalméfène."
+      },
+      {
+        "substance": "Alcool",
+        "effet": "Majoration de l'effet sédatif du sufentanil ; chez les patients respirant spontanément, risque augmenté de dépression respiratoire, de sédation profonde, de coma ou de mort. L'altération de la vigilance peut rendre dangereuses la conduite de véhicules et l'utilisation de machines.",
+        "action_infirmier": "Association déconseillée, signaler au prescripteur toute consommation d'alcool ou traitement contenant de l'alcool ; surveiller la fonction respiratoire et l'état de conscience."
+      },
+      {
+        "substance": "Crizotinib, oxybate de sodium, idélalisib",
+        "effet": "Crizotinib : risque de majoration de la toxicité du sufentanil par diminution de son métabolisme et/ou augmentation de sa biodisponibilité. Oxybate de sodium : majoration de la dépression centrale, altération de la vigilance. Idélalisib : augmentation des concentrations plasmatiques de sufentanil par diminution de son métabolisme hépatique.",
+        "action_infirmier": "Associations déconseillées, signaler au prescripteur toute co-prescription ; surveiller la vigilance et la fonction respiratoire."
+      },
+      {
+        "substance": "Inhibiteurs puissants du CYP3A4",
+        "effet": "Augmentation de l'effet dépresseur respiratoire du sufentanil par diminution de son métabolisme hépatique.",
+        "action_infirmier": "Signaler au prescripteur tout traitement concomitant par un inhibiteur puissant du CYP3A4 ; renforcer la surveillance clinique et respiratoire."
+      },
+      {
+        "substance": "Autres dépresseurs du système nerveux central",
+        "effet": "Risque majoré de dépression respiratoire pouvant être fatale en cas de surdosage.",
+        "action_infirmier": "Signaler au prescripteur toute co-prescription ; surveiller étroitement la fonction respiratoire et l'état de vigilance."
+      },
+      {
+        "substance": "Médicaments sérotoninergiques",
+        "effet": "Risque de syndrome sérotoninergique pouvant menacer le pronostic vital.",
+        "action_infirmier": "Signaler au prescripteur toute co-prescription d'un agent sérotoninergique ; les IMAO ne doivent être ni pris dans les deux semaines précédant l'administration de sufentanil, ni simultanément."
+      },
+      {
+        "substance": "Gabapentinoïdes",
+        "effet": "Augmentation du risque de surdosage opioïde, de dépression respiratoire et de décès.",
+        "action_infirmier": "Signaler au prescripteur toute co-prescription de gabapentine ou de prégabaline."
+      },
+      {
+        "substance": "Inhibiteurs calciques et/ou bêta-bloquants",
+        "effet": "Incidence et sévérité accrues de bradycardie et d'hypotension sous sufentanil (Dzuveo).",
+        "action_infirmier": "Signaler au prescripteur tout traitement chronique par inhibiteur calcique et/ou bêta-bloquant ; surveiller la fréquence cardiaque et la pression artérielle."
+      }
+    ],
+    "surveillance_specifique": [
+      {
+        "evenement": "Dépression respiratoire dose-dépendante, pouvant persister ou réapparaître en période post-opératoire",
+        "explication": "Comme pour les autres morphinomimétiques puissants, l'analgésie profonde s'accompagne d'une dépression respiratoire marquée ; la durée de la dépression respiratoire peut excéder la durée d'action de l'antimorphinique.",
+        "action": "Surveillance respiratoire des patients ; matériel de réanimation et antimorphinique (naloxone) immédiatement disponibles ; signaler au prescripteur toute bradypnée ou apnée."
+      },
+      {
+        "evenement": "Rigidité musculaire, en particulier thoracique",
+        "explication": "Peut apparaître notamment en cas d'injection rapide ; prévenue par une administration lente, une prémédication par benzodiazépine ou l'utilisation de curares.",
+        "action": "Respecter la vitesse d'administration indiquée en Préparation ; signaler au prescripteur toute rigidité thoracique gênant la ventilation."
+      },
+      {
+        "evenement": "Bradycardie, voire arrêt cardiaque",
+        "explication": "Peut survenir en cas de dose insuffisante d'anticholinergique ou d'association à des myorelaxants non vagolytiques ; prévenue ou traitée par un anticholinergique (atropine).",
+        "action": "Surveiller la fréquence cardiaque ; signaler au prescripteur toute bradycardie marquée."
+      },
+      {
+        "evenement": "Élévation transitoire de la pression intracrânienne (55 à 100 %) chez le traumatisé crânien",
+        "explication": "Observée lors de l'administration de sufentanil par voie IV chez des patients traumatisés crâniens.",
+        "action": "Surveillance neurologique renforcée en cas de traumatisme crânien ou d'hypertension intracrânienne connue ; signaler au prescripteur."
+      },
+      {
+        "evenement": "Hypotension, notamment chez le patient hypovolémique",
+        "explication": "Les opioïdes peuvent induire une hypotension ; en cas d'hypovolémie non corrigée ou d'insuffisance cardiaque non compensée, la dépression cardio-vasculaire est souvent majorée par les autres agents anesthésiques associés.",
+        "action": "Maintenir une pression artérielle stable par des mesures adaptées ; signaler au prescripteur toute hypotension persistante."
+      },
+      {
+        "evenement": "Syndrome de sevrage néonatal chez le nouveau-né exposé in utero",
+        "explication": "Concerne les femmes prenant des opioïdes de manière chronique pendant la grossesse ; un antagoniste opioïde doit toujours être disponible pour le nouveau-né en raison du risque de dépression respiratoire.",
+        "action": "Signaler au prescripteur toute exposition chronique maternelle aux opioïdes ; tenir un antagoniste opioïde disponible à la naissance."
+      },
+      {
+        "evenement": "Syndrome de sevrage à l'arrêt du traitement",
+        "explication": "Rarement signalé à l'arrêt brutal après une administration prolongée de plus de 3 jours en réanimation ; l'utilisation du sufentanil chez les patients mécaniquement ventilés en soins intensifs n'est pas recommandée au-delà de 3 jours. La réintroduction puis la diminution progressive de la perfusion ont été rapportées comme bénéfiques dans cette situation.",
+        "action": "Signaler au prescripteur toute administration continue prolongée ; surveiller l'apparition d'une tachycardie, d'une hypertension ou d'une agitation à l'arrêt."
+      },
+      {
+        "evenement": "Hyperalgésie induite par les opioïdes",
+        "explication": "Réaction paradoxale dans laquelle la perception de la douleur augmente malgré une exposition aux opioïdes stable ou accrue, à distinguer de la tolérance.",
+        "action": "En cas de contrôle insuffisant de la douleur malgré une dose plus élevée, signaler au prescripteur la possibilité d'une HIO plutôt qu'une simple insuffisance de dose."
+      },
+      {
+        "evenement": "Troubles respiratoires du sommeil",
+        "explication": "Le risque augmente de façon dose-dépendante avec l'utilisation d'opioïdes, en particulier en cas d'utilisation prolongée.",
+        "action": "Signaler au prescripteur tout antécédent ou signe d'apnée du sommeil chez un patient sous sufentanil au long cours."
+      },
+      {
+        "evenement": "Ralentissement de la motilité gastro-intestinale, spasme du sphincter d'Oddi",
+        "explication": "Le sufentanil, agoniste du récepteur opioïde µ, peut ralentir le transit et provoquer un spasme du sphincter d'Oddi.",
+        "action": "Utiliser avec prudence chez les patients à risque d'iléus ou présentant une affection des voies biliaires (y compris pancréatite aiguë) ; signaler au prescripteur."
+      },
+      {
+        "evenement": "Tolérance, dépendance et trouble lié à l'utilisation d'opioïdes (TUO), abus et mésusage",
+        "explication": "L'administration répétée d'opioïdes peut développer une tolérance et une dépendance physique et psychologique ; le risque de TUO est accru en cas d'antécédents personnels ou familiaux de troubles liés à l'utilisation de substances. L'abus ou le mésusage intentionnel peut entraîner un surdosage et/ou le décès.",
+        "action": "Surveiller tout comportement de recherche compulsive du produit (demande de renouvellement précoce) ; signaler au prescripteur et envisager une consultation d'addictologie si des signes de TUO apparaissent."
+      }
+    ],
+    "pictogrammes": []
+  },
+  "iv": {
+    "reconstitution": null,
+    "preparation": [
+      {
+        "voie": "IVL",
+        "contexte": "anesthésie générale, adulte",
+        "detail": "Utiliser pur, ou dilué dans du chlorure de sodium à 0,9 % ou du glucose à 5 % si nécessaire. Administration lente recommandée pour prévenir la rigidité musculaire, notamment thoracique.",
+        "duree": "Injection lente",
+        "stabilite": null
+      },
+      {
+        "voie": "IVL",
+        "contexte": "anesthésie générale, enfant > 1 mois",
+        "detail": "Utiliser pur, ou dilué dans du chlorure de sodium à 0,9 % ou du glucose à 5 % si nécessaire. Prémédication par un anticholinergique (atropine) recommandée, sauf contre-indication.",
+        "duree": "Bolus lent d'au moins 30 secondes.",
+        "stabilite": null
+      },
+      {
+        "voie": "PSE",
+        "contexte": "sédation prolongée, soins intensifs/réanimation, adulte",
+        "detail": "Le RCP ne chiffre pas de concentration pour cet usage. Préparation courante rapportée par le Guide HUG des médicaments injectables : 250 microgrammes (1 ampoule de 250 µg/5 mL) complétés à 50 mL avec du chlorure de sodium à 0,9 % ou du glucose à 5 % (concentration finale 5 microgrammes/mL).",
+        "duree": "Continu",
+        "stabilite": "Solution diluée (NaCl 0,9 % ou glucose 5 %) : à utiliser dans les 24 heures suivant la préparation. Sur le plan microbiologique, à utiliser immédiatement, sauf si la dilution a été réalisée dans des conditions d'asepsie contrôlées et validées."
+      },
+      {
+        "voie": "PERIDURALE",
+        "contexte": "chirurgie générale (thoracique/urologique/orthopédique)",
+        "detail": "Dose diluée dans un volume de 10 mL.",
+        "duree": "< 1 min",
+        "stabilite": "Solution diluée : à utiliser dans les 24 heures suivant la préparation."
+      },
+      {
+        "voie": "PERIDURALE",
+        "contexte": "obstétrique (accouchement)",
+        "detail": "Dose diluée dans un volume de 10 mL, associée à un anesthésique local tel que la bupivacaïne (0,125 % - 0,25 %).",
+        "duree": "< 1 min",
+        "stabilite": "Solution diluée : à utiliser dans les 24 heures suivant la préparation."
+      },
+      {
+        "voie": "PERIDURALE",
+        "contexte": "post-césarienne",
+        "detail": "Dose diluée dans un volume de 10 mL, associée à un anesthésique local tel que la bupivacaïne (0,125 % - 0,25 %).",
+        "duree": "< 1 min",
+        "stabilite": "Solution diluée : à utiliser dans les 24 heures suivant la préparation."
+      },
+      {
+        "voie": "PERIDURALE",
+        "contexte": "post-opératoire, bolus",
+        "detail": "Dose diluée dans un volume de 10 mL, en dose unique ou répétée.",
+        "duree": "< 1 min",
+        "stabilite": "Solution diluée : à utiliser dans les 24 heures suivant la préparation."
+      },
+      {
+        "voie": "PERIDURALE",
+        "contexte": "post-opératoire, perfusion continue",
+        "detail": "Perfusion continue par voie péridurale.",
+        "duree": "Continu",
+        "stabilite": "Solution diluée : à utiliser dans les 24 heures suivant la préparation."
+      },
+      {
+        "voie": "PERIDURALE",
+        "contexte": "post-opératoire, enfant > 1 an",
+        "detail": "SUFENTA ne doit être administré par voie péridurale à l'enfant que par des médecins anesthésistes spécialement formés à l'anesthésie péridurale de l'enfant et à la prise en charge des effets dépresseurs respiratoires des opioïdes, avec matériel de réanimation et antimorphiniques rapidement disponibles.",
+        "duree": "< 1 min",
+        "stabilite": "Solution diluée : à utiliser dans les 24 heures suivant la préparation."
+      }
+    ],
+    "administration": {
+      "note_ajustement": "Voir commun.note_ajustement.",
+      "posologie": [
+        {
+          "population": "Anesthésie générale balancée, interventions courtes ou moyennes (induction)",
+          "population_type": "adulte",
+          "categorie": "generale",
+          "dose_ugkg_min": 0.1,
+          "dose_ugkg_max": 2
+        },
+        {
+          "population": "Anesthésie générale balancée, interventions majeures > 2 heures (entretien)",
+          "population_type": "adulte",
+          "categorie": "speciale",
+          "dose_ugkgh_min": 1,
+          "dose_ugkgh_max": 1
+        },
+        {
+          "population": "Anesthésie-analgésie, chirurgie cardio-vasculaire (induction)",
+          "population_type": "adulte",
+          "categorie": "speciale",
+          "dose_ugkg_min": 8,
+          "dose_ugkg_max": 20
+        },
+        {
+          "population": "Sédation prolongée en soins intensifs ou en réanimation (patient ventilé)",
+          "population_type": "adulte",
+          "categorie": "pse",
+          "dose_ugkgh_min": 0.2,
+          "dose_ugkgh_max": 2
+        },
+        {
+          "population": "Analgésie péridurale, chirurgie générale (thoracique/urologique/orthopédique), dose initiale",
+          "population_type": "adulte",
+          "categorie": "generale",
+          "dose_ugkg_min": 0.75,
+          "dose_ugkg_max": 0.75
+        },
+        {
+          "population": "Analgésie péridurale obstétricale (accouchement)",
+          "population_type": "adulte",
+          "categorie": "generale",
+          "dose_par_prise_ug_min": 15,
+          "dose_par_prise_ug_max": 20
+        },
+        {
+          "population": "Analgésie péridurale post-césarienne",
+          "population_type": "adulte",
+          "categorie": "generale",
+          "dose_par_prise_ug_min": 25,
+          "dose_par_prise_ug_max": 25
+        },
+        {
+          "population": "Analgésie péridurale post-opératoire, bolus",
+          "population_type": "adulte",
+          "categorie": "generale",
+          "dose_ugkg_min": 0.75,
+          "dose_ugkg_max": 0.75
+        },
+        {
+          "population": "Analgésie péridurale post-opératoire, perfusion continue",
+          "population_type": "adulte",
+          "categorie": "pse",
+          "dose_ugkgh_min": 0.2,
+          "dose_ugkgh_max": 0.3
+        },
+        {
+          "population": "Anesthésie générale balancée, induction",
+          "population_type": "pediatrie",
+          "categorie": "generale",
+          "age_min_mois": 1,
+          "dose_ugkg_min": 0.2,
+          "dose_ugkg_max": 0.5
+        },
+        {
+          "population": "Anesthésie générale balancée, entretien chez le patient ventilé",
+          "population_type": "pediatrie",
+          "categorie": "generale",
+          "age_min_mois": 1,
+          "dose_ugkg_min": 0.3,
+          "dose_ugkg_max": 2
+        },
+        {
+          "population": "Analgésie péridurale post-opératoire",
+          "population_type": "pediatrie",
+          "categorie": "generale",
+          "age_min_mois": 12,
+          "dose_ugkg_min": 0.25,
+          "dose_ugkg_max": 0.75
+        }
+      ]
+    },
+    "incompatibilites": []
+  },
+  "aerosol": null,
+  "oral": {
+    "formes": [
+      {
+        "type": "Comprimé sublingual",
+        "dosage": "30 microgrammes",
+        "ouverture_gelule": null,
+        "ecrasable": false,
+        "posologie_adulte": [
+          {
+            "population": "Douleur aiguë modérée à sévère de l'",
+            "categorie": "generale",
+            "population_type": "adulte",
+            "dose_par_prise_ug_min": 30,
+            "dose_par_prise_ug_max": 30,
+            "intervalle_min_h": 1,
+            "intervalle_max_h": 1,
+            "dose_journaliere_max_ug": 720
+          }
+        ]
+      }
+    ],
+    "recommandation_sonde": {
+      "forme_preferee": "",
+      "alternative": "Voie injectable, avis médical"
+    }
+  },
+  "tracabilite": {
+    "rcp_source": [
+      {
+        "specialite": "SUFENTA 10 microgrammes/2 ml, solution injectable (I.V. ou péridurale)",
+        "titulaire": "PIRAMAL CRITICAL CARE B.V.",
+        "date_maj": "RCP du 12/08/2025 ; AMM du 22/09/1998 ; déclaration de commercialisation du 15/08/1999",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/61562566/extrait"
+      },
+      {
+        "specialite": "SUFENTA 50 microgrammes/10 ml, solution injectable (I.V. ou péridurale)",
+        "titulaire": "PIRAMAL CRITICAL CARE B.V.",
+        "date_maj": "RCP daté 2026 (dernière mise à jour de la base BDPM le 31/08/2026) ; AMM du 22/09/1998",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/69954238/extrait"
+      },
+      {
+        "specialite": "SUFENTA 250 microgrammes/5 ml, solution injectable (I.V. ou péridurale)",
+        "titulaire": "PIRAMAL CRITICAL CARE B.V.",
+        "date_maj": "RCP du 30/11/2023 ; AMM du 09/09/1991 ; déclaration de commercialisation du 19/09/1992",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/65565218/extrait"
+      },
+      {
+        "specialite": "SUFENTANIL VIATRIS 5 microgrammes/ml, solution injectable (IV ou péridurale)",
+        "titulaire": "VIATRIS SANTE",
+        "date_maj": "10/12/2024 ; AMM du 28/07/2003 ; déclaration de commercialisation du 05/01/2004 (ampoule 2 mL) et du 06/01/2004 (ampoule 10 mL)",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/60460398/extrait"
+      },
+      {
+        "specialite": "SUFENTANIL VIATRIS 50 microgrammes/ml, solution injectable (IV ou péridurale)",
+        "titulaire": "VIATRIS SANTE",
+        "date_maj": "10/12/2024 ; AMM du 28/07/2003 ; déclaration de commercialisation du 05/01/2004",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/62404996/extrait"
+      },
+      {
+        "specialite": "SUFENTANIL RENAUDIN 5 microgrammes/mL, solution injectable (IV ou péridurale)",
+        "titulaire": "LABORATOIRE RENAUDIN",
+        "date_maj": "31/07/2024 ; AMM du 11/10/2005",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/69819023/extrait"
+      },
+      {
+        "specialite": "SUFENTANIL RENAUDIN 50 microgrammes/mL, solution injectable (IV ou péridurale)",
+        "titulaire": "LABORATOIRE RENAUDIN",
+        "date_maj": "31/07/2024 ; AMM du 11/10/2005",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/67986059/extrait"
+      },
+      {
+        "specialite": "DZUVEO 30 microgrammes, comprimé sublingual",
+        "titulaire": "Laboratoire AGUETTANT",
+        "date_maj": "Dernière mise à jour de la base BDPM le 31/08/2026 ; déclaration de commercialisation du 08/11/2022 ; procédure centralisée EMA",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/68968587/extrait"
+      }
+    ],
+    "statut": "valide",
+    "validation": {
+      "date": "2026-09-10",
+      "validateur": "Anna Trabaud-Lopez (IDE, porteuse du projet), vérification des données extraites contre les RCP ; équipe pharmacie, validation de la méthodologie et arbitrage des points litigieux",
+      "perimetre": [
+        "adulte",
+        "pediatrie"
+      ],
+      "prochaine_revision": "2026-12-10"
+    }
+  }
+}

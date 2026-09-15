@@ -75,17 +75,16 @@
   },
   "iv": {
     "reconstitution": {
-      "solvant": "NaCl 0,9 %, G10 %, G5 % + NaCl 0,9 % ou 0,45 %, Mannitol 2,5%, 5 % ou 10 %, ou G5 % + chlorure de potassium 0,15 %",
+      "solvant": "NaCl 0,9 % (priorité) ou G5%",
       "volume_par_500mg_mL": 10,
       "stabilite_avant_dilution": "À diluer immédiatement après reconstitution."
     },
     "preparation": [
       {
         "voie": "PERF",
-        "detail": "Reconstituer puis diluer pour un volume total de 100 mL (environ 5 mg/mL d'imipénem et de cilastatine)",
+        "detail": "Reconstituer puis diluer pour un volume total de 100 mL (concentration environ 5 mg/mL)",
         "duree": "20 à 30 min (dose ≤ 500 mg) ou 40 à 60 min (dose > 500 mg)",
-        "stabilite": "4 heures à 25 °C ou 24 heures entre 2 °C et 8 °C après dilution",
-        "contexte": "Dose ≤ 500 mg"
+        "stabilite": "4 heures à 25 °C ou 24 heures entre 2 °C et 8 °C après dilution"
       }
     ],
     "administration": {

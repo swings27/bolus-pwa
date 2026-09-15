@@ -2,7 +2,7 @@
   "dci": "vancomycine",
   "commun": {
     "noms_commerciaux": [],
-    "famille": "Antibiotique glycopeptidique",
+    "famille": "Glycopeptidique",
     "antidote": "",
     "indications": [
       "Infections cutanées compliquées",
@@ -96,7 +96,7 @@
       {
         "voie": "PERF",
         "detail": "Dilution dans au moins 100 à 200 mL de NaCl 0,9 % ou G5 %, concentration max de 10mg/ml",
-        "duree": "Au moins 60 minutes, ou débit maximal de 10 mg/min si cela impose une durée plus longue.",
+        "duree": "Au moins 60 minutes, ou débit maximal de 10 mg/min",
         "stabilite": "24 heures à <25°C ou 96h entre 2 et 8°C"
       },
       {

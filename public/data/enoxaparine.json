@@ -167,16 +167,6 @@
           "dose_par_prise_UI_max": 2000,
           "intervalle_min_h": 24,
           "intervalle_max_h": 24
-        },
-        {
-          "population": "TVP/EP, angor instable / NSTEMI, STEMI aigu insuffisance rénale sévère",
-          "categorie": "speciale",
-          "population_type": "adulte",
-          "dose_par_prise_UI_kg_min": 100,
-          "dose_par_prise_UI_kg_max": 100,
-          "intervalle_min_h": 24,
-          "intervalle_max_h": 24,
-          "dose_journaliere_max_g": "Selon poids"
         }
       ]
     },

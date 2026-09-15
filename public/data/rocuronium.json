@@ -1,0 +1,371 @@
+{
+  "dci": "rocuronium",
+  "commun": {
+    "noms_commerciaux": [],
+    "famille": "Curare non dépolarisant, aminostéroïdien à délai d'action court et durée intermédiaire classe pharmacothérapeutique RCP : CURARE. Liste I, réservé à l'usage hospitalier ; prescription initiale et administration réservées aux médecins spécialistes ou compétents en anesthésie-réanimation, ou aux médecins exerçant en structure d'urgence ou de médecine d'urgence",
+    "antidote": "Sugammadex, pour décurariser un bloc neuromusculaire profond, à dose adaptée au degré du bloc ; à défaut, un inhibiteur de l'acétylcholinestérase ne peut être utilisé qu'après le début d'une décurarisation spontanée significative. L'efficacité de la décurarisation pharmacologique est évaluée par le monitorage instrumental de la curarisation",
+    "indications": [
+      "Intubation trachéale (induction anesthésique)",
+      "Relaxation musculaire per-opératoire",
+      "Intubation en séquence rapide",
+      "Adjuvant en soins intensifs"
+    ],
+    "grossesse_allaitement": {
+      "grossesse": "La prudence doit être de mise en cas de prescription de bromure de rocuronium chez une femme enceinte.",
+      "allaitement": "Après l'administration d'une dose unique, il est recommandé de ne pas allaiter pendant cinq fois la demi-vie d'élimination du rocuronium, soit environ 6 heures.",
+      "url_crat_grossesse": null,
+      "url_crat_allaitement": null
+    },
+    "contre_indications": [
+      "Hypersensibilité au rocuronium, à l'ion bromure ou à l'un des excipients"
+    ],
+    "interactions_pertinentes": [
+      {
+        "substance": "Anesthésiques inhalés halogénés",
+        "effet": "Potentialisation du bloc neuromusculaire induit par le bromure de rocuronium, effet ne se manifestant qu'avec les doses d'entretien ; l'inversion du bloc par les inhibiteurs de l'acétylcholinestérase peut également être inhibée.",
+        "action_infirmier": "Signaler au prescripteur toute anesthésie par halogénés associée ; renforcer la surveillance du monitorage instrumental de la curarisation, en particulier lors de la décurarisation."
+      },
+      {
+        "substance": "Antibiotiques : aminosides, lincosamides, polymyxines, pénicillines, tétracyclines",
+        "effet": "Potentialisation du bloc neuromusculaire ; une recurarisation postopératoire a été observée après administration d'aminosides, de lincosamides, de polymyxines ou de pénicillines.",
+        "action_infirmier": "Signaler au prescripteur toute co-prescription ; surveiller la fonction respiratoire, en particulier en période postopératoire."
+      },
+      {
+        "substance": "Diurétiques, quinidine et quinine, sels de magnésium, inhibiteurs calciques, sels de lithium, anesthésiques locaux (lidocaïne IV, bupivacaïne péridurale), charge de phénytoïne, agents bêta-bloquants",
+        "effet": "Potentialisation du bloc neuromusculaire ; une recurarisation postopératoire a été observée après administration de quinidine, de quinine ou de sels de magnésium.",
+        "action_infirmier": "Signaler au prescripteur toute co-prescription ; surveiller la fonction respiratoire."
+      },
+      {
+        "substance": "Corticoïdes, en cas de co-administration prolongée en unité de soins intensifs",
+        "effet": "Peut provoquer une prolongation du bloc neuromusculaire ou une myopathie.",
+        "action_infirmier": "Signaler au prescripteur ; limiter autant que possible la durée d'utilisation conjointe du myorelaxant."
+      },
+      {
+        "substance": "Administration chronique préalable de phénytoïne ou de carbamazépine",
+        "effet": "Diminution de l'effet du bromure de rocuronium (résistance).",
+        "action_infirmier": "Signaler au prescripteur toute prise chronique de phénytoïne ou de carbamazépine avant l'administration."
+      },
+      {
+        "substance": "Autres curares non dépolarisants",
+        "effet": "Atténuation ou potentialisation du bloc neuromusculaire selon l'ordre d'administration et le curare utilisé.",
+        "action_infirmier": "Signaler au prescripteur toute association de curares ; surveiller le monitorage instrumental de la curarisation."
+      },
+      {
+        "substance": "Suxaméthonium",
+        "effet": "Administré après le bromure de rocuronium, peut potentialiser ou atténuer son effet de blocage neuromusculaire ; à l'inverse, si le suxaméthonium a servi à l'intubation, l'administration de rocuronium doit être retardée jusqu'à décurarisation clinique du bloc induit par le suxaméthonium.",
+        "action_infirmier": "Signaler au prescripteur toute administration récente de suxaméthonium ; respecter le délai de décurarisation clinique avant l'administration du rocuronium."
+      },
+      {
+        "substance": "Lidocaïne",
+        "effet": "La co-administration de lidocaïne et de bromure de rocuronium peut réduire le délai d'action de la lidocaïne.",
+        "action_infirmier": "Signaler au prescripteur l'association ; surveiller l'efficacité de l'anesthésie locale par lidocaïne."
+      },
+      {
+        "substance": "Sulfate de magnésium",
+        "effet": "Potentialisation du bloc neuromusculaire, nécessitant une réduction de la posologie du bromure de rocuronium.",
+        "action_infirmier": "Signaler au prescripteur toute administration de sulfate de magnésium ; la posologie du rocuronium doit être adaptée en fonction des données du monitorage instrumental de la curarisation."
+      }
+    ],
+    "surveillance_specifique": [
+      {
+        "evenement": "Curarisation résiduelle post-opératoire",
+        "explication": "Risque décrit avec tous les curares non dépolarisants, y compris le bromure de rocuronium ; elle expose à des complications respiratoires si l'extubation intervient avant récupération suffisante du bloc neuromusculaire. Les patients âgés (65 ans ou plus) peuvent présenter un risque accru de bloc neuromusculaire résiduel.",
+        "action": "Vérifier par monitorage instrumental (et clinique) la décurarisation complète avant l'extubation et avant le transfert en salle de réveil ; s'assurer que le patient respire spontanément, profondément et régulièrement ; signaler au prescripteur toute suspicion de bloc résiduel."
+      },
+      {
+        "evenement": "Impossibilité de contrôler les voies aériennes après administration",
+        "explication": "Situation pouvant survenir après l'administration de rocuronium, notamment en séquence rapide.",
+        "action": "Signaler immédiatement au prescripteur ; l'utilisation de sugammadex à dose adaptée peut être envisagée pour lever le bloc."
+      },
+      {
+        "evenement": "Réaction anaphylactique",
+        "explication": "Très rare avec le bromure de rocuronium selon le RCP. La SFAR rapporte une fréquence estimée de l'anaphylaxie au rocuronium de l'ordre de 1/2499 administrations, et une part de 4,6 % des accidents allergiques aux curares pour seulement 1,1 % de part de marché. Une réactivité allergique croisée avec d'autres curares est à considérer chez les patients ayant un antécédent connu.",
+        "action": "Évoquer systématiquement le diagnostic devant tout signe évocateur, prendre les mesures adéquates immédiates et signaler au prescripteur ; rechercher un antécédent d'allergie aux curares avant l'administration si le contexte le permet."
+      },
+      {
+        "evenement": "Crise hypertensive chez le patient porteur d'un phéochromocytome diagnostiqué ou latent",
+        "explication": "Cas identifiés en post-commercialisation, temporellement associés à l'administration de rocuronium.",
+        "action": "Utiliser avec prudence chez ces patients ; surveiller la pression artérielle et signaler au prescripteur toute élévation tensionnelle marquée après l'injection."
+      },
+      {
+        "evenement": "Paralysie prolongée et/ou faiblesse des muscles striés après utilisation prolongée en soins intensifs, en particulier associée à une corticothérapie",
+        "explication": "Rapportée après usage prolongé de myorelaxants en réanimation, notamment en cas de co-prescription de corticoïdes ; la durée d'utilisation du myorelaxant doit alors être la plus courte possible.",
+        "action": "Assurer un monitorage instrumental continu de la curarisation tout au long de l'utilisation en réanimation, une analgésie et une sédation adaptées ; signaler au prescripteur toute faiblesse musculaire persistante à l'arrêt du traitement."
+      },
+      {
+        "evenement": "Allongement du délai et/ou de la durée d'action en cas d'anomalie circulatoire (maladie cardiovasculaire, sénescence, œdème) ou d'atteinte hépatique/rénale",
+        "explication": "Lié à l'allongement du temps de circulation ou à la réduction de la clairance plasmatique du rocuronium, dont l'élimination est urinaire et biliaire.",
+        "action": "Anticiper un délai et une durée d'action prolongés chez ces patients ; adapter la surveillance au monitorage instrumental de la curarisation."
+      },
+      {
+        "evenement": "Sensibilité modifiée chez les patients atteints d'une affection neuromusculaire (myasthénie, syndrome myasthénique de Lambert-Eaton, myopathie) ou porteurs d'une séquelle motrice (parésie, plégie)",
+        "explication": "Sensibilité augmentée (besoins réduits) en cas de myasthénie, de syndrome myasthénique ou de myopathie ; sensibilité diminuée (besoins augmentés) du territoire concerné par une séquelle motrice.",
+        "action": "Titrer la dose à l'aide d'un monitorage instrumental de la curarisation chez ces patients."
+      },
+      {
+        "evenement": "Potentialisation du bloc neuromusculaire par l'hypothermie",
+        "explication": "Comme avec tous les curares non dépolarisants, l'hypothermie potentialise l'effet de blocage neuromusculaire du bromure de rocuronium.",
+        "action": "Évaluer cette interaction par le monitorage instrumental de la curarisation en cas d'hypothermie."
+      },
+      {
+        "evenement": "Perturbations électrolytiques ou acido-basiques potentialisant l'effet du rocuronium",
+        "explication": "Conditions favorisant une majoration de l'effet de blocage neuromusculaire.",
+        "action": "Signaler au prescripteur toute anomalie électrolytique, acido-basique ou état de déshydratation connu avant l'administration ; corriger dans la mesure du possible et surveiller en conséquence."
+      }
+    ],
+    "pictogrammes": [],
+    "note_ajustement": "Chez le sujet âgé (65 ans ou plus) et chez les patients présentant une atteinte hépatique et/ou des voies biliaires cliniquement significative et/ou une insuffisance rénale : la dose d'intubation reste la dose standard de 0,6 mg/kg, mais la dose d'entretien est réduite à 0,075-0,1 mg/kg et le débit de perfusion continue à 0,3-0,4 mg/kg/h ; une prolongation de la durée d'action a été observée chez ces patients à la dose de 0,6 mg/kg. Chez le patient en surcharge pondérale ou obèse (excès de poids ≥ 30 % par rapport au poids idéal), les doses doivent être réduites en se basant sur le poids idéal, sous peine d'un allongement de la durée d'action si le poids réel est utilisé pour le calcul. Chez le patient brûlé, une résistance aux curares non dépolarisants est généralement observée, imposant un ajustement de la posologie en fonction de la réponse clinique."
+  },
+  "iv": {
+    "reconstitution": null,
+    "preparation": [
+      {
+        "voie": "IVD",
+        "contexte": "induction / entretien",
+        "detail": "Utiliser pur, en injection intraveineuse directe (bolus).",
+        "duree": "Bolus",
+        "stabilite": null
+      },
+      {
+        "voie": "PSE",
+        "contexte": "entretien, soins aigus",
+        "detail": "Utiliser pur, en pousse-seringue électrique : 500 mg dans 50 mL, soit 10 mg/mL (concentration non diluée).",
+        "duree": "Continu",
+        "stabilite": null
+      },
+      {
+        "voie": "PERF",
+        "contexte": "entretien, dilution standard",
+        "detail": "500 mg de bromure de rocuronium dilués dans un soluté de chlorure de sodium à 0,9 % ou de glucose à 5 %, pour une concentration de 0,5 à 2 mg/mL.",
+        "duree": "Continu",
+        "stabilite": "Sur le plan microbiologique, à utiliser immédiatement après dilution ; en cas d'utilisation non immédiate, la conservation ne doit pas dépasser 24 heures entre 2 et 8 °C."
+      }
+    ],
+    "administration": {
+      "note_ajustement": "",
+      "posologie": [
+        {
+          "population": "Intubation trachéale, induction de routine",
+          "population_type": "adulte",
+          "categorie": "generale",
+          "dose_mg_kg_min": 0.6,
+          "dose_mg_kg_max": 0.6
+        },
+        {
+          "population": "Intubation trachéale, induction à séquence rapide",
+          "population_type": "adulte",
+          "categorie": "generale",
+          "dose_mg_kg_min": 1.0,
+          "dose_mg_kg_max": 1.0
+        },
+        {
+          "population": "Entretien anesthésique, sous anesthésie intraveineuse",
+          "population_type": "adulte",
+          "categorie": "generale",
+          "dose_mg_kg_min": 0.15,
+          "dose_mg_kg_max": 0.15
+        },
+        {
+          "population": "Entretien anesthésique, sous anesthésiques volatils prolongés",
+          "population_type": "adulte",
+          "categorie": "generale",
+          "dose_mg_kg_min": 0.075,
+          "dose_mg_kg_max": 0.1
+        },
+        {
+          "population": "Entretien anesthésique en perfusion continue, sous anesthésie intraveineuse",
+          "population_type": "adulte",
+          "categorie": "pse",
+          "dose_mgkgh_min": 0.3,
+          "dose_mgkgh_max": 0.6
+        },
+        {
+          "population": "Entretien anesthésique en perfusion continue, sous halogénés",
+          "population_type": "adulte",
+          "categorie": "pse",
+          "dose_mgkgh_min": 0.3,
+          "dose_mgkgh_max": 0.4
+        },
+        {
+          "population": "Intubation trachéale, induction de routine (population pédiatrique)",
+          "population_type": "pediatrie",
+          "categorie": "generale",
+          "age_min_jours": 0,
+          "age_max_mois": 216,
+          "dose_mg_kg_min": 0.6,
+          "dose_mg_kg_max": 0.6
+        },
+        {
+          "population": "Entretien anesthésique (population pédiatrique)",
+          "population_type": "pediatrie",
+          "categorie": "generale",
+          "age_min_jours": 0,
+          "age_max_mois": 216,
+          "dose_mg_kg_min": 0.15,
+          "dose_mg_kg_max": 0.15
+        },
+        {
+          "population": "Entretien anesthésique en perfusion continue (population pédiatrique)",
+          "population_type": "pediatrie",
+          "categorie": "pse",
+          "age_min_jours": 0,
+          "age_max_mois": 216,
+          "dose_mgkgh_min": 0.3,
+          "dose_mgkgh_max": 0.6
+        }
+      ]
+    },
+    "incompatibilites": [
+      {
+        "substance": "Amoxicilline",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Amphotéricine",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Azathioprine",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Céfazoline",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Cloxacilline",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Dexaméthasone",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Diazépam",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Énoximone",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Érythromycine",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Famotidine",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Furosémide",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Hydrocortisone (succinate sodique)",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Insuline",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Intralipide (émulsion lipidique)",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Méthohexital",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Méthylprednisolone",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Prednisolone (succinate sodique)",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Thiopental",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Triméthoprime",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Vancomycine",
+        "niveau": "absolu"
+      }
+    ]
+  },
+  "oral": null,
+  "aerosol": null,
+  "tracabilite": {
+    "rcp_source": [
+      {
+        "specialite": "ROCURONIUM B.BRAUN 10 mg/mL, solution injectable",
+        "titulaire": "B BRAUN MELSUNGEN",
+        "date_maj": "RCP mis à jour le 30/03/2026, AMM 34009 550 713 6 5, commercialisée depuis le 23/05/2011",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/64544979/extrait"
+      },
+      {
+        "specialite": "ROCURONIUM KABI 10 mg/mL, solution injectable/pour perfusion",
+        "titulaire": "FRESENIUS KABI FRANCE",
+        "date_maj": "RCP mis à jour le 20/04/2026, AMM 34009 550 765 5 1, commercialisée depuis le 01/10/2020",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/65637913/extrait"
+      },
+      {
+        "specialite": "ROCURONIUM VIATRIS 10 mg/mL, solution injectable/pour perfusion",
+        "titulaire": "VIATRIS SANTE",
+        "date_maj": "RCP mis à jour le 15/04/2026, AMM 34009 550 566 1 4, commercialisée depuis le 25/06/2018",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/64634775/extrait"
+      },
+      {
+        "specialite": "ROCURONIUM HIKMA 10 mg/mL, solution injectable/pour perfusion",
+        "titulaire": "HIKMA FARMACEUTICA (PORTUGAL)",
+        "date_maj": "RCP mis à jour le 12/06/2026, AMM 34009 550 538 6 6, commercialisée depuis le 21/03/2018",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/63727550/extrait"
+      },
+      {
+        "specialite": "ROCURONIUM KALCEKS 10 mg/mL, solution injectable/pour perfusion",
+        "titulaire": "AS KALCEKS (LETTONIE)",
+        "date_maj": "RCP mis à jour le 15/04/2026, commercialisée depuis le 21/12/2018",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/68522898/extrait"
+      },
+      {
+        "specialite": "ROCURONIUM NORIDEM 10 mg/mL, solution injectable/pour perfusion",
+        "titulaire": "NORIDEM",
+        "date_maj": "RCP mis à jour le 02/07/2026, commercialisée depuis le 13/01/2020",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/67801877/extrait"
+      },
+      {
+        "specialite": "ROCURONIUM AGUETTANT 10 mg/mL, solution injectable en seringue pré-remplie",
+        "titulaire": "AGUETTANT",
+        "date_maj": "RCP mis à jour le 21/08/2026, commercialisée depuis le 26/05/2023",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/67527248/extrait"
+      },
+      {
+        "specialite": "ESMERON 10 mg/mL, solution injectable",
+        "titulaire": "MSD FRANCE",
+        "date_maj": "Non applicable",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/68986795/extrait"
+      },
+      {
+        "specialite": "ROCURONIUM HOSPIRA 10 mg/mL, solution injectable/pour perfusion",
+        "titulaire": "PFIZER HOLDING FRANCE",
+        "date_maj": "Non applicable",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/61475862/extrait"
+      }
+    ],
+    "statut": "valide",
+    "validation": {
+      "date": "2026-09-10",
+      "validateur": "Anna Trabaud-Lopez (IDE, porteuse du projet), vérification des données extraites contre les RCP ; équipe pharmacie, validation de la méthodologie et arbitrage des points litigieux",
+      "perimetre": [
+        "adulte",
+        "pediatrie"
+      ],
+      "prochaine_revision": "2026-12-10"
+    }
+  }
+}

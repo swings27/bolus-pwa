@@ -100,7 +100,7 @@
           "intervalle_max_min": 5
         },
         {
-          "population": "Choc anaphylactique établi (après dilution 1mg dans 9ml de NaCl 0,9%)",
+          "population": "Choc anaphylactique établi (après dilution)",
           "population_type": "adulte",
           "categorie": "generale",
           "dose_par_prise_mg_min": 0.1,
@@ -127,7 +127,7 @@
           "intervalle_max_min": 15
         },
         {
-          "population": "Détresses cardio-circulatoires (états de choc)",
+          "population": "Détresses cardio-circulatoires",
           "population_type": "adulte",
           "categorie": "pse",
           "dose_ug_kg_minute_min": 0.01,

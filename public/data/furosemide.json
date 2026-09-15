@@ -369,8 +369,8 @@
       }
     ],
     "recommandation_sonde": {
-      "forme_preferee": "Solution buvable 10 mg/mL",
-      "alternative": ""
+      "forme_preferee": "Solution buvable",
+      "alternative": "Comprimé sécable écrasé"
     }
   },
   "aerosol": null,
