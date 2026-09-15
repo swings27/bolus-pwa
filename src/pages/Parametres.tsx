@@ -4,7 +4,14 @@ import Header from '../components/layout/Header'
 import { useTheme } from '../contexts/ThemeContext'
 import type { Theme } from '../contexts/ThemeContext'
 import { db } from '../db'
-import { CLE_FICHES_VERSION, CLE_FICHES_DATE_CATALOGUE, CLE_STOCKAGE_PERSISTANT, CLE_ONBOARDING_VU } from '../db/cles'
+import { oublierVersionCatalogue } from '../hooks/useFichesLoader'
+import {
+  CLE_FICHES_VERSION,
+  CLE_FICHES_DATE_CATALOGUE,
+  CLE_ONBOARDING_VU,
+  CLE_INSTALL_BANNER_MASQUE,
+  CLE_THEME,
+} from '../db/cles'
 
 interface IOptionTheme {
   valeur: Theme
@@ -32,10 +39,15 @@ export default function Parametres() {
   const { theme, setTheme } = useTheme()
   const [versionFiches, setVersionFiches] = useState('—')
   const [dateCatalogue, setDateCatalogue] = useState('—')
-  const [stockagePersistant, setStockagePersistant] = useState('—')
+  const [miseAJourEnCours, setMiseAJourEnCours] = useState(false)
+  // Confirmation en deux temps plutôt qu'un window.confirm() : l'action est
+  // irréversible, mais aucune boîte de dialogue native n'est utilisée
+  // ailleurs dans l'app, et certains navigateurs en PWA les escamotent.
+  const [confirmeEffacement, setConfirmeEffacement] = useState(false)
+  const [effacementEnCours, setEffacementEnCours] = useState(false)
 
   useEffect(() => {
-    // Trois lectures indépendantes de la même table : lancées en parallèle
+    // Deux lectures indépendantes de la même table : lancées en parallèle
     // plutôt qu'attendues l'une après l'autre (même principe que dans
     // useFichesLoader/InstallBanner).
     Promise.all([
@@ -44,16 +56,43 @@ export default function Parametres() {
       // l'app : on la relit dans Dexie plutôt que de re-télécharger
       // /data/version.json, déjà fetché quelques instants plus tôt.
       db.parametres.get(CLE_FICHES_DATE_CATALOGUE),
-      // Résultat déjà mémorisé par la demande faite au démarrage de l'app
-      // (voir App.tsx / src/utils/persistance.ts) — on le relit ici plutôt
-      // que de rappeler navigator.storage.persist() une deuxième fois.
-      db.parametres.get(CLE_STOCKAGE_PERSISTANT),
-    ]).then(([paramVersion, paramDateCatalogue, paramStockage]) => {
+    ]).then(([paramVersion, paramDateCatalogue]) => {
       if (paramVersion) setVersionFiches(paramVersion.valeur)
       setDateCatalogue(paramDateCatalogue?.valeur ?? 'indisponible')
-      if (paramStockage) setStockagePersistant(paramStockage.valeur === 'true' ? 'accordé' : 'non accordé')
     })
   }, [])
+
+  // Le chargeur ne compare les versions qu'au démarrage : sans ce bouton,
+  // une personne dont le cache est resté sur un catalogue périmé n'a aucun
+  // moyen de forcer la resynchronisation. On oublie la version locale puis
+  // on recharge — c'est le démarrage suivant qui refait tout le travail,
+  // avec sa logique de comparaison inchangée. Les favoris et l'historique
+  // ne sont pas touchés.
+  async function mettreAJourLesFiches() {
+    setMiseAJourEnCours(true)
+    await oublierVersionCatalogue()
+    window.location.reload()
+  }
+
+  // Droit d'effacement du RGPD, rendu réellement exerçable : la politique de
+  // confidentialité annonce ce droit, mais sa seule mise en œuvre était
+  // « supprimez l'application » — pour une PWA, cela veut dire aller vider
+  // les données de site dans les réglages du navigateur, une manipulation
+  // que personne ne trouve.
+  //
+  // db.delete() efface la base entière plutôt que les clés une à une : c'est
+  // la seule façon de garantir qu'aucune donnée n'est oubliée, y compris une
+  // clé qu'un futur ajout introduirait sans penser à cet écran. Le thème vit
+  // en double dans localStorage (cache de démarrage anti-flash, voir
+  // index.html) et doit donc être retiré séparément. Le catalogue de fiches
+  // part avec le reste et sera retéléchargé au rechargement : l'application
+  // revient exactement à son état de première ouverture.
+  async function effacerMesDonnees() {
+    setEffacementEnCours(true)
+    localStorage.removeItem(CLE_THEME)
+    await db.delete()
+    window.location.reload()
+  }
 
   return (
     // Header hors du conteneur à padding horizontal : sticky en haut, il
@@ -98,26 +137,84 @@ export default function Parametres() {
 
         <section className="flex flex-col gap-1">
           <h2 className="font-display text-lg font-semibold text-texte">Informations</h2>
+          {/* Plus de ligne "Stockage persistant" : elle affichait un état
+              technique du navigateur, que personne ne peut ni interpréter ni
+              changer depuis cet écran. L'information reste mémorisée par
+              l'app (voir persistance.ts), elle n'est simplement plus
+              exposée ici. */}
           <div className="flex flex-col divide-y divide-texte/10">
             <LigneInfo label="Version de l'application" valeur={__APP_VERSION__} />
             <LigneInfo label="Version des fiches" valeur={versionFiches} />
             <LigneInfo label="Catalogue mis à jour le" valeur={dateCatalogue} />
-            <LigneInfo label="Stockage persistant" valeur={stockagePersistant} />
           </div>
+          <button
+            type="button"
+            onClick={mettreAJourLesFiches}
+            disabled={miseAJourEnCours}
+            className="tactile flex items-center py-3 text-left text-sm"
+            style={{ color: 'var(--interactif)' }}
+          >
+            {miseAJourEnCours ? 'Mise à jour…' : 'Vérifier les mises à jour des fiches'}
+          </button>
         </section>
 
         <section className="flex flex-col gap-1">
           <h2 className="font-display text-lg font-semibold text-texte">Aide</h2>
+          <div className="flex flex-col divide-y divide-texte/10">
+            <button
+              type="button"
+              // La suppression de la clé suffit : Onboarding lit cette même
+              // clé via useLiveQuery et se réaffiche automatiquement dès
+              // qu'elle disparaît, sans navigation ni état intermédiaire.
+              onClick={() => db.parametres.delete(CLE_ONBOARDING_VU)}
+              className="tactile flex items-center py-3 text-left text-sm text-texte"
+            >
+              Revoir la présentation de l'application →
+            </button>
+            <button
+              type="button"
+              // Fermer le bandeau d'installation écrivait une clé que rien ne
+              // supprimait ensuite : le geste était définitif, et sur iOS il
+              // n'existe aucune invite native pour le rattraper — plus aucun
+              // moyen, donc, d'apprendre à installer l'app sur son écran
+              // d'accueil. Le bandeau se réaffiche de lui-même dès la clé
+              // retirée, aux conditions habituelles (voir InstallBanner).
+              onClick={() => db.parametres.delete(CLE_INSTALL_BANNER_MASQUE)}
+              className="tactile flex items-center py-3 text-left text-sm text-texte"
+            >
+              Revoir l'aide à l'installation →
+            </button>
+          </div>
+        </section>
+
+        <section className="flex flex-col gap-1">
+          <h2 className="font-display text-lg font-semibold text-texte">Mes données</h2>
+          <p className="pb-1 text-xs text-texte-doux">
+            Favoris, fiches consultées, préférences et catalogue hors ligne. Tout est stocké sur cet
+            appareil uniquement.
+          </p>
           <button
             type="button"
-            // La suppression de la clé suffit : Onboarding lit cette même
-            // clé via useLiveQuery et se réaffiche automatiquement dès
-            // qu'elle disparaît, sans navigation ni état intermédiaire.
-            onClick={() => db.parametres.delete(CLE_ONBOARDING_VU)}
-            className="tactile flex items-center py-3 text-sm text-texte"
+            onClick={() => (confirmeEffacement ? effacerMesDonnees() : setConfirmeEffacement(true))}
+            disabled={effacementEnCours}
+            className="tactile flex items-center py-3 text-left text-sm font-medium"
+            style={{ color: 'var(--alerte)' }}
           >
-            Revoir la présentation de l'application
+            {effacementEnCours
+              ? 'Effacement…'
+              : confirmeEffacement
+                ? 'Confirmer : tout effacer définitivement'
+                : 'Effacer mes données locales'}
           </button>
+          {confirmeEffacement && !effacementEnCours && (
+            <button
+              type="button"
+              onClick={() => setConfirmeEffacement(false)}
+              className="tactile flex items-center py-2 text-left text-sm text-texte-doux"
+            >
+              Annuler
+            </button>
+          )}
         </section>
       </div>
     </div>

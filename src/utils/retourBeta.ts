@@ -1,6 +1,6 @@
 import { db } from '../db'
 import { CLE_FICHES_VERSION } from '../db/cles'
-import { APP } from '../data/editeur'
+import { EDITEUR } from '../data/editeur'
 
 // Rappel affiché juste avant le bloc technique de chaque retour bêta : une
 // fiche remontée avec un exemple concret ("chez ce patient...") ferait de
@@ -61,7 +61,7 @@ export async function construireMailtoRetour({ sujet, route, enTete }: IOptionsM
     '',
     '---',
     'Informations techniques, ne pas modifier',
-    `Version app : ${APP.version}`,
+    `Version app : ${__APP_VERSION__}`,
     `Version fiches : ${versionFiches}`,
     `Écran : ${route}`,
     `Appareil : ${appareil}`,
@@ -73,5 +73,5 @@ export async function construireMailtoRetour({ sujet, route, enTete }: IOptionsM
   // n'interprètent pas comme un retour à la ligne).
   const corps = encodeURIComponent(lignes.join('\r\n'))
 
-  return `mailto:${APP.contact}?subject=${encodeURIComponent(sujet)}&body=${corps}`
+  return `mailto:${EDITEUR.email}?subject=${encodeURIComponent(sujet)}&body=${corps}`
 }

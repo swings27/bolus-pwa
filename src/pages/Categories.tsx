@@ -42,7 +42,7 @@ export default function Categories() {
                 // div, pas p : ListeSeparee rend elle-même un <p> — un <p>
                 // dans un <p> est un nid de balises invalide (React avertit
                 // "cannot appear as a descendant of").
-                <div className="text-[11px] text-texte-doux">
+                <div className="text-[0.6875rem] text-texte-doux">
                   <ListeSeparee items={categorie.sousFamillesPresentes} />
                 </div>
               )}

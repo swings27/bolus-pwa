@@ -13,6 +13,19 @@ interface IOnglet {
 // l'onglet central mis en avant visuellement dans le rendu ci-dessous. Le
 // Menu, lui, vit désormais dans le Header (accessible depuis n'importe
 // quelle page) plutôt qu'ici — Favoris prend sa place.
+// Seules tailles de texte bornées en haut de toute l'app. Ailleurs le
+// texte suit la taille de police du système sans limite propre (jusqu'au
+// plafond global de 22px posé dans index.html) ; ici, cinq libellés se
+// partagent une largeur d'écran fixe, dont « Calculateur » et
+// « Catégories ». Mesuré sur un écran de 390px : 16px d'écart entre deux
+// libellés à 12px de corps, 8px à 13,5px, 2px à 15px, et ils se touchent à
+// 15,75px. min() laisse donc la taille suivre la racine jusqu'à 13,5px,
+// puis la fige — les icônes et les zones tactiles, elles, ne changent pas.
+const PLAFOND_LIBELLE = 'min(0.75rem, 13.5px)'
+// L'onglet Calculateur part d'un corps légèrement plus grand (0,8125rem),
+// et se fige au même endroit que les autres pour ne pas dépasser la rangée.
+const PLAFOND_LIBELLE_CALC = 'min(0.8125rem, 13.5px)'
+
 const onglets: IOnglet[] = [
   { to: '/', label: 'Accueil', icon: Home },
   { to: '/recherche', label: 'Recherche', icon: Search },
@@ -111,8 +124,10 @@ export default function BottomNavBar() {
                 <Calculator size={24} color="var(--calc-icone)" aria-hidden="true" />
               </span>
               <span
-                className={`text-[13px] ${actif ? 'font-semibold' : 'font-medium'}`}
-                style={{ color: couleur }}
+                className={actif ? 'font-semibold' : 'font-medium'}
+                // min() : suit la racine jusqu'à 13,5px puis se fige — voir le
+                // commentaire de PLAFOND_LIBELLE plus bas.
+                style={{ color: couleur, fontSize: PLAFOND_LIBELLE_CALC }}
               >
                 {label}
               </span>
@@ -129,8 +144,8 @@ export default function BottomNavBar() {
           >
             <Icon size={22} color={couleur} strokeWidth={actif ? 2.5 : 2} aria-hidden="true" />
             <span
-              className={`text-[12px] ${actif ? 'font-semibold' : 'font-medium'}`}
-              style={{ color: couleur }}
+              className={actif ? 'font-semibold' : 'font-medium'}
+              style={{ color: couleur, fontSize: PLAFOND_LIBELLE }}
             >
               {label}
             </span>

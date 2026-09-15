@@ -73,6 +73,55 @@
       })()
     </script>
 
+    <!-- Dynamic Type iOS. Toutes les tailles de texte de l'app sont en rem,
+         donc elles suivent la taille de police par défaut du navigateur —
+         ce qui marche sur Android et sur les navigateurs de bureau, mais PAS
+         sur iOS : Safari ne répercute pas le réglage « Taille du texte » de
+         l'iPhone sur la racine. Il faut le lui demander explicitement, et
+         la seule façon de lire ce réglage est la valeur système
+         "-apple-system-body".
+
+         On la lit sur <html> puis on la remplace aussitôt par une taille en
+         pixels calculée, plutôt que de laisser "font: -apple-system-body"
+         en place : ce raccourci écraserait aussi la police, la graisse et
+         l'interlignage de la racine.
+
+         Le calcul fait deux choses :
+         — 16 x taille/17 : 17px est le corps système au réglage PAR DÉFAUT
+           d'iOS. Quelqu'un qui n'a jamais touché ce réglage retrouve donc
+           exactement les 16px d'aujourd'hui, l'app ne change pas d'aspect
+           sous ses yeux ; seuls ceux qui ont demandé un texte plus grand
+           en voient un.
+         — bornes 16 à 22px : mesuré route par route sur un écran de 390px,
+           la mise en page tient jusqu'à 22px (x1,38). À 24px la tuile de
+           catégorie déborde de l'écran, à 26px c'est l'onglet Favoris de la
+           barre du bas. Sans plafond, les crans d'accessibilité iOS montent
+           jusqu'à 53px et casseraient tout. Le plancher à 16px empêche
+           l'inverse : macOS renvoie 13px pour cette même valeur système, et
+           l'app y rapetisserait sans raison.
+
+         Le garde CSS.supports est indispensable : ailleurs que sur les
+         plateformes Apple, la sonde renverrait la taille par défaut du
+         navigateur et on écraserait le réglage de l'utilisateur avec 16px,
+         annulant précisément le bénéfice des rem. -->
+    <script>
+      (function () {
+        if (!window.CSS || !CSS.supports('font', '-apple-system-body')) return
+        try {
+          var racine = document.documentElement
+          racine.style.font = '-apple-system-body'
+          var corps = parseFloat(getComputedStyle(racine).fontSize)
+          racine.style.font = ''
+          if (corps > 0) {
+            racine.style.fontSize = Math.min(Math.max((16 * corps) / 17, 16), 22) + 'px'
+          }
+        } catch (erreur) {
+          /* Réglage d'agrément : en cas d'échec, on reste sur les 16px par
+             défaut plutôt que de risquer un écran blanc au démarrage. */
+        }
+      })()
+    </script>
+
     <!-- preconnect accélère la négociation TLS avec les domaines Google
          Fonts avant même que le CSS des polices ne soit demandé. -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />

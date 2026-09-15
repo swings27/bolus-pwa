@@ -29,6 +29,19 @@ async function recupererJson<T>(url: string): Promise<T> {
   return reponse.json()
 }
 
+/** Efface la version du catalogue mémorisée localement, ce qui force un
+ * téléchargement complet des fiches au prochain démarrage : la comparaison
+ * de versions ci-dessous ne trouve plus de valeur locale et ne peut donc
+ * plus conclure « déjà à jour ».
+ *
+ * Volontairement réduit à cet oubli plutôt que de rejouer la
+ * synchronisation : la logique de comparaison et d'écriture reste à un seul
+ * endroit, celui qui s'exécute au démarrage. À l'appelant de recharger
+ * l'app ensuite (voir la page Paramètres). */
+export async function oublierVersionCatalogue(): Promise<void> {
+  await db.parametres.delete(CLE_FICHES_VERSION)
+}
+
 // Ce hook synchronise les fiches médicaments du CDN (un fichier JSON par
 // fiche dans /public/data/, voir src/data/categoriesFiches.ts pour la liste)
 // vers Dexie (IndexedDB), pour que l'app puisse ensuite lire les fiches

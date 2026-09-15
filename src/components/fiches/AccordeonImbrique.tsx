@@ -34,7 +34,7 @@ export default function AccordeonImbrique({ items }: IAccordeonImbriqueProps) {
                   qu'il se détache nettement au premier coup d'œil, avant même
                   de déplier — la hiérarchie ne doit pas reposer sur le seul
                   gras. */}
-              <span className="text-[13px] font-semibold text-texte">{item.titre}</span>
+              <span className="text-[0.8125rem] font-semibold text-texte">{item.titre}</span>
               <ChevronBascule ouvert={ouvert} className="h-3.5 w-3.5 text-accent" />
             </button>
             {ouvert && (
@@ -57,7 +57,7 @@ export default function AccordeonImbrique({ items }: IAccordeonImbriqueProps) {
                       borderLeft: '3px solid var(--accent)',
                     }}
                   >
-                    <p className="mb-0.5 text-[10px] font-semibold uppercase tracking-wide" style={{ color: 'var(--interactif)' }}>
+                    <p className="mb-0.5 text-[0.625rem] font-semibold uppercase tracking-wide" style={{ color: 'var(--interactif)' }}>
                       Conduite à tenir
                     </p>
                     <p className="text-xs leading-relaxed text-texte">{item.conduite}</p>

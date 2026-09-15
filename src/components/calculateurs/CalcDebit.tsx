@@ -30,7 +30,7 @@ const OPTIONS_CALIBRE = [
     label: (
       <span className="flex flex-col items-center gap-0.5">
         <span className="text-sm font-semibold">{valeur}</span>
-        <span className="text-[11px]" style={{ opacity: 0.75 }}>
+        <span className="text-[0.6875rem]" style={{ opacity: 0.75 }}>
           {usage}
         </span>
       </span>

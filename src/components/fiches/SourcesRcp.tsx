@@ -61,7 +61,7 @@ export default function SourcesRcp({
       <button
         type="button"
         onClick={() => setOuvert(true)}
-        className="tactile pt-3 text-left text-[11px] italic text-texte-doux/70"
+        className="tactile pt-3 text-left text-[0.6875rem] italic text-texte-doux/70"
       >
         Sources RCP ({sources.length}) · {formatDateFr(dateRevision)} ›
       </button>
@@ -81,7 +81,7 @@ export default function SourcesRcp({
             onClick={(evenement) => evenement.stopPropagation()}
           >
             <div className="flex items-center justify-between">
-              <span id="sources-rcp-titre" className="text-[15px] font-semibold text-texte">
+              <span id="sources-rcp-titre" className="text-[0.9375rem] font-semibold text-texte">
                 RCP consultés
               </span>
               <button
@@ -93,7 +93,7 @@ export default function SourcesRcp({
                 <X className="h-5 w-5" aria-hidden="true" />
               </button>
             </div>
-            <p className="mb-3.5 text-[11px] text-texte-doux/70">
+            <p className="mb-3.5 text-[0.6875rem] text-texte-doux/70">
               Dernière veille : {formatDateFr(dateRevision)}
             </p>
 
@@ -107,13 +107,13 @@ export default function SourcesRcp({
               {sources.map((source, index) => (
                 <li
                   key={`${source.specialite}-${index}`}
-                  className={`py-2.5 text-[13px] text-texte ${
+                  className={`py-2.5 text-[0.8125rem] text-texte ${
                     index < sources.length - 1 ? 'border-b border-texte/10' : ''
                   }`}
                 >
                   <div className="font-semibold">{source.specialite}</div>
                   {(source.titulaire || source.date_maj) && (
-                    <div className="mt-0.5 text-[11px] text-texte-doux">
+                    <div className="mt-0.5 text-[0.6875rem] text-texte-doux">
                       {[source.titulaire, source.date_maj && `MAJ ${source.date_maj}`].filter(Boolean).join(' · ')}
                     </div>
                   )}
@@ -125,7 +125,7 @@ export default function SourcesRcp({
             </ul>
 
             {aPiedDePage && (
-              <div className="mt-3 border-t border-texte/10 pt-3 text-[11px] text-texte-doux">
+              <div className="mt-3 border-t border-texte/10 pt-3 text-[0.6875rem] text-texte-doux">
                 {perimetreValidation.length > 0 && <p>Périmètre validé : {perimetreValidation.join(', ')}</p>}
                 {prochaineRevision && <p>Prochaine révision : {formatDateFr(prochaineRevision)}</p>}
               </div>

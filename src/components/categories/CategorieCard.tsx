@@ -39,7 +39,7 @@ export default function CategorieCard({
         {nombreFiches} fiche{nombreFiches > 1 ? 's' : ''}
       </span>
       {showSousFamilles && categorie.sousFamilles.length > 0 && (
-        <span className="mt-1 text-[11px] text-texte-doux">
+        <span className="mt-1 text-[0.6875rem] text-texte-doux">
           {categorie.sousFamilles.join(' · ')}
         </span>
       )}

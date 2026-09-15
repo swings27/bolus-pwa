@@ -15,7 +15,7 @@ export default function LienExterne({ href, children }: ILienExterneProps) {
       href={href}
       target="_blank"
       rel="noreferrer"
-      className="mt-1 inline-block text-[11px] underline"
+      className="mt-1 inline-block text-[0.6875rem] underline"
       style={{ color: 'var(--interactif)' }}
     >
       {children} ↗

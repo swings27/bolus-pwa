@@ -4,7 +4,7 @@ import SectionDocument from '../components/layout/SectionDocument'
 export default function APropos() {
   return (
     <PageDocument titre="À propos">
-      <SectionDocument titre="Pourquoi Bolus">
+      <SectionDocument titre="Pourquoi Bolus ?">
         <p>
           Combien de fois une infirmier.e ou sage-femme s'est retrouvé en garde, une seringue à
           la main, à chercher une information de dilution introuvable au bon moment ? Le protocole
@@ -18,7 +18,7 @@ export default function APropos() {
         </p>
       </SectionDocument>
 
-      <SectionDocument titre="Qui est derrière Bolus">
+      <SectionDocument titre="Qui est derrière Bolus ?">
         <p>
           Bolus est développé par Anna Trabaud-Lopez, infirmière diplômée d'État depuis 2017, avec
           plusieurs années d'expérience en service d'urgences. C'est ce terrain qui a façonné
@@ -33,11 +33,15 @@ export default function APropos() {
         </p>
       </SectionDocument>
 
-      <SectionDocument titre="Comment les fiches sont construites">
+      <SectionDocument titre="Comment les fiches sont construites ?">
         <p>
-          Chaque fiche médicament de Bolus est construite à partir d'une source unique : les RCP
-          (Résumés des Caractéristiques du Produit) publiés par l'ANSM (Agence Nationale de
-          Sécurité du Médicament et des produits de santé).
+          Chaque fiche médicament de Bolus est construite à partir des <b>RCP</b>
+           (Résumés des Caractéristiques du Produit) publiés par l'ANSM (Agence Nationale de
+          Sécurité du Médicament et des produits de santé), ainsi que des protocoles et 
+          recommandations de l'<b>OMéDIT</b> (Observatoire du Médicament, des Dispositifs Médicaux 
+          et de l'Innovation Thérapeutique), de la <b>SFAR</b> (Société Française d'Anesthésie et
+          de Réanimation) et consultation au besoin, de l'<b>AP-HP</b> (Assitance Publique 
+          - Hôpitaux de Paris) et des <b>HUG</b> (Hôpitaux Universitaire de Genève).
         </p>
         <ul className="flex flex-col gap-2 pl-5 list-disc">
           <li>Aucune donnée issue de bases commerciales.</li>
@@ -52,7 +56,7 @@ export default function APropos() {
           <li>Bolus n'est pas un dispositif médical.</li>
           <li>Bolus n'est pas un outil d'aide à la décision.</li>
           <li>
-            Bolus ne se substitue ni à la prescription médicale, ni au contrôle infirmier — il les
+            Bolus ne se substitue ni à la prescription médicale, ni au contrôle infirmier : il les
             accompagne.
           </li>
         </ul>

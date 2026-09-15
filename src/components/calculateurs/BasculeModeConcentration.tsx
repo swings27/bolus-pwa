@@ -37,7 +37,7 @@ export default function BasculeModeConcentration({ mode, onChange }: IBasculeMod
             type="button"
             onClick={() => onChange(valeur)}
             aria-pressed={actif}
-            className="tactile flex-1 rounded-full px-3 py-2.5 text-center text-[12.5px] font-semibold leading-snug"
+            className="tactile flex-1 rounded-full px-3 py-2.5 text-center text-[0.78125rem] font-semibold leading-snug"
             style={{
               backgroundColor: actif ? 'var(--segment-actif-fond)' : 'var(--fond)',
               color: actif ? 'var(--segment-actif-texte)' : 'var(--interactif)',

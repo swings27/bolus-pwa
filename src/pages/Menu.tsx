@@ -27,9 +27,14 @@ export default function Menu() {
     // l'espace restant entre les marges px-6 du contenu.
     <div className="flex flex-col pb-8">
       <Header variant="retour" />
-      <h1 className="sr-only">Menu</h1>
 
+      {/* Titre visible, comme sur les six pages vers lesquelles ce menu
+          renvoie (Paramètres et PageDocument en affichent un) : c'était la
+          seule page de la section à n'avoir qu'un titre pour lecteur
+          d'écran. */}
       <div className="flex flex-col gap-8 px-6 pt-6">
+        <h1 className="font-display text-2xl font-semibold text-texte">Menu</h1>
+
         {/* overflow-hidden + divide-y : coins arrondis sur le groupe entier,
             un simple séparateur fin entre les lignes plutôt qu'une bordure
             par ligne. */}

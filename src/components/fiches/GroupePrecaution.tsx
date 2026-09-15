@@ -28,7 +28,7 @@ export default function GroupePrecaution({ icone: Icone, titre, children }: IGro
         aria-controls={idPanneau}
         className="tactile flex w-full items-center justify-between gap-2 py-2.5"
       >
-        <span className="flex items-center gap-2.5 text-[13px] font-semibold text-texte">
+        <span className="flex items-center gap-2.5 text-[0.8125rem] font-semibold text-texte">
           <span
             className="flex h-7 w-7 shrink-0 items-center justify-center rounded-[9px]"
             style={{ backgroundColor: 'color-mix(in srgb, var(--accent) 28%, transparent)' }}
