@@ -223,7 +223,7 @@ export default function FicheMedicament() {
           )}
           <div className={formesDisponibles.length > 1 ? 'mt-4' : ''}>
             {formeActive === null && (
-              <p className="px-2.5 py-4 text-center text-[0.8125rem] italic text-texte-doux/70">
+              <p className="px-2.5 py-4 text-center text-sm italic text-texte-doux/70">
                 Sélectionnez une forme d'administration ci-dessus
               </p>
             )}

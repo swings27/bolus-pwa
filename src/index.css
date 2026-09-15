@@ -209,6 +209,20 @@
      "font-display" et "font-body" à partir de ces variables. */
   --font-display: 'Fraunces', serif;
   --font-body: 'Nunito Sans', sans-serif;
+
+  /* Seul pas ajouté sous le text-xs de Tailwind (12px). Nommé par son rôle
+     et non par une place dans une suite xs/sm/base : "3xs" ne dirait pas à
+     quoi il sert, "etiquette" si.
+
+     Sous 16px, l'app n'a plus que TROIS tailles : ce pas à 10px, puis
+     text-xs (12px) et text-sm (14px), tous deux fournis par Tailwind. Elles
+     en remplacent onze, qui allaient de 9 à 15px par pas d'un demi-pixel —
+     six d'entre elles tenaient dans 2,5px, où l'œil ne distingue rien mais
+     où chaque valeur restait à maintenir.
+
+     Toute nouvelle taille sous 16px doit reprendre l'un de ces trois pas
+     plutôt que d'en réintroduire un quatrième. */
+  --text-etiquette: 0.625rem; /* 10px — étiquettes en petites capitales */
 }
 
 /* Sur iOS, tirer vers le bas au-delà du contenu fait apparaître une bande de

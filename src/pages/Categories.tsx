@@ -1,4 +1,5 @@
 import Header from '../components/layout/Header'
+import TitrePage from '../components/layout/TitrePage'
 import ListeSeparee from '../components/fiches/ListeSeparee'
 import { useCategoriesAvecFiches } from '../hooks/useCategoriesAvecFiches'
 import { useNavigationSure } from '../hooks/useNavigationSure'
@@ -14,7 +15,7 @@ export default function Categories() {
 
       <div className="flex flex-col gap-4 px-6 pb-8 pt-2">
         <div>
-          <h1 className="font-display text-2xl font-semibold text-texte">Catégories</h1>
+          <TitrePage>Catégories</TitrePage>
           <p className="text-sm text-texte-doux">Parcourir les médicaments par famille.</p>
         </div>
 
@@ -42,7 +43,7 @@ export default function Categories() {
                 // div, pas p : ListeSeparee rend elle-même un <p> — un <p>
                 // dans un <p> est un nid de balises invalide (React avertit
                 // "cannot appear as a descendant of").
-                <div className="text-[0.6875rem] text-texte-doux">
+                <div className="text-xs text-texte-doux">
                   <ListeSeparee items={categorie.sousFamillesPresentes} />
                 </div>
               )}

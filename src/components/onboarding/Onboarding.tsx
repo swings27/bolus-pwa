@@ -5,6 +5,7 @@ import { CLE_DISCLAIMER_ACCEPTE, CLE_ONBOARDING_VU } from '../../db/cles'
 import { useFocusTrap } from '../../hooks/useFocusTrap'
 import { useSwipe } from '../../hooks/useSwipe'
 import BoutonPrimaire from '../layout/BoutonPrimaire'
+import TitrePage from '../layout/TitrePage'
 import Wordmark from '../layout/Wordmark'
 import LogoO from './LogoO'
 
@@ -138,9 +139,9 @@ export default function Onboarding() {
           </div>
         )}
         <div className="flex flex-1 flex-col items-center justify-center">
-          <h2 id="onboarding-titre" className="font-display text-2xl font-semibold text-texte">
+          <TitrePage niveau="h2" id="onboarding-titre">
             {ECRANS[etape].titre}
-          </h2>
+          </TitrePage>
           <p className="mt-4 max-w-sm text-sm leading-relaxed text-texte/80">{ECRANS[etape].texte}</p>
         </div>
       </div>

@@ -62,7 +62,7 @@ export default function ResultatFiche({
       </span>
       {showCategorie && categorie && (
         <span
-          className="shrink-0 rounded-full px-2 py-0.5 text-[0.625rem] font-semibold"
+          className="shrink-0 rounded-full px-2 py-0.5 text-etiquette font-semibold"
           style={{
             backgroundColor: fondCategorie(categorie.couleur),
             color: texteCategorie(categorie.couleur),

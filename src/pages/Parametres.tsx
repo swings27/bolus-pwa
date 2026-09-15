@@ -1,10 +1,12 @@
 import { useEffect, useState } from 'react'
 import { Smartphone, Sun, Moon } from 'lucide-react'
 import Header from '../components/layout/Header'
+import TitrePage from '../components/layout/TitrePage'
 import { useTheme } from '../contexts/ThemeContext'
 import type { Theme } from '../contexts/ThemeContext'
 import { db } from '../db'
 import { oublierVersionCatalogue } from '../hooks/useFichesLoader'
+import { estInstallee } from '../utils/plateforme'
 import {
   CLE_FICHES_VERSION,
   CLE_FICHES_DATE_CATALOGUE,
@@ -24,6 +26,13 @@ const OPTIONS_THEME: IOptionTheme[] = [
   { valeur: 'clair', label: 'Clair', icon: Sun },
   { valeur: 'sombre', label: 'Sombre', icon: Moon },
 ]
+
+// Titre des quatre sections de cette page. Local plutôt que partagé : les
+// autres écrans de l'app n'ont pas ce niveau de titre, seul Paramètres
+// découpe son contenu en rubriques.
+function TitreSection({ children }: { children: string }) {
+  return <h2 className="font-display text-lg font-semibold text-texte">{children}</h2>
+}
 
 // Ligne "libellé à gauche / valeur à droite" de la section Informations.
 function LigneInfo({ label, valeur }: { label: string; valeur: string }) {
@@ -45,6 +54,10 @@ export default function Parametres() {
   // ailleurs dans l'app, et certains navigateurs en PWA les escamotent.
   const [confirmeEffacement, setConfirmeEffacement] = useState(false)
   const [effacementEnCours, setEffacementEnCours] = useState(false)
+  const [aideInstallationRetablie, setAideInstallationRetablie] = useState(false)
+  // Lu une seule fois au montage : le mode d'affichage ne change pas
+  // pendant qu'on consulte cette page.
+  const [dejaInstallee] = useState(estInstallee)
 
   useEffect(() => {
     // Deux lectures indépendantes de la même table : lancées en parallèle
@@ -72,6 +85,11 @@ export default function Parametres() {
     setMiseAJourEnCours(true)
     await oublierVersionCatalogue()
     window.location.reload()
+  }
+
+  async function reafficherAideInstallation() {
+    await db.parametres.delete(CLE_INSTALL_BANNER_MASQUE)
+    setAideInstallationRetablie(true)
   }
 
   // Droit d'effacement du RGPD, rendu réellement exerçable : la politique de
@@ -102,10 +120,10 @@ export default function Parametres() {
       <Header variant="retour" />
 
       <div className="flex flex-col gap-8 px-6 pt-6">
-        <h1 className="font-display text-2xl font-semibold text-texte">Paramètres</h1>
+        <TitrePage>Paramètres</TitrePage>
 
         <section className="flex flex-col gap-3">
-          <h2 className="font-display text-lg font-semibold text-texte">Apparence</h2>
+          <TitreSection>Apparence</TitreSection>
 
           <div className="grid grid-cols-3 gap-2">
             {OPTIONS_THEME.map(({ valeur, label, icon: Icon }) => {
@@ -136,7 +154,7 @@ export default function Parametres() {
         </section>
 
         <section className="flex flex-col gap-1">
-          <h2 className="font-display text-lg font-semibold text-texte">Informations</h2>
+          <TitreSection>Informations</TitreSection>
           {/* Plus de ligne "Stockage persistant" : elle affichait un état
               technique du navigateur, que personne ne peut ni interpréter ni
               changer depuis cet écran. L'information reste mémorisée par
@@ -159,7 +177,7 @@ export default function Parametres() {
         </section>
 
         <section className="flex flex-col gap-1">
-          <h2 className="font-display text-lg font-semibold text-texte">Aide</h2>
+          <TitreSection>Aide</TitreSection>
           <div className="flex flex-col divide-y divide-texte/10">
             <button
               type="button"
@@ -171,24 +189,37 @@ export default function Parametres() {
             >
               Revoir la présentation de l'application →
             </button>
-            <button
-              type="button"
-              // Fermer le bandeau d'installation écrivait une clé que rien ne
-              // supprimait ensuite : le geste était définitif, et sur iOS il
-              // n'existe aucune invite native pour le rattraper — plus aucun
-              // moyen, donc, d'apprendre à installer l'app sur son écran
-              // d'accueil. Le bandeau se réaffiche de lui-même dès la clé
-              // retirée, aux conditions habituelles (voir InstallBanner).
-              onClick={() => db.parametres.delete(CLE_INSTALL_BANNER_MASQUE)}
-              className="tactile flex items-center py-3 text-left text-sm text-texte"
-            >
-              Revoir l'aide à l'installation →
-            </button>
+            {/* Masquée quand l'app tourne déjà installée : le bandeau ne
+                s'afficherait pas (voir InstallBanner), l'entrée n'aurait
+                donc aucun effet visible. */}
+            {!dejaInstallee && (
+              <button
+                type="button"
+                // Fermer le bandeau d'installation écrivait une clé que rien
+                // ne supprimait ensuite : le geste était définitif, et sur
+                // iOS il n'existe aucune invite native pour le rattraper —
+                // plus aucun moyen, donc, d'apprendre à installer l'app sur
+                // son écran d'accueil.
+                onClick={reafficherAideInstallation}
+                className="tactile flex flex-col items-start py-3 text-left text-sm text-texte"
+              >
+                Revoir l'aide à l'installation →
+                {/* Le bandeau n'apparaît qu'à partir de la 2e session et
+                    seulement là où une installation est possible : sans ce
+                    retour, l'appui restait parfois sans effet visible et
+                    passait pour un bouton mort. */}
+                {aideInstallationRetablie && (
+                  <span className="pt-1 text-xs text-texte-doux">
+                    L'aide réapparaîtra au prochain lancement de l'application.
+                  </span>
+                )}
+              </button>
+            )}
           </div>
         </section>
 
         <section className="flex flex-col gap-1">
-          <h2 className="font-display text-lg font-semibold text-texte">Mes données</h2>
+          <TitreSection>Mes données</TitreSection>
           <p className="pb-1 text-xs text-texte-doux">
             Favoris, fiches consultées, préférences et catalogue hors ligne. Tout est stocké sur cet
             appareil uniquement.

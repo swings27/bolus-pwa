@@ -10,7 +10,7 @@ import ChampNumerique from './ChampNumerique'
 import ResultatCalcul from './ResultatCalcul'
 import { parseNombre, formaterFR } from './nombreUtils'
 import { concentrationDeLaDilution } from './concentrationUtils'
-import type { IValeurCalculee, IValeurDirecte, UniteBase } from './concentrationUtils'
+import type { IValeurCalculee, IValeurDirecte, UniteBase, UniteConcentration } from './concentrationUtils'
 
 // Trois décimales, et non la seule décimale du débit : une dilution courante
 // (4 mg dans 48 mL) donne 0,083 mg/mL, qu'un arrondi à 0,1 réduirait à "0,1"
@@ -43,7 +43,10 @@ type IChampConcentrationProps =
     }
 
 export default function ChampConcentration(props: IChampConcentrationProps) {
-  const uniteConcentration = `${props.unite}/mL`
+  // Typée plutôt que laissée en simple chaîne : la forme `mg/mL` |
+  // `µg/mL` est vérifiée à la compilation, une faute de frappe sur le
+  // suffixe ne passerait pas.
+  const uniteConcentration: UniteConcentration = `${props.unite}/mL`
 
   if (props.mode === 'directe') {
     const { label, valeur, onChange } = props

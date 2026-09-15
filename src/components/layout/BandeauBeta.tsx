@@ -25,7 +25,7 @@ export default function BandeauBeta() {
       style={{ paddingTop: 'env(safe-area-inset-top)', backgroundColor: 'var(--alerte)' }}
     >
       <p
-        className="py-1 text-center text-[0.5625rem] font-semibold uppercase tracking-wide"
+        className="py-1 text-center text-etiquette font-semibold uppercase tracking-wide"
         style={{ color: 'var(--fond)' }}
       >
         Version de test — données non validées

@@ -52,7 +52,7 @@ export default function ResultatCalcul({
 
   return (
     <div className={conteneur}>
-      <span className="text-[0.625rem] font-semibold uppercase tracking-widest text-texte-doux">{label}</span>
+      <span className="text-etiquette font-semibold uppercase tracking-widest text-texte-doux">{label}</span>
       {valeur === null ? (
         <span className="font-display" style={{ fontSize: taille.valeur, color: 'var(--texte-doux)' }}>
           —

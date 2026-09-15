@@ -1,6 +1,7 @@
 import { Settings, Info, Mail, FileText, Shield, ScrollText, ChevronRight } from 'lucide-react'
 import type { LucideIcon } from 'lucide-react'
 import Header from '../components/layout/Header'
+import TitrePage from '../components/layout/TitrePage'
 import { useNavigationSure } from '../hooks/useNavigationSure'
 
 interface ILienMenu {
@@ -33,7 +34,7 @@ export default function Menu() {
           seule page de la section à n'avoir qu'un titre pour lecteur
           d'écran. */}
       <div className="flex flex-col gap-8 px-6 pt-6">
-        <h1 className="font-display text-2xl font-semibold text-texte">Menu</h1>
+        <TitrePage>Menu</TitrePage>
 
         {/* overflow-hidden + divide-y : coins arrondis sur le groupe entier,
             un simple séparateur fin entre les lignes plutôt qu'une bordure

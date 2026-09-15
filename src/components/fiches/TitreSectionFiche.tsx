@@ -13,7 +13,7 @@ interface ITitreSectionFicheProps {
 export default function TitreSectionFiche({ children }: ITitreSectionFicheProps) {
   return (
     <div
-      className="mb-2.5 border-b pb-1.5 text-[0.8125rem] font-bold uppercase tracking-wide"
+      className="mb-2.5 border-b pb-1.5 text-sm font-bold uppercase tracking-wide"
       style={{ color: 'var(--interactif)', borderColor: 'color-mix(in srgb, var(--interactif) 25%, transparent)' }}
     >
       {children}

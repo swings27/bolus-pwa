@@ -51,7 +51,7 @@ export default function BlocAvertissement({ icone: Icone, couleur, variante = 't
               le titre retomberait sur la couleur de texte de la page, illisible
               sur le rouge saturé. */}
           <p
-            className={`mb-1 text-[0.59375rem] font-semibold uppercase tracking-wide ${pleine ? 'text-white' : ''}`}
+            className={`mb-1 text-etiquette font-semibold uppercase tracking-wide ${pleine ? 'text-white' : ''}`}
             style={pleine ? undefined : { color: couleur }}
           >
             {titre}

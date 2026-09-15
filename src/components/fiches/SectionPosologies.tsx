@@ -31,7 +31,7 @@ interface ISectionPosologiesProps {
 function Puce({ children, couleur }: { children: ReactNode; couleur: string }) {
   return (
     <span
-      className="shrink-0 rounded-full px-2 py-0.5 text-[0.59375rem] font-semibold"
+      className="shrink-0 rounded-full px-2 py-0.5 text-etiquette font-semibold"
       style={{ backgroundColor: `color-mix(in srgb, ${couleur} 20%, transparent)`, color: couleur }}
     >
       {children}
@@ -42,7 +42,7 @@ function Puce({ children, couleur }: { children: ReactNode; couleur: string }) {
 function ChampPosologie({ libelle, valeur, accent }: { libelle: string; valeur: ReactNode; accent?: boolean }) {
   return (
     <div>
-      <div className="text-[0.5625rem] font-semibold uppercase tracking-wide text-texte-doux/70">{libelle}</div>
+      <div className="text-etiquette font-semibold uppercase tracking-wide text-texte-doux/70">{libelle}</div>
       <div className="text-sm font-semibold text-texte" style={accent ? { color: 'var(--interactif)' } : undefined}>
         {valeur}
       </div>
@@ -95,7 +95,7 @@ function CartePosologie({ p }: { p: IPosologieRcp }) {
       <div className="mb-2 flex items-start justify-between gap-2">
         <div className="min-w-0">
           <div className="text-sm font-semibold leading-snug text-texte">{p.population}</div>
-          {detailPopulation && <div className="mt-0.5 text-[0.6875rem] text-texte-doux">{detailPopulation}</div>}
+          {detailPopulation && <div className="mt-0.5 text-xs text-texte-doux">{detailPopulation}</div>}
         </div>
         {p.tdm_requis && (
           <div className="flex shrink-0 flex-col items-end gap-1">
@@ -131,7 +131,7 @@ function BlocGroupe({ titre, repliable, children }: { titre: string | null; repl
   if (!repliable) {
     return (
       <>
-        <div className="mb-1.5 text-[0.65625rem] font-semibold uppercase tracking-wide text-texte-doux">{titre}</div>
+        <div className="mb-1.5 text-xs font-semibold uppercase tracking-wide text-texte-doux">{titre}</div>
         {children}
       </>
     )
@@ -145,7 +145,7 @@ function BlocGroupe({ titre, repliable, children }: { titre: string | null; repl
         aria-expanded={ouvert}
         className="tactile mb-1.5 flex items-center gap-1 text-left"
       >
-        <span className="text-[0.65625rem] font-semibold uppercase tracking-wide text-texte-doux">{titre}</span>
+        <span className="text-xs font-semibold uppercase tracking-wide text-texte-doux">{titre}</span>
         <ChevronBascule ouvert={ouvert} className="h-3 w-3 text-texte-doux" />
       </button>
       {ouvert && children}
@@ -204,14 +204,14 @@ export default function SectionPosologies({
         </div>
       ))}
 
-      <p className="pt-2.5 text-[0.65625rem] italic leading-relaxed text-texte-doux">
+      <p className="pt-2.5 text-xs italic leading-relaxed text-texte-doux">
         Posologies indicatives — ne remplacent pas la prescription médicale.
       </p>
 
       {ajustement && (
         <div className="mt-3">
           <BlocAvertissement couleur="var(--ajustement)" titre="Ajustement posologique">
-            <p className="text-[0.6875rem] leading-relaxed text-texte">{ajustement}</p>
+            <p className="text-xs leading-relaxed text-texte">{ajustement}</p>
           </BlocAvertissement>
         </div>
       )}
@@ -224,7 +224,7 @@ export default function SectionPosologies({
       {ajustementAbsolu && (
         <div className="mt-3">
           <BlocAvertissement couleur="var(--alerte-pleine)" variante="pleine" titre="Ajustement posologique">
-            <p className="text-[0.6875rem] font-medium leading-relaxed text-white">{ajustementAbsolu}</p>
+            <p className="text-xs font-medium leading-relaxed text-white">{ajustementAbsolu}</p>
           </BlocAvertissement>
         </div>
       )}
