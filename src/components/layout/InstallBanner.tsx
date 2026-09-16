@@ -3,6 +3,7 @@ import { Share, PlusSquare, X } from 'lucide-react'
 import { db } from '../../db'
 import { estIOS, estSafari, estInstallee } from '../../utils/plateforme'
 import { CLE_NOMBRE_SESSIONS, CLE_INSTALL_BANNER_MASQUE } from '../../db/cles'
+import { suivre } from '../../utils/analytique'
 
 // "beforeinstallprompt" n'est pas encore dans le lib DOM standard de
 // TypeScript (API non normalisée, seulement supportée par les navigateurs
@@ -56,6 +57,14 @@ export default function InstallBanner() {
     function gererInstallee() {
       setInstalleeMaintenant(true)
       setEvenementInstallation(null)
+      // Signal clé d'une bêta : les testeurs ajoutent-ils vraiment l'app à
+      // leur écran d'accueil ? Posé sur l'événement navigateur plutôt que
+      // sur le clic du bouton — seul « appinstalled » atteste d'une
+      // installation réellement menée à son terme, l'invite pouvant être
+      // refusée après coup. iOS ne l'émet pas : l'installation s'y fait par
+      // le menu Partager, hors de portée de la page, ces installations-là
+      // resteront donc invisibles.
+      suivre({ nom: 'application_installee' })
     }
     window.addEventListener('beforeinstallprompt', gererInvite)
     window.addEventListener('appinstalled', gererInstallee)

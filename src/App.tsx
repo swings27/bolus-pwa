@@ -26,6 +26,7 @@ import Confidentialite from './pages/Confidentialite'
 import CGU from './pages/CGU'
 import Introuvable from './pages/Introuvable'
 import { Analytics } from '@vercel/analytics/react'
+import { anonymiserUrlEvenements } from './utils/analytique'
 
 // Écran plein écran affiché pendant la toute première synchronisation des
 // fiches (CDN → Dexie). Ne s'affiche qu'au premier lancement de l'app,
@@ -115,7 +116,7 @@ export default function App() {
 
   return (
     <ErrorBoundary>
-      <Analytics />
+      <Analytics beforeSend={anonymiserUrlEvenements} />
       <BrowserRouter>
         <CalculateurModalProvider>
           {/* Modal bloquante affichée par-dessus tout le reste tant que

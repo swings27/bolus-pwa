@@ -7,6 +7,7 @@ import ResultatFiche from '../components/fiches/ResultatFiche'
 import { useSearch } from '../hooks/useSearch'
 import { useHistorique } from '../hooks/useHistorique'
 import { useFavoris } from '../hooks/useFavoris'
+import { suivre } from '../utils/analytique'
 
 export default function Recherche() {
   const [query, setQuery] = useState('')
@@ -105,8 +106,16 @@ export default function Recherche() {
             {resultats.length} résultat{resultats.length > 1 ? 's' : ''}
           </p>
           <div>
+            {/* onSelection uniquement sur cette liste-ci, pas sur celle de
+                l'historique plus haut : ouvrir une fiche déjà consultée n'est
+                pas une recherche aboutie. */}
             {resultats.map((fiche) => (
-              <ResultatFiche key={fiche.id} fiche={fiche} estFavori={favoris.includes(fiche.id)} />
+              <ResultatFiche
+                key={fiche.id}
+                fiche={fiche}
+                estFavori={favoris.includes(fiche.id)}
+                onSelection={() => suivre({ nom: 'recherche_aboutie' })}
+              />
             ))}
           </div>
         </div>

@@ -16,7 +16,7 @@ export default function DisclaimerBanner() {
       // hauteur supplémentaire, mesurée dynamiquement (voir hauteurBandeaux
       // dans Layout.tsx), repousse aussi d'autant le bouton flottant "Un
       // retour ?", qui reste ainsi toujours au-dessus, jamais sur le texte.
-      className="flex items-start gap-2 px-4 pt-3 pb-8"
+      className="flex items-start gap-2 px-4 pt-3 pb-6"
       // Fond "légèrement plus foncé que le fond principal" dans les deux
       // thèmes : on mélange un peu de --texte dans --fond plutôt que de
       // coder une teinte fixe, qui ne conviendrait qu'au thème clair.
