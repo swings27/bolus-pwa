@@ -2,7 +2,7 @@
   "dci": "métronidazole",
   "commun": {
     "noms_commerciaux": [
-      "FLAGYL"
+      "Flagyl"
     ],
     "famille": "Antibactérien et antiparasitaire de la famille des nitro-imidazolés",
     "antidote": "",
@@ -24,8 +24,7 @@
     },
     "contre_indications": [
       "Hypersensibilité au métronidazole, à un autre dérivé nitro-imidazolé ou à l'un des excipients",
-      "Comprimé pelliculé (excipient amidon de blé) : allergie au blé, autre que la maladie cœliaque",
-      "Comprimé pelliculé : enfant âgé de moins de 6 ans, en raison de la forme pharmaceutique"
+      "Comprimé pelliculé (excipient amidon de blé) : allergie au blé, autre que la maladie cœliaque"
     ],
     "interactions_pertinentes": [
       {
@@ -307,7 +306,7 @@
           },
           {
             "population": "Amibiase",
-            "categorie": "generale",
+            "categorie": "speciale",
             "population_type": "adulte",
             "dose_par_prise_mg_min": 500,
             "dose_par_prise_mg_max": 500,
@@ -330,7 +329,7 @@
           },
           {
             "population": "Lambliase",
-            "categorie": "generale",
+            "categorie": "speciale",
             "population_type": "adulte",
             "dose_par_prise_mg_min": 500,
             "dose_par_prise_mg_max": 500,
@@ -404,7 +403,7 @@
     ],
     "recommandation_sonde": {
       "forme_preferee": "Suspension buvable 125 mg/5 mL",
-      "alternative": "Comprimé pelliculé 500 mg écrasé"
+      "alternative": null
     }
   },
   "tracabilite": {

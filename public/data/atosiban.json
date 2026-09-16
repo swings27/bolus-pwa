@@ -1,0 +1,180 @@
+{
+  "dci": "atosiban",
+  "commun": {
+    "noms_commerciaux": [
+      "Tractocile"
+    ],
+    "famille": "Tocolytique antagoniste sélectif des récepteurs de l'ocytocine",
+    "antidote": "",
+    "indications": [
+      "Menace d'accouchement prématuré (24-33 SA)"
+    ],
+    "grossesse_allaitement": {
+      "grossesse": "Atosiban ne doit être utilisé que lorsqu'un travail prématuré a été diagnostiqué à partir de la 24ème semaine de gestation et jusqu'à la 33ème semaine incluse.",
+      "allaitement": "Si l'allaitement d'un enfant né précédemment est en cours, il doit être interrompu pendant le traitement par atosiban, la sécrétion d'ocytocine pouvant augmenter les contractions utérines et neutraliser l'effet tocolytique ; en dehors de ce contexte, aucun effet sur l'allaitement n'a été observé dans les études cliniques sur l'atosiban et son passage dans le lait maternel des femmes qui allaitent est faible.",
+      "url_crat_grossesse": null,
+      "url_crat_allaitement": null
+    },
+    "note_ajustement": "Insuffisance hépatique : l'atosiban doit être utilisé avec prudence chez les patientes atteintes d'insuffisance hépatique.Insuffisance rénale : un ajustement de la dose est peu probable.Grossesses multiples et âge gestationnel de 24 à 27 semaines : le bénéfice du traitement doit être évalué au cas par cas.",
+    "contre_indications": [
+      "Âge gestationnel inférieur à 24 semaines ou supérieur à 33 semaines complètes.",
+      "Rupture prématurée des membranes au-delà de 30 semaines de gestation.",
+      "Rythme cardiaque fœtal anormal.",
+      "Hémorragie utérine ante-partum nécessitant l'accouchement immédiat.",
+      "Éclampsie et pré-éclampsie sévère nécessitant l'accouchement.",
+      "Mort fœtale in utero.",
+      "Suspicion d'infection utérine.",
+      "Placenta praevia.",
+      "Hématome rétroplacentaire.",
+      "Tout autre facteur, chez la mère ou le fœtus, rendant la poursuite de la grossesse dangereuse.",
+      "Hypersensibilité à la substance active ou à l'un des excipients."
+    ],
+    "interactions_pertinentes": [
+      {
+        "substance": "Bêtaméthasone (corticothérapie de maturation pulmonaire fœtale), labétalol",
+        "effet": "Aucune interaction cliniquement significative rapportée lors d'études d'interaction spécifiques menées avec la bêtaméthasone ou le labétalol chez des femmes volontaires saines. L'atosiban n'est pas un substrat du cytochrome P450 et n'inhibe pas l'action de ses enzymes.",
+        "action_infirmier": "Association usuelle sans précaution particulière documentée ; signaler au prescripteur toute autre co-prescription inhabituelle."
+      }
+    ],
+    "surveillance_specifique": [
+      {
+        "evenement": "Œdème pulmonaire",
+        "explication": "Les grossesses multiples et les médicaments ayant une activité tocolytique (inhibiteurs calciques, bêtamimétiques) exposent à un risque accru d'œdème pulmonaire ; ce risque existe aussi en cas d'association de ces traitements à l'atosiban.",
+        "action": "Utiliser l'atosiban avec prudence en cas de grossesse multiple et/ou d'administration concomitante d'un autre médicament à activité tocolytique ; signaler au prescripteur tout signe respiratoire (dyspnée, désaturation)."
+      },
+      {
+        "evenement": "Hémorragie du post-partum",
+        "explication": "En tant qu'antagoniste de l'ocytocine, l'atosiban peut théoriquement favoriser le relâchement du muscle utérin et une hémorragie du post-partum ; aucune contraction utérine post-partum anormale n'a toutefois été observée au cours des essais cliniques.",
+        "action": "Contrôler les pertes sanguines après l'accouchement et signaler au prescripteur toute anomalie."
+      },
+      {
+        "evenement": "Retard de croissance intra-utérin",
+        "explication": "En cas de retard de croissance intra-utérin, la décision de poursuivre ou de réinitier l'administration d'atosiban dépend de l'évaluation de la maturité fœtale.",
+        "action": "Envisager une surveillance des contractions utérines et du rythme cardiaque fœtal, en particulier en cas de persistance des contractions ; signaler au prescripteur."
+      },
+      {
+        "evenement": "Suspicion de rupture prématurée des membranes non exclue",
+        "explication": "Lorsque l'atosiban est utilisé chez une patiente chez qui la survenue d'une rupture prématurée des membranes ne peut pas être exclue, le bénéfice d'un accouchement retardé doit être évalué par rapport au risque potentiel de chorioamniotite.",
+        "action": "Signaler au prescripteur tout signe évocateur de chorioamniotite (fièvre maternelle, tachycardie fœtale, liquide amniotique malodorant)."
+      }
+    ],
+    "pictogrammes": []
+  },
+  "iv": {
+    "reconstitution": null,
+    "preparation": [
+      {
+        "voie": "IVL",
+        "contexte": "Bolus initial",
+        "detail": "Utiliser pur",
+        "duree": "1 min",
+        "stabilite": "Après ouverture du flacon, à utiliser immédiatement."
+      },
+      {
+        "voie": "PERF",
+        "contexte": "Perfusion de charge ou entretien, avec pompe volumétrique",
+        "detail": "Diluer 75mg dans une poche de 100 mL de NaCl 0,9%, Ringer ou G5% (concentration de 0,75 mg/mL).",
+        "duree": "Charge : 3 heures, débit de 24 mL/h (300 µg/min). Entretien : <45h, débit de 8 mL/h (100 µg/min).",
+        "stabilite": "A utiliser dans les 24 heures suivant la préparation."
+      }
+    ],
+    "administration": {
+      "posologie": [
+        {
+          "population": "Menace d'accouchement prématuré, bolus initial",
+          "categorie": "generale",
+          "population_type": "adulte",
+          "dose_par_prise_mg_min": 6.75,
+          "dose_par_prise_mg_max": 6.75,
+          "intervalle_min_h": 24,
+          "intervalle_max_h": 24
+        },
+        {
+          "population": "Menace d'accouchement prématuré, perfusion de charge",
+          "categorie": "pse",
+          "population_type": "adulte",
+          "dose_par_prise_mg_max": 54,
+          "dose_par_prise_mg_min": 54
+        },
+        {
+          "population": "Menace d'accouchement prématuré, perfusion d'entretien (jusqu'à 45h)",
+          "categorie": "pse",
+          "population_type": "adulte",
+          "dose_par_prise_mg_max": 75,
+          "dose_par_prise_mg_min": 75,
+          "dose_journaliere_max_mg": 135
+        }
+      ]
+    },
+    "incompatibilites": []
+  },
+  "oral": null,
+  "aerosol": null,
+  "tracabilite": {
+    "rcp_source": [
+      {
+        "specialite": "TRACTOCILE 6,75 mg/0,9 ml, solution injectable",
+        "titulaire": "Ferring Pharmaceuticals A/S (Danemark)",
+        "date_maj": "30/03/2022 (révision 24)",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/62476853/extrait"
+      },
+      {
+        "specialite": "TRACTOCILE 37,5 mg/5 ml, solution à diluer pour perfusion",
+        "titulaire": "Ferring Pharmaceuticals A/S (Danemark)",
+        "date_maj": "30/03/2022 (révision 24)",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/61710552/extrait"
+      },
+      {
+        "specialite": "ATOSIBAN EVER PHARMA 37,5 mg/5 mL, solution à diluer pour perfusion",
+        "titulaire": "Ever Valinject GmbH (Autriche)",
+        "date_maj": "27/01/2026",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/affichageDoc.php?specid=67905662&typedoc=R"
+      },
+      {
+        "specialite": "ATOSIBAN ALTAN 6,75 mg/0,9 mL, solution injectable",
+        "titulaire": "Altan Pharmaceuticals, S.A. (Espagne)",
+        "date_maj": "19/05/2025",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/68389896/extrait"
+      },
+      {
+        "specialite": "ATOSIBAN ALTAN 37,5 mg/5 mL, solution à diluer pour perfusion",
+        "titulaire": "Altan Pharmaceuticals, S.A. (Espagne)",
+        "date_maj": "non vérifiée séparément",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/68114697/extrait"
+      },
+      {
+        "specialite": "ATOSIBAN EVER PHARMA 6,75 mg/0,9 mL, solution injectable",
+        "titulaire": "Ever Valinject GmbH (Autriche)",
+        "date_maj": "27/01/2026",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/61955644/extrait"
+      },
+      {
+        "specialite": "ATOSIBAN EVER PHARMA 75 mg/10 mL, solution à diluer pour perfusion",
+        "titulaire": "Ever Valinject GmbH (Autriche)",
+        "date_maj": "non vérifiée séparément",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/64141049/extrait"
+      },
+      {
+        "specialite": "ATOSIBAN SUN 6,75 mg/0,9 ml, solution injectable",
+        "titulaire": "Sun Pharmaceutical Industries Europe B.V. (Pays-Bas)",
+        "date_maj": "non vérifiée séparément",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/64604981/extrait"
+      },
+      {
+        "specialite": "ATOSIBAN SUN 37,5 mg/5 ml, solution à diluer pour perfusion",
+        "titulaire": "Sun Pharmaceutical Industries Europe B.V. (Pays-Bas)",
+        "date_maj": "non vérifiée séparément",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/61078145/extrait"
+      }
+    ],
+    "statut": "valide",
+    "validation": {
+      "date": "2026-09-10",
+      "validateur": "Anna Trabaud-Lopez (IDE, porteuse du projet), vérification des données extraites contre les RCP ; équipe pharmacie, validation de la méthodologie et arbitrage des points litigieux",
+      "perimetre": [
+        "adulte"
+      ],
+      "prochaine_revision": "2026-12-10"
+    }
+  }
+}

@@ -77,6 +77,10 @@ const FAMILLES_DOSE: IFamilleDose[] = [
   // Dose par prise directement en grammes (ex. fosfomycine, 4-8 g) — même
   // rang de priorité que le mg ci-dessus, juste une unité différente.
   { min: 'dose_par_prise_g_min', max: 'dose_par_prise_g_max', unite: 'g', absolue: true, enGrammes: true },
+  // Microgrammes par prise (ex. sufentanil) : même rang que le mg et le g
+  // ci-dessus. Aucune conversion vers le mg — le RCP prescrit en µg, et
+  // "0,03 mg" ne se dit pas au chevet.
+  { min: 'dose_par_prise_ug_min', max: 'dose_par_prise_ug_max', unite: 'µg', absolue: true },
   // MUI (millions d'unités internationales, ex. spiramycine) : même façon
   // d'exprimer la dose que le mg par prise, une autre unité.
   { min: 'dose_par_prise_MUI_min', max: 'dose_par_prise_MUI_max', unite: 'MUI', scalaire: 'dose_par_prise_MUI' },
@@ -84,6 +88,9 @@ const FAMILLES_DOSE: IFamilleDose[] = [
   // des MUI ci-dessus (millions d'UI), l'ordre de grandeur n'est pas le même.
   { min: 'dose_par_prise_UI_min', max: 'dose_par_prise_UI_max', unite: 'UI' },
   { min: 'dose_mg_kg_min', max: 'dose_mg_kg_max', unite: 'mg/kg', auPoids: true },
+  // µg/kg par prise, à distinguer du débit dose_ug_kg_minute plus bas :
+  // une dose ponctuelle, pas une vitesse.
+  { min: 'dose_ug_kg_min', max: 'dose_ug_kg_max', unite: 'µg/kg', auPoids: true },
   // UI/kg par prise (ex. énoxaparine curatif, héparine en bolus).
   { min: 'dose_par_prise_UI_kg_min', max: 'dose_par_prise_UI_kg_max', unite: 'UI/kg', auPoids: true },
   { min: 'dose_journaliere_mg_kg_min', max: 'dose_journaliere_mg_kg_max', unite: 'mg/kg', suffixe: '/ jour', auPoids: true },
@@ -107,6 +114,7 @@ const FAMILLES_DOSE: IFamilleDose[] = [
   // que le débit est réglé au pousse-seringue.
   { min: 'dose_ug_kg_minute_min', max: 'dose_ug_kg_minute_max', unite: 'µg/kg/min' },
   { min: 'dose_mg_kg_h_min', max: 'dose_mg_kg_h_max', unite: 'mg/kg/h' },
+  { min: 'dose_ug_kg_h_min', max: 'dose_ug_kg_h_max', unite: 'µg/kg/h' },
   { min: 'dose_UI_kg_h_min', max: 'dose_UI_kg_h_max', unite: 'UI/kg/h' },
   { min: 'dose_mg_h_min', max: 'dose_mg_h_max', unite: 'mg/h' },
 ]
@@ -199,6 +207,10 @@ export function formaterIntervalle(p: IPosologieRcp): string {
   if (enMinutes) return enMinutes
   const parJour = formaterPlage(p.nb_prises_min_24h, p.nb_prises_max_24h, '/ jour')
   if (parJour) return parJour
+  // Formes retard (octréotide LP) : une injection par mois. Placé après les
+  // fréquences journalières, qui restent le cas courant — et non avant, pour
+  // qu'une ligne renseignant les deux privilégie la plus fine des deux.
+  if (p.nb_prises_mois !== undefined) return `${formaterNombre(p.nb_prises_mois)} / mois`
   // Aucun champ de fréquence renseigné : plutôt qu'un tiret cadratin
   // ambigu (donnée manquante ou dose réellement unique ?), on affiche
   // explicitement ce que ça signifie le plus souvent — un protocole en PSE
@@ -221,7 +233,12 @@ export function libelleIntervalle(p: IPosologieRcp): string {
     p.intervalle_max_min !== undefined
   if (aIntervalle) return 'Intervalle'
   const aNbPrises = p.nb_prises_min_24h !== undefined || p.nb_prises_max_24h !== undefined
-  return aNbPrises ? 'Prise journalière' : 'Intervalle'
+  if (aNbPrises) return 'Prise journalière'
+  // Même raisonnement pour les formes retard : afficher « 1 / mois » sous un
+  // libellé « Prise journalière » ferait lire une injection quotidienne.
+  // L'ordre des trois tests suit celui de formaterIntervalle().
+  if (p.nb_prises_mois !== undefined) return 'Prise mensuelle'
+  return 'Intervalle'
 }
 
 // Convention clinique française : un dosage ne se dit en grammes que pour un
@@ -260,6 +277,13 @@ export function formaterMax(p: IPosologieRcp): string | null {
   const maxMg = p.dose_journaliere_max_mg
   if (typeof maxMg === 'string') return maxMg
   if (maxMg !== undefined) return `${formaterNombre(maxMg)} mg/j`
+
+  // Microgrammes : aucune règle de bascule vers le mg, contrairement au
+  // couple g↔mg. Un plafond de sufentanil se lit "720 µg/j", jamais
+  // "0,72 mg/j".
+  const maxUg = p.dose_journaliere_max_ug
+  if (typeof maxUg === 'string') return maxUg
+  if (maxUg !== undefined) return `${formaterNombre(maxUg)} µg/j`
 
   const maxMUI = p.dose_journaliere_max_MUI
   if (typeof maxMUI === 'string') return maxMUI

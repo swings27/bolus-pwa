@@ -142,7 +142,7 @@
     "preparation": [
       {
         "voie": "PERF",
-        "detail": "Solution prête à l'emploi. Si dilution nécessaire : NaCl 0,9 %, Ringer, Ringer lactate, G5 % ou G10 %.",
+        "detail": "Solution prête à l'emploi. Si dilution nécessaire : NaCl 0,9 %, Ringer, G5 % ou G10 %.",
         "duree": "30 minutes pour 200 mg/100 mL - 60 minutes pour 400 mg/200 mL",
         "stabilite": "Protéger de la lumière et utiliser immédiatement après ouverture."
       }
@@ -286,7 +286,8 @@
             "categorie": "speciale",
             "dose_par_prise_mg_min": 500,
             "dose_par_prise_mg_max": 500,
-            "dose_journaliere_max_mg": 500,
+            "intervalle_min_h": 24,
+            "intervalle_max_h": 24,
             "population_type": "adulte"
           },
           {
@@ -305,7 +306,8 @@
             "dose_par_prise_mg_min": 500,
             "dose_par_prise_mg_max": 500,
             "population_type": "adulte",
-            "dose_journaliere_max_mg": 500
+            "intervalle_min_h": 24,
+            "intervalle_max_h": 24
           },
           {
             "population": "Maladie du charbon, prophylaxie post-exposition et traitement curatif",

@@ -304,9 +304,9 @@
       },
       {
         "voie": "IM",
-        "detail": "EPPI, 5 mL pour 1 g",
+        "detail": "Avec solvant IM fourni ou 5ml d'EPPI si < 3 ans",
         "duree": "<1 min",
-        "stabilite": null
+        "stabilite": "A utiliser immédiatement après dilution"
       }
     ]
   },

@@ -157,6 +157,7 @@
           "population_type": "adulte",
           "dose_UI_kg_h_min": 20,
           "dose_UI_kg_h_max": 20,
+          "dose_journaliere_max_g": "Selon poids",
           "tdm_requis": true
         }
       ]

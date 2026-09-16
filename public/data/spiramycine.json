@@ -4,7 +4,7 @@
     "noms_commerciaux": [
       "Rovamycine"
     ],
-    "famille": "Antibiotique macrolide",
+    "famille": "Macrolides",
     "antidote": "",
     "indications": [
       "Pneumopathie communautaire",
@@ -103,7 +103,7 @@
       {
         "voie": "PERF",
         "detail": "Diluer dans un volume minimal de 100 mL de G5 %",
-        "duree": "1 heure (perfusion lente)",
+        "duree": "60 minutes",
         "stabilite": "12h à moins de 25°C"
       }
     ],

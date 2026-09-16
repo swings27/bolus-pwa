@@ -50,8 +50,18 @@ export interface IPosologieRcp {
    * ci-dessus, voir formaterDose()/formaterDoseAbsolue(). */
   dose_par_prise_g_min?: number
   dose_par_prise_g_max?: number
+  /** Dose par prise en microgrammes (ex. sufentanil, dosé en µg jusqu'en
+   * péridurale) — même rang que les paires en mg et en g ci-dessus. */
+  dose_par_prise_ug_min?: number
+  dose_par_prise_ug_max?: number
   dose_mg_kg_min?: number
   dose_mg_kg_max?: number
+  /** Dose par prise rapportée au poids, en microgrammes (ex. sufentanil,
+   * 0,1-2 µg/kg à l'induction). À NE PAS confondre avec
+   * dose_ug_kg_minute_* plus bas, qui est un DÉBIT (µg/kg/min) : ici la
+   * valeur est une dose ponctuelle, là-bas une vitesse d'administration. */
+  dose_ug_kg_min?: number
+  dose_ug_kg_max?: number
   dose_journaliere_mg_kg_min?: number
   dose_journaliere_mg_kg_max?: number
   /** Number la plupart du temps, mais le RCP ne donne pas toujours un
@@ -66,6 +76,9 @@ export interface IPosologieRcp {
    * 7,5 mg/j) — affiché tel quel, sans la règle g↔mg de
    * dose_journaliere_max_g, qui ne concerne que les valeurs en grammes. */
   dose_journaliere_max_mg?: number | string
+  /** Maximum journalier en microgrammes (ex. sufentanil sublingual,
+   * 720 µg/j) — affiché tel quel, aucune conversion vers les mg. */
+  dose_journaliere_max_ug?: number | string
   /** Maximum journalier rapporté au poids (ex. kétamine, 5 mg/kg/j) —
    * affiché tel quel en mg/kg/j, jamais converti en mg ou g absolus : sans
    * le poids du patient, la conversion n'a pas de sens. */
@@ -81,6 +94,10 @@ export interface IPosologieRcp {
   dose_ug_kg_minute_max?: number
   dose_mg_kg_h_min?: number
   dose_mg_kg_h_max?: number
+  /** Débit en microgrammes par kilo et par heure (ex. sufentanil en
+   * sédation prolongée, 0,2-2 µg/kg/h). */
+  dose_ug_kg_h_min?: number
+  dose_ug_kg_h_max?: number
   dose_UI_kg_h_min?: number
   dose_UI_kg_h_max?: number
   dose_mg_h_min?: number
@@ -130,6 +147,11 @@ export interface IPosologieRcp {
   intervalle_max_min?: number
   nb_prises_min_24h?: number
   nb_prises_max_24h?: number
+  /** Nombre d'administrations par MOIS, et non par jour : réservé aux formes
+   * retard (ex. octréotide LP, une injection IM mensuelle), où compter en
+   * prises journalières n'aurait aucun sens. Valeur unique — une forme LP ne
+   * s'exprime pas en fourchette. */
+  nb_prises_mois?: number
   age_min_mois?: number | null
   age_max_mois?: number | null
   /** Âge en jours plutôt qu'en mois (néonatologie, ex. midazolam à partir de
@@ -216,7 +238,10 @@ export interface IGrossesseAllaitementRcp {
 export interface IFormeOraleRcp {
   type: string
   dosage?: string
-  ecrasable?: boolean
+  /** null pour une forme où la question ne se pose pas (gel, solution à
+   * pulvériser) — rendu comme "Non écrasable", au même titre que
+   * ouverture_gelule à null, voir DetailPerOs. */
+  ecrasable?: boolean | null
   ouverture_gelule?: boolean | null
   posologie_adulte: IPosologieRcp[]
 }

@@ -1,0 +1,271 @@
+{
+  "dci": "cefepime",
+  "commun": {
+    "noms_commerciaux": [
+      "Axepim"
+    ],
+    "famille": "Céphalosporine de 4ème génération",
+    "antidote": "",
+    "indications": [
+      "Bactériémies associées",
+      "Pneumonies sévères communautaires",
+      "Infections urinaires compliquées",
+      "Infections urinaires non compliquées",
+      "Infections biliaires",
+      "Neutropénie fébrile (monothérapie adulte)",
+      "Neutropénie fébrile (enfant, neutropénie brève)"
+    ],
+    "grossesse_allaitement": {
+      "grossesse": "En l'absence d'études cliniques adéquates et bien contrôlées chez la femme enceinte, l'utilisation du céfépime ne peut être envisagée au cours de la grossesse que si nécessaire.",
+      "allaitement": "Le passage du céfépime dans le lait maternel est faible et les quantités ingérées très inférieures aux doses thérapeutiques ; des précautions doivent être prises lorsque le céfépime est utilisé chez la femme allaitante.",
+      "url_crat_grossesse": "https://www.lecrat.fr/12566/",
+      "url_crat_allaitement": "https://www.lecrat.fr/12567/"
+    },
+    "contre_indications": [
+      "Hypersensibilité au céfépime ou à l'un des excipients (L-arginine)",
+      "Hypersensibilité aux autres antibiotiques du groupe des céphalosporines",
+      "Hypersensibilité aux bêta-lactamines (pénicillines, monobactames, carbapénèmes)"
+    ],
+    "note_ajustement": "Insuffisance rénale (clairance de la créatinine ≤ 50 mL/min) : adaptation obligatoire, risque d'encéphalopathie en cas d'accumulation.",
+    "interactions_pertinentes": [
+      {
+        "substance": "Antibiotiques bactériostatiques",
+        "effet": "Le traitement concomitant par un antibiotique bactériostatique peut interférer avec l'activité bactéricide des bêta-lactamines telles que le céfépime.",
+        "action_infirmier": "Signaler au prescripteur toute co-prescription d'un antibiotique bactériostatique."
+      },
+      {
+        "substance": "Anticoagulants oraux",
+        "effet": "De nombreux cas d'augmentation de l'activité des anticoagulants oraux ont été rapportés chez des patients recevant des antibiotiques, notamment certaines céphalosporines, en contexte infectieux ou inflammatoire marqué.",
+        "action_infirmier": "Signaler au prescripteur toute co-prescription d'AVK ; surveiller l'INR pendant l'association."
+      },
+      {
+        "substance": "Aminosides ou diurétiques puissants",
+        "effet": "Majoration du risque de néphrotoxicité en cas d'association, avec retentissement possible sur l'élimination rénale du céfépime.",
+        "action_infirmier": "Signaler au prescripteur toute co-prescription ; surveiller la fonction rénale pendant l'association."
+      }
+    ],
+    "surveillance_specifique": [
+      {
+        "evenement": "Encéphalopathie",
+        "explication": "Risque propre aux bêta-lactamines, majoré en cas de surdosage ou d'insuffisance rénale non compensée par une adaptation posologique, notamment chez le sujet âgé.",
+        "action": "Signaler immédiatement au prescripteur toute confusion, trouble de la vigilance ou mouvement anormal sous céfépime ; vérifier que la posologie est bien adaptée à la fonction rénale du patient."
+      },
+      {
+        "evenement": "Positivation du test de Coombs sans hémolyse",
+        "explication": "Décrite chez des patients traités par céfépime deux fois par jour, sans traduction clinique hémolytique.",
+        "action": "Signaler le traitement par céfépime en cours si un test de Coombs est demandé."
+      },
+      {
+        "evenement": "Faux positif de la recherche de glycosurie",
+        "explication": "Réaction faussement positive possible avec certaines méthodes de dosage non spécifiques de la recherche de glucose urinaire.",
+        "action": "Signaler le traitement par céfépime en cours en cas de recherche de glycosurie."
+      }
+    ],
+    "pictogrammes": []
+  },
+  "iv": {
+    "reconstitution": {
+      "volume_par_1000mg_mL": 10,
+      "volume_par_2000mg_mL": 10
+    },
+    "preparation": [
+      {
+        "voie": "IVL",
+        "detail": "Reconstituer avec NaCl 0,9%, G5 %, G10 %, Ringer, lactate de sodium M/6).",
+        "duree": "3 à 5 minutes",
+        "stabilite": "4 heures à 25 °C, 24 heures entre 2 et 8 °C."
+      },
+      {
+        "voie": "PERF",
+        "detail": "Reconstituer avec NaCl 0,9%, G5 %, G10 %, Ringer, lactate de sodium M/6). Concentration 50 à 100mg/ml.",
+        "duree": "30 minutes",
+        "stabilite": "4 heures à 25 °C, 24 heures entre 2 et 8 °C."
+      },
+      {
+        "voie": "IM",
+        "detail": "Reconstituer avec de l'eau pour préparation injectable (EPPI) ou lidocaïne à 0,5-1 %.",
+        "duree": "< 1 min",
+        "stabilite": "24 heures à température inférieure à 25 °C, 7 jours entre 2 et 8 °C.",
+        "contexte": "500 mg et 1 g uniquement"
+      }
+    ],
+    "administration": {
+      "posologie": [
+        {
+          "population": "Infections respiratoires basses communautaires, pyélonéphrites non compliquées",
+          "categorie": "generale",
+          "population_type": "adulte",
+          "dose_par_prise_mg_min": 1000,
+          "dose_par_prise_mg_max": 1000,
+          "intervalle_min_h": 12,
+          "intervalle_max_h": 12,
+          "dose_journaliere_max_g": 2
+        },
+        {
+          "population": "Infections sévères (septicémies/bactériémies, pneumonies, infections urinaires compliquées, infections biliaires)",
+          "categorie": "generale",
+          "population_type": "adulte",
+          "dose_par_prise_mg_min": 2000,
+          "dose_par_prise_mg_max": 2000,
+          "intervalle_min_h": 12,
+          "intervalle_max_h": 12,
+          "dose_journaliere_max_g": 4
+        },
+        {
+          "population": "Neutropénie fébrile, traitement empirique en monothérapie",
+          "categorie": "speciale",
+          "population_type": "adulte",
+          "dose_par_prise_mg_min": 2000,
+          "dose_par_prise_mg_max": 2000,
+          "intervalle_min_h": 8,
+          "intervalle_max_h": 12,
+          "dose_journaliere_max_g": 6
+        },
+        {
+          "population": "Infections sévères à Pseudomonas",
+          "categorie": "speciale",
+          "population_type": "adulte",
+          "dose_par_prise_mg_min": 2000,
+          "dose_par_prise_mg_max": 2000,
+          "intervalle_min_h": 8,
+          "intervalle_max_h": 8,
+          "dose_journaliere_max_g": 6
+        },
+        {
+          "population": "Neutropénie fébrile, neutropénie de durée prévisible courte",
+          "categorie": "generale",
+          "population_type": "pediatrie",
+          "age_min_mois": 2,
+          "poids_max_kg": 40,
+          "dose_mg_kg_min": 50,
+          "dose_mg_kg_max": 50,
+          "intervalle_min_h": 8,
+          "intervalle_max_h": 8,
+          "dose_journaliere_max_g": "Selon poids"
+        }
+      ]
+    },
+    "incompatibilites": [
+      {
+        "substance": "Aciclovir",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Ciprofloxacine",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Dobutamine",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Dopamine",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Gentamicine",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Magnésium sulfate",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Métoclopramide",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Midazolam",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Morphine",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Nicardipine",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Ondansétron",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Phénytoïne",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Tacrolimus",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Vancomycine",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Métronidazole",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Tobramycine",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Nétilmicine",
+        "niveau": "absolu"
+      }
+    ]
+  },
+  "oral": null,
+  "aerosol": null,
+  "tracabilite": {
+    "rcp_source": [
+      {
+        "specialite": "CEFEPIME PANPHARMA 1 g, poudre pour solution injectable (IM/IV)",
+        "titulaire": "PANMEDICA",
+        "date_maj": "",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/affichageDoc.php?specid=61957549&typedoc=R"
+      },
+      {
+        "specialite": "CEFEPIME PANPHARMA 2 g, poudre pour solution injectable (IV)",
+        "titulaire": "PANMEDICA",
+        "date_maj": "",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/affichageDoc.php?specid=69701039&typedoc=R"
+      },
+      {
+        "specialite": "CEFEPIME VIATRIS 1 g, poudre pour solution injectable",
+        "titulaire": "VIATRIS SANTE",
+        "date_maj": "",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/affichageDoc.php?specid=65002725&typedoc=R"
+      },
+      {
+        "specialite": "CEFEPIME VIATRIS 2 g, poudre pour solution injectable",
+        "titulaire": "VIATRIS SANTE",
+        "date_maj": "",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/affichageDoc.php?specid=68804495&typedoc=R"
+      },
+      {
+        "specialite": "CEFEPIME TAMRISA 1 g, poudre pour solution injectable (IM/IV)",
+        "titulaire": "TAMRISA ACCESS",
+        "date_maj": "",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/affichageDoc.php?specid=69013007&typedoc=R"
+      },
+      {
+        "specialite": "CEFEPIME TAMRISA 2 g, poudre pour solution injectable (IV)",
+        "titulaire": "TAMRISA ACCESS",
+        "date_maj": "",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/affichageDoc.php?specid=61110397&typedoc=R"
+      }
+    ],
+    "statut": "valide",
+    "validation": {
+      "date": "2026-09-11",
+      "validateur": "Anna Trabaud-Lopez (IDE, porteuse du projet), vérification des données extraites contre les RCP ; équipe pharmacie, validation de la méthodologie et arbitrage des points litigieux",
+      "perimetre": [
+        "adulte",
+        "pediatrie"
+      ],
+      "prochaine_revision": "2026-12-11"
+    }
+  }
+}

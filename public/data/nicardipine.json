@@ -164,7 +164,7 @@
         {
           "population": "Sujet âgé (≥ 65 ans) et grossesse(dont pré-éclampsie sévère)",
           "population_type": "adulte",
-          "categorie": "pse",
+          "categorie": "speciale",
           "dose_mg_h_min": 1,
           "dose_mg_h_max": 5,
           "dose_journaliere_max_mg": 360

@@ -1,5 +1,5 @@
 {
-  "dci": "piperacilline/tazobactam",
+  "dci": "piperacilline/ tazobactam",
   "commun": {
     "noms_commerciaux": [
       "Tazocilline"
@@ -124,13 +124,6 @@
         "detail": "NaCl 0,9 % ou G5 %, flacon reconstitué dilué dans 50 à 150 mL",
         "duree": "30 min",
         "stabilite": "12 h entre 2 °C et 8 °C après reconstitution et dilution"
-      },
-      {
-        "voie": "PSE",
-        "detail": "NaCl 0,9 % ou G5 %",
-        "duree": "Continu",
-        "stabilite": "12 h entre 2 °C et 8 °C après reconstitution et dilution",
-        "contexte": "Perfusion continue"
       }
     ],
     "administration": {

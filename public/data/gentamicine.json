@@ -132,6 +132,7 @@
           "intervalle_max_h": 24,
           "nb_prises_min_24h": 1,
           "nb_prises_max_24h": 3,
+          "dose_journaliere_max_g": "Selon poids",
           "tdm_requis": true
         },
         {
@@ -142,6 +143,7 @@
           "dose_journaliere_mg_kg_max": 8,
           "nb_prises_min_24h": 1,
           "nb_prises_max_24h": 1,
+          "dose_journaliere_max_g": "Selon poids",
           "tdm_requis": true
         }
       ]

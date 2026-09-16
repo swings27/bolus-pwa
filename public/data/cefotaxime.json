@@ -27,10 +27,7 @@
     "contre_indications": [
       "Hypersensibilité au céfotaxime, à une autre céphalosporine ou à l'un des excipients",
       "Antécédent de réaction d'hypersensibilité immédiate et/ou grave à la pénicilline ou à un autre antibiotique bêta-lactamine (monobactame, carbapénème)",
-      "Reconstitution avec de la lidocaïne : antécédent d'hypersensibilité à la lidocaïne ou à un autre anesthésique local à liaison amide",
-      "Reconstitution avec de la lidocaïne : bloc cardiaque, insuffisance cardiaque grave",
-      "Reconstitution avec de la lidocaïne : administration par voie intraveineuse",
-      "Reconstitution avec de la lidocaïne : enfant de moins de 30 mois"
+      "Reconstitution avec de la lidocaïne : antécédent d'hypersensibilité à la lidocaïne ou à un autre anesthésique local à liaison amide, bloc cardiaque, insuffisance cardiaque grave, administration par voie intraveineuse, enfant de moins de 30 mois"
     ],
     "interactions_pertinentes": [
       {
@@ -101,8 +98,8 @@
       },
       {
         "voie": "PERF",
-        "detail": "NaCl 0,9 %, Glucose 5 % ou Ringer lactate, 40 à 50 mL pour 1 g ou 100 mL pour 2 g",
-        "duree": "20 min à 50-60 min",
+        "detail": "NaCl 0,9 %, Glucose 5 % ou Ringer lactate, 50 mL pour 1 g ou 100 mL pour 2 g",
+        "duree": "20 min à 60 min",
         "stabilite": "24 h entre 2 °C et 8 °C après reconstitution et dilution (0,25 à 50 mg/mL, poche polypropylène)"
       },
       {
@@ -156,7 +153,7 @@
           "intervalle_max_h": 8
         },
         {
-          "population": "Méningite à pneumocoque, 48 à 72 premières heures",
+          "population": "Méningite à pneumocoque",
           "categorie": "speciale",
           "population_type": "adulte",
           "dose_mg_kg_min": 50,
@@ -171,7 +168,8 @@
           "population_type": "adulte",
           "dose_par_prise_mg_min": 500,
           "dose_par_prise_mg_max": 1000,
-          "dose_journaliere_max_g": 1.0
+          "intervalle_min_h": 24,
+          "intervalle_max_h": 24
         },
         {
           "population": "Prophylaxie périopératoire",
@@ -179,7 +177,8 @@
           "population_type": "adulte",
           "dose_par_prise_mg_min": 1000,
           "dose_par_prise_mg_max": 2000,
-          "dose_journaliere_max_g": 2.0
+          "intervalle_min_h": 24,
+          "intervalle_max_h": 24
         },
         {
           "population": "Prophylaxie des résections endoscopiques de prostate",
@@ -187,7 +186,8 @@
           "population_type": "adulte",
           "dose_par_prise_mg_min": 1000,
           "dose_par_prise_mg_max": 1000,
-          "dose_journaliere_max_g": 1.0
+          "intervalle_min_h": 24,
+          "intervalle_max_h": 24
         },
         {
           "population": "Voie intramusculaire",

@@ -115,16 +115,22 @@
     "preparation": [
       {
         "voie": "IVL",
-        "detail": "Utiliser pur",
+        "detail": "Utiliser pur ou dilué dans du NaCl 0,9% ou G5%",
         "duree": "2 à 3 minutes",
-        "stabilite": "24h entre 15-25°C avec une solution de bicarbonate de sodium 4,2% ou Ringer, et 5 jours pour les autres diluants."
+        "stabilite": "Utiliser immédiatement après ouverture."
       },
       {
         "voie": "PERF",
-        "detail": "Dilution dans NaCl 0,9 % ou G5 %, concentration 1 à 5 mg/mL.",
+        "detail": "Dilution dans NaCl 0,9% ou G5%, concentration 1 à 5 mg/mL.",
         "duree": "≥ 15 minutes",
-        "stabilite": "24 heures après dilution dans NaCl 0,9 % ou G5 %",
-        "contexte": "Peut aussi être administré via PCA, se référer au protocole de service."
+        "stabilite": "24 heures après dilution dans NaCl 0,9% ou G5%"
+      },
+      {
+        "voie": "PSE",
+        "detail": "Dilution dans du NaCl 0,9% ou G%",
+        "duree": "Continue",
+        "stabilite": "24 heures après dilution dans NaCl 0,9% ou G5%",
+        "contexte": "Selon protocole de service"
       }
     ],
     "administration": {
@@ -290,8 +296,8 @@
       }
     ],
     "recommandation_sonde": {
-      "forme_preferee": "Comprimé orodispersible (Orozamudol) pour un traitement à libération immédiate",
-      "alternative": "Gélule LP (Zamudol LP), à ouvrir sans écraser les granulés, pour un traitement à libération prolongée"
+      "forme_preferee": "Comprimé orodispersible pour un traitement à libération immédiate",
+      "alternative": "Gélule LP, à ouvrir sans écraser les granulés, pour un traitement à libération prolongée"
     }
   },
   "aerosol": null,

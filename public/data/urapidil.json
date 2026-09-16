@@ -1,0 +1,285 @@
+{
+  "dci": "urapidil",
+  "commun": {
+    "noms_commerciaux": [
+      "Eupressyl",
+      "Eupressyl LP",
+      "Mediatensyl LP"
+    ],
+    "famille": "Anti-hypertenseur, adrénolytique à action périphérique / alpha-bloquant",
+    "antidote": "",
+    "indications": [
+      "Urgence hypertensive vitale",
+      "HTA maligne / rétinopathie stade III",
+      "Encéphalopathie hypertensive",
+      "Dissection aortique",
+      "Décompensation ventriculaire gauche / œdème pulmonaire",
+      "Hypotension contrôlée (anesthésie)",
+      "Hypertension péri-opératoire",
+      "Hypertension artérielle (voie orale)"
+    ],
+    "grossesse_allaitement": {
+      "grossesse": "L'urapidil n'est pas recommandé au cours du premier trimestre de la grossesse et chez les femmes en âge de procréer n'utilisant pas un moyen de contraception. L'utilisation d'urapidil peut être envisagée au cours du 2nd et 3ème trimestre de grossesse, si nécessaire.",
+      "allaitement": "En l'absence de données sur le passage dans le lait maternel, l'allaitement est déconseillé en cas de traitement par urapidil.",
+      "url_crat_grossesse": "https://www.lecrat.fr/9348/",
+      "url_crat_allaitement": "https://www.lecrat.fr/9347/"
+    },
+    "note_ajustement": "Insuffisance rénale : une réduction de dose peut être nécessaire, avec surveillance des modifications hémodynamiques. Insuffisance hépatique sévère : réduction de dose préférable. Sujet âgé : traitement antihypertenseur à débuter à dose plus faible, la sensibilité à ce type de traitement étant fréquemment modifiée, se référer au protocole du service.",
+    "contre_indications": [
+      "Hypersensibilité à l'urapidil ou à l'un des excipients",
+      "Sténose de l'isthme aortique",
+      "Shunt artério-veineux (exception des patients hémodialysés)"
+    ],
+    "interactions_pertinentes": [
+      {
+        "substance": "Alpha-bloquants à visée urologique",
+        "effet": "Association déconseillée. Majoration de l'effet hypotenseur, avec risque d'hypotension orthostatique sévère.",
+        "action_infirmier": "Signaler au prescripteur toute co-prescription d'un alpha-bloquant urologique."
+      },
+      {
+        "substance": "Baclofène",
+        "effet": "Majoration du risque d'hypotension, notamment orthostatique.",
+        "action_infirmier": "Signaler au prescripteur toute association ; surveiller la pression artérielle."
+      },
+      {
+        "substance": "Inhibiteurs de la phosphodiestérase de type 5",
+        "effet": "Risque d'hypotension orthostatique.",
+        "action_infirmier": "Signaler au prescripteur toute co-prescription ; surveiller la pression artérielle, notamment au changement de position."
+      },
+      {
+        "substance": "Cimétidine",
+        "effet": "Augmentation d'environ 15 % des concentrations sériques d'urapidil.",
+        "action_infirmier": "Signaler au prescripteur toute co-prescription de cimétidine ; renforcer la surveillance clinique."
+      },
+      {
+        "substance": "Barbituriques",
+        "effet": "L'urapidil administré à fortes doses peut prolonger la durée d'action des barbituriques.",
+        "action_infirmier": "Signaler au prescripteur toute association, en particulier en contexte d'anesthésie."
+      },
+      {
+        "substance": "Amifostine",
+        "effet": "Majoration du risque d'hypotension, notamment orthostatique.",
+        "action_infirmier": "Signaler au prescripteur toute association ; surveiller la pression artérielle."
+      },
+      {
+        "substance": "Antidépresseurs imipraminiques",
+        "effet": "Majoration du risque d'hypotension, notamment orthostatique.",
+        "action_infirmier": "Signaler au prescripteur toute association ; surveiller la pression artérielle."
+      },
+      {
+        "substance": "Neuroleptiques",
+        "effet": "Majoration du risque d'hypotension, notamment orthostatique.",
+        "action_infirmier": "Signaler au prescripteur toute association ; surveiller la pression artérielle."
+      },
+      {
+        "substance": "Autres antihypertenseurs",
+        "effet": "Majoration de l'effet hypotenseur.",
+        "action_infirmier": "Signaler au prescripteur toute association ; renforcer la surveillance tensionnelle."
+      },
+      {
+        "substance": "Dérivés nitrés et apparentés",
+        "effet": "Majoration du risque d'hypotension, notamment orthostatique.",
+        "action_infirmier": "Signaler au prescripteur toute association ; surveiller la pression artérielle."
+      },
+      {
+        "substance": "Glucocorticoïdes et minéralocorticoïdes",
+        "effet": "Diminution de l'effet antihypertenseur de l'urapidil par rétention hydrosodée.",
+        "action_infirmier": "Signaler au prescripteur toute association ; renforcer la surveillance tensionnelle."
+      }
+    ],
+    "surveillance_specifique": [
+      {
+        "evenement": "Bradycardie ou arrêt cardiaque sur chute tensionnelle trop rapide",
+        "explication": "En raison de l'effet additif des traitements antihypertenseurs, une diminution trop rapide de la pression artérielle peut provoquer une bradycardie ou un arrêt cardiaque, en particulier en cas d'association à d'autres antihypertenseurs.",
+        "action": "Surveiller la pression artérielle et la fréquence cardiaque, en tenant compte de la demi-vie des traitements antihypertenseurs associés ; signaler au prescripteur toute chute tensionnelle brutale."
+      },
+      {
+        "evenement": "Poussée hypertensive accompagnant un accident vasculaire cérébral",
+        "explication": "La poussée hypertensive qui accompagne souvent l'accident vasculaire cérébral n'est pas, en tant que telle, une indication au traitement antihypertenseur en urgence.",
+        "action": "Ne pas traiter systématiquement l'hypertension réactionnelle d'un AVC aigu ; se conformer à la prescription et au protocole du service."
+      },
+      {
+        "evenement": "Hypertension au cours de la grossesse",
+        "explication": "En raison du risque de menace voire de mort fœtale, la baisse tensionnelle induite par l'urapidil doit être progressive et toujours contrôlée.",
+        "action": "Surveiller étroitement la pression artérielle maternelle et le bien-être fœtal pendant le traitement ; signaler au prescripteur toute baisse tensionnelle rapide."
+      },
+      {
+        "evenement": "Toxicité du propylène glycol (excipient) chez l'enfant de moins de 5 ans en cas d'association à l'éthanol",
+        "explication": "L'urapidil injectable contient du propylène glycol. Une surveillance médicale est requise chez les patients souffrant d'insuffisance rénale ou hépatique ; chez l'enfant de moins de 5 ans, l'administration concomitante avec tout substrat de l'alcool déshydrogénase (dont l'éthanol) peut induire des effets indésirables graves.",
+        "action": "Rechercher une insuffisance rénale ou hépatique et une exposition concomitante à l'éthanol avant administration chez l'enfant de moins de 5 ans ; signaler au prescripteur."
+      }
+    ],
+    "pictogrammes": []
+  },
+  "iv": {
+    "reconstitution": null,
+    "preparation": [
+      {
+        "voie": "IVL",
+        "detail": "Utiliser pur",
+        "stabilite": "À usage unique, à utiliser immédiatement après ouverture de l'ampoule.",
+        "duree": "20 secondes"
+      },
+      {
+        "voie": "PSE",
+        "detail": "Utiliser pur ou dilué avec du NaCl 0,9%, G5% ou G10%",
+        "stabilite": "Si dilution : 50 heures entre 15 et 25 °C, sinon utiliser immédiatement",
+        "duree": "Continu"
+      },
+      {
+        "voie": "PERF",
+        "detail": "Une ampoule dans 500 mL de NaCl 0,9%, G5% ou G10%, soit 0,5 mg/mL.",
+        "stabilite": "50 heures entre 15 et 25 °C",
+        "duree": "Continu"
+      }
+    ],
+    "administration": {
+      "posologie": [
+        {
+          "population": "Urgence hypertensive, bolus initial",
+          "population_type": "adulte",
+          "categorie": "generale",
+          "dose_par_prise_mg_min": 25,
+          "dose_par_prise_mg_max": 50,
+          "nb_prises_min_24h": 1,
+          "nb_prises_max_24h": 3,
+          "dose_journaliere_max_g": 0.1
+        },
+        {
+          "population": "Urgence hypertensive, débit de charge",
+          "population_type": "adulte",
+          "categorie": "pse",
+          "dose_mg_h_min": 120,
+          "dose_mg_h_max": 120
+        },
+        {
+          "population": "Urgence hypertensive, dose d'entretien",
+          "population_type": "adulte",
+          "categorie": "pse",
+          "dose_mg_h_min": 9,
+          "dose_mg_h_max": 60
+        },
+        {
+          "population": "Urgence hypertensive, dose initiale continue",
+          "population_type": "pediatrie",
+          "categorie": "pse",
+          "dose_mg_kg_h_min": 2,
+          "dose_mg_kg_h_max": 2
+        },
+        {
+          "population": "Urgence hypertensive, dose d'entretien continue",
+          "population_type": "pediatrie",
+          "categorie": "pse",
+          "dose_mg_kg_h_min": 0.8,
+          "dose_mg_kg_h_max": 0.8
+        }
+      ]
+    },
+    "incompatibilites": []
+  },
+  "oral": {
+    "formes": [
+      {
+        "type": "Gélule à libération prolongée",
+        "dosage": "30 mg - 60mg",
+        "ecrasable": false,
+        "ouverture_gelule": true,
+        "posologie_adulte": [
+          {
+            "population": "Hypertension artérielle, monothérapie",
+            "categorie": "generale",
+            "population_type": "adulte",
+            "dose_par_prise_mg_min": 30,
+            "dose_par_prise_mg_max": 90,
+            "dose_journaliere_max_g": 0.18,
+            "intervalle_min_h": 12,
+            "intervalle_max_h": 12
+          },
+          {
+            "population": "Hypertension artérielle, sujet âgé",
+            "categorie": "generale",
+            "population_type": "adulte",
+            "dose_par_prise_mg_min": 30,
+            "dose_par_prise_mg_max": 60,
+            "dose_journaliere_max_g": 0.12,
+            "intervalle_min_h": 12,
+            "intervalle_max_h": 12
+          }
+        ]
+      },
+      {
+        "type": "Gélule à libération prolongée",
+        "dosage": "60 mg",
+        "ecrasable": false,
+        "ouverture_gelule": true,
+        "posologie_adulte": []
+      }
+    ],
+    "recommandation_sonde": {
+      "forme_preferee": "Gélule à libération prolongée (ouverte, microgranules non écrasés)",
+      "alternative": null
+    }
+  },
+  "aerosol": null,
+  "tracabilite": {
+    "rcp_source": [
+      {
+        "specialite": "EUPRESSYL 50 mg, solution injectable (I.V.)",
+        "titulaire": "Cheplapharm Arzneimittel GmbH",
+        "date_maj": "22/04/2025",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/60897031/extrait"
+      },
+      {
+        "specialite": "URAPIDIL STRAGEN 50 mg/10 mL, solution injectable",
+        "titulaire": "Stragen France",
+        "date_maj": "05/04/2023",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/67538433/extrait"
+      },
+      {
+        "specialite": "URAPIDIL STRAGEN 100 mg/20 mL, solution injectable",
+        "titulaire": "Stragen France",
+        "date_maj": "05/04/2023",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/65287548/extrait"
+      },
+      {
+        "specialite": "URAPIDIL KALCEKS 25 mg/5 mL, solution injectable/pour perfusion",
+        "titulaire": "AS Kalceks",
+        "date_maj": "26/06/2024",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/67632060/extrait"
+      },
+      {
+        "specialite": "URAPIDIL KALCEKS 50 mg/10 mL, solution injectable/pour perfusion",
+        "titulaire": "AS Kalceks",
+        "date_maj": "26/06/2024",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/60111553/extrait"
+      },
+      {
+        "specialite": "EUPRESSYL LP 30 mg, gélule à libération prolongée",
+        "titulaire": "Cheplapharm Arzneimittel GmbH",
+        "date_maj": "08/09/2025",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/68140336/extrait"
+      },
+      {
+        "specialite": "MEDIATENSYL LP 30 mg, gélule à libération prolongée",
+        "titulaire": "Cheplapharm Arzneimittel GmbH",
+        "date_maj": "08/09/2025",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/69791143/extrait"
+      },
+      {
+        "specialite": "URAPIDIL STRAGEN LP 30 mg, gélule à libération prolongée",
+        "titulaire": "Stragen France",
+        "date_maj": "18/11/2021",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/68082491/extrait"
+      }
+    ],
+    "statut": "valide",
+    "validation": {
+      "date": "2026-09-10",
+      "validateur": "Anna Trabaud-Lopez (IDE, porteuse du projet), vérification des données extraites contre les RCP ; équipe pharmacie, validation de la méthodologie et arbitrage des points litigieux",
+      "perimetre": [
+        "adulte"
+      ],
+      "prochaine_revision": "2026-12-10"
+    }
+  }
+}

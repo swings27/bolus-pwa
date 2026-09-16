@@ -123,16 +123,16 @@
     "preparation": [
       {
         "voie": "PSE",
-        "contexte": "VVC, traitement d'attaque",
+        "contexte": "VVC recommandée",
         "detail": "Glucose 5% exclusivement",
-        "duree": "20 min à 2 h",
+        "duree": "20 min à 2 h (attaque) ou continue (entretien)",
         "stabilite": null
       },
       {
         "voie": "PERF",
-        "contexte": "VVC, entretien",
-        "detail": "Glucose 5% exclusivement, 250 mL",
-        "duree": "Continu",
+        "contexte": "VVC recommandée",
+        "detail": "Glucose 5% exclusivement",
+        "duree": "Continu (entretien)",
         "stabilite": null
       },
       {
@@ -264,7 +264,7 @@
       }
     ],
     "recommandation_sonde": {
-      "forme_preferee": "Comprimé sécable 200 mg écrasé",
+      "forme_preferee": "Comprimé sécable écrasé",
       "alternative": ""
     }
   },

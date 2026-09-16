@@ -1,0 +1,307 @@
+{
+  "dci": "octreotide",
+  "commun": {
+    "noms_commerciaux": [
+      "Sandostatine",
+      "Sandostatine L.P.",
+      "Siroctid"
+    ],
+    "famille": "Analogue de synthèse de la somatostatine inhibiteur de la sécrétion de multiples hormones",
+    "antidote": "",
+    "indications": [
+      "Acromégalie",
+      "Tumeurs endocrines gastro-entéro-pancréatiques",
+      "Prévention complications chirurgie pancréatique",
+      "Hémorragie des varices gastro-œsophagiennes",
+      "Adénomes thyréotropes (TSH)"
+    ],
+    "grossesse_allaitement": {
+      "grossesse": "Par précaution, il est préférable de ne pas utiliser l'octréotide au cours de la grossesse.",
+      "allaitement": "Au cours du traitement par l'octréotide, les patientes ne doivent pas allaiter.",
+      "url_crat_grossesse": null,
+      "url_crat_allaitement": null
+    },
+    "note_ajustement": "Insuffisance hépatique : la demi-vie de l'octréotide peut être augmentée, une adaptation de la dose d'entretien peut être nécessaire, se référer au protocole du service.",
+    "contre_indications": [
+      "Hypersensibilité à la substance active ou à l'un des excipients."
+    ],
+    "interactions_pertinentes": [
+      {
+        "substance": "Bêta-bloquants, inhibiteurs calciques, substances agissant sur l'équilibre hydroélectrolytique",
+        "effet": "Une adaptation posologique de ces médicaments peut être nécessaire lorsqu'ils sont administrés en même temps que l'octréotide, notamment en raison du risque de bradycardie associé au traitement.",
+        "action_infirmier": "Signaler au prescripteur toute co-prescription de bêta-bloquants, d'inhibiteurs calciques ou de substances agissant sur l'équilibre hydroélectrolytique ; renforcer la surveillance clinique et la fréquence cardiaque."
+      },
+      {
+        "substance": "Insuline et traitements antidiabétiques",
+        "effet": "L'octréotide inhibe la sécrétion de GH, de glucagon et d'insuline et peut modifier la glycorégulation ; des adaptations posologiques de l'insuline et des traitements antidiabétiques peuvent être nécessaires en cas d'administration concomitante.",
+        "action_infirmier": "Signaler au prescripteur tout traitement antidiabétique ou insulinique en cours ; renforcer la surveillance de la glycémie, en particulier en début de traitement et à chaque changement de posologie."
+      },
+      {
+        "substance": "Ciclosporine",
+        "effet": "L'octréotide réduit l'absorption intestinale de la ciclosporine.",
+        "action_infirmier": "Signaler au prescripteur toute co-prescription de ciclosporine ; renforcer la surveillance des taux sanguins de ciclosporine."
+      },
+      {
+        "substance": "Cimétidine",
+        "effet": "L'octréotide retarde l'absorption de la cimétidine.",
+        "action_infirmier": "Signaler au prescripteur toute co-prescription de cimétidine."
+      },
+      {
+        "substance": "Bromocriptine",
+        "effet": "L'administration concomitante d'octréotide et de bromocriptine augmente la biodisponibilité de la bromocriptine.",
+        "action_infirmier": "Signaler au prescripteur toute co-prescription de bromocriptine."
+      },
+      {
+        "substance": "Substances à index thérapeutique étroit métabolisées par le CYP3A4",
+        "effet": "Les analogues de la somatostatine pourraient diminuer la clairance métabolique des substances métabolisées par le cytochrome P450, ce qui pourrait être lié à l'inhibition de l'hormone de croissance ; les médicaments à faible index thérapeutique métabolisés principalement par le CYP3A4 doivent être utilisés avec prudence.",
+        "action_infirmier": "Signaler au prescripteur toute co-prescription de quinidine, de terfénadine ou d'un autre médicament à index thérapeutique étroit métabolisé par le CYP3A4 ; renforcer la surveillance clinique."
+      },
+      {
+        "substance": "Lutécium (177Lu) oxodotréotide (radiopharmaceutique analogue de la somatostatine)",
+        "effet": "L'octréotide se lie de manière compétitive aux récepteurs de la somatostatine et peut interférer avec l'efficacité des analogues radioactifs de la somatostatine ; le RCP recommande d'éviter l'administration d'octréotide dans les 24 heures précédant celle du lutécium (177Lu) oxodotréotide.",
+        "action_infirmier": "Signaler au prescripteur et au service de médecine nucléaire tout traitement par octréotide en cours ou prévu avant une administration de lutécium (177Lu) oxodotréotide."
+      }
+    ],
+    "surveillance_specifique": [
+      {
+        "evenement": "Augmentation de volume d'un adénome hypophysaire somatotrope",
+        "explication": "Les adénomes hypophysaires somatotropes peuvent parfois augmenter de volume sous traitement, entraînant des complications sévères telles qu'une altération du champ visuel.",
+        "action": "Surveiller attentivement les patients acromégales ; signaler au prescripteur toute anomalie visuelle en vue d'une réévaluation thérapeutique."
+      },
+      {
+        "evenement": "Bradycardie et troubles de la conduction cardiaque",
+        "explication": "Des cas fréquents de bradycardie ont été rapportés avec l'octréotide. Des blocs auriculo-ventriculaires, y compris complets, ont été rapportés chez des patients recevant des doses élevées d'octréotide en perfusion continue (100 microgrammes/heure) ou en bolus intraveineux ; la dose de 50 microgrammes/heure ne doit pas être dépassée en perfusion continue.",
+        "action": "Surveiller la fréquence cardiaque et le tracé ECG ; maintenir sous surveillance cardiaque appropriée les patients recevant des doses élevées d'octréotide par voie IV ; respecter le débit indiqué en Préparation."
+      },
+      {
+        "evenement": "Cholélithiase et complications biliaires",
+        "explication": "La cholélithiase est un événement très fréquent au cours du traitement par octréotide et peut être associée à une cholécystite et à une dilatation des voies biliaires ; des cas de cholangite ont été rapportés après commercialisation comme complication de la cholélithiase.",
+        "action": "Une échographie de la vésicule biliaire est recommandée avant l'initiation du traitement puis tous les 6 à 12 mois pendant le traitement ; signaler au prescripteur tout signe évocateur (douleur, ictère, fièvre)."
+      },
+      {
+        "evenement": "Échappement thérapeutique",
+        "explication": "De rares cas d'échappement soudain au contrôle symptomatique peuvent se produire au cours du traitement des tumeurs endocrines gastro-entéro-pancréatiques, avec réapparition rapide de symptômes sévères ; les symptômes peuvent s'aggraver ou réapparaître à l'arrêt du traitement.",
+        "action": "Signaler au prescripteur toute réapparition ou aggravation brutale des symptômes chez un patient traité pour une tumeur endocrine gastro-entéro-pancréatique."
+      },
+      {
+        "evenement": "Troubles de la glycorégulation",
+        "explication": "L'octréotide inhibe les sécrétions de GH, de glucagon et d'insuline et peut perturber la tolérance au glucose. Chez les patients ayant un insulinome, il peut augmenter l'intensité et la durée de l'hypoglycémie. Il peut réduire les besoins en insuline chez le diabétique de type 1 et augmenter la glycémie post-prandiale chez le patient non diabétique ou diabétique de type 2 avec réserve d'insuline partiellement intacte.",
+        "action": "Surveiller régulièrement la glycémie, en particulier en début de traitement et à chaque changement de posologie ; signaler au prescripteur en vue d'une adaptation du traitement antidiabétique ou insulinique."
+      },
+      {
+        "evenement": "Dysfonction thyroïdienne",
+        "explication": "Un suivi de la fonction thyroïdienne doit être réalisé chez les patients traités au long cours par octréotide (risque d'hypothyroïdie, de diminution de la TSH et de la T4).",
+        "action": "Signaler au prescripteur tout traitement au long cours en vue d'un bilan thyroïdien périodique."
+      },
+      {
+        "evenement": "Élévation des enzymes hépatiques et atteintes hépatobiliaires",
+        "explication": "Un suivi de la fonction hépatique doit être réalisé au cours du traitement par octréotide ; des cas d'hépatite aiguë, de cholestase et d'ictère ont été rapportés après commercialisation.",
+        "action": "Signaler au prescripteur tout bilan hépatique anormal ou signe clinique évocateur (ictère)."
+      },
+      {
+        "evenement": "Carence en vitamine B12",
+        "explication": "Chez certains patients traités par octréotide, une diminution du taux de vitamine B12 et un test de Schilling anormal ont été observés.",
+        "action": "Signaler au prescripteur les antécédents de carence en vitamine B12 en vue d'un contrôle du taux pendant le traitement."
+      },
+      {
+        "evenement": "Insuffisance pancréatique exocrine",
+        "explication": "Une insuffisance pancréatique exocrine a été observée chez certains patients recevant de l'octréotide pour des tumeurs neuroendocrines gastro-entéro-pancréatiques, avec stéatorrhée, selles molles, ballonnements abdominaux et perte de poids.",
+        "action": "Signaler au prescripteur tout symptôme digestif évocateur chez un patient traité pour une tumeur neuroendocrine, en vue d'un dépistage."
+      },
+      {
+        "evenement": "Thrombocytopénie",
+        "explication": "Une thrombocytopénie a été rapportée au cours de l'expérience post-commercialisation, en particulier lors d'un traitement par octréotide par voie IV chez des patients atteints de cirrhose hépatique ; elle est réversible à l'arrêt du traitement.",
+        "action": "Surveiller la numération plaquettaire chez les patients cirrhotiques traités par octréotide IV ; signaler au prescripteur toute anomalie."
+      }
+    ],
+    "pictogrammes": []
+  },
+  "iv": {
+    "reconstitution": {
+      "solvant": "Solvant fourni en seringue préremplie, concerne uniquement la forme dépôt à libération prolongée (L.P., IM).",
+      "volume_par_10mg_mL": 2,
+      "volume_par_20mg_mL": 2,
+      "volume_par_30mg_mL": 2,
+      "stabilite_avant_dilution": "À utiliser immédiatement après reconstitution, ne doit pas être conservé."
+    },
+    "preparation": [
+      {
+        "voie": "SC",
+        "detail": "Utiliser pur, laisser la solution atteindre la température ambiante avant l'injection.",
+        "duree": "< 1 minute",
+        "stabilite": "A utiliser immédiatement."
+      },
+      {
+        "voie": "PSE",
+        "detail": "Dilution dans du NaCl 0,9% de préférence, ou G5%, concentration cible de 10µg/ml",
+        "duree": "Continu",
+        "stabilite": "24 heures à une température ne dépassant pas 25 °C."
+      },
+      {
+        "voie": "IM",
+        "contexte": "Forme LP uniquement",
+        "detail": "Après reconstitution, laisser reposer le flacon 5 minutes, puis agiter modérément à l'horizontale au moins 30 secondes jusqu'à obtention d'une suspension homogène.",
+        "duree": "< 1 minute",
+        "stabilite": "À utiliser immédiatement après reconstitution, ne doit pas être conservé."
+      }
+    ],
+    "administration": {
+      "posologie": [
+        {
+          "population": "Acromégalie",
+          "population_type": "adulte",
+          "categorie": "sc",
+          "dose_par_prise_mg_min": 0.05,
+          "dose_par_prise_mg_max": 0.1,
+          "intervalle_min_h": 8,
+          "intervalle_max_h": 12,
+          "dose_journaliere_max_mg": 1.5
+        },
+        {
+          "population": "Tumeurs endocrines gastro-entéro-pancréatiques",
+          "population_type": "adulte",
+          "categorie": "sc",
+          "dose_par_prise_mg_min": 0.05,
+          "dose_par_prise_mg_max": 0.2,
+          "intervalle_min_h": 8,
+          "intervalle_max_h": 24,
+          "dose_journaliere_max_mg": 1.5
+        },
+        {
+          "population": "Complications chirurgie pancréatique",
+          "population_type": "adulte",
+          "categorie": "sc",
+          "dose_par_prise_mg_min": 0.1,
+          "dose_par_prise_mg_max": 0.1,
+          "intervalle_min_h": 8,
+          "intervalle_max_h": 8,
+          "dose_journaliere_max_mg": 0.3
+        },
+        {
+          "population": "Adénomes thyréotropes (TSH)",
+          "population_type": "adulte",
+          "categorie": "sc",
+          "dose_par_prise_mg_min": 0.1,
+          "dose_par_prise_mg_max": 0.1,
+          "intervalle_min_h": 8,
+          "intervalle_max_h": 8,
+          "dose_journaliere_max_mg": 0.3
+        },
+        {
+          "population": "Hémorragie des varices gastro-œsophagiennes",
+          "population_type": "adulte",
+          "categorie": "pse",
+          "debit_ug_h_min": 25,
+          "debit_ug_h_max": 50
+        },
+        {
+          "population": "Acromégalie, relais LP",
+          "population_type": "adulte",
+          "categorie": "im",
+          "dose_par_prise_mg_min": 10,
+          "dose_par_prise_mg_max": 40,
+          "nb_prises_mois": 1
+        },
+        {
+          "population": "Tumeurs neuroendocrines, relais LP",
+          "population_type": "adulte",
+          "categorie": "im",
+          "dose_par_prise_mg_min": 10,
+          "dose_par_prise_mg_max": 30,
+          "nb_prises_mois": 1
+        },
+        {
+          "population": "Adénomes thyréotropes, forme L.P",
+          "population_type": "adulte",
+          "categorie": "im",
+          "dose_par_prise_mg_min": 20,
+          "dose_par_prise_mg_max": 20,
+          "nb_prises_mois": 1
+        }
+      ]
+    },
+    "incompatibilites": [
+      {
+        "substance": "Nutrition parentérale totale",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Phénytoïne",
+        "niveau": "absolu"
+      }
+    ]
+  },
+  "tracabilite": {
+    "rcp_source": [
+      {
+        "specialite": "SANDOSTATINE 500 microgrammes/1 mL, solution injectable/pour perfusion",
+        "titulaire": "NOVARTIS PHARMA",
+        "date_maj": "21/11/2025",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/61707595/extrait"
+      },
+      {
+        "specialite": "SANDOSTATINE 100 microgrammes/1 mL, solution injectable/pour perfusion",
+        "titulaire": "NOVARTIS PHARMA",
+        "date_maj": "21/11/2025",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/66004031/extrait"
+      },
+      {
+        "specialite": "SANDOSTATINE 50 microgrammes/1 mL, solution injectable/pour perfusion",
+        "titulaire": "NOVARTIS PHARMA",
+        "date_maj": "21/11/2025",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/68949551/extrait"
+      },
+      {
+        "specialite": "OCTREOTIDE HOSPIRA 500 microgrammes/1 mL, solution injectable",
+        "titulaire": "PFIZER HOLDING FRANCE",
+        "date_maj": "10/11/2025",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/63127541/extrait"
+      },
+      {
+        "specialite": "OCTREOTIDE ARROW 500 microgrammes/1 mL, solution injectable/pour perfusion",
+        "titulaire": "EUGIA PHARMA (MALTA)",
+        "date_maj": "28/04/2026",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/66306542/extrait"
+      },
+      {
+        "specialite": "SIROCTID 0,5 mg/mL, solution injectable ou solution à diluer pour perfusion en seringue préremplie",
+        "titulaire": "CHEMI (ITALIE)",
+        "date_maj": "05/02/2026",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/66565153/extrait"
+      },
+      {
+        "specialite": "SANDOSTATINE L.P. 20 mg, poudre et solvant pour suspension injectable",
+        "titulaire": "NOVARTIS PHARMA",
+        "date_maj": "21/11/2025",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/69869122/extrait"
+      },
+      {
+        "specialite": "SANDOSTATINE L.P. 10 mg, poudre et solvant pour suspension injectable",
+        "titulaire": "NOVARTIS PHARMA",
+        "date_maj": "21/11/2025",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/64494476/extrait"
+      },
+      {
+        "specialite": "SANDOSTATINE L.P. 30 mg, poudre et solvant pour suspension injectable",
+        "titulaire": "NOVARTIS PHARMA",
+        "date_maj": "21/11/2025",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/61881699/extrait"
+      },
+      {
+        "specialite": "OCTREOTIDE TEVA LP 20 mg, poudre et solvant pour suspension injectable à libération prolongée",
+        "titulaire": "TEVA (PAYS-BAS)",
+        "date_maj": "16/07/2024",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/65432189/extrait"
+      }
+    ],
+    "statut": "valide",
+    "validation": {
+      "date": "2026-09-10",
+      "validateur": "Anna Trabaud-Lopez (IDE, porteuse du projet), vérification des données extraites contre les RCP ; équipe pharmacie, validation de la méthodologie et arbitrage des points litigieux",
+      "perimetre": [
+        "adulte"
+      ],
+      "prochaine_revision": "2026-12-10"
+    }
+  }
+}

@@ -1,0 +1,253 @@
+{
+  "dci": "lidocaine",
+  "commun": {
+    "noms_commerciaux": [
+      "Xylocaïne",
+      "Xylocard"
+    ],
+    "famille": "Anesthésique local à liaison amide et antiarythmique de classe IB",
+    "antidote": "",
+    "indications": [
+      "Anesthésie locale par infiltration",
+      "Anesthésie intraveineuse régionale",
+      "Infiltration péri- et intra-articulaire",
+      "Anesthésie obstétricale",
+      "Troubles du rythme ventriculaire menaçant le pronostic vital",
+      "Tachycardie/fibrillation ventriculaire réfractaires (SCA)",
+      "Analgésie péri-opératoire (chirurgie abdominale)",
+      "Douleur buccale ou oeso-gastrique",
+      "Anesthésie de contact avant exploration ORL/digestive"
+    ],
+    "grossesse_allaitement": {
+      "grossesse": "Ne pas utiliser en bloc paracervical en anesthésie obstétricale, en raison d'un risque d'hypertonie utérine avec retentissement néonatal (hypoxie). La lidocaïne peut être utilisée au cours de la grossesse quel qu'en soit le terme.",
+      "allaitement": "L'allaitement est possible au décours d'une anesthésie locorégionale avec la lidocaïne.",
+      "url_crat_grossesse": "https://www.lecrat.fr/8323/",
+      "url_crat_allaitement": "https://www.lecrat.fr/8333/"
+    },
+    "contre_indications": [
+      "Hypersensibilité à la lidocaïne, aux anesthésiques locaux à liaison amide ou à l'un des excipients",
+      "Porphyries aiguës et récurrentes",
+      "Épilepsie non contrôlée par un traitement",
+      "Troubles de la conduction auriculo-ventriculaire de haut degré non appareillés (usage IV systémique)",
+      "Association aux antiarythmiques torsadogènes, amiodarone, disopyramide, quinidiniques, sotalol (usage IV systémique)",
+      "Administration intraveineuse à une concentration supérieure à 5 mg/mL chez l'enfant de moins de 5 ans (anesthésie IV régionale)",
+      "Bloc paracervical en anesthésie obstétricale (risque d'hypertonie utérine et d'hypoxie néonatale)",
+      "Enfant de moins de 6 ans (pulvérisation buccopharyngée)",
+      "Enfant (gel oral)"
+    ],
+    "interactions_pertinentes": [
+      {
+        "substance": "Antiarythmiques torsadogènes",
+        "effet": "Risque majoré de troubles du rythme ventriculaire, notamment de torsades de pointes, en association avec la lidocaïne administrée par voie IV systémique.",
+        "action_infirmier": "Association contre-indiquée : signaler au prescripteur toute co-prescription de ces antiarythmiques avant l'administration IV de lidocaïne."
+      },
+      {
+        "substance": "Amiodarone, fluvoxamine, cimétidine (≥ 800 mg/j), bêta-bloquants (hors esmolol)",
+        "effet": "Augmentation des concentrations plasmatiques de lidocaïne par diminution de son métabolisme hépatique, avec risque de toxicité.",
+        "action_infirmier": "Signaler au prescripteur toute association ; renforcer la surveillance clinique et électrocardiographique."
+      },
+      {
+        "substance": "Médicaments inotropes négatifs et bradycardisants",
+        "effet": "Majoration du risque de bradycardie et de dépression de la contractilité myocardique en association avec la lidocaïne IV.",
+        "action_infirmier": "Association déconseillée : signaler au prescripteur avant administration ; surveillance de la fréquence cardiaque."
+      }
+    ],
+    "surveillance_specifique": [
+      {
+        "evenement": "Toxicité systémique aiguë des anesthésiques locaux (signes neurologiques puis cardiovasculaires) en cas de passage intravasculaire accidentel ou de résorption excessive",
+        "explication": "La lidocaïne administrée en excès ou injectée par erreur dans un vaisseau peut provoquer des signes neurologiques subjectifs (paresthésies périorales, vertiges, troubles visuels), puis des convulsions, des troubles du rythme ventriculaire ou un arrêt cardiaque. Le RCP prévoit une surveillance d'au moins 6 heures en cas de signes de toxicité, le risque de récidive persistant.",
+        "action": "Surveiller en continu pendant et après l'injection ; en cas de signes de gravité, alerter immédiatement le médecin."
+      },
+      {
+        "evenement": "Méthémoglobinémie chez le nouveau-né",
+        "explication": "Le RCP signale un risque accru de méthémoglobinémie néonatale lors de l'utilisation de lidocaïne chez le nouveau-né.",
+        "action": "Signaler au médecin toute administration chez le nouveau-né ; surveiller la coloration cutanée et la saturation en oxygène."
+      },
+      {
+        "evenement": "Chondrolyse en cas de perfusion intra-articulaire continue prolongée",
+        "explication": "Le RCP associe la perfusion intra-articulaire continue d'anesthésiques locaux, dont la lidocaïne, à des cas de chondrolyse, principalement rapportés après usage à l'épaule.",
+        "action": "Ne jamais utiliser la lidocaïne en perfusion intra-articulaire continue ; se limiter à une injection unique et signaler tout projet de perfusion continue au prescripteur."
+      }
+    ],
+    "pictogrammes": [],
+    "note_ajustement": "Diminuer de moitié la posologie de lidocaïne IV chez l'insuffisant hépatique et en cas d'insuffisance cardiaque sévère ; individualiser la posologie chez le sujet âgé, se référer au protocole du service."
+  },
+  "iv": {
+    "reconstitution": null,
+    "preparation": [
+      {
+        "voie": "IVD",
+        "contexte": "FV réfractaire (ACR)",
+        "detail": "Utiliser pur, alternative à l'amiodarone en cas de contre-indication ou d'indisponibilité",
+        "duree": "Bolus",
+        "stabilite": "Utilisation immédiate"
+      },
+      {
+        "voie": "IVL",
+        "contexte": "Trouble du rythme ventriculaire",
+        "detail": "Utiliser pur",
+        "duree": "1 à 2 min",
+        "stabilite": "Utilisation immédiate"
+      },
+      {
+        "voie": "PSE",
+        "contexte": "Entretien antiarythmique (Xylocard)",
+        "detail": "Diluer dans du NaCl 0,9 % ou G5 %",
+        "duree": "Continu",
+        "stabilite": null
+      }
+    ],
+    "administration": {
+      "posologie": [
+        {
+          "population": "Trouble du rythme ventriculaire menaçant le pronostic vital, dose de charge",
+          "population_type": "adulte",
+          "categorie": "generale",
+          "dose_mg_kg_min": 1,
+          "dose_mg_kg_max": 1.5
+        },
+        {
+          "population": "Fibrillation ventriculaire réfractaire (ACR), dose initiale",
+          "population_type": "adulte",
+          "categorie": "speciale",
+          "dose_par_prise_mg_min": 100,
+          "dose_par_prise_mg_max": 100
+        },
+        {
+          "population": "Fibrillation ventriculaire réfractaire (ACR), dose supplémentaire",
+          "population_type": "adulte",
+          "categorie": "speciale",
+          "dose_par_prise_mg_min": 50,
+          "dose_par_prise_mg_max": 50
+        }
+      ]
+    },
+    "incompatibilites": []
+  },
+  "aerosol": null,
+  "oral": {
+    "formes": [
+      {
+        "type": "Gel oral",
+        "dosage": "2 % (20 mg/mL)",
+        "ecrasable": null,
+        "ouverture_gelule": null,
+        "posologie_adulte": [
+          {
+            "population": "Douleur buccale ou oeso-gastrique",
+            "population_type": "adulte",
+            "categorie": "generale",
+            "dose_par_prise_mg_min": 200,
+            "dose_par_prise_mg_max": 300,
+            "intervalle_min_h": 8,
+            "intervalle_max_h": 8,
+            "dose_journaliere_max_g": 0.9
+          }
+        ]
+      },
+      {
+        "type": "Solution pour pulvérisation buccopharyngée",
+        "dosage": "5 %, 9 mg par pulvérisation",
+        "ecrasable": null,
+        "ouverture_gelule": null,
+        "posologie_adulte": [
+          {
+            "population": "Anesthésie de contact avant intubation, geste ORL ou endoscopie",
+            "population_type": "adulte",
+            "categorie": "generale",
+            "dose_par_prise_mg_min": 90,
+            "dose_par_prise_mg_max": 225
+          },
+          {
+            "population": "Traitement standard",
+            "population_type": "pediatrie",
+            "categorie": "speciale",
+            "dose_mg_kg_min": 2,
+            "dose_mg_kg_max": 4,
+            "dose_journaliere_max_g": 0.2,
+            "age_min_mois": 72,
+            "age_max_mois": 144
+          }
+        ]
+      }
+    ],
+    "recommandation_sonde": {
+      "forme_preferee": "",
+      "alternative": "Voie injectable, avis médical"
+    }
+  },
+  "tracabilite": {
+    "rcp_source": [
+      {
+        "specialite": "XYLOCARD 20 mg/ml INTRAVEINEUX, solution injectable",
+        "titulaire": "ASPEN PHARMA TRADING LIMITED",
+        "date_maj": "2021-05-19",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/65528593/extrait"
+      },
+      {
+        "specialite": "XYLOCARD 50 mg/ml, solution injectable pour perfusion",
+        "titulaire": "ASPEN PHARMA TRADING LIMITED",
+        "date_maj": "non relevée lors de la consultation",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/61100093/extrait"
+      },
+      {
+        "specialite": "LIDOCAINE CHLORHYDRATE RENAUDIN 20 mg/mL, solution pour injection/perfusion",
+        "titulaire": "LABORATOIRE RENAUDIN",
+        "date_maj": "2020-05-19",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/69452417/extrait"
+      },
+      {
+        "specialite": "XYLOCAINE 20 mg/ml SANS CONSERVATEUR, solution injectable",
+        "titulaire": "ASPEN PHARMA TRADING LIMITED",
+        "date_maj": "2021-06-23",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/61751079/extrait"
+      },
+      {
+        "specialite": "XYLOCAINE 10 mg/ml SANS CONSERVATEUR, solution injectable",
+        "titulaire": "ASPEN PHARMA TRADING LIMITED",
+        "date_maj": "2016-03-02",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/60181733/extrait"
+      },
+      {
+        "specialite": "XYLOCAINE 5 mg/ml SANS CONSERVATEUR, solution injectable",
+        "titulaire": "ASPEN PHARMA TRADING LIMITED",
+        "date_maj": "non relevée lors de la consultation",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/60945259/extrait"
+      },
+      {
+        "specialite": "CHLORHYDRATE DE LIDOCAINE RENAUDIN 10 mg/mL, solution injectable",
+        "titulaire": "LABORATOIRE RENAUDIN",
+        "date_maj": "non relevée lors de la consultation",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/69036269/extrait"
+      },
+      {
+        "specialite": "LIDOCAINE AGUETTANT 5 mg/ml SANS CONSERVATEUR, solution injectable",
+        "titulaire": "LABORATOIRES AGUETTANT",
+        "date_maj": "2023-11-16",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/69937299/extrait"
+      },
+      {
+        "specialite": "XYLOCAINE VISQUEUSE 2 POUR CENT, gel oral",
+        "titulaire": "ASPEN PHARMA TRADING LIMITED",
+        "date_maj": "2021-05-05",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/60639248/extrait"
+      },
+      {
+        "specialite": "XYLOCAINE 5 POUR CENT NEBULISEUR, solution pour pulvérisation buccale",
+        "titulaire": "ASPEN PHARMA TRADING LIMITED",
+        "date_maj": "2026-06-23",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/60822018/extrait"
+      }
+    ],
+    "statut": "valide",
+    "validation": {
+      "date": "2026-09-10",
+      "validateur": "Anna Trabaud-Lopez (IDE, porteuse du projet), vérification des données extraites contre les RCP ; équipe pharmacie, validation de la méthodologie et arbitrage des points litigieux",
+      "perimetre": [
+        "adulte",
+        "pediatrie"
+      ],
+      "prochaine_revision": "2026-12-10"
+    }
+  }
+}
