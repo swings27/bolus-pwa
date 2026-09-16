@@ -1,0 +1,192 @@
+{
+  "dci": "oxytocine",
+  "commun": {
+    "noms_commerciaux": [],
+    "famille": "Ocytocique hormone post-hypophysaire de synthèse",
+    "antidote": "",
+    "indications": [
+      "Induction du travail",
+      "Stimulation du travail (inertie utérine)",
+      "Prévention hémorragie post-partum",
+      "Traitement hémorragie post-partum"
+    ],
+    "grossesse_allaitement": {
+      "grossesse": "Aucune étude sur l'effet tératogène standard et sur la capacité de reproduction avec l'oxytocine n'est disponible. Basé sur la large expérience de ce médicament, de sa structure chimique et de ses propriétés pharmacologiques, un risque d'anomalies fœtales n'est pas attendu lorsqu'il est utilisé comme indiqué.",
+      "allaitement": "L'oxytocine peut être trouvée en petite quantité dans le lait maternel. Toutefois, l'oxytocine n'est pas susceptible de provoquer des effets nocifs chez le nouveau-né, car il passe dans le tube digestif où il subit une inactivation rapide.",
+      "url_crat_grossesse": null,
+      "url_crat_allaitement": null
+    },
+    "note_ajustement": "Insuffisance rénale sévère : l'administration d'oxytocine n'est pas recommandée, en raison du risque de rétention hydrique avec hyponatrémie lié à son effet antidiurétique ; la prise hydrique orale doit être limitée, l'équilibre hydrique surveillé, et les électrolytes sériques mesurés en cas de suspicion de déséquilibre.",
+    "contre_indications": [
+      "Hypersensibilité à la substance active ou à l'un des excipients.",
+      "Troubles cardiovasculaires et toxémie gravidique sévères.",
+      "Administration dans les 6 heures suivant l'administration de prostaglandines par voie vaginale.",
+      "Utilisation concomitante de médicaments allongeant l'intervalle QT, sauf exception (voir Interactions).",
+      "Hypertonie utérine.",
+      "Détresse fœtale, si l'accouchement n'est pas imminent.",
+      "Situations où l'accouchement par voie basse est contre-indiqué : placenta praevia, vasa praevia, procidence ou prolapsus du cordon ombilical, disproportion céphalopelvienne importante, présentation fœtale transverse, carcinome invasif du col de l'utérus, risque de transmission d'une infection génitale maternelle active.",
+      "Fragilité utérine résultant d'une intervention chirurgicale utérine majeure (cicatrice corporéale) ou d'un antécédent de rupture utérine."
+    ],
+    "interactions_pertinentes": [
+      {
+        "substance": "Prostaglandines",
+        "effet": "Potentialisation réciproque des effets utérotoniques, rendant la contractilité utérine difficile à contrôler et majorant le risque d'hyperstimulation utérine. Le RCP proscrit l'administration d'oxytocine dans les 6 heures suivant l'administration vaginale de prostaglandines.",
+        "action_infirmier": "Signaler au prescripteur toute administration de prostaglandines en cours ou récente."
+      },
+      {
+        "substance": "Médicaments allongeant l'intervalle QT (association contre-indiquée) : amiodarone, dronédarone, érythromycine IV, méquitazine, vandétanib, citalopram, dompéridone, escitalopram, hydroxyzine, pipéraquine, spiramycine (IV et orale), vincamine IV",
+        "effet": "L'oxytocine est elle-même potentiellement arythmogène ; l'association majore le risque de troubles du rythme ventriculaire, notamment de torsades de pointes.",
+        "action_infirmier": "Association contre-indiquée : signaler systématiquement au prescripteur toute co-prescription de ces médicaments."
+      },
+      {
+        "substance": "Médicaments torsadogènes déconseillés : antiparasitaires (chloroquine, hydroxychloroquine, halofantrine, luméfantrine, pentamidine), arsénieux, crizotinib, méthadone, neuroleptiques (chlorpromazine, halopéridol, lévomépromazine, pimozide, sulpiride, tiapride, zuclopenthixol), cotrimoxazole",
+        "effet": "Risque majoré de troubles du rythme ventriculaire, notamment de torsades de pointes, en association.",
+        "action_infirmier": "Association déconseillée : signaler au prescripteur toute co-prescription de ces médicaments."
+      },
+      {
+        "substance": "Médicaments à prendre en compte pour le risque de torsades de pointes : ondansétron, azithromycine, ciprofloxacine, lévofloxacine, norfloxacine, roxithromycine, bêta-bloquants de l'insuffisance cardiaque (bisoprolol, carvédilol, métoprolol, nébivolol), bradycardisants (acébutolol, digoxine, diltiazem)",
+        "effet": "Risque majoré de troubles du rythme ventriculaire en association.",
+        "action_infirmier": "Signaler au prescripteur ; renforcer la surveillance clinique et électrocardiographique en cas d'association, notamment avec l'ondansétron, fréquemment coprescrit en obstétrique."
+      },
+      {
+        "substance": "Anesthésiques volatils halogénés",
+        "effet": "Peuvent aggraver l'effet hypotenseur de l'oxytocine et réduire son action utérotonique ; des troubles du rythme ont également été rapportés en cas d'administration concomitante.",
+        "action_infirmier": "Signaler au prescripteur/à l'équipe d'anesthésie l'administration en cours d'oxytocine avant une anesthésie générale par halogénés ; surveillance hémodynamique renforcée."
+      }
+    ],
+    "surveillance_specifique": [
+      {
+        "evenement": "Hyperstimulation utérine / souffrance fœtale",
+        "explication": "L'administration de doses excessives ou une augmentation des doses trop rapprochée ou trop importante, pendant le déclenchement ou le renforcement du travail, peut conduire à une hyperstimulation utérine, détresse fœtale, asphyxie voire mort du fœtus, ou à une hypertonie, des contractions tétaniques ou une rupture utérine.",
+        "action": "Surveiller en continu l'activité utérine (fréquence, force, durée des contractions) et le rythme cardiaque fœtal pendant toute la perfusion ; interrompre immédiatement la perfusion en cas d'hyperactivité utérine et/ou de souffrance fœtale, et signaler au prescripteur. Le recours à de fortes doses d'oxytocine pendant le travail majore également le risque d'hémorragie du post-partum, même si une prophylaxie par oxytocine a été administrée."
+      },
+      {
+        "evenement": "Hyponatrémie / intoxication par l'eau",
+        "explication": "L'oxytocine, endogène ou exogène, a un effet antidiurétique pouvant entraîner une rétention d'eau et une hyponatrémie de dilution, en particulier en cas d'administration prolongée ou à doses élevées. Facteurs de risque : perfusion prolongée, apport hydrique excessif (bilan positif > 1500 mL), solutions hypotoniques (dextrose), analgésie neuraxiale avec réanimation hydrique, anesthésiques morphiniques associés, travail prolongé. Le RCP conseille une restriction hydrique en dessous de 130 mmol/L de natrémie et l'arrêt de l'oxytocine en dessous de 125 mmol/L.",
+        "action": "Surveiller l'apparition de céphalées, nausées, léthargie, anorexie ou apathie, signes précoces d'hyponatrémie ; en cas de suspicion, faire contrôler la natrémie et signaler au prescripteur."
+      },
+      {
+        "evenement": "Allongement de l'intervalle QT / torsades de pointes",
+        "explication": "L'oxytocine est potentiellement arythmogène, en particulier chez les patientes présentant d'autres facteurs de risque de torsades de pointes (médicaments allongeant le QT, syndrome du QT long connu).",
+        "action": "Signaler au prescripteur tout antécédent de syndrome du QT long ou toute co-prescription torsadogène ; renforcer la surveillance clinique et électrocardiographique si l'association ne peut être évitée."
+      },
+      {
+        "evenement": "Hypotension transitoire et risque d'ischémie myocardique",
+        "explication": "Une administration inadaptée peut provoquer une hypotension aiguë transitoire avec bouffées vasomotrices et tachycardie réflexe, susceptible de provoquer une ischémie myocardique chez les patientes prédisposées (cardiomyopathie hypertrophique, valvulopathie, cardiopathie ischémique, vasospasme coronaire).",
+        "action": "Ne jamais administrer en injection IV bolus ; respecter la perfusion lente indiquée en Préparation. Surveiller la pression artérielle et la fréquence cardiaque, en particulier chez les patientes à risque cardiovasculaire ; une administration IV encore plus lente peut être envisagée chez ces patientes."
+      },
+      {
+        "evenement": "Coagulation intravasculaire disséminée (CIVD) du post-partum",
+        "explication": "Dans de très rares cas, l'induction pharmacologique du travail par des agents utérotoniques, y compris l'oxytocine, augmente le risque de CIVD du post-partum, c'est l'induction pharmacologique elle-même, et non un agent particulier, qui est en cause. Le risque est majoré chez les patientes de 35 ans ou plus, en cas de complications pendant la grossesse, ou d'âge gestationnel supérieur à 40 semaines.",
+        "action": "Chez les patientes à risque, alerter le prescripteur en cas de signes évocateurs de CIVD (saignement anormal, fibrinolyse)."
+      },
+      {
+        "evenement": "Réaction anaphylactique chez les patientes allergiques au latex",
+        "explication": "Des cas de réactions anaphylactiques ont été rapportés après administration d'oxytocine chez des femmes présentant une allergie connue au latex, en raison d'une homologie structurelle entre l'oxytocine et le latex.",
+        "action": "Vérifier l'absence d'allergie au latex connue avant l'administration ; signaler au prescripteur/pharmacien toute allergie au latex connue."
+      }
+    ],
+    "pictogrammes": []
+  },
+  "iv": {
+    "reconstitution": null,
+    "preparation": [
+      {
+        "voie": "PERF",
+        "contexte": "Avec pompe volumétrique adaptée",
+        "detail": "Diluer de 5 à 10UI dans 500 mL ou 1L de NaCl 0,9% ou G5%, selon la concentration cible.",
+        "duree": "Selon protocole",
+        "stabilite": "24 heures à 25 °C après dilution."
+      },
+      
+      {
+        "voie": "IM",
+        "contexte": "Post-partum alternative",
+        "detail": "5 à 10UI à utiliser pur",
+        "duree": "< 1 min",
+        "stabilite": null
+      }
+    ],
+    "administration": {
+      "posologie": [
+        {
+          "population": "Induction / stimulation du travail",
+          "categorie": "generale",
+          "population_type": "adulte",
+          "dose_par_prise_UI_min": 5,
+          "dose_par_prise_UI_max": 5,
+          "intervalle_min_h": 24,
+          "intervalle_max_h": 24,
+          "dose_journaliere_max_UI": 5
+        },
+        {
+          "population": "Traitement de l'atonie / hémorragie du post-partum",
+          "categorie": "generale",
+          "population_type": "adulte",
+          "dose_par_prise_UI_min": 5,
+          "dose_par_prise_UI_max": 10,
+          "intervalle_min_h": 2,
+          "intervalle_max_h": 2,
+          "dose_journaliere_max_UI": 40
+        },
+          {
+          "population": "Prévention de l'atonie / hémorragie du post-partum ou accouchement",
+          "categorie": "generale",
+          "population_type": "adulte",
+          "dose_par_prise_UI_min": 5,
+          "dose_par_prise_UI_max": 10,
+          "intervalle_min_h": 24,
+          "intervalle_max_h": 24,
+          "dose_journaliere_max_UI": 10
+        },
+        {
+          "population": "Accouchement",
+          "categorie": "im",
+          "population_type": "adulte",
+          "dose_par_prise_UI_min": 5,
+          "dose_par_prise_UI_max": 10
+        }
+      ]
+    },
+    "incompatibilites": []
+  },
+  "aerosol": null,
+  "oral": null,
+  "tracabilite": {
+    "rcp_source": [
+      {
+        "specialite": "OXYTOCINE PANPHARMA 5 UI/1 ml, solution injectable",
+        "titulaire": "PANPHARMA, ZI du Clairay, 35133 Luitré",
+        "date_maj": "08/01/2026",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/60613673/extrait"
+      },
+      {
+        "specialite": "OXYTOCINE MEDISOL 5 UI/1 ml, solution injectable",
+        "titulaire": "MEDISOL, 13 Cours Valmy, Tour Pacific Hall Ouest, 92800 Puteaux",
+        "date_maj": "29/09/2025 (dernière révision ANSM, la rubrique 10 du RCP indique « à compléter ultérieurement par le titulaire »)",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/65765546/extrait"
+      },
+      {
+        "specialite": "OXYTOCINE EVER PHARMA 5 UI/1 ml, solution injectable",
+        "titulaire": "EVER Neuro Pharma GmbH, Oberburgau 3, 4866 Unterach am Attersee, Autriche",
+        "date_maj": "04/11/2025",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/66693128/extrait"
+      },
+      {
+        "specialite": "SYNTOCINON 5 UI/1 ml, solution injectable en ampoule (non retenue comme référence active)",
+        "titulaire": "Alfasigma S.p.A., Via Ragazzi del '99 n. 5, 40133 Bologne, Italie",
+        "date_maj": "31/12/2025",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/63355694/extrait"
+      }
+    ],
+    "statut": "valide",
+    "validation": {
+      "date": "2026-09-10",
+      "validateur": "Anna Trabaud-Lopez (IDE, porteuse du projet), vérification des données extraites contre les RCP ; équipe pharmacie, validation de la méthodologie et arbitrage des points litigieux",
+      "perimetre": [
+        "adulte"
+      ],
+      "prochaine_revision": "2026-12-10"
+    }
+  }
+}

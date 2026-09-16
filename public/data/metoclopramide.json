@@ -1,0 +1,277 @@
+{
+  "dci": "metoclopramide",
+  "commun": {
+    "noms_commerciaux": [
+      "Primperan",
+      "Prokinyl LP"
+    ],
+    "famille": "Antiémétique antagoniste dopaminergique D2, agent prokinétique",
+    "antidote": "",
+    "indications": [
+      "Nausées/vomissements post-opératoires",
+      "Nausées/vomissements symptomatiques",
+      "Nausées/vomissements de radiothérapie",
+      "Nausées/vomissements de chimiothérapie",
+      "Chimiothérapie, 2e intention (enfant)",
+      "Post-opératoire, 2e intention (enfant)"
+    ],
+    "grossesse_allaitement": {
+      "grossesse": "Un nombre important de données chez la femme enceinte (plus de 1000 grossesses) n'a mis en évidence aucun effet malformatif, ni fœtotoxique du métoclopramide. Si le métoclopramide est administré en fin de grossesse, un syndrome extrapyramidal néonatal ne peut être exclu.",
+      "allaitement": "Le métoclopramide passe faiblement dans le lait maternel ; des effets indésirables chez le nouveau-né allaité ne peuvent être exclus. L'allaitement n'est pas recommandé pendant le traitement par métoclopramide.",
+      "url_crat_grossesse": "https://www.lecrat.fr/3419/",
+      "url_crat_allaitement": "https://www.lecrat.fr/3425/"
+    },
+    "note_ajustement": "Dose adaptée selon la fonction rénale (insuffisance terminale : réduction de 75 %) et la fonction hépatique sévère (réduction de 50 %), diminution de dose à envisager chez le sujet âgé, se référer au protocole du service.",
+    "contre_indications": [
+      "Hypersensibilité au métoclopramide ou à l'un des excipients",
+      "Hémorragie gastro-intestinale, obstruction mécanique ou perforation digestive (stimulation dangereuse de la motricité gastro-intestinale)",
+      "Phéochromocytome connu ou suspecté (risque de crise hypertensive sévère)",
+      "Antécédent de dyskinésie tardive aux neuroleptiques ou au métoclopramide",
+      "Épilepsie (augmentation de la fréquence et de l'intensité des crises)",
+      "Maladie de Parkinson",
+      "Association à la lévodopa ou aux agonistes dopaminergiques",
+      "Antécédent de méthémoglobinémie avec le métoclopramide ou déficit en NADH cytochrome b5 réductase",
+      "Enfant de moins d'un an, toutes voies (risque accru de troubles extrapyramidaux)",
+      "Enfant de moins de 30 kg pour la forme comprimé sécable (dosage non adapté)"
+    ],
+    "interactions_pertinentes": [
+      {
+        "substance": "Lévodopa / agonistes dopaminergiques",
+        "effet": "Antagonisme réciproque entre les agonistes dopaminergiques (ou la lévodopa) et le métoclopramide.",
+        "action_infirmier": "Association contre-indiquée : signaler immédiatement au prescripteur toute co-prescription de lévodopa ou d'agoniste dopaminergique."
+      },
+      {
+        "substance": "Alcool",
+        "effet": "L'alcool majore l'effet sédatif du métoclopramide.",
+        "action_infirmier": "Signaler au patient d'éviter la consommation d'alcool pendant le traitement ; renforcer la surveillance de la vigilance."
+      },
+      {
+        "substance": "Dépresseurs du système nerveux central",
+        "effet": "Addition des effets sédatifs entre les dépresseurs du système nerveux central et le métoclopramide.",
+        "action_infirmier": "Renforcer la surveillance de la vigilance en cas de coprescription d'un dépresseur du SNC."
+      }
+    ],
+    "surveillance_specifique": [
+      {
+        "evenement": "Syndrome extrapyramidal aigu",
+        "explication": "Le métoclopramide est un antagoniste dopaminergique central ; ces réactions surviennent surtout en début de traitement, principalement chez l'enfant, l'adulte jeune et à doses élevées.",
+        "action": "Signaler immédiatement au prescripteur toute manifestation extrapyramidale (mouvements anormaux, torticolis, crise oculogyre, protrusion de la langue)."
+      },
+      {
+        "evenement": "Dyskinésie tardive potentiellement irréversible en cas de traitement prolongé",
+        "explication": "Le risque augmente avec la durée de traitement, en particulier chez le sujet âgé.",
+        "action": "Ne pas prolonger le traitement au-delà de la durée recommandée par indication ; signaler au prescripteur toute demande de renouvellement."
+      },
+      {
+        "evenement": "Méthémoglobinémie chez le nourrisson porteur d'un déficit en NADH cytochrome b5 réductase non diagnostiqué",
+        "explication": "Ce déficit enzymatique, souvent méconnu chez le très jeune enfant, expose à une méthémoglobinémie sous métoclopramide.",
+        "action": "Surveiller la coloration cutanéo-muqueuse (cyanose) et signaler immédiatement toute anomalie."
+      },
+      {
+        "evenement": "Syndrome malin des neuroleptiques",
+        "explication": "Réaction rare mais grave liée au blocage dopaminergique.",
+        "action": "Surveiller l'apparition d'une hyperthermie, d'une rigidité musculaire ou d'une instabilité neurovégétative ; arrêter le traitement et alerter le prescripteur en cas de suspicion."
+      }
+    ],
+    "pictogrammes": []
+  },
+  "iv": {
+    "reconstitution": null,
+    "preparation": [
+      {
+        "voie": "IVL",
+        "detail": "Utiliser pur",
+        "duree": "≥ 3 minutes",
+        "stabilite": "À usage unique, utiliser immédiatement après ouverture de l'ampoule."
+      },
+      {
+        "voie": "IM",
+        "detail": "Utiliser pur",
+        "duree": "< 1 min",
+        "stabilite": "À usage unique, utiliser immédiatement après ouverture de l'ampoule."
+      }
+    ],
+    "administration": {
+      "posologie": [
+        {
+          "population": "Prévention post-opératoire",
+          "population_type": "adulte",
+          "categorie": "generale",
+          "dose_par_prise_mg_min": 10,
+          "dose_par_prise_mg_max": 10,
+          "intervalle_min_h": 24,
+          "intervalle_max_h": 24
+        },
+        {
+          "population": "Traitement symptomatique / prévention radiothérapie",
+          "population_type": "adulte",
+          "categorie": "generale",
+          "dose_par_prise_mg_min": 10,
+          "dose_par_prise_mg_max": 10,
+          "intervalle_min_h": 8,
+          "intervalle_max_h": 24,
+          "dose_journaliere_max_g": 0.03
+        },
+        {
+          "population": "Prévention 2e intention, chimiothérapie",
+          "population_type": "pediatrie",
+          "categorie": "generale",
+          "age_min_mois": 12,
+          "age_max_mois": 216,
+          "dose_mg_kg_min": 0.1,
+          "dose_mg_kg_max": 0.15,
+          "dose_journaliere_mg_kg_max": 0.5,
+          "intervalle_min_h": 8,
+          "intervalle_max_h": 24
+        },
+        {
+          "population": "Traitement 2e intention, post-opératoire avéré",
+          "population_type": "pediatrie",
+          "categorie": "generale",
+          "age_min_mois": 12,
+          "age_max_mois": 216,
+          "dose_mg_kg_min": 0.1,
+          "dose_mg_kg_max": 0.15,
+          "dose_journaliere_mg_kg_max": 0.5,
+          "intervalle_min_h": 8,
+          "intervalle_max_h": 24
+        }
+      ]
+    },
+    "incompatibilites": [
+      {
+        "substance": "Céfépime",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Flucloxacilline",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Furosémide",
+        "niveau": "absolu"
+      },
+      {
+        "substance": "Bicarbonate de sodium",
+        "niveau": "absolu"
+      }
+    ]
+  },
+  "oral": {
+    "formes": [
+      {
+        "type": "Comprimé sécable",
+        "dosage": "10 mg",
+        "ecrasable": false,
+        "ouverture_gelule": null,
+        "posologie_adulte": [
+          {
+            "population": "Traitement standard",
+            "population_type": "adulte",
+            "categorie": "generale",
+            "dose_par_prise_mg_min": 10,
+            "dose_par_prise_mg_max": 10,
+            "intervalle_min_h": 8,
+            "intervalle_max_h": 24,
+            "dose_journaliere_max_g": 0.03
+          },
+          {
+            "population": "2e intention, chimiothérapie",
+            "population_type": "pediatrie",
+            "categorie": "generale",
+            "poids_min_kg": 30,
+            "poids_max_kg": 60,
+            "dose_par_prise_mg_min": 5,
+            "dose_par_prise_mg_max": 5,
+            "intervalle_min_h": 8,
+            "intervalle_max_h": 24,
+            "dose_journaliere_max_g": 0.015
+          },
+          {
+            "population": "2e intention, chimiothérapie",
+            "population_type": "pediatrie",
+            "categorie": "generale",
+            "poids_min_kg": 60,
+            "dose_par_prise_mg_min": 10,
+            "dose_par_prise_mg_max": 10,
+            "intervalle_min_h": 8,
+            "intervalle_max_h": 24,
+            "dose_journaliere_max_g": 0.03
+          }
+        ]
+      },
+      {
+        "type": "Gélule à libération prolongée",
+        "dosage": "15 mg",
+        "ecrasable": null,
+        "ouverture_gelule": false,
+        "posologie_adulte": [
+          {
+            "population": "Traitement standard LP",
+            "population_type": "adulte",
+            "categorie": "generale",
+            "dose_par_prise_mg_min": 15,
+            "dose_par_prise_mg_max": 15,
+            "intervalle_min_h": 12,
+            "intervalle_max_h": 24,
+            "dose_journaliere_max_g": 0.03
+          }
+        ]
+      }
+    ],
+    "recommandation_sonde": {
+      "forme_preferee": "",
+      "alternative": "Voie injectable, avis médical"
+    }
+  },
+  "tracabilite": {
+    "rcp_source": [
+      {
+        "specialite": "PRIMPERAN 10 mg/2 ml, solution injectable en ampoule",
+        "titulaire": "MEDIPHA SANTE",
+        "date_maj": "2026-07-30",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/61729093/extrait"
+      },
+      {
+        "specialite": "CHLORHYDRATE DE METOCLOPRAMIDE RENAUDIN 10 mg/2 mL, solution injectable en ampoule",
+        "titulaire": "LABORATOIRE RENAUDIN",
+        "date_maj": "2025-11-27",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/63670380/extrait"
+      },
+      {
+        "specialite": "METOCLOPRAMIDE SANDOZ 10 mg, comprimé sécable",
+        "titulaire": "SANDOZ",
+        "date_maj": "2025-10-27",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/63177843/extrait"
+      },
+      {
+        "specialite": "METOCLOPRAMIDE VIATRIS 10 mg, comprimé sécable",
+        "titulaire": "VIATRIS SANTE",
+        "date_maj": "2025-12-10",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/63076709/extrait"
+      },
+      {
+        "specialite": "PROKINYL LP 15 mg, gélule à libération prolongée",
+        "titulaire": "TECHNI-PHARMA",
+        "date_maj": "2024-11-19",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/63845762/extrait"
+      },
+      {
+        "specialite": "PRIMPERAN 10 mg, comprimé sécable (archive)",
+        "titulaire": "SANOFI-AVENTIS FRANCE",
+        "date_maj": "2012-10-02",
+        "url_ansm": "https://agence-prd.ansm.sante.fr/php/ecodex/rcp/R0215413.htm"
+      }
+    ],
+    "statut": "valide",
+    "validation": {
+      "date": "2026-09-09",
+      "validateur": "Anna Trabaud-Lopez (IDE, porteuse du projet), vérification des données extraites contre les RCP ; équipe pharmacie, validation de la méthodologie et arbitrage des points litigieux",
+      "perimetre": [
+        "adulte",
+        "pediatrie"
+      ],
+      "prochaine_revision": "2026-12-09"
+    }
+  }
+}

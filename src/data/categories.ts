@@ -89,6 +89,26 @@ export const CATEGORIES: ICategorie[] = [
     code: 'GA',
   },
   {
+    slug: 'obstetrique',
+    label: 'Obstétrique',
+    sousFamilles: [],
+    // Rose framboise, choisi sur mesure plutôt qu'à l'œil.
+    //
+    // Contraste du libellé sur SA PROPRE TUILE (la teinte mélangée au fond,
+    // pas le fond de page — c'est bien là que le texte se lit) : 3,67 en
+    // clair, 6,37 en sombre. Ça la place 4e sur 9 en clair et 7e sur 9 en
+    // sombre, au milieu de la palette existante. Le seuil AA de 4,5 n'est
+    // atteint en clair que par 4 des 9 catégories : c'est une propriété du
+    // parti pris de tuiles teintées, pas de cette couleur-ci.
+    //
+    // Distincte de ses deux voisines de teinte : ΔE 20 du bordeaux
+    // Cardiovasculaire et 28 de la prune Endocrinologie, quand la paire la
+    // plus serrée déjà en place (Anesthésiques / Électrolytes) n'est qu'à
+    // ΔE 15.
+    couleur: '#B5476B',
+    code: 'OB',
+  },
+  {
     slug: 'psychotropes',
     label: 'Psychotropes',
     sousFamilles: [

@@ -147,6 +147,11 @@ export interface IPosologieRcp {
   intervalle_max_min?: number
   nb_prises_min_24h?: number
   nb_prises_max_24h?: number
+  /** Nombre d'administrations par MOIS, et non par jour : réservé aux formes
+   * retard (ex. octréotide LP, une injection IM mensuelle), où compter en
+   * prises journalières n'aurait aucun sens. Valeur unique — une forme LP ne
+   * s'exprime pas en fourchette. */
+  nb_prises_mois?: number
   age_min_mois?: number | null
   age_max_mois?: number | null
   /** Âge en jours plutôt qu'en mois (néonatologie, ex. midazolam à partir de

@@ -1,0 +1,201 @@
+{
+  "dci": "fondaparinux",
+  "commun": {
+    "noms_commerciaux": [
+      "Arixtra"
+    ],
+    "famille": "Anticoagulant inhibiteur sélectif du facteur Xa",
+    "antidote": "",
+    "indications": [
+      "Prophylaxie ETV, chirurgie orthopédique",
+      "Prophylaxie ETV, chirurgie abdominale",
+      "Prophylaxie ETV, affection médicale aiguë",
+      "Angor instable / NSTEMI",
+      "Infarctus du myocarde (STEMI)",
+      "Thrombose veineuse superficielle",
+      "Traitement TVP / EP aiguës"
+    ],
+    "grossesse_allaitement": {
+      "grossesse": "Le fondaparinux ne doit pas être utilisé chez la femme enceinte à moins d'une nécessité absolue.",
+      "allaitement": "L'allaitement n'est pas recommandé pendant le traitement par fondaparinux.",
+      "url_crat_grossesse": "https://www.lecrat.fr/6146/",
+      "url_crat_allaitement": "https://www.lecrat.fr/6167/"
+    },
+    "note_ajustement": "Non recommandé chez l'enfant de moins de 17 ans. Insuffisance rénale : contre-indiqué en cas d'insuffisance rénale sévère, posologie à adapter si insuffisance rénale modérée. Insuffisance hépatique et faible poids (< 50 kg) : risque hémorragique accru, à utiliser avec précaution.",
+    "contre_indications": [
+      "Hypersensibilité au fondaparinux sodique ou à l'un des excipients.",
+      "Saignement évolutif cliniquement significatif.",
+      "Endocardite bactérienne aiguë.",
+      "Insuffisance rénale sévère avec clairance de la créatinine < 20 mL/min, pour la prophylaxie des événements thrombo-emboliques veineux, le traitement de l'angor instable / de l'infarctus du myocarde (avec ou sans sus-décalage du segment ST) et le traitement de la thrombose veineuse superficielle.",
+      "Insuffisance rénale sévère avec clairance de la créatinine < 30 mL/min, pour le traitement des thromboses veineuses profondes et des embolies pulmonaires."
+    ],
+    "interactions_pertinentes": [
+      {
+        "substance": "Désirudine, agents fibrinolytiques, antagonistes du récepteur GP IIb/IIIa, héparine, héparinoïdes, héparines de bas poids moléculaire",
+        "effet": "Traitements susceptibles d'accroître le risque hémorragique ; leur association au fondaparinux n'est pas recommandée.",
+        "action_infirmier": "Signaler au prescripteur toute co-prescription. Si un relais par antivitamine K est nécessaire, le fondaparinux est poursuivi jusqu'à ce que l'INR soit dans la zone cible."
+      },
+      {
+        "substance": "Antiagrégants plaquettaires (acide acétylsalicylique, dipyridamole, sulfinpyrazone, ticlopidine, clopidogrel) et AINS",
+        "effet": "Précaution d'emploi : risque hémorragique accru en cas d'association.",
+        "action_infirmier": "Signaler au prescripteur ; exercer une surveillance clinique particulière si l'association ne peut être évitée."
+      }
+    ],
+    "surveillance_specifique": [
+      {
+        "evenement": "Hémorragie",
+        "explication": "Comme tout anticoagulant, le fondaparinux expose à un risque de saignement, majoré par certains facteurs : troubles acquis ou congénitaux de la coagulation (numération plaquettaire < 50 000/mm³), maladie ulcéreuse gastro-intestinale évolutive, hémorragie intracrânienne récente, chirurgie cérébrale/rachidienne/ophtalmologique récente, ou intervention chirurgicale récente (moins de 3 jours) avant hémostase établie.",
+        "action": "Rechercher systématiquement l'origine de tout saignement et signaler au prescripteur ; exercer une surveillance clinique renforcée chez les patients présentant des facteurs de risque hémorragique ou recevant un traitement associé majorant ce risque."
+      },
+      {
+        "evenement": "Anesthésie périmédullaire (rachianesthésie, anesthésie péridurale) et ponction lombaire",
+        "explication": "Risque d'hématome rachidien ou péridural pouvant entraîner une paralysie prolongée ou permanente. Pour un traitement curatif (TVP/EP, syndrome coronarien aigu), le RCP indique que l'anesthésie péridurale ou la rachianesthésie ne doit pas être utilisée lors d'un acte chirurgical. Pour un usage prophylactique, le risque existe également et peut être majoré par l'utilisation prolongée de cathéters péridurals ou l'association à d'autres traitements agissant sur l'hémostase ; le RCP ne chiffre pas de délai précis à respecter (à la différence d'autres anticoagulants).",
+        "action": "Exercer une surveillance neurologique fréquente (douleur dorsale, déficits moteurs ou sensitifs des membres inférieurs, troubles sphinctériens) et signaler immédiatement au prescripteur tout signe évocateur ; ne pas réaliser d'anesthésie périmédullaire chez un patient sous fondaparinux à dose curative."
+      },
+      {
+        "evenement": "Thrombus sur cathéter guide lors d'une intervention coronaire percutanée",
+        "explication": "En cas d'ICP primaire chez un patient IDM ST+, ou d'ICP urgente chez un patient AI/IDM ST- présentant une instabilité mettant en jeu le pronostic vital, l'utilisation du fondaparinux avant et pendant l'ICP n'est pas recommandée. En cas d'ICP non primaire, l'utilisation du fondaparinux comme unique anticoagulant pendant l'ICP expose à un risque accru de thrombus sur le cathéter guide.",
+        "action": "Signaler au prescripteur/à l'équipe de cathétérisme le traitement en cours par fondaparinux avant toute ICP ; en cas d'ICP non primaire, une héparine non fractionnée est associée conformément aux pratiques standard."
+      },
+      {
+        "evenement": "Chirurgie de pontage aorto-coronarien",
+        "explication": "Chez un patient IDM ST+ ou AI/IDM ST- devant bénéficier d'une revascularisation chirurgicale par pontage aorto-coronarien, le fondaparinux ne doit pas, si possible, être administré dans les 24 heures précédant l'intervention et ne peut être repris que 48 heures après.",
+        "action": "Signaler au prescripteur et au chirurgien la date de la dernière injection de fondaparinux avant un PAC programmé ou urgent."
+      },
+      {
+        "evenement": "Thrombocytopénie induite par l'héparine (TIH), absence de réaction croisée habituelle",
+        "explication": "Le fondaparinux ne se lie pas au facteur 4 plaquettaire et il n'existe habituellement pas de réaction croisée avec le sérum des patients ayant une TIH de type II ; l'efficacité et la tolérance du fondaparinux n'ont toutefois pas été formellement étudiées chez ces patients, et de rares déclarations spontanées de TIH sous fondaparinux ont été rapportées.",
+        "action": "Utiliser le fondaparinux avec prudence chez les patients ayant des antécédents de TIH ; signaler au prescripteur tout nouvel épisode thromboembolique ou toute baisse de la numération plaquettaire."
+      },
+      {
+        "evenement": "Allergie au latex",
+        "explication": "L'embout protecteur de l'aiguille de la seringue préremplie contient (ou peut contenir, selon le dosage) du latex de caoutchouc naturel, susceptible de provoquer des réactions allergiques chez les personnes hypersensibles au latex.",
+        "action": "Vérifier l'absence d'allergie au latex connue avant l'administration ; signaler au prescripteur/pharmacien en cas d'allergie connue."
+      }
+    ],
+    "pictogrammes": []
+  },
+  "iv": {
+    "reconstitution": null,
+    "preparation": [
+      {
+        "voie": "SC",
+        "detail": "Utiliser pur. Ne pas purger la bulle d'air avant l'injection.",
+        "duree": "< 1 min",
+        "stabilite": "Seringue à usage unique : utiliser immédiatement."
+      },
+      {
+        "voie": "IVD",
+        "contexte": "IDM ST+, 1ère dose",
+        "detail": "Utiliser pur (dosage 2,5mg uniquement), ne pas purger la bulle d'air avant injection.",
+        "duree": "1 à 2 min",
+        "stabilite": "< 24 heures à température ambiante."
+      },
+      {
+        "voie": "PERF",
+        "contexte": "IDM ST+, 1ère dose",
+        "detail": "Dilution (dosage 2,5mg uniquement) dans un petit volume de NaCl 0,9% (25 ou 50ml).",
+        "duree": "1 à 2 min, puis rinçage de la voie",
+        "stabilite": "Utiliser immédiatement."
+      }
+    ],
+    "administration": {
+      "posologie": [
+        {
+          "population": "Prophylaxie",
+          "categorie": "generale",
+          "population_type": "adulte",
+          "dose_par_prise_mg_min": 2.5,
+          "dose_par_prise_mg_max": 2.5,
+          "intervalle_min_h": 24,
+          "intervalle_max_h": 24
+        },
+        {
+          "population": "Angor instable / NSTEMI / STEMI",
+          "categorie": "generale",
+          "population_type": "adulte",
+          "dose_par_prise_mg_min": 2.5,
+          "dose_par_prise_mg_max": 2.5,
+          "intervalle_min_h": 24,
+          "intervalle_max_h": 24
+        },
+        {
+          "population": "Thrombose veineuse superficielle",
+          "categorie": "generale",
+          "population_type": "adulte",
+          "dose_par_prise_mg_min": 2.5,
+          "dose_par_prise_mg_max": 2.5,
+          "intervalle_min_h": 24,
+          "intervalle_max_h": 24
+        },
+        {
+          "population": "Traitement TVP / EP, poids < 50 kg",
+          "categorie": "generale",
+          "population_type": "speciale",
+          "dose_par_prise_mg_min": 5,
+          "dose_par_prise_mg_max": 5,
+          "intervalle_min_h": 24,
+          "intervalle_max_h": 24
+        },
+        {
+          "population": "Traitement TVP / EP, poids 50 à 100 kg",
+          "categorie": "generale",
+          "population_type": "adulte",
+          "dose_par_prise_mg_min": 7.5,
+          "dose_par_prise_mg_max": 7.5,
+          "intervalle_min_h": 24,
+          "intervalle_max_h": 24
+        },
+        {
+          "population": "Traitement TVP / EP, poids > 100 kg",
+          "categorie": "speciale",
+          "population_type": "adulte",
+          "dose_par_prise_mg_min": 10,
+          "dose_par_prise_mg_max": 10,
+          "intervalle_min_h": 24,
+          "intervalle_max_h": 24
+        }
+      ]
+    },
+    "incompatibilites": []
+  },
+  "oral": null,
+  "aerosol": null,
+  "tracabilite": {
+    "rcp_source": [
+      {
+        "specialite": "ARIXTRA 2,5 mg/0,5 mL, solution injectable en seringue préremplie",
+        "titulaire": "Viatris Healthcare Limited (Irlande)",
+        "date_maj": "07/05/2026",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/64683217/extrait"
+      },
+      {
+        "specialite": "ARIXTRA 5 mg/0,4 mL, solution injectable en seringue préremplie",
+        "titulaire": "Viatris Healthcare Limited (Irlande)",
+        "date_maj": "07/05/2026",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/67164882/extrait"
+      },
+      {
+        "specialite": "ARIXTRA 7,5 mg/0,6 mL, solution injectable en seringue préremplie",
+        "titulaire": "Viatris Healthcare Limited (Irlande)",
+        "date_maj": "07/05/2026",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/66048056/extrait"
+      },
+      {
+        "specialite": "ARIXTRA 10 mg/0,8 mL, solution injectable en seringue préremplie",
+        "titulaire": "Viatris Healthcare Limited (Irlande)",
+        "date_maj": "07/05/2026",
+        "url_ansm": "https://base-donnees-publique.medicaments.gouv.fr/medicament/61469681/extrait"
+      }
+    ],
+    "statut": "valide",
+    "validation": {
+      "date": "2026-09-10",
+      "validateur": "Anna Trabaud-Lopez (IDE, porteuse du projet), vérification des données extraites contre les RCP ; équipe pharmacie, validation de la méthodologie et arbitrage des points litigieux",
+      "perimetre": [
+        "adulte"
+      ],
+      "prochaine_revision": "2026-12-10"
+    }
+  }
+}

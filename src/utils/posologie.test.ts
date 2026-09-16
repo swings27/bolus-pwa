@@ -191,6 +191,16 @@ describe('formaterIntervalle', () => {
     expect(formaterIntervalle(posologie({ nb_prises_min_24h: 2, nb_prises_max_24h: 4 }))).toBe('2-4 / jour')
   })
 
+  // Formes retard (octréotide LP) : la fréquence se compte en mois, pas en
+  // jours. Le suffixe est ce qui distingue « 1 / mois » de « 1 / jour ».
+  it('suffixe en "/ mois" une fréquence mensuelle', () => {
+    expect(formaterIntervalle(posologie({ nb_prises_mois: 1 }))).toBe('1 / mois')
+  })
+
+  it('privilégie la fréquence journalière quand les deux sont renseignées', () => {
+    expect(formaterIntervalle(posologie({ nb_prises_mois: 1, nb_prises_min_24h: 2, nb_prises_max_24h: 2 }))).toBe('2 / jour')
+  })
+
   // Intervalle en toutes lettres : prioritaire sur les champs chiffrés, c'est
   // une formulation délibérée du RCP.
   it('affiche un intervalle rédigé en toutes lettres', () => {
@@ -260,6 +270,18 @@ describe('libelleIntervalle', () => {
 
   it('privilégie "Intervalle" si les deux sont renseignés (le champ horaire prime toujours)', () => {
     expect(libelleIntervalle(posologie({ intervalle_min_h: 4, nb_prises_max_24h: 2 }))).toBe('Intervalle')
+  })
+
+  // Formes retard (octréotide LP, une injection IM par mois) : afficher
+  // « 1 / mois » sous un libellé « Prise journalière » ferait lire une
+  // injection quotidienne — l'écart entre les deux est d'un facteur 30.
+  it('devient "Prise mensuelle" pour une forme retard', () => {
+    expect(libelleIntervalle(posologie({ nb_prises_mois: 1 }))).toBe('Prise mensuelle')
+  })
+
+  it('privilégie la fréquence journalière si les deux sont renseignées', () => {
+    const p = posologie({ nb_prises_mois: 1, nb_prises_min_24h: 2, nb_prises_max_24h: 2 })
+    expect(libelleIntervalle(p)).toBe('Prise journalière')
   })
 
   it('reste "Intervalle" si rien n\'est renseigné (dose unique/continue)', () => {

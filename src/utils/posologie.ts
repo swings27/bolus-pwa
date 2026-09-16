@@ -207,6 +207,10 @@ export function formaterIntervalle(p: IPosologieRcp): string {
   if (enMinutes) return enMinutes
   const parJour = formaterPlage(p.nb_prises_min_24h, p.nb_prises_max_24h, '/ jour')
   if (parJour) return parJour
+  // Formes retard (octréotide LP) : une injection par mois. Placé après les
+  // fréquences journalières, qui restent le cas courant — et non avant, pour
+  // qu'une ligne renseignant les deux privilégie la plus fine des deux.
+  if (p.nb_prises_mois !== undefined) return `${formaterNombre(p.nb_prises_mois)} / mois`
   // Aucun champ de fréquence renseigné : plutôt qu'un tiret cadratin
   // ambigu (donnée manquante ou dose réellement unique ?), on affiche
   // explicitement ce que ça signifie le plus souvent — un protocole en PSE
@@ -229,7 +233,12 @@ export function libelleIntervalle(p: IPosologieRcp): string {
     p.intervalle_max_min !== undefined
   if (aIntervalle) return 'Intervalle'
   const aNbPrises = p.nb_prises_min_24h !== undefined || p.nb_prises_max_24h !== undefined
-  return aNbPrises ? 'Prise journalière' : 'Intervalle'
+  if (aNbPrises) return 'Prise journalière'
+  // Même raisonnement pour les formes retard : afficher « 1 / mois » sous un
+  // libellé « Prise journalière » ferait lire une injection quotidienne.
+  // L'ordre des trois tests suit celui de formaterIntervalle().
+  if (p.nb_prises_mois !== undefined) return 'Prise mensuelle'
+  return 'Intervalle'
 }
 
 // Convention clinique française : un dosage ne se dit en grammes que pour un
