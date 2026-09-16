@@ -15,6 +15,11 @@ interface IResultatFicheProps {
    * purement indicatif ici, pas un bouton (voir BoutonFavori sur la fiche
    * elle-même pour basculer le statut). */
   estFavori?: boolean
+  /** Observateur appelé EN PLUS de l'ouverture, sans la remplacer —
+   * contrairement à `onClick` ci-dessus, qui se substitue à la navigation.
+   * Sert à la mesure d'audience, qui doit pouvoir noter l'ouverture sans
+   * réimplémenter le `naviguer()` de chaque appelant. */
+  onSelection?: () => void
 }
 
 // Ligne de résultat réutilisée par le dropdown de l'Accueil, la page
@@ -25,11 +30,13 @@ export default function ResultatFiche({
   onClick,
   showCategorie = true,
   estFavori = false,
+  onSelection,
 }: IResultatFicheProps) {
   const naviguer = useNavigationSure()
   const categorie = getCategorieBySlug(fiche.categorie)
 
   function gererClic() {
+    onSelection?.()
     if (onClick) onClick()
     else naviguer(`/fiche/${fiche.id}`)
   }

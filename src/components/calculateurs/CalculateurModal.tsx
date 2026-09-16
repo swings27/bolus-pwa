@@ -12,6 +12,7 @@ import { useCalculateurModal } from '../../contexts/CalculateurModalContext'
 import { useFocusTrap } from '../../hooks/useFocusTrap'
 import SegmentedControl from '../layout/SegmentedControl'
 import BlocAvertissement from '../layout/BlocAvertissement'
+import { suivre } from '../../utils/analytique'
 import CalcDebit from './CalcDebit'
 import CalcDosePoids from './CalcDosePoids'
 import CalcIMC from './CalcIMC'
@@ -35,6 +36,20 @@ export default function CalculateurModal() {
   const conteneurRef = useRef<HTMLDivElement>(null)
 
   useFocusTrap(estOuvert, conteneurRef)
+
+  // Mesure d'audience : quel calculateur sert réellement. Aucun contexte de
+  // fiche n'accompagne l'événement, et ce composant n'en connaît aucun — par
+  // construction, il ne reçoit rien de la page qui l'a ouvert. C'est ce
+  // cloisonnement, pas seulement une consigne, qui garantit qu'aucun lien
+  // calculateur ↔ molécule ne part dans les données (voir suivre()).
+  //
+  // Dépend aussi d'`onglet` : changer d'onglet compte comme une nouvelle
+  // utilisation, sans quoi seul le calculateur affiché à l'ouverture serait
+  // jamais mesuré.
+  useEffect(() => {
+    if (!estOuvert) return
+    suivre({ nom: 'calculateur_ouvert', onglet })
+  }, [estOuvert, onglet])
 
   // Échap referme la modale : le piège de focus (useFocusTrap) empêche déjà
   // Tab de s'échapper vers la page en dessous, mais un utilisateur clavier

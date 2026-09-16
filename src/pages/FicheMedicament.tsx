@@ -9,6 +9,7 @@ import DetailInjectable from '../components/fiches/DetailInjectable'
 import DetailPerOs from '../components/fiches/DetailPerOs'
 import PrecautionsFiche from '../components/fiches/PrecautionsFiche'
 import BoutonFavori from '../components/fiches/BoutonFavori'
+import { suivre } from '../utils/analytique'
 import BoutonPrimaire from '../components/layout/BoutonPrimaire'
 import { useFiche } from '../hooks/useFiche'
 import { useFavoris } from '../hooks/useFavoris'
@@ -143,7 +144,16 @@ export default function FicheMedicament() {
           </p>
           <BoutonFavori
             actif={favoris.includes(fiche.id)}
-            onClick={async () => setFavoriBloque(await basculer(fiche.id))}
+            onClick={async () => {
+              // L'état est lu AVANT la bascule : seul l'ajout est mesuré, et
+              // seulement s'il a réellement abouti (au-delà de 3 favoris,
+              // basculer() refuse et renvoie `bloque`). L'identifiant de la
+              // fiche n'accompagne pas l'événement, voir suivre().
+              const etaitFavori = favoris.includes(fiche.id)
+              const bloque = await basculer(fiche.id)
+              setFavoriBloque(bloque)
+              if (!etaitFavori && !bloque) suivre({ nom: 'favori_ajoute' })
+            }}
           />
         </div>
         {/* break-words (pas juste la largeur du conteneur) : un dci comme
@@ -218,7 +228,13 @@ export default function FicheMedicament() {
               forme={formeActive}
               // Recliquer la forme déjà active la désélectionne (retour au
               // placeholder) plutôt que de rester figée dessus sans échappatoire.
-              onChange={(forme) => setFormeChoisie(forme === formeActive ? null : forme)}
+              // La désélection n'est pas mesurée : seul le choix d'une voie
+              // renseigne la répartition injectable / per os recherchée.
+              onChange={(forme) => {
+                const nouvelle = forme === formeActive ? null : forme
+                setFormeChoisie(nouvelle)
+                if (nouvelle) suivre({ nom: 'voie_choisie', voie: nouvelle })
+              }}
             />
           )}
           <div className={formesDisponibles.length > 1 ? 'mt-4' : ''}>

@@ -3,6 +3,7 @@ import type { FocusEvent, KeyboardEvent } from 'react'
 import { Search, X } from 'lucide-react'
 import { useSearch } from '../../hooks/useSearch'
 import { useHistorique } from '../../hooks/useHistorique'
+import { suivre } from '../../utils/analytique'
 import { useFavoris } from '../../hooks/useFavoris'
 import { useClickOutside } from '../../hooks/useClickOutside'
 import { useNavigationSure } from '../../hooks/useNavigationSure'
@@ -50,6 +51,11 @@ export default function SearchDropdown() {
   }, [query])
 
   function selectionner(id: string) {
+    // Seulement quand la liste affichée est celle des résultats : rouvrir une
+    // fiche depuis l'historique n'est pas une recherche aboutie, et les
+    // compter ensemble gonflerait la mesure de ce qu'on veut justement
+    // distinguer — chercher plutôt que retrouver.
+    if (!afficherHistorique) suivre({ nom: 'recherche_aboutie' })
     setOuvert(false)
     naviguer(`/fiche/${id}`)
   }
